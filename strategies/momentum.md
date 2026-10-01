@@ -1,6 +1,6 @@
 # Strategy: Momentum / Relative-Strength
 
-Account scope: Agentic Account (ending 4490) only. Runs in parallel with `mean-reversion.md` every cycle; the full eligible universe is re-scanned each time. Risk numbers come from `framework.md` §3 ($80 fixed size, shared cap of 3 positions).
+Account scope: Agentic Account (ending 4490) only. Runs in parallel with `mean-reversion.md` every cycle; the full eligible universe is re-scanned each time. Risk numbers come from `framework.md` §3 ($105 fixed size, shared cap of 3 positions).
 
 ## Universe
 - US-listed common stocks, market cap ≥ $2B.
@@ -22,7 +22,7 @@ Process note: determine relative strength from the tape first, then explain with
 ## Entry
 - Entry on the continuation (a break back above the pullback high or a hold-and-reclaim of the short-term average).
 - Limit order by default; market only for large, liquid, tight-spread names.
-- Write down before ordering: one-line thesis; **stop** (below the higher low that formed the base, typically 3–4% below entry; 1R = distance × $80); **target** (≥ 2R, e.g., prior high plus measured move); **max holding horizon** (end of day by default; at most 3 sessions if the trend and relative strength stay intact).
+- Write down before ordering: one-line thesis; **stop** (below the higher low that formed the base, typically 3–4% below entry; 1R = distance × $105); **target** (≥ 2R, e.g., prior high plus measured move); **max holding horizon** (end of day by default; at most 3 sessions if the trend and relative strength stay intact).
 
 ## Position management
 - Trim into 2R+ extensions, or ahead of a known upcoming catalyst, rather than holding for the full move unconditionally. After a trim, the stop moves to breakeven or the new higher low.

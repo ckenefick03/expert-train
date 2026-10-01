@@ -28,7 +28,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 {
   "as_of": "2026-10-01 12:35 ET (cycle 1)",
   "account": { "name": "Agentic Account", "last4": "4490", "type": "limited_margin" },
-  "risk": { "position_size": 80, "max_positions": 3, "daily_loss_limit": 100, "breaker_pct": 10, "min_trades": 1, "max_trades": 10 },
+  "risk": { "position_size": 105, "max_positions": 3, "daily_loss_limit": 100, "breaker_pct": 10, "min_trades": 1, "max_trades": 10 },
   "status": "amber",
   "status_note": "3 adopted positions watched; stops clear; no buying power for new entries",
   "peak_equity": 421.51,
@@ -62,9 +62,9 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 - Account: Agentic Account (ending 4490), type limited_margin. Total value $421.51; cash / buying power $0.04.
 - Pre-existing positions (legacy, not framework trades, unmanaged unless the user says otherwise): KTOS 4.890677 sh @ $42.53 avg, RKLB 1.49887 sh @ $70.72 avg, OKLO 2.914497 sh @ $36.37 avg (cost ≈ $208 / $106 / $106).
-- Consequence: buying power is $0.04, so no $80 entry is possible until cash is available.
+- Consequence: buying power is $0.04, so no entry of the fixed size is possible until cash is available.
 - **Update 2026-10-01 (user decision): the user told me to adopt these three positions into the strategy.** They are now framework positions ("adopted") and count toward the 3-slot cap. Order history shows they were bought earlier today (11:18-11:40 ET by an agent, before this framework) with sizes above $80 (KTOS about $210, RKLB and OKLO about $106 each), and a WULF position was sold at 11:39 ET. These are pre-framework trades, not scored or tagged, and not counted toward today's minimum.
-- Risk parameters: $80 fixed size; 3 max positions; $100 daily loss limit; 10% circuit breaker from peak (peak $421.51, breaker at equity ≤ $379.36); min 1 / max 10 trades per day; no leverage/options/shorting/averaging down.
+- Risk parameters (size raised to $105 on 2026-10-01, see cycle log; originally $80):  $105 fixed size; 3 max positions; $100 daily loss limit; 10% circuit breaker from peak (peak $421.51, breaker at equity ≤ $379.36); min 1 / max 10 trades per day; no leverage/options/shorting/averaging down.
 
 ## Cycle log
 
@@ -86,3 +86,9 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 - **Decisions:** no entries or exits. No forced trade possible today (no buying power). Today's minimum of 1 trade is **unmet** and it can't be met honestly.
 - **Overnight:** all three positions are still open and will roll overnight, since closing them today could count as a same-day round trip (day-trade rule unverified) and no stop or target has been hit. Adopted sizes exceed $80. Planned at tomorrow's open+30min: trim KTOS to about $80, RKLB and OKLO to about $80 each (restores the size rule and frees about $180 of buying power), unless a stop or target is hit first.
 - **Daily stats:** framework trades today 0 (organic 0 / forced 0), realized $0, unrealized about +$1.1 on cost, loss-limit headroom about $100.
+
+### Note 2026-10-01 (after cycle 1): position size raised $80 -> $105
+- The user asked whether the $80 cap could go higher "if you see fit". Decision: **$105 fixed** (25% of equity, inside the user's 10-30% range). Reasons: RKLB and OKLO (about $106 each) already fit it, so only KTOS needs a trim (to about $105, freeing about $105 of buying power) instead of selling all three; 1R stays small (about $4-6 per position at current stops, about 1.4% of equity); three full positions are $315 (75% of equity), leaving a cash reserve. The breaker halves size to $52.
+- Unchanged: $100 daily loss limit, 10% breaker, 3 max positions. No framework trades have been placed, so no history is affected.
+- This supersedes the "trim all three to about $80" plan in the cycle 1 entry: the plan is now to trim only KTOS to about $105 at tomorrow's open+30min.
+- Infrastructure: the scheduled cycle jobs set up earlier were no longer present when checked (CronList empty). Recreated.

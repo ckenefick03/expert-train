@@ -56,15 +56,16 @@ Run this every cycle, in this order.
 
 | Parameter | Value |
 |---|---|
-| Position size | **$80 fixed per entry**, identical every trade; strategy quality is the only variable. Never scale with conviction. |
+| Position size | **$105 fixed per entry** (25% of $420; the user's range was 10-30% = $42-$126; raised from $80 on 2026-10-01 under the user's delegation), identical every trade; strategy quality is the only variable. Never scale with conviction. Three full positions = $315 (about 75% of equity). |
 | Max concurrent positions | **3**, shared across all strategies |
 | Daily loss limit | **$100**, hard stop. When realized + unrealized loss for the day reaches $100: close nothing out of panic, but take **no new entries** for the rest of the day and flag it. |
-| Circuit breaker | **10% drawdown from peak equity**: halve position size to **$40** and **pause all new entries until the user reviews**. Peak equity is tracked in `state.md`. |
+| Circuit breaker | **10% drawdown from peak equity**: halve position size to **$52** and **pause all new entries until the user reviews**. Peak equity is tracked in `state.md`. |
 | Min / max trades per day | 1 / 10 |
 | Instruments | Long US equities only. **No leverage, no options, no shorting, no averaging down on a broken thesis.** |
+| Size change log | 2026-10-01: $80 -> $105, decided by Claude as the user delegated ("if you see fit"). Any further change needs the user's say-so and goes here. |
 | Starting equity | ~$420 (baseline recorded in `state.md`) |
 
-**Sizing math.** At this account size the fixed-dollar concentration limit is the real constraint, not a percent-of-equity risk formula. Example: risking 1% of $420 ($4.20) with a 3% stop would imply a position of $140, a third of the account in one name, which is more concentrated than the $80 fixed size. Do not default to a textbook risk-percent rule without checking that it doesn't produce an oversized position. Rule: **position = $80 (or $40 under the breaker); risk-per-trade follows from the stop distance** (stop at 4% = $3.20 risk = 1R). Choose stops tight enough that 1R is a small fraction of equity, and never widen a stop to justify a trade.
+**Sizing math.** At this account size the fixed-dollar concentration limit is the real constraint, not a percent-of-equity risk formula. Example: risking 1% of $420 ($4.20) with a 3% stop would imply a position of $140, a third of the account in one name, which is more concentrated than the $105 fixed size. Do not default to a textbook risk-percent rule without checking that it doesn't produce an oversized position. Rule: **position = $105 (or $52 under the breaker); risk-per-trade follows from the stop distance** (stop at 4% = $4.20 risk = 1R; at a 1-ATR stop of about 5.5% it is about $5.80). Choose stops tight enough that 1R is a small fraction of equity, and never widen a stop to justify a trade.
 
 **Settlement/day-trade constraints.** The account type is limited_margin. Whether the pattern-day-trader rule or settled-funds limits apply must be verified and logged in §6 before relying on same-day round trips. If buying power is insufficient or a trade would risk a restriction, skip it and log why.
 
@@ -117,6 +118,6 @@ Append here the first time any of these is discovered, so it isn't rediscovered:
 - Never increase size to recover a loss.
 - Scoped to Agentic Account (ending 4490) only; never another account.
 - Halt and flag on anomalous data (stale quotes, constant placeholder values, impossible prices) rather than trading through confusion.
-- **Adopted holdings:** on 2026-10-01 the user told me to adopt the pre-existing positions (KTOS, RKLB, OKLO) into the strategy. They are framework positions: they count against the 3-slot cap, get a stop/target/horizon, and are checked every cycle. They were sized above $80 before adoption; the plan is to trim each to about $80 (not on the day of purchase, to avoid an unverified day-trade issue) rather than leave an oversized position. They were not gate-checked, so their setup score is capped. No new entry may be placed without enough buying power for the full position size.
+- **Adopted holdings:** on 2026-10-01 the user told me to adopt the pre-existing positions (KTOS, RKLB, OKLO) into the strategy. They are framework positions: they count against the 3-slot cap, get a stop/target/horizon, and are checked every cycle. They were sized above the fixed size before adoption (KTOS about $210, RKLB and OKLO about $106); the plan is to trim KTOS to about $105 (RKLB and OKLO already fit the $105 size) (not on the day of purchase, to avoid an unverified day-trade issue) rather than leave an oversized position. They were not gate-checked, so their setup score is capped. No new entry may be placed without enough buying power for the full position size.
 - Report outcomes honestly, including when a win came from luck rather than process.
 - Append to `state.md`; never overwrite history.
