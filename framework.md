@@ -104,7 +104,9 @@ Append here the first time any of these is discovered, so it isn't rediscovered:
 
 - 2026-10-01 — broker quirk — Robinhood MCP tools are deferred; each must be loaded via `ToolSearch select:<name>` before it's callable. — Load needed tools at the start of each session.
 - 2026-10-01 — broker quirk — Fractional-share positions can't carry a resting stop order. — Stops are enforced manually every cycle (§2).
-- 2026-10-01 — account state — On setup the account held 3 pre-existing positions (KTOS, RKLB, OKLO) with $0.04 buying power. See `state.md` baseline and the legacy-holdings rule in §7.
+- 2026-10-01 — account state — On setup the account held 3 pre-existing positions (KTOS, RKLB, OKLO) with $0.04 buying power. The user adopted them; see `state.md` baseline and the adopted-holdings rule in §7.
+- 2026-10-01 — data field — The scanner returned CTVA at -84% on a $12.11 price (corporate-action/spin-off artifact). Exclude scan rows with an implausible one-day move and a corporate action; don't treat as a candidate.
+- 2026-10-01 — tooling — `preview_scan` with enum filters (instrument type, market cap, avg volume, % change from close with interval "1d", plot "Close") works for the full-universe scan; `% Change` values are decimals (-0.025 = -2.5%).
 - 2026-10-01 — unverified — Whether limited_margin accounts are subject to the PDT rule / settled-funds limits is not yet confirmed.
 
 ---
@@ -115,6 +117,6 @@ Append here the first time any of these is discovered, so it isn't rediscovered:
 - Never increase size to recover a loss.
 - Scoped to Agentic Account (ending 4490) only; never another account.
 - Halt and flag on anomalous data (stale quotes, constant placeholder values, impossible prices) rather than trading through confusion.
-- **Legacy holdings:** positions that existed before this framework started (KTOS, RKLB, OKLO at setup) are not framework trades. Do not sell, add to, or manage them unless the user says so. They do not count against the 3-slot cap, but since buying power is limited, no new entry may be placed without enough settled buying power for the full position size.
+- **Adopted holdings:** on 2026-10-01 the user told me to adopt the pre-existing positions (KTOS, RKLB, OKLO) into the strategy. They are framework positions: they count against the 3-slot cap, get a stop/target/horizon, and are checked every cycle. They were sized above $80 before adoption; the plan is to trim each to about $80 (not on the day of purchase, to avoid an unverified day-trade issue) rather than leave an oversized position. They were not gate-checked, so their setup score is capped. No new entry may be placed without enough buying power for the full position size.
 - Report outcomes honestly, including when a win came from luck rather than process.
 - Append to `state.md`; never overwrite history.
