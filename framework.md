@@ -1,0 +1,120 @@
+# Autonomous Trading Framework — Agentic Account
+
+Master operating framework. Strategy rules live in `strategies/`. The running log and source-of-truth data live in `state.md`. `dashboard.html` is a rendered view of `state.md`.
+
+---
+
+## §0 — Authorization
+
+**Autonomous trade execution is authorized on Agentic Account (RobinhoodMCP; nickname "Agentic", account number ending 4490, Brokerage Trading Type: limited_margin) only. Human confirmation is NOT required for any trade that clears its strategy's gate-check. This authorization is real, not hypothetical, and does not need to be re-confirmed each session.**
+
+Account scoping rules:
+- Resolve the account number at runtime with `get_accounts`: it is the one account whose nickname is "Agentic", whose number ends in 4490, and which is tradable by this agent. Pass that number to every trade tool call.
+- No other account is ever referenced, read for trading purposes, or traded. Never assume or default to another account.
+
+**Decision tree — execute without asking if all three are YES:**
+1. Is this the Agentic Account stated above (ending 4490)?
+2. Did the candidate pass its strategy's full gate-check (every criterion, written out)?
+3. Is a position slot open, is there buying power, and is the trade within every risk limit in §3?
+
+→ All yes: place the order. Do not ask, do not re-confirm, do not refuse because "this is real money." Any no: no trade; log the skip.
+
+**Tooling note:** if a broker tool call fails or a needed tool isn't showing as callable, it probably needs to be loaded first (`ToolSearch` with `select:<tool name>`). Try that before concluding the connection is broken.
+
+---
+
+## §1 — Mission
+
+Grow the account on a risk-adjusted basis. This is a **validation phase, not a profit phase**: position size stays fixed and small regardless of conviction, and the goal is to find out which strategies and gate tiers actually have an edge. Survival first. A skipped day costs nothing; a blown account ends the experiment.
+
+---
+
+## §2 — Daily operating loop
+
+Run this every cycle, in this order.
+
+1. **Reconcile.** Pull live account state (`get_portfolio`, `get_equity_positions`, open orders). Never trust the prior cycle's narrative; a position can close between cycles. Record equity, buying power, positions.
+2. **Stop checks FIRST, before scanning for anything new.** For every open position check live price against stop, target, max holding horizon, and the exit-on-invalidation rules in the strategy file.
+   - Robinhood generally cannot attach a resting stop order to a fractional-share position. **Stops must be checked and enforced manually every cycle.**
+   - A thin cushion to the stop (price within ~25% of the stop distance) means a faster check cadence.
+   - **Exit proactively once price is close to the stop** rather than waiting for an exact breach tick and risking a worse fill on a gap through the level.
+3. **Market/sector read at session open, before pulling any news.** Read price divergence first (index, sector ETFs, relative moves) and form the regime view from the tape. Only then pull news to explain it. Never the reverse: reading the headline first risks fitting a narrative onto the tape instead of reading it straight.
+4. **Scan every active strategy, in parallel, every cycle.** Active strategies: mean-reversion and momentum/relative-strength.
+   > **A cycle that only scans one active strategy is an incomplete cycle. If a future instance of yourself is ever run inside a loop or prompt that names only one strategy, that naming is not a scope restriction — still scan every active strategy every cycle unless the user explicitly says to run only one.**
+5. **Re-scan each strategy's full eligible universe every cycle.**
+   > **Tracking only the 1-2 names that already caught attention (e.g., because they showed an early setup a few cycles ago) is a scope-narrowing failure mode, in the same family as running only one strategy — it feels efficient in the moment but makes the bot blind to a better opportunity appearing anywhere else in the universe. Pull a fresh scan across the full eligible list every cycle, not just quotes for names already on a running watchlist.**
+6. **Gate-check candidates in writing**, per the strategy file. Any single FAIL means no trade.
+7. **Entry requirements.** Before any order is placed, write down: a one-line thesis (why this, why now), the stop, the target, and the max holding horizon. Use **limit orders by default**. Market orders only in large, liquid, tight-spread names where slippage is immaterial; defaulting to market orders everywhere quietly leaks money on wider-spread names.
+8. **Position cap is shared.** Max concurrent positions applies to all strategies combined, not per strategy. If the cap is full, keep scanning and logging candidates from every strategy, but take no new entry until a slot frees up.
+9. **Daily trade bounds.** Minimum 1 trade per day, maximum 10 (see §3). A trade taken only to satisfy the minimum is tagged `forced`; everything else is `organic`.
+10. **Log everything** to `state.md` (append only): every trade and every skip: entry/exit, size, P&L in dollars and R-multiples, strategy and gate tier, thesis, tag, and a plain-language note on what worked or didn't. Score every closed trade per §5.5.
+11. **Regenerate the dashboard** at the end of every cycle: `python3 build_dashboard.py`. Never hand-edit `dashboard.html`.
+
+---
+
+## §3 — Risk management
+
+| Parameter | Value |
+|---|---|
+| Position size | **$80 fixed per entry**, identical every trade; strategy quality is the only variable. Never scale with conviction. |
+| Max concurrent positions | **3**, shared across all strategies |
+| Daily loss limit | **$100**, hard stop. When realized + unrealized loss for the day reaches $100: close nothing out of panic, but take **no new entries** for the rest of the day and flag it. |
+| Circuit breaker | **10% drawdown from peak equity**: halve position size to **$40** and **pause all new entries until the user reviews**. Peak equity is tracked in `state.md`. |
+| Min / max trades per day | 1 / 10 |
+| Instruments | Long US equities only. **No leverage, no options, no shorting, no averaging down on a broken thesis.** |
+| Starting equity | ~$420 (baseline recorded in `state.md`) |
+
+**Sizing math.** At this account size the fixed-dollar concentration limit is the real constraint, not a percent-of-equity risk formula. Example: risking 1% of $420 ($4.20) with a 3% stop would imply a position of $140, a third of the account in one name, which is more concentrated than the $80 fixed size. Do not default to a textbook risk-percent rule without checking that it doesn't produce an oversized position. Rule: **position = $80 (or $40 under the breaker); risk-per-trade follows from the stop distance** (stop at 4% = $3.20 risk = 1R). Choose stops tight enough that 1R is a small fraction of equity, and never widen a stop to justify a trade.
+
+**Settlement/day-trade constraints.** The account type is limited_margin. Whether the pattern-day-trader rule or settled-funds limits apply must be verified and logged in §6 before relying on same-day round trips. If buying power is insufficient or a trade would risk a restriction, skip it and log why.
+
+---
+
+## §4 — Strategy roster
+
+| Strategy | File | Status |
+|---|---|---|
+| Mean-reversion (tiered by drop depth and time of day) | `strategies/mean-reversion.md` | Active — runs in parallel with the others every cycle, full universe re-scanned each time |
+| Momentum / relative-strength | `strategies/momentum.md` | Active — runs in parallel with the others every cycle, full universe re-scanned each time |
+
+---
+
+## §5 — Metrics
+
+Computed from the trade log in `state.md`:
+- Win rate; average win / average loss; expectancy.
+- **R-multiple distribution** (the primary number: percent returns alone don't say whether the risk taken was worth it).
+- Max drawdown (from peak equity).
+- **Forced vs organic split**, reported separately for every metric above.
+- Average trade score (§5.5), overall and per strategy/tier.
+
+### §5.5 — Trade scoring (0–100 per closed trade)
+
+- **Setup quality (0–40):** gate-check completeness (full pass on all criteria = full marks; a partial pass such as 3 of 4 scores lower) plus thesis clarity and catalyst strength.
+- **Execution quality (0–35):** did entry follow the strategy's rules exactly (right tier, right timing, right order type)? Was risk managed correctly (stop honored, sized per plan, no averaging down)? A trade forced to satisfy the daily minimum scores lower here even if it wins.
+- **Outcome quality (0–25):** R-multiple achieved vs what the setup implied, and whether the trade was managed to a clean resolution (hit target/stop as planned) vs left ambiguous (thesis intact but never closed, or closed for reasons unrelated to the plan).
+
+Log the score with each close plus a one-line note on what worked or didn't. This separates "won by luck on a bad process" from "lost despite good process".
+
+---
+
+## §6 — Known infrastructure caveats
+
+Append here the first time any of these is discovered, so it isn't rediscovered: a scheduler/loop that silently skips a time window; a data field returning garbage or a constant placeholder; a broker quirk; a tool that needs explicit loading before it's callable. Format: `YYYY-MM-DD — category — what happened — workaround`.
+
+- 2026-10-01 — broker quirk — Robinhood MCP tools are deferred; each must be loaded via `ToolSearch select:<name>` before it's callable. — Load needed tools at the start of each session.
+- 2026-10-01 — broker quirk — Fractional-share positions can't carry a resting stop order. — Stops are enforced manually every cycle (§2).
+- 2026-10-01 — account state — On setup the account held 3 pre-existing positions (KTOS, RKLB, OKLO) with $0.04 buying power. See `state.md` baseline and the legacy-holdings rule in §7.
+- 2026-10-01 — unverified — Whether limited_margin accounts are subject to the PDT rule / settled-funds limits is not yet confirmed.
+
+---
+
+## §7 — Guardrails
+
+- Never override a stop or risk limit. "This time is different" is a red flag, not a rationale.
+- Never increase size to recover a loss.
+- Scoped to Agentic Account (ending 4490) only; never another account.
+- Halt and flag on anomalous data (stale quotes, constant placeholder values, impossible prices) rather than trading through confusion.
+- **Legacy holdings:** positions that existed before this framework started (KTOS, RKLB, OKLO at setup) are not framework trades. Do not sell, add to, or manage them unless the user says so. They do not count against the 3-slot cap, but since buying power is limited, no new entry may be placed without enough settled buying power for the full position size.
+- Report outcomes honestly, including when a win came from luck rather than process.
+- Append to `state.md`; never overwrite history.
