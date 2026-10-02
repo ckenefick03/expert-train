@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-02 12:03 ET (cycle 14, :02 routine)",
+  "as_of": "2026-10-02 12:16 ET (cycle 15, hourly routine)",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -109,6 +109,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-02 12:03 ET",
       "equity": 428.49
+    },
+    {
+      "t": "2026-10-02 12:16 ET",
+      "equity": 427.12
     }
   ],
   "positions": [
@@ -117,7 +121,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 43.19,
+      "price": 42.99,
       "stop": 40.2,
       "target": 47.15
     },
@@ -126,7 +130,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 74.1,
+      "price": 73.73,
       "stop": 66.8,
       "target": 78.55
     },
@@ -135,7 +139,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.44,
+      "price": 36.34,
       "stop": 34.05,
       "target": 41.0
     },
@@ -144,7 +148,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "momentum",
       "qty": 0.2352,
       "entry": 445.86,
-      "price": 448.56,
+      "price": 448.39,
       "stop": 435.0,
       "target": 469.0
     }
@@ -372,4 +376,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 ### Cycle 2026-10-02 12:03 ET (cycle 14) — fired by the :02 routine
 - **Stop check (first):** all clear. TER 448.56 (+0.6%, stop 435.00), KTOS 43.19, RKLB 74.10, OKLO 36.44. Equity $428.49 (peak $431.09). Day about +$8.1. Cash $0.43: no entry possible.
 - **Mean-reversion (>= 4% down, 17 names) / momentum (>= 3% up, relative volume >= 1.0, 7 names):** same lists as 11:53; BAH -4.2% (gov services, cause still unchecked), RIVN -4.1%, KOD -8.9%. No candidate; nothing actionable without cash.
+- **Decisions:** none.
+
+### Cycle 2026-10-02 12:16 ET (cycle 15) — fired by the hourly routine (hourly news check included)
+- **Stop check (first):** all clear. TER 448.39 (+0.6%, stop 435.00), KTOS 42.99, RKLB 73.73 (stop 66.80), OKLO 36.34 (stop 34.05). Equity $427.12 (peak $431.09). Day about +$6.7. Cash $0.43: no entry possible.
+- **Tape:** SPY +0.7%, QQQ +1.1%, SMH +2.7%; XLE flat, XLV -0.5%, XLF -0.2%, XLU +0.4%. **News (hourly):** the weak September payrolls (+29K, unemployment 4.2%) lifted stocks on hopes the Fed holds in October; indexes are off their highs; no new policy or political catalyst found affecting the holdings.
+- **Mean-reversion (>= 4% down, 20 names):** same fails; ALNY -4.0% (biotech), others unchanged. **Momentum (>= 3% up, relative volume >= 1.0, 9 names):** ARM, MXL, ON, PENG, STM, QGEN, SMCI +3.5%, APLD +4.5%, IBRX: no change in verdicts; nothing actionable without cash.
 - **Decisions:** none.
