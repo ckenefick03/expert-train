@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-02 10:44 ET (cycle 7, :42 routine)",
+  "as_of": "2026-10-02 10:54 ET (cycle 8, :52 routine)",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -42,7 +42,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   },
   "status": "amber",
   "status_note": "3 positions green, new equity high; $105 ready; TER and TSLA near momentum triggers",
-  "peak_equity": 430.76,
+  "peak_equity": 431.09,
   "day": {
     "date": "2026-10-02",
     "start_equity": 420.4,
@@ -81,6 +81,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-02 10:44 ET",
       "equity": 430.76
+    },
+    {
+      "t": "2026-10-02 10:54 ET",
+      "equity": 431.09
     }
   ],
   "positions": [
@@ -89,7 +93,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 43.19,
+      "price": 43.23,
       "stop": 40.2,
       "target": 47.15
     },
@@ -98,7 +102,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 75.69,
+      "price": 75.88,
       "stop": 66.8,
       "target": 78.55
     },
@@ -107,7 +111,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.63,
+      "price": 36.6,
       "stop": 34.05,
       "target": 41.0
     }
@@ -273,3 +277,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   - **TSLA $373.73:** first real pullback: 374.36 high -> 370.70 low, then a higher low at 371.39 (5-minute bars 14:30/14:35 UTC). Trigger is a break back above 374.36; price 373.73, **not hit**. Analyst mean target $376 (+0.6%); catalyst (Q3 deliveries beat) confirmed. Second watch. If it triggers: limit at ask, stop below 370.7 base (or 1 ATR), horizon end of day to 3 sessions.
   - ARM: unchanged FAIL (no catalyst found, no pullback, above mean target). Others: semis group moves or no confirmed catalyst.
 - **Decisions:** none. $105 cash, 2 free slots. No forced trade; minimum still unmet.
+
+### Cycle 2026-10-02 10:54 ET (cycle 8) — fired by the :52 routine
+- **Stop check (first):** all clear. KTOS 43.23, RKLB 75.88 (target 78.55), OKLO 36.60 (+1.3%, URA +1.5%). Equity $431.09 = new peak (breaker $387.98). Day about +$10.7. No open orders.
+- **Tape:** SPY +1.0%, QQQ +1.4%, SMH +2.5% (cooling off the high of +2.8%).
+- **Mean-reversion (>= 3% down, 17 names):** same names. STX -14.8% / WDC -13.2% / SNDK -3.4% (FAIL gate 1, HDD/memory supply news), NKE / STLA (FAIL), ACN / EPAM / KD (FAIL downtrend), MOD (spin-off), PBF -5.1% (FAIL gate 3), KOD / GDS / TH -7.9% / SECZ / AXGN / NYT / GRND (no external cause found). No entry.
+- **Momentum (>= 3% up, relative volume >= 0.8):** ON +5.0%, STM +5.6% (analog group, no separation), IBRX +11.5% (company-specific). **TER $440.44:** below the 445.49 trigger, base 439.8-443.4 intact (higher lows 441.06 on the 14:45 bar), SMH cooling; not triggered. **TSLA $372.85:** 5-minute highs 374.16 / 374.12 are below the 374.36 trigger; higher lows intact (371.39, 372.55, 373.21). Not triggered. ARM $315.97: no catalyst, still FAIL. No entry.
+- **Decisions:** none. $105 cash, 2 free slots. No forced trade; minimum still unmet. Entry windows: mean-reversion Tier A closes 11:30 ET, Tier B 11:30-14:30.
