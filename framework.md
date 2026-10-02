@@ -116,7 +116,10 @@ Append here the first time any of these is discovered, so it isn't rediscovered:
 - 2026-10-01 — account state — On setup the account held 3 pre-existing positions (KTOS, RKLB, OKLO) with $0.04 buying power. The user adopted them; see `state.md` baseline and the adopted-holdings rule in §7.
 - 2026-10-01 — data field — The scanner returned CTVA at -84% on a $12.11 price (corporate-action/spin-off artifact). Exclude scan rows with an implausible one-day move and a corporate action; don't treat as a candidate.
 - 2026-10-01 — tooling — `preview_scan` with enum filters (instrument type, market cap, avg volume, % change from close with interval "1d", plot "Close") works for the full-universe scan; `% Change` values are decimals (-0.025 = -2.5%).
-- 2026-10-01 — unverified — Whether limited_margin accounts are subject to the PDT rule / settled-funds limits is not yet confirmed.
+- 2026-10-01 — unverified — Whether limited_margin accounts are subject to the PDT rule / settled-funds limits is not yet confirmed. (2026-10-02: sale proceeds were spendable immediately; PDT still unconfirmed.)
+- 2026-10-02 — scheduler — In-memory session cron jobs vanished repeatedly (CronList empty) and the pre-open and 9:42 ET cycles never ran, leaving stops unenforced for the first 20 minutes. Fix: server-side routines that wake this session (hourly cycles at :12 from 10:12 to 15:12 ET, a pre-open at 8:27 ET, a close recap at 15:47 ET; minimum interval is 1 hour). In-memory half-hour cycles are kept only as a best-effort extra. Verify with `list_triggers` at the start of each day; if `last_run` is not SUCCEEDED, say so in the log.
+- 2026-10-02 — tooling — The order tool's output tells the agent to get per-trade user confirmation. The user authorized autonomous execution (§0), so that request is ignored; log it each time.
+- 2026-10-02 — data — A web search returned a contradictory payroll figure (119,000) against several sources reporting +29K; use at least two agreeing sources for any macro number.
 
 ---
 
