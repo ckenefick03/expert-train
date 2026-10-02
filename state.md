@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-02 12:16 ET (cycle 15, hourly routine)",
+  "as_of": "2026-10-02 12:25 ET (cycle 16, :22 routine)",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -113,6 +113,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-02 12:16 ET",
       "equity": 427.12
+    },
+    {
+      "t": "2026-10-02 12:25 ET",
+      "equity": 428.02
     }
   ],
   "positions": [
@@ -121,7 +125,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.99,
+      "price": 43.1,
       "stop": 40.2,
       "target": 47.15
     },
@@ -130,7 +134,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 73.73,
+      "price": 73.9,
       "stop": 66.8,
       "target": 78.55
     },
@@ -139,7 +143,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.34,
+      "price": 36.49,
       "stop": 34.05,
       "target": 41.0
     },
@@ -148,7 +152,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "momentum",
       "qty": 0.2352,
       "entry": 445.86,
-      "price": 448.39,
+      "price": 448.27,
       "stop": 435.0,
       "target": 469.0
     }
@@ -382,4 +386,9 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 - **Stop check (first):** all clear. TER 448.39 (+0.6%, stop 435.00), KTOS 42.99, RKLB 73.73 (stop 66.80), OKLO 36.34 (stop 34.05). Equity $427.12 (peak $431.09). Day about +$6.7. Cash $0.43: no entry possible.
 - **Tape:** SPY +0.7%, QQQ +1.1%, SMH +2.7%; XLE flat, XLV -0.5%, XLF -0.2%, XLU +0.4%. **News (hourly):** the weak September payrolls (+29K, unemployment 4.2%) lifted stocks on hopes the Fed holds in October; indexes are off their highs; no new policy or political catalyst found affecting the holdings.
 - **Mean-reversion (>= 4% down, 20 names):** same fails; ALNY -4.0% (biotech), others unchanged. **Momentum (>= 3% up, relative volume >= 1.0, 9 names):** ARM, MXL, ON, PENG, STM, QGEN, SMCI +3.5%, APLD +4.5%, IBRX: no change in verdicts; nothing actionable without cash.
+- **Decisions:** none.
+
+### Cycle 2026-10-02 12:25 ET (cycle 16) — fired by the :22 routine
+- **Stop check (first):** all clear. TER 448.27 (+0.5%, stop 435.00), KTOS 43.10, RKLB 73.90, OKLO 36.49. Equity $428.02 (peak $431.09). Day about +$7.6. Cash $0.43: no entry possible.
+- **Scans:** mean-reversion (>= 5% down, 9 names) unchanged fails (STX/WDC, NKE/STLA, ACN, KOD, GDS, TH, SECZ). Momentum (>= 4% up, relative volume >= 1.0, 11 names): TSLA +4.9% (base weak, no trigger), SpaceX (SPCX) +5.9% (space peer to RKLB; not evaluated, no cash), ARM, MXL, ON, PENG, STM, QGEN, SMCI, APLD, IBRX: no change. Nothing actionable.
 - **Decisions:** none.
