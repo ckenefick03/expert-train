@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-02 13:43 ET (cycle 24, :42 routine)",
+  "as_of": "2026-10-02 13:52 ET (cycle 25, :52 routine)",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -149,6 +149,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-02 13:43 ET",
       "equity": 425.84
+    },
+    {
+      "t": "2026-10-02 13:52 ET",
+      "equity": 427.67
     }
   ],
   "positions": [
@@ -157,7 +161,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.83,
+      "price": 42.92,
       "stop": 40.2,
       "target": 47.15
     },
@@ -166,7 +170,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 73.85,
+      "price": 74.27,
       "stop": 66.8,
       "target": 78.55
     },
@@ -175,7 +179,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.04,
+      "price": 36.25,
       "stop": 34.05,
       "target": 41.0
     },
@@ -184,7 +188,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "momentum",
       "qty": 0.2352,
       "entry": 445.86,
-      "price": 447.59,
+      "price": 449.19,
       "stop": 435.0,
       "target": 469.0
     }
@@ -463,4 +467,9 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 ### Cycle 2026-10-02 13:43 ET (cycle 24) — fired by the :42 routine
 - **Stop check (first):** all clear. TER 447.59 (stop 435.00), KTOS 42.83, RKLB 73.85, OKLO 36.04 (stop 34.05). Equity $425.84 (peak $431.09, drawdown 1.2%). Day about +$5.4. Cash $0.43: no entry possible (needs $105).
 - **Tape:** SPY +0.6%, QQQ +0.8%, SMH +1.8%, grinding sideways. Scans skipped (no buying power).
+- **Decisions:** none.
+
+### Cycle 2026-10-02 13:52 ET (cycle 25) — fired by the :52 routine
+- **Stop check (first):** all clear. TER 449.19 (stop 435.00), KTOS 42.92, RKLB 74.27, OKLO 36.25. Equity $427.67 (peak $431.09, drawdown 0.8%). Day about +$7.3. Cash $0.43: no entry possible (needs $105).
+- **Tape:** SPY +0.7%, QQQ +1.0%, SMH +2.1%. Scans skipped (no buying power).
 - **Decisions:** none.
