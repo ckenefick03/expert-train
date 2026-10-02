@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-02 10:21 ET (cycle 5, hourly routine)",
+  "as_of": "2026-10-02 10:36 ET (cycle 6, :32 routine)",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "amber",
-  "status_note": "3 positions green, new equity high; $105 cash ready; refiner candidates failed gates",
+  "status_note": "3 positions green; $105 cash ready; TER on watch for a momentum trigger",
   "peak_equity": 430.38,
   "day": {
     "date": "2026-10-02",
@@ -73,6 +73,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-02 10:21 ET",
       "equity": 430.38
+    },
+    {
+      "t": "2026-10-02 10:36 ET",
+      "equity": 430.09
     }
   ],
   "positions": [
@@ -81,7 +85,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 43.41,
+      "price": 43.08,
       "stop": 40.2,
       "target": 47.15
     },
@@ -90,7 +94,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 75.63,
+      "price": 75.68,
       "stop": 66.8,
       "target": 78.55
     },
@@ -99,7 +103,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.34,
+      "price": 36.48,
       "stop": 34.05,
       "target": 41.0
     }
@@ -110,11 +114,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "chips": [
       {
         "name": "SPY",
-        "chg": 1.0
+        "chg": 0.99
       },
       {
         "name": "QQQ",
-        "chg": 1.57
+        "chg": 1.54
       },
       {
         "name": "IWM",
@@ -126,7 +130,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "XLE",
-        "chg": -0.96
+        "chg": -0.75
       },
       {
         "name": "XLF",
@@ -142,15 +146,15 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "ITA",
-        "chg": 0.15
+        "chg": -0.21
       },
       {
         "name": "UFO",
-        "chg": 2.24
+        "chg": 2.92
       },
       {
         "name": "URA",
-        "chg": 1.43
+        "chg": 1.21
       },
       {
         "name": "SMH",
@@ -243,3 +247,15 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 - **Scan, momentum (>= 3% up, relative volume >= 0.6):** ON +5.0%, STM +5.4% (analog semis moving with peers TXN/MCHP/ADI at +3.6-4.5%: no separation, gate 1 FAIL), ASST +4.0% (no catalyst), IBRX +12% (biotech, company-specific, no peer group). No entry. Earliest entry 10:30 ET, next cycle re-scans with 5-minute bars.
 - **Decisions:** none. $105 cash, 2 free slots, authorization in place. Minimum of 1 trade still unmet.
 - **Infrastructure:** the hourly routine delivered at 10:17 ET (scheduled 10:12). In-memory 10-minute cron status unverified (CronList empty at 10:03 check); routines are the backstop.
+
+### Cycle 2026-10-02 10:36 ET (cycle 6) — fired by the :32 routine; momentum window now open
+- **Stop check (first):** all clear. KTOS 43.08 (stop 40.20), RKLB 75.68 (stop 66.80, target 78.55), OKLO 36.48 (stop 34.05). No open orders. Equity $430.09 (peak $430.38), day about +$9.7 vs $420.40.
+- **Tape:** SPY +1.0%, QQQ +1.5%, SMH +2.8%, UFO +2.9%, URA +1.2%, ITA -0.2%, XLE -0.8%.
+- **Scan, mean-reversion (>= 3% down, 14 names; Tier A window open to 11:30):** no change in quality. STX/WDC FAIL (Toshiba), NKE/STLA FAIL (company-specific), ACN/EPAM/KD FAIL (downtrend), MOD (spin-off distortion), PBF -5.2% / VLO -3.5% (refiners; FAIL gate 3, targets below price, not oversold), KOD/GDS/TH/SECZ no external cause found. **No entry.**
+- **Scan, momentum (>= 3% up, relative volume >= 0.6, 12 names), with 5-minute bars since the open for the best three:**
+  - **TSLA +5.0% ($373.9):** RS vs EV peers is real (RIVN -4.9%, STLA -5.2%, LI -3.5%), catalyst confirmed (Q3 deliveries 486,532 vs 463,000 expected, multiple sources). **FAIL gate 3:** no pullback/retest; it has climbed every 5-minute bar since the open (360 -> 374), so entering is chasing the high of the day, and the analyst mean target ($376) is only 0.6% above price. Watch for a pullback to rising support.
+  - **TER +5.9% ($441.25):** RS vs semi-equipment peers (LRCX/AMAT/KLAC +3.3-3.5%) is a 2.4-point separation; catalyst is a joint integrated test cell with Tokyo Electron (company announcement) plus analyst targets $456 mean / $550 high. Chart: spike to 445.49 (14:00 UTC bar), pullback to 441.4, then a 20-minute base 440.1-444 above the earlier low 435.2. **Not yet an entry:** the strategy needs a continuation trigger (break back above the pullback high 445.49 or hold-and-reclaim with rising support); price is 441.25, below it. **Lead watch.** If it triggers on a later cycle: limit at the ask, stop below the base/higher low about $434.5 (1R about $1.6-2), target >= 2R ($452+), horizon end of day.
+  - **ARM +7.7% ($313.7):** RS vs semis is real, but no catalyst found for today (only older earnings-call commentary), a steady climb with no pullback, and the mean target ($298) is below price. FAIL gates 2 and 3.
+  - Others: MXL +12.9%, PENG +10.5%, APLD +9.9%, NVTS +6.8%, ON/STM/SMCI +4-5% (semi/AI-hardware group moving together or no confirmed catalyst), HOOD +5.0%, IBRX +11.2% (biotech, company-specific). No entry.
+- **Decisions:** none. $105 cash and 2 free slots ready. No forced trade; minimum still unmet.
+- **Skips logged (follow-ups owed):** TSLA, ARM, TER (momentum); PBF, VLO (mean-reversion); yesterday's list still owed at the close.
