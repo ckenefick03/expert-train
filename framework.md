@@ -50,6 +50,14 @@ Run this every cycle, in this order.
 10. **Log everything** to `state.md` (append only): every trade and every skip: entry/exit, size, P&L in dollars and R-multiples, strategy and gate tier, thesis, tag, and a plain-language note on what worked or didn't. Score every closed trade per §5.5.
 11. **Regenerate the dashboard** at the end of every cycle: `python3 build_dashboard.py`. Never hand-edit `dashboard.html`.
 
+### §2.1 — Pre-open cycle (about 8:30 ET, read-only, no orders)
+
+1. **Reconcile and stop-check** held names against pre-market prices.
+2. **Tape first:** pre-market moves in index ETFs, sector ETFs, and the held names; gaps and pre-market movers across both strategy universes (use extended-hours data).
+3. **Then news and politics, to explain the tape:** use WebSearch for overnight headlines, plus the earnings calendar (`get_earnings_calendar`) for names reporting today or within 2 sessions (avoid those). Cover: Fed/rates and the day's economic data releases, tariffs and trade policy, legislation and regulation, executive actions, geopolitics and energy supply, and sector-specific policy (defense budgets, nuclear/space policy, etc.). `get_politician_trades` is a weak, delayed signal (disclosures lag by weeks): context only, never a gate input.
+4. **Output:** a short pre-open brief in `state.md` (regime read, what the news says about the tape, held-name risks, 3-5 candidates to watch per strategy with the reason). No entries: the first 30-60 minutes of the session are off-limits and pre-market liquidity is thin.
+5. **Rules for news use:** every news claim cited in a gate-check must be tied to a source found in that cycle, not memory. A headline that disagrees with the tape is a reason to look harder, not to trade. A policy or political catalyst counts as an *external* cause for mean-reversion gate 1 only if it is sector-wide; a policy hit to one company is company-specific and an automatic fail. If news is ambiguous or unverifiable, treat the gate as FAIL.
+
 ---
 
 ## §3 — Risk management
