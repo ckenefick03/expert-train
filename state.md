@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-02 10:36 ET (cycle 6, :32 routine)",
+  "as_of": "2026-10-02 10:44 ET (cycle 7, :42 routine)",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,8 +41,8 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "amber",
-  "status_note": "3 positions green; $105 cash ready; TER on watch for a momentum trigger",
-  "peak_equity": 430.38,
+  "status_note": "3 positions green, new equity high; $105 ready; TER and TSLA near momentum triggers",
+  "peak_equity": 430.76,
   "day": {
     "date": "2026-10-02",
     "start_equity": 420.4,
@@ -77,6 +77,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-02 10:36 ET",
       "equity": 430.09
+    },
+    {
+      "t": "2026-10-02 10:44 ET",
+      "equity": 430.76
     }
   ],
   "positions": [
@@ -85,7 +89,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 43.08,
+      "price": 43.19,
       "stop": 40.2,
       "target": 47.15
     },
@@ -94,7 +98,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 75.68,
+      "price": 75.69,
       "stop": 66.8,
       "target": 78.55
     },
@@ -103,7 +107,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.48,
+      "price": 36.63,
       "stop": 34.05,
       "target": 41.0
     }
@@ -259,3 +263,13 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   - Others: MXL +12.9%, PENG +10.5%, APLD +9.9%, NVTS +6.8%, ON/STM/SMCI +4-5% (semi/AI-hardware group moving together or no confirmed catalyst), HOOD +5.0%, IBRX +11.2% (biotech, company-specific). No entry.
 - **Decisions:** none. $105 cash and 2 free slots ready. No forced trade; minimum still unmet.
 - **Skips logged (follow-ups owed):** TSLA, ARM, TER (momentum); PBF, VLO (mean-reversion); yesterday's list still owed at the close.
+
+### Cycle 2026-10-02 10:44 ET (cycle 7) — fired by the :42 routine
+- **Stop check (first):** all clear. KTOS 43.19 (stop 40.20), RKLB 75.69 (stop 66.80, target 78.55), OKLO 36.63 (stop 34.05; +1.4% on the day, in line with URA). Equity $430.76 = new peak (breaker now $387.68). Day about +$10.4. No open orders.
+- **Tape:** SPY +1.1%, QQQ +1.6%, SMH +2.8%, LRCX +2.1%, AMAT +2.0%, KLAC +3.1%.
+- **Mean-reversion (>= 3% down, 16 names):** unchanged; STX -13.6% / WDC -11.6% (FAIL gate 1), NKE / STLA (FAIL), ACN / EPAM / KD (FAIL downtrend), MOD (spin-off), PBF / VLO (FAIL gate 3), KOD / GDS / LU / NUVB / AXGN / EMAT (no external cause). No entry.
+- **Momentum (>= 3% up, relative volume >= 0.7, 8 names):** TSLA +5.6%, ARM +8.1%, HOOD +5.8%, MXL +13.2%, ON +4.5%, STM +5.8%, SMCI +5.3%, IBRX +11.2%.
+  - **TER $442.78:** peers cooled (LRCX +2.1%, AMAT +2.0%, KLAC +3.1%) so TER (+6.5%) separates more than before. Base 439.8-444 holding on thin volume; **trigger (break above 445.49) not hit**. Still the lead watch.
+  - **TSLA $373.73:** first real pullback: 374.36 high -> 370.70 low, then a higher low at 371.39 (5-minute bars 14:30/14:35 UTC). Trigger is a break back above 374.36; price 373.73, **not hit**. Analyst mean target $376 (+0.6%); catalyst (Q3 deliveries beat) confirmed. Second watch. If it triggers: limit at ask, stop below 370.7 base (or 1 ATR), horizon end of day to 3 sessions.
+  - ARM: unchanged FAIL (no catalyst found, no pullback, above mean target). Others: semis group moves or no confirmed catalyst.
+- **Decisions:** none. $105 cash, 2 free slots. No forced trade; minimum still unmet.
