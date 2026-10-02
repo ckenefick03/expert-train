@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-02 11:19 ET (cycle 10, hourly routine)",
+  "as_of": "2026-10-02 11:34 ET (cycle 11, :32 routine)",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -93,6 +93,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-02 11:19 ET",
       "equity": 425.84
+    },
+    {
+      "t": "2026-10-02 11:34 ET",
+      "equity": 425.83
     }
   ],
   "positions": [
@@ -101,7 +105,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.63,
+      "price": 42.56,
       "stop": 40.2,
       "target": 47.15
     },
@@ -110,7 +114,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 74.08,
+      "price": 74.02,
       "stop": 66.8,
       "target": 78.55
     },
@@ -119,7 +123,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.39,
+      "price": 36.27,
       "stop": 34.05,
       "target": 41.0
     },
@@ -128,7 +132,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "momentum",
       "qty": 0.2352,
       "entry": 445.86,
-      "price": 445.74,
+      "price": 446.45,
       "stop": 435.0,
       "target": 469.0
     }
@@ -332,3 +336,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 - **Mean-reversion (>= 3% down, 32 names):** no change in the main fails (STX/WDC/SNDK gate 1; NKE/STLA; ACN/EPAM/KD/HUBS/ASAN software-IT downtrend; MOD spin-off; PBF). New: BAH -3.7% / AMTM -3.4% (government services pair, possible policy cause, check at Tier B), LEN -3.5%, ALNY, FUTU, LI/MBLY (EV read-through), others no cause. No entry; and no cash for one anyway ($0.43).
 - **Decisions:** BUY TER (above). No other action. Tier B window opens 11:30 ET but cash is spent.
 - **Daily stats:** strategy trades 1 (organic 1, forced 0); minimum met; loss-limit headroom full.
+
+### Cycle 2026-10-02 11:34 ET (cycle 11) — fired by the :32 routine
+- **Stop check (first):** all clear. TER 446.45 (entry 445.86, stop 435.00, target 469; 5-minute lows 442.3-442.6 hold above the 440 base), KTOS 42.56 (stop 40.20), RKLB 74.02 (stop 66.80), OKLO 36.27 (stop 34.05). Equity $425.83 (peak $431.09, drawdown 1.2%). Day about +$5.4. No open orders.
+- **Tape:** SPY +0.6%, QQQ +1.0%, SMH +2.3%; semicap LRCX +2.3%, AMAT +1.9%, KLAC +3.1%: TER (+7.4%) still leading its peers.
+- **Cash: $0.43, so no new entry is possible this cycle** (every entry needs the full $105). Scans still run and are logged.
+- **Mean-reversion (Tier B window opened 11:30; >= 3.5% down, 26 names):** STX/WDC/SNDK (FAIL gate 1), NKE/STLA (FAIL), MOD (spin-off), KOD/ALNY/VERA/NAMS (biotech, company-specific), LEN -5.0% / MRP -5.5% (Lennar-linked homebuilding, no sector cause found), EPAM/KD/GLBE (software/IT downtrend), PBF (FAIL gate 3), TH/GDS/SECZ/FUTU/GRND/TRLV/MNSO (no external cause). No candidate.
+- **Momentum (>= 3% up, relative volume >= 1.0):** only IBRX +12.7% (company-specific). No candidate.
+- **Decisions:** none. Position count 4 of 5, cash-limited.
