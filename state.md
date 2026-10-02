@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-02 11:44 ET (cycle 12, :42 routine)",
+  "as_of": "2026-10-02 11:53 ET (cycle 13, :52 routine)",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -101,6 +101,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-02 11:44 ET",
       "equity": 426.94
+    },
+    {
+      "t": "2026-10-02 11:53 ET",
+      "equity": 426.86
     }
   ],
   "positions": [
@@ -109,7 +113,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.82,
+      "price": 42.94,
       "stop": 40.2,
       "target": 47.15
     },
@@ -118,7 +122,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 74.19,
+      "price": 73.73,
       "stop": 66.8,
       "target": 78.55
     },
@@ -127,7 +131,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.24,
+      "price": 36.3,
       "stop": 34.05,
       "target": 41.0
     },
@@ -136,7 +140,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "momentum",
       "qty": 0.2352,
       "entry": 445.86,
-      "price": 447.69,
+      "price": 448.11,
       "stop": 435.0,
       "target": 469.0
     }
@@ -353,4 +357,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 - **Stop check (first):** all clear. TER 447.69 (+0.4% vs entry, stop 435.00), KTOS 42.82 (flat on the day), RKLB 74.19, OKLO 36.24. Equity $426.94 (peak $431.09). Day about +$6.5. No open orders. Cash $0.43: no entry possible.
 - **Mean-reversion (Tier B, >= 3.5% down, 29 names):** unchanged fails (STX/WDC/SNDK, NKE/STLA, ACN/EPAM/KD/APP software-IT, MOD spin-off, PBF). Watching homebuilding (LEN -3.8%, MRP -6.2%): Lennar-specific, no sector ETF confirmation. BAH -3.5% (gov services, cause unchecked). No candidate.
 - **Momentum (>= 3% up, relative volume >= 1.0):** ARM +8.0% (no catalyst: still FAIL), ON +6.0% / STM +6.0% (analog group), PENG +10.1%, QGEN +7.9% (new: life-science tools, not checked, no cash anyway), IBRX +12%. No entry possible.
+- **Decisions:** none.
+
+### Cycle 2026-10-02 11:53 ET (cycle 13) — fired by the :52 routine
+- **Stop check (first):** all clear. TER 448.11 (+0.5%, stop 435.00), KTOS 42.94, RKLB 73.73 (stop 66.80), OKLO 36.30. Equity $426.86 (peak $431.09). Day about +$6.5. Cash $0.43: no entry possible.
+- **Mean-reversion (>= 4% down, 18 names):** no new qualifying names (STX/WDC, NKE/STLA, ACN/APP/KD/ASAN software-IT, MOD, MRP/LU/GDS/FUTU China-linked and Lennar-linked, NKTR/KOD/AXGN/NUVB biotech). No candidate.
+- **Momentum (>= 3% up, relative volume >= 1.0):** ARM +8.9%, MXL +11.9%, ON +5.9%, PENG +10.7%, STM +6.3%, QGEN +7.6%, IBRX +12.7%: unchanged lists; no entry possible without cash.
 - **Decisions:** none.
