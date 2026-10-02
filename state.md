@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-02 10:54 ET (cycle 8, :52 routine)",
+  "as_of": "2026-10-02 11:05 ET (cycle 9, :02 routine)",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -85,6 +85,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-02 10:54 ET",
       "equity": 431.09
+    },
+    {
+      "t": "2026-10-02 11:05 ET",
+      "equity": 427.77
     }
   ],
   "positions": [
@@ -93,7 +97,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 43.23,
+      "price": 42.82,
       "stop": 40.2,
       "target": 47.15
     },
@@ -102,7 +106,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 75.88,
+      "price": 74.82,
       "stop": 66.8,
       "target": 78.55
     },
@@ -111,7 +115,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.6,
+      "price": 36.37,
       "stop": 34.05,
       "target": 41.0
     }
@@ -284,3 +288,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 - **Mean-reversion (>= 3% down, 17 names):** same names. STX -14.8% / WDC -13.2% / SNDK -3.4% (FAIL gate 1, HDD/memory supply news), NKE / STLA (FAIL), ACN / EPAM / KD (FAIL downtrend), MOD (spin-off), PBF -5.1% (FAIL gate 3), KOD / GDS / TH -7.9% / SECZ / AXGN / NYT / GRND (no external cause found). No entry.
 - **Momentum (>= 3% up, relative volume >= 0.8):** ON +5.0%, STM +5.6% (analog group, no separation), IBRX +11.5% (company-specific). **TER $440.44:** below the 445.49 trigger, base 439.8-443.4 intact (higher lows 441.06 on the 14:45 bar), SMH cooling; not triggered. **TSLA $372.85:** 5-minute highs 374.16 / 374.12 are below the 374.36 trigger; higher lows intact (371.39, 372.55, 373.21). Not triggered. ARM $315.97: no catalyst, still FAIL. No entry.
 - **Decisions:** none. $105 cash, 2 free slots. No forced trade; minimum still unmet. Entry windows: mean-reversion Tier A closes 11:30 ET, Tier B 11:30-14:30.
+
+### Cycle 2026-10-02 11:05 ET (cycle 9) — fired by the :02 routine
+- **Stop check (first):** all clear, tape softened. KTOS 42.82 (flat on the day, stop 40.20), RKLB 74.82 (target 78.55, stop 66.80), OKLO 36.37 (stop 34.05). Equity $427.77 (peak $431.09; drawdown from peak 0.8%). Day about +$7.4. No open orders.
+- **Tape:** SPY +0.8%, QQQ +1.2%, SMH +2.6%; the early rally is fading modestly.
+- **Mean-reversion (>= 3% down, 22 names):** same STX/WDC/SNDK (FAIL gate 1), NKE/STLA (FAIL), ACN/EPAM/KD (FAIL downtrend), MOD (spin-off), PBF (FAIL gate 3), plus new FUTU -3.6%, NYT -3.6%, RHI -3.5%, GRND, MNSO, OCUL, NUVB, EMAT, LU -8.8%, AXGN, KOD, GDS: no sector or macro cause found. No entry. Tier A window closes 11:30 ET.
+- **Momentum (>= 3% up, relative volume >= 0.8):** TSLA +4.9%, ARM +8.3%, MXL +11.4%, ON +5.5%, PENG +10.0%, STM +5.8%, SMCI +4.5%, IBRX +9.6%. **TER $443.36:** 14:55 bar high 444.59, trigger 445.49 not hit; base intact (lows 441.06 / 440.21 / 441.28). **TSLA $371.77:** trigger 374.36 not hit; 14:55 bar low 371.28 undercut the prior higher low (371.39), so the base is no longer clean: downgraded to wait. No entry.
+- **Decisions:** none. $105 cash, 2 free slots. Minimum of 1 trade still unmet.
