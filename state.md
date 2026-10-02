@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-02 09:55 ET (cycle 3)",
+  "as_of": "2026-10-02 10:04 ET (cycle 4)",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "amber",
-  "status_note": "3 positions green; $105 cash ready; no qualifying setup yet (entries open 10:00/10:30 ET)",
+  "status_note": "3 positions watched (all stops 5%+ away); $105 cash ready; no setup has passed yet",
   "peak_equity": 428.55,
   "day": {
     "date": "2026-10-02",
@@ -65,6 +65,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-02 09:55 ET (cycle 3)",
       "equity": 428.55
+    },
+    {
+      "t": "2026-10-02 10:04 ET",
+      "equity": 425.23
     }
   ],
   "positions": [
@@ -73,7 +77,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 43.12,
+      "price": 42.46,
       "stop": 40.2,
       "target": 47.15
     },
@@ -82,7 +86,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 75.17,
+      "price": 74.54,
       "stop": 66.8,
       "target": 78.55
     },
@@ -91,22 +95,22 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.19,
+      "price": 35.92,
       "stop": 34.05,
       "target": 41.0
     }
   ],
   "trades": [],
   "regime": {
-    "read": "Risk-on rally: the September jobs miss (+29K vs about 85-90K expected, unemployment 4.2%) cut Fed hike odds, yields fell, and stocks are bid. Broad strength led by space (UFO), tech and utilities; healthcare and energy flat to soft. Weakness is idiosyncratic (HDD makers on Toshiba capacity news, Nike).",
+    "read": "Risk-on after the jobs miss, led by semis (SMH +2.8%) while software/IT services and independent power producers lag. Defense (ITA -0.6%) and uranium cooled. Dislocations are mostly company-specific (HDD makers, Nike, Stellantis) or technical (Modine spin-off).",
     "chips": [
       {
         "name": "SPY",
-        "chg": 0.96
+        "chg": 0.88
       },
       {
         "name": "QQQ",
-        "chg": 1.31
+        "chg": 1.42
       },
       {
         "name": "IWM",
@@ -130,11 +134,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "XLU",
-        "chg": 1.17
+        "chg": 0.25
       },
       {
         "name": "ITA",
-        "chg": 0.66
+        "chg": -0.61
       },
       {
         "name": "UFO",
@@ -142,11 +146,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "URA",
-        "chg": 1.08
+        "chg": 0.56
       },
       {
         "name": "SMH",
-        "chg": 2.72
+        "chg": 2.78
       }
     ]
   }
@@ -216,3 +220,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 - **Skips logged (follow-ups owed):** mean-reversion: STX, WDC, NKE, ACN, EPAM, MDB, APP; momentum: ON, HOOD, ASST. Record closing price and next-day move at the next cycles.
 - **Decisions:** none. No entry because no candidate passed its gate-check and entry windows are not open yet (not because of a missing authorization). No forced trade: minimum of 1 trade is still unmet; a Tier C forced-tag trade is only possible 14:30-15:30 ET and still needs all four mean-reversion gate criteria.
 - **Daily stats:** strategy trades 0 (organic 0 / forced 0); sizing trim of KTOS realized about +$0.93; loss-limit headroom full.
+
+### Cycle 2026-10-02 10:04 ET (cycle 4) — rescan at the mean-reversion Tier A window open
+- **Stop check (first):** all clear. KTOS 42.46 (stop 40.20, cushion 5.3%; faded from 43.1 with ITA -0.6%, in line), RKLB 74.54 (stop 66.80, +5.4% on cost), OKLO 35.92 (stop 34.05, cushion 5.2%; -0.6% on the day vs URA +0.6%, lagging its group, watching for relative-strength loss, no exit yet). Equity about $425.2; day about +$4.8 vs start-of-day $420.40.
+- **Tape:** SPY +0.9%, QQQ +1.4%, SMH +2.8%, IGV +1.0%, XLV -0.1%, XLE -0.3%, ITA -0.6%.
+- **Scan, mean-reversion (>= 2.5% down, 27 names), gate verdicts:**
+  - Tier A (needs >= 5% drop, sector ETF down >= 2%): none qualify. STX -12.5%, WDC -9.9%: FAIL gate 1 (Toshiba capacity doubling, industry supply news). NKE -5.9%: FAIL gates 1 and 2 (revenue miss, guidance cut, layoffs). STLA -6.0%: FAIL gate 1 (EUR 22.2B / $26.5B EV writedown, company-specific). MOD -6.1%: skip (price distorted by the 10/1 spin-off of its Performance Technologies unit, a technical move). TH -7.4%, GDS -5.9%: no external cause found. RIVN -4.9%, LI -3.5%, MBLY -2.9%: EV read-through from Stellantis; gate 4 FAIL expected (RIVN -24% YTD, multi-week downtrend).
+  - **Watch for Tier B (window opens 11:30 ET):** independent power producers CEG -3.6%, VST -3.2%, NRG -3.2%. Cause: FERC placed a five-month hold on PJM's reliability backstop procurement, a sector-wide regulatory event (counts as external under framework 2.1). Gate 1 passes provisionally. Gates 2-4 still to verify at 11:30: latest fundamentals neutral-or-better, upside anchor, and trend structure (VST is down about 30% over 12 months, which may be a real downtrend = FAIL). Concentration note: CEG is nuclear/AI-power, correlated with the held OKLO.
+  - Skips with no sector cause: SNDK, SPOT, APP, LNG, ACN, EPAM, KD, AXGN, KOD, ADRX, SECZ, CHA, MNSO, FTAI.
+- **Scan, momentum (>= 3% up, relative volume >= 0.6):** only ASST +3.9% (no catalyst, no peer divergence: FAIL). Semis lead the market as a group, so no single name separates yet. Earliest entry 10:30 ET; rescan then with 5-minute bars on the semis and space names.
+- **Decisions:** none. No entry: no candidate passed all four gates. Authorization is not the blocker. $105 cash and 2 slots are ready.
+- **Daily stats:** strategy trades 0 (organic 0 / forced 0); minimum of 1 unmet; realized from the KTOS sizing trim about +$0.93.
