@@ -64,8 +64,8 @@ Run this every cycle, in this order.
 
 | Parameter | Value |
 |---|---|
-| Position size | **$105 fixed per entry** (25% of $420; the user's range was 10-30% = $42-$126; raised from $80 on 2026-10-01 under the user's delegation), identical every trade; strategy quality is the only variable. Never scale with conviction. Three full positions = $315 (about 75% of equity). |
-| Max concurrent positions | **3**, shared across all strategies |
+| Position size | **$105 fixed per entry** (25% of $420; the user's range was 10-30% = $42-$126; raised from $80 on 2026-10-01 under the user's delegation), identical every trade; strategy quality is the only variable. Never scale with conviction. Three full positions = $315 (about 75% of equity); four = $420 (100%). |
+| Max concurrent positions | **5**, shared across all strategies (raised from 3 on 2026-10-01 at the user's request). **Cash is the real limit:** five $105 positions would cost $525, more than the account, so every entry still requires the full $105 of buying power. At current equity the effective maximum is about 4. |
 | Daily loss limit | **$100**, hard stop. When realized + unrealized loss for the day reaches $100: close nothing out of panic, but take **no new entries** for the rest of the day and flag it. |
 | Circuit breaker | **10% drawdown from peak equity**: halve position size to **$52** and **pause all new entries until the user reviews**. Peak equity is tracked in `state.md`. |
 | Min / max trades per day | 1 / 10 |
@@ -126,6 +126,6 @@ Append here the first time any of these is discovered, so it isn't rediscovered:
 - Never increase size to recover a loss.
 - Scoped to Agentic Account (ending 4490) only; never another account.
 - Halt and flag on anomalous data (stale quotes, constant placeholder values, impossible prices) rather than trading through confusion.
-- **Adopted holdings:** on 2026-10-01 the user told me to adopt the pre-existing positions (KTOS, RKLB, OKLO) into the strategy. They are framework positions: they count against the 3-slot cap, get a stop/target/horizon, and are checked every cycle. They were sized above the fixed size before adoption (KTOS about $210, RKLB and OKLO about $106); the plan is to trim KTOS to about $105 (RKLB and OKLO already fit the $105 size) (not on the day of purchase, to avoid an unverified day-trade issue) rather than leave an oversized position. They were not gate-checked, so their setup score is capped. No new entry may be placed without enough buying power for the full position size.
+- **Adopted holdings:** on 2026-10-01 the user told me to adopt the pre-existing positions (KTOS, RKLB, OKLO) into the strategy. They are framework positions: they count against the 5-slot cap, get a stop/target/horizon, and are checked every cycle. They were sized above the fixed size before adoption (KTOS about $210, RKLB and OKLO about $106); the plan is to trim KTOS to about $105 (RKLB and OKLO already fit the $105 size) (not on the day of purchase, to avoid an unverified day-trade issue) rather than leave an oversized position. They were not gate-checked, so their setup score is capped. No new entry may be placed without enough buying power for the full position size.
 - Report outcomes honestly, including when a win came from luck rather than process.
 - Append to `state.md`; never overwrite history.

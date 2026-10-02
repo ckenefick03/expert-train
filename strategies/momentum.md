@@ -1,6 +1,6 @@
 # Strategy: Momentum / Relative-Strength
 
-Account scope: Agentic Account (ending 4490) only. Runs in parallel with `mean-reversion.md` every cycle; the full eligible universe is re-scanned each time. Risk numbers come from `framework.md` §3 ($105 fixed size, shared cap of 3 positions).
+Account scope: Agentic Account (ending 4490) only. Runs in parallel with `mean-reversion.md` every cycle; the full eligible universe is re-scanned each time. Risk numbers come from `framework.md` §3 ($105 fixed size, shared cap of 5 positions).
 
 ## Universe
 - US-listed common stocks, market cap ≥ $2B.

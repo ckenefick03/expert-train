@@ -28,7 +28,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 {
   "as_of": "2026-10-01 12:35 ET (cycle 1)",
   "account": { "name": "Agentic Account", "last4": "4490", "type": "limited_margin" },
-  "risk": { "position_size": 105, "max_positions": 3, "daily_loss_limit": 100, "breaker_pct": 10, "min_trades": 1, "max_trades": 10 },
+  "risk": { "position_size": 105, "max_positions": 5, "daily_loss_limit": 100, "breaker_pct": 10, "min_trades": 1, "max_trades": 10 },
   "status": "amber",
   "status_note": "3 adopted positions watched; stops clear; no buying power for new entries",
   "peak_equity": 421.51,
@@ -64,7 +64,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 - Pre-existing positions (legacy, not framework trades, unmanaged unless the user says otherwise): KTOS 4.890677 sh @ $42.53 avg, RKLB 1.49887 sh @ $70.72 avg, OKLO 2.914497 sh @ $36.37 avg (cost ≈ $208 / $106 / $106).
 - Consequence: buying power is $0.04, so no entry of the fixed size is possible until cash is available.
 - **Update 2026-10-01 (user decision): the user told me to adopt these three positions into the strategy.** They are now framework positions ("adopted") and count toward the 3-slot cap. Order history shows they were bought earlier today (11:18-11:40 ET by an agent, before this framework) with sizes above $80 (KTOS about $210, RKLB and OKLO about $106 each), and a WULF position was sold at 11:39 ET. These are pre-framework trades, not scored or tagged, and not counted toward today's minimum.
-- Risk parameters (size raised to $105 on 2026-10-01, see cycle log; originally $80):  $105 fixed size; 3 max positions; $100 daily loss limit; 10% circuit breaker from peak (peak $421.51, breaker at equity ≤ $379.36); min 1 / max 10 trades per day; no leverage/options/shorting/averaging down.
+- Risk parameters (size raised to $105 on 2026-10-01, see cycle log; originally $80):  $105 fixed size; 5 max positions (raised from 3, see cycle log); $100 daily loss limit; 10% circuit breaker from peak (peak $421.51, breaker at equity ≤ $379.36); min 1 / max 10 trades per day; no leverage/options/shorting/averaging down.
 
 ## Cycle log
 
@@ -92,3 +92,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 - Unchanged: $100 daily loss limit, 10% breaker, 3 max positions. No framework trades have been placed, so no history is affected.
 - This supersedes the "trim all three to about $80" plan in the cycle 1 entry: the plan is now to trim only KTOS to about $105 at tomorrow's open+30min.
 - Infrastructure: the scheduled cycle jobs set up earlier were no longer present when checked (CronList empty). Recreated.
+
+### Note 2026-10-02 (pre-open): max positions raised 3 -> 5
+- User decision: cap is now **5**, shared across both strategies. Applied as asked. Cash remains the binding constraint: five $105 positions need $525 against about $421 of equity, so each entry still needs $105 of buying power and the effective maximum is about 4. At 4 positions the account would be fully invested with no cash reserve; each new entry must still pass every gate, the $100 daily loss limit and the 10% breaker.
+- This supersedes my cycle 1 remark that the cap was full. After the KTOS trim (about $105 freed) one more entry is possible without closing anything.
