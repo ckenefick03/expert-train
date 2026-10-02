@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-02 11:34 ET (cycle 11, :32 routine)",
+  "as_of": "2026-10-02 11:44 ET (cycle 12, :42 routine)",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -97,6 +97,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-02 11:34 ET",
       "equity": 425.83
+    },
+    {
+      "t": "2026-10-02 11:44 ET",
+      "equity": 426.94
     }
   ],
   "positions": [
@@ -105,7 +109,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.56,
+      "price": 42.82,
       "stop": 40.2,
       "target": 47.15
     },
@@ -114,7 +118,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 74.02,
+      "price": 74.19,
       "stop": 66.8,
       "target": 78.55
     },
@@ -123,7 +127,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.27,
+      "price": 36.24,
       "stop": 34.05,
       "target": 41.0
     },
@@ -132,7 +136,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "momentum",
       "qty": 0.2352,
       "entry": 445.86,
-      "price": 446.45,
+      "price": 447.69,
       "stop": 435.0,
       "target": 469.0
     }
@@ -344,3 +348,9 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 - **Mean-reversion (Tier B window opened 11:30; >= 3.5% down, 26 names):** STX/WDC/SNDK (FAIL gate 1), NKE/STLA (FAIL), MOD (spin-off), KOD/ALNY/VERA/NAMS (biotech, company-specific), LEN -5.0% / MRP -5.5% (Lennar-linked homebuilding, no sector cause found), EPAM/KD/GLBE (software/IT downtrend), PBF (FAIL gate 3), TH/GDS/SECZ/FUTU/GRND/TRLV/MNSO (no external cause). No candidate.
 - **Momentum (>= 3% up, relative volume >= 1.0):** only IBRX +12.7% (company-specific). No candidate.
 - **Decisions:** none. Position count 4 of 5, cash-limited.
+
+### Cycle 2026-10-02 11:44 ET (cycle 12) — fired by the :42 routine
+- **Stop check (first):** all clear. TER 447.69 (+0.4% vs entry, stop 435.00), KTOS 42.82 (flat on the day), RKLB 74.19, OKLO 36.24. Equity $426.94 (peak $431.09). Day about +$6.5. No open orders. Cash $0.43: no entry possible.
+- **Mean-reversion (Tier B, >= 3.5% down, 29 names):** unchanged fails (STX/WDC/SNDK, NKE/STLA, ACN/EPAM/KD/APP software-IT, MOD spin-off, PBF). Watching homebuilding (LEN -3.8%, MRP -6.2%): Lennar-specific, no sector ETF confirmation. BAH -3.5% (gov services, cause unchecked). No candidate.
+- **Momentum (>= 3% up, relative volume >= 1.0):** ARM +8.0% (no catalyst: still FAIL), ON +6.0% / STM +6.0% (analog group), PENG +10.1%, QGEN +7.9% (new: life-science tools, not checked, no cash anyway), IBRX +12%. No entry possible.
+- **Decisions:** none.
