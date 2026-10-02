@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-02 15:43 ET (cycle 36, :42 routine)",
+  "as_of": "2026-10-02 15:47 ET (cycle 37, close recap)",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "amber",
-  "status_note": "4 positions open (TER added); cash $0.43; stops 5%+ away",
+  "status_note": "4 positions held overnight (KTOS, RKLB, OKLO, TER); cash $0.43; no resting stops (fractional), stops 5%+ away",
   "peak_equity": 431.09,
   "day": {
     "date": "2026-10-02",
@@ -197,6 +197,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-02 15:43 ET",
       "equity": 424.81
+    },
+    {
+      "t": "2026-10-02 15:47 ET",
+      "equity": 425.77
     }
   ],
   "positions": [
@@ -205,7 +209,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.85,
+      "price": 42.93,
       "stop": 40.2,
       "target": 47.15
     },
@@ -214,7 +218,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 73.63,
+      "price": 73.99,
       "stop": 66.8,
       "target": 78.55
     },
@@ -223,7 +227,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 35.7,
+      "price": 35.71,
       "stop": 34.05,
       "target": 41.0
     },
@@ -232,7 +236,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "momentum",
       "qty": 0.2352,
       "entry": 445.86,
-      "price": 448.64,
+      "price": 449.56,
       "stop": 435.0,
       "target": 469.0
     }
@@ -572,3 +576,15 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 - **Stop check (first):** all clear. TER 448.64 (stop 435.00), KTOS 42.85 (stop 40.20), RKLB 73.63, OKLO 35.70 (stop 34.05). No open orders. Equity $424.81 (peak $431.09, drawdown 1.5%). Day about +$4.4. Cash $0.43.
 - **Entries closed (after 15:30 ET).** Scans skipped. Close recap routine (15:47 ET) is next.
 - **Decisions:** none.
+
+### Cycle 2026-10-02 15:47 ET (cycle 37) — close recap routine
+- **Stop check (first):** all clear. TER 449.56 (stop 435.00, 3.2% below), KTOS 42.93 (stop 40.20), RKLB 73.99 (stop 66.80), OKLO 35.71 (stop 34.05). No open orders. Equity $425.77 (peak $431.09, drawdown 1.2%). Day +$5.37 vs start $420.40 (+1.3%). Cash $0.43. No new entries (past 15:30 ET).
+- **Rolling overnight (explicit, not silent):**
+  - **TER (momentum, organic):** held. Thesis intact: Tokyo Electron AI test-cell catalyst, base 440-444 held, price above the 445.49 pullback high, SMH +2.3% with TER leading; no stop or invalidation hit. Risk: overnight gap below the $435 stop is unprotected because fractional shares cannot hold resting stops. I have not re-verified whether an earnings date falls in the next 2 sessions; check at pre-open.
+  - **RKLB, KTOS, OKLO (adopted):** held. Adopted pre-framework positions with ATR-based stops (RKLB 66.80, KTOS 40.20, OKLO 34.05) and 2R targets, none near a stop. No fresh catalyst was written for these; the thesis is "no invalidation" rather than a confirmed new reason to hold. OKLO is the weakest (-1.8% vs adopted entry, -1.2% on the day). Review all three at pre-open.
+- **Day recap:**
+  - Trades: 1 organic (BUY TER 0.2352 sh @ 445.8554, $104.87, 11:16 ET). 1 unscored trim (SELL KTOS 2.453 sh @ 42.9101, realized about +$0.93, restoring $105 size). 0 forced.
+  - Skips: STX/WDC/SNDK, NKE, STLA, MOD, PBF/VLO/MPC, CEG/VST/NRG, TSLA, ARM, ON/STM, ACN/EPAM/KD, others, each logged with the failed gate. Follow-ups on skipped candidates still to be filled in (closing prices needed) at next pre-open.
+  - P&L: +$5.37. Unrealized vs entry: RKLB +$4.37, TER +$0.87, KTOS +$0.98, OKLO -$1.95. Most of the day's gain is the adopted positions, not the strategies.
+  - Missed cycles: pre-open and the 9:42 ET cycle never ran because in-memory cron jobs vanished; fixed with server-side routines. Cash was $0.43 from the TER fill onward, so afternoon cycles could only do stop checks.
+  - Correction: an earlier chat message said TER was about +$4; the actual TER position gain is about +$0.87.
