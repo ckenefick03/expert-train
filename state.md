@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-02 12:25 ET (cycle 16, :22 routine)",
+  "as_of": "2026-10-02 12:34 ET (cycle 17, :32 routine)",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -117,6 +117,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-02 12:25 ET",
       "equity": 428.02
+    },
+    {
+      "t": "2026-10-02 12:34 ET",
+      "equity": 427.24
     }
   ],
   "positions": [
@@ -125,7 +129,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 43.1,
+      "price": 43.04,
       "stop": 40.2,
       "target": 47.15
     },
@@ -134,7 +138,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 73.9,
+      "price": 73.8,
       "stop": 66.8,
       "target": 78.55
     },
@@ -143,7 +147,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.49,
+      "price": 36.3,
       "stop": 34.05,
       "target": 41.0
     },
@@ -152,7 +156,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "momentum",
       "qty": 0.2352,
       "entry": 445.86,
-      "price": 448.27,
+      "price": 448.53,
       "stop": 435.0,
       "target": 469.0
     }
@@ -391,4 +395,9 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 ### Cycle 2026-10-02 12:25 ET (cycle 16) — fired by the :22 routine
 - **Stop check (first):** all clear. TER 448.27 (+0.5%, stop 435.00), KTOS 43.10, RKLB 73.90, OKLO 36.49. Equity $428.02 (peak $431.09). Day about +$7.6. Cash $0.43: no entry possible.
 - **Scans:** mean-reversion (>= 5% down, 9 names) unchanged fails (STX/WDC, NKE/STLA, ACN, KOD, GDS, TH, SECZ). Momentum (>= 4% up, relative volume >= 1.0, 11 names): TSLA +4.9% (base weak, no trigger), SpaceX (SPCX) +5.9% (space peer to RKLB; not evaluated, no cash), ARM, MXL, ON, PENG, STM, QGEN, SMCI, APLD, IBRX: no change. Nothing actionable.
+- **Decisions:** none.
+
+### Cycle 2026-10-02 12:34 ET (cycle 17) — fired by the :32 routine
+- **Stop check (first):** all clear. TER 448.53 (+0.6% vs entry, +7.9% on the day, stop 435.00), KTOS 43.04, RKLB 73.80, OKLO 36.30. Equity $427.24 (peak $431.09). Cash $0.43: no entry possible.
+- **Scans:** unchanged lists (mean-reversion >= 5% down: STX/WDC, NKE/STLA, MOD spin-off, KOD, GDS, TH, SECZ, ADRX; momentum >= 4% up, relative volume >= 1.0: TER (held), TSLA, ARM, SPCX, MXL, ON, PENG, STM, QGEN, APLD, IBRX). Nothing actionable.
 - **Decisions:** none.
