@@ -9,7 +9,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Agentic Account Terminal</title>
+<title>Ledger — Agentic Account Terminal</title>
 <style>
   :root {
     --bg: #0b0804;
@@ -146,7 +146,7 @@ const DATA = /*__DATA__*/null;
   const breaker = peak * (1 - (DATA.risk.breaker_pct || 10) / 100);
 
   // Header
-  $("acct").textContent = DATA.account.name + " ····" + DATA.account.last4;
+  $("acct").textContent = "Ledger · " + DATA.account.name + " ····" + DATA.account.last4;
   $("statusnote").textContent = DATA.status_note || "";
   const dot = $("dot"); dot.className = "dot" + (DATA.status === "amber" ? " amber" : DATA.status === "red" ? " red" : "");
   dot.setAttribute("aria-label", "status " + (DATA.status || "green"));

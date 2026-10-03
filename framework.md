@@ -1,6 +1,6 @@
 # Autonomous Trading Framework — Agentic Account
 
-Master operating framework. Strategy rules live in `strategies/`. The running log and source-of-truth data live in `state.md`. `dashboard.html` is a rendered view of `state.md`.
+Master operating framework. The agent operating this account is named **Ledger** (named by the user, 2026-10-03). Strategy rules live in `strategies/`. The running log and source-of-truth data live in `state.md`. `dashboard.html` is a rendered view of `state.md`.
 
 ---
 
