@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-05 09:54 ET (cycle 39, :52 routine) - TER exited",
+  "as_of": "2026-10-05 10:03 ET (cycle 40, :02 routine)",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -213,6 +213,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-05 09:54 ET",
       "equity": 420.94
+    },
+    {
+      "t": "2026-10-05 10:03 ET",
+      "equity": 422.81
     }
   ],
   "positions": [
@@ -221,7 +225,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 43.31,
+      "price": 43.27,
       "stop": 40.2,
       "target": 47.15
     },
@@ -230,7 +234,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 72.5,
+      "price": 72.09,
       "stop": 66.8,
       "target": 78.55
     },
@@ -239,7 +243,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.32,
+      "price": 36.23,
       "stop": 34.05,
       "target": 41.0
     }
@@ -629,3 +633,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 - **Account:** equity $420.94 (peak $431.09, drawdown 2.4%), day -$4.83 vs Friday $425.77, cash $103.72. This is $1.28 short of the $105 position size, so no new entry is possible even if a candidate passes: sizing is fixed at $105. The shortfall means a new entry would need another trim.
 - **Scans:** skipped (before the 10:00 ET entry opening, and cash is below the entry size). Day trade count 1 (the exit is the second order of a TER round trip across days, not an intraday round trip).
 - **Decisions:** exit TER. No other action.
+
+### Cycle 2026-10-05 10:03 ET (cycle 40) — fired by the :02 routine
+- **Stop check (first):** all clear. KTOS 43.27 (stop 40.20), RKLB 72.09 (-2.5% on the day, stop 66.80 is 7.3% below), OKLO 36.23 (+1.0%, stop 34.05). No open orders. Equity $422.81 (peak $431.09, drawdown 1.9%). Day -$2.96 vs Friday $425.77. Cash $103.72, below the $105 entry size, so no new entry is possible.
+- **Tape:** SPY +0.2%, QQQ +0.3%, SMH -0.5%.
+- **Follow-up on the TER exit:** TER bounced to 443.03 about 10 minutes after the 439.16 fill, so the exit cost about $0.92 against holding (0.2352 x 3.87). It still sits below the 445.49 trigger and under the broken base. The exit followed the written rule (base break plus RS loss near a manual stop); a whipsaw like this is the cost of a stop that cannot rest. Not a rule change on one data point. Revisit if exits near stops keep reversing in the first 30 minutes.
+- **Scans:** skipped (cash is below the $105 entry size). Tier A window is open until 11:30 ET.
+- **Decisions:** none.
