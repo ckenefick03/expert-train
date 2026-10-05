@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-05 11:32 ET (cycle 47, :32 routine)",
+  "as_of": "2026-10-05 11:43 ET (cycle 48, :42 routine)",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -245,6 +245,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-05 11:32 ET",
       "equity": 421.32
+    },
+    {
+      "t": "2026-10-05 11:43 ET",
+      "equity": 422.98
     }
   ],
   "positions": [
@@ -253,7 +257,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.69,
+      "price": 42.92,
       "stop": 40.2,
       "target": 47.15
     },
@@ -262,7 +266,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 72.13,
+      "price": 72.39,
       "stop": 66.8,
       "target": 78.55
     },
@@ -271,7 +275,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.18,
+      "price": 36.44,
       "stop": 34.05,
       "target": 41.0
     }
@@ -709,5 +713,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 ### Cycle 2026-10-05 11:32 ET (cycle 47) — fired by the :32 routine
 - **Stop check (first):** all clear. KTOS 42.69 (-0.9%, stop 40.20), RKLB 72.13 (-2.4%, stop 66.80), OKLO 36.18 (+0.9%, stop 34.05). No open orders. Equity $421.32 (peak $431.09, drawdown 2.3%). Day -$4.45 vs Friday $425.77. Cash $103.72, still $1.28 below the $105 entry size.
 - **Tape:** SPY +0.4%, QQQ +0.5%, SMH +0.1%. Tier A window has closed; Tier B (11:30-14:30) is open.
+- **Scans:** skipped (cash below the $105 entry size).
+- **Decisions:** none.
+
+### Cycle 2026-10-05 11:43 ET (cycle 48) — fired by the :42 routine
+- **Stop check (first):** all clear. KTOS 42.92 (stop 40.20), RKLB 72.39 (-2.1%, stop 66.80), OKLO 36.44 (+1.6%, stop 34.05). No open orders. Equity $422.98 (peak $431.09, drawdown 1.9%). Day -$2.79 vs Friday $425.77. Cash $103.72, still $1.28 below the $105 entry size.
+- **Tape:** SPY +0.5%, QQQ +0.5%, SMH +0.2%.
 - **Scans:** skipped (cash below the $105 entry size).
 - **Decisions:** none.
