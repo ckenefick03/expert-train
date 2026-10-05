@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-05 13:03 ET (cycle 56, :02 routine)",
+  "as_of": "2026-10-05 13:13 ET (cycle 57, hourly routine)",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -281,6 +281,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-05 13:03 ET",
       "equity": 420.99
+    },
+    {
+      "t": "2026-10-05 13:13 ET",
+      "equity": 420.41
     }
   ],
   "positions": [
@@ -289,7 +293,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.34,
+      "price": 42.23,
       "stop": 40.2,
       "target": 47.15
     },
@@ -298,7 +302,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 72.38,
+      "price": 71.98,
       "stop": 66.8,
       "target": 78.55
     },
@@ -307,7 +311,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.22,
+      "price": 36.32,
       "stop": 34.05,
       "target": 41.0
     }
@@ -809,4 +813,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 - **Tape:** SPY +0.6%, QQQ +0.6%, SMH +0.1%.
 - **Scan, mean-reversion (>= 3.5% down, 36 names, Tier B):** the list is widening beneath a rising index: new names EAT -3.7%, FER -3.5%, GFS -3.5%, INIO -4.1%, RIOT -3.7%, MARA -3.6%, LUNR -3.6%. Clusters worth a cause check at the 13:12 hourly news pass: (a) mid-cap/foundry/analog semis (GFS, UMC, SWKS, ACMR, CRDO, NOK) down 3.5-10% while SMH is flat, with UMC already explained by its convertible; (b) bitcoin miners now broader (RIOT, MARA, CLSK, WULF, CIFR, IREN); (c) space/defense small caps (LUNR, FLY, AADX), which is the group my held RKLB and KTOS belong to and are lagging. No cause established for any cluster, so gate 1 is not met. **No entry.**
 - **Scan, momentum (>= 3% up, relative volume >= 1.0, 24 names):** unchanged: deal-driven (PTC, RXO), engineering-software read-through (ADSK, PCOR, BSY), Brazil country move, biotech (PCVX, RXRX). **No entry.**
+- **Decisions:** none.
+
+### Cycle 2026-10-05 13:13 ET (cycle 57) — fired by the hourly routine (news pass)
+- **Stop check (first):** all clear. KTOS 42.23 (-1.9%, stop 40.20), RKLB 71.98 (-2.6%, stop 66.80), OKLO 36.32 (+1.3%, stop 34.05). No open orders. Equity $420.41 (peak $431.09, drawdown 2.5%). Day -$5.36 vs Friday $425.77. Cash $103.72 (entry size would be $103.22).
+- **Tape:** SPY +0.6%, QQQ +0.7%, SMH +0.2%. Aerospace/defense ETFs XAR -0.6%, ITA -0.2%.
+- **Relative-strength check on held names (the written exit signal):** RKLB -2.6% vs XAR -0.6% (lag about 2.0 points), KTOS -1.9% vs ITA -0.2% (lag about 1.7 points). Both are lagging their sector while the market rises, a mild version of the "bleeding while the group holds" signal in both strategy files. Not an exit yet: the lag is small, both stops are far (RKLB 7.2%, KTOS 4.8% below), and these adopted positions had no gate-checked entry thesis to invalidate. **Trigger to exit written now:** lag vs the sector ETF widening past 3 points, or a new session low on volume. OKLO is the strongest of the three.
+- **News on clusters (from the 13:03 scan):** (a) **Space small caps (LUNR, FLY, AADX; also RKLB):** search shows a recurring 2026 pattern of capital rotating to the newly listed SpaceX, with peers selling off without company-specific bad news. External cause plausible, but this is the group I already hold, so adding it is a concentration decision; no entry. (b) **Mid-cap/foundry/analog semis (GFS -4.6%, NOK, SWKS, CRDO, ACMR):** no same-day cause found; SWKS is near its 52-week high, so a pullback not a downtrend, but gate 1 is unmet. (c) **Bitcoin miners:** bitcoin itself about $86K, up on the week, while miners fall; no cause found, and their multi-month structure fails gate 4. **No entry.**
+- **Scans:** not re-run this cycle (full scans ran at 13:03, ten minutes ago, with the cluster causes now checked above). Momentum list unchanged at that time.
 - **Decisions:** none.
