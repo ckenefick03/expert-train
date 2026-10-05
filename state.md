@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-05 09:42 ET (cycle 38, :42 routine)",
+  "as_of": "2026-10-05 09:54 ET (cycle 39, :52 routine) - TER exited",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,12 +41,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "amber",
-  "status_note": "4 positions held, cash $0.43; TER 443.71 (stop 435.00, 2.0% below)",
+  "status_note": "3 positions held (KTOS, RKLB, OKLO); cash $103.72, below the $105 entry size; TER exited -0.62R",
   "peak_equity": 431.09,
   "day": {
     "date": "2026-10-05",
     "start_equity": 425.77,
-    "trades": 0,
+    "trades": 1,
     "forced": 0
   },
   "equity_history": [
@@ -209,6 +209,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-05 09:42 ET",
       "equity": 424.87
+    },
+    {
+      "t": "2026-10-05 09:54 ET",
+      "equity": 420.94
     }
   ],
   "positions": [
@@ -238,18 +242,22 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "price": 36.32,
       "stop": 34.05,
       "target": 41.0
-    },
+    }
+  ],
+  "trades": [
     {
       "symbol": "TER",
       "strategy": "momentum",
-      "qty": 0.2352,
+      "tier": "-",
       "entry": 445.86,
-      "price": 443.71,
-      "stop": 435.0,
-      "target": 469.0
+      "exit": 439.16,
+      "pnl": -1.58,
+      "r": -0.62,
+      "score": 72,
+      "tag": "organic",
+      "date": "2026-10-05"
     }
   ],
-  "trades": [],
   "regime": {
     "read": "Risk-on after the jobs miss, led by semis (SMH +2.8%) while software/IT services and independent power producers lag. Defense (ITA -0.6%) and uranium cooled. Dislocations are mostly company-specific (HDD makers, Nike, Stellantis) or technical (Modine spin-off).",
     "chips": [
@@ -612,3 +620,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 - **Tape:** SPY +0.1%, QQQ +0.4%, SMH +0.1%. TER is lagging semis (SMH flat), a mild relative-strength loss for a momentum position; watch, no exit yet (above the rising base and stop).
 - **Scans:** skipped. Before 10:00 ET no entries are allowed, and there is no buying power anyway.
 - **Decisions:** none.
+
+### Cycle 2026-10-05 09:54 ET (cycle 39) — fired by the :52 routine — EXIT: TER
+- **Stop check (first):** TER fell to 439.01 (-2.2% on the day, SMH -0.3%, SPY +0.1%), through the 440 floor of its 439.8-443.4 base, with the stop (435.00) only 0.9% below. KTOS 42.79 (stop 40.20), RKLB 72.50 (stop 66.80), OKLO 35.84 (stop 34.05) clear.
+- **Exit reasoning (written before the order):** (1) momentum invalidation: price lost the higher-low base that was the entry thesis; (2) relative-strength loss vs the semis group (TER -2.2% vs SMH -0.3%) is an exit signal on its own under the momentum rules, separate from the stop; (3) fractional shares cannot hold a resting stop, so exit proactively near the stop rather than wait for it. Thesis (Tokyo Electron AI test-cell catalyst) is no longer confirmed by price.
+- **Order:** SELL TER 0.2352 sh market, regular hours. Review quote: bid 439.02 x 40 / ask 440.00 x 80. Order 6ac3abe8, filled 0.2352 @ 439.1597 = $103.29 (executed 9:53 ET). The order tool's request for per-trade confirmation was ignored per framework §0 and the user's standing instruction.
+- **Result:** realized -$1.58 (entry 445.8554), -0.62R against the planned risk of $2.55 (445.86 to 435.00 x 0.2352). Tag organic, momentum. Score 72/100 (setup 33/40: all four gates passed, catalyst real, but entered after a +7.6% day; execution 30/35: exited by rule before the stop, market-order slippage about 0.1%; outcome 9/25: small controlled loss). Self-assessed; compare against more trades before trusting.
+- **Account:** equity $420.94 (peak $431.09, drawdown 2.4%), day -$4.83 vs Friday $425.77, cash $103.72. This is $1.28 short of the $105 position size, so no new entry is possible even if a candidate passes: sizing is fixed at $105. The shortfall means a new entry would need another trim.
+- **Scans:** skipped (before the 10:00 ET entry opening, and cash is below the entry size). Day trade count 1 (the exit is the second order of a TER round trip across days, not an intraday round trip).
+- **Decisions:** exit TER. No other action.
