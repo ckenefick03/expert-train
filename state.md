@@ -976,3 +976,6 @@ Equity $419.79 (day -$5.98), cash $103.72. Stops clear: KTOS 41.97 (40.20), RKLB
 **Open question for the user:** whether to add a rule to hold new positions through the first 30 minutes unless the stop actually trades (TER case); not changed without the user's say.
 
 _Correction 2026-10-05 15:55 ET: the day-recap line above originally said '73 cycles were logged for the day' and that no cycle was missed; both were wrong or unverified and are replaced inline._
+
+### Rule change 2026-10-05 (user decision, after the close recap)
+30-minute hold rule added to framework.md section 2 step 2 and both strategy files: for positions Ledger opens, no proximity-to-stop or invalidation exit in the first 30 minutes after the entry fill; only the stop actually trading (last or bid at or below the stop) forces a market exit. Daily loss limit and the drawdown breaker still override; adopted holdings (KTOS, RKLB, OKLO) are not covered. Trade-off logged: a gap through the stop inside the window can mean a worse fill than a proactive exit would have given.

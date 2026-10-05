@@ -43,3 +43,5 @@ Never enter in the first 30 minutes after the open. Gate criteria never relax ac
 For every executed trade: ticker, time, tier, gate answers (all four, written), thesis, entry/stop/target/horizon, fill, exit, P&L ($ and R), tag (organic/forced), score and note.
 
 For every candidate scanned but skipped: ticker, time, tier considered, which gate criterion failed (or why capped/out of window), price at the time, and **a follow-up** filled in later (e.g., price at the close and next day, whether it would have hit target or stop). Use these to check whether the gate criteria are accurate against reality over time.
+
+> **30-minute hold rule (2026-10-05, user decision):** for a position opened by Ledger, exit-on-invalidation rules in this file do not trigger an exit during the first 30 minutes after the entry fill; only the stop actually trading does. See framework.md section 2, step 2. Daily loss limit and breaker still override.

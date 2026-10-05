@@ -34,3 +34,5 @@ Process note: determine relative strength from the tape first, then explain with
 For every executed trade: ticker, time, peer complex and its relative-strength numbers, gate answers (all four, written), thesis, entry/stop/target/horizon, fill, exit, P&L ($ and R), tag (organic/forced), score and note.
 
 For every candidate scanned but skipped: ticker, time, which gate criterion failed, price at the time, and **a follow-up** filled in later (e.g., whether it continued, whether the stop or target would have hit). Use these to check whether the gate criteria are accurate against reality over time.
+
+> **30-minute hold rule (2026-10-05, user decision):** for a position opened by Ledger, exit-on-invalidation rules in this file do not trigger an exit during the first 30 minutes after the entry fill; only the stop actually trading does. See framework.md section 2, step 2. Daily loss limit and breaker still override.
