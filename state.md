@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-05 08:30 ET (pre-open brief, pre-market prices)",
+  "as_of": "2026-10-05 09:42 ET (cycle 38, :42 routine)",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "amber",
-  "status_note": "Pre-open: 4 positions held, cash $0.43; TER pre-market 445.10 (stop 435.00, 2.3% below)",
+  "status_note": "4 positions held, cash $0.43; TER 443.71 (stop 435.00, 2.0% below)",
   "peak_equity": 431.09,
   "day": {
     "date": "2026-10-05",
@@ -205,6 +205,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-05 08:30 ET (pre-mkt)",
       "equity": 426.57
+    },
+    {
+      "t": "2026-10-05 09:42 ET",
+      "equity": 424.87
     }
   ],
   "positions": [
@@ -213,7 +217,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 43.48,
+      "price": 43.31,
       "stop": 40.2,
       "target": 47.15
     },
@@ -222,7 +226,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 73.55,
+      "price": 72.5,
       "stop": 66.8,
       "target": 78.55
     },
@@ -231,7 +235,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.1,
+      "price": 36.32,
       "stop": 34.05,
       "target": 41.0
     },
@@ -240,7 +244,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "momentum",
       "qty": 0.2352,
       "entry": 445.86,
-      "price": 445.1,
+      "price": 443.71,
       "stop": 435.0,
       "target": 469.0
     }
@@ -602,3 +606,9 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 - **Watch list, momentum (earliest entry 10:30 ET):** (1) VST: separating from CEG/NRG pre-market, catalyst not yet identified, needs gate 2; (2) TSLA: trigger 374.36, pre-market 368 so below, base broken, wait; (3) SPCX (SpaceX, space peer of held RKLB): not yet evaluated; (4) QGEN: unchecked. TER (held) is not a new entry.
 - **Cash constraint:** $0.43 means no new entry is possible this week unless a position is sold. A rotation would need a candidate that passes every gate AND a held position whose thesis is weaker than the candidate's; OKLO is the weakest. No decision made; do not rotate for its own sake.
 - **Decisions:** none. Read-only cycle.
+
+### Cycle 2026-10-05 09:42 ET (cycle 38) — fired by the :42 routine
+- **Stop check (first):** all clear, but TER is the one to watch: 443.71 (-1.2% on the day, stop 435.00 is 2.0% below, target 469.00). KTOS 43.31 (stop 40.20), RKLB 72.50 (-1.9%, stop 66.80), OKLO 36.32 (+1.3%, stop 34.05). No open orders, no fills today. Equity $424.87 (peak $431.09, drawdown 1.4%). Day -$0.90 vs Friday close $425.77. Cash $0.43.
+- **Tape:** SPY +0.1%, QQQ +0.4%, SMH +0.1%. TER is lagging semis (SMH flat), a mild relative-strength loss for a momentum position; watch, no exit yet (above the rising base and stop).
+- **Scans:** skipped. Before 10:00 ET no entries are allowed, and there is no buying power anyway.
+- **Decisions:** none.
