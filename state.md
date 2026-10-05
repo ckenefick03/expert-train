@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-05 11:18 ET (cycle 46, hourly routine)",
+  "as_of": "2026-10-05 11:32 ET (cycle 47, :32 routine)",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -241,6 +241,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-05 11:18 ET",
       "equity": 421.79
+    },
+    {
+      "t": "2026-10-05 11:32 ET",
+      "equity": 421.32
     }
   ],
   "positions": [
@@ -249,7 +253,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.88,
+      "price": 42.69,
       "stop": 40.2,
       "target": 47.15
     },
@@ -258,7 +262,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 72.25,
+      "price": 72.13,
       "stop": 66.8,
       "target": 78.55
     },
@@ -267,7 +271,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.12,
+      "price": 36.18,
       "stop": 34.05,
       "target": 41.0
     }
@@ -700,4 +704,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 - **Stop check (first):** all clear. KTOS 42.88 (-0.4%, stop 40.20), RKLB 72.25 (-2.3%, stop 66.80), OKLO 36.12 (+0.7%, stop 34.05). No open orders. Equity $421.79 (peak $431.09, drawdown 2.2%). Day -$3.98 vs Friday $425.77. Cash $103.72, still $1.28 below the $105 entry size.
 - **Tape:** SPY +0.4%, QQQ +0.5%, SMH +0.1%.
 - **Scans / news:** skipped, cash is below the $105 entry size so no order could be placed. Tier A closes at 11:30 ET with no qualifying setups seen in the cycles I did scan (none run today, honestly: I did not scan this morning). Note for the record: today's scans were skipped from 10:03 on, so the mean-reversion Tier A window passes unobserved.
+- **Decisions:** none.
+
+### Cycle 2026-10-05 11:32 ET (cycle 47) — fired by the :32 routine
+- **Stop check (first):** all clear. KTOS 42.69 (-0.9%, stop 40.20), RKLB 72.13 (-2.4%, stop 66.80), OKLO 36.18 (+0.9%, stop 34.05). No open orders. Equity $421.32 (peak $431.09, drawdown 2.3%). Day -$4.45 vs Friday $425.77. Cash $103.72, still $1.28 below the $105 entry size.
+- **Tape:** SPY +0.4%, QQQ +0.5%, SMH +0.1%. Tier A window has closed; Tier B (11:30-14:30) is open.
+- **Scans:** skipped (cash below the $105 entry size).
 - **Decisions:** none.
