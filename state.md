@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-02 15:47 ET (cycle 37, close recap)",
+  "as_of": "2026-10-05 08:30 ET (pre-open brief, pre-market prices)",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,12 +41,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "amber",
-  "status_note": "4 positions held overnight (KTOS, RKLB, OKLO, TER); cash $0.43; no resting stops (fractional), stops 5%+ away",
+  "status_note": "Pre-open: 4 positions held, cash $0.43; TER pre-market 445.10 (stop 435.00, 2.3% below)",
   "peak_equity": 431.09,
   "day": {
-    "date": "2026-10-02",
-    "start_equity": 420.4,
-    "trades": 1,
+    "date": "2026-10-05",
+    "start_equity": 425.77,
+    "trades": 0,
     "forced": 0
   },
   "equity_history": [
@@ -201,6 +201,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-02 15:47 ET",
       "equity": 425.77
+    },
+    {
+      "t": "2026-10-05 08:30 ET (pre-mkt)",
+      "equity": 426.57
     }
   ],
   "positions": [
@@ -209,7 +213,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.93,
+      "price": 43.48,
       "stop": 40.2,
       "target": 47.15
     },
@@ -218,7 +222,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 73.99,
+      "price": 73.55,
       "stop": 66.8,
       "target": 78.55
     },
@@ -227,7 +231,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 35.71,
+      "price": 36.1,
       "stop": 34.05,
       "target": 41.0
     },
@@ -236,7 +240,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "momentum",
       "qty": 0.2352,
       "entry": 445.86,
-      "price": 449.56,
+      "price": 445.1,
       "stop": 435.0,
       "target": 469.0
     }
@@ -588,3 +592,13 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   - P&L: +$5.37. Unrealized vs entry: RKLB +$4.37, TER +$0.87, KTOS +$0.98, OKLO -$1.95. Most of the day's gain is the adopted positions, not the strategies.
   - Missed cycles: pre-open and the 9:42 ET cycle never ran because in-memory cron jobs vanished; fixed with server-side routines. Cash was $0.43 from the TER fill onward, so afternoon cycles could only do stop checks.
   - Correction: an earlier chat message said TER was about +$4; the actual TER position gain is about +$0.87.
+
+### Pre-open brief 2026-10-05 08:30 ET (read-only, no orders)
+- **Reconcile / stop check (pre-market, thin prints):** TER 445.10 (-0.9% vs 449.04 close; stop 435.00 is 2.3% below), KTOS 43.48 (+0.9%), RKLB 73.55 (-0.5%), OKLO 36.10 (+0.6%). None near a stop. Equity about $426.57, cash $0.43, no open orders.
+- **Earnings check:** TER reports 2026-10-27 after close (tentative, unverified), outside the 2-session window. No held name reports this week. Earnings this week to avoid as entries: STZ/PENG (10/06), APLD (10/07), PEP (10/08), DAL (10/09).
+- **Tape:** SPY 769.38 flat, QQQ 747.93 (-0.2%), SMH 628.70 (-0.3%), so semis soft and tech taking a breather after record highs. Sources conflict on futures (Dow futures about -0.2%, S&P e-mini about +0.15%): treat as roughly flat. Macro: weaker-than-expected jobs report eased rate-hike worries, oil near $100, yields elevated, ISM Services PMI at 10:00 ET (volatility risk right at Tier A open).
+- **Follow-ups on Friday skips (vs Friday close; pre-market in brackets):** STX 848.99 [871.5, +2.7%], WDC 415.29 [425.0, +2.3%]: both bouncing after the Toshiba selloff, gate-1 fail was about industry supply news; one pre-market print does not show the fail was wrong. TSLA 370.59 [368.0]: never triggered (374.36), skip correct. ARM 307.49 [306.6]: faded from 313-316 intraday, skip correct. NKE 33.87 [33.83], STLA 4.40 [4.43]: flat, skip fine. PBF 80.78, VLO 406.30, MPC 422.33: flat pre-market; the gate-3 fail (targets below price) stands. VST 140.02 [144.74, +3.4%] vs CEG 257.49 [257.75, +0.1%], NRG 95.23 [95.53]: VST is bouncing on its own; the IPP skip may have been a missed rebound, but gate 4 (VST about -30% over 12 months) was the reason. Mark as a possible miss, not a confirmed one. Older 10/01 skips (RIOT, CLSK, CIFR, HUT, MARA, NWG, HSBC, GIS, CAG, LVS, ACN, COHR) still owed: not enough logged price history this pass to grade them.
+- **Watch list, mean-reversion (needs a >= 5% sector/macro drop at Tier A, or >= 3.5% at Tier B):** (1) IPPs VST/CEG/NRG if they fade again on FERC/PJM news, with gate 4 trend still the hurdle; (2) STX/WDC only if the drop deepens AND a non-company cause emerges (gate 1 currently FAIL); (3) refiners PBF/VLO only if crude falls and price moves toward analyst targets (gate 3); (4) software/IT (ACN, EPAM, KD) stay FAIL on gate 4. Honest read: no clean setup yet, depends on what the open produces.
+- **Watch list, momentum (earliest entry 10:30 ET):** (1) VST: separating from CEG/NRG pre-market, catalyst not yet identified, needs gate 2; (2) TSLA: trigger 374.36, pre-market 368 so below, base broken, wait; (3) SPCX (SpaceX, space peer of held RKLB): not yet evaluated; (4) QGEN: unchecked. TER (held) is not a new entry.
+- **Cash constraint:** $0.43 means no new entry is possible this week unless a position is sold. A rotation would need a candidate that passes every gate AND a held position whose thesis is weaker than the candidate's; OKLO is the weakest. No decision made; do not rotate for its own sake.
+- **Decisions:** none. Read-only cycle.
