@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-05 10:21 ET (cycle 41, hourly routine)",
+  "as_of": "2026-10-05 10:32 ET (cycle 42, :32 routine)",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -221,6 +221,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-05 10:21 ET",
       "equity": 424.96
+    },
+    {
+      "t": "2026-10-05 10:32 ET",
+      "equity": 424.23
     }
   ],
   "positions": [
@@ -229,7 +233,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 43.45,
+      "price": 43.18,
       "stop": 40.2,
       "target": 47.15
     },
@@ -238,7 +242,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 72.82,
+      "price": 72.63,
       "stop": 66.8,
       "target": 78.55
     },
@@ -247,7 +251,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.42,
+      "price": 36.51,
       "stop": 34.05,
       "target": 41.0
     }
@@ -650,4 +654,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 - **Tape:** SPY +0.4%, QQQ +0.5%, SMH -0.1% (semis recovering).
 - **TER exit follow-up (second check):** TER 446.59, which is back above the 445.49 trigger and inside the old base. Holding would have been about +$1.75 better than the 439.16 exit (0.2352 x 7.43). Two reversals in a row after an exit near a stop is now a pattern worth tracking: record it as exit #1 of the "exit near stop in the first 30 minutes" sample, outcome: reversed in 30 minutes. Do not change the rule on one trade. If a second case reverses within the same window, review whether a 10:00 ET grace period for base-break exits is warranted (the first 30 minutes are the noisiest).
 - **Scans / news:** skipped. Cash is below the $105 entry size, so no entry could be placed even if a candidate passed. Tier A window is open until 11:30 ET.
+- **Decisions:** none.
+
+### Cycle 2026-10-05 10:32 ET (cycle 42) — fired by the :32 routine
+- **Stop check (first):** all clear. KTOS 43.18 (stop 40.20), RKLB 72.63 (stop 66.80), OKLO 36.51 (stop 34.05). No open orders. Equity $424.23 (peak $431.09, drawdown 1.6%). Day -$1.54 vs Friday $425.77. Cash $103.72, still $1.28 below the $105 entry size.
+- **Tape:** SPY +0.3%, QQQ +0.5%, SMH 0.0%. TER (exited) 445.08.
+- **Scans:** skipped (cash below the $105 entry size, no entry possible). Momentum window opened at 10:30; Tier A closes 11:30.
 - **Decisions:** none.
