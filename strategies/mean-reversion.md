@@ -1,6 +1,6 @@
 # Strategy: Mean-Reversion (sector/macro-driven oversold)
 
-Account scope: Agentic Account (ending 4490) only. Runs in parallel with `momentum.md` every cycle; the full eligible universe is re-scanned each time. Risk numbers come from `framework.md` §3 ($105 fixed size, shared cap of 5 positions).
+Account scope: Agentic Account (ending 4490) only. Runs in parallel with `momentum.md` every cycle; the full eligible universe is re-scanned each time. Risk numbers come from `framework.md` §3 ($105 maximum size, or the cash available if lower with a $50 floor, shared cap of 5 positions).
 
 ## Universe
 - US-listed common stocks, market cap ≥ $2B.
@@ -31,7 +31,7 @@ Never enter in the first 30 minutes after the open. Gate criteria never relax ac
 
 ## Entry
 - Limit order at or just below the ask (or mid for wider spreads); market only for large, liquid, tight-spread names.
-- Write down before ordering: one-line thesis; **stop** (below the recent swing low, typically 3–4% below entry; 1R = distance × $105); **target** (≥ 2R; typically reversion toward the prior-day close or VWAP); **max holding horizon** (end of day by default; at most 2 sessions).
+- Write down before ordering: one-line thesis; **stop** (below the recent swing low, typically 3–4% below entry; 1R = distance × position size); **target** (≥ 2R; typically reversion toward the prior-day close or VWAP); **max holding horizon** (end of day by default; at most 2 sessions).
 
 ## Position management
 - Trim into 2R+ extensions, or ahead of a known upcoming catalyst, rather than holding for the full move unconditionally.

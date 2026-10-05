@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-05 12:23 ET (cycle 52, :22 routine)",
+  "as_of": "2026-10-05 12:40 ET (sizing change + full scan, no entry)",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "amber",
-  "status_note": "3 positions held (KTOS, RKLB, OKLO); cash $103.72, below the $105 entry size; TER exited -0.62R",
+  "status_note": "3 positions held; cash $103.72; entry size is now min($105, available cash), floor $50; full scans run, no candidate passed",
   "peak_equity": 431.09,
   "day": {
     "date": "2026-10-05",
@@ -265,6 +265,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-05 12:23 ET",
       "equity": 421.9
+    },
+    {
+      "t": "2026-10-05 12:40 ET",
+      "equity": 422.58
     }
   ],
   "positions": [
@@ -761,3 +765,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 - **Tape:** SPY +0.5%, QQQ +0.5%, SMH 0.0%.
 - **Scans:** skipped (cash below the $105 entry size). Funding / sizing question raised to the user in chat at 12:13 ET; awaiting their answer, no action taken.
 - **Decisions:** none.
+
+### Cycle 2026-10-05 12:40 ET (cycle 53) — user sizing decision + first full scan since 10:03
+- **User decision (12:38 ET):** "Just use the money you have." Recorded in framework §3: entry size = min($105, buying power minus $0.50), floor $50. Today that is $103.22. Strategy files updated. No other rule changed; gates are unchanged.
+- **Stop check (first):** all clear. Equity $422.58 (peak $431.09, drawdown 2.0%), cash $103.72, no open orders. KTOS 42.4x, RKLB 72.4x, OKLO 36.4x (all well above stops).
+- **Scan, mean-reversion (>= 3.5% down, 29 names, Tier B window 11:30-14:30):** gate 1 checked on the biggest movers. **CHRW -12.9%: FAIL gate 1** (company-specific: $5.8B RXO acquisition, stock-and-debt financed, dilution). **UMC -9.8%: FAIL gate 1** (company-specific: $1.8B convertible bond, dilution; indices were up). **CMG -4.8%: FAIL gates 1 and 4** (no sector cause, profit-taking/margin concern, earnings 10/28, down about 38% over 12 months, below its 50-day average). Bitcoin/AI miners IREN -3.8%, WULF -5.2%, CLSK -4.2%, APLD -4.2%: group move but no identified cause today and a multi-month downtrend with two recent earnings misses, so gate 1 not established and gate 4 likely FAIL; no entry. LEN -5.3% / MRP -8.6%: Lennar-linked, no sector cause found. SWKS, ACMR, INSM, RHI, WRBY, FRVO, SECZ, PGEN and others: no external cause found, not eligible. **No entry.**
+- **Scan, momentum (>= 3% up, relative volume >= 1.0, 22 names):** **PTC +33.7%:** Schneider Electric's $22.6B all-cash offer at $205; it is a deal-capped stock (about 6% below the offer), not momentum. **ADSK +4.7% / PCOR +6.7%:** read-through from the PTC deal across engineering software, a group move with no standout (gate 1 FAIL). **RXO +21.6%:** takeover target (CHRW deal), capped. **PCVX +31%:** biotech, company-specific news, no pullback (gate 3 FAIL). **Brazil cluster** (PBR, PBR.A, ITUB, BBD, NU, SBS, CIG, ABEV, BSBR, STNE, PAGS, INTR, VIV, UGP, DLO): +4% to +24% together, a country-wide move with no standout and +10-20% already (gate 1 and 3 FAIL, and chasing). **TS +4.7%** (oil services, group). **No entry.**
+- **Data caution:** one search result claimed chipmakers sold off hard on calls for an AI pause; SMH is flat (+0.1%) on the day, so I am not using that claim. Unverified.
+- **Result:** the first scan in two hours found 0 qualifying setups out of about 51 names. The money is available again, but the gates still say no, and I did not loosen them.
+- **Decisions:** none. Skips with failed gate logged above; follow-ups owed at the close.
