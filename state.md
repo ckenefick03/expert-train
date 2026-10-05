@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-05 15:23 ET",
+  "as_of": "2026-10-05 15:33 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -337,6 +337,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "15:23",
       "equity": 420.58
+    },
+    {
+      "t": "15:33",
+      "equity": 418.85
     }
   ],
   "positions": [
@@ -345,7 +349,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.89,
+      "price": 41.79,
       "stop": 40.2,
       "target": 47.15
     },
@@ -354,7 +358,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 72.59,
+      "price": 72.36,
       "stop": 66.8,
       "target": 78.55
     },
@@ -363,7 +367,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.35,
+      "price": 35.95,
       "stop": 34.05,
       "target": 41.0
     }
@@ -942,3 +946,8 @@ Scans: 30 mean-reversion, 40 momentum. No new names versus the 15:03 cycle (only
 Equity $420.58 (day -$5.19), cash $103.72. Stops clear: KTOS 41.89 (40.20), RKLB 72.59 (66.80), OKLO 36.35 (34.05). SPY +0.9%, QQQ +1.0%, SMH +0.5%.
 Peers: LUNR -3.9%, RDW -5.1%, AADX -8.2%, KRMN -3.3% vs RKLB -1.8%, KTOS -2.7%: no exit signal.
 Scans: 30 mean-reversion, 42 momentum. New names: ASO (+6.9%, retailer, no catalyst identified, no base) and TENB (+4.4%, software-sector move). Neither passes (gates 1-3). Rest already rejected. No entry. This is the last full cycle inside the entry window (closes 15:30 ET); the :32 cycle will be exit/stop checks only plus the scans for the record.
+
+### Cycle 2026-10-05 15:33 ET (cycle 71) — entry window closed, stop checks only
+Equity $418.85 (day -$6.92), cash $103.72. Stops clear: KTOS 41.79 (40.20), RKLB 72.36 (66.80), OKLO 35.95 (34.05, dipped from 36.35 over the last 10 minutes, still 5.3% above the stop). SPY +0.8%, QQQ +0.9%, SMH +0.6%.
+Peers: LUNR -4.1%, RDW -5.7%, AADX -8.8%, KRMN -3.1% vs RKLB -2.1%, KTOS -3.0%: holdings still ahead of true peers, no exit signal.
+No scans run this cycle: the 15:30 ET entry cutoff has passed, so no entry was possible whatever they returned (honest note: this skips the scan step the routine lists). Next: close recap routine at 15:47 ET with the explicit overnight-hold statement per position.
