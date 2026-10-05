@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-05 12:31 ET (sizing change + full scan, no entry)",
+  "as_of": "2026-10-05 12:43 ET (cycle 54, :42 routine)",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -269,6 +269,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-05 12:31 ET",
       "equity": 422.58
+    },
+    {
+      "t": "2026-10-05 12:43 ET",
+      "equity": 422.39
     }
   ],
   "positions": [
@@ -277,7 +281,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.41,
+      "price": 42.52,
       "stop": 40.2,
       "target": 47.15
     },
@@ -286,7 +290,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 72.48,
+      "price": 72.56,
       "stop": 66.8,
       "target": 78.55
     },
@@ -295,7 +299,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.43,
+      "price": 36.47,
       "stop": 34.05,
       "target": 41.0
     }
@@ -775,3 +779,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 - **Result:** the first scan in two hours found 0 qualifying setups out of about 51 names. The money is available again, but the gates still say no, and I did not loosen them.
 - **Decisions:** none. Skips with failed gate logged above; follow-ups owed at the close.
 - **Correction (12:32 ET):** the cycle 53 entry above was first labeled 12:40 ET; the real time was 12:31 ET (16:31 UTC). Relabeled. The user's 12:38 timestamp in the same entry is also approximate; the decision came after the 12:23 cycle and before 12:31.
+
+### Cycle 2026-10-05 12:43 ET (cycle 54) — fired by the :42 routine
+- **Stop check (first):** all clear. KTOS 42.52 (stop 40.20), RKLB 72.56 (stop 66.80), OKLO 36.47 (stop 34.05). No open orders. Equity $422.39 (peak $431.09, drawdown 2.0%). Day -$3.38 vs Friday $425.77. Cash $103.72 (entry size today would be $103.22).
+- **Tape:** SPY +0.6%, QQQ +0.6%, SMH +0.1%.
+- **Scan, mean-reversion (>= 3.5% down, 31 names, Tier B):** new vs the 12:31 scan: NBIS -3.7%, CRDO -3.6%, BMY -3.6%, CIFR -3.5%, NN -3.6%. **NBIS / IREN / WULF / CIFR / APLD / CLSK (AI-infrastructure and neocloud group): FAIL gate 4.** Search shows a sector-wide neocloud derating over the past month (NBIS about -36% in a month, CoreWeave about -28%), i.e. a real downtrend with lower highs and lower lows, not a one-day dislocation; the identified drivers are a Rothschild Redburn Sell on CoreWeave/Nebius over GPU pricing, valuation concerns, and insider selling. The AI-slowdown calls by Anthropic and OpenAI leaders date from September, not a same-day catalyst, so I am not treating them as the cause of today's move. CRDO: no cause found while SMH is flat, likely company-specific, not eligible. BMY: not researched, large pharma with no sector move, not eligible without a cause. CHRW, UMC, CMG, LEN/MRP: unchanged FAILS from the 12:31 scan. **No entry.**
+- **Scan, momentum (>= 3% up, relative volume >= 1.0, 23 names):** unchanged list plus RXRX +14.6% (biotech, no catalyst identified). PTC, RXO capped by deal terms; ADSK/PCOR are a group read-through from the PTC deal; Brazil cluster is a country-wide move; PCVX is company-specific biotech with no pullback. **No entry.**
+- **Result:** second full scan in 15 minutes, 0 qualifying setups. Sizing is no longer the blocker; the gates are.
+- **Decisions:** none.
