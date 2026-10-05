@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-05 14:42 ET",
+  "as_of": "2026-10-05 14:53 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -321,6 +321,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "14:42",
       "equity": 419.73
+    },
+    {
+      "t": "14:53",
+      "equity": 420.31
     }
   ],
   "positions": [
@@ -329,7 +333,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.89,
+      "price": 41.86,
       "stop": 40.2,
       "target": 47.15
     },
@@ -338,7 +342,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 72.28,
+      "price": 72.47,
       "stop": 66.8,
       "target": 78.55
     },
@@ -347,7 +351,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.22,
+      "price": 36.35,
       "stop": 34.05,
       "target": 41.0
     }
@@ -906,3 +910,8 @@ Scans: 36 mean-reversion, 36 momentum. New names: INOD, KRMN, CRDO, CIFR (AI/dat
 Equity $419.73 (day -$6.04), cash $103.72. Stops clear: KTOS 41.89 (40.20), RKLB 72.28 (66.80), OKLO 36.22 (34.05). SPY +0.73%, QQQ +0.8%, SMH +0.5%.
 Peers: LUNR -4.5%, RDW -5.2%, FLY -5.1% vs RKLB -2.2%; AADX -8.2%, KRMN -4.0% vs KTOS -2.7%: both holdings ahead of true peers, no exit signal. Both sit near the day lows with the market up, so they stay on the close watch.
 Scans: 37 mean-reversion, 38 momentum. New names: UPST (+6.5%, rides the AFRM/fintech lending rally, no standalone catalyst identified) and XNDU (+4.5%, quantum small cap, no catalyst, no base). Mean-reversion list unchanged (company-specific or group drops, downtrends). No entry.
+
+### Cycle 2026-10-05 14:53 ET (cycle 67) — no entry
+Equity $420.31 (day -$5.46), cash $103.72. Stops clear: KTOS 41.86 (40.20), RKLB 72.47 (66.80), OKLO 36.35 (34.05). SPY +0.73%, QQQ +0.8%, SMH +0.4%.
+Peers: LUNR -4.2%, RDW -5.0%, AADX -8.5%, KRMN -4.3% vs RKLB -2.0%, KTOS -2.8%: holdings ahead of true peers, no exit signal. Clock check: 14:53 ET, so entry windows close at 15:30 ET (about 37 minutes).
+Scans: 34 mean-reversion, 39 momentum. New name: GMAB (+11.1%, large-cap biotech gap on volume, no pullback or base, no catalyst checked since it fails gate 3). Everything else was already rejected. No entry.
