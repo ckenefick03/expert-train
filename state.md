@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-05 14:23 ET",
+  "as_of": "2026-10-05 14:33 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -313,6 +313,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "14:23",
       "equity": 420.85
+    },
+    {
+      "t": "14:33",
+      "equity": 420.01
     }
   ],
   "positions": [
@@ -321,7 +325,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.09,
+      "price": 41.91,
       "stop": 40.2,
       "target": 47.15
     },
@@ -330,7 +334,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 72.64,
+      "price": 72.43,
       "stop": 66.8,
       "target": 78.55
     },
@@ -339,7 +343,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.25,
+      "price": 36.23,
       "stop": 34.05,
       "target": 41.0
     }
@@ -888,3 +892,8 @@ Scans: 30 mean-reversion, 32 momentum. New names: NUVB (-3.8%, small-cap biotech
 Equity $420.85 (day -$4.92), cash $103.72. Stops clear: KTOS 42.09 (40.20), RKLB 72.64 (66.80), OKLO 36.25 (34.05). SPY +0.68%, QQQ +0.75%, SMH +0.45%.
 Peers: LUNR -3.9%, RDW -3.9%, AADX -7.2% vs RKLB -1.7%, KTOS -2.3%: no exit signal.
 Scans: 33 mean-reversion, 34 momentum. New name: SHOP (+5.2%) rides a software-sector move with ADSK/BSY/PCOR, not an RS divergence, no pullback base (fails gates 1/3). Everything else was already rejected (company-specific, deal-capped, Brazil/Colombia/gaming group moves, downtrends). No entry.
+
+### Cycle 2026-10-05 14:33 ET (cycle 65) — no entry
+Equity $420.01 (day -$5.76), cash $103.72. Stops clear: KTOS 41.91 (40.20; 4.1% of price above stop), RKLB 72.43 (66.80), OKLO 36.23 (34.05). SPY +0.7%, QQQ +0.8%, SMH +0.5%.
+Peers: LUNR -4.2%, RDW -4.8%, AADX -7.7%, KRMN -3.5% (defense/space supplier) vs RKLB -2.0%, KTOS -2.7%: both still at or ahead of true peers, no exit signal. Watching KTOS (new low of day 41.91; trigger is lag >3 pts vs peers or new session low on volume plus peer divergence; peers are lower, so it holds).
+Scans: 36 mean-reversion, 36 momentum. New names: INOD, KRMN, CRDO, CIFR (AI/data-center and defense group drops, company-specific or group moves, no external cause or upside anchor), CBRS (+7.8%, recent listing, no base), AFRM (+5.7%) and CLF (+10.6%) (no identified catalyst, extended). None pass. No entry.
