@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-05 14:13 ET",
+  "as_of": "2026-10-05 14:23 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -309,6 +309,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "14:13",
       "equity": 421.03
+    },
+    {
+      "t": "14:23",
+      "equity": 420.85
     }
   ],
   "positions": [
@@ -317,7 +321,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.12,
+      "price": 42.09,
       "stop": 40.2,
       "target": 47.15
     },
@@ -326,7 +330,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 72.66,
+      "price": 72.64,
       "stop": 66.8,
       "target": 78.55
     },
@@ -335,7 +339,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.28,
+      "price": 36.25,
       "stop": 34.05,
       "target": 41.0
     }
@@ -879,3 +883,8 @@ Equity $421.03 (day -$4.74), cash $103.72. Stops clear: KTOS 42.12 (40.20), RKLB
 Peers: LUNR -3.4%, RDW -3.4%, AADX -7.0% vs RKLB -1.7%, KTOS -2.2%: no exit signal.
 News pass: one broad market search. Results were inconsistent on dates/figures (mixed sources), so nothing was taken from it beyond "tape mixed, yields up". No position-specific news found.
 Scans: 30 mean-reversion, 32 momentum. New names: NUVB (-3.8%, small-cap biotech, no external cause); GRAL (+7.5%, biotech, no catalyst identified, no base) and HOG (+9.7%, company-specific, no catalyst identified, extended) fail gates 2-3. Everything else already rejected. No entry.
+
+### Cycle 2026-10-05 14:23 ET (cycle 64) — no entry
+Equity $420.85 (day -$4.92), cash $103.72. Stops clear: KTOS 42.09 (40.20), RKLB 72.64 (66.80), OKLO 36.25 (34.05). SPY +0.68%, QQQ +0.75%, SMH +0.45%.
+Peers: LUNR -3.9%, RDW -3.9%, AADX -7.2% vs RKLB -1.7%, KTOS -2.3%: no exit signal.
+Scans: 33 mean-reversion, 34 momentum. New name: SHOP (+5.2%) rides a software-sector move with ADSK/BSY/PCOR, not an RS divergence, no pullback base (fails gates 1/3). Everything else was already rejected (company-specific, deal-capped, Brazil/Colombia/gaming group moves, downtrends). No entry.
