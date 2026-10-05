@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-05 15:43 ET",
+  "as_of": "2026-10-05 15:48 ET (close recap)",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "amber",
-  "status_note": "3 positions held; cash $103.72; entry size is now min($105, available cash), floor $50; full scans run, no candidate passed",
+  "status_note": "3 positions roll overnight (KTOS, RKLB, OKLO, all adopted, no resting stops - fractional); cash $103.72; day -$5.79 vs 425.77 start; no entries today, 1 trade (TER exit)",
   "peak_equity": 431.09,
   "day": {
     "date": "2026-10-05",
@@ -345,6 +345,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "15:43",
       "equity": 419.79
+    },
+    {
+      "t": "15:48",
+      "equity": 419.98
     }
   ],
   "positions": [
@@ -353,7 +357,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.97,
+      "price": 41.98,
       "stop": 40.2,
       "target": 47.15
     },
@@ -362,7 +366,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 72.62,
+      "price": 72.7,
       "stop": 66.8,
       "target": 78.55
     },
@@ -371,7 +375,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.0,
+      "price": 36.01,
       "stop": 34.05,
       "target": 41.0
     }
@@ -958,3 +962,15 @@ No scans run this cycle: the 15:30 ET entry cutoff has passed, so no entry was p
 
 ### Cycle 2026-10-05 15:43 ET (cycle 72) — stop checks only (entry window closed)
 Equity $419.79 (day -$5.98), cash $103.72. Stops clear: KTOS 41.97 (40.20), RKLB 72.62 (66.80), OKLO 36.00 (34.05). SPY +0.8%, QQQ +0.9%, SMH +0.6%. Peers: LUNR -3.6%, RDW -5.4%, AADX -7.8%, KRMN -2.0% vs RKLB -1.8%, KTOS -2.6%: no exit signal. No scans (entry cutoff passed at 15:30 ET). Close recap routine runs at 15:47 ET.
+
+### Cycle 2026-10-05 15:48 ET (cycle 73) — CLOSE RECAP and overnight statement
+**Account:** equity $419.98 (day -$5.79 / -1.4% vs $425.77 start; -2.6% below the $431.09 peak, so the 10% breaker is far off; daily loss limit $100 untouched). Cash $103.72, no open orders (orders for the day: one filled sell, TER).
+**Stops (checked first):** KTOS 41.98 (stop 40.20, 4.2% away), RKLB 72.70 (66.80, 8.1% away), OKLO 36.01 (34.05, 5.4% away). None threatened.
+**Positions rolling overnight, and why the thesis is intact:**
+- **KTOS** (adopted, entry 42.53, 41.98 now, -$1.34 open): defense/drone name. Down 2.5% on the day, but its closest peers fell as much or more (AADX -7.9%, KRMN -1.9%), so the move is sector-wide, not a break in KTOS's own story. The 47.15 target and 40.20 stop are unchanged. It traded at its session low (41.79) most of the afternoon and did not break it on volume.
+- **RKLB** (adopted, entry 70.72, 72.70 now, +$2.97 open): -1.7% on the day while space peers LUNR and RDW fell 3.4-5.4%, i.e. relative strength held all day. Up from cost, thesis intact; target 78.55, stop 66.80.
+- **OKLO** (adopted, entry 36.37, 36.01 now, -$1.05 open): nuclear/AI-power theme; green on the day (+0.4%) vs a flat-to-up market. Target 41.00, stop 34.05 unchanged.
+**Overnight risk, stated plainly:** these are fractional positions, so no resting stop protects them; stops are enforced manually and only while the routines run (the first check is the pre-open brief at 08:27 ET, the first full cycle after 10:00 ET). A gap below a stop overnight would be handled at the open, not prevented. The combined overnight exposure is $316 of $420 (75%); cash is $103.72.
+**Day recap:** 73 cycles were logged for the day across the pre-open brief and the 10-minute routines; no missed full cycle was recorded after the routines were moved server-side (the one earlier real-time lapse was the 12:40/12:31 timestamp error, corrected in the log). Trades: 1 (TER sold 0.2352 @ 439.16, pnl -$1.58, -0.62R, score 72, organic) — an early-session exit near its stop that then reversed. Forced trades: 0. New entries: 0. No candidate passed all four gates for either strategy on any full scan; reasons recurring: company-specific drops, deal-capped gap-ups, group/country moves (Brazil, space, software, gaming), downtrends, and extended moves with no pullback base.
+**Follow-ups on skipped candidates (day close ~15:47 ET prices):** TER 444.02 (-1.1% on the day; my exit at 439.16 left about +$1.14 on the table on 0.2352 shares versus holding, and holding would have been about -$0.43 vs -$1.58 realized: this is the second logged case of an early exit near the stop that reversed, now flagged as a possible pattern, no rule change on two trades); TSLA 379.72 (+2.5%, the earlier skip for a broken base was correct to wait but it later rose); ARM 302.47 (-1.6%, skip for no catalyst was right); PBF 83.89 (+3.8%) and VLO 418.62 (+3.0%) (refinery mean-reversion skips from this morning; they rallied, so the skips cost an upside of roughly 3-4% had the setups qualified, but they did not qualify at the time); MRNA 201.98 (+6.3%, skipped for binary event risk, Oct 24 data), BBWI 17.44 (+8.6%, skipped for no catalyst). Older 10/01 skip list (RIOT, CLSK, CIFR, HUT, MARA, NWG, HSBC, GIS, CAG, LVS, ACN, COHR) was not re-priced today: still owed.
+**Open question for the user:** whether to add a rule to hold new positions through the first 30 minutes unless the stop actually trades (TER case); not changed without the user's say.
