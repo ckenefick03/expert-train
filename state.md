@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-05 15:48 ET (close recap)",
+  "as_of": "2026-10-06 08:30 ET (pre-open)",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,12 +41,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "amber",
-  "status_note": "3 positions roll overnight (KTOS, RKLB, OKLO, all adopted, no resting stops - fractional); cash $103.72; day -$5.79 vs 425.77 start; no entries today, 1 trade (TER exit)",
+  "status_note": "Pre-open: 3 adopted positions held (KTOS, RKLB, OKLO), cash $103.72; pre-market equity 426.60 vs 420.43 official close; no orders in pre-open",
   "peak_equity": 431.09,
   "day": {
-    "date": "2026-10-05",
-    "start_equity": 425.77,
-    "trades": 1,
+    "date": "2026-10-06",
+    "start_equity": 420.43,
+    "trades": 0,
     "forced": 0
   },
   "equity_history": [
@@ -349,6 +349,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "15:48",
       "equity": 419.98
+    },
+    {
+      "t": "08:30",
+      "equity": 426.6
     }
   ],
   "positions": [
@@ -357,7 +361,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.98,
+      "price": 42.44,
       "stop": 40.2,
       "target": 47.15
     },
@@ -366,7 +370,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 72.7,
+      "price": 74.48,
       "stop": 66.8,
       "target": 78.55
     },
@@ -375,7 +379,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.01,
+      "price": 36.91,
       "stop": 34.05,
       "target": 41.0
     }
@@ -979,3 +983,14 @@ _Correction 2026-10-05 15:55 ET: the day-recap line above originally said '73 cy
 
 ### Rule change 2026-10-05 (user decision, after the close recap)
 30-minute hold rule added to framework.md section 2 step 2 and both strategy files: for positions Ledger opens, no proximity-to-stop or invalidation exit in the first 30 minutes after the entry fill; only the stop actually trading (last or bid at or below the stop) forces a market exit. Daily loss limit and the drawdown breaker still override; adopted holdings (KTOS, RKLB, OKLO) are not covered. Trade-off logged: a gap through the stop inside the window can mean a worse fill than a proactive exit would have given.
+
+### Pre-open brief 2026-10-06 08:30 ET (read-only, no orders)
+**Reconcile / stops (pre-market prices, bid-ask mid, thin liquidity):** KTOS ~42.44 (stop 40.20), RKLB ~74.48 (66.80), OKLO ~36.91 (34.05); all well clear. Official Oct 5 closes: KTOS 42.02, RKLB 73.02, OKLO 35.97, giving a closing equity of about $420.43 (derived from closes x quantity plus $103.72 cash; the 15:48 ET reading was $419.98). Pre-market equity per the broker: $426.60. Cash $103.72, no open orders. Day start for 10/06 set to $420.43.
+**Tape first:** SPY ~777.98 (+0.4% vs the 774.83 close), QQQ ~760.2 (+0.5%), SMH ~637.7 (+0.6%), ITA ~207.4 (+0.2%), XAR quote is stale/illiquid (ignore). Held names: KTOS +1.3%, RKLB +1.9%, OKLO +2.6%. Space peers up too: LUNR +2.1%, RDW +1.4%, PL (scan) +3.6%, MDA Space +3.0%; defense: LDOS +3.7%, AADX +1.7%. So the held names are moving with their groups, not ahead of them.
+**News, tied to sources found this cycle:** (1) Index futures up (Dow +0.42%, S&P +0.25%, Nasdaq +0.40%), 10-year yield pulled back from multi-year highs to about 5.27% and oil dipped below $100, per a Benzinga/Schwab pre-market summary; Iran/Hormuz conditions remain a live geopolitical risk in the same coverage. (2) Power/nuclear group strong pre-market: Constellation Energy (CEG, +9.8% per the scan) on Amazon (Calvert Cliffs, 20-year deal) and Google (890 MW nuclear) agreements, per Benzinga and TradingView/Stocktwits; Vistra +4.6%, NRG +3.4%, Cameco +3.0%, BWX +3.1%. OKLO's +2.6% is consistent with theme sympathy; the deals are CEG's, not OKLO's, so I treat OKLO's move as group beta, not new evidence for its own thesis. (3) OPCH +33.7% is buyout talks (deal-capped, not tradable on the momentum rules). (4) The search results had inconsistent figures across sources (CEG +3.9% in one, +9.8% in the scan), so I use the scan value and flag the news figures as unverified. Earnings: RPM and LW reported this morning; STZ, PENG, NEOG, WS report after the close today; APLD and LEVI report after the close tomorrow (APLD is on the recurring mean-reversion list: avoid). No held names report within 2 sessions.
+**Held-name risks today:** group-beta moves can reverse at the open (all three are up 1.3-2.6% pre-market on thin volume); the 15:30 ET close of the entry window and the new 30-minute hold rule apply to anything I enter, not to these adopted holdings.
+**Candidates to watch (entries not before 10:00 ET for mean-reversion, 10:30 ET for momentum; nothing is a trade yet, all gates still to be checked in writing):**
+- Momentum: (1) **CEG** +9.8%, real catalyst (named deals), needs a held pullback and higher low after 10:30 and relative strength vs the power group (VST +4.6%): lead watch, but extended; (2) **MOD** +3.5% (data-center cooling) and **BWXT** +3.1%: group names, only if one separates from the group; (3) **PL** +3.6% / **MDA** +3.0% (space): group beta with RKLB, likely no divergence; (4) **SHOP** +3.1% (continuing from yesterday): software-sector move, low odds.
+- Mean-reversion: only two pre-market names qualify so far: **AVTR** -4.8% (cause unknown, check for company-specific news first) and **DNOW** -4.4% (oilfield distributor, check whether the oil price drop is sector-wide). Yesterday's drops will be re-scanned at 10:00 ET (NBIS, CRDO, INSM and others were mostly company-specific or group moves yesterday).
+**Skips/follow-ups owed:** the older 10/01 skip list is still not re-priced.
+**Routine check:** this pre-open routine fired on time at 08:28 ET, so the server-side schedule is alive for today; I have not yet re-listed all triggers.
