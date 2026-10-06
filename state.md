@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-06 08:30 ET (pre-open)",
+  "as_of": "2026-10-06 09:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -40,9 +40,9 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "min_trades": 1,
     "max_trades": 10
   },
-  "status": "amber",
-  "status_note": "Pre-open: 3 adopted positions held (KTOS, RKLB, OKLO), cash $103.72; pre-market equity 426.60 vs 420.43 official close; no orders in pre-open",
-  "peak_equity": 431.09,
+  "status": "green",
+  "status_note": "3 adopted positions held, all green on the day and near/above the prior peak equity; no entries before 10:00 ET; cash $103.72",
+  "peak_equity": 432.54,
   "day": {
     "date": "2026-10-06",
     "start_equity": 420.43,
@@ -353,6 +353,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "08:30",
       "equity": 426.6
+    },
+    {
+      "t": "09:43",
+      "equity": 432.54
     }
   ],
   "positions": [
@@ -361,7 +365,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.44,
+      "price": 42.71,
       "stop": 40.2,
       "target": 47.15
     },
@@ -370,7 +374,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 74.48,
+      "price": 75.83,
       "stop": 66.8,
       "target": 78.55
     },
@@ -379,7 +383,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.91,
+      "price": 38.11,
       "stop": 34.05,
       "target": 41.0
     }
@@ -994,3 +998,9 @@ _Correction 2026-10-05 15:55 ET: the day-recap line above originally said '73 cy
 - Mean-reversion: only two pre-market names qualify so far: **AVTR** -4.8% (cause unknown, check for company-specific news first) and **DNOW** -4.4% (oilfield distributor, check whether the oil price drop is sector-wide). Yesterday's drops will be re-scanned at 10:00 ET (NBIS, CRDO, INSM and others were mostly company-specific or group moves yesterday).
 **Skips/follow-ups owed:** the older 10/01 skip list is still not re-priced.
 **Routine check:** this pre-open routine fired on time at 08:28 ET, so the server-side schedule is alive for today; I have not yet re-listed all triggers.
+
+### Cycle 2026-10-06 09:43 ET (cycle 74) — before the 10:00 ET entry window, stop checks and scans only
+Equity $432.54 (day +$12.11 / +2.9% vs the $420.43 close), a new high-water mark above the prior $431.09 peak; peak_equity updated to $432.54 (breaker now measured from there). Cash $103.72, no open orders.
+Stops clear by a wide margin: KTOS 42.71 (stop 40.20, 5.9% away, target 47.15), RKLB 75.83 (66.80, 11.9% away, target 78.55 is 3.6% above), OKLO 38.11 (34.05, 10.7% away, target 41.00 is 7.6% above). OKLO +5.9% and RKLB +3.8% on the day; KTOS +1.6%.
+Tape: SPY +0.5%, QQQ +0.5%, SMH +0.6%. Space peers LUNR +4.1%, RDW +3.8% vs RKLB +3.8%: RKLB moving with its group, not ahead of it. Defense: KRMN +0.4%, AADX +1.2% vs KTOS +1.6%. Power/nuclear: CEG +13.4%, VST +9.0% vs OKLO +5.9%: OKLO is a sympathy mover (the deals are CEG's), it has not led the group. I am holding all three: no stop, target or invalidation condition is hit, and no rule says to take profit early. Not taking profit is a choice to stay with the written targets, noted so it can be judged at the close.
+Scans (for the record, no entries possible before 10:00 ET): mean-reversion 6 names, STX -6.2% and WDC -5.6% (storage group move), SYRE -6.0% (biotech), PCVX -10.0% (giving back yesterday's +29% gap, no external cause), TRMD -6.2% (tankers, oil), MIAX -4.6%. Momentum 1 name, OPCH +32.9% (buyout talks, deal-capped, fails). No candidates. CEG +13.4% is now past 10% on the day and extended; it did not appear in the momentum list because the scan sample at this minute is thin, but it stays a watch for a pullback after 10:30 ET only.
