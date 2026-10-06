@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-06 12:24 ET",
+  "as_of": "2026-10-06 12:34 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -417,6 +417,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "12:24",
       "equity": 432.15
+    },
+    {
+      "t": "12:34",
+      "equity": 432.75
     }
   ],
   "positions": [
@@ -425,7 +429,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 43.075,
+      "price": 43.14,
       "stop": 40.2,
       "target": 47.15
     },
@@ -434,7 +438,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 73.85,
+      "price": 73.95,
       "stop": 66.8,
       "target": 78.55
     },
@@ -443,7 +447,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 38.68,
+      "price": 38.78,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1172,3 +1176,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY +0.8%, QQQ +0.6%, SMH +0.3%.
 - Momentum scan: 21 names. MRVL 284.20, still under its broken base. New: VST +11.7%, XE (X-Energy) +6.0%, ZS +3.0%. VST joins the power/nuclear group already moving with OKLO and CEG, so there is no divergence (gate 1 fails). XE is a new nuclear listing with no checked catalyst. ZS is a software name inside the software-security move, no catalyst checked. CIEN +10.7%, ANET, NOK (optical/networking) are group moves, unchecked. No entry.
 - Mean-reversion scan: 43 names, the same biotech/tools/diagnostics and semi-equipment/memory blocks plus a few small ones (BTU, UMC, RLAY, ALM, EMAT). Gate 1 cause unverified, no entry. Tier B open until 14:30.
+
+### Cycle 2026-10-06 12:34 ET (cycle 90) - no trade
+- Account: equity $432.75 (day +$12.32), cash $103.72, no open orders, no orders today.
+- Stops/targets: KTOS 43.14, RKLB 73.95 (target 78.55), OKLO 38.78. No stop near.
+- Tape: SPY +0.7%, QQQ +0.6%, SMH +0.3%.
+- Momentum scan: 21 names, essentially the same as 12:24 (AMD, CIEN, ALAB, CEG, MRVL 286.90, ANET, ZS, FTAI, VST, CCJ, ASTS, OKLO, OPCH, NTSK, PL, XE, FRSH, NOK, CX, NXE, SMR). MRVL is still below its broken base. No new divergence with a checked catalyst, so no entry.
+- Mean-reversion scan: 44 names, same blocks. New small ones: IMVT, SBLK. Gate 1 cause unverified, no entry.
