@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-06 11:34 ET",
+  "as_of": "2026-10-06 11:44 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -397,6 +397,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "11:34",
       "equity": 435.46
+    },
+    {
+      "t": "11:44",
+      "equity": 436.35
     }
   ],
   "positions": [
@@ -405,7 +409,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 43.38,
+      "price": 43.41,
       "stop": 40.2,
       "target": 47.15
     },
@@ -414,7 +418,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 75.25,
+      "price": 75.3,
       "stop": 66.8,
       "target": 78.55
     },
@@ -423,7 +427,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 38.84,
+      "price": 39.1,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1116,3 +1120,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY +0.8%, QQQ +0.8%, SMH +0.4%.
 - Momentum scan: 11 names (same as 11:24 plus XNDU +14.8%, a small-cap quantum name with no checked catalyst, gate 2 unverified so it fails). MRVL 289.19, slipping away from the 298.84 trigger, no entry. Nuclear names (CEG, SMR, NXE) still move as a group with OKLO, no divergence.
 - Mean-reversion scan: 31 names, same blocks as before. Gate 1 cause still unverified (re-search due at the 12:12 hourly cycle), STX/WDC fail gates 2 and 4. Tier B window is now open, no entry.
+
+### Cycle 2026-10-06 11:44 ET (cycle 85) - no trade
+- Account: equity $436.35 (day +$15.92), cash $103.72, no open orders, no orders today.
+- Stops/targets: KTOS 43.41, RKLB 75.30 (target 78.55), OKLO 39.10. No stop near.
+- Tape: SPY +0.8%, QQQ +0.8%, SMH +0.4%.
+- Momentum scan: 11 names. MRVL bounced to 294.76 (+8.7% on the day), 4.1 below the 298.84 trigger, trigger not hit, no entry. New: CCJ (+7.4%, uranium), part of the nuclear group move with OKLO, CEG, SMR and NXE, so no divergence and gate 1 fails. XNDU dropped off the scan.
+- Mean-reversion scan: 34 names. New: LRCX -3.7%, SKHY -3.7%, SWKS -3.7%, alongside KLAC, STX and WDC. That is a semiconductor-equipment and memory group move while SMH is only +0.4%, and I have no verified cause for it, so gate 1 fails. Biotech/tools/diagnostics block unchanged, cause still unverified. No entry.
