@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-06 10:03 ET",
+  "as_of": "2026-10-06 10:21 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "3 adopted positions held, all green; RKLB 1.1% below its 78.55 target (sells on touch); mean-reversion Tier A window open, no setup passes; momentum window opens 10:30 ET; cash $103.72",
+  "status_note": "3 adopted positions held, all green; RKLB 76.23 vs 78.55 target; Tier A window open, no setup passes (broad biotech/genomics-tools selloff has no verified cause); momentum window opens 10:30 ET; cash $103.72",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-06",
@@ -365,6 +365,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "10:03",
       "equity": 437.99
+    },
+    {
+      "t": "10:21",
+      "equity": 436.53
     }
   ],
   "positions": [
@@ -373,7 +377,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 43.54,
+      "price": 43.18,
       "stop": 40.2,
       "target": 47.15
     },
@@ -382,7 +386,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 77.66,
+      "price": 76.23,
       "stop": 66.8,
       "target": 78.55
     },
@@ -391,7 +395,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 38.38,
+      "price": 38.88,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1026,3 +1030,10 @@ Stops clear: KTOS 43.54 (40.20), RKLB 77.66 (66.80), OKLO 38.38 (34.05). **RKLB 
 Tape: SPY +0.6%, QQQ +0.6%, SMH +0.6%. RKLB +6.3% vs LUNR +5.3%, RDW +6.0% (in line with the group). KTOS +3.6% vs AADX +3.2%, KRMN +1.9%. OKLO +6.7% vs CEG +14.1%, VST +9.9%.
 **Mean-reversion scan (12 names, Tier A window 10:00-11:30 ET):** STX -6.2%, WDC -5.7%: researched this cycle (the only name worth a search). Cause: Toshiba's report that it will double hard-disk output (Yahoo Finance / Seeking Alpha, dated Oct 2) hit both on Friday (-10% and -7%), and they are down again today. Gate 1 (external cause): the cause is an industry-competition story, but it is a durable competitive/pricing threat to both companies, not a one-day sector shock; gate 2 (fundamentals neutral-or-better): not established, the threat is to future share and pricing; gate 4 (dislocation, not a downtrend): FAIL, second consecutive down session after a roughly 240% YTD run for STX. FAIL, no entry. SYRE -11.4% and ELVN -4.1%, QURE -4.3%, IOVA -4.2%, NEO -5.9% (small biotech/diagnostics: company-specific, no external cause), PCVX -12.9% (giving back yesterday's +29% gap), TS -3.9% and TRMD -4.5% (oil/tanker group), MIAX -5.8%, CHRW -4.4% (company-specific, down 12% earlier this week). None pass.
 **Momentum (not before 10:30 ET, so scan only, no gate-check yet):** CEG +14.1% and MRVL +9.1% (rel vol 1.27; SMH only +0.6%, so a very large gap versus its group), OPCH (buyout-capped). MRVL catalyst still unidentified: first gate-check at 10:30. CEG extended with no pullback: wait. No entry.
+
+### Cycle 2026-10-06 10:21 ET (cycle 77, hourly variant; fired 14:20 UTC, scheduled 14:12) — no entry
+Equity $436.53 (day +$16.10 / +3.7%), off the $437.99 high by $1.46. Cash $103.72, no open orders.
+Stops clear: KTOS 43.18 (40.20), RKLB 76.23 (66.80), OKLO 38.88 (34.05). **RKLB pulled back from 77.66 to 76.23, 3.0% below its 78.55 target**: still no trigger; the plan to sell on touch stands. KTOS target 47.15, OKLO 41.00 (5.5% away).
+Tape: SPY +0.6%, QQQ +0.7%, SMH +0.5%. RKLB +4.4% vs LUNR +4.3%, RDW +5.2% (with the group). KTOS +2.8% vs AADX +2.4%, KRMN +1.1%. OKLO +8.1% vs CEG +12.6%, VST +8.7% (OKLO is now moving with the group's pace; the group gave back some of its gains since 10:03).
+**Mean-reversion (Tier A window, 46 names):** the list is now dominated by life-science tools, diagnostics and biotech: NTRA -6.2%, ILMN -5.1%, RVMD -5.9%, MRNA -7.3%, TWST -8.3%, TXG -9.9%, TEM -7.6%, BRKR -6.6%, RGEN -4.6%, GH -5.4%, GRAL -5.8%, CORT, VCYT, NEO, NEOG, ADPT, CRSP, SYRE -12.5%, PCVX -11.1%, and others; plus STX -7.0% / WDC -6.3% (storage, Toshiba capacity news, downtrend: fail as before), TRMD, MIAX, CHRW. A broad sector selloff would normally be the best gate-1 setup, so I searched twice (genomics/tools names; biotech sell-off and FDA/pricing news). **No verifiable cause found**: the sources returned undated or unrelated items, one noted XBI only -0.4% on a day of mixed biotech moves, and PCVX's drop is the reversal of its OPUS-1 trial pop. Per framework section 2.1 rule 5, news that is ambiguous or unverifiable means gate 1 is a FAIL. No entry. If a named cause (policy, an earnings read-through from a large tools company) appears in a later cycle, the large, liquid names to re-check first are ILMN, NTRA, BRKR and RGEN.
+**Momentum (opens 10:30 ET):** CEG +12.5% (extended, relative volume 1.36), MRVL +7.1% (relative volume 1.53, SMH only +0.5%: still the first gate-check at 10:30), OPCH (buyout-capped), FRSH +5.9% (software). No entry.
