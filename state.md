@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-06 12:15 ET",
+  "as_of": "2026-10-06 12:24 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -413,6 +413,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "12:15",
       "equity": 434.73
+    },
+    {
+      "t": "12:24",
+      "equity": 432.15
     }
   ],
   "positions": [
@@ -421,7 +425,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 43.475,
+      "price": 43.075,
       "stop": 40.2,
       "target": 47.15
     },
@@ -430,7 +434,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 74.69,
+      "price": 73.85,
       "stop": 66.8,
       "target": 78.55
     },
@@ -439,7 +443,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 38.8,
+      "price": 38.68,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1161,3 +1165,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Momentum scan: 18 names. MRVL fell to 281.55, below the 285.00 base low I was using, so its higher-low base is broken and gate 3 fails; I drop MRVL from the watch list. New: CIEN +8.8%, ANET +3.5% (optical/networking, which move with each other and with MRVL's AI-networking theme, so the relative-strength read is weak), no catalyst checked for either. AMD +3.7%, ALAB +6.5% (down from +8.6% earlier). All fail gate 2 or 3.
 - Mean-reversion scan: 39 names, same biotech/tools/diagnostics and semi-equipment/memory blocks. News pass (one extended search): it returned 10x Genomics items from earlier dates (a Q4 2025 preliminary-results piece, an April 2026 Thermo Fisher read-through, an Illumina deal story) and said it found nothing on Natera, Twist or Illumina for this week. That names no cause for today's move, so gate 1 stays failed (unverified cause, framework 2.1 rule 5). I will not use the older items as today's cause. No entry.
 - Routines check: list_triggers shows all 8 routines enabled with last runs succeeded (cycle :02, :22, :32, :42, :52, hourly :12, pre-open, close recap). The next close recap fires 19:47 UTC (15:47 ET).
+
+### Cycle 2026-10-06 12:24 ET (cycle 89) - no trade
+- Account: equity $432.15 (day +$11.72), cash $103.72, no open orders, no orders today. Equity is down about $2.6 from the 12:15 reading (KTOS -0.4, RKLB -0.84, OKLO -0.12 per share on the held positions).
+- Stops/targets: KTOS 43.08 (stop 40.20), RKLB 73.85 (stop 66.80, target 78.55), OKLO 38.68 (stop 34.05). No stop near; RKLB is the weakest, 6.1 above its stop.
+- Tape: SPY +0.8%, QQQ +0.6%, SMH +0.3%.
+- Momentum scan: 21 names. MRVL 284.20, still under its broken base. New: VST +11.7%, XE (X-Energy) +6.0%, ZS +3.0%. VST joins the power/nuclear group already moving with OKLO and CEG, so there is no divergence (gate 1 fails). XE is a new nuclear listing with no checked catalyst. ZS is a software name inside the software-security move, no catalyst checked. CIEN +10.7%, ANET, NOK (optical/networking) are group moves, unchecked. No entry.
+- Mean-reversion scan: 43 names, the same biotech/tools/diagnostics and semi-equipment/memory blocks plus a few small ones (BTU, UMC, RLAY, ALM, EMAT). Gate 1 cause unverified, no entry. Tier B open until 14:30.
