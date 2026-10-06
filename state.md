@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-06 13:33 ET",
+  "as_of": "2026-10-06 13:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -445,6 +445,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "13:33",
       "equity": 436.26
+    },
+    {
+      "t": "13:43",
+      "equity": 436.38
     }
   ],
   "positions": [
@@ -453,7 +457,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 43.72,
+      "price": 43.82,
       "stop": 40.2,
       "target": 47.15
     },
@@ -462,7 +466,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 74.525,
+      "price": 74.69,
       "stop": 66.8,
       "target": 78.55
     },
@@ -471,7 +475,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 39.205,
+      "price": 39.075,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1250,3 +1254,9 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY +0.6%, QQQ +0.6%, SMH +0.3%.
 - Momentum scan: 23 names. New: CRWV +4.9% (CoreWeave, AI cloud; moves with the AI-infrastructure group, no catalyst checked, no entry). MRVL 286.27 bounced but is still in a broken base. Nuclear/power group (CEG, VST, XE +13.5%, INIO, SMR, NXE, DNN) still moving together with OKLO, no divergence. No entry.
 - Mean-reversion scan: 56 names, same blocks (new: DXCM -3.6%, no cause checked). Gate 1 cause unverified, no entry.
+
+### Cycle 2026-10-06 13:43 ET (cycle 97) - no trade
+- Equity $436.38 (day +$15.95), cash $103.72, no open orders. KTOS 43.82, RKLB 74.69 (target 78.55), OKLO 39.075. No stop/target hit.
+- Tape: SPY +0.65%, QQQ +0.6%, SMH +0.3%.
+- Momentum scan 25 names (new: ALAB, NBIS, NXT, CX); all are sector-group moves (AI networking/semis, nuclear/power, uranium) or have no catalyst checked. Gate 2/1 not met. No entry.
+- Mean-reversion scan 52 names (same biotech/tools and storage/semi-equipment blocks). No verified external cause, gate 1 fails. No entry.
