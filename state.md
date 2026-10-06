@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-06 10:53 ET",
+  "as_of": "2026-10-06 11:05 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -381,6 +381,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "10:53",
       "equity": 435.01
+    },
+    {
+      "t": "11:05",
+      "equity": 436.37
     }
   ],
   "positions": [
@@ -389,7 +393,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.91,
+      "price": 43.245,
       "stop": 40.2,
       "target": 47.15
     },
@@ -398,7 +402,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 75.56,
+      "price": 75.71,
       "stop": 66.8,
       "target": 78.55
     },
@@ -407,7 +411,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 38.93,
+      "price": 39.02,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1073,3 +1077,10 @@ Other momentum names: CEG +13.2% (extended), NTSK +7.1% and FRSH +6.8% (software
 Equity $435.01 (day +$14.58 / +3.5%). Cash $103.72, no open orders. Stops clear: KTOS 42.91 (40.20), RKLB 75.56 (66.80; 3.8% below its 78.55 target), OKLO 38.93 (34.05; target 41.00). Tape: SPY +0.7%, QQQ +0.7%, SMH +0.5%. RKLB +3.5% vs LUNR +3.3%, RDW +3.5%; KTOS +2.1% vs AADX +2.0%, KRMN +1.3%; OKLO +8.2% vs CEG +12.7%, VST +9.4%.
 Momentum (7 names): **MRVL $291.54** (+7.5%, rel vol 1.80): 5-minute bars from 10:30 ET have ranged 289.95-293.40 on fading volume with rising lows intact (289.95 holds above 288.91 and 289.84); the 298.84 trigger is not hit. No entry. ASTS +8.4% (no base, catalyst unverified: skip), CEG +12.8% (extended), NTSK +6.6%, FRSH +7.1% (software), NXE +6.1%, OPCH (buyout-capped): all fail.
 Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NTRA -6.0%, ILMN -5.5%, TXG -10.6%, TWST -9.9%, GRAL -8.6%, NEO -11.1%, TEM -8.0%, SDGR -8.5%, SYRE -11.7%, PCVX -11.5%, NVAX -9.1%, BFLY -8.0%...), STX -7.6% / WDC -6.3% (storage, lasting competitive cause: fail), KLAC -4.7% (cause not researched), PBF -3.8%, TRMD -5.0%, MIAX, CHRW. Nothing new passes; the biotech/tools cause is still unverified (re-search at the hourly cycle). No entry.
+
+### Cycle 2026-10-06 11:05 ET (cycle 81) - no trade
+- Account: equity $436.37 (day +$15.94 vs $420.43 start), cash $103.72, no open orders, no orders today.
+- Stops/targets: KTOS 43.25 (stop 40.20), RKLB 75.71 (stop 66.80, target 78.55), OKLO 39.02 (stop 34.05). None hit.
+- Tape: SPY +0.7%, QQQ +0.8%, SMH +0.6%.
+- Momentum scan: 9 names (ALAB, CEG, MRVL, ASTS, OPCH, NTSK, FRSH, NXE, XNDU). MRVL 289.30 is below the 298.84 trigger and printed a 289.38 low, under the 289.95 low I was treating as the higher-low base. Gate 3 is weakening, no entry. ALAB (+8.6%): 5-min bars show a high of 399.55 at 10:40 ET, then lower highs, and it is back at 393 with no continuation break, so gate 3 fails. CEG extended, OPCH buyout-capped, the rest unchanged from earlier cycles.
+- Mean-reversion scan: 37 names, same biotech/tools/diagnostics and storage blocks. Gate 1 still unverified (no named cause), STX/WDC fail gates 2 and 4. No entry. Re-search planned at the hourly cycle.
