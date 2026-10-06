@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-06 12:53 ET",
+  "as_of": "2026-10-06 13:03 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -429,6 +429,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "12:53",
       "equity": 433.1
+    },
+    {
+      "t": "13:03",
+      "equity": 433.19
     }
   ],
   "positions": [
@@ -437,7 +441,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 43.25,
+      "price": 43.35,
       "stop": 40.2,
       "target": 47.15
     },
@@ -446,7 +450,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 73.89,
+      "price": 74.08,
       "stop": 66.8,
       "target": 78.55
     },
@@ -455,7 +459,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 38.84,
+      "price": 38.69,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1205,3 +1209,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY +0.7%, QQQ +0.7%, SMH +0.3%.
 - Momentum scan: 19 names, the same set as before (AMD +4.0%, CIEN +10.6%, ALAB, CEG, MRVL 285.18, FTAI, VST, CCJ, ASTS, OKLO, OPCH, NTSK, PL, XE, FRSH, NOK, NXE, SMR, XNDU). Nothing new, so no entry.
 - Mean-reversion scan: 44 names, same blocks plus MLYS. Gate 1 cause unverified, no entry.
+
+### Cycle 2026-10-06 13:03 ET (cycle 93) - no trade
+- Account: equity $433.19 (day +$12.76), cash $103.72, no open orders, no orders today.
+- Stops/targets: KTOS 43.35, RKLB 74.08 (target 78.55), OKLO 38.69. No stop near.
+- Tape: SPY +0.6%, QQQ +0.6%, SMH +0.1% (fading).
+- Momentum scan: 22 names, nearly the same set. New: INIO +12.1% (Innio NV, an engine/power-gen name, fits the power group already rising with OKLO, CEG, VST, no divergence and no catalyst checked) and BB +5.3% (no catalyst checked). MRVL 280.2, base broken. No entry.
+- Mean-reversion scan: 50 names, the same blocks; the count is rising slowly through the day (more small biotech names, plus TVTX, ARQT, VRDN, ADRX). Gate 1 cause unverified, no entry.
