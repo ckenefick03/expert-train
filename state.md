@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-06 10:33 ET",
+  "as_of": "2026-10-06 10:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "3 adopted positions held, all green; momentum window open: MRVL passes gates 1/2/4 and has a rising-low base but no continuation trigger yet (watch); no entry; cash $103.72",
+  "status_note": "3 adopted positions held, all green; MRVL watch (trigger 298.84 not hit); no entry; cash $103.72",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-06",
@@ -373,6 +373,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "10:33",
       "equity": 434.43
+    },
+    {
+      "t": "10:43",
+      "equity": 435.47
     }
   ],
   "positions": [
@@ -390,7 +394,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 75.6,
+      "price": 75.73,
       "stop": 66.8,
       "target": 78.55
     },
@@ -399,7 +403,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 38.76,
+      "price": 39.03,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1052,3 +1056,11 @@ Stops clear: KTOS 42.85 (40.20), RKLB 75.60 (66.80; 3.9% below its 78.55 target,
 - Timing: after 10:30 ET: PASS.
 **Decision: no entry now.** A single FAIL/NOT-YET on the trigger means no trade. **Written provisional plan if it triggers on a later cycle:** buy on a 5-minute close above 298.84 with the higher-low base intact (support 289.84 holding); entry size min($105, available cash less $0.50) = $103.22; stop below the 285.00 base low at about 284.5 (1R about 4.7% of price, about $4.9 on $103), target at least 2R (about $312 or higher), horizon end of day, and the 30-minute hold rule applies after the fill. Watch risk: relative volume is fading (the last two 5-minute bars carried 0.30M shares vs 1.7M in the opening bar), which argues for patience.
 Other momentum names: CEG +12.2% (extended, rel vol 1.47; the power group is giving back some of the morning's gains: wait), NTSK +6.3% (software IPO name, no catalyst checked, fails gate 2 by default), FRSH +6.2% (software, group move), NXE +6.4% (uranium, rides the nuclear theme), OPCH (buyout-capped, fails). Mean-reversion scan was not re-run this cycle (re-run next cycle; unchanged conclusion from 10:21: no verified cause for the biotech/tools selloff).
+
+### Cycle 2026-10-06 10:43 ET (cycle 79) — no entry
+Equity $435.47 (day +$15.04 / +3.6%), $2.52 off the $437.99 high. Cash $103.72, no open orders.
+Stops clear: KTOS 42.85 (40.20), RKLB 75.73 (66.80; 3.7% below its 78.55 target), OKLO 39.03 (34.05; target 41.00, 5.0% away). Tape: SPY +0.7%, QQQ +0.7%, SMH +0.5%. RKLB +3.7% vs LUNR +3.0%, RDW +3.5%; KTOS +2.0% vs AADX +1.5%, KRMN +1.8%; OKLO +8.5% vs CEG +13.2%, VST +9.2%.
+**MRVL ($291.40, +7.4%, rel vol 1.74, SMH +0.5%, AVGO +4.0%):** still holding the base (the three 5-minute bars since 10:30 ET had lows 290.26, 291.03 on top of 289.84, 288.91: a rising-low base intact); price is still below the 298.84 continuation trigger and is not above it. Gates 1, 2 and timing unchanged (pass); gate 3 trigger not hit. No entry. Plan unchanged (buy on a 5-minute close above 298.84, stop about 284.5, 2R target about $312+).
+**ASTS (+8.1%, $63.16, space, rel vol 1.03)** gate-check: RS vs space peers (LUNR +3.0%, RDW +3.5%) is about 5 points; catalyst not identified (no search done); chart: drifted up to 64.75 by 10:00 ET and has faded since, with flat/lower lows (62.90, 63.01, 63.13, 62.99), so there is no rising-low base. Gate 2 unverified, gate 3 FAIL. No entry.
+Other momentum names: CEG +13.2% (extended), NTSK +7.1% and FRSH +6.8% (software, group, no catalyst checked), NXE +6.3% (uranium), OPCH (buyout-capped). All fail.
+**Mean-reversion (Tier A, 50 names):** still dominated by biotech/diagnostics/tools (NTRA, ILMN, TXG -10.1%, TWST -9.9%, GRAL -8.7%, NEO -10.9%, SYRE -13.7%, PCVX -13.1% and others), storage (STX -7.7%, WDC -6.9%, a downtrend with a lasting competitive cause: fail) and new names KLAC -4.3% (semicap equipment while semis are up; cause not researched: a company/peer-specific drop with no external cause identified), TRMD, MIAX, CHRW. The biotech/tools selloff still has no verified cause (searched at 10:21), so gate 1 fails; the group has now deepened from -5% to -10% on several names, which is a reason to look again at the next hourly cycle for a named cause, not a reason to buy. No entry.
