@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-06 13:23 ET",
+  "as_of": "2026-10-06 13:33 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -441,6 +441,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "13:23",
       "equity": 434.56
+    },
+    {
+      "t": "13:33",
+      "equity": 436.26
     }
   ],
   "positions": [
@@ -449,7 +453,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 43.53,
+      "price": 43.72,
       "stop": 40.2,
       "target": 47.15
     },
@@ -458,7 +462,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 74.23,
+      "price": 74.525,
       "stop": 66.8,
       "target": 78.55
     },
@@ -467,7 +471,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 38.93,
+      "price": 39.205,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1239,3 +1243,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY +0.5%, QQQ +0.5%, SMH +0.1%.
 - Momentum scan: 23 names, same set plus DNN (Denison Mines, +6.3%, uranium, moves with CCJ and NXE). No divergence, no checked catalyst, no entry.
 - Mean-reversion scan: 56 names, same blocks (new: PURR, PENG). Gate 1 cause unverified, no entry.
+
+### Cycle 2026-10-06 13:33 ET (cycle 96) - no trade
+- Account: equity $436.26 (day +$15.83), cash $103.72, no open orders, no orders today.
+- Stops/targets: KTOS 43.72, RKLB 74.53 (target 78.55), OKLO 39.21. No stop near.
+- Tape: SPY +0.6%, QQQ +0.6%, SMH +0.3%.
+- Momentum scan: 23 names. New: CRWV +4.9% (CoreWeave, AI cloud; moves with the AI-infrastructure group, no catalyst checked, no entry). MRVL 286.27 bounced but is still in a broken base. Nuclear/power group (CEG, VST, XE +13.5%, INIO, SMR, NXE, DNN) still moving together with OKLO, no divergence. No entry.
+- Mean-reversion scan: 56 names, same blocks (new: DXCM -3.6%, no cause checked). Gate 1 cause unverified, no entry.
