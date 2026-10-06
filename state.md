@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-06 12:34 ET",
+  "as_of": "2026-10-06 12:44 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -421,6 +421,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "12:34",
       "equity": 432.75
+    },
+    {
+      "t": "12:44",
+      "equity": 433.37
     }
   ],
   "positions": [
@@ -429,7 +433,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 43.14,
+      "price": 43.25,
       "stop": 40.2,
       "target": 47.15
     },
@@ -438,7 +442,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 73.95,
+      "price": 74.02,
       "stop": 66.8,
       "target": 78.55
     },
@@ -447,7 +451,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 38.78,
+      "price": 38.865,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1183,3 +1187,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY +0.7%, QQQ +0.6%, SMH +0.3%.
 - Momentum scan: 21 names, essentially the same as 12:24 (AMD, CIEN, ALAB, CEG, MRVL 286.90, ANET, ZS, FTAI, VST, CCJ, ASTS, OKLO, OPCH, NTSK, PL, XE, FRSH, NOK, CX, NXE, SMR). MRVL is still below its broken base. No new divergence with a checked catalyst, so no entry.
 - Mean-reversion scan: 44 names, same blocks. New small ones: IMVT, SBLK. Gate 1 cause unverified, no entry.
+
+### Cycle 2026-10-06 12:44 ET (cycle 91) - no trade
+- Account: equity $433.37 (day +$12.94), cash $103.72, no open orders, no orders today.
+- Stops/targets: KTOS 43.25, RKLB 74.02 (target 78.55), OKLO 38.87. No stop near.
+- Tape: SPY +0.7%, QQQ +0.6%, SMH +0.2%.
+- Momentum scan: 21 names, the same set as 12:34 (XNDU back at +16.0%). MRVL 285.00, no base. No divergence with a checked catalyst, so no entry.
+- Mean-reversion scan: 45 names, the same blocks plus RXRX and RVMD. Gate 1 cause unverified, no entry.
