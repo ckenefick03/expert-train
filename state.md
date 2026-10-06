@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-06 09:43 ET",
+  "as_of": "2026-10-06 09:53 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,8 +41,8 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "3 adopted positions held, all green on the day and near/above the prior peak equity; no entries before 10:00 ET; cash $103.72",
-  "peak_equity": 432.54,
+  "status_note": "3 adopted positions held, all green; RKLB 1.7% below its 78.55 target (will sell on touch per the written plan); no entries before 10:00 ET; cash $103.72",
+  "peak_equity": 436.61,
   "day": {
     "date": "2026-10-06",
     "start_equity": 420.43,
@@ -357,6 +357,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "09:43",
       "equity": 432.54
+    },
+    {
+      "t": "09:53",
+      "equity": 436.61
     }
   ],
   "positions": [
@@ -365,7 +369,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.71,
+      "price": 43.3,
       "stop": 40.2,
       "target": 47.15
     },
@@ -374,7 +378,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 75.83,
+      "price": 77.2,
       "stop": 66.8,
       "target": 78.55
     },
@@ -383,7 +387,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 38.11,
+      "price": 38.3,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1004,3 +1008,10 @@ Equity $432.54 (day +$12.11 / +2.9% vs the $420.43 close), a new high-water mark
 Stops clear by a wide margin: KTOS 42.71 (stop 40.20, 5.9% away, target 47.15), RKLB 75.83 (66.80, 11.9% away, target 78.55 is 3.6% above), OKLO 38.11 (34.05, 10.7% away, target 41.00 is 7.6% above). OKLO +5.9% and RKLB +3.8% on the day; KTOS +1.6%.
 Tape: SPY +0.5%, QQQ +0.5%, SMH +0.6%. Space peers LUNR +4.1%, RDW +3.8% vs RKLB +3.8%: RKLB moving with its group, not ahead of it. Defense: KRMN +0.4%, AADX +1.2% vs KTOS +1.6%. Power/nuclear: CEG +13.4%, VST +9.0% vs OKLO +5.9%: OKLO is a sympathy mover (the deals are CEG's), it has not led the group. I am holding all three: no stop, target or invalidation condition is hit, and no rule says to take profit early. Not taking profit is a choice to stay with the written targets, noted so it can be judged at the close.
 Scans (for the record, no entries possible before 10:00 ET): mean-reversion 6 names, STX -6.2% and WDC -5.6% (storage group move), SYRE -6.0% (biotech), PCVX -10.0% (giving back yesterday's +29% gap, no external cause), TRMD -6.2% (tankers, oil), MIAX -4.6%. Momentum 1 name, OPCH +32.9% (buyout talks, deal-capped, fails). No candidates. CEG +13.4% is now past 10% on the day and extended; it did not appear in the momentum scan result and I have not verified why (possibly the relative-volume filter this early in the session), but it stays a watch for a pullback after 10:30 ET only.
+
+### Cycle 2026-10-06 09:53 ET (cycle 75) — before the entry window, stop/target checks and scans
+Equity $436.61 (day +$16.18 / +3.8%), new high-water mark; peak_equity updated to $436.61. Cash $103.72, no open orders.
+Stops clear: KTOS 43.30 (stop 40.20, 7.2% away), RKLB 77.20 (66.80), OKLO 38.30 (34.05).
+**Targets:** RKLB 77.20 is 1.7% below its written 78.55 target. Per framework section 2 step 2 (check price against target), I will exit RKLB at market (fractional, cannot rest an order) on the cycle where it trades at or above 78.55; this is the written plan, not a new decision. KTOS target 47.15 (8.9% away), OKLO target 41.00 (7.1% away).
+Tape: SPY +0.6%, QQQ +0.6%, SMH +0.5%. RKLB +5.7% vs space peers LUNR +4.7%, RDW +5.1% (RKLB moving with the group, slightly ahead). KTOS +3.0% vs AADX +2.8%, KRMN +1.0%. OKLO +6.5% vs CEG +13.9%, VST +9.6%.
+Scans (entries not possible before 10:00 ET, so for the record): mean-reversion 11 names: STX -4.8% and WDC -5.2% (storage group), PCVX -12.5% (giving back yesterday's gap), SYRE -9.7% and ELVN -4.1% (biotechs), TRMD -5.4%, TS -4.3%, PTEN -4.0% (energy/oil group), CHRW -3.6%, ERO -3.9% (copper), MIAX -5.8%: all group or company-specific, none qualify. Momentum 2 names: MRVL +7.2% on relative volume 1.02 (semis; SMH only +0.5%, so a large relative-strength gap versus the peer complex, catalyst not yet identified: first candidate to gate-check after 10:30 ET) and OPCH (buyout-capped, fails).
