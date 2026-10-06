@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-06 10:43 ET",
+  "as_of": "2026-10-06 10:53 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -377,6 +377,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "10:43",
       "equity": 435.47
+    },
+    {
+      "t": "10:53",
+      "equity": 435.01
     }
   ],
   "positions": [
@@ -385,7 +389,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.85,
+      "price": 42.91,
       "stop": 40.2,
       "target": 47.15
     },
@@ -394,7 +398,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 75.73,
+      "price": 75.56,
       "stop": 66.8,
       "target": 78.55
     },
@@ -403,7 +407,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 39.03,
+      "price": 38.93,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1064,3 +1068,8 @@ Stops clear: KTOS 42.85 (40.20), RKLB 75.73 (66.80; 3.7% below its 78.55 target)
 **ASTS (+8.1%, $63.16, space, rel vol 1.03)** gate-check: RS vs space peers (LUNR +3.0%, RDW +3.5%) is about 5 points; catalyst not identified (no search done); chart: drifted up to 64.75 by 10:00 ET and has faded since, with flat/lower lows (62.90, 63.01, 63.13, 62.99), so there is no rising-low base. Gate 2 unverified, gate 3 FAIL. No entry.
 Other momentum names: CEG +13.2% (extended), NTSK +7.1% and FRSH +6.8% (software, group, no catalyst checked), NXE +6.3% (uranium), OPCH (buyout-capped). All fail.
 **Mean-reversion (Tier A, 50 names):** still dominated by biotech/diagnostics/tools (NTRA, ILMN, TXG -10.1%, TWST -9.9%, GRAL -8.7%, NEO -10.9%, SYRE -13.7%, PCVX -13.1% and others), storage (STX -7.7%, WDC -6.9%, a downtrend with a lasting competitive cause: fail) and new names KLAC -4.3% (semicap equipment while semis are up; cause not researched: a company/peer-specific drop with no external cause identified), TRMD, MIAX, CHRW. The biotech/tools selloff still has no verified cause (searched at 10:21), so gate 1 fails; the group has now deepened from -5% to -10% on several names, which is a reason to look again at the next hourly cycle for a named cause, not a reason to buy. No entry.
+
+### Cycle 2026-10-06 10:53 ET (cycle 80) — no entry
+Equity $435.01 (day +$14.58 / +3.5%). Cash $103.72, no open orders. Stops clear: KTOS 42.91 (40.20), RKLB 75.56 (66.80; 3.8% below its 78.55 target), OKLO 38.93 (34.05; target 41.00). Tape: SPY +0.7%, QQQ +0.7%, SMH +0.5%. RKLB +3.5% vs LUNR +3.3%, RDW +3.5%; KTOS +2.1% vs AADX +2.0%, KRMN +1.3%; OKLO +8.2% vs CEG +12.7%, VST +9.4%.
+Momentum (7 names): **MRVL $291.54** (+7.5%, rel vol 1.80): 5-minute bars from 10:30 ET have ranged 289.95-293.40 on fading volume with rising lows intact (289.95 holds above 288.91 and 289.84); the 298.84 trigger is not hit. No entry. ASTS +8.4% (no base, catalyst unverified: skip), CEG +12.8% (extended), NTSK +6.6%, FRSH +7.1% (software), NXE +6.1%, OPCH (buyout-capped): all fail.
+Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NTRA -6.0%, ILMN -5.5%, TXG -10.6%, TWST -9.9%, GRAL -8.6%, NEO -11.1%, TEM -8.0%, SDGR -8.5%, SYRE -11.7%, PCVX -11.5%, NVAX -9.1%, BFLY -8.0%...), STX -7.6% / WDC -6.3% (storage, lasting competitive cause: fail), KLAC -4.7% (cause not researched), PBF -3.8%, TRMD -5.0%, MIAX, CHRW. Nothing new passes; the biotech/tools cause is still unverified (re-search at the hourly cycle). No entry.
