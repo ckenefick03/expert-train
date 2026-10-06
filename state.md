@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-06 11:44 ET",
+  "as_of": "2026-10-06 11:54 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -401,6 +401,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "11:44",
       "equity": 436.35
+    },
+    {
+      "t": "11:54",
+      "equity": 435.43
     }
   ],
   "positions": [
@@ -409,7 +413,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 43.41,
+      "price": 43.36,
       "stop": 40.2,
       "target": 47.15
     },
@@ -418,7 +422,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 75.3,
+      "price": 75.44,
       "stop": 66.8,
       "target": 78.55
     },
@@ -427,7 +431,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 39.1,
+      "price": 38.75,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1127,3 +1131,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY +0.8%, QQQ +0.8%, SMH +0.4%.
 - Momentum scan: 11 names. MRVL bounced to 294.76 (+8.7% on the day), 4.1 below the 298.84 trigger, trigger not hit, no entry. New: CCJ (+7.4%, uranium), part of the nuclear group move with OKLO, CEG, SMR and NXE, so no divergence and gate 1 fails. XNDU dropped off the scan.
 - Mean-reversion scan: 34 names. New: LRCX -3.7%, SKHY -3.7%, SWKS -3.7%, alongside KLAC, STX and WDC. That is a semiconductor-equipment and memory group move while SMH is only +0.4%, and I have no verified cause for it, so gate 1 fails. Biotech/tools/diagnostics block unchanged, cause still unverified. No entry.
+
+### Cycle 2026-10-06 11:54 ET (cycle 86) - no trade
+- Account: equity $435.43 (day +$15.00), cash $103.72, no open orders, no orders today.
+- Stops/targets: KTOS 43.36, RKLB 75.44 (target 78.55), OKLO 38.75. No stop near.
+- Tape: SPY +0.8%, QQQ +0.8%, SMH +0.5%.
+- Momentum scan: 14 names. MRVL 292.16, below the 298.84 trigger, no entry. New: AMD (+4.0% at 656.87 vs SMH +0.5%), FTAI (+6.5%), CX (+3.1%). AMD has been in a steady uptrend on 5-minute bars since the open (rising lows, no pullback to buy), so gate 3 (held pullback with a higher low, entry on continuation) has no pullback to test. My catalyst search for AMD returned articles about the AMD/OpenAI deal that quote a $235.56 close and +11.37%, which cannot be today's data (AMD is at about $657 live), so the dates look like an older year and I treat the catalyst as unverified. Gate 2 fails. FTAI and CX not researched, no divergence story and no catalyst, so they fail gate 2. Nuclear names (CEG, CCJ, SMR, NXE) still move with OKLO.
+- Mean-reversion scan: 41 names, the same biotech/tools/diagnostics and semi-equipment/memory blocks plus small additions (SDGR -8.8%, NVAX -9.6%, BFLY, HTFL, XENE, CLDX, IMNM). Gate 1 cause unverified on all of them, so no entry. Hourly news re-search is due at 12:12 ET.
