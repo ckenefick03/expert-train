@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-06 14:33 ET",
+  "as_of": "2026-10-06 14:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -469,6 +469,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "14:33",
       "equity": 436.3
+    },
+    {
+      "t": "14:43",
+      "equity": 435.29
     }
   ],
   "positions": [
@@ -477,7 +481,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 43.74,
+      "price": 43.54,
       "stop": 40.2,
       "target": 47.15
     },
@@ -486,7 +490,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 75.2,
+      "price": 75.25,
       "stop": 66.8,
       "target": 78.55
     },
@@ -495,7 +499,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 38.84,
+      "price": 38.64,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1310,3 +1314,9 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY +0.65%, QQQ +0.6%, SMH +0.13% (fading).
 - Momentum scan 36 names (new: GDS). Same group moves (AI optical/networking, nuclear/uranium/power); no catalyst plus divergence. No entry.
 - Mean-reversion scan 50 names, Tier C window now open (14:30). New: TER -3.5% (the Oct 5 sale; semi-equipment group move with LRCX/KLAC/AEHR, no verified cause, gate 1 fails), WK -3.6% (no cause checked). Same biotech/tools and storage blocks. No entry.
+
+### Cycle 2026-10-06 14:43 ET (cycle 103) - no trade
+- Equity $435.29 (day +$14.86), cash $103.72, no open orders. KTOS 43.54, RKLB 75.25 (target 78.55), OKLO 38.64. No stop/target hit.
+- Tape: SPY +0.65%, QQQ +0.6%, SMH +0.08%.
+- Momentum scan 34 names, no new names of note; same group moves (AI optical/networking, nuclear/uranium/power). No entry.
+- Mean-reversion scan 52 names, Tier C. New: LIFE -3.6%, GEO -3.6% (no causes checked); same biotech/tools, storage and semi-equipment blocks (SKHY now -5.9%). No verified external cause, gate 1 fails. No entry.
