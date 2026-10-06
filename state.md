@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-06 12:44 ET",
+  "as_of": "2026-10-06 12:53 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -425,6 +425,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "12:44",
       "equity": 433.37
+    },
+    {
+      "t": "12:53",
+      "equity": 433.1
     }
   ],
   "positions": [
@@ -442,7 +446,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 74.02,
+      "price": 73.89,
       "stop": 66.8,
       "target": 78.55
     },
@@ -451,7 +455,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 38.865,
+      "price": 38.84,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1194,3 +1198,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY +0.7%, QQQ +0.6%, SMH +0.2%.
 - Momentum scan: 21 names, the same set as 12:34 (XNDU back at +16.0%). MRVL 285.00, no base. No divergence with a checked catalyst, so no entry.
 - Mean-reversion scan: 45 names, the same blocks plus RXRX and RVMD. Gate 1 cause unverified, no entry.
+
+### Cycle 2026-10-06 12:53 ET (cycle 92) - no trade
+- Account: equity $433.10 (day +$12.67), cash $103.72, no open orders, no orders today.
+- Stops/targets: KTOS 43.25, RKLB 73.89 (target 78.55), OKLO 38.84. No stop near.
+- Tape: SPY +0.7%, QQQ +0.7%, SMH +0.3%.
+- Momentum scan: 19 names, the same set as before (AMD +4.0%, CIEN +10.6%, ALAB, CEG, MRVL 285.18, FTAI, VST, CCJ, ASTS, OKLO, OPCH, NTSK, PL, XE, FRSH, NOK, NXE, SMR, XNDU). Nothing new, so no entry.
+- Mean-reversion scan: 44 names, same blocks plus MLYS. Gate 1 cause unverified, no entry.
