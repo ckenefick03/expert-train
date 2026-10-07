@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-07 10:52 ET",
+  "as_of": "2026-10-07 11:03 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -525,6 +525,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "10:52",
       "equity": 416.58
+    },
+    {
+      "t": "11:03",
+      "equity": 416.18
     }
   ],
   "positions": [
@@ -533,7 +537,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.05,
+      "price": 40.965,
       "stop": 40.2,
       "target": 47.15
     },
@@ -542,7 +546,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 71.33,
+      "price": 71.22,
       "stop": 66.8,
       "target": 78.55
     },
@@ -551,7 +555,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.325,
+      "price": 36.313,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1482,4 +1486,12 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY 773.80 (-0.68%), QQQ 753.64, SMH 622.53, XBI 152.33 (+0.9%). Slow grind lower.
 - Momentum scan: BKV only (+8.5%, rel vol 2.5); no change in assessment (gap-up, no pullback, no dated catalyst) -> fails gates 2 and 3.
 - Mean-reversion scan (<= -6%): 26 names, broadening. New: CAT -6.3% ($809), AGCO, CNH, SUNB, CNM, EQPT (heavy-equipment/rental complex falling together), AVAV, KRMN, VOYG, LUNR (defense/space, same complex as held KTOS/RKLB), PURR, ALM. Looked at CAT as the quality name: 5-min bars show a steady staircase of lower lows from 844 at the open to 809.7 by 14:50 UTC with no stabilization (gate 4: downtrend, not a dislocation). One search for the equipment-complex cause returned only 2025 tariff articles -> no dated cause (gate 1 fails, unverified). No trade.
+- No trade, none forced.
+
+### Cycle 2026-10-07 11:03 ET (cycle 115) - no trade
+- Equity $416.18 (day -$18.95 vs 435.13; ~5.0% below 437.99 peak; daily loss limit $18.95 of $100). Cash/BP $103.72, no open orders.
+- Stops: KTOS 40.965 (stop 40.20, ~1.9% away, nearest), RKLB 71.22 (stop 66.80, target 78.55), OKLO 36.313 (stop 34.05). None triggered. Peers still flat-to-lower in step (ITA 203.68, ARKX 32.29, URA 40.03): no stock-specific break. KTOS is within 2% of its stop; if it trades at 40.20 it is sold at market immediately.
+- Tape: SPY 773.89 (-0.67%), QQQ 753.96, SMH 621.79, XBI 151.59. Flat grind, no recovery yet.
+- Momentum scan: BKV only (+8.3%, rel vol 2.5); unchanged assessment, gates 2 and 3 fail.
+- Mean-reversion scan: run at <= -7% this cycle (12 names: AAOI, CGNX, OUST, HESM, BMNR, REZI, XE, SECZ, QXO, SKYD, SMR, BULL); the -6% list hit 26 names last cycle and is mostly the same complex. CAT $809.03 (-6.3%) flat vs 10:52 (809.7), not stabilized by any measure and no cause found. No name has a verified external cause, so gate 1 fails across the list. News search deferred to the :12 hourly pass.
 - No trade, none forced.
