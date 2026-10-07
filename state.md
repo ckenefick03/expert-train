@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-07 11:03 ET",
+  "as_of": "2026-10-07 11:13 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -529,6 +529,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "11:03",
       "equity": 416.18
+    },
+    {
+      "t": "11:13",
+      "equity": 417.14
     }
   ],
   "positions": [
@@ -537,7 +541,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 40.965,
+      "price": 41.155,
       "stop": 40.2,
       "target": 47.15
     },
@@ -546,7 +550,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 71.22,
+      "price": 71.315,
       "stop": 66.8,
       "target": 78.55
     },
@@ -555,7 +559,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.313,
+      "price": 36.43,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1495,3 +1499,13 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Momentum scan: BKV only (+8.3%, rel vol 2.5); unchanged assessment, gates 2 and 3 fail.
 - Mean-reversion scan: run at <= -7% this cycle (12 names: AAOI, CGNX, OUST, HESM, BMNR, REZI, XE, SECZ, QXO, SKYD, SMR, BULL); the -6% list hit 26 names last cycle and is mostly the same complex. CAT $809.03 (-6.3%) flat vs 10:52 (809.7), not stabilized by any measure and no cause found. No name has a verified external cause, so gate 1 fails across the list. News search deferred to the :12 hourly pass.
 - No trade, none forced.
+
+### Cycle 2026-10-07 11:13 ET (cycle 116, hourly news pass) - no trade
+- Equity $417.14 (day -$18.00 vs 435.13; ~4.8% below 437.99 peak). Cash/BP $103.72, no open orders.
+- Stops: KTOS 41.155 (stop 40.20), RKLB 71.315 (stop 66.80, target 78.55), OKLO 36.43 (stop 34.05). None triggered; peers flat (ITA 203.59, ARKX 32.37, URA 40.16).
+- Tape: SPY 775.14 (-0.51%), QQQ 755.42, SMH 623.90, XBI 151.62. Small bounce off the 10:52 lows.
+- News (searched after the tape): market-wide, search titles dated Oct 7 2026 (TheStreet, Yahoo Finance) say stocks retreated from record closes with Treasury yields at a multi-year high (10y ~5.31%, 30y ~5.68% per the result text) ahead of FOMC minutes; the result text gave inconsistent index levels, so only the yields/minutes theme is treated as plausible context, not the exact numbers. This is a rate-driven, market-wide cause; it does not explain single-name drops of 10-20%.
+- HESM -15.7%: results are Sept 2025 Chevron rig-cut stories and a 2026 outlook piece, nothing dated Oct 7 -> gate 1 unverified. QXO -10.5%: results are dilution/resale-registration and earlier-2026 stories, none dated today; the dilution narrative would be a fundamental negative, not external -> fails gates 1 and 2. Crypto-linked names (MARA, BMNR, BTDR, SBET, PURR, SECZ, BULL): search returned only older (2025) bitcoin articles -> no dated cause.
+- Momentum: BKV +9.3% (rel vol 2.8) still the only name; no dated catalyst, no pullback -> gates 2 and 3 fail.
+- Mean-reversion scan (<= -6%): 24 names (adds MARA, BTDR, KRMN, AVAV; heavy-equipment CNH/EQPT, space LUNR/ASTS). CAT 811.76, flat to slightly up from 809 lows, still no higher low and no dated cause. No candidate passes gate 1; no trade, none forced.
+- Event risk: FOMC minutes are due this afternoon (2 PM ET) per the search text; positions are held through it, stops unchanged.
