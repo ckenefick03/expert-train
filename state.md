@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-07 11:32 ET",
+  "as_of": "2026-10-07 11:42 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -541,6 +541,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "11:32",
       "equity": 416.36
+    },
+    {
+      "t": "11:42",
+      "equity": 416.91
     }
   ],
   "positions": [
@@ -549,7 +553,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.15,
+      "price": 41.345,
       "stop": 40.2,
       "target": 47.15
     },
@@ -558,7 +562,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 71.03,
+      "price": 71.015,
       "stop": 66.8,
       "target": 78.55
     },
@@ -567,7 +571,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.325,
+      "price": 36.36,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1533,4 +1537,12 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY 775.09 (-0.51%), QQQ 755.26, SMH 622.45, XBI 152.37. Flat, narrow range.
 - Momentum scan: BKV only (+8.7%, rel vol 3.1); unchanged, gates 2 and 3 fail.
 - Mean-reversion scan (<= -7%): 12 names (CGNX, OUST, HESM, VOYG, REZI, XE, QXO, UUUU, SMR, BULL, XNDU, EMAT), same unverified set. CAT 808.39 (-6.4%), still no higher low. No news search (hourly pass was 11:13). Gate 1 fails.
+- No trade, none forced.
+
+### Cycle 2026-10-07 11:42 ET (cycle 119) - no trade
+- Equity $416.91 (day -$18.22; ~4.8% below 437.99 peak). Cash/BP $103.72, no open orders.
+- Stops: KTOS 41.345 (stop 40.20), RKLB 71.015 (stop 66.80, target 78.55), OKLO 36.36 (stop 34.05). None triggered; peers flat (ITA 203.375, ARKX 32.445, URA 40.015).
+- Tape: SPY 775.92 (-0.40%), QQQ 756.37, SMH 623.54, XBI 151.95. Slight lift off the lows.
+- Momentum scan: BKV only (+9.1%, rel vol 3.2); unchanged, gates 2 and 3 fail.
+- Mean-reversion scan (<= -7%): 11 names (CGNX, OUST, HESM, VOYG, XE, QXO, UUUU, SMR, BULL, XNDU, EMAT), the same unverified set. CAT 810.62 (-6.1%) slightly off lows but still no confirmed higher low or cause. No news search (hourly pass at 12:12). Gate 1 fails.
 - No trade, none forced.
