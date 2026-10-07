@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-07 11:13 ET",
+  "as_of": "2026-10-07 11:22 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -533,6 +533,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "11:13",
       "equity": 417.14
+    },
+    {
+      "t": "11:22",
+      "equity": 416.18
     }
   ],
   "positions": [
@@ -541,7 +545,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.155,
+      "price": 41.1,
       "stop": 40.2,
       "target": 47.15
     },
@@ -550,7 +554,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 71.315,
+      "price": 71.06,
       "stop": 66.8,
       "target": 78.55
     },
@@ -559,7 +563,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.43,
+      "price": 36.28,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1509,3 +1513,12 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Momentum: BKV +9.3% (rel vol 2.8) still the only name; no dated catalyst, no pullback -> gates 2 and 3 fail.
 - Mean-reversion scan (<= -6%): 24 names (adds MARA, BTDR, KRMN, AVAV; heavy-equipment CNH/EQPT, space LUNR/ASTS). CAT 811.76, flat to slightly up from 809 lows, still no higher low and no dated cause. No candidate passes gate 1; no trade, none forced.
 - Event risk: FOMC minutes are due this afternoon (2 PM ET) per the search text; positions are held through it, stops unchanged.
+
+### Cycle 2026-10-07 11:22 ET (cycle 117) - no trade
+- Push note: the cycle 116 commit failed to push on the 11:13 cycle (GitHub 500s on 8 attempts) and went through at the start of this cycle.
+- Equity $416.18 (day -$18.95; ~5.0% below 437.99 peak). Cash/BP $103.72, no open orders.
+- Stops: KTOS 41.10 (stop 40.20), RKLB 71.06 (stop 66.80, target 78.55), OKLO 36.28 (stop 34.05). None triggered; peers flat-to-lower in step (ITA 203.46, ARKX 32.33, URA 39.97).
+- Tape: SPY 774.76 (-0.56%), QQQ 754.92, SMH 622.61, XBI 151.94. Flat.
+- Momentum scan: BKV only (+9.0%, rel vol 2.9); unchanged, gates 2 and 3 fail.
+- Mean-reversion scan (<= -7%): 13 names (AAOI, CGNX, OUST, HESM, REZI, XE, SECZ, QXO, UUUU, BTDR, SKYD, SMR, BULL). Same set as the 11:13 news pass, no verified cause for any; CAT 807.05 (-6.5%) is back at its lows with no higher low. No news search this cycle (done at 11:13). Gate 1 fails.
+- No trade, none forced.
