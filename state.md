@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-07 10:04 ET",
+  "as_of": "2026-10-07 10:18 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -509,6 +509,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "10:04",
       "equity": 419.78
+    },
+    {
+      "t": "10:18",
+      "equity": 419.13
     }
   ],
   "positions": [
@@ -517,7 +521,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.735,
+      "price": 41.525,
       "stop": 40.2,
       "target": 47.15
     },
@@ -526,7 +530,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 71.51,
+      "price": 71.71,
       "stop": 66.8,
       "target": 78.55
     },
@@ -535,7 +539,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.75,
+      "price": 36.61,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1433,4 +1437,13 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: risk-off. SPY 774.66, QQQ 753.33, SMH 621.37, XBI 150.735.
 - Momentum scan: 1 name (BKV +8.6%), no catalyst verified -> gate 2 fails.
 - Mean-reversion scan: 144 names, mostly beta selling. Idiosyncratic outliers (HESM, BULL, ALLE, QXO, TXG, TWST, CGNX, REZI, XE, SECZ) have no verified dated external cause (searches returned stale/low-quality results) -> gate 1 fails.
+- No candidate passed all gates; no trade, none forced.
+
+### Cycle 2026-10-07 10:18 ET (cycle 111, hourly news pass) - no trade
+- Equity $419.13 (day -$16.00 vs 435.13; drawdown ~4.3% from 437.99 peak). Cash/BP $103.72, no open orders.
+- Stops: KTOS 41.525 (stop 40.20), RKLB 71.71 (stop 66.80, target 78.55), OKLO 36.61 (stop 34.05). None triggered; all in line with peers (ITA 204.23, ARKX 32.47, URA 40.36).
+- Tape: SPY 774.70 (-0.56%), QQQ 753.69, SMH 622.81, XBI 150.885 (flat). Risk-off but orderly.
+- News: market-wide search again returned an undated/low-quality article (S&P -1.4%, Sahm Rule) that contradicts live SPY -0.56%; not used. HESM, TWST, TXG searches returned only 2025-or-earlier stories (e.g. Chevron Bakken rig cut Sept 2025); no dated cause for today -> gate 1 fails (unverified).
+- Momentum scan: BKV +9.7% (rel vol 1.66, $2.5B cap). Search showed Q3-earnings/expansion stories with no verified date; and it is a gap-up with no held pullback or higher low -> gates 2 and 3 fail.
+- Mean-reversion scan (<= -6%): 14 names (TWST, ALLE, AAOI, TXG, CGNX, ASTS, HESM, BMNR, REZI, QXO, UUUU, SMR, BULL, XNDU). Mostly beta/theme names (optical, space, nuclear, crypto-treasury) or no verified cause. None passed gate 1.
 - No candidate passed all gates; no trade, none forced.
