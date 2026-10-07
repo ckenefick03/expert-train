@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-07 08:35 ET (pre-market marks)",
+  "as_of": "2026-10-07 09:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Pre-open: futures lower, semis -2% pre-market. Holdings -1% to -3% pre-market; all well above stops. No orders before 10:00 ET.",
+  "status_note": "Risk-off open: SPY -0.6%, SMH -1.8%. Holdings -4% to -6% on the day, all above stops (KTOS closest, 3.5% above). No entries before 10:00 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-07",
@@ -497,6 +497,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "08:35",
       "equity": 427.7
+    },
+    {
+      "t": "09:43",
+      "equity": 417.91
     }
   ],
   "positions": [
@@ -505,7 +509,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 43.2,
+      "price": 41.675,
       "stop": 40.2,
       "target": 47.15
     },
@@ -514,7 +518,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 73.15,
+      "price": 71.43,
       "stop": 66.8,
       "target": 78.55
     },
@@ -523,7 +527,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 37.41,
+      "price": 36.23,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1401,3 +1405,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
   3. MRVL (+7% on 3x relative volume Oct 6): pre-market -2.3%; the old 285 support is the line.
   4. NBIS / CRWV (AI cloud): move together with semis; only interesting if they hold while SMH falls.
 - Day plan: 0 trades yesterday means the 1-trade minimum was missed; I will not loosen any gate to fix that. Missed cycles from Oct 6 (15:22-15:42) are logged above.
+
+### Cycle 2026-10-07 09:43 ET (cycle 108) - no trade (before the 10:00 entry window)
+- Equity $417.91 (day -$17.22 vs 435.13 prior close; -$2.52 vs the 420.43 starting equity of Oct 6), cash $103.72, no open orders. Drawdown from peak 437.99 is 4.6% (breaker 10%). Daily loss limit ($100) used: $17.22.
+- Stop check: KTOS 41.675 (-4.7% today; stop 40.20 is 3.5% below), RKLB 71.43 (-4.8%; stop 66.80, 6.5% below), OKLO 36.23 (-6.0%; stop 34.05, 6.0% below). None at or near its stop; KTOS is the one to watch. If KTOS trades at 40.20 the written rule is an immediate market sell. All three are adopted holdings, so the 30-minute hold rule does not apply.
+- Tape: SPY 774.66 (-0.57%), QQQ 752.71 (-0.91%), SMH 620.97 (-1.8%). Peer ETFs: ITA -1.1% (KTOS), ARKX -1.8% (RKLB), URA -4.0% (OKLO; uranium names leading the drop). The three holdings are falling roughly in line with, or less than, their peers, so no stock-specific break.
+- No scans run: entries are not permitted before 10:00 ET, so scanning this cycle could not lead to an order. Full scans resume at 10:02 ET.
+- No news search this cycle (no candidate to vet; hourly pass due at 10:12 ET).
