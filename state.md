@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-07 14:34 ET",
+  "as_of": "2026-10-07 14:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -581,6 +581,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "14:34",
       "equity": 421.37
+    },
+    {
+      "t": "14:43",
+      "equity": 420.49
     }
   ],
   "positions": [
@@ -589,7 +593,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.88,
+      "price": 41.85,
       "stop": 40.2,
       "target": 47.15
     },
@@ -598,7 +602,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 72.26,
+      "price": 71.885,
       "stop": 66.8,
       "target": 78.55
     },
@@ -607,7 +611,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.8,
+      "price": 36.71,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1644,4 +1648,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Equity $421.37 (day high so far), cash $103.72, no orders today. KTOS 41.88 (stop 40.20), RKLB 72.26 (stop 66.80, target 78.55), OKLO 36.80 (stop 34.05). No stop triggered. Peers: ITA 204.47, ARKX 32.62, URA 39.92. SPY 777.65, QQQ 757.62, SMH 623.76.
 - Momentum scan (9): SNDK +4.0%, MU +4.0%, SPOT +5.1%, PENG +13.5%, PGNY +7.9%, BKV +7.1% (rel vol 4.3x), SMMT +4.1%, KVYO +5.5%, INTR +4.3%. Same set as 14:24 (HAFN dropped off); no dated catalyst for any, gate 2 fails.
 - Mean-reversion scan (<= -7%, 14 names): same set as 14:24 (IREN dropped off). Space/quantum/uranium/mining names are theme moves; HESM -14.2%, BULL -19.0% unverified. Gate 1 fails. Now in Tier C window from 14:30 ET (to 15:30).
+- No trade, none forced.
+
+### Cycle 2026-10-07 14:43 ET (cycle 129) - no trade
+- Equity $420.49, cash $103.72, no orders today. KTOS 41.85 (stop 40.20), RKLB 71.89 (stop 66.80), OKLO 36.71 (stop 34.05). No stop triggered. Peers: ITA 204.17, ARKX 32.59, URA 39.86. SPY 777.26, QQQ 757.14, SMH 622.63.
+- Momentum scan (11): SNDK +3.8%, MU +3.9%, SPOT +5.6%, PENG +13.8%, PGNY +8.0%, BKV +7.7% (rel vol 4.3x), SMMT +3.7%, KVYO +5.8%, HAFN +3.1%, INTR +3.8%, new BRZE +9.2%. BRZE and KVYO are both marketing-software names moving together, so a sector move (gate 1 says a uniform group move is not a signal), and no dated catalyst found for either. Gate 2 fails across the list.
+- Mean-reversion scan (<= -7%, 14 names): same set (SECZ, SKYD back; XNDU, VOYG, EMAT dropped off). No verified single-name cause; gate 1 fails.
 - No trade, none forced.
