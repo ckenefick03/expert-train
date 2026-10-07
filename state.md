@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-07 14:03 ET",
+  "as_of": "2026-10-07 14:14 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -569,6 +569,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "14:03",
       "equity": 418.06
+    },
+    {
+      "t": "14:14",
+      "equity": 419.51
     }
   ],
   "positions": [
@@ -577,7 +581,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.7,
+      "price": 41.69,
       "stop": 40.2,
       "target": 47.15
     },
@@ -586,7 +590,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 70.845,
+      "price": 71.585,
       "stop": 66.8,
       "target": 78.55
     },
@@ -595,7 +599,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.55,
+      "price": 36.66,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1613,3 +1617,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Momentum scan (5): SNDK +4.1%, MU +3.8%, SPOT +5.2%, PENG +11.5%, BKV +7.0% (rel vol 4.1x). Same gate-2 failures as 13:53 (no dated catalyst); no new names.
 - Mean-reversion scan (<= -7%, 14 names): new vs 13:53 are VOYG (-8.7%), NN, FSM, XNDU (-10.2%); dropped SECZ, QXO, SKYD, RXRX. Space/quantum/uranium/mining names move with their theme; HESM -14.4%, BULL -19.4% have no verified single-name cause. Gate 1 fails across the list. Hourly news pass due at 14:12.
 - No trade, none forced.
+
+### Cycle 2026-10-07 14:14 ET (cycle 126, hourly news pass) - no trade
+- Equity $419.51, cash $103.72, no orders today. KTOS 41.69 (stop 40.20), RKLB 71.59 (stop 66.80, target 78.55), OKLO 36.66 (stop 34.05). No stop triggered. Peers: ITA 204.44, ARKX 32.52, URA 39.87. SPY 777.48 (-0.21%), QQQ 757.35, SMH 623.80.
+- News pass: macro search returned conflicting, undated figures (yield levels contradicted earlier tape notes), so not used. HESM (-14.5%): only an undated selling-shareholder offering item at -3.8%, which doesn't match today's size or date; cause unverified, gate 1 fails. KVYO (+5.1%): only older earnings/upgrade items, nothing dated today, gate 2 fails. BKV, MU, SNDK: no dated catalyst found (see 13:44/13:53).
+- Momentum scan (8): SNDK +3.9%, MU +3.9%, SPOT +5.2%, PENG +12.2%, BKV +7.0% (rel vol 4.1x), plus new KVYO +5.1%, INTR +4.1%, HAFN +3.3%. All fail gate 2 (no dated catalyst); none checked for a pullback since gate 2 fails first.
+- Mean-reversion scan (<= -7%, 15 names): new TWST (-7.1%), CGNX (-7.1%); HESM, BULL (-18.8%), SECZ, QXO, SKYD, REZI, OUST and the space/quantum/uranium/mining names otherwise unchanged. No verified single-name cause. Gate 1 fails.
+- Note: the first momentum preview_scan hit a transient classifier error; retried once and succeeded.
+- No trade, none forced. Skipped-candidate follow-ups: MU 1085.85 -> 1086.27, SNDK 1725.46 -> 1725.70 since 13:44 (flat); BKV 23.60 -> 23.59.
