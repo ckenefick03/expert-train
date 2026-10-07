@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-07 13:53 ET",
+  "as_of": "2026-10-07 14:03 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -565,6 +565,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "13:53",
       "equity": 417.87
+    },
+    {
+      "t": "14:03",
+      "equity": 418.06
     }
   ],
   "positions": [
@@ -573,7 +577,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.69,
+      "price": 41.7,
       "stop": 40.2,
       "target": 47.15
     },
@@ -582,7 +586,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 70.775,
+      "price": 70.845,
       "stop": 66.8,
       "target": 78.55
     },
@@ -591,7 +595,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.52,
+      "price": 36.55,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1602,4 +1606,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Equity $417.87, cash $103.72, no orders today. KTOS 41.69 (stop 40.20), RKLB 70.78 (stop 66.80), OKLO 36.52 (stop 34.05). No stop triggered. Peers: ITA 204.43, ARKX 32.46, URA 39.84 (no stock-specific break). SPY 777.29 (-0.23%), QQQ 756.75, SMH 622.99.
 - Momentum scan (6): SNDK +3.6%, MU +3.5%, SPOT +5.4%, PENG +11.8%, BKV +6.8% (rel vol 3.9x, new), HAFN +3.0%. BKV searched: only older Q3-earnings/expansion articles, nothing dated today, so gate 2 fails (volume spike alone is not a catalyst). SNDK/MU still fail gate 2 as at 13:44. Others unchanged.
 - Mean-reversion scan (<= -7%, 14 names): OUST, HESM, FLY, REZI, XE, LUNR, ALM, INFQ, SECZ, QXO, UUUU, SKYD, BULL (-18.8%), RXRX. Space/nuclear/uranium names (FLY, LUNR, XE, UUUU) move with the theme complex (ARKX/URA down), no verified single-name cause; the rest unverified. Gate 1 fails across the list. No news pass this cycle (next at 14:12).
+- No trade, none forced.
+
+### Cycle 2026-10-07 14:03 ET (cycle 125) - no trade
+- Equity $418.06, cash $103.72, no orders today. KTOS 41.70 (stop 40.20), RKLB 70.85 (stop 66.80), OKLO 36.55 (stop 34.05). No stop triggered. Peers flat: ITA 204.47, ARKX 32.49, URA 39.82. SPY 777.08, QQQ 756.84, SMH 623.08.
+- Momentum scan (5): SNDK +4.1%, MU +3.8%, SPOT +5.2%, PENG +11.5%, BKV +7.0% (rel vol 4.1x). Same gate-2 failures as 13:53 (no dated catalyst); no new names.
+- Mean-reversion scan (<= -7%, 14 names): new vs 13:53 are VOYG (-8.7%), NN, FSM, XNDU (-10.2%); dropped SECZ, QXO, SKYD, RXRX. Space/quantum/uranium/mining names move with their theme; HESM -14.4%, BULL -19.4% have no verified single-name cause. Gate 1 fails across the list. Hourly news pass due at 14:12.
 - No trade, none forced.
