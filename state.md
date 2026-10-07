@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-07 13:23 ET",
+  "as_of": "2026-10-07 13:33 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -553,6 +553,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "13:23",
       "equity": 418.88
+    },
+    {
+      "t": "13:33",
+      "equity": 418.36
     }
   ],
   "positions": [
@@ -561,7 +565,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.84,
+      "price": 41.695,
       "stop": 40.2,
       "target": 47.15
     },
@@ -570,7 +574,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 70.99,
+      "price": 70.98,
       "stop": 66.8,
       "target": 78.55
     },
@@ -579,7 +583,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.63,
+      "price": 36.58,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1571,3 +1575,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Momentum scan (4 names): SPOT +5.2% ($513.7; steady all-day climb 485 -> 514, no pullback to buy; search returned no dated catalyst), PENG +13.3% ($72.76; gap-up open 67 -> 75, then 3.5 hours of 72-75 chop; search returned an Oct 2025 earnings story and a Nov-era price of $27 that does not match, so no verified catalyst), PGNY +7.0% ($27.72; steady climb; search returned only May 2026 Q1 results), BKV +7.8% (unchanged). All fail gate 2 (no verified dated catalyst); SPOT and PGNY also have no pullback (gate 3).
 - Mean-reversion scan (<= -7%): 11 names (OUST, HESM, REZI, XE, ALM, INFQ, SECZ, QXO, UUUU, SKYD, BULL); same unverified set. CAT 816.68 (-5.4%) has recovered above the -6% cut and was never a verified setup. Gate 1 fails.
 - No trade, none forced. Tier B window runs to 14:30 ET, Tier C to 15:30 ET.
+
+### Cycle 2026-10-07 13:33 ET (cycle 122) - no trade
+- Equity $418.36 (day -$16.77; ~4.5% below 437.99 peak). Cash/BP $103.72, no open orders.
+- Stops: KTOS 41.695 (stop 40.20), RKLB 70.98 (stop 66.80, target 78.55), OKLO 36.58 (stop 34.05). None triggered; peers flat (ITA 204.55, ARKX 32.485, URA 39.895).
+- Tape: SPY 777.39 (-0.22%), QQQ 757.07, SMH 624.45, XBI 151.16. Steady.
+- Momentum scan: SPOT +5.3%, PENG +12.8%, BKV +6.6%; same assessment as 13:23 (no verified dated catalyst; SPOT no pullback). Gates 2 and 3 fail. PGNY dropped off the list.
+- Mean-reversion scan (<= -7%): 12 names, same unverified set plus RXRX (-8.2%, $4.25, biotech penny-ish name, no cause checked; fails quality/fundamentals-neutral gate at this price level). CAT 816.38 not on list. No news search (hourly pass was folded into 13:23). Gate 1 fails.
+- No trade, none forced.
