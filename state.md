@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-07 14:14 ET",
+  "as_of": "2026-10-07 14:24 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -573,6 +573,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "14:14",
       "equity": 419.51
+    },
+    {
+      "t": "14:24",
+      "equity": 420.09
     }
   ],
   "positions": [
@@ -581,7 +585,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.69,
+      "price": 41.885,
       "stop": 40.2,
       "target": 47.15
     },
@@ -590,7 +594,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 71.585,
+      "price": 71.59,
       "stop": 66.8,
       "target": 78.55
     },
@@ -599,7 +603,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.66,
+      "price": 36.7,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1625,3 +1629,9 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Mean-reversion scan (<= -7%, 15 names): new TWST (-7.1%), CGNX (-7.1%); HESM, BULL (-18.8%), SECZ, QXO, SKYD, REZI, OUST and the space/quantum/uranium/mining names otherwise unchanged. No verified single-name cause. Gate 1 fails.
 - Note: the first momentum preview_scan hit a transient classifier error; retried once and succeeded.
 - No trade, none forced. Skipped-candidate follow-ups: MU 1085.85 -> 1086.27, SNDK 1725.46 -> 1725.70 since 13:44 (flat); BKV 23.60 -> 23.59.
+
+### Cycle 2026-10-07 14:24 ET (cycle 127) - no trade
+- Equity $420.09, cash $103.72, no orders today. KTOS 41.89 (stop 40.20), RKLB 71.59 (stop 66.80), OKLO 36.70 (stop 34.05). No stop triggered. Peers: ITA 204.44, ARKX 32.57, URA 39.93. SPY 777.43, QQQ 757.31, SMH 623.34.
+- Momentum scan (10): SNDK +3.9%, MU +3.9%, SPOT +5.2%, PENG +12.0%, PGNY +7.6% (back), BKV +7.4% (rel vol 4.2x), KVYO +5.0%, INTR +4.3%, HAFN +3.2%, SMMT +3.7% (new). No new dated catalyst found for any; gate 2 fails across the list. No news search (hourly pass done at 14:14).
+- Mean-reversion scan (<= -7%, 15 names): new IREN (-7.0%, crypto/AI-compute beta), EMAT (-7.8%, $1.77 penny-ish); otherwise the same set (HESM -14.4%, BULL -18.6%, space/quantum/uranium/mining themes). No verified single-name cause; gate 1 fails.
+- No trade, none forced.
