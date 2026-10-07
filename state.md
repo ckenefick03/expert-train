@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-06 15:53 ET",
+  "as_of": "2026-10-07 08:35 ET (pre-market marks)",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,11 +41,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Day closed with 0 trades (no setup passed all gates). Holding KTOS, RKLB, OKLO overnight; stops/targets unchanged.",
+  "status_note": "Pre-open: futures lower, semis -2% pre-market. Holdings -1% to -3% pre-market; all well above stops. No orders before 10:00 ET.",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-10-06",
-    "start_equity": 420.43,
+    "date": "2026-10-07",
+    "start_equity": 435.13,
     "trades": 0,
     "forced": 0
   },
@@ -489,6 +489,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "15:53",
       "equity": 434.02
+    },
+    {
+      "t": "16:00",
+      "equity": 435.13
+    },
+    {
+      "t": "08:35",
+      "equity": 427.7
     }
   ],
   "positions": [
@@ -497,7 +505,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 43.62,
+      "price": 43.2,
       "stop": 40.2,
       "target": 47.15
     },
@@ -506,7 +514,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 74.34,
+      "price": 73.15,
       "stop": 66.8,
       "target": 78.55
     },
@@ -515,7 +523,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 38.615,
+      "price": 37.41,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1373,3 +1381,23 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - P&L: +$13.59 on the day from the three adopted holdings (all marks are unrealized). Realized P&L today: $0.
 - Skipped-candidate follow-ups still open: biotech/tools and storage selloff causes (searches returned only stale items), the older 10/01 skip list re-pricing, and PDT/day-trade applicability for limited_margin (unverified).
 - Score: no entries, so no setup/execution score to assign; day tagged no-trade (organic).
+
+### Pre-open brief 2026-10-07 08:35 ET (no orders)
+- Account: total $427.70 on pre-market marks (Oct 6 close mark was $435.13 = 103.72 cash + 331.41 holdings, day +$14.70 vs 420.43 start; the 15:53 figure of $434.02 was before the last 7 minutes). Cash $103.72, no open orders, none placed Oct 6. Peak equity 437.99, so pre-market drawdown from peak is about 2.3% (breaker is 10%).
+- Stop check on pre-market prices (thin, wide spreads): KTOS ~43.20 (stop 40.20), RKLB ~73.15 (stop 66.80, target 78.55), OKLO ~37.41 (stop 34.05). All above stops; OKLO is the nearest at about 9% above its stop. No action; the real check is at the open. Regular-hours stops are enforced manually (no resting stops on fractional shares).
+- Tape: pre-market SPY ~775.3 (-0.5% vs 779.09 close), QQQ ~753.3 (-0.8%), SMH ~620 (-2.0%). Semis and AI-linked names are the weak spot.
+- Group moves vs close: CEG -3.4%, VST -2.9% (nuclear/power names OKLO moves with are weaker), CIEN -3.5%, MRVL -2.3%, NBIS -3.0%; storage STX -2.0%, WDC -2.2%; biotech XBI ~-0.8%, TWST -4.2%, TXG -4.2%; TER -3.0%.
+- News: one WebSearch for premarket futures returned articles that are visibly stale or from other years (FOMC July minutes / Target CEO exit from 2025, a Bloomberg item dated May 14 2026), so I am NOT using any of it as today's cause. No verified catalyst found for the pre-market weakness; gate 1 remains unverified for any dip candidate until I find a dated source in the live session.
+- Earnings (high market cap, next 2 days): APLD and LEVI report after the close today; PEP, NG, ODC, SVNDY on Oct 8. None of my holdings or watch names report.
+- Entry windows today: nothing before 10:00 ET; mean-reversion Tier A 10:00-11:30, B 11:30-14:30, C 14:30-15:30; momentum earliest 10:30; none after 15:30.
+- Watch list, mean-reversion (each needs a dated external cause, not a sector drift, plus an upside anchor and a non-downtrend dislocation before any entry):
+  1. STX / WDC (storage): a dated Oct 2 report tied the drop to Toshiba doubling HDD output; if today's weakness has a fresh cause that is not just the same competitive threat, reassess. Currently fails gate 4 (downtrend).
+  2. TWST / TXG (genomics tools, -4% pre-market on top of -15% to -17% yesterday): needs a dated cause; so far only stale items found.
+  3. TER (semi-equipment, -3.0% pre-market): sold Oct 5; same group move as LRCX/KLAC, no cause.
+  4. DOCU / TWLO (software, -5% to -6% Oct 6): no cause checked; look for a company-specific item.
+- Watch list, momentum (needs divergence from the peer complex, a cited catalyst, and a held pullback with a higher low; earliest 10:30):
+  1. CIEN (+13% Oct 6 on volume, -3.5% pre-market): watch whether it holds above yesterday's low and finds support.
+  2. CEG / VST (nuclear/power leaders): sector-wide, would need to outperform OKLO/CCJ/NXE peers.
+  3. MRVL (+7% on 3x relative volume Oct 6): pre-market -2.3%; the old 285 support is the line.
+  4. NBIS / CRWV (AI cloud): move together with semis; only interesting if they hold while SMH falls.
+- Day plan: 0 trades yesterday means the 1-trade minimum was missed; I will not loosen any gate to fix that. Missed cycles from Oct 6 (15:22-15:42) are logged above.
