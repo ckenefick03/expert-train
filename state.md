@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-07 14:53 ET",
+  "as_of": "2026-10-07 15:03 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -589,6 +589,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "14:53",
       "equity": 421.07
+    },
+    {
+      "t": "15:03",
+      "equity": 420.74
     }
   ],
   "positions": [
@@ -597,7 +601,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.95,
+      "price": 41.98,
       "stop": 40.2,
       "target": 47.15
     },
@@ -606,7 +610,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 72.04,
+      "price": 71.82,
       "stop": 66.8,
       "target": 78.55
     },
@@ -615,7 +619,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.77,
+      "price": 36.73,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1665,3 +1669,9 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Momentum scan (10): SNDK +3.6%, MU +3.9%, SPOT +5.3%, PENG +13.7%, BRZE +8.8%, BKV +7.7% (rel vol 4.3x), SMMT +3.9%, KVYO +5.7%, HAFN +3.0%, INTR +4.3%. Same set as 14:43 (PGNY dropped off); no dated catalyst for any, gate 2 fails. No new news search (next full pass 15:12).
 - Mean-reversion scan (<= -7%, 13 names): same set as 14:43 minus NN. No verified single-name cause; gate 1 fails. Tier C window closes 15:30 ET.
 - No trade, none forced.
+
+### Cycle 2026-10-07 15:03 ET (cycle 131) - no trade
+- Equity $420.74, cash $103.72, no orders today. KTOS 41.98 (stop 40.20), RKLB 71.82 (stop 66.80, target 78.55), OKLO 36.73 (stop 34.05). No stop triggered. Peers: ITA 204.43, ARKX 32.59, URA 39.86. SPY 777.72, QQQ 757.21, SMH 622.25.
+- Momentum scan (10): MU +3.4% (SNDK dropped below +3%), SPOT +5.0%, PENG +13.5%, SMCI +4.0% (new), BRZE +8.9%, BKV +7.9% (rel vol 4.4x), SMMT +3.8%, KVYO +5.9%, HAFN +3.1%, INTR +3.7%. No dated catalyst for any; gate 2 fails. SMCI is an AI-server name moving with the semis/memory group (SMH -1.6%), not separating from peers.
+- Mean-reversion scan (<= -7%, 13 names): same set, VOYG and XNDU back. No verified single-name cause; gate 1 fails.
+- No trade, none forced. 15:12 is the last hourly news pass before the 15:30 entry cutoff.
