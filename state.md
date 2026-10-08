@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-08 08:30 ET (pre-market)",
+  "as_of": "2026-10-08 09:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,11 +41,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Pre-open Oct 8: index ETFs indicated lower (SPY -0.3%, QQQ -0.5%, SMH -1.4% on thin pre-market quotes). Holdings RKLB 70.35 / OKLO 36.14 / KTOS 42.07 are all above stops. Read-only cycle, no entries before 10:00 ET.",
+  "status_note": "Oct 8, 09:43 ET: equity $416.51 (-$4.56 vs the $421.07 close). Open is soft: SPY -0.35%, QQQ -0.59%, SMH -1.7%. RKLB 69.96 and OKLO 35.99 are down about 2.7% and 2.3% but 4.5% and 5.7% above their stops. No entries before 10:00 ET.",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-10-07",
-    "start_equity": 435.13,
+    "date": "2026-10-08",
+    "start_equity": 421.07,
     "trades": 0,
     "forced": 0
   },
@@ -621,6 +621,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-08 08:30 ET pre-mkt",
       "equity": 417.05
+    },
+    {
+      "t": "2026-10-08 09:43 ET",
+      "equity": 416.51
     }
   ],
   "positions": [
@@ -629,7 +633,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.07,
+      "price": 42.28,
       "stop": 40.2,
       "target": 47.15
     },
@@ -638,7 +642,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 70.35,
+      "price": 69.96,
       "stop": 66.8,
       "target": 78.55
     },
@@ -647,7 +651,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.14,
+      "price": 35.99,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1754,3 +1758,9 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - **Momentum watch (earliest 10:30 ET; each needs a dated catalyst for gate 2 and a held pullback for gate 3):** (1) MU, memory-pricing theme, volume 1.2x, sector driver but no dated news. (2) SNDK, same theme, faded below +3% by 15:00. (3) BKV, 4.4x relative volume but no dated news. (4) GFS, +4.1% yesterday while SMH was -1.2%: a relative-strength divergence worth checking for a dated reason. (5) BRZE/KVYO move as a group, so likely a sector move, low priority.
 - **Held-name risks today:** semis weak pre-market, 10-year yield near cycle highs (rate-sensitive growth names), thin pre-market liquidity. No company-specific catalyst found for KTOS, RKLB or OKLO today.
 - **Open items:** re-price the 10/01 skip list (RIOT, CLSK, CIFR, HUT, MARA, NWG, HSBC, GIS, CAG, LVS, ACN, COHR); confirm PDT/day-trade applicability for limited_margin (unverified). Next: 10:02 ET cycle (first one allowed to enter).
+
+### Cycle 2026-10-08 09:43 ET (cycle 137) - no trade, before the 10:00 ET entry window
+- Equity $416.51 (-$4.56, -1.1% vs the $421.07 Oct 7 close), cash $103.72, no orders today. KTOS 42.28 (stop 40.20, +5.2%), RKLB 69.96 (entry 70.72, stop 66.80, 4.5% above; -2.7% on the day), OKLO 35.99 (entry 36.37, stop 34.05, 5.7% above; -2.3% on the day). No stop near; nothing to do.
+- Tape (13 minutes into the session): SPY 774.47 (-0.35%), QQQ 753.24 (-0.59%), SMH 614.34 (-1.7%), ITA 201.65 (-1.0%), ARKX 32.40 (-0.7%), URA 39.17 (-1.9%). Risk-off again, semis weakest. RKLB and OKLO are weaker than ARKX and URA by about 2 points and 0.4 points respectively; RKLB is worth watching but within the range of its normal beta.
+- Entries are not allowed before 10:00 ET and momentum not before 10:30, so I ran the stop check and reconciliation only and did not scan. The first scanning cycle is 10:02.
+- Day start equity for Oct 8 set to $421.07 (the official-close mark; see the pre-open correction).
