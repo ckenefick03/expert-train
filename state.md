@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-08 14:53 ET",
+  "as_of": "2026-10-08 15:03 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -717,6 +717,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-08 14:53 ET",
       "equity": 408.38
+    },
+    {
+      "t": "2026-10-08 15:03 ET",
+      "equity": 408.21
     }
   ],
   "positions": [
@@ -725,7 +729,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.995,
+      "price": 41.925,
       "stop": 40.2,
       "target": 47.15
     },
@@ -2029,3 +2033,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - MR scan: 27 names (up from 24); same AI-hardware/optical/miner/power/biotech theme set; new: LU (sub-$1 ADR). Gate 1 fails: no verified external, name-specific cause. No entry.
 - Momentum scan: 16 names; new: CTSH (+3.2%) — joins ACN (+3.4%) in an IT-services group move, no dated catalyst found. Restaurants/energy are group moves; GFS, CBOE, COCO, ERAS, Z, RBA, MO no dated catalyst. Gate 2 fails. No entry.
 - No trade; not forcing. Day trades 1, forced 0. Tier C closes 15:30 ET; close recap at 15:47.
+
+### Cycle 161 — 15:03 ET
+- Equity $408.21, cash $203.79. KTOS 41.93 (stop 40.20, +4.3%). RKLB 68.20 (stop 66.80, +2.1%; proactive-exit 67.47 not reached). No exits.
+- Tape: SPY 772.84 (−0.57%), QQQ 746.70 (−1.45%), SMH 605.02 (−3.2%), URA 38.21, ARKX 32.01, ITA 204.89 (+0.6%). Flat.
+- MR scan: 26 names; same theme set, new: VSAT (space/satellite, with ASTS). Gate 1 fails: no verified external, name-specific cause. No entry.
+- Momentum scan: 18 names; new: TEAM (+3.1%), DAR (+3.4%). IT-services/software cluster (ACN, CTSH, TEAM) plus restaurants and energy are group moves; no dated catalyst on any name (COCO +10.5% RV 1.1, ERAS, GFS, CBOE, Z, RBA, MO included). Gate 2 fails. No entry.
+- 27 minutes to the 15:30 entry cut-off. No trade; not forcing. Day trades 1, forced 0.
