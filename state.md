@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-08 10:32 ET",
+  "as_of": "2026-10-08 10:42 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -641,6 +641,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-08 10:32 ET",
       "equity": 416.58
+    },
+    {
+      "t": "2026-10-08 10:42 ET",
+      "equity": 416.46
     }
   ],
   "positions": [
@@ -649,7 +653,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.425,
+      "price": 42.57,
       "stop": 40.2,
       "target": 47.15
     },
@@ -658,7 +662,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 70.24,
+      "price": 70.39,
       "stop": 66.8,
       "target": 78.55
     },
@@ -667,7 +671,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 35.74,
+      "price": 35.5,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1806,4 +1810,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY 776.33 (-0.11%), QQQ 756.47 (-0.17%), SMH 621.46 (-0.6%), ITA 203.50, ARKX 32.47, URA 39.27. The tape is recovering.
 - MR scan: RVMD 183.24 (-8.8%) and RXRX 3.96 (-7.4%), both biotech. No cause found in last cycle's searches, so gate 1 fails. No trade.
 - Momentum scan (window now open): GFS 50.85 +5.8% (RV 1.35) and CMG 32.25 +4.8% (RV 1.90). PLTR dropped out of the scan (now +2.8%). Neither GFS nor CMG has a dated catalyst: last cycle's searches returned only older or undated items. Gate 2 fails for both, so I did not evaluate gates 3 and 4. No trade.
+- No trade this cycle. Gates unchanged.
+
+### Cycle 142 (10:42 ET Oct 8)
+- Equity $416.46, cash $103.72, no orders today. KTOS 42.57 (stop 40.20), RKLB 70.39 (stop 66.80), OKLO 35.50 (stop 34.05, +4.8% above). No stop threatened.
+- Tape: SPY 776.09 (-0.15%), QQQ 755.70 (-0.27%), SMH 620.17 (-0.8%), ITA 203.62 (flat), ARKX 32.43, URA 39.16 (-1.9%).
+- MR scan: RVMD 183.50 (-8.6%) and RXRX 3.95 (-7.6%), both biotech, no cause found, gate 1 fails. New: CIFR 13.52 (-7.2%, RV high), a bitcoin-miner/AI-datacenter name. It sits in a group that moves together and no sector-wide cause is verified this cycle, so gate 1 fails. No trade.
+- Momentum scan: PLTR 201.00 +3.5% (RV 1.43), GFS 50.86 +5.8% (RV 1.52), CMG 32.60 +5.9% (RV 2.14). Still no dated catalyst found for any of them, so gate 2 fails. No trade.
 - No trade this cycle. Gates unchanged.
