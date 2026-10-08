@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-08 14:23 ET",
+  "as_of": "2026-10-08 14:33 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -705,6 +705,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-08 14:23 ET",
       "equity": 409.1
+    },
+    {
+      "t": "2026-10-08 14:33 ET",
+      "equity": 408.93
     }
   ],
   "positions": [
@@ -722,7 +726,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 68.73,
+      "price": 68.555,
       "stop": 66.8,
       "target": 78.55
     }
@@ -1996,3 +2000,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - MR scan: 19 names (down from 23); same AI-hardware/optical/miner/power theme selloffs plus RVMD, EQPT, NN. Gate 1 fails: no verified external, name-specific cause. No entry.
 - Momentum scan: 13 names — CBOE, CDW, SHEL, SHAK, FRO, CAVA, GFS, BP, APA, CMG, ERAS, SSL, RIG. Restaurants (CMG/SHAK/CAVA) and energy/tanker/driller (SHEL/FRO/BP/APA/SSL/RIG) are group moves; GFS (+3.2%, RV 2.7) still has no dated catalyst; CBOE/CDW/ERAS likewise. Gate 2 fails. No entry.
 - No trade; not forcing. Day trades 1, forced 0. Tier B closes 14:30 ET; Tier C 14:30–15:30.
+
+### Cycle 158 — 14:33 ET (Tier C window open)
+- Equity $408.93, cash $203.79. KTOS 42.00 (stop 40.20, +4.5%). RKLB 68.56 (stop 66.80, +2.6%; proactive-exit 67.47 not reached). No exits.
+- Tape: SPY 772.91 (−0.55%), QQQ 747.68 (−1.33%), SMH 607.78 (−2.8%), URA 38.27, ARKX 32.06, ITA 204.72 (+0.5%). Flat to slightly better.
+- MR scan: 20 names, same AI-hardware/optical/miner/power/biotech set. Gate 1 fails: no verified external, name-specific cause. No entry.
+- Momentum scan: 14 names; new: COCO (+9.3%, RV 1.0, no dated catalyst found). Others unchanged (restaurants, energy/tanker group moves; GFS +3.5% RV 2.7 with no dated catalyst; CBOE, CDW, ERAS). Gate 2 fails across the board. No entry.
+- No news searches this cycle (not the hourly pass; no candidate otherwise passing). No trade; not forcing. Day trades 1, forced 0.
