@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-08 09:53 ET",
+  "as_of": "2026-10-08 10:05 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -629,6 +629,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-08 09:53 ET",
       "equity": 416.56
+    },
+    {
+      "t": "2026-10-08 10:05 ET",
+      "equity": 417.57
     }
   ],
   "positions": [
@@ -637,7 +641,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.46,
+      "price": 42.8,
       "stop": 40.2,
       "target": 47.15
     },
@@ -646,7 +650,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 69.82,
+      "price": 70.11,
       "stop": 66.8,
       "target": 78.55
     },
@@ -655,7 +659,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 35.92,
+      "price": 35.83,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1773,3 +1777,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Equity $416.56 (-$4.51 vs the $421.07 close), cash $103.72, no orders today. KTOS 42.46 (stop 40.20, +5.6%), RKLB 69.82 (entry 70.72, stop 66.80, +4.5%), OKLO 35.92 (entry 36.37, stop 34.05, +5.5%). No stop near; nothing to do.
 - Tape: SPY 775.54 (-0.22%), QQQ 753.56 (-0.55%), SMH 614.55 (-1.7%), ITA 203.00 (-0.3%), ARKX 32.43 (-0.6%), URA 39.23 (-1.8%). RKLB -2.9% and OKLO -2.4% are a little weaker than ARKX and URA's moves but in line with their usual beta; KTOS is up 1.2% against ITA down 0.3%.
 - Entries are not allowed before 10:00 ET, so stop checks and reconciliation only. The first scanning cycle is 10:02 ET.
+
+### Cycle 139 (10:05 ET Oct 8)
+- Equity $417.57, cash $103.72, no orders today. KTOS 42.80 (stop 40.20), RKLB 70.11 (stop 66.80), OKLO 35.83 (stop 34.05). No stop threatened.
+- Tape: SPY 775.48 (-0.22%), QQQ 753.80 (-0.52%), SMH 616.31 (-1.4%), ITA 203.89, ARKX 32.47, URA 39.19.
+- MR scan: RVMD (-7.1%, biotech) and RXRX (-7.5%, biotech) failed gate 1: no cause verified this cycle, so unverified. No trade.
+- Momentum scan: PLTR +3.6%, RV 1.07. Fails gate 4 (before 10:30 ET) and gate 2 (no cited catalyst). No trade.
+- No trade this cycle. Gates unchanged.
