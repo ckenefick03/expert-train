@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-08 14:14 ET",
+  "as_of": "2026-10-08 14:23 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -701,6 +701,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-08 14:14 ET",
       "equity": 408.6
+    },
+    {
+      "t": "2026-10-08 14:23 ET",
+      "equity": 409.1
     }
   ],
   "positions": [
@@ -709,7 +713,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.9,
+      "price": 42.0,
       "stop": 40.2,
       "target": 47.15
     },
@@ -718,7 +722,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 68.5,
+      "price": 68.73,
       "stop": 66.8,
       "target": 78.55
     }
@@ -1985,3 +1989,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Momentum scan: 13 names. GFS is back (+3.2%, RV 2.6) and diverges from SMH −3.0% — gate 1 plausibly passes — but it faded to flat earlier today, and a targeted search found no dated catalyst (stale/undated results only). Gate 2 fails; no entry. Others: CBOE, CDW, RBA, SHAK, CAVA, CMG (restaurants cluster = group move, no catalyst), energy cluster (SHEL, FRO, BP, APA, SSL), ERAS. Gate 2 fails across the board.
 - Follow-up: GFS stays on watch — passes only with a dated catalyst plus a held higher low.
 - No trade; not forcing. Day trades 1, forced 0. Tier B window closes 14:30 ET.
+
+### Cycle 157 — 14:23 ET
+- Equity $409.10, cash $203.79. KTOS 42.00 (stop 40.20, +4.5%). RKLB 68.73 (stop 66.80, +2.9%; proactive-exit 67.47 not reached). No exits.
+- Tape: SPY 772.74 (−0.58%), QQQ 747.46 (−1.35%), SMH 607.99 (−2.7%), URA 38.24, ARKX 32.08, ITA 204.68 (+0.5%). Gently recovering.
+- MR scan: 19 names (down from 23); same AI-hardware/optical/miner/power theme selloffs plus RVMD, EQPT, NN. Gate 1 fails: no verified external, name-specific cause. No entry.
+- Momentum scan: 13 names — CBOE, CDW, SHEL, SHAK, FRO, CAVA, GFS, BP, APA, CMG, ERAS, SSL, RIG. Restaurants (CMG/SHAK/CAVA) and energy/tanker/driller (SHEL/FRO/BP/APA/SSL/RIG) are group moves; GFS (+3.2%, RV 2.7) still has no dated catalyst; CBOE/CDW/ERAS likewise. Gate 2 fails. No entry.
+- No trade; not forcing. Day trades 1, forced 0. Tier B closes 14:30 ET; Tier C 14:30–15:30.
