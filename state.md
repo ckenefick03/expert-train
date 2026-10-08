@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-08 12:03 ET",
+  "as_of": "2026-10-08 13:25 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Oct 8, 12:03 ET: equity $409.05 (-$12.02 vs the $421.07 close). Holding KTOS 42.02 (stop 40.20) and RKLB 68.61 (stop 66.80); cash $203.79. OKLO was sold at 34.337 at 11:53. SPY -0.37%, QQQ -0.69%, SMH -1.4%. No entry has passed all gates.",
+  "status_note": "Oct 8, 13:25 ET: equity $408.09 (-$12.98 vs the $421.07 close). Holding KTOS 41.93 (stop 40.20) and RKLB 68.10 (stop 66.80); cash $203.79. SPY -0.7%, QQQ -1.6%, SMH -3.6%: a broad AI/chip selloff. Monitoring gap 12:13-13:23 ET (usage limit), see log.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-08",
@@ -677,6 +677,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-08 12:03 ET",
       "equity": 409.05
+    },
+    {
+      "t": "2026-10-08 13:25 ET",
+      "equity": 408.09
     }
   ],
   "positions": [
@@ -685,7 +689,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.015,
+      "price": 41.93,
       "stop": 40.2,
       "target": 47.15
     },
@@ -694,7 +698,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 68.61,
+      "price": 68.1,
       "stop": 66.8,
       "target": 78.55
     }
@@ -1914,3 +1918,13 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - MR scan (11 names): RVMD (-9.0%), AAOI (-9.0%), HUT (-9.2%), AXTI, RIOT (-9.4%), EQPT, CIFR, NN (-13.3%), CLSK, XNDU, FRMI. Same set as last cycle: the AI-hardware names, the miners, the power/data-center names and two unexplained biotechs. No dated cause for any name. Gate 1 fails for all, no entry.
 - Momentum scan: GFS 50.03 +4.1% (RV 1.89) and CMG 32.70 +6.3% (RV 2.77). No dated catalyst, gate 2 fails. GFS's lead over SMH (-1.4%) persists, but that alone is not a catalyst. No entry.
 - No entry this cycle. Gates unchanged. The hourly news pass is next, at 12:12 ET.
+
+### Cycle 151 (13:25 ET Oct 8) - monitoring gap disclosed
+- **Gap: no cycles ran from about 12:13 ET to 13:23 ET.** My usage limit was hit mid-cycle at 12:13 (the 12:13 hourly pass collected quotes and scans but its news searches errored and nothing was logged), and the 12:22, 12:32, 12:42, 12:52, 13:02, 13:12 and 13:22 triggers queued until the limit reset. Those cycles were not run, and no order was placed in that window.
+- Stop check across the gap using 5-minute bars from 11:55 to 13:20 ET: KTOS low 41.71 (stop 40.20) and RKLB low 68.02 (stop 66.80). Neither stop traded. The account was not exposed to an unseen stop breach.
+- Equity $408.09 (day -$12.98 vs $421.07), cash $203.79, 2 positions. The only order today is the filled OKLO sale. KTOS 41.93 (+4.3% above stop), RKLB 68.10 (+1.9% above its 66.80 stop). RKLB is the one to watch: it is about 1% from what would be my exit level (about 67.47, 1% above the stop). OKLO is now 33.82, so the 11:53 sale at 34.337 avoided a further 1.5% drop.
+- Tape: SPY 771.73 (-0.71%), QQQ 745.33 (-1.64%), SMH 602.32 (-3.6%), ITA 203.90, ARKX 31.96 (-2.0%), URA 38.21 (-4.3%). A broad AI/semis/power-infrastructure selloff.
+- MR scan (Tier B window), 33 names: ALAB (-8.9%), COHR (-8.7%), ARM (-7.9%), BE (-8.5%), TSEM (-9.7%), NBIS (-7.3%), CBRS, CRWV, AAOI (-12.8%), MXL (-11.8%), AXTI (-10.5%), the miners (HUT, RIOT, CIFR, IREN, WULF, CLSK, BTDR, GLXY), SEI, XE, OKLO, SEDG, INIO, ASTS, EQPT (-18.9%), NN (-14.3%), XNDU, FRMI, KEEL, DNN, LUMN and RVMD (-7.8%, biotech, unexplained). Almost all of these are one AI-infrastructure/power/crypto-miner theme falling together. That is a sector selloff, not a name-specific dislocation, and I could not find a dated cause for it (two searches returned only older episodes), so gate 1 fails. RVMD is the only non-theme name and has no verified cause. No entry.
+- Momentum scan: SHEL 100.18 +3.4% and APA 45.60 +4.1% (both energy, RV 1.3 and 1.05), CMG 33.02 +7.3% (RV 3.15), SSL 15.16 +6.8%. GFS has faded to flat (48.02), so that watch item is closed. The energy pair moves together with no dated catalyst I could find (the oil search returned nothing for today), so gate 2 fails; CMG has had no dated catalyst all day. No entry.
+- Day counters: trades 1, forced 0. Entries still available: cash $203.79 covers one $105 position, but no setup passes. Not forcing one.
+- The close recap is due at 15:47 ET. The 15:30 ET entry cut-off is the last chance for any entry today.
