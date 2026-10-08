@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-08 10:05 ET",
+  "as_of": "2026-10-08 10:17 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -633,6 +633,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-08 10:05 ET",
       "equity": 417.57
+    },
+    {
+      "t": "2026-10-08 10:17 ET",
+      "equity": 417.0
     }
   ],
   "positions": [
@@ -641,7 +645,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.8,
+      "price": 42.605,
       "stop": 40.2,
       "target": 47.15
     },
@@ -650,7 +654,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 70.11,
+      "price": 70.18,
       "stop": 66.8,
       "target": 78.55
     },
@@ -659,7 +663,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 35.83,
+      "price": 35.77,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1783,4 +1787,12 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY 775.48 (-0.22%), QQQ 753.80 (-0.52%), SMH 616.31 (-1.4%), ITA 203.89, ARKX 32.47, URA 39.19.
 - MR scan: RVMD (-7.1%, biotech) and RXRX (-7.5%, biotech) failed gate 1: no cause verified this cycle, so unverified. No trade.
 - Momentum scan: PLTR +3.6%, RV 1.07. Fails gate 4 (before 10:30 ET) and gate 2 (no cited catalyst). No trade.
+- No trade this cycle. Gates unchanged.
+
+### Cycle 140 (10:17 ET Oct 8, hourly news pass)
+- Equity $417.00, cash $103.72, no orders today. KTOS 42.61 (stop 40.20), RKLB 70.18 (stop 66.80), OKLO 35.77 (stop 34.05). No stop threatened.
+- Tape: SPY 775.79 (-0.18%), QQQ 754.73 (-0.40%), SMH 618.10 (-1.1%), ITA 203.62 (flat), ARKX 32.45, URA 39.25.
+- MR scan: RVMD 184.98 (-7.9%) and RXRX 3.93 (-8.0%), both biotech. Searched for causes, none found, so gate 1 fails. No trade.
+- Momentum scan (not eligible until 10:30 ET): PLTR +3.9% (RV 1.18), GFS 50.99 +6.1% (RV 1.20, SMH -1.1%, so a real divergence), CMG +5.0% (RV 1.34). Searched each: results undated or from earlier years, no catalyst cited for Oct 8. Gate 2 fails for all three. GFS stays on the watch list since the divergence is real.
+- News searches: generic market-movers query returned nothing past Oct 2. No news cited.
 - No trade this cycle. Gates unchanged.
