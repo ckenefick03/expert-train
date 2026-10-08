@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-08 11:13 ET",
+  "as_of": "2026-10-08 11:23 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -657,6 +657,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-08 11:13 ET",
       "equity": 412.82
+    },
+    {
+      "t": "2026-10-08 11:23 ET",
+      "equity": 411.4
     }
   ],
   "positions": [
@@ -665,7 +669,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.14,
+      "price": 41.97,
       "stop": 40.2,
       "target": 47.15
     },
@@ -674,7 +678,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 69.6,
+      "price": 69.26,
       "stop": 66.8,
       "target": 78.55
     },
@@ -683,7 +687,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 34.995,
+      "price": 34.8355,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1852,3 +1856,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - News pass: searches on bitcoin miners, RVMD, OKLO/uranium and CMG returned only older or undated items. Nothing was dated Oct 8, so no cause is cited. The search results gave conflicting prices for OKLO and RVMD, so I discarded them. Gate 1 stays failed for every MR name, gate 2 for every momentum name.
 - Momentum scan: GFS 50.37 +4.8% (RV 1.67) and CMG 32.76 +6.5% (RV 2.45). No dated catalyst. No trade.
 - No trade this cycle. Gates unchanged.
+
+### Cycle 146 (11:23 ET Oct 8)
+- Equity $411.40 (day -$9.67 vs $421.07), cash $103.72, no orders today. KTOS 41.97 (stop 40.20, +4.4% above), RKLB 69.26 (stop 66.80, +3.7%), OKLO 34.84 (stop 34.05, +2.3% above). No stop is near enough for a proactive exit; OKLO is the closest and is drifting down with URA (38.75, -3.0%). I will exit proactively if OKLO gets within about 1% of its stop.
+- Tape: SPY 774.48 (-0.35%), QQQ 753.99 (-0.49%), SMH 618.77 (-1.0%), ITA 202.64 (-0.5%), ARKX 32.19 (-1.3%). Slowly sagging, no flush.
+- MR scan (10 names): RVMD, AAOI (-9.3%), HUT, AXTI, RIOT, CIFR, NN (-12.3%), RXRX, plus new EQPT 16.39 (-7.3%) and CLSK 10.67 (-7.4%). The miners (HUT, RIOT, CIFR, CLSK) are a group move and AAOI/AXTI follow the AI-hardware tape. No dated cause was found for any of them (searches last cycle), so gate 1 fails for all. No trade.
+- Momentum scan: GFS 50.38 +4.8% (RV 1.73) and CMG 32.70 +6.3% (RV 2.52). No dated catalyst, gate 2 fails. No trade.
+- No trade this cycle. Gates unchanged. Tier B for mean-reversion opens at 11:30 ET.
