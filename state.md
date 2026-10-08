@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-08 15:43 ET",
+  "as_of": "2026-10-08 15:48 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -737,6 +737,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-08 15:43 ET",
       "equity": 409.64
+    },
+    {
+      "t": "2026-10-08 15:48 ET",
+      "equity": 409.4
     }
   ],
   "positions": [
@@ -745,7 +749,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.16,
+      "price": 42.09,
       "stop": 40.2,
       "target": 47.15
     },
@@ -754,7 +758,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 68.77,
+      "price": 68.725,
       "stop": 66.8,
       "target": 78.55
     }
@@ -2082,3 +2086,20 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 ### Cycle 165 — 15:43 ET (post-cutoff: stops only)
 - Equity $409.64, cash $203.79. KTOS 42.16 (stop 40.20, +4.9%). RKLB 68.77 (stop 66.80, +2.9%; 67.47 not reached). No exits, no open orders.
 - Tape: SPY 773.37 (−0.50%), QQQ 746.62 (−1.47%), SMH 604.12 (−3.3%). No entries possible after 15:30 ET, so no scans. Day trades 1, forced 0.
+
+### Cycle 166 (15:48 ET Oct 8) - CLOSE RECAP and overnight statement
+- Stop check first: KTOS 42.09 (stop 40.20, +4.7%), RKLB 68.73 (stop 66.80, +2.9%; 67.47 proactive-exit not reached). No open orders; account reconciles (equity $409.40, cash $203.79). No entries possible after 15:30 ET.
+- Tape at 15:47: SPY 773.36 (-0.50%), QQQ 746.52 (-1.48%), SMH 604.25 (-3.3%), ITA 204.79 (+0.6%), ARKX 32.08 (-1.7%).
+
+#### Day recap (Thu Oct 8)
+- **P&L:** start equity $421.07, now $409.40: **-$11.67 (-2.8%)**, inside the $100 daily loss limit. Peak equity $437.99 (Oct 2): drawdown -6.5%, breaker (-10%, $394.19) not triggered. Realized: OKLO sold 11:53 ET at 34.337 vs adopted entry 36.37, -$5.93 (-0.88R); the rest is mark-to-market on KTOS/RKLB and the day's tape.
+- **Trades:** 1 (the OKLO sale, tag: adopted/organic; exited on the written stop-proximity/relative-weakness rule before the stop traded; OKLO traded to 33.82 afterward). Entries: 0. Forced trades: 0. The minimum-1-trade rule is met by the OKLO sale; no trade was forced.
+- **What ran:** cycles 139-166, each with stop check, tape read, both preview_scan strategies and written gate checks, until the 15:30 cutoff (the last two cycles were stops-only). Hourly news passes at 10:17, 11:13, 14:14 and 15:14; searches mostly returned undated or stale items, so no news was cited and news-dependent gates stayed FAIL.
+- **Why no entries:** all mean-reversion candidates (AI hardware/optical/miners/power/space/biotech, 20-33 names) were group-theme selloffs with no verified name-specific cause (gate 1). All momentum candidates (energy and refiners, restaurants, IT services/software, COCO, GFS, CBOE, ERAS, etc.) lacked a dated catalyst (gate 2). Gates were not loosened.
+- **Missed cycles:** the usage-limit gap 12:13-13:23 ET (cycles for ~12:13, 12:22, 12:32, 12:42, 12:52, 13:02, 13:12 were not run live); disclosed in cycle 151. A 5-minute-bar check confirmed no stop traded in the gap (KTOS low 41.71, RKLB low 68.02).
+- **Skipped-candidate follow-ups for tomorrow:** GFS (relative strength vs SMH, RV 2.7, no dated catalyst; needs catalyst + held higher low), COCO (+11%, no catalyst), CMG (RV ~4, no catalyst), energy/refiners (MPC, VLO, SM, tankers: sector move, find the dated driver). Still open: re-price the older 10/01 skip list (RIOT, CLSK, CIFR, HUT, MARA, NWG, HSBC, GIS, CAG, LVS, ACN, COHR); confirm PDT/day-trade applicability for limited_margin (unverified).
+
+#### Overnight hold statement
+- **KTOS** (2.437677 sh, entry 42.53, stop 40.20, target 47.15, now 42.09, -1.0% vs entry): HOLD. It has held flat vs the prior close (+0.4%) while ITA is +0.6% and the market is down, i.e. no break in price structure or peer relationship, and no invalidation or stop hit. Caveat: adopted position, so "thesis intact" means no invalidation, not a freshly verified catalyst.
+- **RKLB** (1.49887 sh, entry 70.72, stop 66.80, target 78.55, now 68.73, -2.8% vs entry): HOLD, but the weaker of the two. It is -4.4% on the day vs ARKX -1.7%, lagging its group by about 2.7 points, close to the written exit trigger (lag vs sector widening past 3 points, or a new low on volume). It is 2.9% above the stop and 1.9% above my 67.47 proactive-exit level. I am holding per the standing instruction and because no trigger fired, not because the thesis has strengthened. First action at pre-open: if RKLB is indicated at or below 67.47, sell at the open.
+- **Overnight risk, stated plainly:** fractional shares cannot hold resting stops, so a gap below a stop is only handled at the open, at market. Exposure is $205.61 of $409.40 (50%), cash $203.79. First check is the pre-open brief (08:27 ET), then the first full cycle after 10:00 ET.
