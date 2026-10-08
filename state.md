@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-07 15:48 ET",
+  "as_of": "2026-10-08 08:30 ET (pre-market)",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Close of Oct 7: equity $421.66 (-$13.47, -3.1% on the day; 3.7% below the $437.99 peak, breaker at 10%). Zero trades; no setup passed all gates. KTOS, RKLB, OKLO roll overnight, all above stops. Fractional shares carry no resting stops, so overnight gaps are unprotected.",
+  "status_note": "Pre-open Oct 8: index ETFs indicated lower (SPY -0.3%, QQQ -0.5%, SMH -1.4% on thin pre-market quotes). Holdings RKLB 70.35 / OKLO 36.14 / KTOS 42.07 are all above stops. Read-only cycle, no entries before 10:00 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-07",
@@ -613,6 +613,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "15:48",
       "equity": 421.66
+    },
+    {
+      "t": "2026-10-07 close (official prints)",
+      "equity": 421.07
+    },
+    {
+      "t": "2026-10-08 08:30 ET pre-mkt",
+      "equity": 417.05
     }
   ],
   "positions": [
@@ -630,7 +638,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 72.415,
+      "price": 70.35,
       "stop": 66.8,
       "target": 78.55
     },
@@ -639,7 +647,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 36.66,
+      "price": 36.14,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1734,3 +1742,15 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
   - OKLO: 36.66 vs entry 36.37 (+0.8%), stop 34.05. Holds: tracking URA, 7.1% above stop.
   - I cannot verify the original catalysts for these tonight, so "thesis intact" here means: no break in price structure or peer relationship, and no stop hit. Fractional shares cannot hold resting stops, so a gap below a stop overnight would only be handled at the open, at market. That risk is accepted, not hedged.
 - **Open items:** re-price the older 10/01 skip list (RIOT, CLSK, CIFR, HUT, MARA, NWG, HSBC, GIS, CAG, LVS, ACN, COHR); confirm PDT/day-trade applicability for limited_margin (still unverified); pre-open routine runs tomorrow.
+
+### Pre-open brief 2026-10-08 08:30 ET (read-only, no orders)
+- **Correction to the Oct 7 recap:** the official Oct 7 closes are KTOS 41.94, RKLB 71.92, OKLO 36.82, SPY 777.22, QQQ 757.73, SMH 625.03. Marked at those, closing equity was $421.07 (day -$14.06, -3.2% from $435.13), not the $421.66 I logged from 15:48 prints. Also: the 15:52 ET cycle on Oct 7 was received but never run or logged (session gap after the recap), so the last logged activity of the day is the 15:48 recap. Entries were closed after 15:30 anyway, and there were still no orders (get_equity_orders empty).
+- **Reconcile / stop check (thin pre-market quotes, wide spreads):** equity $417.05, cash $103.72, no open orders. KTOS 42.07 (stop 40.20, 4.4% above), RKLB 70.35 (-2.2% vs close; entry 70.72, stop 66.80, 5.0% above), OKLO 36.14 (-1.8% vs close; stop 34.05, 5.8% above). No stop is near; nothing to do. Fractional positions have no resting stops, so a gap would be handled at the open at market.
+- **Tape (pre-market, thin):** SPY 774.59 (-0.33%), QQQ 753.54 (-0.55%), SMH 616.00 (-1.4%), IWM 275.72 (-0.7%), XBI 149.74 (-0.3%), ITA 203.02 (-0.3%, last trade 07:37), ARKX 32.45 (-0.5%, wide spread), URA 39.30 (-1.6%). Risk-off tilt again led by semis. Held names are moving with their peers (RKLB/OKLO a bit weaker than ARKX/URA, within noise for a pre-market print).
+- **News / politics:** the three searches (overnight futures, RKLB pre-market, Fed/data calendar) returned nothing dated October 8, 2026; results were old or low-quality, so I cite no news for today's tape and treat any news-dependent gate as FAIL until a dated source appears. The only dated context found: an Oct 6 market report saying the 10-year yield hit 5.34% on Monday and then eased, and that earnings season is starting. Jobless claims normally print at 8:30 ET on Thursdays, but I could not confirm the schedule or any reading. No Fed speaker schedule confirmed.
+- **Earnings calendar (high market cap, next 2 days):** PEP (reported this morning, EPS 2.34 vs 2.29 est), NG (reported), ODC (after close today), SVNDY (reported), DAL (tomorrow). None are held or on the watch lists.
+- **Scanner caveat:** preview_scan scores against the prior regular session, not pre-market, so the lists below are yesterday's movers, not tonight's gaps. Mean-reversion scan (<= -5%): 0 names pre-open. Momentum scan (>= +4%): EFX +4.5%, GFS +4.1%, SSL +4.5% (all yesterday's changes).
+- **Mean-reversion watch (all still FAIL gate 1 until a dated, sourced external cause appears; none tradable before 10:00 ET):** (1) HESM -14% on Oct 7, cause unverified; look for a dated filing or release. (2) BULL -19%, cause unverified. (3) QXO -7%, dilution stories undated. (4) CGNX -7%, no cause found. (5) SKYD -8%, no cause found.
+- **Momentum watch (earliest 10:30 ET; each needs a dated catalyst for gate 2 and a held pullback for gate 3):** (1) MU, memory-pricing theme, volume 1.2x, sector driver but no dated news. (2) SNDK, same theme, faded below +3% by 15:00. (3) BKV, 4.4x relative volume but no dated news. (4) GFS, +4.1% yesterday while SMH was -1.2%: a relative-strength divergence worth checking for a dated reason. (5) BRZE/KVYO move as a group, so likely a sector move, low priority.
+- **Held-name risks today:** semis weak pre-market, 10-year yield near cycle highs (rate-sensitive growth names), thin pre-market liquidity. No company-specific catalyst found for KTOS, RKLB or OKLO today.
+- **Open items:** re-price the 10/01 skip list (RIOT, CLSK, CIFR, HUT, MARA, NWG, HSBC, GIS, CAG, LVS, ACN, COHR); confirm PDT/day-trade applicability for limited_margin (unverified). Next: 10:02 ET cycle (first one allowed to enter).
