@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-08 11:33 ET",
+  "as_of": "2026-10-08 11:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -665,6 +665,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-08 11:33 ET",
       "equity": 410.44
+    },
+    {
+      "t": "2026-10-08 11:43 ET",
+      "equity": 409.01
     }
   ],
   "positions": [
@@ -682,7 +686,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 69.26,
+      "price": 68.64,
       "stop": 66.8,
       "target": 78.55
     },
@@ -691,7 +695,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 34.588,
+      "price": 34.44,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1874,3 +1878,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - MR scan (11 names, Tier B window open): RVMD (-9.3%), AAOI (-9.7%), HUT, AXTI, RIOT, EQPT, CIFR, WULF (new, 13.38, -7.1%), NN (-13.1%), CLSK, RXRX (-9.8%). WULF joins the bitcoin-miner/AI-datacenter group (HUT, RIOT, CIFR, CLSK, WULF), so that is a group move. No dated cause was found for any name, so gate 1 fails for all. No trade.
 - Momentum scan: GFS 50.30 +4.6% (RV 1.77) and CMG 32.93 +7.0% (RV 2.60). No dated catalyst, gate 2 fails. No trade.
 - No trade this cycle. Gates unchanged.
+
+### Cycle 148 (11:43 ET Oct 8)
+- Equity $409.01 (day -$12.06 vs $421.07; $100 limit not close), cash $103.72, no orders today. KTOS 41.88 (stop 40.20, +4.2%), RKLB 68.64 (stop 66.80, +2.8% above, fell from 69.26), OKLO 34.44 (stop 34.05, +1.1% above). No stop has traded.
+- OKLO stop check: it is 0.04 above the 34.40 exit level I set last cycle (bid 34.43), so the rule is not triggered. It has fallen 35.00, 34.84, 34.59, 34.44 over four cycles. I am holding by that written rule rather than moving the level to suit the price. If the next read is at or below 34.40, or the stop trades, I sell the whole OKLO position at market immediately. Both RKLB and KTOS are comfortably above their stops.
+- Tape: SPY 774.48 (-0.35%), QQQ 753.23 (-0.59%), SMH 617.46 (-1.2%), ITA 202.74, ARKX 32.10 (-1.6%), URA 38.61 (-3.3%). Slow grind down, no flush.
+- MR scan (13 names, Tier B): RVMD (-9.4%), AAOI (-9.3%), MXL 99.72 (-7.1%, new, semis), HUT, AXTI, RIOT, EQPT, CIFR, WULF, NN (-11.9%), CLSK, XNDU 4.17 (-7.2%, new, quantum), FRMI 3.69 (-7.2%, new, power/data-center). Most are the AI-hardware or miner/data-center groups, which are group moves. No dated cause for any, so gate 1 fails for all. Also, the pile-up of AI-infrastructure names falling together reads as a theme selloff, not a name-specific dislocation. No trade.
+- Momentum scan: GFS 50.24 +4.5% (RV 1.82) and CMG 32.89 +6.9% (RV 2.67). No dated catalyst, gate 2 fails. No trade.
+- No trade this cycle. Gates unchanged. The next hourly news pass is 12:12 ET.
