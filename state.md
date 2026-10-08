@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-08 11:23 ET",
+  "as_of": "2026-10-08 11:33 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -661,6 +661,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-08 11:23 ET",
       "equity": 411.4
+    },
+    {
+      "t": "2026-10-08 11:33 ET",
+      "equity": 410.44
     }
   ],
   "positions": [
@@ -669,7 +673,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.97,
+      "price": 41.88,
       "stop": 40.2,
       "target": 47.15
     },
@@ -687,7 +691,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.914497,
       "entry": 36.37,
-      "price": 34.8355,
+      "price": 34.588,
       "stop": 34.05,
       "target": 41.0
     }
@@ -1863,3 +1867,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - MR scan (10 names): RVMD, AAOI (-9.3%), HUT, AXTI, RIOT, CIFR, NN (-12.3%), RXRX, plus new EQPT 16.39 (-7.3%) and CLSK 10.67 (-7.4%). The miners (HUT, RIOT, CIFR, CLSK) are a group move and AAOI/AXTI follow the AI-hardware tape. No dated cause was found for any of them (searches last cycle), so gate 1 fails for all. No trade.
 - Momentum scan: GFS 50.38 +4.8% (RV 1.73) and CMG 32.70 +6.3% (RV 2.52). No dated catalyst, gate 2 fails. No trade.
 - No trade this cycle. Gates unchanged. Tier B for mean-reversion opens at 11:30 ET.
+
+### Cycle 147 (11:33 ET Oct 8)
+- Equity $410.44 (day -$10.63 vs $421.07), cash $103.72, no orders today. KTOS 41.88 (stop 40.20, +4.2% above), RKLB 69.26 (stop 66.80, +3.7%), OKLO 34.59 (stop 34.05, +1.6% above). OKLO is the one to watch: it fell from 35.00 to 34.59 in 20 minutes with URA (38.62, -3.3%). No stop has traded. Proactive-exit rule for OKLO (an adopted holding, not covered by the 30-minute hold rule): sell at market if it reaches about 34.40 (1% above the stop) or the stop itself trades. Stops cannot rest on fractional shares, so this check is manual every cycle.
+- Tape: SPY 774.55 (-0.34%), QQQ 753.83 (-0.52%), SMH 618.50 (-1.0%), ITA 202.65, ARKX 32.18 (-1.3%). Stable, mildly red.
+- MR scan (11 names, Tier B window open): RVMD (-9.3%), AAOI (-9.7%), HUT, AXTI, RIOT, EQPT, CIFR, WULF (new, 13.38, -7.1%), NN (-13.1%), CLSK, RXRX (-9.8%). WULF joins the bitcoin-miner/AI-datacenter group (HUT, RIOT, CIFR, CLSK, WULF), so that is a group move. No dated cause was found for any name, so gate 1 fails for all. No trade.
+- Momentum scan: GFS 50.30 +4.6% (RV 1.77) and CMG 32.93 +7.0% (RV 2.60). No dated catalyst, gate 2 fails. No trade.
+- No trade this cycle. Gates unchanged.
