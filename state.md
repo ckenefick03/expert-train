@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-08 11:53 ET",
+  "as_of": "2026-10-08 12:03 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Oct 8, 11:53 ET: equity $409.11 (-$11.96 vs the $421.07 close). Sold OKLO at 34.337 (-$5.93, -0.88R) on my pre-set exit level, ahead of the 34.05 stop. Holding KTOS and RKLB; cash $203.79. SPY -0.35%, QQQ -0.59%, SMH -1.2%.",
+  "status_note": "Oct 8, 12:03 ET: equity $409.05 (-$12.02 vs the $421.07 close). Holding KTOS 42.02 (stop 40.20) and RKLB 68.61 (stop 66.80); cash $203.79. OKLO was sold at 34.337 at 11:53. SPY -0.37%, QQQ -0.69%, SMH -1.4%. No entry has passed all gates.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-08",
@@ -673,6 +673,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-08 11:53 ET",
       "equity": 409.11
+    },
+    {
+      "t": "2026-10-08 12:03 ET",
+      "equity": 409.05
     }
   ],
   "positions": [
@@ -681,7 +685,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.93,
+      "price": 42.015,
       "stop": 40.2,
       "target": 47.15
     },
@@ -690,7 +694,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 68.795,
+      "price": 68.61,
       "stop": 66.8,
       "target": 78.55
     }
@@ -1903,3 +1907,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - MR scan (11 names): RVMD (-9.7%), AAOI, MXL, HUT, AXTI, RIOT, EQPT, CIFR, NN (-12.7%), RXRX, FRMI. These are mostly the AI-hardware and miner/data-center groups moving together, with biotechs RVMD/RXRX unexplained. No dated cause for any, so gate 1 fails for all. No entry.
 - Momentum scan: GFS 50.12 +4.3% (RV 1.85) and CMG 32.60 +5.9% (RV 2.73). No dated catalyst, gate 2 fails. No entry.
 - Gates unchanged. The next hourly news pass is 12:12 ET.
+
+### Cycle 150 (12:03 ET Oct 8)
+- Equity $409.05 (day -$12.02 vs $421.07), cash $203.79, 2 positions. Reconciled: the only order today is the filled OKLO sale (6ac7bc68, 34.337); no open orders. KTOS 42.02 (stop 40.20, +4.5% above), RKLB 68.61 (stop 66.80, +2.7% above). No stop is near. OKLO trades at 34.31 after my sale, in line with the 34.337 fill; the exit neither helped nor hurt since.
+- Tape: SPY 774.31 (-0.37%), QQQ 752.53 (-0.69%), SMH 616.12 (-1.4%), ITA 203.26, ARKX 32.15 (-1.5%), URA 38.51 (-3.6%).
+- MR scan (11 names): RVMD (-9.0%), AAOI (-9.0%), HUT (-9.2%), AXTI, RIOT (-9.4%), EQPT, CIFR, NN (-13.3%), CLSK, XNDU, FRMI. Same set as last cycle: the AI-hardware names, the miners, the power/data-center names and two unexplained biotechs. No dated cause for any name. Gate 1 fails for all, no entry.
+- Momentum scan: GFS 50.03 +4.1% (RV 1.89) and CMG 32.70 +6.3% (RV 2.77). No dated catalyst, gate 2 fails. GFS's lead over SMH (-1.4%) persists, but that alone is not a catalyst. No entry.
+- No entry this cycle. Gates unchanged. The hourly news pass is next, at 12:12 ET.
