@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-08 11:43 ET",
+  "as_of": "2026-10-08 11:53 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,12 +41,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Oct 8, 09:53 ET: equity $416.56 (-$4.51 vs the $421.07 close). SPY -0.2%, QQQ -0.55%, SMH -1.7%. RKLB 69.82 (4.3% above stop), OKLO 35.92 (5.5% above), KTOS 42.46 (5.6% above). Entry window opens at 10:00 ET.",
+  "status_note": "Oct 8, 11:53 ET: equity $409.11 (-$11.96 vs the $421.07 close). Sold OKLO at 34.337 (-$5.93, -0.88R) on my pre-set exit level, ahead of the 34.05 stop. Holding KTOS and RKLB; cash $203.79. SPY -0.35%, QQQ -0.59%, SMH -1.2%.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-08",
     "start_equity": 421.07,
-    "trades": 0,
+    "trades": 1,
     "forced": 0
   },
   "equity_history": [
@@ -669,6 +669,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-08 11:43 ET",
       "equity": 409.01
+    },
+    {
+      "t": "2026-10-08 11:53 ET",
+      "equity": 409.11
     }
   ],
   "positions": [
@@ -677,7 +681,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.88,
+      "price": 41.93,
       "stop": 40.2,
       "target": 47.15
     },
@@ -686,18 +690,9 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 68.64,
+      "price": 68.795,
       "stop": 66.8,
       "target": 78.55
-    },
-    {
-      "symbol": "OKLO",
-      "strategy": "adopted",
-      "qty": 2.914497,
-      "entry": 36.37,
-      "price": 34.44,
-      "stop": 34.05,
-      "target": 41.0
     }
   ],
   "trades": [
@@ -712,6 +707,18 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "score": 72,
       "tag": "organic",
       "date": "2026-10-05"
+    },
+    {
+      "symbol": "OKLO",
+      "strategy": "adopted",
+      "tier": "-",
+      "entry": 36.37,
+      "exit": 34.337,
+      "pnl": -5.93,
+      "r": -0.88,
+      "score": 62,
+      "tag": "organic",
+      "date": "2026-10-08"
     }
   ],
   "regime": {
@@ -1886,3 +1893,13 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - MR scan (13 names, Tier B): RVMD (-9.4%), AAOI (-9.3%), MXL 99.72 (-7.1%, new, semis), HUT, AXTI, RIOT, EQPT, CIFR, WULF, NN (-11.9%), CLSK, XNDU 4.17 (-7.2%, new, quantum), FRMI 3.69 (-7.2%, new, power/data-center). Most are the AI-hardware or miner/data-center groups, which are group moves. No dated cause for any, so gate 1 fails for all. Also, the pile-up of AI-infrastructure names falling together reads as a theme selloff, not a name-specific dislocation. No trade.
 - Momentum scan: GFS 50.24 +4.5% (RV 1.82) and CMG 32.89 +6.9% (RV 2.67). No dated catalyst, gate 2 fails. No trade.
 - No trade this cycle. Gates unchanged. The next hourly news pass is 12:12 ET.
+
+### Cycle 149 (11:53 ET Oct 8) - SOLD OKLO
+- **Trade: SELL OKLO 2.914497 sh at market, filled 34.337 (order 6ac7bc68, filled in one second, no fees).** This is the proactive-exit rule I wrote in cycle 147 and held to in cycle 148: sell if OKLO reads at or below 34.40. The read this cycle was 34.365 (bid 34.36) and the quote at review was 34.34. OKLO is an adopted holding (not covered by the 30-minute hold rule). The order tool's confirmation request does not apply (framework §0 and the standing instruction that I trade without per-trade confirmation).
+- Result: entry 36.37, exit 34.337, P&L about -$5.93 (-0.88R against the 34.05 stop, which would have been -$6.76). Exited above the stop by 0.29/share, about +$0.84 versus waiting for the stop. Organic exit, rule-based. Score 62: setup n/a (adopted holding), execution 30/35 (clean market fill, exit slightly early versus the written stop), outcome 10/25 (a loss, but contained). URA is down 3.4% on the day, so the uranium/nuclear group was weak, not just OKLO.
+- Account after the sale: equity $409.11 (day -$11.96), cash $203.79 (buying power $203.79), 2 positions: KTOS 41.93 (stop 40.20, +4.1%), RKLB 68.80 (stop 66.80, +3.0%). Day counters: trades 1 (this sale counted per the Oct 5 TER precedent), forced 0.
+- Cash is now $203.79, which covers one full $105 entry and nearly two. Max positions is 5 and I hold 2, so room exists, but gates still decide.
+- Tape: SPY 774.46 (-0.36%), QQQ 753.25 (-0.59%), SMH 617.37 (-1.2%), ITA 202.88, ARKX 32.17, URA 38.59 (-3.4%).
+- MR scan (11 names): RVMD (-9.7%), AAOI, MXL, HUT, AXTI, RIOT, EQPT, CIFR, NN (-12.7%), RXRX, FRMI. These are mostly the AI-hardware and miner/data-center groups moving together, with biotechs RVMD/RXRX unexplained. No dated cause for any, so gate 1 fails for all. No entry.
+- Momentum scan: GFS 50.12 +4.3% (RV 1.85) and CMG 32.60 +5.9% (RV 2.73). No dated catalyst, gate 2 fails. No entry.
+- Gates unchanged. The next hourly news pass is 12:12 ET.
