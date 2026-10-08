@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-08 15:03 ET",
+  "as_of": "2026-10-08 15:14 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -721,6 +721,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-08 15:03 ET",
       "equity": 408.21
+    },
+    {
+      "t": "2026-10-08 15:14 ET",
+      "equity": 407.76
     }
   ],
   "positions": [
@@ -729,7 +733,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.925,
+      "price": 41.88,
       "stop": 40.2,
       "target": 47.15
     },
@@ -738,7 +742,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 68.2,
+      "price": 67.94,
       "stop": 66.8,
       "target": 78.55
     }
@@ -2040,3 +2044,12 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - MR scan: 26 names; same theme set, new: VSAT (space/satellite, with ASTS). Gate 1 fails: no verified external, name-specific cause. No entry.
 - Momentum scan: 18 names; new: TEAM (+3.1%), DAR (+3.4%). IT-services/software cluster (ACN, CTSH, TEAM) plus restaurants and energy are group moves; no dated catalyst on any name (COCO +10.5% RV 1.1, ERAS, GFS, CBOE, Z, RBA, MO included). Gate 2 fails. No entry.
 - 27 minutes to the 15:30 entry cut-off. No trade; not forcing. Day trades 1, forced 0.
+
+### Cycle 162 — 15:14 ET (hourly pass, with news search)
+- Equity $407.76, cash $203.79. KTOS 41.88 (stop 40.20, +4.2%). RKLB 67.94 (stop 66.80, +1.7%; proactive-exit 67.47 is 0.7% below — not reached, watching). No exits.
+- Tape: SPY 772.94 (−0.55%), QQQ 745.93 (−1.56%), SMH 603.31 (−3.5%), URA 38.19, ARKX 31.99, ITA 204.71 (+0.5%). Chips slightly weaker into the last hour.
+- News: two searches (Oct 8 market close / chip selloff cause; COCO catalyst) returned only May–July 2026 or undated items. No dated cause found for either, so nothing cited; group-move status for the AI-hardware complex stands, COCO's +10% has no verified catalyst.
+- MR scan: 27 names, same theme set plus GLW (optical fiber, with COHR/AAOI/TTMI) and VSAT/ASTS (satellites). Gate 1 fails: no verified external, name-specific cause. No entry.
+- Momentum scan: 20 names. GFS now +2.1% on the quote vs prior close (dropped off the scan's 3% threshold earlier, in and out all day) — no catalyst, no held higher low. COCO +10.3% RV 1.1, no catalyst. New: CCEP, TRMD, ONON (+3.0–3.1%, thin). Staples/beverage (CCEP, COCO), software/IT services (ACN, CTSH), restaurants, energy/tankers are group moves. Gate 2 fails. No entry.
+- Skipped-candidate follow-ups: GFS, COCO, CMG stay unqualified (no dated catalyst all day); none enters.
+- 16 minutes to the entry cut-off. No trade; not forcing. Day trades 1, forced 0.
