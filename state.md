@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-08 13:53 ET",
+  "as_of": "2026-10-08 14:03 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -693,6 +693,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-08 13:53 ET",
       "equity": 407.75
+    },
+    {
+      "t": "2026-10-08 14:03 ET",
+      "equity": 408.24
     }
   ],
   "positions": [
@@ -710,7 +714,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 67.93,
+      "price": 68.26,
       "stop": 66.8,
       "target": 78.55
     }
@@ -1961,3 +1965,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - MR scan: 32 names, same AI-hardware/miner/power theme selloffs; new: CBRS, GLXY, ABCL, RXRX, SEI (biotech/AI-adjacent, no dated name-specific cause). Gate 1 fails across the board. No entry.
 - Momentum scan: 8 names — CBOE, SHEL, FRO, BP, APA, CMG, SSL, plus MMED (+3.2%, no catalyst found). Energy cluster is a group move; CMG/CBOE/MMED have no dated catalyst. Gate 2 fails. No entry.
 - No trade; not forcing. Day trades 1, forced 0.
+
+### Cycle 155 — 14:03 ET
+- Equity $408.24, cash $203.79. KTOS 41.90 (stop 40.20, +4.2%). RKLB 68.26 (stop 66.80, +2.2%; proactive-exit 67.47 not reached). No exits.
+- Tape: SPY 771.95 (−0.68%), QQQ 745.64 (−1.60%), SMH 604.61 (−3.3%), URA 38.19, ARKX 32.00, ITA 204.63 (+0.5%). Steady.
+- MR scan: 23 names (down from 32), same AI-hardware/miner/power theme selloffs. Gate 1 fails: group moves, no dated name-specific cause. No entry.
+- Momentum scan: 9 names — CBOE, CDW (+3.1%), SHEL, FRO, BP, APA, CMG, ERAS (+7.6%, biotech), SSL. New: CDW, ERAS; no dated catalyst found for either. Energy cluster is a group move. Gate 2 fails. No entry.
+- No trade; not forcing. Day trades 1, forced 0. Tier B window closes 14:30 ET, then Tier C to 15:30.
