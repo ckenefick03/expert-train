@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-08 14:43 ET",
+  "as_of": "2026-10-08 14:53 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -713,6 +713,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-08 14:43 ET",
       "equity": 408.73
+    },
+    {
+      "t": "2026-10-08 14:53 ET",
+      "equity": 408.38
     }
   ],
   "positions": [
@@ -721,7 +725,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.105,
+      "price": 41.995,
       "stop": 40.2,
       "target": 47.15
     },
@@ -730,7 +734,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 68.235,
+      "price": 68.2,
       "stop": 66.8,
       "target": 78.55
     }
@@ -2018,3 +2022,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - MR scan: 24 names, same AI-hardware/optical/miner/power/biotech theme set; new: TTMI (PCB maker, AI-hardware theme). Gate 1 fails: no verified external, name-specific cause. No entry.
 - Momentum scan: 16 names; new: ACN (+3.1%, RV 1.0), MO (+3.2%), RBA (+3.4%, RV 1.7), Z (+5.5%) — none with a dated catalyst found; ACN/MO/RBA/Z moves are small with RV near 1. Restaurants and energy are group moves; GFS/CBOE/COCO/ERAS no dated catalyst. Gate 2 fails. No entry.
 - No trade; not forcing. Day trades 1, forced 0. Tier C window runs to 15:30 ET.
+
+### Cycle 160 — 14:53 ET
+- Equity $408.38, cash $203.79. KTOS 42.00 (stop 40.20, +4.5%). RKLB 68.20 (stop 66.80, +2.1%; proactive-exit 67.47 not reached). No exits.
+- Tape: SPY 772.91 (−0.55%), QQQ 746.70 (−1.45%), SMH 605.05 (−3.2%), URA 38.24, ARKX 32.03, ITA 204.97 (+0.7%). Flat.
+- MR scan: 27 names (up from 24); same AI-hardware/optical/miner/power/biotech theme set; new: LU (sub-$1 ADR). Gate 1 fails: no verified external, name-specific cause. No entry.
+- Momentum scan: 16 names; new: CTSH (+3.2%) — joins ACN (+3.4%) in an IT-services group move, no dated catalyst found. Restaurants/energy are group moves; GFS, CBOE, COCO, ERAS, Z, RBA, MO no dated catalyst. Gate 2 fails. No entry.
+- No trade; not forcing. Day trades 1, forced 0. Tier C closes 15:30 ET; close recap at 15:47.
