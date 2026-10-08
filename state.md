@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-08 13:43 ET",
+  "as_of": "2026-10-08 13:53 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -689,6 +689,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-08 13:43 ET",
       "equity": 408.26
+    },
+    {
+      "t": "2026-10-08 13:53 ET",
+      "equity": 407.75
     }
   ],
   "positions": [
@@ -697,7 +701,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.94,
+      "price": 41.9,
       "stop": 40.2,
       "target": 47.15
     },
@@ -706,7 +710,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 68.175,
+      "price": 67.93,
       "stop": 66.8,
       "target": 78.55
     }
@@ -1949,4 +1953,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY 772.55 (−0.60%), QQQ 746.37 (−1.50%), SMH 605.66 (−3.1%), URA 38.19, ARKX 32.03, ITA 204.61 (+0.5%). Flat vs last cycle.
 - MR scan: 27 names, same AI-hardware/miner/power theme selloffs (plus CRWV, ASTS back on the list). Gate 1 fails: group moves, no dated name-specific cause. No entry.
 - Momentum scan: 7 names — CBOE, SHEL, FRO, BP, APA, CMG, SSL. BP is new; the energy/tanker cluster is a group move. CMG and CBOE have no dated catalyst. Gate 2 fails. No entry.
+- No trade; not forcing. Day trades 1, forced 0.
+
+### Cycle 154 — 13:53 ET
+- Equity $407.75, cash $203.79. KTOS 41.90 (stop 40.20, +4.2%). RKLB 67.93 (stop 66.80, +1.7%; proactive-exit 67.47 is 0.7% below — not reached, watching closely). No exits.
+- Tape: SPY 771.50 (−0.74%), QQQ 745.19 (−1.65%), SMH 604.29 (−3.3%), URA 38.11, ARKX 31.97, ITA 204.54. Drifting slightly lower.
+- MR scan: 32 names, same AI-hardware/miner/power theme selloffs; new: CBRS, GLXY, ABCL, RXRX, SEI (biotech/AI-adjacent, no dated name-specific cause). Gate 1 fails across the board. No entry.
+- Momentum scan: 8 names — CBOE, SHEL, FRO, BP, APA, CMG, SSL, plus MMED (+3.2%, no catalyst found). Energy cluster is a group move; CMG/CBOE/MMED have no dated catalyst. Gate 2 fails. No entry.
 - No trade; not forcing. Day trades 1, forced 0.
