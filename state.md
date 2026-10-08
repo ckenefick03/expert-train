@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-08 14:33 ET",
+  "as_of": "2026-10-08 14:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -709,6 +709,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-08 14:33 ET",
       "equity": 408.93
+    },
+    {
+      "t": "2026-10-08 14:43 ET",
+      "equity": 408.73
     }
   ],
   "positions": [
@@ -717,7 +721,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.0,
+      "price": 42.105,
       "stop": 40.2,
       "target": 47.15
     },
@@ -726,7 +730,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 68.555,
+      "price": 68.235,
       "stop": 66.8,
       "target": 78.55
     }
@@ -2007,3 +2011,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - MR scan: 20 names, same AI-hardware/optical/miner/power/biotech set. Gate 1 fails: no verified external, name-specific cause. No entry.
 - Momentum scan: 14 names; new: COCO (+9.3%, RV 1.0, no dated catalyst found). Others unchanged (restaurants, energy/tanker group moves; GFS +3.5% RV 2.7 with no dated catalyst; CBOE, CDW, ERAS). Gate 2 fails across the board. No entry.
 - No news searches this cycle (not the hourly pass; no candidate otherwise passing). No trade; not forcing. Day trades 1, forced 0.
+
+### Cycle 159 — 14:43 ET
+- Equity $408.73, cash $203.79. KTOS 42.11 (stop 40.20, +4.7%). RKLB 68.24 (stop 66.80, +2.2%; proactive-exit 67.47 not reached). No exits.
+- Tape: SPY 772.69 (−0.58%), QQQ 746.49 (−1.48%), SMH 605.05 (−3.2%), URA 38.23, ARKX 32.06, ITA 204.95 (+0.7%). Flat.
+- MR scan: 24 names, same AI-hardware/optical/miner/power/biotech theme set; new: TTMI (PCB maker, AI-hardware theme). Gate 1 fails: no verified external, name-specific cause. No entry.
+- Momentum scan: 16 names; new: ACN (+3.1%, RV 1.0), MO (+3.2%), RBA (+3.4%, RV 1.7), Z (+5.5%) — none with a dated catalyst found; ACN/MO/RBA/Z moves are small with RV near 1. Restaurants and energy are group moves; GFS/CBOE/COCO/ERAS no dated catalyst. Gate 2 fails. No entry.
+- No trade; not forcing. Day trades 1, forced 0. Tier C window runs to 15:30 ET.
