@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-09 15:03 ET",
+  "as_of": "2026-10-09 15:14 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -857,6 +857,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-09 15:03 ET",
       "equity": 407.48
+    },
+    {
+      "t": "2026-10-09 15:14 ET",
+      "equity": 407.41
     }
   ],
   "positions": [
@@ -865,7 +869,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.24,
+      "price": 42.26,
       "stop": 40.2,
       "target": 47.15
     },
@@ -874,7 +878,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "momentum",
       "qty": 2.529517,
       "entry": 41.51,
-      "price": 41.3,
+      "price": 41.25,
       "stop": 40.1,
       "target": 44.33
     }
@@ -2438,4 +2442,13 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - MR scan (4): TMUS, ASTS, VZ, T. LUMN dropped off. Carriers still near lows on heavy volume (T 118M, ~3x avg), no base: gate 4 fail. ASTS gate 1 fail.
 - Momentum scan (23): no new names. All previously evaluated; none passes all gates.
 - Tier C window closes 15:30 ET; no forced trades.
+- No entries, no orders. Day trades 2, forced 0.
+
+### Cycle 195 — 15:14 ET (hourly pass, news search)
+- Account $407.41 (day -$1.12), cash $200.04, 2/5 positions. TEVA 41.25 (stop 40.10, target 44.33), KTOS 42.26 (stop 40.20 / proactive exit ~40.60). Both clear. TEVA has drifted from 41.73 (13:54) to 41.25 on 2x volume; thesis (FDA WELTRUZA approval) unchanged, no contrary news found.
+- Tape: SPY 779.01 (+0.65%), QQQ 751.45, SMH 603.84 (-0.6%), ITA 206.63, XLV 170.75.
+- News: Teva search returned nothing dated today (latest items July-Aug 2026, next earnings ~Oct 28 unconfirmed); HPQ search returned only older items (Jan/Feb 2026 drops). Nothing cited as today's.
+- MR scan (5): TMUS, ASTS, VZ, T, plus new HPQ -7.1% ($30.15). HPQ 5-min bars: gapped down at the open (31.91 to 30.8 in 15 min) and has ground lower all session to 30.15, no base, new lows on each leg; no verified cause. Gate 1 fail (unverified), gate 4 fail (still making lows). Carriers still near lows on heavy volume (T 119M, ~3x avg): gate 4 fail.
+- Momentum scan (23): no new names. All previously evaluated; none passes all gates.
+- Tier C closes 15:30 ET; no forced trades.
 - No entries, no orders. Day trades 2, forced 0.
