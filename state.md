@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-09 14:13 ET",
+  "as_of": "2026-10-09 14:23 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -837,6 +837,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-09 14:13 ET",
       "equity": 408.49
+    },
+    {
+      "t": "2026-10-09 14:23 ET",
+      "equity": 408.5
     }
   ],
   "positions": [
@@ -845,7 +849,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.38,
+      "price": 42.3,
       "stop": 40.2,
       "target": 47.15
     },
@@ -854,7 +858,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "momentum",
       "qty": 2.529517,
       "entry": 41.51,
-      "price": 41.56,
+      "price": 41.65,
       "stop": 40.1,
       "target": 44.33
     }
@@ -2382,4 +2386,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - MR scan (4): TMUS, ASTS, VZ, T. Carriers still near lows on heavy volume (T 108M shares, ~3x average), no base: gate 4 fail. ASTS gate 1 fail.
 - Momentum scan (19): HNGE re-appeared (+3.4%, still no catalyst). Everything else previously evaluated; none passes all gates.
 - Tier B closes 14:30 ET, Tier C then to 15:30; no forced trades.
+- No entries, no orders. Day trades 2, forced 0.
+
+### Cycle 190 — 14:23 ET
+- Account $408.50 (day -$0.03), cash $200.04, 2/5 positions. TEVA 41.65 (stop 40.10, target 44.33), KTOS 42.30 (stop 40.20 / proactive exit ~40.60). Both clear.
+- Tape: SPY 778.65 (+0.6%), QQQ 751.29, SMH 603.85 (-0.6%), ITA 206.45, XLV 170.83.
+- MR scan (4): TMUS, ASTS, VZ, T. Carriers still near lows on heavy volume (T 110M, ~3x avg), no base: gate 4 fail. ASTS gate 1 fail.
+- Momentum scan (20): new CRCL +6.3% (rel vol 1.00, no dated catalyst on file: gate 2 fail). Rest previously evaluated; none passes all gates.
 - No entries, no orders. Day trades 2, forced 0.
