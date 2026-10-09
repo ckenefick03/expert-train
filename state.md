@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-09 12:15 ET",
+  "as_of": "2026-10-09 12:23 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -801,6 +801,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-09 12:15 ET",
       "equity": 408.2
+    },
+    {
+      "t": "2026-10-09 12:23 ET",
+      "equity": 407.23
     }
   ],
   "positions": [
@@ -809,7 +813,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.07,
+      "price": 41.87,
       "stop": 40.2,
       "target": 47.15
     },
@@ -818,7 +822,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "momentum",
       "qty": 2.529517,
       "entry": 41.51,
-      "price": 41.76,
+      "price": 41.56,
       "stop": 40.1,
       "target": 44.33
     }
@@ -2282,4 +2286,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Momentum scan (11): HUM +12.2%, ELV +3.4%, CCI +13.9%, TEVA +6.2%, FSLY +14.9%, BEKE +3.8%, LI +6.6%, XPEV +3.9%, MNSO +5.8%, TME +5.3% (new, China group), CLOV +5.0%.
   - **HUM follow-up: base invalid, dropped.** The 16:05-16:10 UTC bar printed 432.84, below the 434.12-434.17 higher low that the setup relied on, and price is 434.2 on volume of 8-9k per bar: the higher-low base failed before the 439.71 trigger ever broke. Logged as a skip, correct under the rule I wrote (lose 434 = invalid). Skip-list follow-up: HUM never gave the continuation entry; outcome to be checked at the close.
   - CCI/FSLY/China group/TME/CLOV: unchanged verdicts, group moves or no confirmed catalyst. ELV +3.4% sympathy only.
+- No orders. Day trades 2, forced 0.
+
+### Cycle 181 — 2026-10-09 12:23 ET
+- Account $407.23 (day -$1.30), cash $200.04, 2 of 5 positions, no open orders. STOP CHECKS: TEVA 41.56 (entry 41.51, +0.1%, stop 40.10: clear; still +5.9% on the day vs VTRS +1.0%, XLV +1.3%: relative strength intact). KTOS 41.87 (entry 42.53, stop 40.20, proactive exit ~40.60: clear, 3.1% above the exit level). Tape: SPY +0.5%, QQQ +0.4%, SMH -0.8%, ITA +0.5%.
+- Mean-reversion scan: TMUS -12.2% (150.4), ASTS -12.9%, VZ -10.7%, T -10.7% (raw), BKD -7.4%, JOBY -8.5%. Carriers still flat at the lows, huge volume, no base: gate 4 FAIL. ASTS/BKD/JOBY: gate 1 (no verified cause). No entry.
+- Momentum scan (11): HUM +12.9%, ELV +3.6%, CCI +13.8%, TEVA +6.0%, FSLY +15.1%, BEKE +4.1%, LI +6.7%, XPEV +3.8%, MNSO +6.0%, TME +5.7%, CLOV +6.2%. No change in verdicts. HUM bounced back to 437.2 after the cycle-180 invalidation (the 432.84 print was lower than the 434.1 support): that is the nature of a range; the setup stays dropped, it would need a fresh base and a trigger break above 439.71 to be re-evaluated from zero. Nothing new passes gates 1+2+3 together.
 - No orders. Day trades 2, forced 0.
