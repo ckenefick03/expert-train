@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-09 15:33 ET",
+  "as_of": "2026-10-09 15:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -869,6 +869,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-09 15:33 ET",
       "equity": 407.16
+    },
+    {
+      "t": "2026-10-09 15:43 ET",
+      "equity": 406.84
     }
   ],
   "positions": [
@@ -877,7 +881,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.24,
+      "price": 42.26,
       "stop": 40.2,
       "target": 47.15
     },
@@ -886,7 +890,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "momentum",
       "qty": 2.529517,
       "entry": 41.51,
-      "price": 41.18,
+      "price": 41.03,
       "stop": 40.1,
       "target": 44.33
     }
@@ -2475,3 +2479,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Account $407.16 (day -$1.37), cash $200.04, 2/5 positions. TEVA 41.18 (stop 40.10, target 44.33), KTOS 42.24 (stop 40.20 / proactive exit ~40.60). Both clear.
 - Tape: SPY 778.90 (+0.6%), QQQ 751.35, SMH 603.52 (-0.6%), ITA 206.62, XLV 170.83.
 - No orders. Close recap with overnight-hold statements is next (15:47 ET trigger).
+
+### Cycle 198 — 15:43 ET (post-cutoff, stops only)
+- No entries possible (past 15:30 ET); scans skipped. Stop checks and tape only.
+- Account $406.84 (day -$1.69), cash $200.04, 2/5 positions. TEVA 41.03 (entry 41.51, -1.2%; stop 40.10 clear by 2.3%), KTOS 42.26 (stop 40.20 / proactive exit ~40.60 clear). No stop touched.
+- Tape: SPY 778.67 (+0.6%), QQQ 750.77, SMH 602.41 (-0.8%), ITA 206.76, XLV 170.88.
+- Overnight-hold decisions for TEVA and KTOS are made in the close recap that follows (15:47 ET trigger).
+- No orders. Day trades 2, forced 0.
