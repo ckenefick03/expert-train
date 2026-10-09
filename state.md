@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-09 08:31 ET (pre-market)",
+  "as_of": "2026-10-09 09:46 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,12 +41,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Oct 8, 13:25 ET: equity $408.09 (-$12.98 vs the $421.07 close). Holding KTOS 41.93 (stop 40.20) and RKLB 68.10 (stop 66.80); cash $203.79. SPY -0.7%, QQQ -1.6%, SMH -3.6%: a broad AI/chip selloff. Monitoring gap 12:13-13:23 ET (usage limit), see log.",
+  "status_note": "Oct 9, 09:46 ET: sold RKLB at 67.55 (-$4.75, -0.81R) after it gapped up pre-market then reversed through my written 67.47 exit level at the open (low 66.98, stop 66.80). Holding KTOS 41.90 (stop 40.20), cash $305.04, equity $407.50. No entries before 10:00 ET; scans pending.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-09",
     "start_equity": 408.53,
-    "trades": 0,
+    "trades": 1,
     "forced": 0
   },
   "equity_history": [
@@ -745,6 +745,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-09 08:31 ET pre-mkt",
       "equity": 413.27
+    },
+    {
+      "t": "2026-10-09 09:46 ET",
+      "equity": 407.5
     }
   ],
   "positions": [
@@ -753,18 +757,9 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 43.2,
+      "price": 41.9,
       "stop": 40.2,
       "target": 47.15
-    },
-    {
-      "symbol": "RKLB",
-      "strategy": "adopted",
-      "qty": 1.49887,
-      "entry": 70.72,
-      "price": 69.5,
-      "stop": 66.8,
-      "target": 78.55
     }
   ],
   "trades": [
@@ -791,58 +786,46 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "score": 62,
       "tag": "organic",
       "date": "2026-10-08"
+    },
+    {
+      "symbol": "RKLB",
+      "strategy": "adopted",
+      "tier": "-",
+      "entry": 70.72,
+      "exit": 67.5496,
+      "pnl": -4.75,
+      "r": -0.81,
+      "score": 60,
+      "tag": "organic",
+      "date": "2026-10-09"
     }
   ],
   "regime": {
-    "read": "Risk-on after the jobs miss, led by semis (SMH +2.8%) while software/IT services and independent power producers lag. Defense (ITA -0.6%) and uranium cooled. Dislocations are mostly company-specific (HDD makers, Nike, Stellantis) or technical (Modine spin-off).",
+    "read": "Opening gap-up faded: SPY +0.3%, QQQ +0.4%, SMH +0.2% at 09:43 versus +0.4/+0.8/+1.6% pre-market. Chip/AI bounce partly given back; the mean-reversion scan is nearly empty (5 names: telecom TMUS/VZ/T -8-9%, SWKS, BKD) and the momentum scan is empty at 09:43.",
     "chips": [
       {
         "name": "SPY",
-        "chg": 0.99
+        "chg": 0.3
       },
       {
         "name": "QQQ",
-        "chg": 1.54
-      },
-      {
-        "name": "IWM",
-        "chg": 1.34
-      },
-      {
-        "name": "XLK",
-        "chg": 1.3
-      },
-      {
-        "name": "XLE",
-        "chg": -0.75
-      },
-      {
-        "name": "XLF",
-        "chg": 0.39
-      },
-      {
-        "name": "XLV",
-        "chg": -0.23
-      },
-      {
-        "name": "XLU",
-        "chg": 0.55
-      },
-      {
-        "name": "ITA",
-        "chg": -0.21
-      },
-      {
-        "name": "UFO",
-        "chg": 2.92
-      },
-      {
-        "name": "URA",
-        "chg": 1.21
+        "chg": 0.37
       },
       {
         "name": "SMH",
-        "chg": 2.78
+        "chg": 0.19
+      },
+      {
+        "name": "ITA",
+        "chg": -0.11
+      },
+      {
+        "name": "ARKX",
+        "chg": 0.53
+      },
+      {
+        "name": "URA",
+        "chg": 0.44
       }
     ]
   }
@@ -2118,3 +2101,13 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - **Watch list, mean-reversion (all need a verified name-specific cause; group moves still fail gate 1):** (1) COHR - largest AI-optical dislocation on Oct 8 (-9%), +4.8% pre-mkt: if it fades back to -7% with no cause, still a group move; (2) ALAB - -8.6% Oct 8, flat pre-mkt, same group; (3) RVMD - biotech, -7% on Oct 8 with no cause found, the one candidate that is not part of a theme: search for a dated clinical/regulatory cause at the open; (4) TSEM / AAOI - same optical/semis group, watch only if they stay down >7% while SMH is up (that would be name-specific weakness, but then the cause is the thing to find); (5) NN - -12% Oct 8, no cause found.
 - **Watch list, momentum (earliest 10:30 ET; all need a dated catalyst + held higher low):** (1) GFS - +2.5% pre-mkt; its relative strength vs SMH, the thing that interested me yesterday, disappears if SMH is +1.6%, so it is only a candidate if it keeps leading; (2) COCO - +11% on Oct 8 with no catalyst found, +1.1% pre-mkt: search again for a dated driver; (3) CMG - RV about 4x on Oct 8, no catalyst found, flat pre-mkt; (4) MPC/VLO - refiners lost 0.7-0.8% pre-mkt after a +5% day, an energy group move fading, not a continuation setup; (5) COHR on the long side - leading the semis bounce, but a +4.8% gap with no catalyst is a chase, not a pullback entry.
 - **Open items carried:** re-price the 10/01 skip list (RIOT, CLSK, CIFR, HUT, MARA, NWG, HSBC, GIS, CAG, LVS, ACN, COHR); confirm PDT/day-trade applicability for limited_margin (unverified); keep an eye on the 1-trade-per-day minimum without forcing.
+
+### Cycle 167 (09:43-09:46 ET Oct 9) - SOLD RKLB
+- **Stop check:** reconcile showed no orders yet today; KTOS 41.90 (stop 40.20), RKLB 67.58 on the quote (stop 66.80, written exit level 67.47). 5-minute bars since the open showed RKLB opened 68.67 (after a 69.50 pre-market), hit **66.98 in the 09:35-09:40 bar**, i.e. through my written 67.47 proactive-exit level and within 0.18 of the actual stop, then bounced. KTOS: open 43.03, low 41.54, last 41.90 (stop far).
+- **Decision (written before the order):** the rule I wrote at the Oct 8 recap and in the pre-open brief was "sell RKLB at the open if indicated at or below 67.47". The pre-market indication was 69.50 so that did not trigger; the open then reversed through the level within minutes, before my cycle started (the :42 trigger fired at 09:42 ET). The level was reached, the stock is a failed gap (-2.8% from pre-market in 10 minutes), and the lag vs ARKX (+0.5%) is already about 1.7 points and widening on a weak open. Following the rule as written rather than waiting for the stop is the whole point of the proactive-exit level: fractional shares cannot hold resting stops. 30-minute rule: not applicable (adopted holding, not an entry of mine).
+- **Execution:** market sell 1.49887 sh RKLB, regular hours, ref b3c7d8a2; filled 09:43:55 ET at **67.5496** (quote at the order: bid 67.47 / ask 67.52). Filled price is a hair better than the written level; I was about 10 minutes late to the level, not to the stop (stop 66.80 never traded: low 66.98). Slippage vs level: none adverse.
+- **Result:** entry 70.72 -> 67.5496 = **-$4.75, -0.81R** (1R = $3.92/sh x 1.49887 = $5.88). Tag: adopted/organic. Score 60 (setup 20/40: no verified entry thesis, an adopted position; execution 28/35: rule followed, late by one cycle; outcome 12/25: loss under 1R). Day trades now 1, forced 0 (the minimum is met organically).
+- **Account after:** cash $305.04, equity $407.50 (-$1.03 vs the $408.53 day start). One position: KTOS 2.437677 sh, entry 42.53, 41.90 (-1.5%), stop 40.20, target 47.15.
+- **Market (09:43):** the pre-market bounce faded. SPY 776.26 (+0.3%), QQQ 750.37 (+0.4%), SMH 608.42 (+0.2%), ITA 204.65 (-0.1%), ARKX 32.24 (+0.5%), URA 38.73 (+0.4%).
+- **Scans (information only; no entries before 10:00 ET):** mean-reversion shows 5 names, none of them in the AI-hardware theme any more: TMUS -9.1%, VZ -7.8%, T -8.4% (a telecom group move: three carriers down 8-9% together suggests a sector-level cause such as competition/pricing news; unverified, to search at 10:00), SWKS -7.7% (RV low so far), BKD -7.9%. Momentum scan: 0 names. Everything else from yesterday's list has reverted or gapped.
+- **Cash and sizing:** $305.04 buys two $105 entries. Entries unlock at 10:00 ET (mean-reversion Tier A) and 10:30 ET (momentum). Next: 10:02 cycle with the telecom group as the first thing to investigate (needs a verified sector-wide cause for gate 1; if the cause is one company's, the other two may be sympathy and the name-specific one is the story).
