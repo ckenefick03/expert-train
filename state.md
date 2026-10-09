@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-09 13:24 ET",
+  "as_of": "2026-10-09 13:33 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -817,6 +817,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-09 13:24 ET",
       "equity": 407.36
+    },
+    {
+      "t": "2026-10-09 13:33 ET",
+      "equity": 407.36
     }
   ],
   "positions": [
@@ -825,7 +829,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.86,
+      "price": 41.9,
       "stop": 40.2,
       "target": 47.15
     },
@@ -834,7 +838,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "momentum",
       "qty": 2.529517,
       "entry": 41.51,
-      "price": 41.63,
+      "price": 41.59,
       "stop": 40.1,
       "target": 44.33
     }
@@ -2325,4 +2329,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY 777.89 (+0.5%), QQQ 750.50, SMH 603.36 (-0.6%), ITA 206.08, XLV 170.70 (+1.5%).
 - MR scan (6): TMUS, ASTS, VZ, T, JOBY, LUMN (new, -7.5%). Carriers still at lows on heavy volume: gate 4 fail. LUMN is part of the same telecom/spectrum group move, not a name-specific dislocation: gate 1 fail. ASTS/JOBY gate 1 fail.
 - Momentum scan (16): new vs last cycle FUTU +4.2%, IBRX +8.5%, SNAP +6.9%. News search found no dated, verifiable catalyst for any of them (results undated/stale), so gate 2 fails; no cause cited. Others unchanged and previously evaluated (HUM dropped, CCI/AMT group move on spectrum news, FSLY, China ADRs without catalysts).
+- No entries, no orders. Day trades 2, forced 0.
+
+### Cycle 185 — 13:33 ET
+- Account $407.36 (day -$1.17), cash $200.04, 2/5 positions. TEVA 41.59 (stop 40.10), KTOS 41.90 (stop 40.20 / proactive exit ~40.60). Both clear.
+- Tape: SPY 778.19, QQQ 750.78, SMH 603.63 (-0.6%), ITA 206.19, XLV 170.85.
+- MR scan (5): TMUS, ASTS, VZ, T, JOBY. LUMN dropped off. Carriers still at lows on 2x+ average volume, no base: gate 4 fail. ASTS/JOBY gate 1 fail.
+- Momentum scan (17): new SNOW +6.1% (rel vol 1.05, no dated catalyst on file, gate 2 fail). Rest unchanged and already evaluated; none passes all gates.
 - No entries, no orders. Day trades 2, forced 0.
