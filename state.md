@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-08 15:48 ET",
+  "as_of": "2026-10-09 08:31 ET (pre-market)",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -44,9 +44,9 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "status_note": "Oct 8, 13:25 ET: equity $408.09 (-$12.98 vs the $421.07 close). Holding KTOS 41.93 (stop 40.20) and RKLB 68.10 (stop 66.80); cash $203.79. SPY -0.7%, QQQ -1.6%, SMH -3.6%: a broad AI/chip selloff. Monitoring gap 12:13-13:23 ET (usage limit), see log.",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-10-08",
-    "start_equity": 421.07,
-    "trades": 1,
+    "date": "2026-10-09",
+    "start_equity": 408.53,
+    "trades": 0,
     "forced": 0
   },
   "equity_history": [
@@ -741,6 +741,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-08 15:48 ET",
       "equity": 409.4
+    },
+    {
+      "t": "2026-10-09 08:31 ET pre-mkt",
+      "equity": 413.27
     }
   ],
   "positions": [
@@ -749,7 +753,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.09,
+      "price": 43.2,
       "stop": 40.2,
       "target": 47.15
     },
@@ -758,7 +762,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 1.49887,
       "entry": 70.72,
-      "price": 68.725,
+      "price": 69.5,
       "stop": 66.8,
       "target": 78.55
     }
@@ -2103,3 +2107,14 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - **KTOS** (2.437677 sh, entry 42.53, stop 40.20, target 47.15, now 42.09, -1.0% vs entry): HOLD. It has held flat vs the prior close (+0.4%) while ITA is +0.6% and the market is down, i.e. no break in price structure or peer relationship, and no invalidation or stop hit. Caveat: adopted position, so "thesis intact" means no invalidation, not a freshly verified catalyst.
 - **RKLB** (1.49887 sh, entry 70.72, stop 66.80, target 78.55, now 68.73, -2.8% vs entry): HOLD, but the weaker of the two. It is -4.4% on the day vs ARKX -1.7%, lagging its group by about 2.7 points, close to the written exit trigger (lag vs sector widening past 3 points, or a new low on volume). It is 2.9% above the stop and 1.9% above my 67.47 proactive-exit level. I am holding per the standing instruction and because no trigger fired, not because the thesis has strengthened. First action at pre-open: if RKLB is indicated at or below 67.47, sell at the open.
 - **Overnight risk, stated plainly:** fractional shares cannot hold resting stops, so a gap below a stop is only handled at the open, at market. Exposure is $205.61 of $409.40 (50%), cash $203.79. First check is the pre-open brief (08:27 ET), then the first full cycle after 10:00 ET.
+
+### Pre-open brief — Fri Oct 9, 08:31 ET (read-only, no orders)
+- **Correction to yesterday's recap:** the official Oct 8 closes were KTOS 41.93 and RKLB 68.40, so the true close equity was **$408.53** (day P&L **-$12.54, -3.0%** vs $421.07), not the $409.40 I wrote from 15:47 prices. Today's day-start equity is set to $408.53. Drawdown from the $437.99 peak is -6.7%; the 10% breaker level is $394.19.
+- **Reconcile / stop check (pre-market):** no open or new orders. Account value $413.27 on pre-market marks, cash $203.79. KTOS 43.20 pre-mkt (stop 40.20, +7.5%; +3.0% vs close). RKLB 69.50 pre-mkt (stop 66.80, +4.0%; 67.47 proactive-exit level is 2.9% below; +1.6% vs close). Neither is near a stop; the "sell RKLB at the open if indicated at or below 67.47" check is NOT triggered. Pre-market liquidity is thin: re-check at the open.
+- **Tape (pre-market vs Oct 8 close):** SPY 777.0 (+0.4%), QQQ 753.5 (+0.8%), SMH 617.2 (+1.6%), URA 39.0 (+1.2%), ITA 205.65 (+0.4%), ARKX 32.13 (+0.2%). Risk-on bounce led by semis, reversing yesterday's chip-led selloff: COHR 316.95 (+4.8%), GFS 50.58 (+2.5%), ALAB 347.2 (flat). Energy is soft: MPC 459.9 (-0.7%), VLO 440.5 (-0.8%), SHEL flat, so the energy rally of Oct 8 is not extending. COCO 56.6 (+1.1%), CMG 32.6 (flat).
+- **News / politics (sources found this cycle):** the searches returned no October 9 coverage at all; the only dated items were from Oct 2: the September jobs report (nonfarm payrolls +29K vs +90K expected, unemployment 4.2%, July/August revised down 60K, wages +0.1% m/m), which reinforced Fed-pause bets (fed-hike odds were about 23% before the print), per Interactive Brokers / Benzinga / FT Portfolios items. One summary says September CPI is due Wed Oct 14 at 08:30 ET (single source, unverified). I found no dated explanation for either yesterday's chip selloff or today's bounce, no Rocket Lab or KTOS news dated today (newest RKLB item mid-September: a $1.944bn at-the-market equity offering to fund the Iridium acquisition; Q3 earnings expected around Nov 9, unconfirmed). So no news-dependent gate can pass on a news basis this morning: treat as FAIL until a dated source appears.
+- **Earnings (get_earnings_calendar, high-cap, Oct 9-11):** only DAL reports (am, today); nothing in KTOS, RKLB or my watch names. Nothing to avoid on our lists.
+- **Regime read:** after a -0.5%/-1.5%/-3.3% (SPY/QQQ/SMH) Thursday, a reflex bounce into the open. Pre-market gains in the names that were group-selloff candidates will shrink the mean-reversion scan; if they hold, there is nothing left to revert. The first 30-60 minutes are off-limits; the earliest entries are Tier A at 10:00 ET (mean-reversion) and 10:30 ET (momentum).
+- **Watch list, mean-reversion (all need a verified name-specific cause; group moves still fail gate 1):** (1) COHR - largest AI-optical dislocation on Oct 8 (-9%), +4.8% pre-mkt: if it fades back to -7% with no cause, still a group move; (2) ALAB - -8.6% Oct 8, flat pre-mkt, same group; (3) RVMD - biotech, -7% on Oct 8 with no cause found, the one candidate that is not part of a theme: search for a dated clinical/regulatory cause at the open; (4) TSEM / AAOI - same optical/semis group, watch only if they stay down >7% while SMH is up (that would be name-specific weakness, but then the cause is the thing to find); (5) NN - -12% Oct 8, no cause found.
+- **Watch list, momentum (earliest 10:30 ET; all need a dated catalyst + held higher low):** (1) GFS - +2.5% pre-mkt; its relative strength vs SMH, the thing that interested me yesterday, disappears if SMH is +1.6%, so it is only a candidate if it keeps leading; (2) COCO - +11% on Oct 8 with no catalyst found, +1.1% pre-mkt: search again for a dated driver; (3) CMG - RV about 4x on Oct 8, no catalyst found, flat pre-mkt; (4) MPC/VLO - refiners lost 0.7-0.8% pre-mkt after a +5% day, an energy group move fading, not a continuation setup; (5) COHR on the long side - leading the semis bounce, but a +4.8% gap with no catalyst is a chase, not a pullback entry.
+- **Open items carried:** re-price the 10/01 skip list (RIOT, CLSK, CIFR, HUT, MARA, NWG, HSBC, GIS, CAG, LVS, ACN, COHR); confirm PDT/day-trade applicability for limited_margin (unverified); keep an eye on the 1-trade-per-day minimum without forcing.
