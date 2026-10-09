@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-09 13:33 ET",
+  "as_of": "2026-10-09 13:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -821,6 +821,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-09 13:33 ET",
       "equity": 407.36
+    },
+    {
+      "t": "2026-10-09 13:43 ET",
+      "equity": 407.48
     }
   ],
   "positions": [
@@ -829,7 +833,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.9,
+      "price": 42.02,
       "stop": 40.2,
       "target": 47.15
     },
@@ -838,7 +842,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "momentum",
       "qty": 2.529517,
       "entry": 41.51,
-      "price": 41.59,
+      "price": 41.51,
       "stop": 40.1,
       "target": 44.33
     }
@@ -2336,4 +2340,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY 778.19, QQQ 750.78, SMH 603.63 (-0.6%), ITA 206.19, XLV 170.85.
 - MR scan (5): TMUS, ASTS, VZ, T, JOBY. LUMN dropped off. Carriers still at lows on 2x+ average volume, no base: gate 4 fail. ASTS/JOBY gate 1 fail.
 - Momentum scan (17): new SNOW +6.1% (rel vol 1.05, no dated catalyst on file, gate 2 fail). Rest unchanged and already evaluated; none passes all gates.
+- No entries, no orders. Day trades 2, forced 0.
+
+### Cycle 186 — 13:43 ET
+- Account $407.48 (day -$1.05), cash $200.04, 2/5 positions. TEVA 41.51 (stop 40.10), KTOS 42.02 (stop 40.20 / proactive exit ~40.60). Both clear.
+- Tape: SPY 778.19, QQQ 750.71, SMH 603.59 (-0.6%), ITA 206.18, XLV 170.97 (+1.7%).
+- MR scan (6): TMUS, ASTS, VZ, T, JOBY, LUMN. Carriers still at/near lows on 2x+ volume, no base: gate 4 fail. LUMN is the same telecom group move: gate 1 fail. ASTS/JOBY gate 1 fail.
+- Momentum scan (18): new IONS +5.0% (rel vol 1.00, no dated catalyst on file: gate 2 fail). Rest unchanged and evaluated; none passes all gates.
 - No entries, no orders. Day trades 2, forced 0.
