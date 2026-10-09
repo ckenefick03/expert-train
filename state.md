@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-09 13:43 ET",
+  "as_of": "2026-10-09 13:54 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -825,6 +825,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-09 13:43 ET",
       "equity": 407.48
+    },
+    {
+      "t": "2026-10-09 13:54 ET",
+      "equity": 408.41
     }
   ],
   "positions": [
@@ -833,7 +837,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.02,
+      "price": 42.18,
       "stop": 40.2,
       "target": 47.15
     },
@@ -842,7 +846,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "momentum",
       "qty": 2.529517,
       "entry": 41.51,
-      "price": 41.51,
+      "price": 41.73,
       "stop": 40.1,
       "target": 44.33
     }
@@ -2347,4 +2351,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY 778.19, QQQ 750.71, SMH 603.59 (-0.6%), ITA 206.18, XLV 170.97 (+1.7%).
 - MR scan (6): TMUS, ASTS, VZ, T, JOBY, LUMN. Carriers still at/near lows on 2x+ volume, no base: gate 4 fail. LUMN is the same telecom group move: gate 1 fail. ASTS/JOBY gate 1 fail.
 - Momentum scan (18): new IONS +5.0% (rel vol 1.00, no dated catalyst on file: gate 2 fail). Rest unchanged and evaluated; none passes all gates.
+- No entries, no orders. Day trades 2, forced 0.
+
+### Cycle 187 — 13:54 ET
+- Account $408.41 (day -$0.12), cash $200.04, 2/5 positions. TEVA 41.73 (stop 40.10, target 44.33), KTOS 42.18 (stop 40.20 / proactive exit ~40.60). Both clear.
+- Tape: SPY 778.14, QQQ 750.77, SMH 603.39 (-0.6%), ITA 206.20, XLV 170.86.
+- MR scan (6): TMUS, ASTS, VZ, T, JOBY, LUMN. No bases, still on heavy volume near lows: gate 4 fail; LUMN/ASTS/JOBY gate 1 fail (group/unverified cause).
+- Momentum scan (19): new HNGE +3.0% (marginal move, no dated catalyst on file: gate 2 fail). Rest unchanged and evaluated; none passes all gates.
 - No entries, no orders. Day trades 2, forced 0.
