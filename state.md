@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-09 10:54 ET",
+  "as_of": "2026-10-09 11:05 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -773,6 +773,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-09 10:54 ET",
       "equity": 408.2
+    },
+    {
+      "t": "2026-10-09 11:05 ET",
+      "equity": 408.46
     }
   ],
   "positions": [
@@ -781,7 +785,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.32,
+      "price": 42.42,
       "stop": 40.2,
       "target": 47.15
     }
@@ -2178,4 +2182,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Account $408.20, cash $305.04. KTOS 42.32 (stop 40.20, proactive exit ~40.60: clear). Tape: SPY +0.4%, QQQ +0.4%, SMH -0.3%, ITA +0.4%.
 - Mean-reversion scan unchanged (TMUS -10.0%, ASTS -10.1%, VZ -7.4%, T -7.4% raw, BKD -7.9%, JOBY -8.2%). Telecoms still pinned at their lows (TMUS 154.1 vs 153.61 low), no basing: gate 4 stays failed. No entry.
 - Momentum scan: LI +6.7%, XPEV +4.2% (group, unchanged) and NEW: TEVA +5.0% (41.21 vs 39.25, rel vol 1.01). TEVA is a real divergence (VTRS -1.1%, PFE flat, XLV +0.6%): gate 1 PASS. Gate 3: 5-minute bars show a higher-low base (40.12 open low, 40.48 pullback, 41.15-41.25 since) but price is off its 42.02 high: partial. Gate 2 FAIL: search returned no dated catalyst (only 2022/2025/May 2026 items). A divergence without a cited catalyst is just a price move, so no entry. Follow-up: re-check TEVA next cycle and in the 11:12 news pass for a dated catalyst.
+- No orders. Day trades 1, forced 0.
+
+### Cycle 174 — 2026-10-09 11:05 ET
+- Account $408.46, cash $305.04. KTOS 42.42 (stop 40.20, proactive exit ~40.60: clear). Tape: SPY +0.4%, QQQ +0.4%, SMH -0.3%, ITA +0.5%.
+- Mean-reversion scan (7): TMUS -10.7% (new low 153.0, still falling), T -8.3% / VZ -8.2% raw (about -7.4% / -6.8% ex-dividend) and sliding again, ASTS -9.9%, BKD -7.3%, JOBY -7.9%, NEW SWKS -7.4%. Telecoms making new lows: gate 4 fail stands.
+- SWKS gate check: it is an idiosyncratic move (SMH -0.3%). Cause search (extended, found this cycle): Yahoo Finance reports Apple fell on a report that iPhone 18 Pro October component orders were cut 15-20%, dragging Skyworks, but that article's own figures are inconsistent (-2% in body vs -7.1% in header, other sources -3.2%), it is a reported/unconfirmed cut rather than a company statement, and SWKS was already -4% on Oct 8 after completing the Qorvo combination ("sell the news"). Gate 1: unverified single-source cause; gate 4: second straight down day on an Apple-demand concern is closer to a thesis question than an overreaction. FAIL, no entry. Follow-up: only reconsider if Apple/SWKS confirm or the cut is denied.
+- Momentum scan: LI +7.1%, XPEV +4.6% (group, no catalyst), TEVA +5.2% (41.28; VTRS -0.7%, genuine divergence, held 41.2-41.3 range, rel vol 1.03). Still no dated TEVA catalyst: gate 2 fail. Hourly news pass at 11:12 will retry TEVA. No entry.
 - No orders. Day trades 1, forced 0.
