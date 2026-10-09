@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-09 15:23 ET",
+  "as_of": "2026-10-09 15:33 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -865,6 +865,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-09 15:23 ET",
       "equity": 407.69
+    },
+    {
+      "t": "2026-10-09 15:33 ET",
+      "equity": 407.16
     }
   ],
   "positions": [
@@ -873,7 +877,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.29,
+      "price": 42.24,
       "stop": 40.2,
       "target": 47.15
     },
@@ -882,7 +886,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "momentum",
       "qty": 2.529517,
       "entry": 41.51,
-      "price": 41.33,
+      "price": 41.18,
       "stop": 40.1,
       "target": 44.33
     }
@@ -2464,3 +2468,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Momentum scan (27, up from 23): new names PDD +3.7%, GME +5.0%, PONY +6.1%, ACHR +4.1%. No dated catalyst for any of them found this session; all marginal relative-volume (~1.0). Gate 2 fail on all four. Rest previously evaluated; none passes all gates.
 - Entry cutoff 15:30 ET is 7 minutes away; no setup qualifies, no forced trade. Day finishes with 2 trades (1 TEVA entry plus the earlier RKLB exit), 0 forced, under the 1-minimum only if counted by exits; the minimum is satisfied by the counter value of 2.
 - No entries, no orders. Day trades 2, forced 0.
+
+### Cycle 197 — 15:33 ET (post-cutoff, stops only)
+- Entry cutoff (15:30 ET) has passed, so no entries are possible; I did not run the two scans this cycle (nothing could be acted on). Stop checks and tape only.
+- Correction to the cycle 196 wording on trade count: the day's order history (verified with get_equity_orders) shows exactly two orders: RKLB sale at 13:43Z (09:43 ET, adopted exit) and TEVA buy at 15:19Z (11:19 ET). Trade counter 2, forced 0. That is the whole record.
+- Account $407.16 (day -$1.37), cash $200.04, 2/5 positions. TEVA 41.18 (stop 40.10, target 44.33), KTOS 42.24 (stop 40.20 / proactive exit ~40.60). Both clear.
+- Tape: SPY 778.90 (+0.6%), QQQ 751.35, SMH 603.52 (-0.6%), ITA 206.62, XLV 170.83.
+- No orders. Close recap with overnight-hold statements is next (15:47 ET trigger).
