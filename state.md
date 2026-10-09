@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-09 15:14 ET",
+  "as_of": "2026-10-09 15:23 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -861,6 +861,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-09 15:14 ET",
       "equity": 407.41
+    },
+    {
+      "t": "2026-10-09 15:23 ET",
+      "equity": 407.69
     }
   ],
   "positions": [
@@ -869,7 +873,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.26,
+      "price": 42.29,
       "stop": 40.2,
       "target": 47.15
     },
@@ -878,7 +882,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "momentum",
       "qty": 2.529517,
       "entry": 41.51,
-      "price": 41.25,
+      "price": 41.33,
       "stop": 40.1,
       "target": 44.33
     }
@@ -2451,4 +2455,12 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - MR scan (5): TMUS, ASTS, VZ, T, plus new HPQ -7.1% ($30.15). HPQ 5-min bars: gapped down at the open (31.91 to 30.8 in 15 min) and has ground lower all session to 30.15, no base, new lows on each leg; no verified cause. Gate 1 fail (unverified), gate 4 fail (still making lows). Carriers still near lows on heavy volume (T 119M, ~3x avg): gate 4 fail.
 - Momentum scan (23): no new names. All previously evaluated; none passes all gates.
 - Tier C closes 15:30 ET; no forced trades.
+- No entries, no orders. Day trades 2, forced 0.
+
+### Cycle 196 — 15:23 ET (last cycle inside the entry window)
+- Account $407.69 (day -$0.84), cash $200.04, 2/5 positions. TEVA 41.33 (stop 40.10, target 44.33), KTOS 42.29 (stop 40.20 / proactive exit ~40.60). Both clear.
+- Tape: SPY 779.31 (+0.7%), QQQ 751.82, SMH 604.22 (-0.5%), ITA 206.65, XLV 170.89.
+- MR scan (5): TMUS, ASTS, VZ, T, HPQ (-7.1%, $30.135, still printing lows into the afternoon; gate 1 unverified + gate 4 fail, unchanged from cycle 195). Carriers still near lows on heavy volume (T 122M, ~3.3x avg): gate 4 fail. ASTS gate 1 fail.
+- Momentum scan (27, up from 23): new names PDD +3.7%, GME +5.0%, PONY +6.1%, ACHR +4.1%. No dated catalyst for any of them found this session; all marginal relative-volume (~1.0). Gate 2 fail on all four. Rest previously evaluated; none passes all gates.
+- Entry cutoff 15:30 ET is 7 minutes away; no setup qualifies, no forced trade. Day finishes with 2 trades (1 TEVA entry plus the earlier RKLB exit), 0 forced, under the 1-minimum only if counted by exits; the minimum is satisfied by the counter value of 2.
 - No entries, no orders. Day trades 2, forced 0.
