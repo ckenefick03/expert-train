@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-09 10:43 ET",
+  "as_of": "2026-10-09 10:54 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -769,6 +769,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-09 10:43 ET",
       "equity": 407.91
+    },
+    {
+      "t": "2026-10-09 10:54 ET",
+      "equity": 408.2
     }
   ],
   "positions": [
@@ -777,7 +781,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.2,
+      "price": 42.32,
       "stop": 40.2,
       "target": 47.15
     }
@@ -2169,3 +2173,9 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Mean-reversion scan unchanged: TMUS -10.0% (new low 154.2 area), ASTS -10.0%, VZ -7.1% raw (-5.7% adj), T -7.5% raw (-6.4% adj), BKD -8.8%, JOBY -8.8%. Telecoms are drifting back toward lows rather than basing, which reinforces the gate 4 fail from cycle 169. ASTS/BKD/JOBY still lack a verified name-specific cause (gate 1). No entry.
 - Momentum scan unchanged: LI +6.5%, XPEV +3.9%, group-driven with no dated catalyst (gates 1/2 fail). No entry.
 - No orders. Day trades 1, forced 0. Next hourly news pass at ~11:12 ET (BKD/JOBY cause search).
+
+### Cycle 173 — 2026-10-09 10:54 ET
+- Account $408.20, cash $305.04. KTOS 42.32 (stop 40.20, proactive exit ~40.60: clear). Tape: SPY +0.4%, QQQ +0.4%, SMH -0.3%, ITA +0.4%.
+- Mean-reversion scan unchanged (TMUS -10.0%, ASTS -10.1%, VZ -7.4%, T -7.4% raw, BKD -7.9%, JOBY -8.2%). Telecoms still pinned at their lows (TMUS 154.1 vs 153.61 low), no basing: gate 4 stays failed. No entry.
+- Momentum scan: LI +6.7%, XPEV +4.2% (group, unchanged) and NEW: TEVA +5.0% (41.21 vs 39.25, rel vol 1.01). TEVA is a real divergence (VTRS -1.1%, PFE flat, XLV +0.6%): gate 1 PASS. Gate 3: 5-minute bars show a higher-low base (40.12 open low, 40.48 pullback, 41.15-41.25 since) but price is off its 42.02 high: partial. Gate 2 FAIL: search returned no dated catalyst (only 2022/2025/May 2026 items). A divergence without a cited catalyst is just a price move, so no entry. Follow-up: re-check TEVA next cycle and in the 11:12 news pass for a dated catalyst.
+- No orders. Day trades 1, forced 0.
