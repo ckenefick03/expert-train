@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-09 14:53 ET",
+  "as_of": "2026-10-09 15:03 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -853,6 +853,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-09 14:53 ET",
       "equity": 407.73
+    },
+    {
+      "t": "2026-10-09 15:03 ET",
+      "equity": 407.48
     }
   ],
   "positions": [
@@ -870,7 +874,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "momentum",
       "qty": 2.529517,
       "entry": 41.51,
-      "price": 41.4,
+      "price": 41.3,
       "stop": 40.1,
       "target": 44.33
     }
@@ -2426,4 +2430,12 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY 778.89 (+0.6%), QQQ 751.45, SMH 603.50 (-0.6%), ITA 206.55, XLV 170.80.
 - MR scan (5): TMUS, ASTS, VZ, T, LUMN. Carriers still at/near lows on heavy volume (T 116M, ~3x avg), no base: gate 4 fail. ASTS/LUMN gate 1 fail.
 - Momentum scan (23): new VEEV +3.8% (marginal, no catalyst on file: gate 2 fail). Rest previously evaluated; none passes all gates.
+- No entries, no orders. Day trades 2, forced 0.
+
+### Cycle 194 — 15:03 ET
+- Account $407.48 (day -$1.05), cash $200.04, 2/5 positions. TEVA 41.30 (stop 40.10, target 44.33), KTOS 42.24 (stop 40.20 / proactive exit ~40.60). Both clear.
+- Tape: SPY 778.96 (+0.65%), QQQ 751.24, SMH 603.40 (-0.6%), ITA 206.68, XLV 170.81.
+- MR scan (4): TMUS, ASTS, VZ, T. LUMN dropped off. Carriers still near lows on heavy volume (T 118M, ~3x avg), no base: gate 4 fail. ASTS gate 1 fail.
+- Momentum scan (23): no new names. All previously evaluated; none passes all gates.
+- Tier C window closes 15:30 ET; no forced trades.
 - No entries, no orders. Day trades 2, forced 0.
