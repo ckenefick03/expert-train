@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-09 15:43 ET",
+  "as_of": "2026-10-09 15:48 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,12 +41,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Oct 9, 09:46 ET: sold RKLB at 67.55 (-$4.75, -0.81R) after it gapped up pre-market then reversed through my written 67.47 exit level at the open (low 66.98, stop 66.80). Holding KTOS 41.90 (stop 40.20), cash $305.04, equity $407.50. No entries before 10:00 ET; scans pending.",
+  "status_note": "Oct 9 close: sold TEVA at 41.02 (-$1.24, -0.35R) at 15:47 ET, a momentum invalidation exit above the stop (faded from +6.1% to +4.5% on the day, lost its entry level and printed lower lows while XLV and VTRS held). Rolling KTOS overnight (42.29, stop 40.20). Equity $406.79, cash $303.80, day -$1.74. Breaker level 394.19 not in play.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-09",
     "start_equity": 408.53,
-    "trades": 2,
+    "trades": 3,
     "forced": 0
   },
   "equity_history": [
@@ -873,6 +873,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-09 15:43 ET",
       "equity": 406.84
+    },
+    {
+      "t": "2026-10-09 15:48 ET",
+      "equity": 406.79
     }
   ],
   "positions": [
@@ -881,18 +885,9 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.26,
+      "price": 42.285,
       "stop": 40.2,
       "target": 47.15
-    },
-    {
-      "symbol": "TEVA",
-      "strategy": "momentum",
-      "qty": 2.529517,
-      "entry": 41.51,
-      "price": 41.03,
-      "stop": 40.1,
-      "target": 44.33
     }
   ],
   "trades": [
@@ -931,34 +926,46 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "score": 60,
       "tag": "organic",
       "date": "2026-10-09"
+    },
+    {
+      "symbol": "TEVA",
+      "strategy": "momentum",
+      "tier": "-",
+      "entry": 41.51,
+      "exit": 41.0215,
+      "pnl": -1.24,
+      "r": -0.35,
+      "score": 55,
+      "tag": "organic",
+      "date": "2026-10-09"
     }
   ],
   "regime": {
-    "read": "Opening gap-up faded: SPY +0.3%, QQQ +0.4%, SMH +0.2% at 09:43 versus +0.4/+0.8/+1.6% pre-market. Chip/AI bounce partly given back; the mean-reversion scan is nearly empty (5 names: telecom TMUS/VZ/T -8-9%, SWKS, BKD) and the momentum scan is empty at 09:43.",
+    "read": "Quiet, mildly bullish tape: SPY +0.6%, QQQ +0.4%, SMH -0.8% (semis lagging), XLV +1.6%, ITA +0.9%. The only real action was the carrier/tower complex after the SpaceX spectrum news: TMUS/VZ/T -10-13% on 3x volume and never based, AMT/CCI +8-13%. Scans produced nothing that passed all four gates.",
     "chips": [
       {
         "name": "SPY",
-        "chg": 0.3
+        "chg": 0.6
       },
       {
         "name": "QQQ",
-        "chg": 0.37
+        "chg": 0.43
       },
       {
         "name": "SMH",
-        "chg": 0.19
+        "chg": -0.78
+      },
+      {
+        "name": "XLV",
+        "chg": 1.6
       },
       {
         "name": "ITA",
-        "chg": -0.11
+        "chg": 0.94
       },
       {
-        "name": "ARKX",
-        "chg": 0.53
-      },
-      {
-        "name": "URA",
-        "chg": 0.44
+        "name": "VTRS",
+        "chg": 1.4
       }
     ]
   }
@@ -2486,3 +2493,21 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY 778.67 (+0.6%), QQQ 750.77, SMH 602.41 (-0.8%), ITA 206.76, XLV 170.88.
 - Overnight-hold decisions for TEVA and KTOS are made in the close recap that follows (15:47 ET trigger).
 - No orders. Day trades 2, forced 0.
+
+### Cycle 199 - 15:48 ET: CLOSE CYCLE (last of the day)
+- Orders: SELL TEVA 2.529517 market, filled 19:47:40Z at 41.0215 (order 6ac944dc-1b8e-4a73-8826-879eca11c370). Entry was 41.5099 (11:19 ET). P&L -$1.24 (-0.35R on the 1.41 per-share / $3.57 risk). Tag organic, score 55.
+- Why I sold instead of rolling (momentum.md: prefer closing before the session ends; overnight only if the thesis is explicitly intact): the thesis was relative strength after the FDA WELTRUZA approval plus a held pullback. By the close TEVA had faded from 41.80 (17:50Z) to 41.02 in a steady run of lower highs and lower lows, lost my 41.51 entry, and was giving back the move on ~2x volume while XLV (+1.6%) and VTRS (+1.4%) held. A name bleeding while its peers hold is an exit signal on its own. I could not state the thesis as intact, so it did not roll. This was not a stop hit (stop 40.10) and not a 30-minute-rule situation (entry was 4h28m earlier).
+- ROLLING OVERNIGHT: KTOS only (adopted, 2.437677 sh, entry 42.53, last 42.285, stop 40.20, proactive exit ~40.60, target 47.15). Reason it rolls: it held its range all day (41.86-42.38) and traded in line with ITA (+0.9%) while the tape was calm; the dislocation thesis I adopted it on has not broken and no stop level was touched. This is a FRIDAY-to-Monday hold, so the risk is a weekend gap that my manual stop cannot catch (a 5% gap down is about $5, 1.2% of equity; well inside the $100 daily limit and the 10% breaker). I have not verified a specific weekend catalyst for it either way; defense names can move on government or geopolitical news. Flat TEVA means cash is $303.80 against a 1-of-5 position book.
+- Account: equity $406.79 (start of day $408.53, day -$1.74, -0.43%). Peak equity 437.99; breaker level 394.19; drawdown from peak 7.1%, so ~$12.60 of room before the breaker. Cash $303.80. Positions 1/5.
+- DAY RECAP (Oct 9):
+  - Orders: 3 (RKLB sell 09:43 ET -$4.75 / -0.81R, adopted holding that gapped up pre-market then reversed through my written exit level; TEVA buy 11:19 ET; TEVA sell 15:47 ET -$1.24 / -0.35R). Trade counter 3, forced 0, organic 3. Realized -$5.99. KTOS unrealized is roughly -$0.6 (42.285 vs 42.53 entry).
+  - TEVA entry: momentum, dated catalyst FDA WELTRUZA approval, entered at +5.7% on the day after a base. In hindsight it was entered after most of the move, which is the cost of waiting for a held pullback plus catalyst; the loss was small because I exited on invalidation rather than waiting for the stop.
+  - Missed cycles: no cycle ran between 12:42 ET and 13:24 ET (~40 minutes) because the 12:52, 13:02 and 13:12 triggers were delivered together at ~13:23; stops were not checked in that window (disclosed in cycle 184); positions were clear when I checked. Cycles 169-198 otherwise ran on schedule.
+  - Skips (with gate failed and a follow-up where one exists):
+    - TMUS, VZ, T (mean-reversion, -10 to -13%, SpaceX/Starlink spectrum purchase, dated news): gate 4 fail all day, made new lows on 3x average volume to the close and never based. Follow-up: correct to have skipped; they closed near the lows.
+    - ASTS, JOBY, LUMN (mean-reversion): gate 1 fail (group or unverified cause).
+    - HPQ -7.1% (gap down at the open, ground lower all day to ~30.1): gate 1 (no verified cause) and gate 4 fail. Follow-up: still near lows at 15:23, correct skip.
+    - HUM +12% (momentum): dropped after my written invalidation (cycle 180). Follow-up: it held 434-435 into the close, i.e. the level I invalidated at (~434) was not decisive; I will not re-enter without a fresh base and a break above 439.71.
+    - CCI/AMT +8-13% (towers, same spectrum news): group move, gate 1 fail. FSLY +18%, SNOW, IONS, IBRX, SNAP, CLF, CRCL, PDD, GME, PONY, ACHR, VEEV, HNGE, FUTU, China ADRs: no dated catalyst I could verify, mostly ~1.0 relative volume, gate 2 fail. EMAT: below the $20M dollar-volume floor.
+  - News: WebSearch returned undated or old items almost every time; I cited none as today's other than the dated catalysts already on file.
+  - Not done / still open for Monday: re-price older skip lists (RIOT, CLSK, CIFR, HUT, MARA, NWG, HSBC, GIS, CAG, LVS, ACN, COHR); confirm PDT/day-trade applicability for limited_margin (still unverified, no problem hit); follow-ups on COHR/ALAB/RVMD/GFS/COCO/CMG; check KTOS at the open Monday first; run the Oct 12 pre-open brief.
