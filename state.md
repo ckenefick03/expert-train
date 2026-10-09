@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-09 11:05 ET",
+  "as_of": "2026-10-09 11:21 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -46,7 +46,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "day": {
     "date": "2026-10-09",
     "start_equity": 408.53,
-    "trades": 1,
+    "trades": 2,
     "forced": 0
   },
   "equity_history": [
@@ -777,6 +777,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-09 11:05 ET",
       "equity": 408.46
+    },
+    {
+      "t": "2026-10-09 11:21 ET",
+      "equity": 408.04
     }
   ],
   "positions": [
@@ -785,9 +789,18 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.42,
+      "price": 42.3,
       "stop": 40.2,
       "target": 47.15
+    },
+    {
+      "symbol": "TEVA",
+      "strategy": "momentum",
+      "qty": 2.529517,
+      "entry": 41.51,
+      "price": 41.49,
+      "stop": 40.1,
+      "target": 44.33
     }
   ],
   "trades": [
@@ -2190,3 +2203,18 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - SWKS gate check: it is an idiosyncratic move (SMH -0.3%). Cause search (extended, found this cycle): Yahoo Finance reports Apple fell on a report that iPhone 18 Pro October component orders were cut 15-20%, dragging Skyworks, but that article's own figures are inconsistent (-2% in body vs -7.1% in header, other sources -3.2%), it is a reported/unconfirmed cut rather than a company statement, and SWKS was already -4% on Oct 8 after completing the Qorvo combination ("sell the news"). Gate 1: unverified single-source cause; gate 4: second straight down day on an Apple-demand concern is closer to a thesis question than an overreaction. FAIL, no entry. Follow-up: only reconsider if Apple/SWKS confirm or the cut is denied.
 - Momentum scan: LI +7.1%, XPEV +4.6% (group, no catalyst), TEVA +5.2% (41.28; VTRS -0.7%, genuine divergence, held 41.2-41.3 range, rel vol 1.03). Still no dated TEVA catalyst: gate 2 fail. Hourly news pass at 11:12 will retry TEVA. No entry.
 - No orders. Day trades 1, forced 0.
+
+### Cycle 175 — 2026-10-09 11:21 ET (hourly pass) — ENTRY: TEVA (momentum, organic)
+- Account $408.04 after the fill; cash $200.04. KTOS 42.30 (stop 40.20, proactive exit ~40.60: clear). Tape: SPY +0.5%, QQQ +0.3%, SMH -0.4%, ITA +0.7%, XLV up.
+- Mean-reversion scan: TMUS -11.0% (new lows 152.5, still falling), VZ -8.7% / T -7.9% raw, ASTS -11.8%, BKD -7.3%, JOBY -8.6%. Telecom gate 4 fail stands; no new candidates; SWKS fell off the list. No MR entry.
+- Momentum scan: TEVA +5.7%, LI +6.7%, XPEV +4.3% (China group, no catalyst), FSLY +14.2%, BEKE +4.1%, MNSO +5.6% (China consumer group move with LI/XPEV/BABA). FSLY (+14%) not examined this cycle beyond the scan line: no catalyst checked, flagged for follow-up next cycle.
+- **TEVA gate check (written before ordering):**
+  1. Relative strength: PASS. TEVA +5.7% vs VTRS -0.3%, PFE ~flat, XLV +0.6%: a genuine separation from the generics/pharma complex (several-session comparison not run; today only).
+  2. Catalyst: PASS. FDA approval of WELTRUZA (once-monthly subcutaneous long-acting olanzapine for schizophrenia, with Medincell), dated Oct 9, 2026 across multiple sources found this cycle (Investing.com, Boerse-Express), plus TD Cowen/Oppenheimer coverage initiations and a UBS target raise cited in the same results. Caveat: the sources disagree on the size of the move; the approval itself is consistently reported. No TEVA earnings in the next 14 days.
+  3. Held pullback: PASS. Peaked 42.02 at 10:20 ET, pulled back to higher lows (41.12 -> 41.15 -> 41.18) on fading volume, then reclaimed 41.5 on the 11:05-11:15 bars, above the earlier 40.48 base. Entry is the hold-and-reclaim, not a break of the 42.02 high.
+  4. Timing: PASS. 11:19 ET, inside the 10:30-15:30 window.
+- Thesis: approval-driven re-rating holding its gains while peers are flat; continuation toward prior high plus measured move. Risk: news already largely priced (+5.7%), approval pops can fade into the close.
+- Entry: market BUY $105 (order 6ac90603-a3d2-478b-a634-3f6aac1c8b4c), filled 2.529517 @ 41.5099 at 11:19:31 ET, fees $0. Stop 40.10 (below the 40.12 opening low, -3.4%); 1R ~ $3.57; target 44.33 (2R, ~prior high 42.02 + the 2.77 pop); horizon end of day (not holding overnight unless thesis explicitly intact; to be stated at the 15:47 recap). 30-minute hold rule applies until 11:49 ET: no proximity/invalidation exit before then, only the stop trading (40.10), the daily loss limit or the breaker.
+- Positions: 2 of 5 (KTOS adopted, TEVA momentum). Day trades 2 (RKLB sale + TEVA buy), forced 0.
+- Order-tool note: the review step's text asks for user confirmation; per framework §0 and the user's standing instruction that trades run without per-trade confirmation, it was not applicable.
+- Follow-ups: FSLY catalyst check; re-price skipped SWKS/telecoms at close.
