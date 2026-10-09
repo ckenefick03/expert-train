@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-09 11:44 ET",
+  "as_of": "2026-10-09 11:54 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -789,6 +789,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-09 11:44 ET",
       "equity": 408.36
+    },
+    {
+      "t": "2026-10-09 11:54 ET",
+      "equity": 408.38
     }
   ],
   "positions": [
@@ -806,7 +810,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "momentum",
       "qty": 2.529517,
       "entry": 41.51,
-      "price": 41.66,
+      "price": 41.67,
       "stop": 40.1,
       "target": 44.33
     }
@@ -2246,4 +2250,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
   - Gate 3 PARTIAL: the stock gapped to 450-456 at the open, faded to a base around 428.5-431 (tested several times 10:00-11:00 ET), then made rising lows (431.1 -> 432.4 -> 434.5 -> 436.5), peaked 439.7 at 11:20 ET and is pulling back to a higher low at 434.2 (now 435.1). That is a genuine base with a higher low, BUT the entry trigger is not met: price is at its 5-minute average, below the 439.7 pullback high, on thin volume (3k-28k per 5 minutes vs 171k at the open), and the bid/ask is $1.25 wide (0.29%, right at the 0.3% cap).
   - Gate 4 PASS (11:44 ET).
   - **Decision: NO ENTRY this cycle.** The framework's entry is the continuation (break above the pullback high or hold-and-reclaim of the short-term average), and I can't place a resting order on fractional shares, so I wait for the confirmation instead of anticipating it. Planned plan if it confirms at the next scan: entry near 440, stop ~425 (below the 428.5 base, -3.4%), target 2R ~ 470 is above the 456.5 spike high, so the realistic target is the spike high plus a trim; horizon end of day, overnight only with the thesis stated intact (UNH reports Oct 13 and is a read-through risk). Follow-up: record whether HUM breaks 439.7 and holds.
+- No orders. Day trades 2, forced 0.
+
+### Cycle 178 — 2026-10-09 11:54 ET
+- Account $408.38, cash $200.04, 2 of 5 positions, no open orders. STOP CHECKS: TEVA 41.67 (entry 41.51, +0.4%, stop 40.10, clear); its 30-minute hold window ended 11:49 ET, so invalidation rules now apply: relative strength vs generics holds (TEVA +6.2% vs VTRS +0.3%, XLV +1.0%), price above the rising 5-minute lows (41.58-41.65), so no invalidation. KTOS 42.23 (stop 40.20, proactive exit ~40.60, clear). Tape: SPY +0.5%, QQQ +0.4%, SMH -0.6%, ITA +0.7%.
+- Mean-reversion scan: TMUS -12.8% (149.4), ASTS -15.8%, VZ -11.5%, T -10.8% (raw), BKD -7.8%, JOBY -7.7%. All carriers still at/near lows, no basing: gate 4 fail. No entry. (Tier A window closed 11:30; Tier B open.)
+- Momentum scan (9): HUM +12.8%, CCI +14.3%, TEVA +6.2%, FSLY +14.1%, BEKE +3.7%, LI +6.3%, XPEV +3.9%, MNSO +5.5%, CLOV +3.9%. Verdicts for CCI/FSLY/China group/CLOV unchanged.
+- **HUM follow-up:** 437.5 vs 436.1 last cycle. 5-minute bars since 11:15 ET: highs 439.7, 438.4, 437.7, 436.8, 438.7, lows 436.5, 434.2, 435.5, 434.2, 436.0: a tight 434-439.7 range, higher lows intact (434.2 held twice), but it has NOT broken the 439.71 pullback high; volume is light (11-13k per 5 minutes). Gates 1, 2, 4 still pass (UNH +1.0%, ELV +3.2% vs HUM +12.8%). The continuation trigger is still unmet, so still no entry. Follow-up: next scan, enter only on a break and hold above 439.7; if it loses 434, the base is invalid. Cash 200.04 covers one $105 entry.
 - No orders. Day trades 2, forced 0.
