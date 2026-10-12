@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-12 10:54 ET",
+  "as_of": "2026-10-12 11:03 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -909,6 +909,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-12 10:54 ET",
       "equity": 406.9
+    },
+    {
+      "t": "2026-10-12 11:03 ET",
+      "equity": 407.11
     }
   ],
   "positions": [
@@ -917,7 +921,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.295,
+      "price": 42.39,
       "stop": 40.2,
       "target": 47.15
     }
@@ -2638,3 +2642,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
   - Group names: gate 1 unchanged (no same-day verified cause; the extended search in cycle 203 found only older selloff stories), gate 4 unchanged (SMH is still at -2.0% and the names are oscillating at their lows, not making higher lows). FAIL. A group that bounces off the lows and drops back below -7% again within 20 minutes is not basing.
 - Momentum scan: 1 name, CHA (Chagee Holdings, +4.1% at 11.71, relative volume 1.77, cap $2.15B). Universe check: average volume 1.2M x $11.71 = about $14M of average dollar volume, below the $20M floor. Excluded from the universe, not a gate decision. No catalyst checked.
 - No entries, no orders. Day trades 0, forced 0.
+
+### Cycle 207 - 2026-10-12 11:03 ET
+- Account: equity $407.11, cash/BP $303.80, 1 position (KTOS 2.437677 sh @ 42.53, now 42.39; stop 40.20, proactive exit ~40.60, clear). Day P&L about +$0.05 vs $407.06 basis. Trades 0, forced 0.
+- Tape: SPY 778.29, QQQ 746.56 (-0.6%), SMH 590.82 (-2.1%), ITA 207.34 (+0.3%), IWM 278.40 (-0.2%), XLV 171.33 (+0.3%).
+- Mean-reversion scan (11): LITE, CIEN, SMTC, CBRS, TTMI, AAOI, IONQ, FSLY, SECZ, NVTS, RXRX at -7% to -10%. Mostly the AI-hardware group, which widened again rather than basing. Gate 1 (no verified same-day cause) and gate 4 (no base/higher low) fail. FSLY/RXRX/SECZ fail on their own gates.
+- Momentum scan: only CHA +3.6% (rel vol 1.84), below the $20M dollar-volume floor. Fails universe.
+- No entries, no orders. Tier A window closes 11:30 ET; Tier B opens after.
