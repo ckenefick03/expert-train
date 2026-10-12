@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-12 14:33 ET",
+  "as_of": "2026-10-12 14:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -993,6 +993,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-12 14:33 ET",
       "equity": 405.26
+    },
+    {
+      "t": "2026-10-12 14:43 ET",
+      "equity": 405.21
     }
   ],
   "positions": [
@@ -1001,7 +1005,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.62,
+      "price": 41.6,
       "stop": 40.2,
       "target": 47.15
     }
@@ -2880,4 +2884,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Window: Tier B (11:30-14:30) has ended with no mean-reversion entry; Tier C (14:30-15:30) is open now. Tier C needs the same gates.
 - Mean-reversion scan (23): AI-hardware/optical group at or near lows (CBRS -11.1% new low 145.89, SECZ -14.5%, LITE -10.9%, CIEN -10.5%, TTMI -10.8%) plus TXG, FSLY, SMR, BE, PURR, IONQ, and new names OKLO -7.0%, NESR -7.2% (oil services), BETA -7.2% (Beta Technologies). No higher low or reclaim, no verified same-day cause for any of them (not searched individually since the structure fails gate 4 for all). Gates 1 and 4 fail.
 - Momentum scan (13): META +4.2% (749.1, rel vol 1.44) still capped at 751-752, no break; FIGS +12.9%, CCC +10.1%, EBAY +4.4%, SHOP, VFC, BIIB +3.1%, new LW +5.2% (Lamb Weston, rel vol 1.00, no catalyst checked), VIST/FRO/ZIM/DHT, CHA (below floor). None pass.
+- No entries, no orders.
+
+### Cycle 228 - 2026-10-12 14:43 ET
+- Account: equity $405.21, cash/BP $303.80, KTOS 2.437677 sh now 41.60 (entry 42.53, -2.2%; stop 40.20, proactive exit ~40.60, clear by 1.00 point, 2.4% above the level). Stop check done first: not triggered. Peer read for KTOS: the large primes are flat to up (LMT +0.4%, NOC +0.7%, ITA -0.3%) while the smaller drone/space names are weak (AVAV -3.5%, RKLB -3.7%), so KTOS's -1.8% is in line with its closest cohort rather than an isolated break. That does not move the exit level; it would be hit only by KTOS itself trading to ~40.60. Day P&L about -$1.85 vs $407.06 basis. Trades 0, forced 0.
+- Tape: SPY 777.49 (-0.14%), QQQ 745.68 (-0.8%), SMH 591.69 (-1.9%), ITA 205.97 (-0.3%), IWM 278.10 (-0.3%), XLV 171.64 (+0.5%).
+- Mean-reversion scan (19; Tier C open): same AI-hardware/optical group at or near lows (SECZ -15.0%, LITE, CIEN, TTMI, CBRS) plus TXG, FSLY, NESR, SMR, ACHR, IONQ, RXRX. No higher low or reclaim, no verified same-day cause. Gates 1 and 4 fail.
+- Momentum scan (12): META +4.0% (747.3, rel vol 1.48) back from the highs, still no break above 751-752, no verified catalyst; SHOP, EBAY, LW, CCC +10.0%, FIGS +13.0%, VFC, VIST/FRO/ZIM/DHT, CHA fail as logged. None pass.
 - No entries, no orders.
