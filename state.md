@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-12 11:32 ET",
+  "as_of": "2026-10-12 11:42 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -921,6 +921,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-12 11:32 ET",
       "equity": 406.77
+    },
+    {
+      "t": "2026-10-12 11:42 ET",
+      "equity": 406.86
     }
   ],
   "positions": [
@@ -929,7 +933,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.24,
+      "price": 42.28,
       "stop": 40.2,
       "target": 47.15
     }
@@ -2673,3 +2677,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Mean-reversion scan (16): same AI-hardware/optical group (LITE -9.9%, CIEN -9.5%, SMTC, CBRS, TTMI -10.9%, AAOI, MXL, AEHR, NVTS, IONQ) plus COHR -7.7% joining, BE, FSLY, SECZ, RXRX, and ALM -7.0% (new, unrelated miner, no cause checked). The group is still making lows with no higher low, so gate 4 fails; no same-day cause verified, so gate 1 fails. ALM has no cause or base, fails gates 1 and 4. Tier B window now open (11:30-14:30); nothing qualifies.
 - Momentum scan (2): DHT +5.7% (no catalyst cited, no peer divergence check), CHA +5.0% (below the $20M dollar-volume floor). Neither passes.
 - No entries, no orders.
+
+### Cycle 210 - 2026-10-12 11:42 ET
+- Account: equity $406.86, cash/BP $303.80, KTOS 2.437677 sh now 42.28 (entry 42.53; stop 40.20, proactive exit ~40.60, clear). Day P&L about -$0.20 vs $407.06 basis. Trades 0, forced 0.
+- Tape: SPY 778.45 (flat), QQQ 746.74 (-0.6%), SMH 591.77 (-1.9%, a little off the 589.9 low), ITA 207.21 (+0.3%), IWM 278.76 (-0.1%), XLV 171.29 (+0.3%).
+- Mean-reversion scan (14): the AI-hardware/optical group (LITE, CIEN, COHR, SMTC, CBRS, TTMI, AAOI, AEHR, NVTS, IONQ) plus FSLY, SECZ, RXRX, and TXG -7.3% (new, 10x Genomics, no cause checked). The group's losses have narrowed a little (AAOI -7.1%, AEHR -7.3%) but there is still no confirmed higher low or reclaim, and no dated same-day cause. Gates 1 and 4 fail. TXG has no cause or base and fails gates 1 and 4. Tier B window open; nothing qualifies.
+- Momentum scan (2): DHT +5.4% (no cited catalyst), CHA +4.6% (below the $20M dollar-volume floor). Neither passes.
+- No entries, no orders. Next hourly pass with news search: 12:12 ET.
