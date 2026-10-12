@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-12 10:44 ET",
+  "as_of": "2026-10-12 10:54 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Oct 12, 10:44 ET: KTOS 42.45 (+0.2%, ITA +0.3%), stop 40.20 clear. Equity $407.28, cash $303.80, 1/5, day +$0.22. AI-hardware group scan shrank from 10 to 6 names (SNDK, AAOI, HSAI, NVTS recovered); no verified cause, no entries.",
+  "status_note": "Oct 12, 10:54 ET: KTOS 42.30 (-0.2%, ITA +0.2%), stop 40.20 clear. Equity $406.90, cash $303.80, 1/5, day -$0.16. Mean-reversion scan widened back to 10 names (AI hardware + CIEN, FSLY, RXRX): group move, cause unverified, no base. Momentum: only CHA, fails the dollar-volume floor.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-12",
@@ -905,6 +905,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-12 10:44 ET",
       "equity": 407.28
+    },
+    {
+      "t": "2026-10-12 10:54 ET",
+      "equity": 406.9
     }
   ],
   "positions": [
@@ -913,7 +917,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.45,
+      "price": 42.295,
       "stop": 40.2,
       "target": 47.15
     }
@@ -2624,4 +2628,13 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
   - Gate 4: group is stabilizing (SMH off its low, four names left the scan) but none has a confirmed higher low plus reclaim yet. FAIL.
   - Result: no entry. This is the last full-universe look before the Tier A/B boundary at 11:30; re-checking CBRS/LITE for a base plus a dated cause next cycle.
 - Momentum scan: 0 names.
+- No entries, no orders. Day trades 0, forced 0.
+
+### Cycle 206 - Mon Oct 12, 10:54 ET
+- Correction to cycle 205: I wrote that it was the last full-universe look before 11:30. That was wrong; cycles continue every ten minutes through Tier A (to 11:30), B (to 14:30) and C (to 15:30).
+- Account $406.90 (day -$0.16 vs $407.06), cash $303.80, 1/5 positions. KTOS 42.295 (entry 42.53, Fri close 42.36; ITA 207.06, +0.2%): clear of stop 40.20 / proactive exit ~40.60. No open orders.
+- Tape: SPY 778.03 (-0.07%), QQQ 746.26 (-0.7%), SMH 591.03 (-2.0%), IWM 278.32 (-0.2%), XLV 171.27 (+0.3%).
+- Mean-reversion scan (Tier A): 10 names (up from 6 at 10:44). The AI-hardware group is back: LITE -7.8% (1017.21), CIEN -7.6% (415.68; optical networking, new), SMTC -7.7% (172.92), CBRS -7.6% (151.72), TTMI -8.8% (110.41), AAOI -7.4% (101.50; back), IONQ -8.7% (36.44), SECZ -10.0% (12.44). Not group: FSLY -7.1% (27.22; the unexplained Friday +18% spike reversing, no external cause, gate 1 and gate 3 fail), RXRX -7.6% (4.03, cap $2.36B; biotech, no cause checked, no base visible; gate 1 unverified = fail).
+  - Group names: gate 1 unchanged (no same-day verified cause; the extended search in cycle 203 found only older selloff stories), gate 4 unchanged (SMH is still at -2.0% and the names are oscillating at their lows, not making higher lows). FAIL. A group that bounces off the lows and drops back below -7% again within 20 minutes is not basing.
+- Momentum scan: 1 name, CHA (Chagee Holdings, +4.1% at 11.71, relative volume 1.77, cap $2.15B). Universe check: average volume 1.2M x $11.71 = about $14M of average dollar volume, below the $20M floor. Excluded from the universe, not a gate decision. No catalyst checked.
 - No entries, no orders. Day trades 0, forced 0.
