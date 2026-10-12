@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-12 09:54 ET",
+  "as_of": "2026-10-12 10:04 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Oct 12, 09:54 ET: KTOS 42.88 (+1.2% vs ITA +0.3%), stop 40.20 clear. Equity $408.32, cash $303.80, 1/5 positions, day +$1.26. No entries before 10:00 ET. SMH -1.6%. One mean-reversion scan name (SECZ -8.5%, cause unverified).",
+  "status_note": "Oct 12, 10:04 ET: Tier A open, no entries. KTOS 42.37 (flat, ITA +0.1%), stop 40.20 clear. Equity $407.08, cash $303.80, 1/5 positions, day +$0.02. Mean-reversion scan shows four names (CBRS, TTMI, IONQ, SECZ), all still making lows with no verified cause: gate 1 and gate 4 fail. Semis -1.6%.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-12",
@@ -889,6 +889,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-12 09:54 ET",
       "equity": 408.32
+    },
+    {
+      "t": "2026-10-12 10:04 ET",
+      "equity": 407.08
     }
   ],
   "positions": [
@@ -897,7 +901,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.875,
+      "price": 42.37,
       "stop": 40.2,
       "target": 47.15
     }
@@ -953,23 +957,23 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Opening: SPY +0.05%, QQQ -0.45%, SMH -1.7% (semis the weak spot), IWM flat, XLV +0.3%. Carriers are bouncing off Friday's lows (TMUS +2.1%, VZ +2.0%, T +1.3%); CRM +3.1% and CCC +8.5% lead the gappers. Both scans are empty at 09:44, which is normal this early (relative-volume and -7%/+3% filters need the session to develop).",
+    "read": "Semis/AI-tech leading the downside: SMH -1.7%, QQQ -0.5%, IWM -0.3%, SPY flat, XLV +0.3%. CBRS -7.6%, TTMI -7.4%, IONQ -7.9% are all that complex. Carriers keep bouncing (TMUS +3.0%, VZ +2.4%, T +1.9%) but are not in the -7% scan. No same-day news found for any of it.",
     "chips": [
       {
         "name": "SPY",
-        "chg": 0.05
+        "chg": 0.0
       },
       {
         "name": "QQQ",
-        "chg": -0.45
+        "chg": -0.49
       },
       {
         "name": "SMH",
-        "chg": -1.7
+        "chg": -1.66
       },
       {
         "name": "IWM",
-        "chg": 0.02
+        "chg": -0.27
       },
       {
         "name": "XLV",
@@ -977,7 +981,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "KTOS",
-        "chg": 0.92
+        "chg": 0.02
       }
     ]
   }
@@ -2560,3 +2564,17 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Mean-reversion scan: 1 name, SECZ (Securitize Corp.) -8.5% at 12.64, market cap $2.26B, average volume 4.4M. Cause not checked and not verifiable at this time; gate 1 unverified = FAIL, and it is 06 minutes before Tier A opens. Logged for follow-up: re-check after 10:00 with a dated source and the 5-minute base.
 - Momentum scan: 0 names (too early for relative volume to build).
 - No entries (window not open), no orders. Day trades 0, forced 0.
+
+### Cycle 202 - Mon Oct 12, 10:04 ET (Tier A open)
+- Typo fix for cycle 201: "06 minutes" should read "6 minutes".
+- Account $407.08 (day +$0.02 vs the $407.06 basis), cash $303.80, 1/5 positions. KTOS 42.37 (entry 42.53, Fri close 42.36; ITA 206.89, +0.1%): gave back the earlier +1.2% to flat. Stop 40.20 / proactive exit ~40.60 clear. No open orders.
+- Tape: SPY 778.57 (0.0%), QQQ 747.58 (-0.5%), SMH 593.34 (-1.7%), IWM 278.19 (-0.3%), XLV 171.35 (+0.3%).
+- Mean-reversion scan (-7%, Tier A): 4 names.
+  - CBRS (Cerebras) -7.6% at 151.68, cap $39B: 5-minute bars lower highs and lower lows every bar from 156.5 to 153.0 (10:00 low 152.44), no base. Gate 1: no dated, same-day cause found (search returned only July alerts about AI capex skepticism). Gate 4 fail (still printing lows). FAIL.
+  - TTMI -7.4% at 112.11: opens 118.3, low 112.47 at the last bar, new low each bar, no base. No cause found. FAIL (gates 1 and 4). It is in the same AI/hardware complex as CBRS and IONQ, so even with a sector story it would be a group move.
+  - IONQ -7.9% at 36.73: 38.65 open to 37.03 low, new low every bar, volume ~340K per 5 minutes and rising. No cause found. FAIL (gates 1 and 4).
+  - SECZ -10.9% at 12.32 (cap $2.26B; carried over from cycle 201): 13.70 to 12.51 with lower highs; no cause found. FAIL (gates 1 and 4).
+  Common read: all four are the semis/AI-tech complex (SMH -1.7%) selling off together with nothing verified; that is a market-wide group move, not a name-specific dislocation, and none has based.
+- Momentum scan: 0 names (nothing +3% with relative volume >= 1.0 at 10:04).
+- Carriers (watch, not in scan): TMUS 152.98 (+3.0%), VZ 42.66 (+2.4%), T 22.60 (+1.9%): rising off Friday's lows, base forming but they are now up on the day, not dislocated. No MR entry.
+- No entries, no orders. Day trades 0, forced 0.
