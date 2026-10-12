@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-12 12:13 ET",
+  "as_of": "2026-10-12 12:23 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -937,6 +937,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-12 12:13 ET",
       "equity": 406.99
+    },
+    {
+      "t": "2026-10-12 12:23 ET",
+      "equity": 406.86
     }
   ],
   "positions": [
@@ -945,7 +949,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.33,
+      "price": 42.27,
       "stop": 40.2,
       "target": 47.15
     }
@@ -2718,4 +2722,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - News (extended search): reports dated today say Brent +1.2% to about $106.19 and WTI +1.2% to about $92.96 on Houthi attacks on Saudi Arabia and tanker incidents near the Strait of Hormuz; an Oct 8 report mentions a fresh Persian Gulf tanker attack. Nothing dated today explaining the AI-hardware selloff; still no verified same-day cause for it.
 - Mean-reversion scan (14): same AI-hardware/optical group (LITE, CIEN, COHR, SMTC, CBRS, TTMI, AAOI, NVTS, IONQ) plus TXG, FSLY, SECZ, ALM, RXRX. No higher low or reclaim, no verified cause. Gates 1 and 4 fail.
 - Momentum scan (3): VIST +4.8%, DHT +5.4%, CHA +4.9% (below the $20M dollar-volume floor). The energy names have a real, dated catalyst (oil on Middle East supply fears), but the move is theme-wide: DHT +5.4%, FRO +5.0%, INSW +3.3%, YPF +4.1%, VIST +4.8%, XLE +1.4%. Gate 1 (relative-strength divergence from the peer complex) fails because they all move together; no name stands out, and a geopolitical headline spike can reverse quickly. No pullback-and-reclaim base is evidenced either (gate 3). Not entered.
+- No entries, no orders.
+
+### Cycle 214 - 2026-10-12 12:23 ET
+- Account: equity $406.86, cash/BP $303.80, KTOS 2.437677 sh now 42.27 (entry 42.53; stop 40.20, proactive exit ~40.60, clear). Day P&L about -$0.20 vs $407.06 basis. Trades 0, forced 0.
+- Tape: SPY 778.44 (flat), QQQ 747.26 (-0.5%), SMH 593.43 (-1.6%), ITA 206.79 (+0.1%), IWM 278.57 (-0.1%), XLV 171.32 (+0.3%).
+- Mean-reversion scan (15): same AI-hardware/optical group plus TSEM -7.1% (new, Tower Semiconductor, same group, no cause), TXG, FSLY, SECZ, ALM, RXRX. Still no higher low or reclaim and no verified same-day cause. Gates 1 and 4 fail. Tier B open; nothing qualifies.
+- Momentum scan (3): VIST +4.7%, DHT +5.5%, CHA +5.5% (below $20M dollar-volume floor). Energy names are theme-wide moves with no divergence from peers (see cycle 213), so gate 1 still fails; no base shown. No entry.
 - No entries, no orders.
