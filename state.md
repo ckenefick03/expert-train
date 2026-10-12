@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-12 15:42 ET",
+  "as_of": "2026-10-12 15:48 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Oct 12, 10:54 ET: KTOS 42.30 (-0.2%, ITA +0.2%), stop 40.20 clear. Equity $406.90, cash $303.80, 1/5, day -$0.16. Mean-reversion scan widened back to 10 names (AI hardware + CIEN, FSLY, RXRX): group move, cause unverified, no base. Momentum: only CHA, fails the dollar-volume floor.",
+  "status_note": "Mon Oct 12 close: 0 trades (no setup passed the gates). KTOS (adopted) rolls overnight, written exit 40.60 / stop 40.20. Equity about $405.16 vs $407.06 start; 7.5% below the $437.99 peak (breaker at $394.19).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-12",
@@ -1021,6 +1021,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-12 15:42 ET",
       "equity": 405.06
+    },
+    {
+      "t": "2026-10-12 15:48 ET",
+      "equity": 405.16
     }
   ],
   "positions": [
@@ -1029,7 +1033,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.54,
+      "price": 41.58,
       "stop": 40.2,
       "target": 47.15
     }
@@ -1085,7 +1089,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Semis/AI hardware selling off together: SMH -2.2%, QQQ -0.7%, IWM -0.3%, SPY -0.08%, XLV +0.3%. The -7% scan has 10 names (SNDK, LITE, SMTC, CBRS, TTMI, AAOI, IONQ, HSAI, SECZ, NVTS), all that complex. No same-day news found; search only returns prior selloffs (profit-taking, over-owned, AI capex worries). Carriers keep bouncing (TMUS +2.9%, VZ +2.0%, T +1.4%). Momentum scan empty.",
+    "read": "AI-hardware/optical selloff (SMH -2%) with no verified same-day cause; drone/space names weak; oil and tankers up on Middle East supply headlines; META the only large-cap standout. Breadth thin; no base forming in the selloff names by the close.",
     "chips": [
       {
         "name": "SPY",
@@ -2959,3 +2963,25 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY 777.82 (-0.1%), QQQ 745.89 (-0.7%), SMH 591.20 (-2.0%), ITA 206.07, IWM 277.84 (-0.4%), XLV 171.88 (+0.6%).
 - Entries are closed (cutoff 15:30 ET), so no scans this cycle (same reasoning as cycle 233). The close recap follows at 15:47 ET.
 - No entries, no orders.
+
+### Cycle 235 - 2026-10-12 15:48 ET (close recap, last cycle of the day)
+- Account: equity $405.16, cash/BP $303.80, KTOS 2.437677 sh at 41.58 (entry 42.53, -2.2%). Stop check: KTOS is above the written exit level (~40.60) by 0.98 point and above the stop (40.20); neither is hit. Orders today: none (history confirmed empty). Open orders: none. The official close and the Tuesday start-of-day equity basis will be recomputed after the close, as on Friday.
+- Tape at the recap: SPY 777.82 (-0.1%), QQQ 745.86 (-0.7%), SMH 591.06 (-2.0%), ITA 206.12 (-0.3%), IWM 277.87 (-0.4%), XLV 171.88 (+0.6%), AVAV 131.80 (-3.9%), RKLB 65.39 (-4.1%).
+
+**Overnight statement (explicit, per position)**
+- **KTOS (adopted holding, 2.437677 sh, about $101, roughly 25% of equity): ROLLS OVERNIGHT.** Why I judge it acceptable, and what is not proven:
+  - Price: 41.58 is above the written proactive-exit level (~40.60) and the hard stop (40.20); the day's range was about 41.48-42.88 and it closes near the low end of that range, so this is a hold with a weaker tape than Friday, not a strong one.
+  - Peers: its closest cohort (AVAV -3.9%, RKLB -4.1%) is down the same way and the large primes (LMT, NOC) are flat to up, so KTOS is moving with its cohort rather than showing a name-specific break. I could not verify a same-day cause for the drone/space weakness (searches returned only older stories), so I cannot claim the cause is benign; I only know nothing dated says it is stock-specific.
+  - Catalysts: next earnings are tentatively Nov 3, 2026 after the close (not verified); I found no scheduled company event before the next session. No overnight catalyst identified.
+  - Risk size: a 5% gap down to about 39.50 would cost about $5 versus today's close (roughly 1.2% of equity), and it would breach the 40.20 stop at the open, since fractional shares cannot hold a resting stop. That is the main thing I am accepting, and it is why this is a disclosed hold and not an "intact thesis" in the strict sense: the thesis is not proven, only not broken, and the sizing makes the downside survivable.
+  - Alternative considered: selling now locks in roughly -$2.4 versus entry with no rule requiring it (neither the exit level nor the stop is hit, and the 30-minute rule and loss limit are not in play). I chose not to exit by discretion. If I am wrong, tomorrow's plan below limits the damage.
+  - Plan for Tuesday: at the 9:30 open check KTOS; if it opens at or below ~40.60, exit at market in regular hours (exits are allowed at any time; entry windows do not apply to exits). If it is between 40.60 and 41.58, the normal stop check applies each cycle.
+- No other positions. Cash $303.80 is not at risk overnight.
+
+**Day recap - Mon 2026-10-12**
+- What ran: pre-open brief at 08:31 ET and cycles 200-235 through the close (the 11:03-15:48 ET stretch ran on schedule with only the normal 6-minute skips; those skips were logged). Two coverage gaps were disclosed earlier: the 10:04-10:32 ET late delivery (the 10:12 hourly pass and 10:22 cycle did not run on time; the extended news search was done at cycle 203 instead), and none after that.
+- Trades: 0 (min 1 / max 10; this was a no-qualifying-setup day, not a forced one). Orders placed today: 0.
+- Skips worth naming: (1) The AI-hardware/optical selloff (LITE, CIEN, COHR, TTMI, CBRS, AAOI, SMTC, and 15+ others at -7% to -16%) failed mean-reversion gates 1 and 4 all day: no verified dated cause and no higher low or reclaim; names kept making new lows into the close. (2) META (+3.5-4.3%) was the one genuine relative-strength standout; it failed the catalyst gate (only a trimmed analyst target and an unverifiable third-party app-data item) and the base-and-break gate (rejected 751-752 four times). (3) FIGS, CCC, EBAY, SHOP, VFC, LW, BIIB, KSS: no verified catalyst or no base. (4) Oil/tanker/shipping names (DHT, FRO, INSW-type, VIST, ZIM): theme-wide with a real dated oil catalyst, but no divergence from peers.
+- P&L: day about -$1.90 (equity $405.16 vs the $407.06 start), all from the KTOS mark; no realized P&L today. The earlier Friday TEVA loss (-$1.24) is already in the books. Equity is 7.5% below the $437.99 peak; the 10% breaker sits at $394.19, about $11 below the current level. That is a watch item, not a trigger.
+- Corrections/disclosures today: the 6-minute-skip cycles were logged as skips; no typos found in the closing entries.
+- Tomorrow: UNH earnings (sympathy risk for HUM/ELV/CLOV, which I do not hold), banks Tue/Wed, ASML Wed, TSM Thu for the semis. Still open: re-price the older skip lists, and confirm PDT/day-trade rules for the limited_margin account (unverified, no problem hit).
