@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-12 10:32 ET",
+  "as_of": "2026-10-12 10:35 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Oct 12, 10:32 ET: AI-hardware selloff (SMH -2.2%), 10 names in the -7% scan, all one group with no verified same-day cause: gate 1 fail, no entries. KTOS 42.25 (ITA +0.2%), stop 40.20 clear. Equity $406.82, cash $303.80, 1/5 positions, day -$0.24. Missed the 10:12 and 10:22 triggers (delivered 10:31).",
+  "status_note": "Oct 12, 10:35 ET: delayed hourly run (scheduled 10:12) covered by cycle 203 plus skip follow-ups. KTOS 42.20 (ITA +0.2%), stop 40.20 clear. Equity $406.66, cash $303.80, 1/5 positions, day -$0.40. No entries; AI-hardware group still weak.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-12",
@@ -897,6 +897,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-12 10:32 ET",
       "equity": 406.82
+    },
+    {
+      "t": "2026-10-12 10:35 ET",
+      "equity": 406.66
     }
   ],
   "positions": [
@@ -905,7 +909,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.25,
+      "price": 42.195,
       "stop": 40.2,
       "target": 47.15
     }
@@ -2593,4 +2597,17 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
   - Result: no entries. Logged as skips with follow-up: if SMH reclaims its short-term average and CBRS holds above 148.5 with a dated cause, re-evaluate CBRS first (cap $39B, most liquid, 2x volume).
 - Momentum scan: 0 names (nothing +3% with relative volume >= 1.0). CCC 7.71 (+9.8%) and CRM 235.30 (+2.7%) from the pre-open watch do not pass the screen (CCC relative volume below 1.0 now).
 - Carriers: TMUS 152.86 (+2.9%), VZ 42.50 (+2.0%), T 22.49 (+1.4%), steadily up; not dislocated any more.
+- No entries, no orders. Day trades 0, forced 0.
+
+### Cycle 204 - Mon Oct 12, 10:35 ET (delayed hourly run + skip follow-ups)
+- The hourly-cycle trigger scheduled for 10:12 ET was delivered at 10:34 ET. Cycle 203 had already done the stop check, both full-universe scans and the news search two minutes earlier (10:32), so I did not repeat them; this entry adds a fresh stop check and the follow-ups on earlier skips.
+- Stop check: KTOS 42.195 (bid 42.22 / ask 42.25; Fri close 42.36, entry 42.53), ITA 207.07 (+0.2%): clear of stop 40.20 and proactive exit ~40.60. Account $406.66 (day -$0.40), cash $303.80, 1/5 positions. SMH 589.63 (-2.3%).
+- Follow-ups on earlier skips (prices at 10:34 vs the price/close I skipped them at):
+  - FSLY 27.26 (-7.0% vs Fri close 29.30; skipped Fri at +18% with no verifiable catalyst): giving back the Friday spike. Gate-2 fail on Friday looks right. Not a mean-reversion candidate (a reversal of an unexplained spike, no external cause).
+  - HPQ 29.71 (-1.6% vs Fri close 30.20; skipped Fri at -7% with no cause): kept falling. Skip validated.
+  - HUM 429.49 (-0.6% vs Fri close 431.87): now below the ~434 level I invalidated at; skip validated.
+  - ASTS 53.61 (+5.2% vs Fri close 50.97): bounced after Friday's -12%; I skipped it (gate 1 company-specific/ambiguous). A bounce I did not take; not a gate error.
+  - TEVA 41.17 (+0.2% vs Fri close 41.10; I sold at 41.0215 Friday): about flat; the exit cost nothing and avoided the weekend.
+  - CCI 79.68 (flat) / AMT 181.53 (-0.4%): towers holding Friday's gains, still no entry.
+  - CBRS 151.09 (-8.0% vs Fri close 164.17) and SECZ 12.44 (-10.0%): flat to slightly up from the 10:04 level, same group-move story; no base confirmed.
 - No entries, no orders. Day trades 0, forced 0.
