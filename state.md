@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-12 12:23 ET",
+  "as_of": "2026-10-12 12:33 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -941,6 +941,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-12 12:23 ET",
       "equity": 406.86
+    },
+    {
+      "t": "2026-10-12 12:33 ET",
+      "equity": 406.89
     }
   ],
   "positions": [
@@ -949,7 +953,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.27,
+      "price": 42.29,
       "stop": 40.2,
       "target": 47.15
     }
@@ -2729,4 +2733,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY 778.44 (flat), QQQ 747.26 (-0.5%), SMH 593.43 (-1.6%), ITA 206.79 (+0.1%), IWM 278.57 (-0.1%), XLV 171.32 (+0.3%).
 - Mean-reversion scan (15): same AI-hardware/optical group plus TSEM -7.1% (new, Tower Semiconductor, same group, no cause), TXG, FSLY, SECZ, ALM, RXRX. Still no higher low or reclaim and no verified same-day cause. Gates 1 and 4 fail. Tier B open; nothing qualifies.
 - Momentum scan (3): VIST +4.7%, DHT +5.5%, CHA +5.5% (below $20M dollar-volume floor). Energy names are theme-wide moves with no divergence from peers (see cycle 213), so gate 1 still fails; no base shown. No entry.
+- No entries, no orders.
+
+### Cycle 215 - 2026-10-12 12:33 ET
+- Account: equity $406.89, cash/BP $303.80, KTOS 2.437677 sh now 42.29 (entry 42.53; stop 40.20, proactive exit ~40.60, clear). Day P&L about -$0.17 vs $407.06 basis. Trades 0, forced 0.
+- Tape: SPY 778.40 (flat), QQQ 747.15 (-0.5%), SMH 593.03 (-1.7%), ITA 206.62 (flat), IWM 278.61 (-0.1%), XLV 171.39 (+0.3%).
+- Mean-reversion scan (14): same AI-hardware/optical group plus TXG, FSLY, SECZ, ALM, RXRX. CBRS made another low (147.50), TTMI and SECZ near lows. No higher low or reclaim and no verified same-day cause. Gates 1 and 4 fail. Tier B open; nothing qualifies.
+- Momentum scan (5): VIST +4.7%, FRO +5.0%, DHT +5.6% (all theme-wide energy/tanker moves, no divergence, gate 1 fails), CHA +5.4% (below $20M dollar-volume floor), and FIGS +10.4% (17.42, new this cycle, cap $2.6B, rel vol 1.03). FIGS is a name-specific move, so I checked it: the 5-minute bars show an open near 15.87 (prior close about 15.78) and a steady climb all session with shallow pullbacks and no clean break from a base. The news search returned only older FIGS earnings stories (none dated today), so there is no cited, dated catalyst. Gate 2 fails; also a late chase of a +10% move has poor risk/reward against a 3-4% stop. Not entered.
 - No entries, no orders.
