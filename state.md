@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-12 14:43 ET",
+  "as_of": "2026-10-12 14:53 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -997,6 +997,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-12 14:43 ET",
       "equity": 405.21
+    },
+    {
+      "t": "2026-10-12 14:53 ET",
+      "equity": 405.27
     }
   ],
   "positions": [
@@ -1005,7 +1009,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.6,
+      "price": 41.625,
       "stop": 40.2,
       "target": 47.15
     }
@@ -2891,4 +2895,12 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY 777.49 (-0.14%), QQQ 745.68 (-0.8%), SMH 591.69 (-1.9%), ITA 205.97 (-0.3%), IWM 278.10 (-0.3%), XLV 171.64 (+0.5%).
 - Mean-reversion scan (19; Tier C open): same AI-hardware/optical group at or near lows (SECZ -15.0%, LITE, CIEN, TTMI, CBRS) plus TXG, FSLY, NESR, SMR, ACHR, IONQ, RXRX. No higher low or reclaim, no verified same-day cause. Gates 1 and 4 fail.
 - Momentum scan (12): META +4.0% (747.3, rel vol 1.48) back from the highs, still no break above 751-752, no verified catalyst; SHOP, EBAY, LW, CCC +10.0%, FIGS +13.0%, VFC, VIST/FRO/ZIM/DHT, CHA fail as logged. None pass.
+- No entries, no orders.
+
+### Cycle 229 - 2026-10-12 14:53 ET
+- Account: equity $405.27, cash/BP $303.80, KTOS 2.437677 sh now 41.625 (entry 42.53, -2.1%; stop 40.20, proactive exit ~40.60, clear by about 1.0 point). Stop check done first: not triggered. KTOS has held 41.60-41.63 for about 20 minutes. Cohort: AVAV 132.34 (-3.5%), RKLB 65.52 (-3.9%), ITA 205.88 (-0.4%). Day P&L about -$1.79 vs $407.06 basis. Trades 0, forced 0.
+- Tape: SPY 777.11 (-0.19%), QQQ 744.96 (-0.8%), SMH 590.39 (-2.1%), ITA 205.88 (-0.4%), IWM 277.94 (-0.4%), XLV 171.65 (+0.5%). Slightly heavier into the last hour.
+- Mean-reversion scan (23, Tier C open): AI-hardware/optical group at or near lows (SECZ -16.2% new low, CIEN -10.7%, TTMI, LITE, CBRS) plus MTSI-type names, OKLO, NESR, NN, PURR, SMR, TXG, FSLY, RXRX. No higher low or reclaim; no verified same-day cause. Gates 1 and 4 fail. Not forced.
+- Momentum scan (12): META +3.6% (744.6) fading further from the 751-752 ceiling; SHOP +3.9%, EBAY +3.7%, LW, CCC, FIGS +13.4%, VFC, VIST/FRO/ZIM/DHT, CHA fail as logged. None pass.
+- Plan for the close: 15:30 ET is the entry cutoff. The close recap is at 15:47 ET with an explicit overnight statement for KTOS. Ahead of that, KTOS (an adopted holding, not a Ledger-opened trade) is the only open position; the overnight decision will weigh the 40.60 level, the gap risk, and whether defense/space peers are stabilizing.
 - No entries, no orders.
