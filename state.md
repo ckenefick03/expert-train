@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-12 15:33 ET",
+  "as_of": "2026-10-12 15:42 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1017,6 +1017,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-12 15:33 ET",
       "equity": 405.09
+    },
+    {
+      "t": "2026-10-12 15:42 ET",
+      "equity": 405.06
     }
   ],
   "positions": [
@@ -1025,7 +1029,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.55,
+      "price": 41.54,
       "stop": 40.2,
       "target": 47.15
     }
@@ -2948,4 +2952,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY 777.42 (-0.15%), QQQ 745.59 (-0.8%), SMH 590.95 (-2.1%), ITA 206.11, IWM 277.84 (-0.4%), XLV 171.64 (+0.4%).
 - The 15:30 ET entry cutoff has passed, so no new entries are possible this session. I did not run the mean-reversion or momentum previews this cycle because they could not lead to an order; this is a deliberate skip, not a missed scan. The last full scans were at 15:23 ET (cycle 232): nothing passed.
 - Close plan: the 15:47 ET recap will state the overnight-hold position for KTOS explicitly. Inputs: KTOS is an adopted holding (not a Ledger-opened trade); it is 2.3% below entry and 2.3% above the written exit level; its cohort (AVAV, RKLB) is down 3.5-4% with no verified cause; there is no overnight catalyst identified for KTOS; risk of a gap against a $100 position is on the order of $2-5 (1-2.5% of equity). The momentum rule is not directly applicable to an adopted holding, but its principle (hold only with an explicitly intact thesis, never roll silently) will be applied in the recap.
+- No entries, no orders.
+
+### Cycle 234 - 2026-10-12 15:42 ET (post-cutoff stop check; scans skipped)
+- Account: equity $405.06, cash/BP $303.80, KTOS 2.437677 sh now 41.54 (entry 42.53, -2.3%; stop 40.20, proactive exit ~40.60, clear by 0.94 point). Stop check done: not triggered. ITA 206.07 (-0.3%), AVAV 132.00 (-3.7%), RKLB 65.50 (-4.0%). Day P&L about -$2.00 vs $407.06 basis. Trades 0, forced 0.
+- Tape: SPY 777.82 (-0.1%), QQQ 745.89 (-0.7%), SMH 591.20 (-2.0%), ITA 206.07, IWM 277.84 (-0.4%), XLV 171.88 (+0.6%).
+- Entries are closed (cutoff 15:30 ET), so no scans this cycle (same reasoning as cycle 233). The close recap follows at 15:47 ET.
 - No entries, no orders.
