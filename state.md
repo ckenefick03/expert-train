@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-12 13:52 ET",
+  "as_of": "2026-10-12 14:03 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -977,6 +977,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-12 13:52 ET",
       "equity": 406.11
+    },
+    {
+      "t": "2026-10-12 14:03 ET",
+      "equity": 406.08
     }
   ],
   "positions": [
@@ -985,7 +989,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.97,
+      "price": 41.96,
       "stop": 40.2,
       "target": 47.15
     }
@@ -2834,3 +2838,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Mean-reversion scan (23): AI-hardware/optical group still at or near lows (SECZ -14.6% new low 11.80, LITE -10.7%, TTMI -10.8%, CBRS -10.2%, AXTI -9.1%) plus TXG, FSLY, ALM, RXRX, NN, SMR, BE, ACHR, MTSI, VIAV. No higher low or reclaim; no dated same-day cause. Gates 1 and 4 fail. Tier B closes 14:30 ET; nothing qualifies.
 - Momentum scan (11): META +4.2% (748.8), SHOP +3.5%, EBAY +3.6%, CCC +9.7%, FIGS +12.1%, VFC +5.4%, VIST/FRO/DHT/ZIM (theme-wide), CHA (below floor). Same read as cycle 222: no dated bullish catalyst on any name-specific mover and no base-and-break on any of them. No entry.
 - No entries, no orders.
+
+### Cycle 224 - 2026-10-12 14:03 ET
+- Account: equity $406.08, cash/BP $303.80, KTOS 2.437677 sh now 41.96 (entry 42.53, -1.3%; stop 40.20, proactive exit ~40.60, clear by about 1.4 points). Day P&L about -$0.98 vs $407.06 basis. Trades 0, forced 0.
+- Tape: SPY 777.64 (-0.12%), QQQ 745.60 (-0.8%), SMH 591.01 (-2.0%), ITA 206.54 (-0.05%), IWM 278.26 (-0.2%), XLV 171.48 (+0.4%).
+- Mean-reversion scan (22): same AI-hardware/optical group at or near lows (LITE -11.1% day low, CIEN -10.4%, TTMI -11.4%, CBRS -10.4%, AAOI -9.5%, SECZ -14.3%) plus TXG, FSLY, ALM, RXRX, SMR, BE, ACHR, MTSI, VIAV. No higher low or reclaim; no dated same-day cause. Gates 1 and 4 fail. Tier B closes 14:30 ET; nothing qualifies.
+- Momentum scan (10): META +4.1% (748.1), SHOP, EBAY, VFC, FIGS +12.2%, CCC +9.8%, VIST/FRO/DHT (theme-wide), CHA (below floor). Unchanged from cycles 222-223: no dated bullish catalyst on the name-specific movers, no base-and-break. No entry.
+- No entries, no orders. Next hourly pass with news search: 14:12 ET.
