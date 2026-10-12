@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-09 15:48 ET",
+  "as_of": "2026-10-12 08:31 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,12 +41,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Oct 9 close: sold TEVA at 41.02 (-$1.24, -0.35R) at 15:47 ET, a momentum invalidation exit above the stop (faded from +6.1% to +4.5% on the day, lost its entry level and printed lower lows while XLV and VTRS held). Rolling KTOS overnight (42.29, stop 40.20). Equity $406.79, cash $303.80, day -$1.74. Breaker level 394.19 not in play.",
+  "status_note": "Oct 12 pre-open (read-only): KTOS rolled the weekend with no gap (pre-market 42.42 vs Friday close 42.36; stop 40.20 / proactive exit ~40.60). Equity $407.21, cash $303.80, 1/5 positions. No entries before 10:00 ET. Earnings week starts Tuesday (banks, UNH).",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-10-09",
-    "start_equity": 408.53,
-    "trades": 3,
+    "date": "2026-10-12",
+    "start_equity": 407.06,
+    "trades": 0,
     "forced": 0
   },
   "equity_history": [
@@ -877,6 +877,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-09 15:48 ET",
       "equity": 406.79
+    },
+    {
+      "t": "2026-10-12 08:31 ET (pre-market)",
+      "equity": 407.21
     }
   ],
   "positions": [
@@ -885,7 +889,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.285,
+      "price": 42.42,
       "stop": 40.2,
       "target": 47.15
     }
@@ -941,31 +945,31 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Quiet, mildly bullish tape: SPY +0.6%, QQQ +0.4%, SMH -0.8% (semis lagging), XLV +1.6%, ITA +0.9%. The only real action was the carrier/tower complex after the SpaceX spectrum news: TMUS/VZ/T -10-13% on 3x volume and never based, AMT/CCI +8-13%. Scans produced nothing that passed all four gates.",
+    "read": "Flat-to-soft pre-market: SPY +0.06%, QQQ -0.2%, SMH -0.8% (semis lagging again), IWM flat, XLV +0.4%. Tankers (FRO/DHT/STNG) and software/pharma large caps (CRM, BMY, BIIB) lead the +3% gappers; CCC +10% on 2x volume. Carriers are bouncing slightly off Friday's lows (TMUS +1.4%, VZ +0.7%, T +0.4%). Bank earnings begin Tuesday (JPM/WFC/GS/C), UNH Tuesday, ASML Wednesday, TSM Thursday.",
     "chips": [
       {
         "name": "SPY",
-        "chg": 0.6
+        "chg": 0.06
       },
       {
         "name": "QQQ",
-        "chg": 0.43
+        "chg": -0.2
       },
       {
         "name": "SMH",
-        "chg": -0.78
+        "chg": -0.77
+      },
+      {
+        "name": "IWM",
+        "chg": -0.01
       },
       {
         "name": "XLV",
-        "chg": 1.6
+        "chg": 0.4
       },
       {
-        "name": "ITA",
-        "chg": 0.94
-      },
-      {
-        "name": "VTRS",
-        "chg": 1.4
+        "name": "KTOS",
+        "chg": 0.14
       }
     ]
   }
@@ -2511,3 +2515,25 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
     - CCI/AMT +8-13% (towers, same spectrum news): group move, gate 1 fail. FSLY +18%, SNOW, IONS, IBRX, SNAP, CLF, CRCL, PDD, GME, PONY, ACHR, VEEV, HNGE, FUTU, China ADRs: no dated catalyst I could verify, mostly ~1.0 relative volume, gate 2 fail. EMAT: below the $20M dollar-volume floor.
   - News: WebSearch returned undated or old items almost every time; I cited none as today's other than the dated catalysts already on file.
   - Not done / still open for Monday: re-price older skip lists (RIOT, CLSK, CIFR, HUT, MARA, NWG, HSBC, GIS, CAG, LVS, ACN, COHR); confirm PDT/day-trade applicability for limited_margin (still unverified, no problem hit); follow-ups on COHR/ALAB/RVMD/GFS/COCO/CMG; check KTOS at the open Monday first; run the Oct 12 pre-open brief.
+
+### Pre-open brief 2026-10-12 08:31 ET (read-only, no orders)
+- Reconcile (live): Agentic Account 4490 equity $407.21, cash $303.80, 1 position (KTOS 2.437677 sh). No open orders; Friday's TEVA sale (fill 41.0215) and RKLB sale are the only orders of Oct 9. Peak 437.99, breaker level 394.19 (drawdown ~7.0%). Note on equity basis: the Friday close recap used 406.79 (read at 15:48 ET, before the final 12 minutes); recomputed at Friday's official close (KTOS 42.36) the account was $407.06, which is the day-start used today.
+- Stop check on pre-market prices: KTOS pre-market last 42.42 (thin; quote 42.30 x 43.14 is wide) vs Friday close 42.36. Stop 40.20 and proactive exit ~40.60 are 4.4-5.2% away. No gap over the weekend, so the Friday-to-Monday gap risk I flagged did not hit. ITA pre-market quote is unusable (bid 188.76 / ask 213.00), so I have no clean peer read for KTOS yet; first read after the open.
+- Tape (pre-market vs Friday close): SPY 779.00 (+0.06%), QQQ 749.67 (-0.2%), SMH 598.73 (-0.8%), IWM 278.89 (0.0%), XLV 171.50 (+0.4%). Equity futures/headline search returned only 2014-2020 articles, so no macro headline is cited. Calendar (get_earnings_calendar, dated): Tue Oct 13 am JPM, WFC, GS, C, JNJ, UNH, DPZ; Wed Oct 14 am BAC, MS, ASML, BLK, PGR; Thu Oct 15 TSM, PNC, SCHW, PLD (am); Fri Oct 16 regional banks, TRV. UNH Tuesday is a sympathy risk for HUM/ELV/CLOV; ASML Wednesday and TSM Thursday are the semis catalysts behind SMH's softness.
+- News/politics: no usable dated news found this cycle (the one search returned stale items). Nothing is cited as a catalyst. Existing dated catalyst on file for the carriers (SpaceX/Starlink spectrum purchase, Oct 8-9) is unchanged.
+- Gap list (pre-market, thin liquidity, treat as unconfirmed): up 3-10%: CCC +10.4% ($7.75, 20.6M pre-market shares vs 11.2M average), LQDA +5.7%, DHT +4.5%, CRM +4.1%, FRO +3.8%, IREN +3.8%, ASTS +3.8%, BMY +3.7%, BIIB +3.7%, SNAP +3.4%, SLM +3.2%, STNG +3.2%, FSLR +3.2%. Down 4%+: only ALB -4.4% ($96.80). Nothing is down 7% yet, so there are no mean-reversion candidates that pass the scan threshold at this hour.
+- Friday follow-ups: HUM closed 431.87 (below my ~434 invalidation level from cycle 180; confirms that exit rule was reasonable); TMUS/VZ/T closed 148.58/41.65/22.18 and are bouncing slightly (+1.4/+0.7/+0.4% pre-market); CCI 79.64 and AMT 182.24 held their gains into the close and are flat pre-market; HPQ closed 30.20 (near lows) and is flat; FSLY closed 29.30 and is -0.8% pre-market; TEVA closed 41.10, +0.1% pre-market (my 41.02 exit is about right).
+- WATCH, mean-reversion (3-5; none qualifies yet, all need a fresh -7% print and a verified name-specific or sector-wide external cause, and a base):
+  1. TMUS / VZ / T as a group: the base test. Friday lows were about 148.2 / 41.0 / 22.04. If they hold those and reclaim the short-term average on declining volume, that is the first evidence of a base (gate 4). They will not appear in the -7% scan against Friday's close, so I need to check them by name.
+  2. HPQ (30.20): down 7% Friday on no verified cause, now flat. Only revisit if a verifiable cause appears and it bases.
+  3. ASTS: bouncing +3.8% pre-market after a -12% to -15% Friday; the cause (spectrum news) is real but company-specific effect is ambiguous. Watch, do not chase a bounce.
+  4. ALB (-4.4% pre): short of -7%; check cause and whether the lithium group is moving together (group move fails gate 1).
+- WATCH, momentum (3-5; none passes yet, all need a verified catalyst, relative strength vs peers, a held pullback, and the 10:30 ET earliest entry):
+  1. CCC (+10.4%, second up day, 2x volume): the strongest relative-volume mover. No catalyst verified, so gate 2 fails until I find a dated reason.
+  2. CRM (+4.1%): large cap, software has been bid (SNOW, VEEV Friday). Check whether it is leading or just following the software group, and for a dated catalyst.
+  3. BMY / BIIB (+3.7% each): pharma names moving together with XLV +0.4%; treat as a group move unless one separates from the other.
+  4. LQDA (+5.7%): market cap ~$2.45B, just above the $2B floor; check spread and the $20M dollar-volume test before anything else.
+  5. KTOS/ITA peer read: not a candidate, but KTOS's first 30 minutes against ITA decides whether the held position stays.
+  Excluded as group moves: tankers FRO/DHT/STNG (same-direction group), the carriers/towers complex.
+- Held-name risks: KTOS only (adopted, weekend now behind it). No earnings on it this week in the high-cap calendar.
+- Rules reminder for today: no entries before 10:00 ET (mean-reversion Tier A 10:00-11:30, B 11:30-14:30, C 14:30-15:30; momentum earliest 10:30; none after 15:30). Entry size min($105, buying power - $0.50); day starts with 0 trades, so the 1-trade minimum is not pre-satisfied and I will not force one.
