@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-12 14:03 ET",
+  "as_of": "2026-10-12 14:13 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -981,6 +981,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-12 14:03 ET",
       "equity": 406.08
+    },
+    {
+      "t": "2026-10-12 14:13 ET",
+      "equity": 405.81
     }
   ],
   "positions": [
@@ -989,7 +993,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.96,
+      "price": 41.85,
       "stop": 40.2,
       "target": 47.15
     }
@@ -2845,3 +2849,12 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Mean-reversion scan (22): same AI-hardware/optical group at or near lows (LITE -11.1% day low, CIEN -10.4%, TTMI -11.4%, CBRS -10.4%, AAOI -9.5%, SECZ -14.3%) plus TXG, FSLY, ALM, RXRX, SMR, BE, ACHR, MTSI, VIAV. No higher low or reclaim; no dated same-day cause. Gates 1 and 4 fail. Tier B closes 14:30 ET; nothing qualifies.
 - Momentum scan (10): META +4.1% (748.1), SHOP, EBAY, VFC, FIGS +12.2%, CCC +9.8%, VIST/FRO/DHT (theme-wide), CHA (below floor). Unchanged from cycles 222-223: no dated bullish catalyst on the name-specific movers, no base-and-break. No entry.
 - No entries, no orders. Next hourly pass with news search: 14:12 ET.
+
+### Cycle 225 - 2026-10-12 14:13 ET (hourly pass with news)
+- Account: equity $405.81, cash/BP $303.80, KTOS 2.437677 sh now 41.85 (entry 42.53, -1.6%; stop 40.20, proactive exit ~40.60, clear by about 1.25 points). KTOS is a bit weaker than ITA (206.18, -0.2%): lagging by about 0.7% today. Still well above the level; keep watching each cycle. Day P&L about -$1.25 vs $407.06 basis. Trades 0, forced 0.
+- Tape: SPY 777.61 (-0.12%), QQQ 745.92 (-0.7%), SMH 591.48 (-2.0%), ITA 206.18 (-0.2%), IWM 278.23 (-0.3%), XLV 171.54 (+0.4%).
+- News (extended search, META): same-day reports exist but disagree. StockStory (undated snippet) attributes a ~3.6% afternoon jump to third-party app-intelligence data showing early retention for Meta's standalone AI assistant ("Muse") rivaling ChatGPT; Investing.com attributes the morning gain to analyst activity and pre-earnings positioning (Cantor kept Overweight, trimmed target to $840 from $860; Q3 report expected later this month); MarketBeat confirms a +3.9% move on Oct 12 but gives no cause. I cannot verify the date of the app-data item, and it is a third-party estimate, not a company announcement. Treated as a possible but unverified catalyst; gate 2 is not cleanly met.
+- META price action (5-minute bars, last two hours): it has now tested the 751-752 area four times (day high 752.24 at 13:05 ET, again 13:25, 13:45, plus the 16:55Z spike down to 737.5 on heavy volume) and rejected each time, closing back around 747. No break and hold above the range, so gate 3 still fails. Also, with under two hours left and the Q3 report due later this month, an end-of-day trade has little room and holding overnight would need an intact thesis I do not have. Not entered.
+- Mean-reversion scan (20): the same AI-hardware/optical group at or near lows (LITE -10.8%, CIEN -10.6%, TTMI -10.8%, CBRS -10.4%, AAOI -9.4%, SECZ -13.9%) plus TXG, FSLY, SMR, BE, ACHR, VIAV, MXL, AEHR, NVTS, IONQ, RXRX. No higher low or reclaim; no dated same-day cause for the group (search for the group again produced nothing dated today). Gates 1 and 4 fail. Tier B closes 14:30 ET.
+- Momentum scan (11): META (above), SHOP +3.8%, EBAY +3.9%, CCC +9.7%, FIGS +11.9%, VFC +5.4%, VIST/FRO/ZIM/DHT (theme-wide), CHA (below floor). None pass.
+- No entries, no orders.
