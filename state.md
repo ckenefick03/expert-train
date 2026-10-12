@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-12 09:44 ET",
+  "as_of": "2026-10-12 09:54 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Oct 12, 09:44 ET: KTOS 42.75 (+0.9%, ITA +0.1%), stop 40.20 clear. Equity $408.01, cash $303.80, 1/5 positions, day +$0.95. Entries open at 10:00 ET (mean-reversion) / 10:30 ET (momentum). Both full-universe scans were empty at 09:44; semis weak (SMH -1.7%).",
+  "status_note": "Oct 12, 09:54 ET: KTOS 42.88 (+1.2% vs ITA +0.3%), stop 40.20 clear. Equity $408.32, cash $303.80, 1/5 positions, day +$1.26. No entries before 10:00 ET. SMH -1.6%. One mean-reversion scan name (SECZ -8.5%, cause unverified).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-12",
@@ -885,6 +885,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-12 09:44 ET",
       "equity": 408.01
+    },
+    {
+      "t": "2026-10-12 09:54 ET",
+      "equity": 408.32
     }
   ],
   "positions": [
@@ -893,7 +897,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.75,
+      "price": 42.875,
       "stop": 40.2,
       "target": 47.15
     }
@@ -2549,3 +2553,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Watchlist check from the pre-open brief: TMUS 151.65 (+2.1%), VZ 42.50 (+2.0%), T 22.46 (+1.3%): holding above Friday's lows (148.2/41.0/22.04) and bouncing; a base is not established yet (need a higher low and quieter volume). CCC 7.62 (+8.5%), CRM 236.34 (+3.1%): momentum watch, no catalyst verified yet.
 - Entries: mean-reversion Tier A opens 10:00 ET, momentum 10:30 ET. No orders this cycle.
 - Day trades 0, forced 0.
+
+### Cycle 201 - Mon Oct 12, 09:54 ET (still before the 10:00 window)
+- Account $408.32 (day +$1.26 vs $407.06 basis), cash $303.80, 1/5 positions. KTOS 42.875 (+1.2%; ITA 207.21, +0.3%) vs stop 40.20 / proactive exit ~40.60: clear and outperforming its sector ETF. No orders open.
+- Tape: SPY 778.47 (-0.01%), QQQ 747.51 (-0.5%), SMH 593.81 (-1.6%), IWM 278.91 (0.0%), XLV 171.58 (+0.45%).
+- Mean-reversion scan: 1 name, SECZ (Securitize Corp.) -8.5% at 12.64, market cap $2.26B, average volume 4.4M. Cause not checked and not verifiable at this time; gate 1 unverified = FAIL, and it is 06 minutes before Tier A opens. Logged for follow-up: re-check after 10:00 with a dated source and the 5-minute base.
+- Momentum scan: 0 names (too early for relative volume to build).
+- No entries (window not open), no orders. Day trades 0, forced 0.
