@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-12 10:04 ET",
+  "as_of": "2026-10-12 10:32 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Oct 12, 10:04 ET: Tier A open, no entries. KTOS 42.37 (flat, ITA +0.1%), stop 40.20 clear. Equity $407.08, cash $303.80, 1/5 positions, day +$0.02. Mean-reversion scan shows four names (CBRS, TTMI, IONQ, SECZ), all still making lows with no verified cause: gate 1 and gate 4 fail. Semis -1.6%.",
+  "status_note": "Oct 12, 10:32 ET: AI-hardware selloff (SMH -2.2%), 10 names in the -7% scan, all one group with no verified same-day cause: gate 1 fail, no entries. KTOS 42.25 (ITA +0.2%), stop 40.20 clear. Equity $406.82, cash $303.80, 1/5 positions, day -$0.24. Missed the 10:12 and 10:22 triggers (delivered 10:31).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-12",
@@ -893,6 +893,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-12 10:04 ET",
       "equity": 407.08
+    },
+    {
+      "t": "2026-10-12 10:32 ET",
+      "equity": 406.82
     }
   ],
   "positions": [
@@ -901,7 +905,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.37,
+      "price": 42.25,
       "stop": 40.2,
       "target": 47.15
     }
@@ -957,31 +961,31 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Semis/AI-tech leading the downside: SMH -1.7%, QQQ -0.5%, IWM -0.3%, SPY flat, XLV +0.3%. CBRS -7.6%, TTMI -7.4%, IONQ -7.9% are all that complex. Carriers keep bouncing (TMUS +3.0%, VZ +2.4%, T +1.9%) but are not in the -7% scan. No same-day news found for any of it.",
+    "read": "Semis/AI hardware selling off together: SMH -2.2%, QQQ -0.7%, IWM -0.3%, SPY -0.08%, XLV +0.3%. The -7% scan has 10 names (SNDK, LITE, SMTC, CBRS, TTMI, AAOI, IONQ, HSAI, SECZ, NVTS), all that complex. No same-day news found; search only returns prior selloffs (profit-taking, over-owned, AI capex worries). Carriers keep bouncing (TMUS +2.9%, VZ +2.0%, T +1.4%). Momentum scan empty.",
     "chips": [
       {
         "name": "SPY",
-        "chg": 0.0
+        "chg": -0.08
       },
       {
         "name": "QQQ",
-        "chg": -0.49
+        "chg": -0.69
       },
       {
         "name": "SMH",
-        "chg": -1.66
+        "chg": -2.2
       },
       {
         "name": "IWM",
-        "chg": -0.27
+        "chg": -0.31
       },
       {
         "name": "XLV",
-        "chg": 0.31
+        "chg": 0.33
       },
       {
         "name": "KTOS",
-        "chg": 0.02
+        "chg": -0.26
       }
     ]
   }
@@ -2577,4 +2581,16 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
   Common read: all four are the semis/AI-tech complex (SMH -1.7%) selling off together with nothing verified; that is a market-wide group move, not a name-specific dislocation, and none has based.
 - Momentum scan: 0 names (nothing +3% with relative volume >= 1.0 at 10:04).
 - Carriers (watch, not in scan): TMUS 152.98 (+3.0%), VZ 42.66 (+2.4%), T 22.60 (+1.9%): rising off Friday's lows, base forming but they are now up on the day, not dislocated. No MR entry.
+- No entries, no orders. Day trades 0, forced 0.
+
+### Cycle 203 - Mon Oct 12, 10:32 ET (momentum window now open)
+- GAP DISCLOSURE: the 10:12 hourly pass (with news search) and the 10:22 cycle did not run on time. The :22 trigger was scheduled for 14:22Z (10:22 ET) and reached this session at 14:31Z; the :12 hourly trigger was not delivered separately. So there was no cycle between 10:04 and 10:32 (about 28 minutes) in the window where Tier A and momentum entries were open. The stop check is clear now (below). I ran the news search this cycle in place of the 10:12 pass.
+- Account $406.82 (day -$0.24 vs $407.06), cash $303.80, 1/5 positions. KTOS 42.25 (entry 42.53, Fri close 42.36; ITA 207.10, +0.2%) vs stop 40.20 / proactive exit ~40.60: clear. No open orders.
+- Tape: SPY 777.96 (-0.08%), QQQ 746.07 (-0.7%), SMH 590.05 (-2.2%), IWM 278.09 (-0.3%), XLV 171.37 (+0.3%).
+- Mean-reversion scan (-7%, Tier A): 10 names, all one group. SNDK -7.2% (1468), LITE -7.1% (1025), SMTC -7.4% (173.4), CBRS -8.1% (150.94), TTMI -9.6% (109.45), AAOI -7.2% (101.8), IONQ -9.1% (36.25), HSAI -7.4% (14.83), SECZ -10.4% (12.38), NVTS -7.0% (10.02). The group is AI-hardware/semis, with SMH -2.2%; this is a sector move, not 10 name-specific dislocations.
+  - Gate 1 (external cause) for all: FAIL. Web search (extended) found no October 12 coverage; it only returned earlier selloff stories (profit-taking after big runs, "over-owned" tech note, AI-capex worries, from weeks and months ago). A sector-wide cause can satisfy gate 1, but only if it is verified for today; I cannot cite one, so unverified = FAIL.
+  - Gate 4 (base, not downtrend) 5-minute read from 10:00: CBRS stabilizing in 150.1-151.0 after a 148.5 low at 10:10-10:15 (tight, volume fading from 476K to 105-130K); SNDK ranging 1464-1485; LITE 1017-1038; SMTC 171.6-175; AAOI 101.4-103.5; NVTS 10.00-10.12; IONQ 36.0-36.4 after a 35.89 low; TTMI still making lower lows (109.36). Several are consolidating but none has a higher low plus reclaim, and SMH itself is still near its low (589.4-592.5). Gate 4 not met for any of them.
+  - Result: no entries. Logged as skips with follow-up: if SMH reclaims its short-term average and CBRS holds above 148.5 with a dated cause, re-evaluate CBRS first (cap $39B, most liquid, 2x volume).
+- Momentum scan: 0 names (nothing +3% with relative volume >= 1.0). CCC 7.71 (+9.8%) and CRM 235.30 (+2.7%) from the pre-open watch do not pass the screen (CCC relative volume below 1.0 now).
+- Carriers: TMUS 152.86 (+2.9%), VZ 42.50 (+2.0%), T 22.49 (+1.4%), steadily up; not dislocated any more.
 - No entries, no orders. Day trades 0, forced 0.
