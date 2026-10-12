@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-12 15:03 ET",
+  "as_of": "2026-10-12 15:13 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1005,6 +1005,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-12 15:03 ET",
       "equity": 405.43
+    },
+    {
+      "t": "2026-10-12 15:13 ET",
+      "equity": 405.21
     }
   ],
   "positions": [
@@ -1013,7 +1017,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.69,
+      "price": 41.6,
       "stop": 40.2,
       "target": 47.15
     }
@@ -2915,3 +2919,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Mean-reversion scan (17, Tier C): AI-hardware/optical group at or near lows (SECZ -14.3%, LITE -10.8%, CIEN -10.6%, TTMI -11.0%, CBRS -10.2%), plus TXG, TWST-type names, SMR, FSLY, RXRX. No higher low or reclaim, no verified same-day cause. Gates 1 and 4 fail.
 - Momentum scan (12): META +3.5% (743.7, down from the 751-752 ceiling), SHOP, EBAY, LW, CCC, FIGS +11.1%, VFC, VIST/FRO/ZIM/DHT, CHA: all fail as logged. None pass.
 - No entries, no orders. Entry cutoff 15:30 ET in 27 minutes; next hourly pass with news search at 15:12 ET.
+
+### Cycle 231 - 2026-10-12 15:13 ET (hourly pass with news)
+- Account: equity $405.21, cash/BP $303.80, KTOS 2.437677 sh now 41.60 (entry 42.53, -2.2%; stop 40.20, proactive exit ~40.60, clear by exactly 1.00 point). Stop check done first: not triggered. Cohort: ITA 206.03 (-0.3%), AVAV 132.45 (-3.4%), RKLB 65.73 (-3.6%). Day P&L about -$1.85 vs $407.06 basis. Trades 0, forced 0.
+- Tape: SPY 777.29 (-0.16%), QQQ 745.02 (-0.8%), SMH 590.32 (-2.2%), ITA 206.03, IWM 278.00 (-0.3%), XLV 171.70 (+0.5%).
+- News (extended search on KTOS and the drone/space cohort): nothing dated Oct 12. Results were older (a May 2026 KTOS drop, an Aug 20 2026 "drone trade unwinds" story, a July note that KTOS and AVAV were down about 38-41% year to date). So no same-day cause is verified for the drone/space weakness; I cannot say it is a named event, only that the cohort is weak together today and has been in a long downtrend this year. That matters for the overnight decision (see the recap).
+- Mean-reversion scan (21, Tier C): AI-hardware/optical group at or near lows (SECZ -15.6% new low 11.66, LITE, CIEN, TTMI, CBRS) plus OKLO, NESR, SMR, ACHR, TXG, FSLY, RXRX, MXL. No higher low or reclaim; no verified cause. Gates 1 and 4 fail.
+- Momentum scan (14): META +3.4% (742.8, slipping below the 743-746 area; no break, no verified catalyst), SHOP +4.2%, EBAY, LW, FIGS +12.3%, VFC, CCC, VIST/FRO/ZIM/DHT, CHA; new JAN +3.2% (Janus Living, REIT) and KSS +3.9% (Kohl's), no catalysts checked. None pass.
+- No entries, no orders. Entry cutoff 15:30 ET (17 minutes).
