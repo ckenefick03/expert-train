@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-12 14:23 ET",
+  "as_of": "2026-10-12 14:33 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -989,6 +989,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-12 14:23 ET",
       "equity": 405.63
+    },
+    {
+      "t": "2026-10-12 14:33 ET",
+      "equity": 405.26
     }
   ],
   "positions": [
@@ -997,7 +1001,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.775,
+      "price": 41.62,
       "stop": 40.2,
       "target": 47.15
     }
@@ -2868,4 +2872,12 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY 777.33 (-0.16%), QQQ 745.52 (-0.8%), SMH 591.10 (-2.0%), ITA 206.01 (-0.3%), IWM 278.24 (-0.25%), XLV 171.48 (+0.4%).
 - Mean-reversion scan (20): the AI-hardware/optical group and the same side names (SECZ -14.2%, LITE -10.9%, CBRS -10.5% new low 146.88, TTMI, CIEN, COHR, AAOI, TXG, FSLY, SMR, BE, ACHR). No higher low or reclaim, no dated same-day cause. Gates 1 and 4 fail. Tier B closes in about seven minutes with no entry (not forced).
 - Momentum scan (12): META +4.2% (749.2, rel vol 1.39), still capped by the 751-752 area with no break and hold. New: BIIB +3.7% (233.95, rel vol 1.01; no catalyst checked). SHOP, EBAY, CCC, FIGS, VFC, VIST/FRO/ZIM/DHT, CHA unchanged: fail as logged. None pass.
+- No entries, no orders.
+
+### Cycle 227 - 2026-10-12 14:33 ET
+- Account: equity $405.26, cash/BP $303.80, KTOS 2.437677 sh now 41.62 (entry 42.53, -2.1%; stop 40.20, proactive exit ~40.60, clear by about 1.0 point, about 2.4% above the exit level). ITA 206.01 (-0.3%), so KTOS is lagging it by about 1.8% and has been fading all afternoon. The exit trigger is unchanged and not hit; I am checking it every cycle, and on the next one it needs a fresh look at proximity and whether the defense group is still holding. Day P&L about -$1.80 vs $407.06 basis, well inside the $100 limit. Trades 0, forced 0.
+- Tape: SPY 777.34 (-0.16%), QQQ 745.47 (-0.8%), SMH 591.28 (-2.0%), ITA 206.01 (-0.3%), IWM 278.17 (-0.3%), XLV 171.60 (+0.5%).
+- Window: Tier B (11:30-14:30) has ended with no mean-reversion entry; Tier C (14:30-15:30) is open now. Tier C needs the same gates.
+- Mean-reversion scan (23): AI-hardware/optical group at or near lows (CBRS -11.1% new low 145.89, SECZ -14.5%, LITE -10.9%, CIEN -10.5%, TTMI -10.8%) plus TXG, FSLY, SMR, BE, PURR, IONQ, and new names OKLO -7.0%, NESR -7.2% (oil services), BETA -7.2% (Beta Technologies). No higher low or reclaim, no verified same-day cause for any of them (not searched individually since the structure fails gate 4 for all). Gates 1 and 4 fail.
+- Momentum scan (13): META +4.2% (749.1, rel vol 1.44) still capped at 751-752, no break; FIGS +12.9%, CCC +10.1%, EBAY +4.4%, SHOP, VFC, BIIB +3.1%, new LW +5.2% (Lamb Weston, rel vol 1.00, no catalyst checked), VIST/FRO/ZIM/DHT, CHA (below floor). None pass.
 - No entries, no orders.
