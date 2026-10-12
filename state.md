@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-12 13:03 ET",
+  "as_of": "2026-10-12 13:13 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -957,6 +957,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-12 13:03 ET",
       "equity": 406.45
+    },
+    {
+      "t": "2026-10-12 13:13 ET",
+      "equity": 406.43
     }
   ],
   "positions": [
@@ -965,7 +969,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.11,
+      "price": 42.1,
       "stop": 40.2,
       "target": 47.15
     }
@@ -2777,4 +2781,12 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
   - Gate 3 (held pullback then break/reclaim): 5-minute bars show a gap up from 718.67 to a 728 open, a run to about 745 by 9:40 ET, and then three hours of sideways trading between about 739 and 751 with no break higher. The 12:55 ET bar sold off from 747 to 739 on 458K shares (the heaviest volume since the open) before recovering to 744. That is a failed push, not a base-and-break. Gate 3 is not met.
   - Not entered. Will re-check on the 13:12 hourly pass, with a fresh search, if it holds its relative strength.
 - Other momentum names: EBAY +3.7% (no catalyst), FIGS +11.0% (no dated catalyst), VIST/FRO/DHT (theme-wide energy, no divergence), CHA +6.0% (below $20M dollar-volume floor). None pass.
+- No entries, no orders.
+
+### Cycle 219 - 2026-10-12 13:13 ET (hourly pass with news)
+- Account: equity $406.43, cash/BP $303.80, KTOS 2.437677 sh now 42.10 (entry 42.53, -1.0%; stop 40.20, proactive exit ~40.60, clear by about 1.5 points). Day P&L about -$0.63 vs $407.06 basis. Trades 0, forced 0.
+- Tape: SPY 777.92 (-0.08%), QQQ 746.21 (-0.7%), SMH 592.61 (-1.8%), ITA 206.58 (flat, KTOS tracking), IWM 278.24 (-0.3%), XLV 171.33 (+0.3%). META 744.79 (+3.6%) vs GOOGL -0.1%, MSFT +1.0%, NVDA -1.2%.
+- News (extended search): nothing dated October 12. The only recent item surfaced is an Oct 8 market wrap (pullback as oil jumped, chip stocks down on AI-trade jitters, tied there to a Financial Times report about an AI company's revenue). That is background for the semis weakness, not a verified same-day cause, so mean-reversion gate 1 stays unmet. Search for an apparel catalyst (FIGS/VFC) also returned only older, undated stories.
+- Mean-reversion scan (21): AI-hardware/optical group (LITE -10.6%, CIEN, COHR, MTSI, SMTC, CBRS, TTMI -10.9%, AAOI, MXL, AEHR, AXTI, VIAV, NVTS, IONQ), plus TXG, TWST, BE, ALM, FSLY, SECZ -11.6%, RXRX. No higher low or reclaim; many at or near lows. Gates 1 and 4 fail. Tier B open; nothing qualifies.
+- Momentum scan (8): META +3.6% (744.57, rel vol 1.09) still diverges from QQQ. Re-checked per last cycle's note: it is still range-bound around 739-751 with no break higher, and no dated, bullish catalyst turned up (the only specific item remains a trimmed analyst target). Gates 2 and 3 still fail. EBAY +3.9% (no catalyst), FIGS +11.2% and VFC +5.9% (new; an apparel pairing but no verified cause), VIST/FRO/DHT (theme-wide energy), CHA (below $20M floor). None pass.
 - No entries, no orders.
