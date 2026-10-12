@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-12 13:13 ET",
+  "as_of": "2026-10-12 13:22 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -961,6 +961,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-12 13:13 ET",
       "equity": 406.43
+    },
+    {
+      "t": "2026-10-12 13:22 ET",
+      "equity": 406.5
     }
   ],
   "positions": [
@@ -969,7 +973,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.1,
+      "price": 42.13,
       "stop": 40.2,
       "target": 47.15
     }
@@ -2789,4 +2793,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - News (extended search): nothing dated October 12. The only recent item surfaced is an Oct 8 market wrap (pullback as oil jumped, chip stocks down on AI-trade jitters, tied there to a Financial Times report about an AI company's revenue). That is background for the semis weakness, not a verified same-day cause, so mean-reversion gate 1 stays unmet. Search for an apparel catalyst (FIGS/VFC) also returned only older, undated stories.
 - Mean-reversion scan (21): AI-hardware/optical group (LITE -10.6%, CIEN, COHR, MTSI, SMTC, CBRS, TTMI -10.9%, AAOI, MXL, AEHR, AXTI, VIAV, NVTS, IONQ), plus TXG, TWST, BE, ALM, FSLY, SECZ -11.6%, RXRX. No higher low or reclaim; many at or near lows. Gates 1 and 4 fail. Tier B open; nothing qualifies.
 - Momentum scan (8): META +3.6% (744.57, rel vol 1.09) still diverges from QQQ. Re-checked per last cycle's note: it is still range-bound around 739-751 with no break higher, and no dated, bullish catalyst turned up (the only specific item remains a trimmed analyst target). Gates 2 and 3 still fail. EBAY +3.9% (no catalyst), FIGS +11.2% and VFC +5.9% (new; an apparel pairing but no verified cause), VIST/FRO/DHT (theme-wide energy), CHA (below $20M floor). None pass.
+- No entries, no orders.
+
+### Cycle 220 - 2026-10-12 13:22 ET
+- Account: equity $406.50, cash/BP $303.80, KTOS 2.437677 sh now 42.13 (entry 42.53, -0.9%; stop 40.20, proactive exit ~40.60, clear by about 1.5 points). Day P&L about -$0.56 vs $407.06 basis. Trades 0, forced 0.
+- Tape: SPY 777.85 (-0.09%), QQQ 746.01 (-0.7%), SMH 592.22 (-1.8%), ITA 206.70 (flat, KTOS tracking), IWM 278.33 (-0.2%), XLV 171.34 (+0.3%).
+- Mean-reversion scan (18): the AI-hardware/optical group again at or near lows (AAOI -9.2% new low 99.60, COHR -9.0%, CIEN -10.0%, LITE -10.8%, TTMI -10.8%, CBRS, SECZ -11.8%) plus TXG, FSLY, ALM, RXRX. No higher low or reclaim, no verified cause. Gates 1 and 4 fail. Tier B open; nothing qualifies.
+- Momentum scan (8): META +4.2% (748.5, rel vol 1.14) is pressing the top of its range (the day's high so far was about 751.6) but has not broken it, and there is still no dated bullish catalyst, so gates 2 and 3 are unchanged. The rest (EBAY, FIGS, VFC, VIST/FRO/DHT, CHA) fail as logged in cycles 218-219. No entry.
 - No entries, no orders.
