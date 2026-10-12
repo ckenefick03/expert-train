@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-12 11:03 ET",
+  "as_of": "2026-10-12 11:19 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -913,6 +913,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-12 11:03 ET",
       "equity": 407.11
+    },
+    {
+      "t": "2026-10-12 11:19 ET",
+      "equity": 407.18
     }
   ],
   "positions": [
@@ -921,7 +925,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.39,
+      "price": 42.425,
       "stop": 40.2,
       "target": 47.15
     }
@@ -2649,3 +2653,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Mean-reversion scan (11): LITE, CIEN, SMTC, CBRS, TTMI, AAOI, IONQ, FSLY, SECZ, NVTS, RXRX at -7% to -10%. Mostly the AI-hardware group, which widened again rather than basing. Gate 1 (no verified same-day cause) and gate 4 (no base/higher low) fail. FSLY/RXRX/SECZ fail on their own gates.
 - Momentum scan: only CHA +3.6% (rel vol 1.84), below the $20M dollar-volume floor. Fails universe.
 - No entries, no orders. Tier A window closes 11:30 ET; Tier B opens after.
+
+### Cycle 208 - 2026-10-12 11:19 ET (late delivery of the 11:12 hourly pass; ran at 11:19, no 11:12-11:19 data missed beyond that)
+- Account: equity $407.18, cash/BP $303.80, KTOS 2.437677 sh now 42.425 (entry 42.53; stop 40.20, proactive exit ~40.60, clear). Day P&L about +$0.12 vs $407.06 basis. Trades 0, forced 0.
+- Tape: SPY 778.41 (-0.02%), QQQ 746.54 (-0.6%), SMH 590.23 (-2.2%), ITA 207.31 (+0.3%), IWM 278.40 (-0.2%), XLV 171.37 (+0.3%).
+- News search (extended): returned only undated or older 2026 chip-selloff stories (July: AI-spend doubts, profit-taking, rates). Nothing dated today, so no same-day cause verified. Not cited as today's.
+- Mean-reversion scan (14): LITE -9.2%, CIEN -9.2%, BE -7.8%, SMTC -8.5%, CBRS -8.3%, TTMI -9.9%, AAOI -7.9%, MXL -7.9%, AEHR -7.9%, IONQ -9.3%, FSLY -8.4%, SECZ -9.8%, NVTS -7.7%, RXRX -7.6%. Group is making new lows and widening (BE, MXL, AEHR added), so no base or higher low. Gate 1 (verified external cause) and gate 4 fail across the board. Tier A window closes 11:30 ET with no entry; not forced.
+- Momentum scan (2): DHT +5.4% (rel vol 1.10) has no cited catalyst or peer-divergence check, fails gates 1-2. CHA +3.7% is below the $20M dollar-volume floor.
+- No entries, no orders.
