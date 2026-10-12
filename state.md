@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-12 11:42 ET",
+  "as_of": "2026-10-12 11:53 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -925,6 +925,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-12 11:42 ET",
       "equity": 406.86
+    },
+    {
+      "t": "2026-10-12 11:53 ET",
+      "equity": 406.77
     }
   ],
   "positions": [
@@ -933,7 +937,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.28,
+      "price": 42.245,
       "stop": 40.2,
       "target": 47.15
     }
@@ -2683,4 +2687,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY 778.45 (flat), QQQ 746.74 (-0.6%), SMH 591.77 (-1.9%, a little off the 589.9 low), ITA 207.21 (+0.3%), IWM 278.76 (-0.1%), XLV 171.29 (+0.3%).
 - Mean-reversion scan (14): the AI-hardware/optical group (LITE, CIEN, COHR, SMTC, CBRS, TTMI, AAOI, AEHR, NVTS, IONQ) plus FSLY, SECZ, RXRX, and TXG -7.3% (new, 10x Genomics, no cause checked). The group's losses have narrowed a little (AAOI -7.1%, AEHR -7.3%) but there is still no confirmed higher low or reclaim, and no dated same-day cause. Gates 1 and 4 fail. TXG has no cause or base and fails gates 1 and 4. Tier B window open; nothing qualifies.
 - Momentum scan (2): DHT +5.4% (no cited catalyst), CHA +4.6% (below the $20M dollar-volume floor). Neither passes.
+- No entries, no orders. Next hourly pass with news search: 12:12 ET.
+
+### Cycle 211 - 2026-10-12 11:53 ET
+- Account: equity $406.77, cash/BP $303.80, KTOS 2.437677 sh now 42.245 (entry 42.53; stop 40.20, proactive exit ~40.60, clear). Day P&L about -$0.29 vs $407.06 basis. Trades 0, forced 0.
+- Tape: SPY 778.81 (+0.03%), QQQ 747.53 (-0.5%), SMH 592.58 (-1.8%), ITA 206.89 (+0.1%, KTOS roughly in line), IWM 278.67 (-0.1%), XLV 171.28 (+0.3%).
+- Mean-reversion scan (13): LITE, CIEN, COHR, SMTC, CBRS (-9.7%, new low 148.21), TTMI, IONQ, NVTS, FSLY, SECZ (-11.1%), RXRX, TXG, ALM. No base or higher low in the group (CBRS and SECZ made fresh lows), and no dated same-day cause found. Gates 1 and 4 fail. Tier B open; nothing qualifies.
+- Momentum scan (2): DHT +5.4% (no cited catalyst), CHA +5.1% (below the $20M dollar-volume floor). Neither passes.
 - No entries, no orders. Next hourly pass with news search: 12:12 ET.
