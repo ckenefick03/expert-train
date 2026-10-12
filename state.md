@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-12 14:53 ET",
+  "as_of": "2026-10-12 15:03 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1001,6 +1001,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-12 14:53 ET",
       "equity": 405.27
+    },
+    {
+      "t": "2026-10-12 15:03 ET",
+      "equity": 405.43
     }
   ],
   "positions": [
@@ -1009,7 +1013,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.625,
+      "price": 41.69,
       "stop": 40.2,
       "target": 47.15
     }
@@ -2904,3 +2908,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Momentum scan (12): META +3.6% (744.6) fading further from the 751-752 ceiling; SHOP +3.9%, EBAY +3.7%, LW, CCC, FIGS +13.4%, VFC, VIST/FRO/ZIM/DHT, CHA fail as logged. None pass.
 - Plan for the close: 15:30 ET is the entry cutoff. The close recap is at 15:47 ET with an explicit overnight statement for KTOS. Ahead of that, KTOS (an adopted holding, not a Ledger-opened trade) is the only open position; the overnight decision will weigh the 40.60 level, the gap risk, and whether defense/space peers are stabilizing.
 - No entries, no orders.
+
+### Cycle 230 - 2026-10-12 15:03 ET
+- Account: equity $405.43, cash/BP $303.80, KTOS 2.437677 sh now 41.69 (entry 42.53, -2.0%; stop 40.20, proactive exit ~40.60, clear by about 1.1 points). Stop check done first: not triggered. Cohort: ITA 206.08 (-0.3%), AVAV 132.57 (-3.3%), RKLB 65.81 (-3.5%). Day P&L about -$1.63 vs $407.06 basis. Trades 0, forced 0.
+- Tape: SPY 777.33 (-0.16%), QQQ 745.26 (-0.8%), SMH 590.86 (-2.1%), ITA 206.08, IWM 278.11 (-0.3%), XLV 171.77 (+0.6%).
+- Mean-reversion scan (17, Tier C): AI-hardware/optical group at or near lows (SECZ -14.3%, LITE -10.8%, CIEN -10.6%, TTMI -11.0%, CBRS -10.2%), plus TXG, TWST-type names, SMR, FSLY, RXRX. No higher low or reclaim, no verified same-day cause. Gates 1 and 4 fail.
+- Momentum scan (12): META +3.5% (743.7, down from the 751-752 ceiling), SHOP, EBAY, LW, CCC, FIGS +11.1%, VFC, VIST/FRO/ZIM/DHT, CHA: all fail as logged. None pass.
+- No entries, no orders. Entry cutoff 15:30 ET in 27 minutes; next hourly pass with news search at 15:12 ET.
