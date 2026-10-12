@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-12 11:53 ET",
+  "as_of": "2026-10-12 12:03 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -929,6 +929,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-12 11:53 ET",
       "equity": 406.77
+    },
+    {
+      "t": "2026-10-12 12:03 ET",
+      "equity": 406.71
     }
   ],
   "positions": [
@@ -937,7 +941,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.245,
+      "price": 42.215,
       "stop": 40.2,
       "target": 47.15
     }
@@ -2695,3 +2699,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Mean-reversion scan (13): LITE, CIEN, COHR, SMTC, CBRS (-9.7%, new low 148.21), TTMI, IONQ, NVTS, FSLY, SECZ (-11.1%), RXRX, TXG, ALM. No base or higher low in the group (CBRS and SECZ made fresh lows), and no dated same-day cause found. Gates 1 and 4 fail. Tier B open; nothing qualifies.
 - Momentum scan (2): DHT +5.4% (no cited catalyst), CHA +5.1% (below the $20M dollar-volume floor). Neither passes.
 - No entries, no orders. Next hourly pass with news search: 12:12 ET.
+
+### Cycle 212 - 2026-10-12 12:03 ET
+- Account: equity $406.71, cash/BP $303.80, KTOS 2.437677 sh now 42.215 (entry 42.53; stop 40.20, proactive exit ~40.60, clear). Day P&L about -$0.35 vs $407.06 basis. Trades 0, forced 0.
+- Tape: SPY 778.90 (+0.04%), QQQ 747.57 (-0.5%), SMH 593.62 (-1.6%, slowly recovering), ITA 207.03 (+0.2%), IWM 278.67 (-0.1%), XLV 171.35 (+0.3%).
+- Mean-reversion scan (13): same AI-hardware/optical group plus TXG, FSLY, SECZ, ALM, RXRX. Group is flat to slightly better than the lows but has no confirmed higher low plus reclaim, and no dated same-day cause. Gates 1 and 4 fail. Tier B open; nothing qualifies.
+- Momentum scan (3): VIST +4.2% (Argentine oil and gas, rel vol 1.00, new this cycle), DHT +5.5% (tankers, rel vol 1.26), CHA +5.3% (below $20M dollar-volume floor). VIST and DHT both being energy-linked may point to an oil move, but no catalyst has been found or cited and no peer-divergence check has been done, so gates 1 and 2 are not met. VIST's relative volume is only 1.0. Will search oil/energy news on the 12:12 hourly pass; no entry now.
+- No entries, no orders.
