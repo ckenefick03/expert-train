@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-12 13:22 ET",
+  "as_of": "2026-10-12 13:32 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -965,6 +965,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-12 13:22 ET",
       "equity": 406.5
+    },
+    {
+      "t": "2026-10-12 13:32 ET",
+      "equity": 406.47
     }
   ],
   "positions": [
@@ -973,7 +977,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.13,
+      "price": 42.12,
       "stop": 40.2,
       "target": 47.15
     }
@@ -2800,4 +2804,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY 777.85 (-0.09%), QQQ 746.01 (-0.7%), SMH 592.22 (-1.8%), ITA 206.70 (flat, KTOS tracking), IWM 278.33 (-0.2%), XLV 171.34 (+0.3%).
 - Mean-reversion scan (18): the AI-hardware/optical group again at or near lows (AAOI -9.2% new low 99.60, COHR -9.0%, CIEN -10.0%, LITE -10.8%, TTMI -10.8%, CBRS, SECZ -11.8%) plus TXG, FSLY, ALM, RXRX. No higher low or reclaim, no verified cause. Gates 1 and 4 fail. Tier B open; nothing qualifies.
 - Momentum scan (8): META +4.2% (748.5, rel vol 1.14) is pressing the top of its range (the day's high so far was about 751.6) but has not broken it, and there is still no dated bullish catalyst, so gates 2 and 3 are unchanged. The rest (EBAY, FIGS, VFC, VIST/FRO/DHT, CHA) fail as logged in cycles 218-219. No entry.
+- No entries, no orders.
+
+### Cycle 221 - 2026-10-12 13:32 ET
+- Account: equity $406.47, cash/BP $303.80, KTOS 2.437677 sh now 42.12 (entry 42.53, -1.0%; stop 40.20, proactive exit ~40.60, clear by about 1.5 points). Day P&L about -$0.59 vs $407.06 basis. Trades 0, forced 0.
+- Tape: SPY 777.62 (-0.12%), QQQ 745.71 (-0.7%), SMH 591.54 (-2.0%), ITA 206.70 (flat, KTOS tracking), IWM 278.15 (-0.3%), XLV 171.48 (+0.4%).
+- Mean-reversion scan (21): AI-hardware/optical group unchanged at or near lows (SECZ -12.3%, LITE -10.6%, TTMI -10.8%, CBRS -10.0%) plus TXG, TWST, FSLY, BE, ALM, RXRX and NN -7.3% (NextNav, new, no cause checked). No higher low or reclaim, no verified cause. Gates 1 and 4 fail. Tier B open until 14:30 ET; nothing qualifies.
+- Momentum scan (8): META +4.2% (749.1, rel vol 1.18), still beneath the day's high of about 751.6 with no break and no dated bullish catalyst (gates 2 and 3 unchanged); EBAY, FIGS +11.4%, VFC, VIST/FRO/DHT, CHA fail as logged in cycles 218-220. No entry.
 - No entries, no orders.
