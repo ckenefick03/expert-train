@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-12 08:31 ET",
+  "as_of": "2026-10-12 09:44 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Oct 12 pre-open (read-only): KTOS rolled the weekend with no gap (pre-market 42.42 vs Friday close 42.36; stop 40.20 / proactive exit ~40.60). Equity $407.21, cash $303.80, 1/5 positions. No entries before 10:00 ET. Earnings week starts Tuesday (banks, UNH).",
+  "status_note": "Oct 12, 09:44 ET: KTOS 42.75 (+0.9%, ITA +0.1%), stop 40.20 clear. Equity $408.01, cash $303.80, 1/5 positions, day +$0.95. Entries open at 10:00 ET (mean-reversion) / 10:30 ET (momentum). Both full-universe scans were empty at 09:44; semis weak (SMH -1.7%).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-12",
@@ -881,6 +881,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-12 08:31 ET (pre-market)",
       "equity": 407.21
+    },
+    {
+      "t": "2026-10-12 09:44 ET",
+      "equity": 408.01
     }
   ],
   "positions": [
@@ -889,7 +893,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.42,
+      "price": 42.75,
       "stop": 40.2,
       "target": 47.15
     }
@@ -945,31 +949,31 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Flat-to-soft pre-market: SPY +0.06%, QQQ -0.2%, SMH -0.8% (semis lagging again), IWM flat, XLV +0.4%. Tankers (FRO/DHT/STNG) and software/pharma large caps (CRM, BMY, BIIB) lead the +3% gappers; CCC +10% on 2x volume. Carriers are bouncing slightly off Friday's lows (TMUS +1.4%, VZ +0.7%, T +0.4%). Bank earnings begin Tuesday (JPM/WFC/GS/C), UNH Tuesday, ASML Wednesday, TSM Thursday.",
+    "read": "Opening: SPY +0.05%, QQQ -0.45%, SMH -1.7% (semis the weak spot), IWM flat, XLV +0.3%. Carriers are bouncing off Friday's lows (TMUS +2.1%, VZ +2.0%, T +1.3%); CRM +3.1% and CCC +8.5% lead the gappers. Both scans are empty at 09:44, which is normal this early (relative-volume and -7%/+3% filters need the session to develop).",
     "chips": [
       {
         "name": "SPY",
-        "chg": 0.06
+        "chg": 0.05
       },
       {
         "name": "QQQ",
-        "chg": -0.2
+        "chg": -0.45
       },
       {
         "name": "SMH",
-        "chg": -0.77
+        "chg": -1.7
       },
       {
         "name": "IWM",
-        "chg": -0.01
+        "chg": 0.02
       },
       {
         "name": "XLV",
-        "chg": 0.4
+        "chg": 0.31
       },
       {
         "name": "KTOS",
-        "chg": 0.14
+        "chg": 0.92
       }
     ]
   }
@@ -2537,3 +2541,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
   Excluded as group moves: tankers FRO/DHT/STNG (same-direction group), the carriers/towers complex.
 - Held-name risks: KTOS only (adopted, weekend now behind it). No earnings on it this week in the high-cap calendar.
 - Rules reminder for today: no entries before 10:00 ET (mean-reversion Tier A 10:00-11:30, B 11:30-14:30, C 14:30-15:30; momentum earliest 10:30; none after 15:30). Entry size min($105, buying power - $0.50); day starts with 0 trades, so the 1-trade minimum is not pre-satisfied and I will not force one.
+
+### Cycle 200 - Mon Oct 12, 09:44 ET (pre-entry-window)
+- Account $408.01 (start-of-day basis $407.06, day +$0.95), cash $303.80, 1/5 positions. KTOS 42.75 (+0.9% vs Fri close 42.36; entry 42.53; stop 40.20 / proactive exit ~40.60) clear. No open orders; no trades yet today.
+- Tape: SPY 779.00 (+0.05%), QQQ 747.93 (-0.45%), SMH 593.03 (-1.7%), IWM 278.99 (flat), XLV 171.34 (+0.3%), ITA 206.78 (+0.06%). KTOS is outperforming ITA by ~0.9 points in the first 14 minutes: the first peer read is fine, not yet informative.
+- Scans (full universes): mean-reversion (-7%) 0 names; momentum (+3% and relative volume >= 1.0) 0 names. Empty is expected 14 minutes into the session. No candidates, no gate checks to write.
+- Watchlist check from the pre-open brief: TMUS 151.65 (+2.1%), VZ 42.50 (+2.0%), T 22.46 (+1.3%): holding above Friday's lows (148.2/41.0/22.04) and bouncing; a base is not established yet (need a higher low and quieter volume). CCC 7.62 (+8.5%), CRM 236.34 (+3.1%): momentum watch, no catalyst verified yet.
+- Entries: mean-reversion Tier A opens 10:00 ET, momentum 10:30 ET. No orders this cycle.
+- Day trades 0, forced 0.
