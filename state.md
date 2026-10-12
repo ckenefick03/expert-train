@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-12 13:32 ET",
+  "as_of": "2026-10-12 13:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -969,6 +969,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-12 13:32 ET",
       "equity": 406.47
+    },
+    {
+      "t": "2026-10-12 13:43 ET",
+      "equity": 406.15
     }
   ],
   "positions": [
@@ -977,7 +981,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.12,
+      "price": 41.985,
       "stop": 40.2,
       "target": 47.15
     }
@@ -2811,4 +2815,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY 777.62 (-0.12%), QQQ 745.71 (-0.7%), SMH 591.54 (-2.0%), ITA 206.70 (flat, KTOS tracking), IWM 278.15 (-0.3%), XLV 171.48 (+0.4%).
 - Mean-reversion scan (21): AI-hardware/optical group unchanged at or near lows (SECZ -12.3%, LITE -10.6%, TTMI -10.8%, CBRS -10.0%) plus TXG, TWST, FSLY, BE, ALM, RXRX and NN -7.3% (NextNav, new, no cause checked). No higher low or reclaim, no verified cause. Gates 1 and 4 fail. Tier B open until 14:30 ET; nothing qualifies.
 - Momentum scan (8): META +4.2% (749.1, rel vol 1.18), still beneath the day's high of about 751.6 with no break and no dated bullish catalyst (gates 2 and 3 unchanged); EBAY, FIGS +11.4%, VFC, VIST/FRO/DHT, CHA fail as logged in cycles 218-220. No entry.
+- No entries, no orders.
+
+### Cycle 222 - 2026-10-12 13:43 ET
+- Account: equity $406.15, cash/BP $303.80, KTOS 2.437677 sh now 41.985 (entry 42.53, -1.3%; stop 40.20, proactive exit ~40.60, clear by about 1.4 points). KTOS slipped a little while ITA is flat (206.56), so it is lagging its peer ETF by about 0.4% today; not an exit signal at this distance from the level. Day P&L about -$0.91 vs $407.06 basis. Trades 0, forced 0.
+- Tape: SPY 777.67 (-0.12%), QQQ 745.78 (-0.7%), SMH 591.39 (-2.0%), ITA 206.56 (-0.04%), IWM 278.20 (-0.3%), XLV 171.34 (+0.3%).
+- Mean-reversion scan (24): same AI-hardware/optical group at or near lows (SECZ -12.7%, LITE -10.8%, TTMI -10.8%, CBRS -10.2%) plus TXG, TWST, FSLY, ALM, RXRX, NN, SMR, BE and new PURR -7.0% (Hyperliquid Strategies, crypto-linked) and ACHR -7.2% (Archer Aviation). No higher low or reclaim, no verified same-day cause. Gates 1 and 4 fail. Tier B closes 14:30 ET; nothing qualifies.
+- Momentum scan (10): META +4.1% (748.3) still below the day's high ~751.6, no break, no dated bullish catalyst. New: SHOP +3.5% (no catalyst checked, rel vol 1.00) and CCC +9.5% (7.69, cap $4.1B). Checked CCC: it gapped up at the open (about 7.02 to 7.68) and has traded in a tight 7.52-7.77 band all day with no pullback and break; the only explanation found is an undated snippet about "strategic alternatives review" and sale speculation with no fresh press release. That is neither a verified, dated catalyst nor a momentum setup (headline/deal risk), so gates 2 and 3 fail. EBAY, FIGS +11.4%, VFC, VIST/FRO/DHT, CHA fail as logged. No entry.
 - No entries, no orders.
