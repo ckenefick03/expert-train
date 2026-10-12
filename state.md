@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-12 12:33 ET",
+  "as_of": "2026-10-12 12:42 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -945,6 +945,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-12 12:33 ET",
       "equity": 406.89
+    },
+    {
+      "t": "2026-10-12 12:42 ET",
+      "equity": 406.44
     }
   ],
   "positions": [
@@ -953,7 +957,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.29,
+      "price": 42.106,
       "stop": 40.2,
       "target": 47.15
     }
@@ -2740,4 +2744,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY 778.40 (flat), QQQ 747.15 (-0.5%), SMH 593.03 (-1.7%), ITA 206.62 (flat), IWM 278.61 (-0.1%), XLV 171.39 (+0.3%).
 - Mean-reversion scan (14): same AI-hardware/optical group plus TXG, FSLY, SECZ, ALM, RXRX. CBRS made another low (147.50), TTMI and SECZ near lows. No higher low or reclaim and no verified same-day cause. Gates 1 and 4 fail. Tier B open; nothing qualifies.
 - Momentum scan (5): VIST +4.7%, FRO +5.0%, DHT +5.6% (all theme-wide energy/tanker moves, no divergence, gate 1 fails), CHA +5.4% (below $20M dollar-volume floor), and FIGS +10.4% (17.42, new this cycle, cap $2.6B, rel vol 1.03). FIGS is a name-specific move, so I checked it: the 5-minute bars show an open near 15.87 (prior close about 15.78) and a steady climb all session with shallow pullbacks and no clean break from a base. The news search returned only older FIGS earnings stories (none dated today), so there is no cited, dated catalyst. Gate 2 fails; also a late chase of a +10% move has poor risk/reward against a 3-4% stop. Not entered.
+- No entries, no orders.
+
+### Cycle 216 - 2026-10-12 12:42 ET
+- Account: equity $406.44, cash/BP $303.80, KTOS 2.437677 sh now 42.106 (entry 42.53, -1.0%; stop 40.20, proactive exit ~40.60, clear by about 1.5 points). Day P&L about -$0.62 vs $407.06 basis, far inside the $100 limit. Trades 0, forced 0.
+- Tape: SPY 778.15 (-0.05%), QQQ 746.81 (-0.6%), SMH 592.95 (-1.7%), ITA 206.52 (-0.1%), IWM 278.47 (-0.2%), XLV 171.30 (+0.3%). KTOS is roughly in line with ITA, no peer divergence.
+- Mean-reversion scan (19): the AI-hardware/optical group widened again (LITE -10.0%, CIEN, COHR -8.1%, SMTC, CBRS -10.2%, TTMI -11.2%, AAOI, MXL and AEHR back in, TSEM, AXTI new, NVTS, IONQ) plus BE, TXG, FSLY, SECZ, ALM, RXRX. Making new lows, no base or higher low, no verified same-day cause. Gates 1 and 4 fail. Tier B open; nothing qualifies.
+- Momentum scan (7): EBAY +4.0% (new), FIGS +10.6%, VIST, FRO, DHT, ZIM +3.1% (shipping, same Middle East theme), CHA. The energy/shipping names are theme-wide with no divergence (gate 1 fails); CHA is below the $20M floor. FIGS: no dated catalyst (cycle 215). EBAY: checked the news search (only older articles, nothing dated today) and 10-minute bars: it rose from about 114.9 to a 118.7 high around 15:20Z and has been fading since (now about 116.5), so there is no cited catalyst and no held break (gates 2 and 3 fail).
 - No entries, no orders.
