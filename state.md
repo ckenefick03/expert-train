@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-12 12:42 ET",
+  "as_of": "2026-10-12 12:52 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -949,6 +949,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-12 12:42 ET",
       "equity": 406.44
+    },
+    {
+      "t": "2026-10-12 12:52 ET",
+      "equity": 406.3
     }
   ],
   "positions": [
@@ -957,7 +961,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 42.106,
+      "price": 42.05,
       "stop": 40.2,
       "target": 47.15
     }
@@ -2752,3 +2756,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Mean-reversion scan (19): the AI-hardware/optical group widened again (LITE -10.0%, CIEN, COHR -8.1%, SMTC, CBRS -10.2%, TTMI -11.2%, AAOI, MXL and AEHR back in, TSEM, AXTI new, NVTS, IONQ) plus BE, TXG, FSLY, SECZ, ALM, RXRX. Making new lows, no base or higher low, no verified same-day cause. Gates 1 and 4 fail. Tier B open; nothing qualifies.
 - Momentum scan (7): EBAY +4.0% (new), FIGS +10.6%, VIST, FRO, DHT, ZIM +3.1% (shipping, same Middle East theme), CHA. The energy/shipping names are theme-wide with no divergence (gate 1 fails); CHA is below the $20M floor. FIGS: no dated catalyst (cycle 215). EBAY: checked the news search (only older articles, nothing dated today) and 10-minute bars: it rose from about 114.9 to a 118.7 high around 15:20Z and has been fading since (now about 116.5), so there is no cited catalyst and no held break (gates 2 and 3 fail).
 - No entries, no orders.
+
+### Cycle 217 - 2026-10-12 12:52 ET
+- Account: equity $406.30, cash/BP $303.80, KTOS 2.437677 sh now 42.05 (entry 42.53, -1.1%; stop 40.20, proactive exit ~40.60, clear by about 1.45 points). Day P&L about -$0.76 vs $407.06 basis. Trades 0, forced 0.
+- Tape: SPY 777.61 (-0.12%), QQQ 746.03 (-0.7%), SMH 592.03 (-1.9%), ITA 206.36 (-0.14%, KTOS tracking it), IWM 278.21 (-0.3%), XLV 171.28 (+0.3%). Slight broadening of weakness into the afternoon.
+- Mean-reversion scan (22): AI-hardware/optical group still at or near lows (CBRS 147.11, TTMI -11.5%, SECZ -11.5%, LITE -10.1%) plus new names VSH -7.3% (same electronics group), TWST -7.3% and TXG -10.7% (genomics/biotech tools), SMR -7.2% (nuclear, NuScale), BE, ALM, FSLY, RXRX. No base, no higher low, no dated cause verified for any group. Gates 1 and 4 fail. Tier B open; nothing qualifies.
+- Momentum scan (6): EBAY +3.5% (fading, no catalyst, see cycle 216), FIGS +10.5% (no dated catalyst), VIST/FRO/DHT (theme-wide energy), CHA (below $20M floor). Nothing passes.
+- No entries, no orders. Tier B closes 14:30 ET; Tier C 14:30-15:30. Close recap due 15:47 ET.
