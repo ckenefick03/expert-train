@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-13 09:54 ET",
+  "as_of": "2026-10-13 10:05 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1040,6 +1040,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-13 09:54 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-13 10:05 ET",
       "equity": 403.05
     }
   ],
@@ -3037,3 +3041,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Account: flat, cash/BP $403.05, no open orders needed (no positions). No stop checks.
 - Tape: SPY 778.48 (+0.05%), QQQ 743.83 (-0.3%), SMH 583.02 (-1.4%), IWM 277.34 (-0.2%). WDC 367.48 (-5.0%), STX 715.67 (-5.0%), GS 908.99 (+1.7%), UNH 379.22 (+0.2%, gave back most of its early gain).
 - Before the 10:00 ET entry window, so no scans run and no entries considered this cycle. Mean-reversion scan from the 10:02 cycle; momentum from 10:32.
+
+### Cycle 238 - 2026-10-13 10:05 ET
+- Account: flat, cash/BP $403.05. No stop checks.
+- Tape: SPY 777.54 (-0.07%), QQQ 743.73 (-0.3%), SMH 583.55 (-1.3%), IWM 276.59 (-0.5%).
+- Mean-reversion scan (cap >= $2B, avg vol >= 1M, <= -7% on the day), Tier A window now open: 3 hits. ASTS 46.80 (-9.1%), APLD 21.54 (-7.4%), CIFR 10.88 (-16.3%).
+- Gates, in writing: all three fail. Gate 1: no dated, verified name-specific cause found this cycle (APLD and CIFR move with the AI-datacenter/miner group, so it is a group move, not a name dislocation; no news search run since none could pass gate 4). Gate 4: 35 minutes into the session with no base, higher low or reclaim, and still near the lows of the day. Gate 2 not checked (already failed).
+- Momentum scan not run (window opens 10:30). No order. Min-1 trade is a target only; gates unchanged.
