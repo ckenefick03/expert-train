@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-13 12:55 ET",
+  "as_of": "2026-10-13 13:04 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1100,6 +1100,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-13 12:55 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-13 13:04 ET",
       "equity": 403.05
     }
   ],
@@ -3220,3 +3224,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Mean-reversion scan (Tier B): 4 hits, the shortest list of the day. ASTS 47.68 (-7.4%), SSRM 32.70 (-7.7%), SMMT 15.83 (-7.6%), CIFR 11.64 (-10.5%). FLEX, DPC and IMNM dropped back above -7%. No dated verified cause for any of the four; ASTS is almost at the threshold and still unexplained. Gate 1 fails. No entry.
 - Momentum scan: 10 hits, mostly marginal (+3.0 to +3.9%): MGA 65.51 (+3.1%), BP 48.36 (+3.5%), FIS 35.30 (+3.0%), MDA 28.40 (+3.4%), PR 24.16 (+3.2%), BCE 19.59 (+3.9%), INFY 11.43 (+5.5%), STGW 9.42 (+6.3%), FRMI 3.96 (+21.9%), AMC 3.15 (+5.0%). Nothing is a standout against its peers with a cited catalyst: BP/PR are the energy theme (XLE +1.2%), INFY the IT-services group, BCE/MGA/FIS barely above the threshold with no catalyst checked, FRMI/AMC unchanged fails. Gate 2 fails across the list. No entry.
 - No order. Tier B ends at 14:30; Tier C from 14:30. Close recap at 15:47 ET.
+
+### Cycle 253 - 2026-10-13 13:04 ET
+- Account: flat, cash/BP $403.05. No stop checks.
+- Tape: SPY 777.16 (-0.1%), QQQ 742.19 (-0.5%), SMH 583.52 (-1.3%), IWM 276.40 (-0.5%), IGV 111.20 (-0.1%), XLE 66.83 (+1.2%).
+- Mean-reversion scan (Tier B): 9 hits, mostly the same names: AMAT 460.49 (-7.4%), FLEX 108.47 (-7.5%), ASTS 47.29 (-8.1%), DPC 33.33 (-7.2%), SSRM 32.71 (-7.7%), BETA 18.33 (-7.5%), SMMT 15.82 (-7.6%), CIFR 11.52 (-11.4%), UEC 8.21 (-7.1%, new; uranium miner, $8 stock). The list flips in and out around the -7% line; no name has moved decisively, none has a dated verified cause, and none has formed a base/reclaim. Gate 1 fails for all. No entry.
+- Momentum scan: 10 hits: PBF 89.73 (+5.5%, new; refiner, energy theme with XLE +1.2%), BP, FIS, MDA, PR, BCE, INFY, STGW, FRMI, AMC. Energy names are all one theme; nothing has a cited catalyst or standout peer divergence. Gate 2 fails across the list. No entry.
+- No order. Still no trade today; 0 of the min-1 target. Gates not loosened.
