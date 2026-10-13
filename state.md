@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-13 13:34 ET",
+  "as_of": "2026-10-13 13:44 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1112,6 +1112,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-13 13:34 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-13 13:44 ET",
       "equity": 403.05
     }
   ],
@@ -3255,3 +3259,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Mean-reversion scan (Tier B): 9 hits: AMAT 456.65 (-8.2%, new low of the day), FLEX 109.00 (-7.0%), ASTS 47.33 (-8.0%), DPC 33.17 (-7.6%), TNGX 22.22 (-8.1%), BETA 18.27 (-7.8%), IMNM 17.64 (-7.9%), SMMT 15.69 (-8.4%), CIFR 11.54 (-11.3%). AMAT, SMMT, TNGX are at or near session lows. No verified, dated cause for any (gate 1 fails); no base-and-reclaim (gate 4 fails). No entry.
 - Momentum scan: 14 hits, a long list of threshold-level movers: VEEV 305.75 (+3.3%), CDW 150.18 (+4.5%, new), CHTR 106.13 (+3.6%, new), PBF 90.22 (+6.1%), BP, MDA, PR, BCE, LI Auto (+3.0%, new), INFY, STGW, TU Telus (+3.2%, new), FRMI, AMC. Telecom (BCE, TU, CHTR) is moving as a group; energy (BP, PR, PBF) as a group; IT-services as a group. CDW (+4.5% vs the tech-hardware reseller space) and VEEV were not searched. No cited, dated catalyst for any; gate 2 fails across the list. No entry.
 - No order.
+
+### Cycle 256 - 2026-10-13 13:44 ET
+- Account: flat, cash/BP $403.05. No stop checks.
+- Tape: SPY 777.55 (-0.07%), QQQ 742.52 (-0.5%), SMH 584.33 (-1.1%), IWM 276.63 (-0.5%), IGV 111.48 (+0.2%), XLE 66.88 (+1.3%).
+- Mean-reversion scan (Tier B): 8 hits: AMAT 459.41 (-7.7%), ASTS 47.36 (-8.0%), DPC 33.22 (-7.5%), TNGX 22.19 (-8.2%), BETA 18.28 (-7.8%), IMNM 17.49 (-8.7%), SMMT 15.61 (-8.9%), CIFR 11.71 (-10.0%). FLEX dropped off. CIFR keeps improving slowly but with no cause; SMMT and IMNM are at lows. Gate 1 fails for all (no dated verified cause), gate 4 fails on the ones at lows. No entry.
+- Momentum scan: 15 hits, again threshold-level and group moves (energy PBF/BP/PR, telecom BCE/CHTR, IT services INFY, small speculative FRMI/AMC/XXI/STGW), plus VEEV, CDW, MGA, AS (Amer Sports +3.2%), LI. No dated catalyst for any and no clean divergence from peers. Gate 2 fails across the list. No entry.
+- No order. Tier B closes 14:30, Tier C from 14:30 to 15:30. Close recap at 15:47 ET.
