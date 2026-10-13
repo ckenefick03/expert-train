@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-13 11:18 ET",
+  "as_of": "2026-10-13 11:35 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1068,6 +1068,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-13 11:18 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-13 11:35 ET",
       "equity": 403.05
     }
   ],
@@ -3121,3 +3125,14 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Momentum: MDB 395.50 (+3.7%, rel vol 1.30, IGV +0.3% so divergence is now only ~3.4 pts); still no dated catalyst, gate 2 fails. FRMI fails gate 2. No entry.
 - Mean-reversion (Tier A, closes 11:30): ASTS 46.81 (-9.0%), DPC 33.03 (-8.0%), SMMT 15.91 (-7.1%), CIFR 11.08 (-14.8%). PBLS dropped off. No dated verified cause for any (gate 1 fails); no base on ASTS/CIFR after 1h45m of sideways-to-lower trading is a flat range, not a reclaim. No entry.
 - No order. Tier B opens 11:30.
+
+### Cycle 245 - 2026-10-13 11:35 ET (Tier B window now open)
+- Skipped the 11:22 trigger (cycle 244 was logged 11:18, inside the 6-minute rule).
+- Account: flat, cash/BP $403.05. No stop checks.
+- Tape: SPY 776.13 (-0.3%), QQQ 740.19 (-0.8%), SMH 577.73 (-2.2%, new low of day), IWM 275.97 (-0.7%), IGV 111.44 (+0.1%). Semis are accelerating lower.
+- Mean-reversion scan: 10 hits (was 4). New: AMAT 458.62 (-7.8%, cap $395B), CRDO 186.01 (-7.4%), FLEX 108.03 (-7.9%), SSRM 32.82 (-7.4%), IMNM 17.77 (-7.2%), FRVO 11.95 (-7.1%). Existing: ASTS 46.84 (-9.0%), DPC 32.71 (-8.9%), SMMT 15.81 (-7.7%), CIFR 11.06 (-15.0%).
+  - AMAT, CRDO, FLEX: part of the AI-hardware/semis group move that SMH (-2.2%) already shows. A group move is not a name-specific dislocation (gate 1 as written), the cause is unverified (no dated source found for the semis weakness at 11:18), and all three are still falling with no base or higher low (gate 4). All fail.
+  - SSRM (gold/silver miner), IMNM and FRVO: no dated cause found, no search made this cycle, no base. They fail gate 1 as unverified.
+  - ASTS, DPC, SMMT, CIFR: unchanged fails (no verified dated cause; no reclaim).
+- Momentum: MDB 393.52 (+3.2%, IGV +0.1%, fading toward the +3% line); still no dated catalyst. FRMI +18% fails gate 2. No entry.
+- No order. Minimum-trade target is not met today but gates are not loosened.
