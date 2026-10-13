@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-13 08:35 ET",
+  "as_of": "2026-10-13 09:45 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,12 +41,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Pre-open Tue Oct 13: KTOS (adopted) held, premarket about 41.27; written exit 40.60, stop 40.20. Nasdaq futures about -0.7% on a memory/chip selloff (CXMT headlines). Banks and UNH report this morning. Watching GS and UNH (momentum), WDC/STX (mean-reversion, needs a base).",
+  "status_note": "Flat, 100% cash $403.05. KTOS exited at the open per the written plan. Scanning from 10:00 (mean-reversion) and 10:30 (momentum).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-13",
     "start_equity": 405.26,
-    "trades": 0,
+    "trades": 1,
     "forced": 0
   },
   "equity_history": [
@@ -1033,19 +1033,13 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-13 08:35 ET",
       "equity": 404.4
-    }
-  ],
-  "positions": [
+    },
     {
-      "symbol": "KTOS",
-      "strategy": "adopted",
-      "qty": 2.437677,
-      "entry": 42.53,
-      "price": 41.27,
-      "stop": 40.2,
-      "target": 47.15
+      "t": "2026-10-13 09:45 ET",
+      "equity": 403.05
     }
   ],
+  "positions": [],
   "trades": [
     {
       "symbol": "TER",
@@ -1094,6 +1088,18 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "score": 55,
       "tag": "organic",
       "date": "2026-10-09"
+    },
+    {
+      "symbol": "KTOS",
+      "strategy": "adopted",
+      "tier": "-",
+      "entry": 42.61,
+      "exit": 40.7163,
+      "pnl": -4.61,
+      "r": -0.97,
+      "score": 0,
+      "tag": "adopted",
+      "date": "2026-10-13"
     }
   ],
   "regime": {
@@ -3013,3 +3019,12 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
   4. FRMI (3.83, +17.8%, cap $2.1B): catalyst unknown; likely too speculative; check cause only if it holds.
   5. Oil/tanker names (DHT 26.10 flat, XLE +0.6%): theme-wide, no divergence; low priority.
 - **Plan.** No orders pre-open. Tier A mean-reversion from 10:00, momentum from 10:30; the same written gates; a no-trade day remains acceptable (the min-1 target never overrides them). Hourly news pass at 09:12 and 10:12 as scheduled (cycles resume at 09:32 after open).
+
+### Cycle 236 - 2026-10-13 09:45 ET
+- **Coverage gap (disclosed).** No trigger arrived between the pre-open brief (08:35) and this cycle (09:43), so the 09:32 cycle and the first ~13 minutes after the open were unobserved. KTOS's low of 40.52 came in that window (09:35).
+- **Exit: SELL KTOS 2.437677 sh, market, regular hours.** Fill 40.7163 (order 6ace358c). Trigger: the overnight plan said exit if KTOS opened at or below ~40.60. It opened at 40.81, traded through 40.60 (low 40.52 at 09:35) and recovered to ~40.80. I applied the written level consistently; it is a judgment call that sold near the recovery rather than the low. The 30-minute hold rule does not apply (KTOS was adopted).
+- **Realized P&L reconciliation.** Broker reports -$4.61 (cost basis 42.61). state.md carried the entry as 42.53 (-$4.42). The broker figure is authoritative; the 42.53 was an error in my earlier records. The dashboard trade uses 42.61 / -4.61.
+- **Account.** Equity $403.05, all cash, 0 positions. Day: -$2.21 vs the $405.26 basis. About 8.0% below the $437.99 peak (breaker $394.19). Day trades: 1.
+- **Correction.** The pre-open brief said news passes at "09:12 and 10:12"; 09:12 is before the open and was not a real scheduled time. The hourly passes are at :12 during market hours (10:12 onward).
+- **Tape.** SPY 778.52, QQQ 743.18 (-0.4%), SMH -1.4%, IWM +0.2%. WDC -5.7%, STX -5.5% (watch for a base and a verified cause); GS +0.9%, UNH +1.5% (momentum, after 10:30).
+- **Next.** No entries before 10:00. Same gates; no forcing.
