@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-12 15:48 ET",
+  "as_of": "2026-10-13 08:35 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,11 +41,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Mon Oct 12 close: 0 trades (no setup passed the gates). KTOS (adopted) rolls overnight, written exit 40.60 / stop 40.20. Equity about $405.16 vs $407.06 start; 7.5% below the $437.99 peak (breaker at $394.19).",
+  "status_note": "Pre-open Tue Oct 13: KTOS (adopted) held, premarket about 41.27; written exit 40.60, stop 40.20. Nasdaq futures about -0.7% on a memory/chip selloff (CXMT headlines). Banks and UNH report this morning. Watching GS and UNH (momentum), WDC/STX (mean-reversion, needs a base).",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-10-12",
-    "start_equity": 407.06,
+    "date": "2026-10-13",
+    "start_equity": 405.26,
     "trades": 0,
     "forced": 0
   },
@@ -1025,6 +1025,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-12 15:48 ET",
       "equity": 405.16
+    },
+    {
+      "t": "2026-10-12 16:00 ET",
+      "equity": 405.26
+    },
+    {
+      "t": "2026-10-13 08:35 ET",
+      "equity": 404.4
     }
   ],
   "positions": [
@@ -1033,7 +1041,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "adopted",
       "qty": 2.437677,
       "entry": 42.53,
-      "price": 41.58,
+      "price": 41.27,
       "stop": 40.2,
       "target": 47.15
     }
@@ -1089,7 +1097,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "AI-hardware/optical selloff (SMH -2%) with no verified same-day cause; drone/space names weak; oil and tankers up on Middle East supply headlines; META the only large-cap standout. Breadth thin; no base forming in the selloff names by the close.",
+    "read": "Risk-off for AI hardware again premarket: memory and storage names -6% to -8% (WDC, STX, SK hynix ADR, MU, SNDK), SMH about -1.7%; Dow/IWM firm; bank earnings under way (GS strong beat, JPM EPS miss); UNH beat and raise; CPI Wednesday.",
     "chips": [
       {
         "name": "SPY",
@@ -2985,3 +2993,23 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - P&L: day about -$1.90 (equity $405.16 vs the $407.06 start), all from the KTOS mark; no realized P&L today. The earlier Friday TEVA loss (-$1.24) is already in the books. Equity is 7.5% below the $437.99 peak; the 10% breaker sits at $394.19, about $11 below the current level. That is a watch item, not a trigger.
 - Corrections/disclosures today: the 6-minute-skip cycles were logged as skips; no typos found in the closing entries.
 - Tomorrow: UNH earnings (sympathy risk for HUM/ELV/CLOV, which I do not hold), banks Tue/Wed, ASML Wed, TSM Thu for the semis. Still open: re-price the older skip lists, and confirm PDT/day-trade rules for the limited_margin account (unverified, no problem hit).
+
+### Pre-open brief 2026-10-13 08:35 ET (read-only; no orders)
+- **Basis and correction.** Official Oct 12 close: KTOS 41.62, so the official equity close is 303.80 + 2.437677 x 41.62 = $405.26. That is the Tuesday start-of-day basis. The Oct 12 recap used the 15:48 ET mark ($405.16, day -$1.90); the official day P&L was -$1.80 vs the $407.06 basis. A $0.10 difference, corrected here (append-only).
+- **Account/stop check on premarket prices.** Cash/BP $303.80, no open orders, no orders yesterday. KTOS last non-regular trade 41.27 (bid 41.00 / ask 41.45, wide premarket spread), -0.8% vs close. The ~40.60 exit level and the 40.20 stop are not hit; cushion to 40.60 is about 0.67. Premarket marks equity near $404.40 (-$0.86 vs the new basis). Plan unchanged: orders only in regular hours; if KTOS opens at or below ~40.60, exit at market at the open. Cohort premarket: AVAV 130.31 (-0.9%), RKLB 64.38 (-2.0%), ITA 206.78 (+0.4%).
+- **Tape premarket (non-regular last):** SPY 777.81 (flat), QQQ 740.87 (-0.7%), SMH 580.71 (-1.7%), IWM 278.62 (+0.3%), XLV 172.50 (+0.3%), XLE 66.43 (+0.6%). Drawdown from the $437.99 peak is 7.5% at the premarket mark; the 10% breaker level ($394.19) is about $10 below.
+- **News and politics (sources found this cycle):** CNBC and Invezz pre-market pages dated Oct 13 report Nasdaq 100 futures down about 0.6-0.7% (about 180 points), driven by chip stocks. The reported driver is advances by China's ChangXin Memory (CXMT) feeding worries about the US lead in AI; memory/storage names are down (MU, WDC, STX, SK hynix ADR, SNDK), and Micron, Intel and AMD are lower. An undated article also claims a violent Korean market selloff; I could not verify its date, so I treat the Korea claim as unconfirmed. My own quotes agree on the direction and size for the memory group: MU 941 (-4.8%), WDC 359 (-7.2%), STX 705 (-6.5%), SNDK 1420 (-4.5%), SK hynix ADR 152 (-6.2%), AMD 582 (-2%), LITE 973 (-2.2%), CBRS 144 (-1.9%). Earnings before the open: UNH beat and raise (adjusted EPS 4.69 vs 4.14 est., 2026 outlook raised to at least 20.50), GS strong beat (17.01 vs 13.05), JPM EPS 5.75 vs 5.94 est. (a miss), C 2.85 vs 2.63, WFC 1.87 vs 1.85, JNJ beat but down premarket. Wednesday: CPI, ASML, MS/BAC/BLK; Thursday: TSM, SCHW, PNC.
+- **Mean-reversion watch (needs the full gates after 10:00; no base, no entry):**
+  1. WDC (359, -7.2%): large cap, premarket cause is dated and sector-wide (CXMT/memory), but a structural competition worry, not a one-day shock; gates 1 and 4 must still be shown (higher low + reclaim). Tier A from 10:00.
+  2. STX (705, -6.5%): same group, same test.
+  3. SK hynix ADR (152, -6.2%): the cause itself is the story; low priority.
+  4. SentinelOne (23.28, -9.3% premarket, cap $8.9B): no cause found yet; needs a dated cause or it fails gate 1.
+  5. JNJ (258.5, -2%): a beat that is trading down; probably not deep enough for the -7% scan, noted only for context.
+  Carry-overs that are still in the -5% to -7% premarket zone: CBRS, LITE, CIEN, AAOI (optical/AI hardware), which failed the gates all of yesterday.
+- **Momentum watch (earliest 10:30, needs divergence, a dated catalyst, then a held pullback and break):**
+  1. GS (925-928, +3.8%): dated, real catalyst (EPS 17.01 vs 13.05); diverges from JPM (-0.4%), C (-0.4%), WFC (-2%). $105 buys about 0.113 sh; a 3-4% stop is about $28-37/sh, about $3.2-4.2 risk.
+  2. UNH (392, +3.6%): beat and raise, dated; HUM +1%, ELV flat, so it stands out. Gap-up opens often fade; wait for a hold.
+  3. VFC (16.44, +4.1% premarket, second day, 17.8M volume): no catalyst found, fails gate 2 until one is cited.
+  4. FRMI (3.83, +17.8%, cap $2.1B): catalyst unknown; likely too speculative; check cause only if it holds.
+  5. Oil/tanker names (DHT 26.10 flat, XLE +0.6%): theme-wide, no divergence; low priority.
+- **Plan.** No orders pre-open. Tier A mean-reversion from 10:00, momentum from 10:30; the same written gates; a no-trade day remains acceptable (the min-1 target never overrides them). Hourly news pass at 09:12 and 10:12 as scheduled (cycles resume at 09:32 after open).
