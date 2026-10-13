@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-13 12:44 ET",
+  "as_of": "2026-10-13 12:55 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1096,6 +1096,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-13 12:44 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-13 12:55 ET",
       "equity": 403.05
     }
   ],
@@ -3209,3 +3213,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Mean-reversion scan (Tier B): 7 hits. FLEX 108.93 (-7.1%, back on the list), ASTS 47.72 (-7.3%), DPC 33.34 (-7.2%), SSRM 32.68 (-7.8%), IMNM 17.63 (-8.0%), SMMT 15.77 (-7.9%), CIFR 11.47 (-11.8%). All of the same names as earlier; ASTS and DPC are now hovering at the -7% line. No dated, verified cause for any of them, so gate 1 fails; no entry.
 - Momentum scan: 7 hits. BP 48.34 (+3.4%), MDA Space 28.33 (+3.2%, new, cap $4.6B, volume only 348K vs 1.26M average), PR 24.16 (+3.2%), INFY 11.49 (+6.0%), STGW Stagwell 9.39 (+6.0%, new, cap $2.17B), FRMI 3.88 (+19%), AMC 3.13 (+4.4%). MDA, STGW: no catalyst checked or cited and no peer divergence established (MDA is space-theme like ASTS; STGW a marketing-services small cap on thin $20M-ish dollar volume near the universe floor). BP/PR energy theme, INFY IT-services group, FRMI/AMC unchanged. Gate 2 fails for all. No entry.
 - No order.
+
+### Cycle 252 - 2026-10-13 12:55 ET
+- Account: flat, cash/BP $403.05. No stop checks.
+- Tape: SPY 777.67 (-0.06%), QQQ 743.11 (-0.4%), SMH 585.00 (-1.0%), IWM 276.64 (-0.4%), IGV 111.27 (flat), XLE 66.80 (+1.2%).
+- Mean-reversion scan (Tier B): 4 hits, the shortest list of the day. ASTS 47.68 (-7.4%), SSRM 32.70 (-7.7%), SMMT 15.83 (-7.6%), CIFR 11.64 (-10.5%). FLEX, DPC and IMNM dropped back above -7%. No dated verified cause for any of the four; ASTS is almost at the threshold and still unexplained. Gate 1 fails. No entry.
+- Momentum scan: 10 hits, mostly marginal (+3.0 to +3.9%): MGA 65.51 (+3.1%), BP 48.36 (+3.5%), FIS 35.30 (+3.0%), MDA 28.40 (+3.4%), PR 24.16 (+3.2%), BCE 19.59 (+3.9%), INFY 11.43 (+5.5%), STGW 9.42 (+6.3%), FRMI 3.96 (+21.9%), AMC 3.15 (+5.0%). Nothing is a standout against its peers with a cited catalyst: BP/PR are the energy theme (XLE +1.2%), INFY the IT-services group, BCE/MGA/FIS barely above the threshold with no catalyst checked, FRMI/AMC unchanged fails. Gate 2 fails across the list. No entry.
+- No order. Tier B ends at 14:30; Tier C from 14:30. Close recap at 15:47 ET.
