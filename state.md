@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-13 12:34 ET",
+  "as_of": "2026-10-13 12:44 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1092,6 +1092,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-13 12:34 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-13 12:44 ET",
       "equity": 403.05
     }
   ],
@@ -3197,4 +3201,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY 777.74 (-0.05%), QQQ 743.99 (-0.3%), SMH 586.89 (-0.7%, best level since the open selloff), IWM 276.47 (-0.5%), IGV 111.58 (+0.3%), XLE 66.63 (+0.9%). Tape is steadily recovering.
 - Mean-reversion scan (Tier B): 6 hits (AMAT dropped off). ASTS 47.24 (-8.2%), DPC 33.32 (-7.2%), SSRM 32.47 (-8.4%), IMNM 17.70 (-7.6%), SMMT 15.85 (-7.5%), CIFR 11.56 (-11.1%). CIFR keeps improving (from -16% at 10:05 to -11%) and DPC is near the -7% line, but neither has a dated, verified cause, so gate 1 still fails; a drift up with the market is not a cause. No entry.
 - Momentum scan: 5 hits. BP 48.26 (+3.3%), PR Permian Resources 24.14 (+3.2%, new; oil E&P, theme-wide with XLE +0.9%), INFY 11.49 (+6.1%), FRMI 3.84 (+18%), AMC 3.14 (+4.5%). FIS dropped off. BP and PR are energy-theme moves with no catalyst dated today found; INFY is an IT-services group move; FRMI and AMC unchanged. All fail gate 1 or 2. No entry.
+- No order.
+
+### Cycle 251 - 2026-10-13 12:44 ET
+- Account: flat, cash/BP $403.05. No stop checks.
+- Tape: SPY 777.76 (-0.04%), QQQ 743.39 (-0.4%), SMH 585.29 (-1.0%), IWM 276.55 (-0.5%), IGV 111.44 (+0.1%), XLE 66.77 (+1.2%).
+- Mean-reversion scan (Tier B): 7 hits. FLEX 108.93 (-7.1%, back on the list), ASTS 47.72 (-7.3%), DPC 33.34 (-7.2%), SSRM 32.68 (-7.8%), IMNM 17.63 (-8.0%), SMMT 15.77 (-7.9%), CIFR 11.47 (-11.8%). All of the same names as earlier; ASTS and DPC are now hovering at the -7% line. No dated, verified cause for any of them, so gate 1 fails; no entry.
+- Momentum scan: 7 hits. BP 48.34 (+3.4%), MDA Space 28.33 (+3.2%, new, cap $4.6B, volume only 348K vs 1.26M average), PR 24.16 (+3.2%), INFY 11.49 (+6.0%), STGW Stagwell 9.39 (+6.0%, new, cap $2.17B), FRMI 3.88 (+19%), AMC 3.13 (+4.4%). MDA, STGW: no catalyst checked or cited and no peer divergence established (MDA is space-theme like ASTS; STGW a marketing-services small cap on thin $20M-ish dollar volume near the universe floor). BP/PR energy theme, INFY IT-services group, FRMI/AMC unchanged. Gate 2 fails for all. No entry.
 - No order.
