@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-13 15:05 ET",
+  "as_of": "2026-10-13 15:14 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1144,6 +1144,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-13 15:05 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-13 15:14 ET",
       "equity": 403.05
     }
   ],
@@ -3345,3 +3349,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Mean-reversion scan (Tier C): 7 hits, unchanged names: AMAT 455.40 (-8.5%, session low), ASTS 47.51 (-7.7%), DPC 33.25 (-7.4%), BETA 18.33 (-7.5%), IMNM 17.75 (-7.3%), SMMT 15.64 (-8.7%), CIFR 11.68 (-10.2%). No verified dated cause; no reclaim. Gate 1/4 fail. No entry.
 - Momentum: to keep the long list readable I ran the scan this cycle with a +5% threshold (instead of the +3% standard) as an additional narrowing view only; the +3% list was 30 names at 14:55 and is not changed as a gate. At +5% / rel vol >= 1.0 there are 10 hits: CDW 151.54 (+5.4%), CHTR 107.75 (+5.1%), PBF 90.37 (+6.3%), CDNA 66.83 (+5.9%), LIFE 40.21 (+7.6%), VG 13.80 (+5.1%), INFY 11.53 (+6.4%), STGW 9.38 (+5.8%), FRMI 3.94 (+21%), WIT 1.81 (+6.2%, sub-$2 ADR, below price sense for the universe floor). All are either group moves (energy PBF/VG; telecom CHTR; IT services INFY/WIT) or unexplained singles (CDW, CDNA, LIFE, STGW, FRMI) with no dated cited catalyst. Gate 2 fails. No entry.
 - No order. Hourly news pass at 15:12; entry cutoff 15:30; close recap 15:47 ET.
+
+### Cycle 264 - 2026-10-13 15:14 ET (hourly pass with news; trigger scheduled 15:12, delivered 15:13)
+- Account: flat, cash/BP $403.05, no positions, no stop checks. Equity $403.05.
+- Tape: SPY 778.32 (+0.03%), QQQ 742.81 (-0.4%), SMH 584.95 (-1.0%), IWM 277.10 (-0.3%), IGV 111.44 (+0.1%), XLE 67.12 (+1.7%), XLF 54.96 (-0.2%), XLV 169.82 (-1.3%).
+- Mean-reversion (Tier C): 7 scan hits (KOD new at 91.89 -7.4%; AMAT 458.82 -7.8%, ASTS, DPC, BETA, SMMT, CIFR; IMNM dropped off). No verified, dated, name-specific cause found this cycle (AMAT search returned only older, undated items); no base or reclaim. Gates 1 and 4 fail. No entry.
+- Momentum: 32 scan hits at +3% / rel vol >= 1.0, mostly group moves (energy, telecom, IT services/software). No dated catalyst cited for any; gate 2 fails. No entry.
+- No order placed. No overnight holds (flat).
