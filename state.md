@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-13 10:22 ET",
+  "as_of": "2026-10-13 10:35 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1048,6 +1048,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-13 10:22 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-13 10:35 ET",
       "equity": 403.05
     }
   ],
@@ -3060,3 +3064,12 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - News (WebSearch, both names): no coverage dated Oct 13 found for either. Results were only older, undated or stale items (ASTS: July convertible-offering selloff; CIFR: August miner selloff and June debt financing). Gate 1 fails for both: no verified dated cause. CIFR's move is also consistent with a group move (miners/AI datacenter).
 - Gate 4: ASTS is at its low of the day (46.48 vs 46.80 at 10:05, still making lower prices); CIFR flat at 10.87-10.88 for 17 minutes but no higher low or reclaim. Both fail.
 - Momentum (opens 10:30) not run. No order. Gates unchanged.
+
+### Cycle 240 - 2026-10-13 10:35 ET (first momentum scan of the day)
+- Account: flat, cash/BP $403.05. No stop checks.
+- Tape: SPY 777.43 (-0.1%), QQQ 742.60 (-0.5%), SMH 581.71 (-1.6%), IWM 276.22 (-0.6%), IGV 111.70 (+0.4%).
+- Momentum scan (>= +3%, rel vol >= 1.0): 2 hits. MDB 399.92 (+4.9%, rel vol 1.06), FRMI 3.96 (+22%, cap $2.08B, rel vol 2.7).
+  - MDB: gate 1 passes (clear divergence: IGV +0.4%, SNOW -0.2%, DDOG -1.0%). Gate 2 fails: the news search returned no item dated today (only a March 5 upgrade article). No cited catalyst, so no entry. Gates 3/4 not evaluated.
+  - FRMI: sub-$4, catalyst unknown, extremely speculative; fails gate 2 (no cited catalyst) and sits at the edge of the universe floor. No entry.
+- Mean-reversion scan (Tier A): 3 hits. ASTS 46.40 (-9.8%, new low of day area), CIFR 10.96 (-15.7%), SMMT 15.87 (-7.4%, new). No dated cause found for ASTS, CIFR (checked 10:22) or SMMT (search returned only older, undated trial and offering items). Gate 1 fails for all three. ASTS still not basing.
+- No order. Min-1 trade remains a target, not a reason to loosen gates.
