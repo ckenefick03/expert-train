@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-13 11:35 ET",
+  "as_of": "2026-10-13 11:45 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1072,6 +1072,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-13 11:35 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-13 11:45 ET",
       "equity": 403.05
     }
   ],
@@ -3136,3 +3140,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
   - ASTS, DPC, SMMT, CIFR: unchanged fails (no verified dated cause; no reclaim).
 - Momentum: MDB 393.52 (+3.2%, IGV +0.1%, fading toward the +3% line); still no dated catalyst. FRMI +18% fails gate 2. No entry.
 - No order. Minimum-trade target is not met today but gates are not loosened.
+
+### Cycle 246 - 2026-10-13 11:45 ET
+- Account: flat, cash/BP $403.05. No stop checks.
+- Tape: SPY 776.13 (-0.3%), QQQ 740.22 (-0.8%), SMH 578.19 (-2.2%), IWM 275.98 (-0.7%), IGV 111.25 (-0.03%).
+- Semicap check: AMAT 458.55 (-7.8%), LRCX 293.22 (-5.3%), KLAC 181.04 (-4.8%), NVDA 224.87 (-0.6%). AMAT is the weakest of the equipment names, but the move is a semicap group move with NVDA barely down. Search for a cause returned nothing dated today (items from March and June 2026 only). Gate 1 fails: no verified, dated, name-specific cause. Gate 4 fails: AMAT is at its low of the day.
+- Mean-reversion scan (Tier B): 10 hits. AMAT, FLEX 107.87 (-8.0%), ASTS 46.76 (-9.1%), DPC 32.81 (-8.6%), SSRM 32.80 (-7.4%), BETA Technologies 18.34 (-7.5%, new), IMNM 17.68 (-7.7%), SMMT 15.87 (-7.4%), FRVO 11.96 (-7.1%), CIFR 11.08 (-14.8%). CRDO dropped off (above -7%). No new dated verified cause for any name; none has shown a base, higher low and reclaim. BETA not searched (aerospace/eVTOL theme, no base). Gate 1 fails across the board.
+- Momentum scan: FRMI +17.2% (fails gate 2) and AMC 3.14 (+4.7%, sub-$4 meme-type, no catalyst cited; fails gate 2 and its spread/quality profile is outside the intent of the strategy). MDB dropped below +3% and off the list. No entry.
+- No order.
