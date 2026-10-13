@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-13 11:55 ET",
+  "as_of": "2026-10-13 12:05 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1080,6 +1080,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-13 11:55 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-13 12:05 ET",
       "equity": 403.05
     }
   ],
@@ -3160,4 +3164,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
   - INFY: gate 1 fails. The IT-services peers are up too (WIT +5.0%, CTSH +3.9%, EPAM +2.2%, ACN +0.5% vs its prior close), so this is a group move, not a divergence from the peer complex. Search found no catalyst dated today (only July and older items), so gate 2 also fails. No entry.
   - FRMI and AMC: fail gate 2 as before.
 - Mean-reversion scan (Tier B): 10 hits, same set as 11:45: AMAT 460.53 (-7.4%, ticking up off the low), FLEX, ASTS, SSRM, DPC, BETA, IMNM, SMMT, FRVO, CIFR. No dated verified cause for any; no base/higher low/reclaim yet (AMAT's 1.5-pt uptick from the low is one bounce, not a reclaim). Gate 1 fails across the board.
+- No order.
+
+### Cycle 248 - 2026-10-13 12:05 ET
+- Account: flat, cash/BP $403.05. No stop checks.
+- Tape: SPY 776.97 (-0.15%), QQQ 742.19 (-0.5%), SMH 582.20 (-1.5%, recovering from the -2.2% low), IWM 276.15 (-0.6%), IGV 111.30 (flat).
+- Mean-reversion scan (Tier B): 7 hits. AMAT and FLEX recovered above the -7% line and dropped off. Remaining: ASTS 46.99 (-8.7%), DPC 33.13 (-7.8%), SSRM 32.86 (-7.3%), BETA 18.40 (-7.2%), IMNM 17.58 (-8.2%), SMMT 15.93 (-7.0%), CIFR 11.23 (-13.6%). No dated verified cause for any; none has a base-and-reclaim structure confirmed (ASTS and CIFR have been in a flat range since ~10:00 with no reclaim of any prior level; DPC rose off its low but cause unverified). Gate 1 fails for all. No entry.
+- Momentum scan: MDB 392.86 (+3.0%, rel vol 1.45, right at the threshold, no dated catalyst), INFY 11.53 (+6.4%, group move with WIT/CTSH, no catalyst), FRMI +16.8%, AMC +4.8%. All fail gate 2. No entry.
 - No order.
