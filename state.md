@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-13 11:45 ET",
+  "as_of": "2026-10-13 11:55 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1076,6 +1076,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-13 11:45 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-13 11:55 ET",
       "equity": 403.05
     }
   ],
@@ -3147,4 +3151,13 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Semicap check: AMAT 458.55 (-7.8%), LRCX 293.22 (-5.3%), KLAC 181.04 (-4.8%), NVDA 224.87 (-0.6%). AMAT is the weakest of the equipment names, but the move is a semicap group move with NVDA barely down. Search for a cause returned nothing dated today (items from March and June 2026 only). Gate 1 fails: no verified, dated, name-specific cause. Gate 4 fails: AMAT is at its low of the day.
 - Mean-reversion scan (Tier B): 10 hits. AMAT, FLEX 107.87 (-8.0%), ASTS 46.76 (-9.1%), DPC 32.81 (-8.6%), SSRM 32.80 (-7.4%), BETA Technologies 18.34 (-7.5%, new), IMNM 17.68 (-7.7%), SMMT 15.87 (-7.4%), FRVO 11.96 (-7.1%), CIFR 11.08 (-14.8%). CRDO dropped off (above -7%). No new dated verified cause for any name; none has shown a base, higher low and reclaim. BETA not searched (aerospace/eVTOL theme, no base). Gate 1 fails across the board.
 - Momentum scan: FRMI +17.2% (fails gate 2) and AMC 3.14 (+4.7%, sub-$4 meme-type, no catalyst cited; fails gate 2 and its spread/quality profile is outside the intent of the strategy). MDB dropped below +3% and off the list. No entry.
+- No order.
+
+### Cycle 247 - 2026-10-13 11:55 ET
+- Account: flat, cash/BP $403.05. No stop checks.
+- Tape: SPY 776.27 (-0.2%), QQQ 740.55 (-0.7%), SMH 579.45 (-2.0%, bounced slightly off the low), IWM 275.82 (-0.8%), IGV 111.09 (-0.2%).
+- Momentum scan: INFY 11.51 (+6.3%, new; cap $42.7B, rel vol 1.02), FRMI 3.79 (+16.6%), AMC 3.14 (+4.7%).
+  - INFY: gate 1 fails. The IT-services peers are up too (WIT +5.0%, CTSH +3.9%, EPAM +2.2%, ACN +0.5% vs its prior close), so this is a group move, not a divergence from the peer complex. Search found no catalyst dated today (only July and older items), so gate 2 also fails. No entry.
+  - FRMI and AMC: fail gate 2 as before.
+- Mean-reversion scan (Tier B): 10 hits, same set as 11:45: AMAT 460.53 (-7.4%, ticking up off the low), FLEX, ASTS, SSRM, DPC, BETA, IMNM, SMMT, FRVO, CIFR. No dated verified cause for any; no base/higher low/reclaim yet (AMAT's 1.5-pt uptick from the low is one bounce, not a reclaim). Gate 1 fails across the board.
 - No order.
