@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-13 15:43 ET",
+  "as_of": "2026-10-13 15:47 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1160,6 +1160,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-13 15:43 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-13 15:47 ET",
       "equity": 403.05
     }
   ],
@@ -3387,3 +3391,16 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY 778.34 (+0.03%), QQQ 743.32 (-0.4%), SMH 586.71 (-0.7%).
 - Past the 15:30 ET entry cutoff: no entries permitted, no scans run.
 - No order placed. Flat, so no overnight holds. Close recap due at 15:47 ET.
+
+### Cycle 268 - 2026-10-13 15:47 ET (close recap; trigger trig_01QnEB2UeUDyjn8YSTcBxMxK)
+- Account: flat, cash/BP $403.05, equity $403.05. No positions, no open orders to reconcile, no stop checks. No entries after 15:30 ET.
+- Tape: SPY 778.27 (+0.02%), QQQ 743.27 (-0.4%), SMH 586.79 (-0.7%).
+- **Overnight holds: none.** The account is flat, so no thesis needs to be carried and nothing rolls.
+
+**Day recap, Tue 2026-10-13**
+- What ran: both strategies scanned on their full universes every cycle from 10:00 ET (mean-reversion) and 10:30 ET (momentum) through the 15:30 ET cutoff. After the cutoff, cycles were stop/reconcile checks only.
+- Trades: 1, the KTOS exit (adopted holding, bought 42.61, sold 40.7163, realized -$4.61 per the broker; reconciled in Cycle 236). No new entries were opened by Ledger today.
+- Skips: every mean-reversion candidate (AI-hardware/semicap, space, crypto-miner and biotech names) lacked a verified, dated, name-specific cause and a base/reclaim. Every momentum candidate was a group/theme move (energy, telecom, IT services, software) or an unexplained single with no cited catalyst. No gate was loosened and no trade was forced; the 1-trade/day figure is a target, not a reason to trade, and it was met only by the adopted KTOS exit, not by a new entry.
+- P&L: equity $403.05 vs the $405.26 day-start basis = -$2.21 for the day, well inside the $100 daily loss limit. Peak equity $437.99; the 10% breaker level $394.19 was not approached.
+- Gaps: 09:32-09:42 ET observation gap (disclosed in Cycle 236); a few cycles skipped under the 6-minute rule. No other missed cycles.
+- Open items: confirm PDT/day-trade applicability for limited_margin (unverified, no problem hit); watch UNH-sympathy names, banks Tue/Wed, ASML Wed, TSM Thu, CPI Wed.
