@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-13 13:04 ET",
+  "as_of": "2026-10-13 13:17 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1104,6 +1104,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-13 13:04 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-13 13:17 ET",
       "equity": 403.05
     }
   ],
@@ -3231,3 +3235,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Mean-reversion scan (Tier B): 9 hits, mostly the same names: AMAT 460.49 (-7.4%), FLEX 108.47 (-7.5%), ASTS 47.29 (-8.1%), DPC 33.33 (-7.2%), SSRM 32.71 (-7.7%), BETA 18.33 (-7.5%), SMMT 15.82 (-7.6%), CIFR 11.52 (-11.4%), UEC 8.21 (-7.1%, new; uranium miner, $8 stock). The list flips in and out around the -7% line; no name has moved decisively, none has a dated verified cause, and none has formed a base/reclaim. Gate 1 fails for all. No entry.
 - Momentum scan: 10 hits: PBF 89.73 (+5.5%, new; refiner, energy theme with XLE +1.2%), BP, FIS, MDA, PR, BCE, INFY, STGW, FRMI, AMC. Energy names are all one theme; nothing has a cited catalyst or standout peer divergence. Gate 2 fails across the list. No entry.
 - No order. Still no trade today; 0 of the min-1 target. Gates not loosened.
+
+### Cycle 254 - 2026-10-13 13:17 ET (hourly pass with news; trigger scheduled 13:12, delivered 13:13-13:14)
+- Account: flat, cash/BP $403.05. No stop checks.
+- Tape: SPY 777.23 (-0.1%), QQQ 742.14 (-0.5%), SMH 583.27 (-1.3%), IWM 276.35 (-0.6%), IGV 111.19 (-0.1%), XLE 66.84 (+1.2%), XLF 54.97 (-0.2%), XLV 169.89 (-1.2%). A flat, narrow range since ~11:30.
+- News pass (ASTS, CIFR): both searches returned only older items. ASTS: undated earnings-miss/capex piece, an undated Barchart note about the SpaceX IPO pulling capital from space names and a $1B convertible; none is dated today. CIFR: August 2026 sector-wide miner selloff (rates, transition losses), nothing dated October. Neither provides a verified, dated cause for today's move (gate 1 fails). I note the SpaceX-IPO/capital-rotation and convertible-dilution narratives for ASTS as unverified context only.
+- Mean-reversion scan (Tier B): 12 hits, the longest list today: AMAT 457.12 (-8.1%), FLEX 108.70 (-7.3%), ASTS 47.46 (-7.8%), STEP StepStone 40.64 (-7.3%, new), DPC 32.99 (-8.1%), SSRM 32.90 (-7.2%), TNGX Tango 22.40 (-7.3%, new biotech), BETA 18.31 (-7.6%), IMNM 17.77 (-7.2%), SMMT 15.67 (-8.6%), CIFR 11.50 (-11.6%), UEC 8.21 (-7.0%). Several are making new lows for the day again (AMAT, SMMT), none has a verified cause or a base-and-reclaim structure. Gate 1/4 fail for all. No entry.
+- Momentum scan: 10 hits: VEEV 305.32 (+3.2%, new), PBF 90.07 (+5.9%), BP, MDA, PR, BCE, INFY, STGW, FRMI, AMC. VEEV is a software name (IGV -0.1%) so it has a +3.3 pt divergence from its group; no catalyst cited or searched (marginal, threshold-level, rel vol 1.04). Gate 2 fails. Others unchanged (energy theme, IT-services group, speculative small caps). No entry.
+- No order.
