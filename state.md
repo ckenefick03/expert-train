@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-13 09:45 ET",
+  "as_of": "2026-10-13 09:54 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1036,6 +1036,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-13 09:45 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-13 09:54 ET",
       "equity": 403.05
     }
   ],
@@ -3028,3 +3032,8 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - **Correction.** The pre-open brief said news passes at "09:12 and 10:12"; 09:12 is before the open and was not a real scheduled time. The hourly passes are at :12 during market hours (10:12 onward).
 - **Tape.** SPY 778.52, QQQ 743.18 (-0.4%), SMH -1.4%, IWM +0.2%. WDC -5.7%, STX -5.5% (watch for a base and a verified cause); GS +0.9%, UNH +1.5% (momentum, after 10:30).
 - **Next.** No entries before 10:00. Same gates; no forcing.
+
+### Cycle 237 - 2026-10-13 09:54 ET
+- Account: flat, cash/BP $403.05, no open orders needed (no positions). No stop checks.
+- Tape: SPY 778.48 (+0.05%), QQQ 743.83 (-0.3%), SMH 583.02 (-1.4%), IWM 277.34 (-0.2%). WDC 367.48 (-5.0%), STX 715.67 (-5.0%), GS 908.99 (+1.7%), UNH 379.22 (+0.2%, gave back most of its early gain).
+- Before the 10:00 ET entry window, so no scans run and no entries considered this cycle. Mean-reversion scan from the 10:02 cycle; momentum from 10:32.
