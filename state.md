@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-13 10:05 ET",
+  "as_of": "2026-10-13 10:22 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1044,6 +1044,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-13 10:05 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-13 10:22 ET",
       "equity": 403.05
     }
   ],
@@ -3048,3 +3052,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Mean-reversion scan (cap >= $2B, avg vol >= 1M, <= -7% on the day), Tier A window now open: 3 hits. ASTS 46.80 (-9.1%), APLD 21.54 (-7.4%), CIFR 10.88 (-16.3%).
 - Gates, in writing: all three fail. Gate 1: no dated, verified name-specific cause found this cycle (APLD and CIFR move with the AI-datacenter/miner group, so it is a group move, not a name dislocation; no news search run since none could pass gate 4). Gate 4: 35 minutes into the session with no base, higher low or reclaim, and still near the lows of the day. Gate 2 not checked (already failed).
 - Momentum scan not run (window opens 10:30). No order. Min-1 trade is a target only; gates unchanged.
+
+### Cycle 239 - 2026-10-13 10:22 ET (hourly pass with news; trigger scheduled 10:12, delivered 10:20)
+- Account: flat, cash/BP $403.05. No stop checks. Last cycle was 10:05 (more than 6 min ago), so this one ran.
+- Tape: SPY 777.35 (-0.1%), QQQ 742.71 (-0.4%), SMH 582.48 (-1.4%), IWM 276.44 (-0.5%). WDC 369.31 (-4.6%), STX 721.86 (-4.2%), GS 903.93 (+1.1%), UNH 378.44 (flat).
+- Mean-reversion scan (Tier A): 2 hits. ASTS 46.48 (-9.7%), CIFR 10.88 (-16.3%). APLD recovered above the -7% line (21.90, -5.8%) and dropped off.
+- News (WebSearch, both names): no coverage dated Oct 13 found for either. Results were only older, undated or stale items (ASTS: July convertible-offering selloff; CIFR: August miner selloff and June debt financing). Gate 1 fails for both: no verified dated cause. CIFR's move is also consistent with a group move (miners/AI datacenter).
+- Gate 4: ASTS is at its low of the day (46.48 vs 46.80 at 10:05, still making lower prices); CIFR flat at 10.87-10.88 for 17 minutes but no higher low or reclaim. Both fail.
+- Momentum (opens 10:30) not run. No order. Gates unchanged.
