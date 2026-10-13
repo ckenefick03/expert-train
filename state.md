@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-13 12:22 ET",
+  "as_of": "2026-10-13 12:34 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1088,6 +1088,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-13 12:22 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-13 12:34 ET",
       "equity": 403.05
     }
   ],
@@ -3186,4 +3190,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
   - FIS: vs FISV +1.0%, GPN -0.2%, JKHY +1.9%; modest idiosyncratic lead of about 2 pts at a threshold-level +3.1%, no catalyst found dated today (July 2026 and 2025 items only). Gate 2 fails.
   - INFY, FRMI, AMC: unchanged fails.
 - Mean-reversion scan (Tier B): 7 hits. AMAT 462.29 (-7.1%, back on the list, hovering at the line), ASTS 47.17 (-8.3%), DPC 33.04 (-8.0%), SSRM 32.59 (-8.0%), IMNM 17.53 (-8.5%), SMMT 15.80 (-7.8%), CIFR 11.36 (-12.7%). BETA dropped off. CIFR and ASTS are slowly improving (CIFR from -15% to -12.7%) but remain unexplained, with no dated verified cause. Gate 1 fails for all. No entry.
+- No order.
+
+### Cycle 250 - 2026-10-13 12:34 ET
+- Account: flat, cash/BP $403.05. No stop checks.
+- Tape: SPY 777.74 (-0.05%), QQQ 743.99 (-0.3%), SMH 586.89 (-0.7%, best level since the open selloff), IWM 276.47 (-0.5%), IGV 111.58 (+0.3%), XLE 66.63 (+0.9%). Tape is steadily recovering.
+- Mean-reversion scan (Tier B): 6 hits (AMAT dropped off). ASTS 47.24 (-8.2%), DPC 33.32 (-7.2%), SSRM 32.47 (-8.4%), IMNM 17.70 (-7.6%), SMMT 15.85 (-7.5%), CIFR 11.56 (-11.1%). CIFR keeps improving (from -16% at 10:05 to -11%) and DPC is near the -7% line, but neither has a dated, verified cause, so gate 1 still fails; a drift up with the market is not a cause. No entry.
+- Momentum scan: 5 hits. BP 48.26 (+3.3%), PR Permian Resources 24.14 (+3.2%, new; oil E&P, theme-wide with XLE +0.9%), INFY 11.49 (+6.1%), FRMI 3.84 (+18%), AMC 3.14 (+4.5%). FIS dropped off. BP and PR are energy-theme moves with no catalyst dated today found; INFY is an IT-services group move; FRMI and AMC unchanged. All fail gate 1 or 2. No entry.
 - No order.
