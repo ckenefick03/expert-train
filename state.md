@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-13 13:54 ET",
+  "as_of": "2026-10-13 14:05 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1120,6 +1120,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-13 13:54 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-13 14:05 ET",
       "equity": 403.05
     }
   ],
@@ -3277,3 +3281,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Mean-reversion scan (Tier B): 9 hits, near-identical to 13:44: AMAT 457.65 (-8.0%), ASTS 47.21 (-8.3%), DPC 32.95 (-8.3%), SSRM 32.84 (-7.3%), TNGX 22.30 (-7.7%), BETA 18.17 (-8.3%), IMNM 17.57 (-8.3%), SMMT 15.60 (-9.0%, new low), CIFR 11.75 (-9.7%). No dated verified cause for any, none with a reclaim. Gate 1 fails. No entry.
 - Momentum scan: 16 hits, still threshold-level group moves (energy, telecom, IT services) plus VEEV 306.14 (+3.5%), CDW (+4.5%), IFF 88.54 (+4.2%, new), AS, SLS (biotech, +3.5%, new), LI, STGW, FRMI, AMC. No catalyst cited for any; gate 2 fails across the list. No entry.
 - No order. Next: Tier C (14:30-15:30) window; hourly news pass at 14:12 and 15:12; close recap at 15:47 ET with an explicit overnight-hold statement (none: flat).
+
+### Cycle 258 - 2026-10-13 14:05 ET
+- Account: flat, cash/BP $403.05. No stop checks.
+- Tape: SPY 776.99 (-0.14%), QQQ 741.97 (-0.5%), SMH 583.67 (-1.2%), IWM 276.48 (-0.5%), IGV 111.54 (+0.2%), XLE 66.99 (+1.5%, day high).
+- Mean-reversion scan (Tier B, closes 14:30): 8 hits: AMAT 457.64 (-8.0%), ASTS 47.29 (-8.1%), DPC 32.99 (-8.1%), TNGX 22.16 (-8.3%), BETA 18.21 (-8.1%), IMNM 17.66 (-7.8%), SMMT 15.60 (-9.0%), CIFR 11.78 (-9.4%). SSRM dropped off. Nothing changed in kind: no dated verified cause, no reclaim. Gate 1 fails. No entry.
+- Momentum scan: 17 hits, threshold-level group moves again (energy PBF/BP/PR/VG; telecom CHTR/BCE; IT services INFY; software VEEV, OTEX +3.7% new), CDW +4.8%, IFF, MDA, SLS, STGW, XXI, FRMI, AMC. Software names VEEV and OTEX are both up with IGV at +0.2%, a mild name pair divergence but no cited catalyst. Gate 2 fails. No entry.
+- No order. Hourly news pass due at the 14:12 trigger.
