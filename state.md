@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-13 12:05 ET",
+  "as_of": "2026-10-13 12:22 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1084,6 +1084,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-13 12:05 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-13 12:22 ET",
       "equity": 403.05
     }
   ],
@@ -3171,4 +3175,15 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY 776.97 (-0.15%), QQQ 742.19 (-0.5%), SMH 582.20 (-1.5%, recovering from the -2.2% low), IWM 276.15 (-0.6%), IGV 111.30 (flat).
 - Mean-reversion scan (Tier B): 7 hits. AMAT and FLEX recovered above the -7% line and dropped off. Remaining: ASTS 46.99 (-8.7%), DPC 33.13 (-7.8%), SSRM 32.86 (-7.3%), BETA 18.40 (-7.2%), IMNM 17.58 (-8.2%), SMMT 15.93 (-7.0%), CIFR 11.23 (-13.6%). No dated verified cause for any; none has a base-and-reclaim structure confirmed (ASTS and CIFR have been in a flat range since ~10:00 with no reclaim of any prior level; DPC rose off its low but cause unverified). Gate 1 fails for all. No entry.
 - Momentum scan: MDB 392.86 (+3.0%, rel vol 1.45, right at the threshold, no dated catalyst), INFY 11.53 (+6.4%, group move with WIT/CTSH, no catalyst), FRMI +16.8%, AMC +4.8%. All fail gate 2. No entry.
+- No order.
+
+### Cycle 249 - 2026-10-13 12:22 ET (hourly pass with news; trigger scheduled 12:12, delivered 12:19)
+- Account: flat, cash/BP $403.05. No stop checks.
+- Tape: SPY 777.12 (-0.1%), QQQ 742.80 (-0.4%), SMH 583.77 (-1.2%, still recovering), IWM 276.21 (-0.6%), IGV 111.43 (+0.1%), XLF 54.99 (-0.1%), XLV 169.63 (-1.4%), XLE 66.79 (+1.2%).
+- News pass: a market-wide WebSearch again returned nothing dated today (only older 2025/early-2026 items), so there is still no verified dated market-level driver for the chip or healthcare weakness. BP, FIS, ASTS-style searches also returned only older items.
+- Momentum scan: 5 hits. BP 48.40 (+3.6%, rel vol 1.09), FIS 35.31 (+3.1%), INFY 11.53 (+6.4%), FRMI 3.83 (+17.7%), AMC 3.16 (+5.2%). MDB dropped off (below +3%).
+  - BP: outperforms the other oil majors (XOM +1.2%, CVX +1.4%, XLE +1.2%) by about 2.4 pts, but the energy sector is up as a theme, and no catalyst dated today was found (search returned 2010-2022 items). Gate 2 fails.
+  - FIS: vs FISV +1.0%, GPN -0.2%, JKHY +1.9%; modest idiosyncratic lead of about 2 pts at a threshold-level +3.1%, no catalyst found dated today (July 2026 and 2025 items only). Gate 2 fails.
+  - INFY, FRMI, AMC: unchanged fails.
+- Mean-reversion scan (Tier B): 7 hits. AMAT 462.29 (-7.1%, back on the list, hovering at the line), ASTS 47.17 (-8.3%), DPC 33.04 (-8.0%), SSRM 32.59 (-8.0%), IMNM 17.53 (-8.5%), SMMT 15.80 (-7.8%), CIFR 11.36 (-12.7%). BETA dropped off. CIFR and ASTS are slowly improving (CIFR from -15% to -12.7%) but remain unexplained, with no dated verified cause. Gate 1 fails for all. No entry.
 - No order.
