@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-14 14:36 ET",
+  "as_of": "2026-10-14 14:47 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1268,6 +1268,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-14 14:36 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-14 14:47 ET",
       "equity": 403.05
     }
   ],
@@ -3721,3 +3725,14 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - GFS (48.73, +4.3%): the two newest 5-min bars (18:20Z, 18:25Z) are a tight 48.58-48.89 range on thin volume (20k and 51k shares), closes 48.785 and 48.68. The rising-lows run stalled (48.75 then 48.63 then 48.58 lows are no longer higher than 48.75), no break above the 49.09 bounce high, no reclaim. Gate 3 still not met, no entry. Remains on watch; trigger level unchanged (5-min close above ~49.10 that holds).
 - Scans: not re-run this cycle (third consecutive cycle without a full re-run; the last full runs were 14:03 mean-reversion and 14:22 momentum). I am flagging the gap rather than hiding it: the tape has been flat and the only tracked candidate was re-checked by quote and 5-min bars, but a full pass of both scans will be done next cycle.
 - Zero trades today. Entry window ends 15:30 ET.
+
+### Cycle 295 - 2026-10-14 14:47 ET (10-min pass; trigger 14:42; full scans of both strategies run, as promised in cycle 294)
+- Account: flat, cash/BP $403.05, no positions or open orders. No order placed.
+- Tape: SPY 767.53 (-1.3%), QQQ 727.39 (-2.2%), SMH 564.57 (-4.0%): new lows for SMH, drifting down. Tier C (14:30-15:30) in effect: mean-reversion needs a forced-tag entry with all four gates.
+- Mean-reversion scan: 102 hits, same sector groups; several slightly lower than at 14:03 (e.g. SMH-complex names LITE, CIEN, COHR, NBIS, AAOI) and a few fractionally higher (DOCN, CRWV). No name shows a base/higher low/reclaim, and no verified, dated name-specific cause is on file for any (the market-wide search at 14:12 found none dated). Gates 1 and 4 fail. No entry. SKYD (-26.7%) still unresearched.
+- Momentum scan: LMT +3.4% (521.06, new), HALO +7.8%, GFS +3.9% (48.53), LQDA +25.6%, LEGN +8.5% (19.40, new). IBRX and PRGO dropped out (below +3%).
+  - LMT: a steady all-day climb on 30-min bars (closes 513.09 -> 520.43 with each low at or above the prior; lows 508.51, 512.50, 513.68, 514.51, 515.13, 516.31, 518.65, 518.88, 519.59, 519.25), so structure is a trend with no pullback to buy. Gate 2 fails: searched for a dated Oct 14 catalyst, found only undated or older pieces (an undated THAAD production article and an older Q2 result), none dated today. Peer-complex divergence (NOC/GD/RTX/ITA) not checked because gate 2 already fails. No entry.
+  - LEGN: +8.5%, no catalyst searched or cited, no pullback structure evaluated beyond 30-min bars (range-bound 19.0-19.7 for 3 hours). Fails gate 2 by absence; no entry.
+  - GFS: 5-min bars 18:30Z close 48.73, 18:35Z (thin, 1.9k shares) 48.64; now 48.53, lower than the 48.58-48.89 range lows from earlier. The higher-low sequence is broken (48.58 was the prior low); gate 3 not met; watch level (5-min close above ~49.10) unchanged but weakening.
+  - HALO: no catalyst located; no entry.
+- Zero trades today. Entry window ends 15:30 ET (about 40 minutes).
