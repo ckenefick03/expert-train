@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-13 15:47 ET",
+  "as_of": "2026-10-14 08:30 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -44,9 +44,9 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "status_note": "Flat, 100% cash $403.05. KTOS exited at the open per the written plan. Scanning from 10:00 (mean-reversion) and 10:30 (momentum).",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-10-13",
-    "start_equity": 405.26,
-    "trades": 1,
+    "date": "2026-10-14",
+    "start_equity": 403.05,
+    "trades": 0,
     "forced": 0
   },
   "equity_history": [
@@ -1164,6 +1164,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-13 15:47 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-14 08:30 ET",
       "equity": 403.05
     }
   ],
@@ -3404,3 +3408,15 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - P&L: equity $403.05 vs the $405.26 day-start basis = -$2.21 for the day, well inside the $100 daily loss limit. Peak equity $437.99; the 10% breaker level $394.19 was not approached.
 - Gaps: 09:32-09:42 ET observation gap (disclosed in Cycle 236); a few cycles skipped under the 6-minute rule. No other missed cycles.
 - Open items: confirm PDT/day-trade applicability for limited_margin (unverified, no problem hit); watch UNH-sympathy names, banks Tue/Wed, ASML Wed, TSM Thu, CPI Wed.
+
+### Cycle 269 - 2026-10-14 08:30 ET (PRE-OPEN BRIEF, read-only, no orders; trigger 12:28Z, delivered 12:28:37Z)
+- New session day: Wed 2026-10-14. Day-start equity basis reset to $403.05 (flat; Tuesday's official close). Trades today: 0 so far.
+- Account: flat, cash/BP $403.05, no positions, no open orders, so no stop checks and no overnight-hold risk to carry.
+- **Tape (pre-market vs 10-13 close):** SPY 780.25 (+0.29%), QQQ 744.66 (+0.14%), IWM 277.96 (+0.45%), SMH 586.00 (-0.36%), XLE 67.57 (+0.55%), XLF 54.71 (-0.19%), XLV 170.70 (+0.60%), IGV 110.20 (-0.7%, wide bid/ask, thin). Pre-market liquidity is thin; levels are indicative only.
+- **Earnings (get_earnings_calendar, this cycle):** reported this morning with actuals posted: ASML (EPS 14.88 vs 12.47 est, but the stock is roughly flat pre-market at 1719, +0.1%), BLK 15.93 vs 14.25, MS 3.03 vs 2.90, BAC 1.08 vs 1.11 (miss), PGR, STT, FAST. After the close today: PNFP, HOMB, SNV. Tomorrow 10-15 am: TSM, PNC, SCHW, USB, BNY, FHN, ERIC, WIT, PLD, MRSH; pm: IBKR, JBHT, AA. Names reporting today or within 2 sessions are to be avoided as entries (banks/brokers, TSM, ERIC, WIT, ASML read-through names are event-risk until digested).
+- **News/politics:** two WebSearch queries (futures/pre-market; CPI/Fed) returned only old, undated or 2016-2025 items; nothing dated 2026-10-14 was found. No news claim is made this cycle beyond the earnings-calendar data above. I did not verify today's economic-data schedule from a source this cycle (my earlier note says CPI Wednesday; treat as unconfirmed and expect the print to move the tape if so). No verified policy or geopolitical driver.
+- **Regime read:** broad market modestly firmer pre-open, semis soft, energy and health care bid, financials soft into the big-bank earnings. No named driver verified.
+- **Candidates to watch (watch-list only; each still has to pass every gate live, nothing is pre-approved):**
+  - Mean-reversion (only if a name is down >=7% with a verified, dated, name-specific cause found that cycle and a base/higher low/reclaim): AMAT (closed 464.24; semicap read-through from ASML today), KOD (91.63), SMMT (15.52), ASTS (47.07), CIFR (11.34). All were Tuesday's scan names with no verified cause yet; pre-market they are flat to slightly lower, so none is oversold today yet. Entry windows: Tier A 10:00-11:30 ET.
+  - Momentum (only with relative-strength divergence, a cited dated catalyst, a held pullback/higher low then break/reclaim, and not before 10:30 ET): energy complex follow-through (XOM 174.70, +0.3% pre; refiners VLO/PBF were group-move names Tuesday, so a group move alone does not qualify), health care/managed care sympathy (UNH 379.87, +0.6% pre; XLV +0.6%), and any ASML-driven semicap re-rating that shows real divergence after the open. Avoid TSM, ERIC, WIT (earnings within 2 sessions).
+- No order placed. First possible entry: 10:00 ET (mean-reversion Tier A) / 10:30 ET (momentum).
