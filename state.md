@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-14 12:58 ET",
+  "as_of": "2026-10-14 13:20 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1236,6 +1236,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-14 12:58 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-14 13:20 ET",
       "equity": 403.05
     }
   ],
@@ -3630,3 +3634,13 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
   - Result: FAIL on gate 3. No entry. What would change the answer: a pullback that holds above 47.28 (ideally above ~48.2) and forms a higher low, then a reclaim of the 49.2-49.8 area on volume; at that point the stop would sit just below the higher low (about 3-4% under entry) and the target at least 2R, with the thesis checked against SMH direction (a continued semis selloff weighs on a stock held up only by a same-day headline). Horizon end of day; no overnight roll.
 - Follow-ups on earlier skips: DELL 509.7 (-11.0%, lower than 512 at 12:43? roughly flat), CRWV 66.3 (-14.7%, flat), CIFR 10.17 (flat), ASTS 42.5 (flat). Skipping remains right on all of them.
 - No order placed. Trades today: 0.
+
+### Cycle 287 - 2026-10-14 13:20 ET (hourly pass with news; trigger scheduled 13:12, delivered 13:13)
+- Account: flat, cash/BP $403.05, no positions or open orders. No order placed this cycle.
+- Tape: SPY 769.42 (-1.1%), QQQ ~-1.7%, SMH 568.99 (-3.3%), IWM ~-1.9%, XLE +0.6%, XLV +2.1%.
+- Mean-reversion scan: 76 hits, same groups; gate 1 (verified name-specific dated cause) and gate 4 (base/higher low/reclaim) fail across the board. No entry.
+- Momentum scan hits: HALO +8.1%, GFS +5.3%, LQDA +25.7%, PRGO +3.5%, IBRX +5.2%. LQDA/PRGO have no cited catalyst (fail gate 2). HALO and IBRX: catalysts not checked this cycle - not evaluated, not entered.
+- GFS gate check (49.115 bid/ask 49.10/49.14): G1 pass (+5.2% vs SMH -3.3%). G2 pass with caveat (Oct 14 company release seen in search listings; pages not opened, fetch fails on DNS). G4 pass on timing. G3 FAIL: 5-min bars show the move was a vertical spike (47.54 -> 49.57 in 20 minutes, 16:35-16:55Z) followed by only two bars of pullback; the high is 49.74 (17:00Z bar) and price is below it, so there is no break and no multi-bar base/higher low after the spike - this would be chasing the first impulse. Skipped. GFS on watch: would reconsider on a 5-min close above ~49.80 that holds, or a clean pullback that builds a higher low above the rising EMAs. Zero trades is not a reason to loosen the gate.
+- Correction: cycle 286 said GFS "closed only -0.0% vs peers the prior day (flat at 46.70)". I never verified peers' prior-day moves; that phrase is unsupported and should be disregarded. The 46.70 prior close itself is from the quote data.
+- Follow-ups on earlier skips (ASTS, CIFR, CRWV, DELL, AMAT, GEV): not re-quoted this cycle; last check showed them lower or flat, so skips held.
+- Upcoming: TSM earnings Thu am, banks/others Oct 15-16, retail sales/PPI Oct 15, CPI day unconfirmed, Fed Oct 28.
