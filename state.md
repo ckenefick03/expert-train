@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-14 11:05 ET",
+  "as_of": "2026-10-14 11:17 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1200,6 +1200,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-14 11:05 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-14 11:17 ET",
       "equity": 403.05
     }
   ],
@@ -3509,3 +3513,13 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Mean-reversion scan (<= -7%): 31 hits, same groups (earnings reactions BAC/PGR/STT; AI-infrastructure CRWV -14.0%, NBIS -8.5%, DELL -8.4%, DOCN -10.5%, IONQ, APLD, PENG; crypto miners HUT, IREN, WULF, CLSK, BTDR, CIFR; singles ASTS -7.8%, AFRM -9.4%, U, UUUU, SKYD -27%). Gate 1 FAIL for all: still no verified, dated cause. The hourly news pass is next cycle (11:12 trigger); candidates would not otherwise pass the structure gate (prices flat-to-lower since 10:06, no higher low/reclaim). No entry.
 - Momentum scan (+3%, rel vol >= 1.0): 1 hit, LQDA +27.4% (34.15, bouncing); PRGO dropped off. Unexplained single, no cited catalyst; gate 2 FAIL. No entry.
 - No order placed. Trades today: 0. Tier A closes 11:30; Tier B (11:30-14:30) follows and needs the Tier A-free condition (true) plus all four gates.
+
+### Cycle 278 - 2026-10-14 11:17 ET (hourly pass with news; trigger scheduled 11:12, delivered 11:13; Tier A window, 13 minutes left)
+- Account: flat, cash/BP $403.05, no positions, no open orders, no stop checks.
+- Tape: SPY 771.59 (-0.83%), QQQ 734.11 (-1.27%), SMH 573.15 (-2.54%), IWM 272.54 (-1.5%), XLF 54.16 (-1.2%), XLE 67.46 (+0.4%), XLV 172.59 (+1.7%). Slow further erosion since 10:06; semis at the low of the day area, no bounce.
+- Mean-reversion scan (<= -7%): 37 hits (widening): earnings reactions BAC -7.6%, PGR -7.2%, STT -8.0%; AI-infrastructure/neocloud/optical CRWV -14.5%, NBIS -8.8%, DELL -8.8%, DOCN -12.6%, AAOI, PENG, AKAM -7.2%, APLD, IONQ; crypto miners HUT, IREN, WULF, CLSK, BTDR, CORZ; fintech AFRM -9.8%, SOFI -7.2%, FIGR; singles ASTS -8.1%, U, ENPH, SKYD -27%, UUUU, others.
+- News (WebSearch this cycle, after the tape): (1) CoreWeave: results were older/undated (2025 items, an undated Needham downgrade note); nothing I can tie to 2026-10-14, so no verified, dated cause. (2) Bank of America: pre-report previews for the 10-14 report (before the open, consensus EPS ~1.11-1.12; management had guided Q3 investment-banking fees down) plus the earnings calendar's actual of 1.08 vs 1.11 est; this is a company-specific earnings cause = automatic FAIL on gate 1, and inside the earnings window. No dated driver was found for the AI-infrastructure, crypto-miner or fintech selloffs. A sector-wide cause counts only if verified; unverified = FAIL.
+- Gate result: every mean-reversion candidate fails gate 1; structure gate 4 also fails for the large groups (new lows, no higher low/reclaim). No entry.
+- Momentum scan (+3%, rel vol >= 1.0): 2 hits, LQDA +26.6% (33.94) and PRGO +3.0% (15.84); no cited catalyst for either; gate 2 FAIL. No entry.
+- Follow-ups on earlier skips (prices at 11:17 vs prior close / skip price): ASTS 43.19 vs 47.07 close (-8.2%); CIFR 10.54 vs 11.34 (-7.1%); AMAT 453.74 vs 464.24 (-2.3%); CRWV 66.37 vs 77.81 (-14.7%). All lower; skipping continues to hold up.
+- No order placed. Trades today: 0. Tier B opens 11:30 ET (Tier A produced no qualifier, so Tier B is available at >= 3.5% drop with all four gates).
