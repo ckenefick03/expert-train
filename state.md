@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-14 13:55 ET",
+  "as_of": "2026-10-14 14:07 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1252,6 +1252,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-14 13:55 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-14 14:07 ET",
       "equity": 403.05
     }
   ],
@@ -3676,3 +3680,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Mean-reversion scan (re-run in full this cycle): 101 hits (76 -> 87 -> 101 across the last three runs), same AI/semis/optical/neocloud/miners/quantum/nuclear groups plus some new names (DASH, VST, SMCI, RKLB, SNAP, MP). Everything is still falling with the sector; no name shows a base/higher low, and no verified, dated name-specific cause was found for any (no news search run). Gates 1 and 4 fail. SKYD (-26.8%) still company-specific/unresearched, not entered.
 - Momentum scan: 4 hits (GFS dropped out). GFS 47.975, +2.7% on the day, down from 49.31 at 13:34 and under the 3% scan threshold: its relative-strength divergence is fading and gate 3 was never met, so it is off the watch list unless it reclaims ~49.8. HALO, LQDA, PRGO, IBRX: no cited catalyst, no base check; no entry.
 - Zero trades so far today (target of 1/day is not a reason to loosen a gate); about 95 minutes of entry window remain (to 15:30 ET).
+
+### Cycle 291 - 2026-10-14 14:07 ET (10-min pass; trigger 14:02)
+- Account: flat, cash/BP $403.05, no positions or open orders. No order placed.
+- Tape: SPY 767.59 (-1.3%), QQQ 728.33 (-2.0%), SMH 565.85 (-3.8%), XLE 67.54 (+0.5%), XLV 173.62 (+2.3%). Flat versus 13:55: selling paused but no recovery.
+- Mean-reversion scan: 103 hits (101 at 13:55), same groups; most are within a point or two of their 13:55 prices, i.e. drifting sideways near lows rather than building a reclaim. No verified, dated name-specific cause found for any and no news search run (nothing otherwise passes). Gates 1 and 4 fail. Tier B closes 14:30; Tier C (forced-tag only, all four gates) follows to 15:30.
+- Momentum scan: HALO, GFS, LQDA, PRGO, IBRX. GFS is back on the scan (48.41, +3.7%). 5-min bars: 17:35Z 49.22->48.86, 17:40Z 48.72, 17:45Z 48.32, 17:50Z low 47.905 (lower highs and lower lows from 49.42 to 47.905), then the 17:55Z bar closed 48.49. That is a one-bar bounce off a low, exactly the "first tick of a bounce" the gate excludes; no higher low has formed above 47.905 and short-term averages have rolled over. Gate 3 fails, no entry. HALO/IBRX/LQDA/PRGO: no cited catalyst checked, no entry.
+- Still zero trades today. The 1/day figure is a target; gates stay as written.
