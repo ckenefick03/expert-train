@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-14 12:18 ET",
+  "as_of": "2026-10-14 12:35 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1224,6 +1224,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-14 12:18 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-14 12:35 ET",
       "equity": 403.05
     }
   ],
@@ -3586,3 +3590,12 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Momentum scan (+3%, rel vol >= 1.0): 2 hits, LQDA +25.3% (33.59) and PRGO +4.2% (16.02); no cited catalyst; gate 2 FAIL. No entry.
 - Follow-ups on earlier skips (now vs the skip-time price): CRWV 65.0 (was 66.4 at 11:17) lower; DELL 512 (was 522 at 11:17) lower; CIFR 10.07 (was 10.54) lower; ASTS 42.5 (was 43.19) lower; GEV 937 (was 931 at 11:56) a touch higher. Skipping continues to hold up on every name except GEV, which has moved sideways to slightly up.
 - No order placed. Trades today: 0. Tier B runs to 14:30 ET; Tier C 14:30-15:30.
+
+### Cycle 284 - 2026-10-14 12:35 ET (10-minute cycle; trigger 12:32; the 12:22 trigger was skipped under the 6-minute rule after Cycle 283 at 12:18; Tier B)
+- Account: flat, cash/BP $403.05, no positions, no open orders, no stop checks.
+- Tape: SPY 769.53 (-1.09%), QQQ 729.98 (-1.83%), SMH 567.11 (-3.57%), IWM 271.53 (-1.9%), XLE 67.57 (+0.6%), XLF 54.35 (-0.9%), XLV 173.22 (+2.1%). Fresh lows for QQQ and SMH; no bounce.
+- Mean-reversion scan (<= -7%): 74 hits (still widening). Same groups: AI hardware/optical/EMS (DELL -11.6% at 506, LITE, CIEN, CLS -9.5%, JBL, COHR, CRDO, TTMI, FLEX, MXL, AAOI -10.2%, PENG, HPE -7.5%, UCTT), neocloud/software (CRWV -15.8% at 65.53, NBIS -10.3%, DOCN -14.9%, ORCL -7.9%, AKAM, P, SYM), power (GEV -7.1%, BE -8.8%, SEI, FPS, INIO), crypto miners (HUT, CIFR -11.0%, WULF, IREN, CORZ, CLSK, BTDR, RIOT, MARA, GLXY), fintech (AFRM -10.9%, HOOD -7.7%, SOFI, FIGR), quantum/nuclear/space (IONQ, QBTS, RGTI, OKLO, SMR, XE, FRVO, ASTS, VSAT, OUST, ACHR, AUR), gold/uranium/rare earth (SSRM, IAG, CDE, HL, UUUU, USAR, ALM), SKYD -27.6%.
+- Gate result: gate 1 FAIL for all (no verified, dated, name-specific or sector-wide cause; no new search this cycle, the next news pass is the 13:12 trigger). Gate 4 FAIL for all large names (new lows, no base/higher low/reclaim). No entry.
+- Momentum scan (+3%, rel vol >= 1.0): 2 hits, LQDA +29.8% (34.79) and PRGO +3.9% (15.98); no cited catalyst; gate 2 FAIL. No entry.
+- Day status: 74 names are 7%+ down and SMH -3.6% for the day, with the account flat in cash. If this closes down heavily, a flat account is the correct outcome of the framework on a day with no verified cause; no gate was relaxed.
+- No order placed. Trades today: 0.
