@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-14 08:30 ET",
+  "as_of": "2026-10-14 09:44 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1168,6 +1168,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-14 08:30 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-14 09:44 ET",
       "equity": 403.05
     }
   ],
@@ -3420,3 +3424,9 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
   - Mean-reversion (only if a name is down >=7% with a verified, dated, name-specific cause found that cycle and a base/higher low/reclaim): AMAT (closed 464.24; semicap read-through from ASML today), KOD (91.63), SMMT (15.52), ASTS (47.07), CIFR (11.34). All were Tuesday's scan names with no verified cause yet; pre-market they are flat to slightly lower, so none is oversold today yet. Entry windows: Tier A 10:00-11:30 ET.
   - Momentum (only with relative-strength divergence, a cited dated catalyst, a held pullback/higher low then break/reclaim, and not before 10:30 ET): energy complex follow-through (XOM 174.70, +0.3% pre; refiners VLO/PBF were group-move names Tuesday, so a group move alone does not qualify), health care/managed care sympathy (UNH 379.87, +0.6% pre; XLV +0.6%), and any ASML-driven semicap re-rating that shows real divergence after the open. Avoid TSM, ERIC, WIT (earnings within 2 sessions).
 - No order placed. First possible entry: 10:00 ET (mean-reversion Tier A) / 10:30 ET (momentum).
+
+### Cycle 270 - 2026-10-14 09:44 ET (10-minute cycle; trigger 09:42; no logged cycle between the 08:30 pre-open brief and now)
+- Account: flat, cash/BP $403.05, no positions, no open orders, no stop checks.
+- Tape (regular session, 14 minutes in): SPY 775.80 (-0.28%), QQQ 739.45 (-0.55%), SMH 579.37 (-1.5%), IWM 273.99 (-1.0%), XLF 54.31 (-0.9%), XLE 67.26 (+0.1%), XLV 172.26 (+1.5%). The pre-market firmness reversed at the open: broad risk-off with semis, small caps and financials lower and health care bid.
+- Before the 10:00 ET entry window: no entries are permitted in either strategy and no scans were run (opening-range prices are not used for gates). No news search this cycle. Scans start at the 10:02 cycle.
+- No order placed. Trades today: 0.
