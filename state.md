@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-14 09:54 ET",
+  "as_of": "2026-10-14 10:06 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1176,6 +1176,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-14 09:54 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-14 10:06 ET",
       "equity": 403.05
     }
   ],
@@ -3439,4 +3443,12 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Account: flat, cash/BP $403.05, no positions, no open orders, no stop checks.
 - Tape: SPY 774.72 (-0.42%), QQQ 738.15 (-0.73%), SMH 577.23 (-1.85%), IWM 273.71 (-1.1%), XLF 54.13 (-1.3%), XLE 67.34 (+0.2%), XLV 172.70 (+1.8%). Selling pressure building in semis, small caps and financials; health care bid. No news search (not yet in an entry window).
 - Still before the 10:00 ET entry window: no entries permitted, no scans. The first scan cycle is the 10:02 trigger.
+- No order placed. Trades today: 0.
+
+### Cycle 272 - 2026-10-14 10:06 ET (10-minute cycle; trigger 10:02, delivered 10:03; first scan cycle of the day, Tier A window)
+- Account: flat, cash/BP $403.05, no positions, no open orders, no stop checks.
+- Tape: SPY 773.69 (-0.56%), QQQ 737.24 (-0.85%), SMH 576.05 (-2.05%), IWM 272.99 (-1.3%), XLF 54.12 (-1.3%), XLE 67.22 (+0.0%), XLV 172.77 (+1.8%). Broad risk-off led by semis/AI infrastructure; SMH at -2.05% meets the Tier A sector-ETF condition (>= 2%), but the other Tier A conditions are separate.
+- Mean-reversion scan (<= -7%): 26 hits. Groups: (a) earnings reactions reported today per the earnings calendar: BAC -8.3% (EPS 1.08 vs 1.11 est), PGR -9.4%, STT -7.7%; company-specific cause and inside the 2-day earnings window = automatic FAIL (gate 1, universe rule). (b) AI infrastructure / neocloud / data-center: CRWV -15.1%, NBIS -9.8%, DELL -7.3%, APLD -8.4%, IREN -9.4%, DOCN -7.2%; (c) crypto miners/hosts: HUT -8.9%, CIFR -8.2% (10.41), CORZ -8.0%, WULF -8.6%, CLSK -7.5%, BTDR -7.2%; (d) other singles: SKYD -26% (company-specific by size, no cause found), AFRM -7.0%, U -7.4%, ASTS -7.6% (43.50), FIGR, CMBT, SSRM, UUUU, NVTS, FRMI, PLUG.
+- Gate-check: gate 1 FAIL for every group. One WebSearch (neocloud/AI infrastructure selloff today) returned only older, other-dated items (Feb, Jul, Sep 2026 neocloud selloffs); nothing dated 2026-10-14, so no verified, dated cause for today's AI-infrastructure move. Sector-wide move is plausible given SMH, but unverified = FAIL. No 5-minute higher low checked or available, so gate 4 / stabilization also unconfirmed. No entry.
+- Momentum scan (+3%, rel vol >= 1.0): 1 hit, LQDA +31.5% (35.25, cap $2.4B), an unexplained single; no dated catalyst found this cycle and no pullback structure; gate 2 FAIL. No entry. (Momentum earliest 10:30 ET anyway.)
 - No order placed. Trades today: 0.
