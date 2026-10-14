@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-14 15:45 ET",
+  "as_of": "2026-10-14 15:50 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, 100% cash $403.05. KTOS exited at the open per the written plan. Scanning from 10:00 (mean-reversion) and 10:30 (momentum).",
+  "status_note": "Oct 14 close: flat all day, zero trades, no positions, no overnight holds. Equity $403.05 (7.98% below the $437.99 peak; 10% breaker at $394.19).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-14",
@@ -1288,6 +1288,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-14 15:45 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-14 15:50 ET",
       "equity": 403.05
     }
   ],
@@ -3784,3 +3788,16 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Reconcile only: flat, cash/BP $403.05, no positions or open orders. No scans, no entries (past 15:30 ET).
 - Tape (15:43 ET): SPY 768.94 (-1.2%), QQQ 729.02 (-2.0%), SMH 566.99 (-3.6%), IWM 270.78 (-2.1%), GFS 49.165 (+5.3%). The late bounce has faded back to roughly where the 14:30-15:20 range sat.
 - The official-close recap is due from the 15:47 ET trigger.
+
+### Cycle 300 - 2026-10-14 15:50 ET (CLOSE RECAP; trigger 19:47Z / 15:47 ET, delivered 15:48 ET)
+- Stop checks: none to run, the account holds no positions. Reconciled live: cash/BP $403.05, total value $403.05, equity value $0, no open orders.
+- Close tape (15:48 ET, ~12 minutes before the bell): SPY 768.61 (-1.2%), QQQ 728.24 (-2.1%), SMH 565.50 (-3.8%), IWM 270.56 (-2.2%). Official close is not final at this timestamp; because the account is 100% cash its equity cannot change before the bell, so the $403.05 figure is final for the day.
+- OVERNIGHT: no positions open, so nothing rolls overnight; no thesis is being carried, none is intact or broken. Nothing to be exited at the open either.
+- DAY RECAP (Wed Oct 14, 2026):
+  - Result: 0 trades (below the 1/day target; the target is not a reason to loosen a gate), day P&L $0.00 versus the $403.05 start basis, no forced-tag trades. Equity $403.05; peak equity $437.99; drawdown from peak 7.98%; the 10% breaker level is $394.19, leaving $8.86 of headroom, so a single losing trade in the next sessions could matter for the breaker. Loss limit ($100/day) never in play.
+  - What ran: pre-open brief (cycle 269) and about 31 logged cycles through the day (cycles 270-299), plus this recap. Hourly news passes at 286-ish, 292 and 297. Full scans of both strategies ran in roughly half of the cycles; the others were quote-and-bars checks of tracked names.
+  - Skipped by the 6-minute rule: the 13:22, 14:52 and 15:22 ET triggers, each within 6 minutes of the prior logged cycle.
+  - Cycles where the mean-reversion scan was not re-run (disclosed in each entry): 292, 293, 294 and 296; the previous full run each time was 5 to 30 minutes old and the tape was flat.
+  - Why nothing traded: a broad AI/semis/neocloud/miner selloff (SMH -3.5% to -4.0%) with no verified, dated name-specific cause for any mean-reversion candidate (searches turned up only undated or older material) and no basing structure; earnings reactions (BAC, PGR, STT) excluded as company-specific. Momentum: GFS was the only relative-strength divergence (+4% to +5% against SMH -3.7%) but failed the held-pullback/higher-low gate at every check, including a lower low at 19:00Z; LMT, LLY, LEGN, HALO, LQDA, PRGO, IBRX, BBWI had no cited dated catalyst (LLY moved with its sector). 
+  - Candid notes: LMT trended up all day with no pullback, so the gates kept me out of a winner; GFS reclaimed the 49.10 watch level at ~15:32 ET only after the cutoff and did not hold it; the cycle 285 and 286 catalyst and peer-comparison errors were corrected in 286 and 287. PDT applicability on limited_margin is still unverified (no day trade has occurred).
+- Coming up: TSM earnings Thu am (Oct 15), banks and other earnings Oct 15-16, retail sales/PPI Oct 15, CPI date unconfirmed, Fed Oct 28.
