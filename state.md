@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-14 10:20 ET",
+  "as_of": "2026-10-14 10:35 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1184,6 +1184,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-14 10:20 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-14 10:35 ET",
       "equity": 403.05
     }
   ],
@@ -3465,3 +3469,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Momentum scan (+3%, rel vol >= 1.0): 1 hit, LQDA +29.9% (34.82, cap $2.4B), unexplained single with no cited catalyst; gate 2 FAIL. Momentum window opens 10:30 ET. No entry.
 - Follow-ups on skipped candidates from 10-13 and the 10-14 pre-open watch list: ASTS 47.07 close -> 43.56 now (-7.4%); CIFR 11.34 -> 10.51 (-7.4%); neither would have worked as an entry at yesterday's levels. Pre-open watch names KOD/SMMT/AMAT not re-quoted this cycle.
 - No order placed. Trades today: 0.
+
+### Cycle 274 - 2026-10-14 10:35 ET (10-minute cycle; trigger 10:32; the 10:22 trigger was skipped under the 6-minute rule after Cycle 273 at 10:20; Tier A window, momentum now open)
+- Account: flat, cash/BP $403.05, no positions, no open orders, no stop checks.
+- Tape: SPY 773.01 (-0.64%), QQQ 736.25 (-0.98%), SMH 575.49 (-2.15%), IWM 273.10 (-1.3%), XLF 54.22 (-1.1%), XLE 67.23 (+0.0%), XLV 172.56 (+1.7%). Little change from 10:20: selloff holding, no visible stabilization in semis.
+- Mean-reversion scan (<= -7%): 30 hits, the same groups as Cycles 272-273 (earnings reactions BAC/PGR/STT; AI-infrastructure/neocloud CRWV -13.9%, NBIS -9.6%, DELL -7.6%, ORCL -7.5%, DOCN, APLD; crypto miners HUT, CORZ, WULF, CLSK, BTDR, IREN; singles SKYD -24.6%, AFRM, ASTS -7.7%, IONQ -7.0%, SMR -7.0%, others new: PENG, SEI, INIO). Gate 1 FAIL for all: no verified, dated, name-specific or sector-wide cause (no new search this cycle; the news pass at 10:20 found nothing dated today). No entry.
+- Momentum scan (+3%, rel vol >= 1.0): 1 hit, LQDA +28.6% (34.47), an unexplained single with no cited catalyst and no pullback/higher-low structure; gate 2 FAIL. Momentum window is open (10:30) but no candidate. No entry.
+- No order placed. Trades today: 0. Tier A closes 11:30 ET; Tier B opens then (needs no Tier A qualifier today, which holds).
