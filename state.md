@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-14 10:06 ET",
+  "as_of": "2026-10-14 10:20 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1180,6 +1180,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-14 10:06 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-14 10:20 ET",
       "equity": 403.05
     }
   ],
@@ -3451,4 +3455,13 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Mean-reversion scan (<= -7%): 26 hits. Groups: (a) earnings reactions reported today per the earnings calendar: BAC -8.3% (EPS 1.08 vs 1.11 est), PGR -9.4%, STT -7.7%; company-specific cause and inside the 2-day earnings window = automatic FAIL (gate 1, universe rule). (b) AI infrastructure / neocloud / data-center: CRWV -15.1%, NBIS -9.8%, DELL -7.3%, APLD -8.4%, IREN -9.4%, DOCN -7.2%; (c) crypto miners/hosts: HUT -8.9%, CIFR -8.2% (10.41), CORZ -8.0%, WULF -8.6%, CLSK -7.5%, BTDR -7.2%; (d) other singles: SKYD -26% (company-specific by size, no cause found), AFRM -7.0%, U -7.4%, ASTS -7.6% (43.50), FIGR, CMBT, SSRM, UUUU, NVTS, FRMI, PLUG.
 - Gate-check: gate 1 FAIL for every group. One WebSearch (neocloud/AI infrastructure selloff today) returned only older, other-dated items (Feb, Jul, Sep 2026 neocloud selloffs); nothing dated 2026-10-14, so no verified, dated cause for today's AI-infrastructure move. Sector-wide move is plausible given SMH, but unverified = FAIL. No 5-minute higher low checked or available, so gate 4 / stabilization also unconfirmed. No entry.
 - Momentum scan (+3%, rel vol >= 1.0): 1 hit, LQDA +31.5% (35.25, cap $2.4B), an unexplained single; no dated catalyst found this cycle and no pullback structure; gate 2 FAIL. No entry. (Momentum earliest 10:30 ET anyway.)
+- No order placed. Trades today: 0.
+
+### Cycle 273 - 2026-10-14 10:20 ET (hourly pass with news; trigger scheduled 10:12, delivered 10:17; Tier A window)
+- Account: flat, cash/BP $403.05, no positions, no open orders, no stop checks.
+- Tape: SPY 772.80 (-0.67%), QQQ 736.21 (-0.99%), SMH 576.22 (-2.02%), IWM 272.85 (-1.4%), XLF 54.14 (-1.2%), XLE 67.30 (+0.1%), XLV 172.67 (+1.8%). Semis/AI infrastructure remain the weak spot; health care is the only strong sector.
+- Mean-reversion scan (<= -7%): 29 hits, same groups as Cycle 272 plus ORCL -7.4% (132.54, cap $434B), EQPT, ASST, ALM, OPEN. Earnings-reaction names (BAC -8.2%, PGR -9.2%, STT -8.7%, reported today per the earnings calendar) fail gate 1 and the earnings-window rule. AI infrastructure/neocloud names (CRWV -14.7% at 66.38, NBIS -9.7%, DELL -7.2%, ORCL, APLD, IREN, DOCN, NVTS) and crypto miners (HUT, CORZ, WULF, CIFR, CLSK, BTDR) are theme moves with no verified cause.
+- News: WebSearch (market/AI-chips selloff today) returned only 2024-2025 items and nothing dated 2026-10-14. Two searches today (this one and the 10:06 neocloud query) found no dated cause. A sector-wide cause counts only if verified; unverified = gate 1 FAIL for every name. No 5-minute higher-low / base check made for any (not reached because gate 1 failed first). No entry.
+- Momentum scan (+3%, rel vol >= 1.0): 1 hit, LQDA +29.9% (34.82, cap $2.4B), unexplained single with no cited catalyst; gate 2 FAIL. Momentum window opens 10:30 ET. No entry.
+- Follow-ups on skipped candidates from 10-13 and the 10-14 pre-open watch list: ASTS 47.07 close -> 43.56 now (-7.4%); CIFR 11.34 -> 10.51 (-7.4%); neither would have worked as an entry at yesterday's levels. Pre-open watch names KOD/SMMT/AMAT not re-quoted this cycle.
 - No order placed. Trades today: 0.
