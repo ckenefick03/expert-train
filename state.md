@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-14 12:46 ET",
+  "as_of": "2026-10-14 12:58 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1232,6 +1232,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-14 12:46 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-14 12:58 ET",
       "equity": 403.05
     }
   ],
@@ -3611,4 +3615,18 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Momentum scan (+3%, rel vol >= 1.0): 3 hits. New: GFS (GlobalFoundries) +3.3% at 48.24 (cap $26B) while SMH is -3.2%: a real relative-strength divergence (~6.5 points) within the semiconductor complex, so momentum gate 1 would pass on its face. Also LQDA +26.0% and PRGO +3.9% (no catalyst for either).
   - GFS check: one WebSearch ('GlobalFoundries stock jumps GFS Oct 14 2026 news') returned only price snapshots from other dates and no dated company or sector catalyst. 30-minute bars: gapped up at the open (47.86 vs 46.70 close), highs 49.80 at 9:30-10:00 ET, then faded to 47.32 low at 12:00-12:30 ET and has bounced to 48.24; a pullback is in progress but not yet a higher low plus reclaim of the 49.2-49.8 area, and the bounce is only 1.9% from the low. Gate 2 (a real, cited catalyst) FAIL, gate 3 (held pullback then break/reclaim) not met. No entry. GFS goes on the watch list for the afternoon: if a dated catalyst is found and it reclaims ~49.2 on volume it can be reconsidered, with the usual stop/target math.
 - Follow-ups on earlier skips (now vs skip price): DELL 509 (was 512 at 12:18) lower; CRWV 66.3 (was 65.0) about flat/higher; CIFR 10.18 (was 10.07) higher; ASTS 42.77 (was 42.5) flat; GEV 933.7 (was 937). Mixed/flat since 12:18.
+- No order placed. Trades today: 0.
+
+### Cycle 286 - 2026-10-14 12:58 ET (10-minute cycle with a candidate check; trigger 12:52, delivered 12:53)
+- Account: flat, cash/BP $403.05, no positions, no open orders, no stop checks.
+- Tape: SPY 769.85 (-1.05%), QQQ 730.97 (-1.70%), SMH 568.78 (-3.29%), IWM 271.58 (-1.8%), XLE 67.53 (+0.5%), XLF 54.29 (-1.0%), XLV 173.15 (+2.1%).
+- Mean-reversion scan (<= -7%): 71 hits, same groups as Cycle 285. Gate 1 and gate 4 FAIL for all (no verified, dated cause; no base). No entry.
+- Momentum scan (+3%, rel vol >= 1.0): 4 hits: GFS +5.7% (49.35, rel vol 1.30), LQDA +25.3%, PRGO +4.5%, IBRX +3.1% (new, 10.10, cap $10.4B; no catalyst checked, gate 2 not evidenced). GFS is the only candidate with a real divergence and a possible catalyst, so I ran the full gate-check on it:
+  - **Correction to Cycle 285:** I wrote there that no dated catalyst existed for GFS. That came from a narrow query. A second, differently-phrased search this cycle ('GlobalFoundries announces October 2026') returned the company's own releases and wire syndications. The earlier note stands as what that search found, but the catalyst does exist (below).
+  - Gate 1 (relative strength) PASS: GFS +5.7% vs SMH -3.3% and INTC -3.5%, TSM -2.7%, UMC -3.3% at 12:43 (peer complex); about 9 points of separation today. It also closed only -0.0% vs peers the prior day (flat at 46.70), so the divergence is a same-day event, not a multi-session trend.
+  - Gate 2 (catalyst) PASS on the evidence found, with a limit: search results list the company press release 'GlobalFoundries selected to operate two new semiconductor fabs in New York under landmark U.S.-Japan initiative' (gf.com, and a GlobeNewswire syndication at manilatimes.net with a 2026/10/14 date path; also a TipRanks item), summarised as: GF selected to build/operate two Japan-backed fabs at Malta, NY under a $21B U.S.-Japan chip initiative; its CHIPS Act award amended to reallocate $955M to silicon photonics, SiGe and advanced packaging; and the U.S. Commerce Department taking an equity stake of roughly 4%. Earlier October items: $2B TSMC interposer supply deal (Oct 8), FDX Fusion platform (Oct 9). I could not open the pages (direct fetch failed with a DNS error from this environment), so I am relying on the search-result listings and summaries, and I do not have the release timestamp. Reading it as a real catalyst, with that caveat noted.
+  - Gate 3 (held pullback with a higher low, rising short-term support) FAIL. 5-minute bars: gap up at the open (47.86 vs 46.70 close), high 49.80 at 9:40 ET, range 48.5-49.5 through 11:00, then a series of lower highs and lower lows to 47.28 at 12:30 ET (below the opening low of 47.81), followed by a sharp 4% bounce on rising volume (330k shares in the 12:40 bar) to 49.25 by 12:45 and about 49.4 now. This is the first leg of a bounce off a fresh intraday low, which the rule explicitly excludes ('never the first tick of a bounce off a low'). There is no higher low yet, and price has not exceeded the 49.80 high. The lows sequence 48.45, 47.94, 47.28 was falling for two hours.
+  - Gate 4 (timing) PASS (after 10:30 ET, before 15:30 ET).
+  - Result: FAIL on gate 3. No entry. What would change the answer: a pullback that holds above 47.28 (ideally above ~48.2) and forms a higher low, then a reclaim of the 49.2-49.8 area on volume; at that point the stop would sit just below the higher low (about 3-4% under entry) and the target at least 2R, with the thesis checked against SMH direction (a continued semis selloff weighs on a stock held up only by a same-day headline). Horizon end of day; no overnight roll.
+- Follow-ups on earlier skips: DELL 509.7 (-11.0%, lower than 512 at 12:43? roughly flat), CRWV 66.3 (-14.7%, flat), CIFR 10.17 (flat), ASTS 42.5 (flat). Skipping remains right on all of them.
 - No order placed. Trades today: 0.
