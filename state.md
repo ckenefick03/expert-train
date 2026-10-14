@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-14 12:04 ET",
+  "as_of": "2026-10-14 12:18 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1220,6 +1220,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-14 12:04 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-14 12:18 ET",
       "equity": 403.05
     }
   ],
@@ -3571,3 +3575,14 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Mean-reversion scan (<= -7%): 60 hits (widening again). Same AI-infrastructure / optical / power-equipment / neocloud / crypto-miner / fintech / quantum / nuclear groups (new names: BE, CRDO, HOOD -7.2%, OUST, OKLO, QBTS, RGTI, XE, MARA, CDE, DPC, PENG). CRWV -16.2% (65.20), DELL -10.5%, DOCN -14.7%, GEV -7.1%. Gate 1 FAIL for all: still no verified, dated cause (the 11:56 targeted search produced only secondary-source thematic context). Gate 4 FAIL: every large candidate is at or near the day's low, no base or higher low. No entry.
 - Momentum scan (+3%, rel vol >= 1.0): 2 hits, LQDA +24.7% (33.45, fading) and PRGO +3.7% (15.94); no cited catalyst, gate 2 FAIL. No entry.
 - No order placed. Trades today: 0. No news search this cycle (done at 11:56; next at the 12:12 trigger).
+
+### Cycle 283 - 2026-10-14 12:18 ET (hourly pass with news; trigger scheduled 12:12, delivered 12:13; Tier B)
+- Account: flat, cash/BP $403.05, no positions, no open orders, no stop checks.
+- Tape: SPY 769.49 (-1.10%), QQQ 730.29 (-1.78%), SMH 568.17 (-3.39%), IWM 271.53 (-1.9%), XLE 67.39 (+0.3%), XLF 54.37 (-0.8%), XLV 173.04 (+2.0%). New lows of the day for SPY/QQQ/SMH/IWM; the selloff is still making progress.
+- Structure check (10-minute bars since the open, for gate 4): SMH steady lower highs and lower lows from 578 to 568; no base. CRWV (65.27 last) bounced 65.6 to 67.4 mid-morning, then rolled over to new lows below 65.1; no higher low. DELL (512) bounced to 534 at the open, then made lower highs and lows into 512, a small pause only. GEV (937) has been range-bound 929-945 for two hours but is -6.7% from the close and sector-linked, and gate 1 is open. None qualifies as a base, higher low plus reclaim.
+- Mean-reversion scan (<= -7%): 69 hits (the widest yet): AI-infrastructure/optical/EMS (LITE, CIEN, CLS, JBL, COHR, CRDO, FLEX, TTMI, MXL, AAOI, PENG), servers/software (DELL -10.6%, ORCL -8.0%, DOCN -15.2%, AKAM, P), neocloud/data centers (CRWV -16.6%, NBIS -10.1%, APLD, IREN, GDS), power (BE, SEI, FPS, INIO), crypto miners (HUT -12.1%, CIFR -11.2%, CORZ, WULF, CLSK, BTDR, RIOT, MARA, GLXY), fintech (AFRM, SOFI, HOOD -7.4%, FIGR), quantum/nuclear/space/other (IONQ, QBTS, RGTI, OKLO, SMR, XE, ASTS -9.6%, VSAT, OUST, ACHR, AUR, UUUU, USAR, ALM) and gold miners (HL, CDE, IAG, SSRM -8.3%), SKYD -26%.
+- News (WebSearch, standard, after the tape): 'stock market today Oct 14 2026 CPI' returned only other-dated material (older CPI days, Jul/Aug 2026 chip swings) and nothing about today's session or the CPI print. Together with the 11:56 search (secondary-source context only), I still have no verified, dated cause for any name or for the sector move. Gate 1 FAIL for all.
+- Gate result: gate 1 FAIL and gate 4 FAIL across the list. No entry. This is the clearest example today of the framework declining a falling market: falling knives with no base and no verified cause.
+- Momentum scan (+3%, rel vol >= 1.0): 2 hits, LQDA +25.3% (33.59) and PRGO +4.2% (16.02); no cited catalyst; gate 2 FAIL. No entry.
+- Follow-ups on earlier skips (now vs the skip-time price): CRWV 65.0 (was 66.4 at 11:17) lower; DELL 512 (was 522 at 11:17) lower; CIFR 10.07 (was 10.54) lower; ASTS 42.5 (was 43.19) lower; GEV 937 (was 931 at 11:56) a touch higher. Skipping continues to hold up on every name except GEV, which has moved sideways to slightly up.
+- No order placed. Trades today: 0. Tier B runs to 14:30 ET; Tier C 14:30-15:30.
