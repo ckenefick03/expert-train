@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-15 10:08 ET",
+  "as_of": "2026-10-15 10:17 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1304,6 +1304,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-15 10:08 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-15 10:17 ET",
       "equity": 403.05
     }
   ],
@@ -3844,3 +3848,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Momentum scan not run (before 10:30 ET; the first momentum entry is not allowed until then).
 - Disclosure: the 09:52 trigger was skipped by rule; GFS is now 46.10 (-5.8%), no longer a relative-strength name.
 - No news search this cycle: no candidate passes the price gates, and the hourly news pass is due at 10:12.
+
+### Cycle 304 - 2026-10-15 10:17 ET (hourly pass with news; trigger scheduled 10:12, delivered 10:13)
+- Account: flat, cash/BP $403.05, no positions or open orders. No order placed.
+- Tape (10:13 ET): SPY 767.01 (-0.34%), QQQ 719.41 (-1.3%), IWM 273.05 (+0.6%), SMH 544.23 (-3.6%), XLF 54.77 (+0.5%), XLV 178.37 (+2.5%), XLE 66.68 (-1.4%). Weak semis again, small caps and healthcare firm, energy now weak.
+- News (two WebSearch queries: DELL, and CRWV/NBIS/RKLB): nothing dated October 15, 2026 found for any of them. Results were older articles (Dec 2025 Dell moves; June-July 2026 neocloud selloffs); none is cited as a cause. Per rule, gate 1 (verified, dated, name-specific cause found this cycle) therefore fails for every mean-reversion name, whatever the price structure does.
+- Names (quotes only, mean-reversion scan last run at 10:03 ET with 52 hits; momentum not yet allowed): DELL 460.61 (-9.3%), CRWV 60.57 (-7.9%), NBIS 167.02 (-10.2%), LITE 821.73 (-8.3%), RKLB 52.00 (-12.1%), SNDK 1299.89 (-7.4%). All remain near or below their 10:03 prices; no basing evidence.
+- Disclosure: this pass did not re-run either strategy's full scan (mean-reversion ran 14 minutes ago; momentum is before 10:30). The 10:22 trigger will run the 10:30-eligible scans only if it lands after 10:30.
+- No entry. Tier A continues to 11:30 ET.
