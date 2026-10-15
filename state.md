@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-15 09:47 ET",
+  "as_of": "2026-10-15 10:08 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1300,6 +1300,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-15 09:47 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-15 10:08 ET",
       "equity": 403.05
     }
   ],
@@ -3829,3 +3833,14 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape (09:43 ET, 13 minutes after the open): SPY 766.86 (-0.36%), QQQ 720.30 (-1.2%), IWM 271.60 (+0.1%), SMH 550.20 (-2.6%), XLF 54.69 (+0.3%), XLV 176.80 (+1.6%), XLE 67.25 (-0.6%). Single names: TSM 414.40 (-3.6% after its Q3 beat), DELL 468.97 (-7.7%), CRWV 61.95 (-5.8%), AMAT 431.44 (-3.4%), GFS 47.60 (-2.7%), LMT 527.73 (+1.1%). Semis are weaker than the pre-market read; healthcare still the strongest sector; small caps flat.
 - Watch notes for 10:00+: DELL is now past the -7% mean-reversion threshold (-7.7%) and CRWV near it (-5.8%), still with no verified, dated name-specific cause on file; they will be evaluated by the 10:00 cycle on all four gates and Tier A conditions (sector ETF >= 2% down: SMH -2.6% qualifies; a 5-min higher low is still required).
 - No order placed.
+
+### Cycle 303 - 2026-10-15 10:08 ET (10-minute cycle; trigger 10:02, fired 14:02:56Z; the 09:52 trigger was skipped as <6 min after cycle 302)
+- Account: flat, cash/BP $403.05, no positions or open orders, no stops to check. No order placed. Tier A (10:00-11:30 ET) is open for mean-reversion; momentum opens 10:30 ET.
+- Tape (10:03 ET): SPY 766.88 (-0.35%), QQQ 719.17 (-1.3%), SMH 545.16 (-3.5%), XLV 178.39 (+2.5%), XLF 54.73 (+0.4%). SMH 5-min bars since the open: 544.64, 548.56, 549.74, 544.81, 541.11, 543.18, i.e. new lows at 13:55Z (540.59 low); no bounce structure. SMH is more than 2% down, so the Tier A sector condition is met; the stock-level conditions are not.
+- Mean-reversion scan (full): 52 hits (down from 103 at yesterday's close, because many names now sit inside -7% of Wednesday's lower close), AI hardware/optical/neocloud/storage/miners/space: SNDK -7.3%, LITE -9.6%, STX -7.5%, DELL -9.0%, KEYS, CLS, COHR, BE, MKSI, VRT, ANET -7.2%, NBIS -10.9%, SMTC, CRWV -8.1%, AXTI, RKLB -13.5%, IREN, HPE, SMCI and more.
+  - DELL (462.3, -9.0%): 5-min bars 13:30-13:55Z: open 470.50, high 482.00 then lower highs each bar (470.99, 470.73, 469.76, 463.49, 460.84) and lows 464.21, 460.10, 461.44, 460.05, 454.56, 452.42. Lower highs and lower lows into the latest bar, so no base, no higher low, no reclaim: gate 4 fails. No verified, dated name-specific cause on file either (yesterday's searches found none): gate 1 fails.
+  - CRWV (60.4, -8.2%): bars 61.27 -> 61.71 -> 61.31 -> 60.68 -> 59.61 -> 60.09, lows 60.59, 60.65, 60.76, 60.37, 59.55, 59.51: still making lower lows. Gate 4 fails; gate 1 not met.
+  - AMAT (422.07, -5.5%) is not inside the -7% filter; no entry. Everything else on the list is moving with the same sector tape; none has a dated cause.
+- Momentum scan not run (before 10:30 ET; the first momentum entry is not allowed until then).
+- Disclosure: the 09:52 trigger was skipped by rule; GFS is now 46.10 (-5.8%), no longer a relative-strength name.
+- No news search this cycle: no candidate passes the price gates, and the hourly news pass is due at 10:12.
