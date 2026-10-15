@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-14 15:50 ET",
+  "as_of": "2026-10-15 08:30 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,10 +41,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Oct 14 close: flat all day, zero trades, no positions, no overnight holds. Equity $403.05 (7.98% below the $437.99 peak; 10% breaker at $394.19).",
+  "status_note": "Oct 15 pre-open: flat, cash $403.05, no positions. 7.98% below the $437.99 peak; 10% breaker at $394.19.",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-10-14",
+    "date": "2026-10-15",
     "start_equity": 403.05,
     "trades": 0,
     "forced": 0
@@ -1292,6 +1292,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-14 15:50 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-15 08:30 ET",
       "equity": 403.05
     }
   ],
@@ -3801,3 +3805,16 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
   - Why nothing traded: a broad AI/semis/neocloud/miner selloff (SMH -3.5% to -4.0%) with no verified, dated name-specific cause for any mean-reversion candidate (searches turned up only undated or older material) and no basing structure; earnings reactions (BAC, PGR, STT) excluded as company-specific. Momentum: GFS was the only relative-strength divergence (+4% to +5% against SMH -3.7%) but failed the held-pullback/higher-low gate at every check, including a lower low at 19:00Z; LMT, LLY, LEGN, HALO, LQDA, PRGO, IBRX, BBWI had no cited dated catalyst (LLY moved with its sector). 
   - Candid notes: LMT trended up all day with no pullback, so the gates kept me out of a winner; GFS reclaimed the 49.10 watch level at ~15:32 ET only after the cutoff and did not hold it; the cycle 285 and 286 catalyst and peer-comparison errors were corrected in 286 and 287. PDT applicability on limited_margin is still unverified (no day trade has occurred).
 - Coming up: TSM earnings Thu am (Oct 15), banks and other earnings Oct 15-16, retail sales/PPI Oct 15, CPI date unconfirmed, Fed Oct 28.
+
+### Cycle 301 - 2026-10-15 08:30 ET (PRE-OPEN BRIEF, read-only, no orders; trigger 12:28Z, delivered 12:28:38Z)
+- New session day: Thu 2026-10-15. Day-start equity basis reset to $403.05 (flat; Wednesday's close, unchanged). Trades today: 0 so far.
+- Account: flat, cash/BP $403.05, no positions, no open orders, so no stop checks and no overnight carry. Peak equity $437.99, drawdown 7.98%, breaker at $394.19 (headroom $8.86).
+- **Wednesday official closes:** SPY 769.60, QQQ 728.95, IWM 271.37, SMH 564.74, XLE 67.63, XLF 54.52, XLV 173.96, GFS 48.94, LMT 522.23, TSM 430.00, NVDA 221.30, AMAT 446.63, CRWV 65.78, DELL 507.93.
+- **Tape (pre-market, last non-regular trades at ~08:28 ET; thin and wide, indicative only):** SPY 767.75 (-0.24%), QQQ 720.67 (-1.1%), IWM 272.24 (+0.3%), SMH 551.79 (-2.3%), XLF 54.92 (+0.8%), XLV 176.16 (+1.3%), XLE 67.85 (+0.3%). Single names: NVDA 217.75 (-1.6%), TSM 419.21 (-2.5%), AMAT 435.90 (-2.4%), DELL 486.65 (-4.2%), CRWV 64.20 (-2.4%), GFS 47.67 (-2.6%), LMT 526.75 (+0.9%). IGV quote has a 106.10/114.00 spread and is not usable.
+- **Earnings (get_earnings_calendar, this cycle):** Reported this morning with actuals posted: TSM 4.60 vs 4.45 est, PLD 1.60 vs 1.58, PNC 5.09 vs 4.91, USB 1.34 vs 1.32, SCHW 1.69 vs 1.66, BNY 2.37 vs 2.26, MRSH 2.03 vs 1.97, ERIC 0.18 vs 0.14, CMC 2.09 vs 1.96, WIT 0.03 vs 0.04 (miss), FHN and MAN in line. TSM beat but is -2.5% pre-market, so a beat did not stop the semis weakness. After the close today: IBKR, JBHT, AA, SFNC, INDB, WAFD, CNS. Tomorrow 10-16 am: TFC, RF, MTB, CFG, TRV, LADR (WBS, CMA unverified dates).
+- **News/politics:** three WebSearch queries (futures pre-market; Oct 14 close and chip selloff; previously the CPI/Fed ones) returned only old, undated or other-month items, e.g. an undated investingLive wrap, Kiplinger Sandisk and Schwab pieces from June/July. No dated Oct 14 or Oct 15 coverage was found, so no cause for the AI/semis weakness is cited. The reaction to TSM's beat (pre-market -2.5%) is price evidence only, not an explanation.
+- **Regime read:** risk-off in AI hardware, semis and neocloud for a second day (SMH -2.3% pre on top of -3.9% Wednesday); defensives (XLV, XLF on bank beats) firm; small caps flat. No driver verified.
+- **Candidates to watch (watch-list only; each still has to pass every gate live; nothing pre-approved):**
+  - Mean-reversion (needs a down >=7% name with a verified, dated, name-specific cause found that cycle, a base/higher low/reclaim, fundamentals neutral-or-better, upside anchor): DELL (Wed -11.5%, pre -4.2%), CRWV (Wed -16%, pre -2.4%), AMAT (pre -2.4%), NBIS, LITE. All sold with the sector and no name-specific dated cause is on file; they only become eligible if one is found and a base forms after the open. Tier A 10:00-11:30 ET. Event risk: banks and brokers reported today, TSM reported today, so read-through names are noisy until digested.
+  - Momentum (needs peer-complex relative-strength divergence, a cited dated catalyst, a held pullback with rising short-term support, then continuation; not before 10:30 ET): LMT (pre +0.9%, still no dated catalyst on file), healthcare large caps led by LLY/XLV (+1.3% pre, sector move, not a name divergence), HALO (+7.7% Wednesday, catalyst never located), GFS (no longer diverging: -2.6% pre vs SMH -2.3%). Avoid: TSM, ERIC, WIT, PNC, USB, SCHW, BNY, PLD (reported today), IBKR, JBHT, AA (report after the close).
+- No order placed. First possible entry: 10:00 ET (mean-reversion Tier A) / 10:30 ET (momentum).
