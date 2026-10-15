@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-15 12:18 ET",
+  "as_of": "2026-10-15 12:38 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1336,6 +1336,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-15 12:18 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-15 12:38 ET",
       "equity": 403.05
     }
   ],
@@ -3934,3 +3938,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Mean-reversion scan (18 hits): DELL -7.9%, MTSI, FORM, TTMI (new), MXL, PRIM, HUT, AEHR, SEI, PENG, ACMR, AXTI, COHU, RKLB -10.8%, VIAV (new), IREN, LBRT, FRVO (new). All fail gate 1. No entry.
 - Momentum scan (5 hits, same as last cycle): NKE +5.6%, SNN +4.0%, ERIC +8.4% (earnings, avoid), CX +3.0%, RXRX +16.4%. No dated catalyst found for any; NKE/CX no pullback structure. SNN still unresearched (no catalyst in hand). No entry.
 - Orders: none. Gates unchanged; zero trades so far today, no forcing.
+
+### Cycle 312 - 2026-10-15 ~12:38 ET (10-minute cycle; trigger 12:32)
+- Account: flat, cash/BP $403.05, no positions. Day trades 0. Tier B window open.
+- Tape: SPY 769.37 (-0.03%), QQQ 722.80 (-0.8%), IWM 273.03 (+0.6%), SMH 551.01 (-2.4%), XLF 55.07 (+1.0%), XLV 178.70 (+2.7%), XLE 66.71 (-1.4%). Semis slightly weaker than 12:18.
+- Mean-reversion scan (22 hits; new: COHR, P, LSCC, DOCN, ASX): DELL -8.2%, PENG -11.3%, RKLB -11.3%, AXTI -11.2%, SEI -10.7% and the rest of the semis/AI/miner/energy-services group. Selloff is broadening within AI hardware. No verified, dated, name-specific cause found for any (last news pass 12:18 found none; no candidate passed gates, so no heavier search); gate 1 fails. No entry.
+- Momentum scan (7 hits; new: VEEV +5.0%, INFY +5.8%): searched both. VEEV: only an Aug 2026 earnings rally found, nothing dated today, fails gate 2. INFY: search shows Q2 results due Oct 23 and an Oct 9 Indian IT rally after TCS; nothing dated today explains the move, fails gate 2 (and results risk is near). NKE, SNN, ERIC (earnings), CX, RXRX: unchanged, no dated catalyst/pullback structure. No entry.
+- Orders: none. Gates unchanged; zero trades today, not forcing.
