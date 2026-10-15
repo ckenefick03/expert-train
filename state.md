@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-15 10:17 ET",
+  "as_of": "2026-10-15 10:26 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1308,6 +1308,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-15 10:17 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-15 10:26 ET",
       "equity": 403.05
     }
   ],
@@ -3856,3 +3860,9 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Names (quotes only, mean-reversion scan last run at 10:03 ET with 52 hits; momentum not yet allowed): DELL 460.61 (-9.3%), CRWV 60.57 (-7.9%), NBIS 167.02 (-10.2%), LITE 821.73 (-8.3%), RKLB 52.00 (-12.1%), SNDK 1299.89 (-7.4%). All remain near or below their 10:03 prices; no basing evidence.
 - Disclosure: this pass did not re-run either strategy's full scan (mean-reversion ran 14 minutes ago; momentum is before 10:30). The 10:22 trigger will run the 10:30-eligible scans only if it lands after 10:30.
 - No entry. Tier A continues to 11:30 ET.
+
+### Cycle 305 - 2026-10-15 10:26 ET (10-minute cycle; trigger 10:22)
+- Account: flat, cash/BP $403.05, no positions or open orders. No order placed. Momentum opens in 4 minutes.
+- Tape (10:23 ET): SPY 767.42 (-0.3%), QQQ 720.40 (-1.2%), SMH 547.67 (-3.0%), XLV 178.13 (+2.4%). SMH has recovered about half a point since 10:13 with 5-min lows 543.9-544.3 holding above the 540.59 low: stabilizing, not yet a reversal.
+- Mean-reversion names: DELL 463.00 (-8.8%), CRWV 60.62 (-7.8%), NBIS 168.35 (-9.5%). DELL's 5-min lows since the 13:55Z low of 452.42 are 458.01, 461.23, 458.50, 458.39 (higher than 452.42 and roughly flat since), with a bounce high of 466.99: this is the first sign of a base, but a base alone is not enough. Gate 1 fails: no verified, dated, name-specific cause (two searches this morning, yesterday's too, found none), so the cause gate keeps DELL out. No entry.
+- No full scan this cycle (mean-reversion ran 10:03 ET, momentum begins 10:30 ET); the 10:32 trigger will run both.
