@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-15 13:38 ET",
+  "as_of": "2026-10-15 13:58 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1352,6 +1352,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-15 13:38 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-15 13:58 ET",
       "equity": 403.05
     }
   ],
@@ -3979,3 +3983,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Mean-reversion scan (13 hits, down from 18): DELL -9.0%, SMTC -10.5%, PENG -11.0%, SEI -10.4%, RKLB -10.2%, AXTI -10.0%, LBRT -9.0%, MTSI, P, FORM, MXL, ACMR, VIAV. Several semis names have drifted out of the -7% screen (TTMI, LSCC, PRIM, HUT, AEHR, COHU, IREN), i.e. the group is modestly recovering. No verified, dated, name-specific cause for any (last news pass 13:18, nothing found; no candidate passed gates so no heavier search). Gate 1 fails for all. No entry.
 - Momentum scan (20 hits, widest yet): new AJG +5.9%, ADBE +3.8%, GLBE +4.6%, SHO +3.4%, WIT +3.3%; persisting VEEV, WCN, EBAY, LULU, BBY, NKE, BSY, WMG, SNN, ARQT, HDB, INFY, ERIC, CX, RXRX. Pattern is group moves: software (VEEV/ADBE/BSY), Indian IT/banks (INFY/WIT/HDB), e-commerce/consumer (EBAY/LULU/BBY/NKE/GLBE), waste (WCN). Group beta, not peer-relative divergence, and no dated catalyst in hand for any name (the only dated item all day was the Oct 13 EBAY analyst call, not today's move). Gates 1 and 2 fail across the list. AJG not researched this cycle (insurance-broker rally, no catalyst in hand). No entry.
 - Orders: none. Gates unchanged; zero trades today, not forcing.
+
+### Cycle 316 - 2026-10-15 ~13:58 ET (10-minute cycle; trigger 13:52)
+- Account: flat, cash/BP $403.05, no positions. Day trades 0. Tier B window open (closes 14:30 ET).
+- Tape: SPY 771.52 (+0.25%), QQQ 726.33 (-0.4%), IWM 273.80 (+0.9%), SMH 554.70 (-1.8%), XLF 55.23 (+1.3%), XLV 178.10 (+2.4%), XLE 66.59 (-1.5%). Broad market firming, semis still -1.8%.
+- Mean-reversion scan (13 hits): DELL -8.7%, SMTC -14.6% (deepening from -10.5%), PENG -11.0%, RKLB -9.5%, SEI -9.4%, LBRT -9.2%, AXTI -9.0%, MTSI -8.8%, VIAV, P, LSCC, ACMR, COHU. No verified, dated, name-specific cause for any (no news pass this cycle, nothing near passing; last pass 13:18 found none). Gate 1 fails for all. SMTC accelerating down is the opposite of a base (gate 4). No entry.
+- Momentum scan (23 hits): new SITE +5.8%, ASAN +4.3%, COTY +7.8%; all of the 13:38 list persists (VEEV, AJG, ADBE, WCN, EBAY, LULU, BBY, GLBE, NKE +6.5%, BSY, WMG, SNN, ARQT, HDB, INFY, SHO, ERIC, CX, RXRX, WIT). Group-driven moves (software, consumer, Indian ADRs, e-commerce), no dated catalyst in hand for any name; gates 1 and 2 fail. No entry.
+- Orders: none. Gates unchanged; zero trades today (target of one is not a reason to loosen gates). Tier B closes in about 30 minutes; Tier C (14:30-15:30) is forced-tag only.
