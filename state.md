@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-15 13:58 ET",
+  "as_of": "2026-10-15 14:18 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1356,6 +1356,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-15 13:58 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-15 14:18 ET",
       "equity": 403.05
     }
   ],
@@ -3990,3 +3994,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Mean-reversion scan (13 hits): DELL -8.7%, SMTC -14.6% (deepening from -10.5%), PENG -11.0%, RKLB -9.5%, SEI -9.4%, LBRT -9.2%, AXTI -9.0%, MTSI -8.8%, VIAV, P, LSCC, ACMR, COHU. No verified, dated, name-specific cause for any (no news pass this cycle, nothing near passing; last pass 13:18 found none). Gate 1 fails for all. SMTC accelerating down is the opposite of a base (gate 4). No entry.
 - Momentum scan (23 hits): new SITE +5.8%, ASAN +4.3%, COTY +7.8%; all of the 13:38 list persists (VEEV, AJG, ADBE, WCN, EBAY, LULU, BBY, GLBE, NKE +6.5%, BSY, WMG, SNN, ARQT, HDB, INFY, SHO, ERIC, CX, RXRX, WIT). Group-driven moves (software, consumer, Indian ADRs, e-commerce), no dated catalyst in hand for any name; gates 1 and 2 fail. No entry.
 - Orders: none. Gates unchanged; zero trades today (target of one is not a reason to loosen gates). Tier B closes in about 30 minutes; Tier C (14:30-15:30) is forced-tag only.
+
+### Cycle 317 - 2026-10-15 ~14:18 ET (hourly cycle with news; trigger 14:13)
+- Account: flat, cash/BP $403.05, no positions, no open orders. Day trades 0. Tier B window open (closes 14:30 ET).
+- Tape: SPY 769.70 (+0.01%), QQQ 723.89 (-0.7%), IWM 273.53 (+0.8%), SMH 551.77 (-2.3%), XLF 55.18 (+1.2%), XLV 178.00 (+2.3%), XLE 66.69 (-1.4%). The 13:58 market firming faded; semis back to about -2.3%.
+- News pass (WebSearch, DELL/SMTC/RKLB Oct 15): no dated Oct 15 2026 coverage returned. Results were a May 29 Dell earnings jump (opposite direction) and undated snippets. Nothing verified for any name. Disclosure: three consecutive hourly passes have failed to find a dated cause for the semis/AI-hardware selloff; the tool's results are mostly undated, so this is a limit of the search, not evidence there is no cause.
+- Mean-reversion scan (19 hits; new: HPE -7.1%, AAON -7.5%, COHR back in): DELL -9.4%, SMTC -13.4%, PENG -11.7%, RKLB -9.9%, MTSI -9.4%, SEI -9.4%, AXTI -9.8%, LBRT -8.5%, VIAV, LSCC, ACMR, COHU, FORM, P, PRIM, ASX. DELL and HPE falling together points at an AI-server theme, but no cause is verified and SMTC/DELL keep making new lows, which fails gate 4 (needs a base and reclaim). Gate 1 fails for all. No entry.
+- Momentum scan (34 hits, widest of the day; new: SPGI +3.7%, TEAM +4.4%, WM +3.3%, ELF +5.4%, HAS +3.7%, MNDY +8.5%, NVO +3.4%, GMAB, IP +7.9%, NCNO +6.2%, HLN; CX now +5.3% on RV 3.5). Broad rotation into software, consumer, healthcare, staples and Indian ADRs while AI hardware falls. Group beta with no dated name-specific catalyst in hand: gates 1 and 2 fail across the list. I did not research each name; none shows a divergence from its group. No entry.
+- Orders: none. Gates unchanged; zero trades today. Tier B closes in about 12 minutes; Tier C (14:30-15:30) is forced-tag only and needs all four gates.
