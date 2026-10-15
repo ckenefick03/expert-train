@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-15 15:38 ET",
+  "as_of": "2026-10-15 15:52 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Oct 15 pre-open: flat, cash $403.05, no positions. 7.98% below the $437.99 peak; 10% breaker at $394.19.",
+  "status_note": "Oct 15 close: flat all day, zero trades, no positions, no overnight holds. Equity 403.05 (unchanged).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-15",
@@ -1376,6 +1376,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-15 15:38 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-15 15:52 ET",
       "equity": 403.05
     }
   ],
@@ -4047,3 +4051,17 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - No entries are permitted after 15:30 ET and nothing is held, so there were no stops to check and no gates to evaluate. Disclosure: I did NOT run either preview_scan this cycle (nothing could be acted on); this is a deliberate omission, not a scan result. Nothing was inspected for candidates.
 - Orders: none.
 - Day to date: zero trades, no positions, equity 403.05 unchanged versus the 403.05 start. The close recap follows at the 15:47 ET trigger.
+
+### Cycle 322 - 2026-10-15 ~15:52 ET (CLOSE RECAP; trigger 15:47 ET; basis: live quotes at 15:47 ET, not the official close, which is not yet published)
+- Reconciliation (broker, 15:47 ET): cash/BP $403.05, total value $403.05, equity_value $0, positions: none, equity orders created today: none, no open orders. Matches the log.
+- Stop checks: nothing held, nothing to check. No new entries after 15:30 ET.
+- Overnight status: NO positions, NO overnight holds. Nothing rolls, so there is no thesis to defend.
+- Tape at 15:47 ET: SPY 772.38 (+0.36%), QQQ 729.04 (+0.01%), SMH 560.05 (-0.8%).
+- Day recap, Oct 15:
+  - Ran: pre-open brief 08:30 ET (Cycle 301), then 10-minute cycles and hourly news cycles from 09:47 through 15:38 ET (Cycles 302-321), plus this recap. Cycles whose 10-minute trigger landed under 6 minutes after the previous log were skipped silently per the routine rule.
+  - Gaps, disclosed: nothing was logged between the 08:30 brief and 09:47 ET (noted in Cycle 302). Cycle 321 (15:38 ET) ran no scans because the entry cutoff had passed. No other missed cycles known.
+  - Trades: 0 entries, 0 exits. Skips: every mean-reversion candidate failed gate 1 (no verified, dated, name-specific cause; news searches returned only undated or other-period material in every hourly pass); every momentum candidate failed gate 1 and/or gate 2 (group-driven moves with no dated catalyst) and gate 3 where checked. The day's semis/AI-hardware selloff (DELL about -8.5% to -10%, SMTC, PENG, RKLB, AXTI) never showed a base before the late-afternoon bounce.
+  - P&L: $0.00 realised, $0.00 unrealised; day change 0.00% (403.05 start, 403.05 now). Peak equity 437.99 and the 394.19 breaker level are unchanged; the breaker is not near.
+  - Target note: the 1-trade-per-day figure was missed (0 trades). It is a target; no gate was loosened to chase it.
+  - Judgment call to review: the market recovered in the last hour (SMH from -2.3% to about -0.8%), so a rebound-buy in the semis at the 14:38 lows would have worked in hindsight. It would have been a gate 1 failure on a bounce with no verified cause, so I stand by passing. This is hindsight, not evidence the gates are wrong.
+- Next session (Oct 16): pre-open brief 08:30 ET. Known events: bank earnings Oct 16 morning (TFC, RF, MTB, CFG, TRV, LADR; WBS and CMA dates unverified); CPI date unconfirmed; Fed Oct 28. Open item: PDT/day-trade applicability for limited_margin is still unverified (no problem hit).
