@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-15 11:18 ET",
+  "as_of": "2026-10-15 11:38 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1324,6 +1324,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-15 11:18 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-15 11:38 ET",
       "equity": 403.05
     }
   ],
@@ -3900,3 +3904,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Momentum scan (full): 2 hits: ERIC +8.6% (10.41; it reported Q3 this morning: EPS 0.18 vs 0.14 estimate; earnings within 2 sessions are on the avoid list and this is an earnings reaction, i.e. company-specific, not a held pullback) and RXRX +10.0% (4.115, market cap $2.02B; no dated catalyst found at 10:58). Neither passes: ERIC is an earnings-day gap, RXRX has no catalyst. No entry.
 - Mean-reversion: not re-run in full (last full run 10:33 ET, 44 hits); quote checks: DELL 468.26 (-7.8%), CRWV 64.62 (-1.8%, no longer in the filter), NBIS 178.76 (-3.9%, out of the filter). The scan population is shrinking as the sector recovers (44 -> now fewer), the bounce has taken most names back inside the -7% line. DELL has a base (higher lows since 10:25) but no verified, dated cause, so it still fails gate 1. No entry. Tier B (11:30-14:30) starts in 12 minutes.
 - Zero trades today.
+
+### Cycle 309 - 2026-10-15 11:38 ET (10-minute cycle; trigger 11:32; full scans of both strategies; Tier B (11:30-14:30) now open; the 11:22 trigger was skipped as <6 min after cycle 308)
+- Account: flat, cash/BP $403.05, no positions or open orders. No order placed.
+- Tape (11:32 ET): SPY 769.85 (+0.03%), QQQ 723.92 (-0.7%), IWM 273.73 (+0.9%), SMH 552.31 (-2.2%), XLF 54.96 (+0.8%), XLV 178.82 (+2.8%), XLE 66.79 (-1.2%). Flat tape: the S&P is unchanged, semis still down about 2%.
+- Mean-reversion scan (full): 14 hits (44 at 10:33, 52 at 10:03): DELL -8.0% (467.31), SMTC, FORM, MXL, HUT, AEHR, SEI, PENG, AXTI, ACMR, COHU, RKLB -10.4%, IREN, LBRT. The population has shrunk by two thirds as the sector recovered. No verified, dated, name-specific cause is on file for any of them (searches earlier this morning found none, and nothing new has been searched for any of these 14 since none shows the structure needed to pass the other gates); gate 1 fails. DELL base noted (higher lows), still gate 1 fail. No entry.
+- Momentum scan (full): 5 hits: WM +3.0% (222.24), NKE +5.5% (37.24), ERIC +8.6% (10.40, earnings reaction, avoid), CX +3.3% (9.84), RXRX +11.9% (4.185, no catalyst found at 10:58 or 11:18). NKE searched: only older articles (a 2025 Jefferies upgrade, an undated "Tim Cook" piece), nothing dated Oct 15, so gate 2 fails; its 10-min bars climb steadily from 36.00 to 37.24 on shrinking volume with no pullback, so gate 3 would also fail. WM is range-bound 220.7-222.9 since the open (+3.0% at the open gap and flat since): no pullback structure to buy, no catalyst checked. CX has no catalyst checked and no structure reviewed. No entry.
+- Zero trades today (about 3 hours and 50 minutes of entry window remain to 15:30 ET).
