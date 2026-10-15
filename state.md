@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-15 11:58 ET",
+  "as_of": "2026-10-15 12:18 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1332,6 +1332,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-15 11:58 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-15 12:18 ET",
       "equity": 403.05
     }
   ],
@@ -3922,3 +3926,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Mean-reversion scan (15 hits, incl. DELL -7.8%, RKLB -10.1%, MTSI, FORM, MXL, PRIM, HUT, AEHR, SEI, PENG, AXTI, ACMR, COHU, IREN, LBRT): gate 1 fails for all - no verified, dated, name-specific cause found this cycle (this is a sector-wide semis/AI selloff day two; no verified cause). DELL has a higher-low base but still fails gate 1. No entry.
 - Momentum scan (5 hits): NKE +5.8% (steady climb, no pullback, no dated catalyst), ERIC +9.1% (earnings reaction, avoid), RXRX +17.1% (no dated catalyst found), CX +3.3% (no catalyst/structure), SNN +4.2% (new, not researched this cycle - no dated catalyst in hand, so gate 2 fails by default). No entry.
 - Orders: none. Gates unchanged; no trade forced. Zero-trade day so far (target of 1 is not a reason to loosen gates).
+
+### Cycle 311 - 2026-10-15 ~12:18 ET (hourly cycle with news; trigger 12:13)
+- Account: flat, cash/BP $403.05, no positions, no open orders. Day trades 0. Tier B window open.
+- Tape: SPY 769.88 (+0.04%), QQQ 724.27 (-0.6%), IWM 273.21 (+0.7%), SMH 553.24 (-2.0%), XLF 54.98 (+0.8%), XLV 178.38 (+2.5%), XLE 66.84 (-1.2%). Semis/AI weakness persists, no recovery.
+- News pass (WebSearch, DELL and semis/PENG/RKLB): nothing dated Oct 15 2026 found. DELL results were undated or Dec 2025 (an undated Morgan Stanley downgrade item cannot be tied to today); semis results were from earlier 2026 episodes. No verified, dated, name-specific cause for any name, so gate 1 fails.
+- Mean-reversion scan (18 hits): DELL -7.9%, MTSI, FORM, TTMI (new), MXL, PRIM, HUT, AEHR, SEI, PENG, ACMR, AXTI, COHU, RKLB -10.8%, VIAV (new), IREN, LBRT, FRVO (new). All fail gate 1. No entry.
+- Momentum scan (5 hits, same as last cycle): NKE +5.6%, SNN +4.0%, ERIC +8.4% (earnings, avoid), CX +3.0%, RXRX +16.4%. No dated catalyst found for any; NKE/CX no pullback structure. SNN still unresearched (no catalyst in hand). No entry.
+- Orders: none. Gates unchanged; zero trades so far today, no forcing.
