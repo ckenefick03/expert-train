@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-15 14:58 ET",
+  "as_of": "2026-10-15 15:18 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1368,6 +1368,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-15 14:58 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-15 15:18 ET",
       "equity": 403.05
     }
   ],
@@ -4024,3 +4028,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Mean-reversion scan (15 hits, down from 18): DELL -9.6% (458.9, sitting at the day low zone), PENG -12.1%, SMTC -10.5%, AXTI -9.7%, SEI -9.0%, MTSI -8.7%, RKLB -8.4%, LBRT -8.4%, plus COHR, LSCC, ACMR, VIAV, FORM, PRIM, COHU. Several off their lows (RKLB from -10.8% to -8.4%). Still no verified, dated, name-specific cause (last news pass 14:18, none). Tier C needs all four gates, gate 1 fails for all. No entry.
 - Momentum scan (47 hits; new: VMC, ADSK, MRSH, SIG +7.6%, CRCL +7.6%, CAVA +6.0%, RYAN, MNSO). Insurance brokers (AJG/MRSH/RYAN) move together, software (VEEV/ADBE/ADSK/TEAM/GWRE/MNDY) together, e-commerce/consumer together. Group beta, no dated name-specific catalyst in hand, no peer divergence: gates 1 and 2 fail. No entry.
 - Orders: none. Gates unchanged; zero trades today, about 30 minutes to the 15:30 ET entry cutoff. Close recap due at the 15:47 ET trigger.
+
+### Cycle 320 - 2026-10-15 ~15:18 ET (hourly cycle with news; trigger 15:13; Tier C, forced-tag only; entry cutoff 15:30 ET)
+- Account: flat, cash/BP $403.05, no positions, no open orders. Day trades 0.
+- Tape: SPY 772.06 (+0.3%), QQQ 727.68 (-0.2%), IWM 274.24 (+1.1%), SMH 558.02 (-1.2%, recovering from -2.3% at 14:38), XLF 55.33 (+1.5%), XLV 177.90 (+2.3%), XLE 66.37 (-1.9%). Late-day bid in semis and the broad market.
+- News pass (WebSearch, close/software-vs-semis): no dated Oct 15 2026 coverage returned; only undated and other-month results (e.g. a June 23 tech selloff, an undated software-ETF rebound item). No verified cause for either the semis selloff or the software/consumer rotation. Fourth consecutive hourly pass without a dated cause; logged as a search limitation.
+- Mean-reversion scan (8 hits, down from 15): DELL -8.5% (464.9, off the 458.6 low), SMTC -10.2%, PENG -10.1%, AXTI -8.0%, LBRT -8.0%, MTSI -7.2%, LSCC -7.4%, RKLB -7.5%. The group is bouncing off lows, but a bounce is not a verified cause. Gate 1 fails for all and there are fewer than 15 minutes to the cutoff. No entry.
+- Momentum scan (65 hits, widest of the day; new e.g. INTU +6.8%, EXPE +6.7%, DUOL +7.0%, W +7.4%, CRWV +4.5%, CRCL +8.4%, BLDR, MMYT, KDP, PTON, BHC, CPRT, GPK). Breadth is broad and group-driven (software, travel, consumer, e-commerce, staples); no dated name-specific catalyst in hand for any name, and momentum gate 3 requires a held pullback with a base, which I cannot demonstrate for any name this late. Gates 1 and 2 fail. No entry.
+- Orders: none. Gates unchanged; zero trades today, which stays below the 1-per-day target. The target is not a reason to loosen gates. Next: the close recap at the 15:47 ET trigger.
