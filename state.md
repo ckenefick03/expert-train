@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-15 10:58 ET",
+  "as_of": "2026-10-15 11:18 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1320,6 +1320,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-15 10:58 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-15 11:18 ET",
       "equity": 403.05
     }
   ],
@@ -3888,3 +3892,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Momentum scan (full): 1 hit, RXRX +6.6% (3.985, market cap $2.02B, just above the cap floor, relative volume 1.08). One WebSearch found only older RXRX articles (2025) and no dated Oct 15 catalyst, so gate 2 fails; its price (~$4) and thin size also make it a poor fit; no relative-strength peer complex checked since gate 2 already fails. No entry.
 - Mean-reversion: scan not re-run (last full run 10:33 ET, 44 hits). DELL 469.72 (-7.5%, the 14:15-14:50Z 5-min bars: lows 458.39, 460.80, 459.83, 457.50, 459.61, 466.04, 471.00, a clear higher-low sequence and a break above 466.99 to a high of 474.98): a real base and reclaim is now visible with SMH firming, so gates 3 and 4 and the Tier A sector condition (SMH -2.6%) look satisfied. Gate 1 still fails: no verified, dated, name-specific cause in any search this morning (three DELL-related, plus the market searches), and the Dell Technologies earnings are not in the calendar window. A name-specific cause is a hard requirement; I will not substitute the sector selloff as a cause because the framework treats a sector-wide cause as acceptable only if verified, and I have not verified one (my market-wide searches returned nothing dated Oct 14 or 15). DELL stays on watch; a verified cause found later this window would reopen the evaluation.
 - CRWV 61.77 (-6.1%) is below the -7% filter now. Zero trades today so far.
+
+### Cycle 308 - 2026-10-15 11:18 ET (hourly pass with news; trigger scheduled 11:12, delivered 11:13; the 11:02 trigger was skipped as <6 min after cycle 307)
+- Account: flat, cash/BP $403.05, no positions or open orders. No order placed.
+- Tape (11:13 ET): SPY 770.61 (+0.13%, back above Wednesday's close), QQQ 725.08 (-0.5%), IWM 274.19 (+1.0%), SMH 553.43 (-2.0%), XLF 54.95 (+0.8%), XLV 178.59 (+2.7%), XLE 66.63 (-1.5%). The tape has improved steadily since the open: SMH from -3.8% to -2.0%, S&P through unchanged. Semis remain the weak group; defensives and financials lead.
+- News (two WebSearch queries: market/TSMC reaction; Dell news): nothing dated October 15, 2026. Results were from July 2026 (chip selloff coverage) and Dell items dated March-May 2026. None is cited as a cause. Gate 1 fails again for mean-reversion names.
+- Momentum scan (full): 2 hits: ERIC +8.6% (10.41; it reported Q3 this morning: EPS 0.18 vs 0.14 estimate; earnings within 2 sessions are on the avoid list and this is an earnings reaction, i.e. company-specific, not a held pullback) and RXRX +10.0% (4.115, market cap $2.02B; no dated catalyst found at 10:58). Neither passes: ERIC is an earnings-day gap, RXRX has no catalyst. No entry.
+- Mean-reversion: not re-run in full (last full run 10:33 ET, 44 hits); quote checks: DELL 468.26 (-7.8%), CRWV 64.62 (-1.8%, no longer in the filter), NBIS 178.76 (-3.9%, out of the filter). The scan population is shrinking as the sector recovers (44 -> now fewer), the bounce has taken most names back inside the -7% line. DELL has a base (higher lows since 10:25) but no verified, dated cause, so it still fails gate 1. No entry. Tier B (11:30-14:30) starts in 12 minutes.
+- Zero trades today.
