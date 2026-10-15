@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-15 08:30 ET",
+  "as_of": "2026-10-15 09:47 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1296,6 +1296,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-15 08:30 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-15 09:47 ET",
       "equity": 403.05
     }
   ],
@@ -3818,3 +3822,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
   - Mean-reversion (needs a down >=7% name with a verified, dated, name-specific cause found that cycle, a base/higher low/reclaim, fundamentals neutral-or-better, upside anchor): DELL (Wed -11.5%, pre -4.2%), CRWV (Wed -16%, pre -2.4%), AMAT (pre -2.4%), NBIS, LITE. All sold with the sector and no name-specific dated cause is on file; they only become eligible if one is found and a base forms after the open. Tier A 10:00-11:30 ET. Event risk: banks and brokers reported today, TSM reported today, so read-through names are noisy until digested.
   - Momentum (needs peer-complex relative-strength divergence, a cited dated catalyst, a held pullback with rising short-term support, then continuation; not before 10:30 ET): LMT (pre +0.9%, still no dated catalyst on file), healthcare large caps led by LLY/XLV (+1.3% pre, sector move, not a name divergence), HALO (+7.7% Wednesday, catalyst never located), GFS (no longer diverging: -2.6% pre vs SMH -2.3%). Avoid: TSM, ERIC, WIT, PNC, USB, SCHW, BNY, PLD (reported today), IBKR, JBHT, AA (report after the close).
 - No order placed. First possible entry: 10:00 ET (mean-reversion Tier A) / 10:30 ET (momentum).
+
+### Cycle 302 - 2026-10-15 09:47 ET (10-minute cycle; trigger 09:42, fired 13:43Z; first cycle after the 08:30 pre-open brief)
+- Before the 10:00 ET entry window: no entry of any kind is allowed, so no scans were run this cycle; this is a reconcile and tape read only. (Cycle gap disclosed: nothing was logged between the 08:30 brief and now; the 09:12/09:22/09:32 triggers did not reach this session or were not logged.)
+- Account: flat, cash/BP $403.05, no positions or open orders, so no stop checks.
+- Tape (09:43 ET, 13 minutes after the open): SPY 766.86 (-0.36%), QQQ 720.30 (-1.2%), IWM 271.60 (+0.1%), SMH 550.20 (-2.6%), XLF 54.69 (+0.3%), XLV 176.80 (+1.6%), XLE 67.25 (-0.6%). Single names: TSM 414.40 (-3.6% after its Q3 beat), DELL 468.97 (-7.7%), CRWV 61.95 (-5.8%), AMAT 431.44 (-3.4%), GFS 47.60 (-2.7%), LMT 527.73 (+1.1%). Semis are weaker than the pre-market read; healthcare still the strongest sector; small caps flat.
+- Watch notes for 10:00+: DELL is now past the -7% mean-reversion threshold (-7.7%) and CRWV near it (-5.8%), still with no verified, dated name-specific cause on file; they will be evaluated by the 10:00 cycle on all four gates and Tier A conditions (sector ETF >= 2% down: SMH -2.6% qualifies; a 5-min higher low is still required).
+- No order placed.
