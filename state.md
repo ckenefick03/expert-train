@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-16 10:10 ET",
+  "as_of": "2026-10-16 10:21 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1392,6 +1392,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-16 10:10 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-16 10:21 ET",
       "equity": 403.05
     }
   ],
@@ -4106,4 +4110,12 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY 771.80 (0.0%), QQQ 721.83 (-0.85%), IWM 275.19 (+0.0%), SMH 550.28 (-1.5%), XLF 55.88 (+1.1%), XLV 177.84 (+0.4%), XLE 67.27 (+1.1%). Tech and semis weak, financials and energy firm.
 - Mean-reversion scan (-7% from close, 8 hits): MRNA -9.0% (215.16, $94B cap), CRWV -7.2%, FROG -7.3%, FSLY -7.0%, NVAX -9.9%, TLK -13.8%, SLS -12.5%, RXRX -9.0%. Researched the vaccine pair (MRNA, NVAX): a WebSearch returned only 2020-2025 articles, so no verified, dated, name-specific cause. 5-minute bars since the open show MRNA falling in a straight line 234.7 -> 213.7 with the last three bars lower (low 212.84) and NVAX 12.66 -> 11.52 with no higher low: no base and no reclaim. Gates 1 and 4 fail for both. Tier A also needs a sector ETF down at least 2%: XLV +0.4%, SMH -1.5%, so that condition fails for every name. CRWV/FSLY/FROG are software/AI-infra moves with no cause found. No entry.
 - Momentum scan (+3%, RV at least 1.0): 0 hits (earliest entry is 10:30 ET anyway).
+- Orders: none. Gates unchanged; zero trades so far today.
+
+### Cycle 326 - 2026-10-16 ~10:21 ET (hourly cycle with news; trigger 10:14; Tier A window open)
+- Account: flat, cash/BP $403.05, no positions, no open orders. Day trades 0.
+- Tape: SPY 771.05 (-0.1%), QQQ 721.67 (-0.9%), IWM 274.62 (-0.2%), SMH 550.51 (-1.5%), XLF 55.75 (+0.9%), XLV 177.49 (+0.2%), XLE 67.27 (+1.1%). Unchanged in character since 10:10: tech and semis weak, financials and energy firm.
+- News pass (WebSearch, Moderna/vaccines): no October 2026 coverage. Nearest dated items were a Sept 3 2026 Redburn downgrade to Sell (valuation; a -2.9% move, not today's -9.9%) and older years. Nothing verified for today. This is the 5th hourly pass in a row (counting Oct 15) without a dated cause; again a search-tool limit.
+- Mean-reversion scan (-7% from close, 9 hits): MRNA -9.9% (213.1), NVAX -8.9%, TLK -13.3%, SLS -9.3%, RXRX -9.0%, DOCN -7.6%, FROG -7.4%, TWLO -7.0%, TWST -7.0%. CRWV and FSLY dropped out (partial rebound). MRNA has stopped falling since 14:00Z (bars 213.7 -> 213.0) but has not shown a higher low and reclaim; it is the largest-cap, most-liquid candidate and stays the one to watch. Gate 1 fails (no verified cause) and Tier A needs a sector ETF at least 2% down (XLV +0.2%, SMH -1.5%). No entry.
+- Momentum scan: 0 hits. Earliest entry is 10:30 ET.
 - Orders: none. Gates unchanged; zero trades so far today.
