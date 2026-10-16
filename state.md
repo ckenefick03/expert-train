@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-16 15:45 ET",
+  "as_of": "2026-10-16 15:50 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Oct 16 pre-open: flat, no positions, no orders. Brief only; trading starts 10:00 ET.",
+  "status_note": "Oct 16 close: flat all day, 0 trades, no positions, no overnight holds. Cash $403.05.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-16",
@@ -1476,6 +1476,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-16 15:45 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-16 15:50 ET",
       "equity": 403.05
     }
   ],
@@ -4348,3 +4352,27 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 ### Cycle 346 - 2026-10-16 ~15:45 ET (10-minute cycle; trigger 15:42; after the entry cutoff)
 - Account: cash/BP $403.05, no positions. Day trades 0. SPY 762.08 (-1.3%), QQQ 708.70 (-2.7%), SMH 541.12 (-3.2%), IGV 104.02 (-5.1%).
 - No scans (after the 15:30 ET cutoff). No order. The close recap follows in the next entry.
+
+### Cycle 347 - 2026-10-16 ~15:50 ET (LAST cycle of the day, "Trading close recap"; trigger 15:47)
+- Stop checks: nothing to check, no positions and no open orders.
+- Reconcile (live): portfolio $403.05, all cash, buying power $403.05, equity value $0. get_equity_positions is empty. get_equity_orders for Oct 16 is empty (no orders placed or cancelled today).
+- Closing tape at 15:48 ET (live quotes, not the official close): SPY 762.64 (-1.2%), QQQ 709.10 (-2.6%), IWM 270.12 (-1.8%), SMH 540.67 (-3.3%), XLF 55.39 (+0.2%), XLV 176.46 (-0.4%), XLE 68.17 (+2.4%), IGV 104.29 (-4.8%). MRNA 215.18 (-9.0%).
+- OVERNIGHT: no positions roll overnight (none were opened), so there is no thesis to carry. Account is entirely cash going into the weekend.
+
+#### Day recap - Fri 2026-10-16
+- P&L: $0.00 on the day. Start equity $403.05 (pre-open brief), end $403.05 on the live-quote basis. Peak equity unchanged at $437.99; the drawdown-breaker level ($394.19) was never in play.
+- Trades: 0 (0 organic, 0 forced). Orders: 0. The 1-trade minimum was missed; the max of 10 was irrelevant. The minimum is a target, not a reason to loosen a gate, and no gate was loosened or forced.
+- What ran: pre-open brief at 08:35 ET, then cycles 324-347 across the day (10-minute cycles and the hourly cycles with news). Both strategies scanned their full universes each cycle until the 15:30 ET cutoff (cycles 345-346 ran after it with no scans).
+- Market: a broad, persistent selloff. SPY -1.2%, QQQ -2.6%, SMH -3.3%, IGV -4.8% against firm energy (XLE +2.4%) and defensives (XLU, XLP). Mean-reversion scan hits grew from 1 (09:43) to 41 (12:13) to a peak of 82 (14:58), 76 at 15:13; momentum scan showed 0-2 hits until the afternoon, then 7-10 hits that were all group moves (energy and gas, RTX/aerospace, CCI/towers, BTI).
+- Skips (and why):
+  - Mean-reversion: no name had a verified, dated, name-specific external cause (gate 1) at any hourly news pass; searches repeatedly returned undated or old items. The one dated, name-specific cause of the day (MRNA, 14:22 ET: profit-taking ahead of an Oct 24 Phase 3 readout) is company-specific and failed gate 1. Gate 4 (base, higher low, reclaim) also failed throughout as the tape made new lows through the afternoon.
+  - Momentum: every hit was a group move (energy with XLE, RTX with aerospace, CCI with towers, BTI with defensives, AA with aluminum), failing relative-strength divergence (gate 1) and with no dated catalyst (gate 2) where searched.
+  - Tier C (14:30-15:30) was open with the minimum unmet, but a forced tag still requires all four gates and none passed.
+- Candidate follow-ups for the record: MRNA 215.18 at 15:48 ET (-9.0%) vs 212-215 range since 12:00; check the Oct 19 open and the Oct 24 readout behavior to test the gate-1 FAIL. AA, CCI, HONA, CNQ/BP/APA/AR/TALO were skipped on group-move grounds; check next-session follow-through to calibrate gate 1.
+- Disclosed gaps and caveats:
+  - Nothing was logged between the 08:35 ET pre-open brief and 09:48 ET (earlier triggers did not reach this session).
+  - Cycle triggers at 11:02, 11:42 and 12:02 ET were skipped under the 6-minute rule; later skips under the same rule: 12:22, 13:22, 13:52, 14:42, 15:02 and 15:22 ET. A skip means a cycle had been logged within the previous 6 minutes.
+  - The 5-minute bars call for AA at 13:08 ET failed on a bad parameter, so no bar data was read for that name; it already failed gates 1 and 2.
+  - The macro narrative in the 14:22 entry (AI-financing scare, hot inflation, Fed commentary, 10-year near 5.1%) was single-source and intraday and could not be reproduced at the 15:13 pass; it was never used as a verified cause.
+  - PDT/day-trade applicability for this limited-margin account is still unverified (no problem hit).
+- Upcoming: Oct 19 open (MRNA/AA/CCI follow-ups); MRNA Phase 3 data reported for Oct 24; Fed meeting Oct 28; CPI date unconfirmed; LADR reported Oct 16, WBS/CMA dates unverified, HDB/IBN earnings Oct 17.
