@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-16 11:38 ET",
+  "as_of": "2026-10-16 11:58 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1412,6 +1412,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-16 11:38 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-16 11:58 ET",
       "equity": 403.05
     }
   ],
@@ -4163,5 +4167,13 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Account: flat, cash/BP $403.05, no positions, no open orders. Day trades 0.
 - Tape: SPY 769.18 (-0.34%), QQQ 718.02 (-1.4%), IWM 273.46 (-0.6%), SMH 549.77 (-1.6%), XLF 55.83 (+1.0%), XLV 177.18 (0.0%), XLE 67.28 (+1.1%), IGV 104.88 (-4.3%). Tech and software weakness still extending; money is rotating into financials and energy.
 - Mean-reversion scan (30 hits): the same software/data cluster (MDB -7.9%, TWLO -9.8%, OKTA -8.7%, FROG -9.9%, DOCN -8.7%, FIVN -7.1%, S -8.0%, NTSK -7.9%), now with CRWD -7.4% ($250B cap, new), AI-cloud/infra (NBIS -8.4%, CRWV -9.5%, CBRS -7.7% new, SMCI -7.1% new, IREN, APLD, GDS, CIFR, AXTI), and vaccines/biotech (MRNA -10.4% at 211.9 = new low of the day, NVAX -12.3%, TWST, GRAL, SLS, RXRX -10.2%, CELC). No verified, dated, name-specific cause for any (11:22 news pass found none). New lows still printing in MRNA, NVAX, RXRX and the cloud names: gate 4 (base/higher low/reclaim) fails. Gate 1 fails for all. No entry.
+- Momentum scan: 0 hits. Nothing to gate-check. No entry.
+- Orders: none. Gates unchanged; zero trades so far today.
+
+### Cycle 331 - 2026-10-16 ~11:58 ET (10-minute cycle; trigger 11:52; Tier B open)
+- Disclosure: the 11:42 trigger was skipped under the 6-minute rule (11:38 log).
+- Account: flat, cash/BP $403.05, no positions, no open orders. Day trades 0.
+- Tape: SPY 768.76 (-0.4%), QQQ 717.86 (-1.4%), IWM 272.66 (-0.9%), SMH 549.31 (-1.7%), XLF 55.69 (+0.8%), XLV 177.31 (+0.1%), XLE 67.48 (+1.4%), IGV 104.75 (-4.4%). Broad-based softness is spreading to small caps; software remains the weakest group.
+- Mean-reversion scan (39 hits, up from 30): the software rout is widening to security and infrastructure software (PANW -7.4% on a $300B cap, CRWD -7.3%, ZS -7.2%, RBRK -7.2%, NET -7.0%, SNOW -7.3%, MDB -8.3%, TWLO -10.9%, OKTA -9.4%, FROG -10.3%, DOCN -9.2%, NTSK, S -8.9%, WIX -7.7%, FSLY -9.8%), plus AI-cloud/miners (NBIS, CRWV -9.8%, CBRS, SMCI, IREN, APLD, GDS, HUT, MSTR -7.9% new, CIFR, AXTI), vaccines/biotech (MRNA -9.9% at 213.1 held in a 211.9-215 range for an hour but with no higher-low-and-reclaim structure confirmed, NVAX -11.8%, SLS -13.4%, RXRX -10.9%, TWST, GRAL, CELC, ERAS) and misc (TLK, WSE, XE, INFQ). No verified, dated, name-specific or sector cause found for any (11:22 news pass found none; the next hourly pass is due at 12:16 ET). Gate 1 fails for all. No entry.
 - Momentum scan: 0 hits. Nothing to gate-check. No entry.
 - Orders: none. Gates unchanged; zero trades so far today.
