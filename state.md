@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-16 09:48 ET",
+  "as_of": "2026-10-16 10:10 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1388,6 +1388,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-16 09:48 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-16 10:10 ET",
       "equity": 403.05
     }
   ],
@@ -4095,4 +4099,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Movers vs yesterday's close: DELL 459.06 (-3.0%, gave back the pre-market gain), SMTC 142.41 (-1.2%, the pre-market +4.4% faded), TRV 383.20 (-0.2%, recovered from -4.4% pre-market).
 - Mean-reversion scan (-7% from close, 1 hit): TLK -14.8% (10.89, Telkom Indonesia ADR). No cause verified; foreign ADR, not researched this cycle. Not eligible before 10:00 ET.
 - Momentum scan (+3%, RV at least 1.0, 0 hits): empty this early; momentum is not eligible before 10:30 ET.
+- Orders: none. Gates unchanged; zero trades so far today.
+
+### Cycle 325 - 2026-10-16 ~10:10 ET (10-minute cycle; trigger 10:03; Tier A window open)
+- Account: flat, cash/BP $403.05, no positions, no open orders. Day trades 0.
+- Tape: SPY 771.80 (0.0%), QQQ 721.83 (-0.85%), IWM 275.19 (+0.0%), SMH 550.28 (-1.5%), XLF 55.88 (+1.1%), XLV 177.84 (+0.4%), XLE 67.27 (+1.1%). Tech and semis weak, financials and energy firm.
+- Mean-reversion scan (-7% from close, 8 hits): MRNA -9.0% (215.16, $94B cap), CRWV -7.2%, FROG -7.3%, FSLY -7.0%, NVAX -9.9%, TLK -13.8%, SLS -12.5%, RXRX -9.0%. Researched the vaccine pair (MRNA, NVAX): a WebSearch returned only 2020-2025 articles, so no verified, dated, name-specific cause. 5-minute bars since the open show MRNA falling in a straight line 234.7 -> 213.7 with the last three bars lower (low 212.84) and NVAX 12.66 -> 11.52 with no higher low: no base and no reclaim. Gates 1 and 4 fail for both. Tier A also needs a sector ETF down at least 2%: XLV +0.4%, SMH -1.5%, so that condition fails for every name. CRWV/FSLY/FROG are software/AI-infra moves with no cause found. No entry.
+- Momentum scan (+3%, RV at least 1.0): 0 hits (earliest entry is 10:30 ET anyway).
 - Orders: none. Gates unchanged; zero trades so far today.
