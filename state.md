@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-15 15:52 ET",
+  "as_of": "2026-10-16 08:35 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,10 +41,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Oct 15 close: flat all day, zero trades, no positions, no overnight holds. Equity 403.05 (unchanged).",
+  "status_note": "Oct 16 pre-open: flat, no positions, no orders. Brief only; trading starts 10:00 ET.",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-10-15",
+    "date": "2026-10-16",
     "start_equity": 403.05,
     "trades": 0,
     "forced": 0
@@ -1380,6 +1380,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-15 15:52 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-16 08:35 ET",
       "equity": 403.05
     }
   ],
@@ -4065,3 +4069,17 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
   - Target note: the 1-trade-per-day figure was missed (0 trades). It is a target; no gate was loosened to chase it.
   - Judgment call to review: the market recovered in the last hour (SMH from -2.3% to about -0.8%), so a rebound-buy in the semis at the 14:38 lows would have worked in hindsight. It would have been a gate 1 failure on a bounce with no verified cause, so I stand by passing. This is hindsight, not evidence the gates are wrong.
 - Next session (Oct 16): pre-open brief 08:30 ET. Known events: bank earnings Oct 16 morning (TFC, RF, MTB, CFG, TRV, LADR; WBS and CMA dates unverified); CPI date unconfirmed; Fed Oct 28. Open item: PDT/day-trade applicability for limited_margin is still unverified (no problem hit).
+
+### Cycle 323 - 2026-10-16 ~08:35 ET (PRE-OPEN BRIEF; read-only, no orders; trigger 08:28 ET; day reset to 2026-10-16, start equity 403.05, trades 0)
+- Reconcile: cash/BP $403.05, total value $403.05, no positions, so no stop checks to run. Peak equity 437.99, breaker level 394.19 unchanged. Entries are not allowed before 10:00 ET.
+- Tape (pre-market vs Oct 15 close; thin books, wide spreads): SPY 773.1 (+0.2%), QQQ 727.7 (-0.04%), IWM 275.4 (+0.1%), SMH 554.4 (-0.8%), XLF 55.33 (+0.1%), XLV 177.5 (+0.2%), XLE 67.05 (+0.7%). Semis soft again after yesterday's late bounce; AAPL +2.3% (349.9 vs 342.0), NVDA flat, AVGO -0.6%. I have not found a cause for the AAPL move.
+- News/politics: one WebSearch for Oct 16 futures/bank earnings returned only 2018-2025 articles, nothing dated today. No news or politics item is verified for today. Anything below is calendar or price data only.
+- Earnings today, per the earnings calendar (reported 08:28 ET; entries marked verified by the calendar): MTB (EPS 5.08 vs 4.94 est), RF (0.73 vs 0.66), CFG (1.41 vs 1.38), TFC (1.16 vs 1.20, a miss), TRV (9.18 vs 7.35, a large beat) all show actuals; LADR still to report; WBS and CMA dates are marked unverified (tentative, listed for Oct 16 am). HDB and IBN report Oct 17. Pre-market reactions: TRV 367 vs 383.9 (-4.4%) despite the EPS beat, which I cannot explain, CFG 62.0 (-2.3% on a thin quote), MTB 216.0 (-1.2%), TFC and RF roughly flat to up. Bank quotes in pre-market are wide (e.g. MTB bid 212 / ask 228.5) and not reliable.
+- Rules applied: an earnings reaction is company-specific, and earnings within 2 trading days fails mean-reversion gate 1, so none of today's reporters (TRV, banks) are tradable mean-reversion setups on the day they report. A momentum entry on an earnings gap also lacks a pullback base.
+- Pre-market scans (-5% and +4% from yesterday's close, universe filters as usual; pre-market volume only so rankings are indicative):
+  - Down: CRWV -5.4% (65.91), TLK -14.6% (10.92, Telkom Indonesia ADR).
+  - Up: SMTC +4.4% (150.5, yesterday's weakest AI-hardware name), ZETA +5.2%, FCPT +4.7%, MBLY +4.3%, BHC +9.5%.
+- Watch list, mean-reversion (3-5): (1) DELL, quoting 478 pre-market vs 473.4 close, and PENG 61.7 flat, both deep-down names from Oct 14-15; I will want a base, higher low and reclaim plus a verified cause before anything. (2) CRWV -5.4%, AI neocloud with sector beta, no cause. (3) TLK -14.6%, foreign ADR, cause unknown, spread and liquidity to check. (4) TRV -4.4% post-earnings, fails gate 1 as an earnings reaction; watch only to document. Nothing here has a verified, dated, name-specific cause yet.
+- Watch list, momentum (3-5): (1) SMTC +4.4% pre-market, a rebound off a -14% day, needs a catalyst and a held pullback, not a first-tick buy. (2) VEEV, software strength continuing (pre-market 315-320 vs 313.0), still without a dated catalyst. (3) BHC +9.5%, ZETA +5.2%, no catalysts looked up. (4) AAPL +2.3% pre-market, unexplained; I would need a dated cause before treating it as a candidate. None qualifies today without the gates; momentum earliest is 10:30 ET.
+- Calendar: CPI date still unconfirmed in my notes; retail sales/PPI were Oct 15. Fed Oct 28. Open item: PDT/day-trade applicability for limited_margin remains unverified (no problem hit).
+- Expected posture: Tier A starts 10:00 ET (needs a sector ETF at least 2% down and a 5-minute higher low); the semis are only about -0.8% pre-market, so Tier A is unlikely to be available on that gate. The 1-trade-per-day figure is a target only.
