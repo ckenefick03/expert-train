@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-16 11:58 ET",
+  "as_of": "2026-10-16 12:20 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1416,6 +1416,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-16 11:58 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-16 12:20 ET",
       "equity": 403.05
     }
   ],
@@ -4177,3 +4181,12 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Mean-reversion scan (39 hits, up from 30): the software rout is widening to security and infrastructure software (PANW -7.4% on a $300B cap, CRWD -7.3%, ZS -7.2%, RBRK -7.2%, NET -7.0%, SNOW -7.3%, MDB -8.3%, TWLO -10.9%, OKTA -9.4%, FROG -10.3%, DOCN -9.2%, NTSK, S -8.9%, WIX -7.7%, FSLY -9.8%), plus AI-cloud/miners (NBIS, CRWV -9.8%, CBRS, SMCI, IREN, APLD, GDS, HUT, MSTR -7.9% new, CIFR, AXTI), vaccines/biotech (MRNA -9.9% at 213.1 held in a 211.9-215 range for an hour but with no higher-low-and-reclaim structure confirmed, NVAX -11.8%, SLS -13.4%, RXRX -10.9%, TWST, GRAL, CELC, ERAS) and misc (TLK, WSE, XE, INFQ). No verified, dated, name-specific or sector cause found for any (11:22 news pass found none; the next hourly pass is due at 12:16 ET). Gate 1 fails for all. No entry.
 - Momentum scan: 0 hits. Nothing to gate-check. No entry.
 - Orders: none. Gates unchanged; zero trades so far today.
+
+### Cycle 332 - 2026-10-16 ~12:20 ET (hourly cycle with news; trigger 12:13; Tier B open)
+- Disclosure: the 12:02 trigger was skipped under the 6-minute rule (11:58 log).
+- Account: flat, cash/BP $403.05, no positions, no open orders. Day trades 0.
+- Tape: SPY 767.26 (-0.6%), QQQ 716.53 (-1.6%), IWM 271.90 (-1.2%), SMH 548.58 (-1.8%), XLF 55.57 (+0.5%), XLV 176.73 (-0.3%), XLE 67.51 (+1.4%), IGV 104.77 (-4.4%). Index weakness is deepening, with small caps now -1.2%.
+- News pass (WebSearch, software/cyber selloff Oct 16): nothing dated Oct 16. Nearest: Sept 1 2026 (CRWD -7%, PANW -6% on valuation, IGV -3%) and an April 2026 piece attributing losses to AI-disruption fears (the source's date was internally inconsistent, so I do not rely on it). No verified cause for today's IGV -4.4%. Sixth hourly pass in a row without a dated cause.
+- Mean-reversion scan (-7% from close, 41 hits): the same groups as 11:58. Software/security/data (PANW -7.2% at 343.7, CRWD, SNOW, MDB, TWLO -10.6%, OKTA, DOCN, FROG, WIX, FSLY, S, NTSK), AI-cloud and miners (NBIS -9.6%, CRWV -10.7%, CBRS, SMCI, IREN, APLD, GDS, HUT, MSTR, CIFR, GLXY, RIOT, CLSK), biotech (MRNA -10.0% at 213.0, NVAX -12.3%, SLS -12.8%, RXRX -12.6%, TWST, GRAL, CELC, ERAS, PGEN), plus TLK, WSE, XE, INFQ, AEHR, AXTI, COHU. Most names are making new lows while the indexes fall. Gate 1 (verified, dated cause) fails for all; gate 4 (base) fails. No entry.
+- Momentum scan: 0 hits. Nothing to gate-check.
+- Orders: none. Gates unchanged; zero trades so far today. Downtrend-day pattern: waiting for a verified cause and a base is correct and costs nothing.
