@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-16 13:08 ET",
+  "as_of": "2026-10-16 13:20 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1436,6 +1436,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-16 13:08 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-16 13:20 ET",
       "equity": 403.05
     }
   ],
@@ -4235,3 +4239,10 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
   - Gate 3 held pullback on a rising 9/20 EMA with a higher-low base: not evaluated, since gates 1-2 already fail; AA is +5% on the day near its high (extended, not a pullback). The 5-minute bars call errored (bad parameter), so no bar data was read.
   - Result: no entry.
 - Mean-reversion: no heavy news search (hourly pass is 13:12 ET). Gate 1 unverified for all names; gate 4 no confirmed base/reclaim. No order. Zero trades; not forcing.
+
+### Cycle 337 - 2026-10-16 ~13:20 ET (hourly cycle with news; trigger 13:13; Tier B open)
+- Account: cash/BP $403.05, no positions, no open orders. Day trades 0.
+- Tape (broad downtrend, worsening): SPY 763.69 (-1.0%), QQQ 712.59 (-2.1%), IWM 270.55 (-1.6%), SMH 546.23 (-2.3%), XLF -0.1%, XLV -0.3%, XLE +1.9%, IGV 104.03 (-5.1%). MRNA 213.99 (-9.5%), flat range, no reclaim. PLTR 185.78 (-7.3%).
+- Scans: mean-reversion 60 hits (up from 50; new software/security NET, ZS, RBRK, plus TEM, QBTS, WULF, ASST, XXI); momentum 1 hit, AA +4.7% (rel. vol 1.02), still the same name that failed gates 1-2 at 13:08 ET (group beta; no dated catalyst).
+- News (searched this cycle): (1) market-wide software selloff cause: results were from other dates (April, February) and an undated piece, nothing dated Oct 16; no verified cause. (2) MRNA: results were 2023/2025 items only; no dated Oct 16 cause.
+- Gates: gate 1 unverified for every mean-reversion name (no dated, name-specific cause; a sector story, if any, remains unverified); gate 4 no confirmed base/higher-low/reclaim as the tape keeps making new lows. Momentum no valid candidate. No order. Zero trades; not forcing.
