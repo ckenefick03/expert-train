@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-16 14:08 ET",
+  "as_of": "2026-10-16 14:22 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1452,6 +1452,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-16 14:08 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-16 14:22 ET",
       "equity": 403.05
     }
   ],
@@ -4281,3 +4285,14 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape (new lows): SPY 762.90 (-1.2%), QQQ 710.89 (-2.4%), IWM 270.14 (-1.8%), SMH 543.64 (-2.7%), XLF 0.0%, XLV -0.4%, XLE +2.1%, IGV 103.97 (-5.1%). The 13:47 bounce failed. MRNA 211.60 (-10.5%), lowest print of the afternoon; no base.
 - Scans: mean-reversion 72 hits (up from 56; new: FLEX, RKLB, ASTS, PL, FIG, BLSH, ABCL, BTDR, AUR, RUM, VKTX - mostly broad high-beta liquidation); momentum 0 hits (AA 41.57 and CCI 82.27 both fell back below the +3% line).
 - Gates: no heavy news search (hourly pass was 13:13 ET, next due ~14:13, i.e. the next cycle). Gate 1 unverified for every mean-reversion name; gate 4 fails everywhere since the tape is still printing lower lows (no base, higher low or reclaim). No order. Zero trades; not forcing.
+
+### Cycle 341 - 2026-10-16 ~14:22 ET (hourly cycle with news; trigger 14:12; Tier B open until 14:30)
+- Account: cash/BP $403.05, no positions, no open orders. Day trades 0.
+- Tape: SPY 763.14 (-1.1%), QQQ 711.43 (-2.3%), IWM 270.29 (-1.7%), SMH 543.91 (-2.7%), XLF +0.1%, XLV -0.4%, XLE +2.2%, IGV 104.22 (-4.9%). Flat to a touch higher than the 14:08 lows, no higher-low structure yet. MRNA 213.41 (-9.8%).
+- Scans: mean-reversion 68 hits (72 at 14:08; same themes); momentum 2 hits: CNQ (Canadian Natural) 53.78 +3.5% and TALO (Talos) 17.51 +3.1%, both energy with XLE +2.2%, i.e. group beta in an oil-up tape (no name-specific divergence, no catalyst searched; fail gates 1-2). AA and CCI dropped out of the scan.
+- News (two searches this cycle; first dated, name-specific findings of the day):
+  - Market: reports dated to Friday Oct 16 describe a tech/AI-led slide (AI-financing/debt scare hitting CoreWeave and memory chips, SMH reportedly on a ninth straight daily decline, hot inflation prints earlier in the week, Fed commentary leaving an October hike open, a 10-year yield near 5.1%). Reports are intraday and details are single-source, so treated as context, not verified fact.
+  - MRNA: 24/7 Wall St. and others (Oct 16) attribute the ~10% drop to profit-taking after a large 2026 run, ahead of Phase 3 melanoma data (reported Oct 24 presentation); Novavax -12% in sympathy, no FDA action found.
+- Gate check on MRNA, the one name with a dated cause (written): gate 1 FAIL. The cause is positioning around the company's own upcoming data readout, which is company-specific, not sector rotation, macro or index flow; the pending binary event (Oct 24) also makes the overnight risk uncontrolled. Gate 4 not passed either: no higher low or reclaim, price re-tested 211.60 at 14:03. Not evaluated further (gates 2-3).
+- Gate check on the software/AI/semis/miner names: the macro story (AI financing, rates) is plausibly external for gate 1, but it is single-source and intraday, and gate 4 fails everywhere: SMH reportedly in a nine-day losing streak is a real downtrend, and no name shows a base, higher low and reclaim. Gate 2 (fundamentals) was not checked name-by-name.
+- Result: no order. Zero trades; not forcing. Follow-up for MRNA: record the close and the Oct 19/Oct 24 behavior to check whether the gate-1 FAIL was right.
