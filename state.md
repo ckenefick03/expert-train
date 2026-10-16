@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-16 10:58 ET",
+  "as_of": "2026-10-16 11:22 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1404,6 +1404,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-16 10:58 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-16 11:22 ET",
       "equity": 403.05
     }
   ],
@@ -4141,3 +4145,12 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Mean-reversion scan (13 hits): TWLO -8.6%, MRNA -9.5% (214.1, recovered slightly from 212.5), OKTA -7.7%, NBIS -7.3%, TWST -7.6%, GRAL -7.5%, DOCN -7.1%, CRWV -8.1%, NVAX -10.8%, TLK -12.4%, WSE -7.5% (new), SLS -10.9%, RXRX -8.0%. Two clusters: software/AI-cloud (TWLO, OKTA, NBIS, DOCN, CRWV) and vaccine/biotech (MRNA, NVAX, TWST, GRAL, SLS, RXRX). No verified, dated, name-specific cause for any. No sector ETF is at least 2% down. Gate 1 fails; Tier A condition fails. No entry. Last news pass was 10:21; nothing came near passing so no new search.
 - Momentum scan: 0 hits (RV at least 1.0 and +3%). Nothing to gate-check. No entry.
 - Orders: none. Gates unchanged; zero trades so far today.
+
+### Cycle 329 - 2026-10-16 ~11:22 ET (hourly cycle with news; trigger 11:16; Tier A closes 11:30)
+- Disclosure: the 11:02 trigger was skipped under the 6-minute rule (10:58 log); no other cycles missed.
+- Account: flat, cash/BP $403.05, no positions, no open orders. Day trades 0.
+- Tape: SPY 769.80 (-0.26%), QQQ 718.27 (-1.3%), IWM 273.75 (-0.5%), SMH 548.36 (-1.9%), XLF 55.90 (+1.1%), XLV 177.63 (+0.2%), XLE 67.31 (+1.1%), IGV 105.15 (-4.1%). The software ETF is the first sector ETF today to clear the Tier A "at least 2% down" condition. Tech is weakening further into late morning.
+- News pass (WebSearch, software/AI-cloud selloff Oct 16): nothing dated Oct 16 2026. The nearest items were Aug 20 2026 (Nebius $5B convertible, financing worries across AI-cloud names), a July 2026 risk-off rotation out of high-multiple AI names, and older years. None explains today's move. So IGV -4.1% has no verified cause.
+- Mean-reversion scan (-7% from close, 28 hits, up from 13): software/data (MDB -7.4%, SNOW -7.2%, TWLO -10.0%, OKTA -9.4%, FROG -9.1%, DOCN -8.4%, FIVN -7.3%, S -7.7%, NTSK -7.5%), AI-cloud/miners (NBIS -8.7%, CRWV -9.2%, IREN -8.0%, APLD -7.1%, HUT -7.6%, CIFR -7.3%), vaccines/biotech (MRNA -9.1% at 214.95, NVAX -11.5%, TWST, GRAL -9.9%, SLS -11.7%, RXRX -9.3%, ERAS), plus MXL, GDS, TLK -11.8%, WSE -8.4%, XE. The sector condition is met only for software names. Gate 1 requires a verified, dated cause that is name-specific (sector-wide counts only if verified): none found. Gate 4: lower lows still printing, no base. No entry.
+- Momentum scan: 0 hits. Nothing to gate-check.
+- Orders: none. Gates unchanged; zero trades so far today. Tier B opens at 11:30 ET.
