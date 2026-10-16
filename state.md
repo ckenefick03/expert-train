@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-16 12:55 ET",
+  "as_of": "2026-10-16 13:08 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1432,6 +1432,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-16 12:55 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-16 13:08 ET",
       "equity": 403.05
     }
   ],
@@ -4220,3 +4224,14 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - Tape: SPY 765.93 (-0.8%), QQQ 715.33 (-1.7%), IWM 271.20 (-1.4%), SMH 548.42 (-1.9%), XLF +0.2%, XLV -0.1%, XLE +1.9%, IGV 104.45 (-4.7%). MRNA 213.24 (-9.8%), still in its range with no reclaim.
 - Scans: mean-reversion 50 hits (breadth keeps widening: new semis/optical/test names AAOI, MXL, AEHR, COHU, OUST, plus GLXY, CLSK, OPEN); momentum 0 hits.
 - Gates: no heavy news search (hourly pass due at 13:12 ET). Gate 1 unverified for every name; gate 4 no confirmed base/higher-low/reclaim in a broad-selloff tape. Momentum no candidates. No order. Zero trades; not forcing.
+
+### Cycle 336 - 2026-10-16 ~13:08 ET (10-minute cycle; trigger 13:02; Tier B open)
+- Account: cash/BP $403.05, no positions, no open orders. Day trades 0.
+- Tape: SPY 765.35 (-0.8%), QQQ 714.40 (-1.9%), IWM 270.95 (-1.5%), SMH 547.36 (-2.0%), XLF +0.1%, XLV -0.1%, XLE +2.0%, IGV 104.42 (-4.7%). MRNA 214.73 (-9.2%), still ranging.
+- Scans: mean-reversion 50 hits (new: PLTR -7.3%, FIVN, NVTS; AAOI/MXL/AEHR/COHU/OUST/GLXY/CLSK/OPEN carry over); momentum 1 hit, the first of the day: AA (Alcoa) 42.57, +5.3%, rel. vol 1.00.
+- Momentum gate check on AA (written):
+  - Gate 1 relative-strength divergence: FAIL. Own peer complex moves with it (CENX +4.5%, KALU +0.8%, XLB +0.7%); XME +0.3% and FCX -0.3% lag. That is aluminum group beta, not name-specific divergence.
+  - Gate 2 dated catalyst: FAIL. One search found no dated Oct 16 catalyst for AA (only May-June 2026 and older items; cause of today's move unconfirmed).
+  - Gate 3 held pullback on a rising 9/20 EMA with a higher-low base: not evaluated, since gates 1-2 already fail; AA is +5% on the day near its high (extended, not a pullback). The 5-minute bars call errored (bad parameter), so no bar data was read.
+  - Result: no entry.
+- Mean-reversion: no heavy news search (hourly pass is 13:12 ET). Gate 1 unverified for all names; gate 4 no confirmed base/reclaim. No order. Zero trades; not forcing.
