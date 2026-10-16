@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-16 10:21 ET",
+  "as_of": "2026-10-16 10:38 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1396,6 +1396,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-16 10:21 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-16 10:38 ET",
       "equity": 403.05
     }
   ],
@@ -4118,4 +4122,11 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
 - News pass (WebSearch, Moderna/vaccines): no October 2026 coverage. Nearest dated items were a Sept 3 2026 Redburn downgrade to Sell (valuation; a -2.9% move, not today's -9.9%) and older years. Nothing verified for today. This is the 5th hourly pass in a row (counting Oct 15) without a dated cause; again a search-tool limit.
 - Mean-reversion scan (-7% from close, 9 hits): MRNA -9.9% (213.1), NVAX -8.9%, TLK -13.3%, SLS -9.3%, RXRX -9.0%, DOCN -7.6%, FROG -7.4%, TWLO -7.0%, TWST -7.0%. CRWV and FSLY dropped out (partial rebound). MRNA has stopped falling since 14:00Z (bars 213.7 -> 213.0) but has not shown a higher low and reclaim; it is the largest-cap, most-liquid candidate and stays the one to watch. Gate 1 fails (no verified cause) and Tier A needs a sector ETF at least 2% down (XLV +0.2%, SMH -1.5%). No entry.
 - Momentum scan: 0 hits. Earliest entry is 10:30 ET.
+- Orders: none. Gates unchanged; zero trades so far today.
+
+### Cycle 327 - 2026-10-16 ~10:38 ET (10-minute cycle; trigger 10:32; Tier A open, momentum window open from 10:30)
+- Account: flat, cash/BP $403.05, no positions, no open orders. Day trades 0.
+- Tape: SPY 771.19 (-0.08%), QQQ 721.10 (-0.95%), IWM 274.66 (-0.2%), SMH 551.92 (-1.2%), XLF 55.87 (+1.1%), XLV 177.29 (+0.06%), XLE 67.25 (+1.0%). Same shape as 10:21.
+- Mean-reversion scan (12 hits): MRNA -10.1% (212.6, no higher low; flat for 30+ minutes around 212.5-213.7 after the early slide), NVAX -10.5%, TLK -12.2%, SLS -10.8%, RXRX -9.3%, plus a software/cloud cluster: TWLO -9.1%, OKTA -7.8%, DOCN -7.2%, FROG -8.2%, FSLY -7.3%, CRWV -7.4%, TWST -7.3%. The software cluster is a sector theme; I did not check a software ETF and have no verified cause for it or for any single name. Gate 1 fails for all. Tier A also needs a sector ETF at least 2% down (none of XLV/SMH/QQQ qualifies). No entry.
+- Momentum scan (+3%, RV at least 1.0): 0 hits at 10:32 ET, so there is nothing to gate-check. No entry.
 - Orders: none. Gates unchanged; zero trades so far today.
