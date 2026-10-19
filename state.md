@@ -4752,3 +4752,20 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Mean-reversion scan: 2 hits, both already gate-failed: QXO 10.095 (-7.0%; stock-specific vs building-products peers, no verified cause) and ALM 8.725 (-11.2%; XME is +0.6%). No entry.
 - Momentum scan: 8 hits, same names as Cycle 373: MXL 77.14 (+8.2%), SLGN 41.12 (+8.8%), GMAB 38.65 (+4.5%), ARQT 32.53 (+12.9%), DXC 14.355 (+5.4%), EQPT 14.13 (+4.0%), CLF 14.045 (+15.9%), HSAI 12.925 (+4.1%). Gate failures unchanged. No entry.
 - No order. Zero trades today. Tier C (14:30-15:30, forced-tag only, all four gates) opens next cycle.
+
+### Cycle 375 - 2026-10-19 14:36 ET PRE-TRADE GATE RECORD (10-minute cycle, trigger 14:32; Tier C window 14:30-15:30; no Tier A/B or momentum entry qualified today, daily minimum of 1 trade unmet, so a Tier C entry carries the `forced` tag)
+- Disclosure first: every mean-reversion scan today (Cycles 348-374) used a -7% filter, which is stricter than the Tier A (5%), Tier B (3.5%) and Tier C (2.5%) thresholds. This cycle I ran the scan at -2.5% for the first time (85 hits) and reviewed it by sector cluster. I did not individually gate-check all 85; I checked the utilities / power-producer cluster and the homebuilders. The tight scan was a coverage gap in Tier B (11:30-14:30 ET) that I should have caught earlier.
+- Rate-sensitive sectors are down together on a small yield rise: TLT 79.57 (-0.6%), IEF -0.3%, XLU -1.8%, XLRE -1.1%, VNQ -1.2%, ITB -1.3%, XHB -0.5% while SPY +0.5% and QQQ +1.3% (defensive/rate-sensitive rotation into growth).
+- Candidates checked and rejected:
+  - ES (Eversource) 64.24 (-3.9%): gate 2 FAIL, last report Q2 2026 EPS 0.87 vs 0.94 est (a miss).
+  - NRG 99.27 (-4.3%): gate 2 FAIL, last two reports missed (Q1 1.48 vs 1.73, Q2 1.49 vs 1.75).
+  - CEG 262.4 (-3.4%): gates 2 and 3 pass (Q2 beat 2.55 vs 2.37, mean target 344.8) but it has made lower highs and lower lows since the Oct 9 high of 298 (-12%), opened 276 and sold off all day, and is still printing day lows with no 5-min higher low (no stabilization), and today's excess weakness vs XLU (-1.8%) has no verified cause. Rejected; watch for a higher low.
+- Candidate DHI (D.R. Horton), 135.895 (last), bid 135.82 / ask 135.92, prior close 139.39 = -2.51% (just over the 2.5% Tier C line). Written gates:
+  1. Cause: external. ITB -1.3% and XHB -0.5% with TLT -0.6% show a rate-driven homebuilder move; DHI falls about twice ITB. No DHI filing since Oct 1 and no dated company news found (searches returned only older items). The excess drop vs ITB is unexplained, flagged. PASS (flagged).
+  2. Last fundamental datapoint: FQ3 reported Jul 21: EPS 3.20 vs 2.99 est (beat). Next report Oct 29, outside the 2-trading-day earnings window. PASS.
+  3. Upside anchor: analyst mean target 152.64 (+12%), low 119; 132.1-132.4 held as support on Oct 1, 5, 7 and 8. PASS.
+  4. Trend: 5-week range 130-144 with no multi-week lower highs/lows; Oct 15-16 closed 139.5 / 139.4; today's slide is a dislocation to the lower third of the range. PASS.
+  - Stabilization: 5-min lows flat at 135.6-135.85 since 17:05Z and highs capped near 137.1 for 3+ hours: a visible base.
+  - Marginal points disclosed: -2.51% is barely over the threshold, and a rebound of 0.2% would drop it below 2.5%.
+- Trade plan: buy $105.00 notional market (tight spread 0.07%), tag forced. Stop 134.30 (below the 135.63 base low, -1.2%); target 139.39 (prior close, +2.6%, about 2.1R); horizon end of day, prefer to close before the session ends (decide at the 15:47 recap); 30-minute hold rule applies (only the stop trading exits in the first 30 min). 1R = about $1.25.
+
