@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-19 09:56 ET",
+  "as_of": "2026-10-19 10:08 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1492,6 +1492,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-19 09:56 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-19 10:08 ET",
       "equity": 403.05
     }
   ],
@@ -4422,3 +4426,15 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Account: cash/BP $403.05, no positions, no open orders. Day trades 0.
 - Tape (vs Oct 16 closes): SPY 766.47 (+0.4%), QQQ 718.43 (+1.2%), IWM 270.91 (+0.2%), SMH 552.11 (+2.3%), IGV 105.21 (+0.8%), XLE 68.42 (+0.3%), XLF 55.28 (-0.4%), XLV 176.63 (-0.1%), XLU 41.85 (-0.9%). The rebound is fading slightly from 09:43 but is still positive. MRNA 226.33 (+3.8%), NBIS 170.55 (+3.1%).
 - Scans: mean-reversion 0 hits; momentum 0 hits. No candidates and no sector ETF down 2%. No order. Zero trades.
+
+### Cycle 350 - 2026-10-19 ~10:08 ET (10-minute cycle; trigger 10:02; Tier A window open, momentum not until 10:30)
+- Account: cash/BP $403.05, no positions, no open orders. Day trades 0.
+- Tape (vs Oct 16 closes): SPY 766.04 (+0.4%), QQQ 716.84 (+1.0%), IWM 270.83 (+0.1%), SMH 548.08 (+1.5%), IGV 105.20 (+0.8%), XLE 68.40 (+0.2%), XLF 55.29 (-0.4%), XLV 176.48 (-0.1%), XLU 41.70 (-1.2%). The rebound is fading from the open (SMH +2.5% at 09:43, +1.5% now). MRNA 221.21 (+1.5%), NBIS 166.81 (+0.8%).
+- Scans: mean-reversion 1 hit: ALM (Almonty Industries, tungsten/critical-minerals miner, mkt cap $2.84B, avg vol 6.5M) 9.00, -8.4% from 9.83; momentum 0 hits.
+- ALM candidate gate check (written, Tier A considered):
+  - Sector condition (Tier A): FAIL. Sector ETF XME 100.72 (-0.2%), REMX 53.47 (-1.4%); neither is down 2%. Peers are down less than ALM (MP -1.7%, UUUU -1.7%, CRML -4.0%), so ALM is idiosyncratic in its group, not a sector move.
+  - Gate 1 cause: FAIL / unverified. One search found nothing dated Oct 19 (items were from 2025 and earlier 2026: Q1 earnings drop, TSX/ASX delisting and index-exclusion selling, July drop). No external, dated, name-specific-or-sector cause. A drop that outruns its sector with no cause is company-specific by default.
+  - Gates 2-4 not evaluated since gate 1 fails; no stabilization checked.
+  - Tier B (11:30-14:30) is not open yet either.
+  - Result: skipped. Follow-up due: ALM close vs 9.00.
+- No order. Zero trades.
