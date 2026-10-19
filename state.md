@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-19 14:23 ET",
+  "as_of": "2026-10-19 14:37 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,13 +41,13 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Oct 19 pre-open: flat, cash $403.05, no positions. Watching for gate-passing setups after the 10:00 ET open (momentum 10:30).",
+  "status_note": "Oct 19 14:36 ET: entered DHI (Tier C, forced tag) $105 at 135.96, stop 134.30, target 139.39. One position, cash $298.05. 30-minute hold rule runs to 15:06 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-19",
     "start_equity": 403.05,
-    "trades": 0,
-    "forced": 0
+    "trades": 1,
+    "forced": 1
   },
   "equity_history": [
     {
@@ -1593,9 +1593,23 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-19 14:23 ET",
       "equity": 403.05
+    },
+    {
+      "t": "2026-10-19 14:37 ET",
+      "equity": 403.0
     }
   ],
-  "positions": [],
+  "positions": [
+    {
+      "symbol": "DHI",
+      "strategy": "mean-reversion",
+      "qty": 0.772286,
+      "entry": 135.96,
+      "price": 135.96,
+      "stop": 134.3,
+      "target": 139.39
+    }
+  ],
   "trades": [
     {
       "symbol": "TER",
@@ -4768,4 +4782,10 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
   - Stabilization: 5-min lows flat at 135.6-135.85 since 17:05Z and highs capped near 137.1 for 3+ hours: a visible base.
   - Marginal points disclosed: -2.51% is barely over the threshold, and a rebound of 0.2% would drop it below 2.5%.
 - Trade plan: buy $105.00 notional market (tight spread 0.07%), tag forced. Stop 134.30 (below the 135.63 base low, -1.2%); target 139.39 (prior close, +2.6%, about 2.1R); horizon end of day, prefer to close before the session ends (decide at the 15:47 recap); 30-minute hold rule applies (only the stop trading exits in the first 30 min). 1R = about $1.25.
+
+### Cycle 375 - 2026-10-19 14:37 ET EXECUTION (DHI buy, Tier C, forced)
+- BUY DHI market, $105.00 notional, order 6ad6632f-2b28-4cf0-b2ac-d47b1aa84c29, filled 14:36:31 ET: 0.772286 sh @ 135.9599 (limit-equivalent reference: bid 135.84 / ask 135.92 at review; fill $0.04 above the ask). Cash $298.05, equity $403.00 (-$0.05 is the spread).
+- Entry record: strategy mean-reversion, Tier C, tag forced. Thesis: rate-driven homebuilder dislocation to the lower third of a 5-week range after a beat at the last report, with a flat 3-hour intraday base. Stop 134.30 (manual, fractional shares cannot hold a resting stop; exit proactively when price nears it; per the 30-minute hold rule only the stop trading exits before 15:06 ET). Target 139.39 (prior close), about 2.1R, 1R about $1.25. Horizon: end of day; plan to close before the session ends unless the thesis is clearly intact at the 15:47 ET recap (overnight risk: rates/macro; DHI reports Oct 29).
+- Order tool note: the review step asked for explicit confirmation; per framework section 0 and the standing autonomy instruction that request was not applied.
+- Position count 1 of 5; buying power $298.05; day trades 1 (PDT applicability for limited_margin still unverified; the review returned no PDT alert).
 
