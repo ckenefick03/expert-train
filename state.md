@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-19 15:03 ET",
+  "as_of": "2026-10-19 15:13 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1609,6 +1609,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-19 15:03 ET",
       "equity": 402.91
+    },
+    {
+      "t": "2026-10-19 15:13 ET",
+      "equity": 402.78
     }
   ],
   "positions": [
@@ -1617,7 +1621,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "mean-reversion",
       "qty": 0.772286,
       "entry": 135.96,
-      "price": 135.78,
+      "price": 135.615,
       "stop": 134.3,
       "target": 139.39
     }
@@ -4823,4 +4827,13 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Tape: SPY 767.79 (+0.6%), QQQ 719.74 (+1.4%), SMH 550.21 (+1.9%), IGV 106.27 (+1.9%), ITB 85.21 (-1.4%), XHB 94.30 (-0.6%), XLU 41.39 (-1.9%), TLT 79.51 (-0.7%).
 - Mean-reversion scan (-5%): 10 hits (SE, RBA, BLSH, FIGR, TLK, QXO, FRVO, ALM, IBRX, FRMI). Same names as prior cycles plus SE/FRVO, which are previously disclosed unresearched names. No gate-checked pass; no new entry. Position already held in the rate-sensitive cluster.
 - Momentum scan: 9 hits (MXL, SLGN, GMAB, ARQT, PBLS, CLF, DXC, EQPT, HSAI); gate failures unchanged from Cycle 377 (no several-session divergence or held-pullback base documented). No entry.
+- No order placed.
+
+### Cycle 379 (hourly, news pass) - 2026-10-19 15:13 ET
+- Account: equity $402.78, cash/BP $298.05, one position (DHI), no open orders. Day trades 1 (forced 1).
+- STOP CHECK: DHI 135.615 (bid 135.60 / ask 135.66), stop 134.30 (~1.0% below), target 139.39. Not triggered. Unrealized about -$0.27.
+- Tape: SPY 767.79 (+0.6%), QQQ 719.58 (+1.4%), SMH 549.48 (+1.8%), IGV 106.25 (+1.8%), ITB 85.15 (-1.4%), XHB 94.28 (-0.7%), XLU 41.39 (-1.9%), TLT 79.46 (-0.7%). Rate-driven weakness in the DHI cluster persists with no bounce yet.
+- Mean-reversion scan (-2.5%): 83 hits, dominated by utilities (CEG, ES, ED, NRG, ORA), REITs/mortgage (SBAC, ARE, DOC, HIW, BNL, STWD, AGNC, RITM, DX), energy/refiners and tankers, and misc single names. Only the utility/REIT/homebuilder clusters were previously gate-checked as a rate-sensitive group; I did not individually gate-check the other hits this cycle (disclosed gap). Adding a second rate-sensitive name would also double the same macro exposure. No entry: no name shows a documented external cause plus stabilization and a gate 3 anchor. CEG (262.69, -3.2%) is still without a higher 5-min low.
+- Momentum scan: 10 hits (MXL, SLGN, GMAB, ARQT, CELH, CLDX, PBLS, CLF, DXC, HSAI). CELH and CLDX are new to the list and unresearched this cycle; with entries closing at 15:30 ET and no several-session divergence evidence, no entry. Others unchanged.
+- News: one WebSearch on rates/yields returned only undated or older articles, so none are cited. The tape (TLT, XLU, ITB) is the only evidence for the rate cause.
 - No order placed.
