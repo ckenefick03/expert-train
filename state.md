@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-19 15:13 ET",
+  "as_of": "2026-10-19 15:23 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1613,6 +1613,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-19 15:13 ET",
       "equity": 402.78
+    },
+    {
+      "t": "2026-10-19 15:23 ET",
+      "equity": 402.79
     }
   ],
   "positions": [
@@ -1621,7 +1625,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "mean-reversion",
       "qty": 0.772286,
       "entry": 135.96,
-      "price": 135.615,
+      "price": 135.62,
       "stop": 134.3,
       "target": 139.39
     }
@@ -4836,4 +4840,12 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Mean-reversion scan (-2.5%): 83 hits, dominated by utilities (CEG, ES, ED, NRG, ORA), REITs/mortgage (SBAC, ARE, DOC, HIW, BNL, STWD, AGNC, RITM, DX), energy/refiners and tankers, and misc single names. Only the utility/REIT/homebuilder clusters were previously gate-checked as a rate-sensitive group; I did not individually gate-check the other hits this cycle (disclosed gap). Adding a second rate-sensitive name would also double the same macro exposure. No entry: no name shows a documented external cause plus stabilization and a gate 3 anchor. CEG (262.69, -3.2%) is still without a higher 5-min low.
 - Momentum scan: 10 hits (MXL, SLGN, GMAB, ARQT, CELH, CLDX, PBLS, CLF, DXC, HSAI). CELH and CLDX are new to the list and unresearched this cycle; with entries closing at 15:30 ET and no several-session divergence evidence, no entry. Others unchanged.
 - News: one WebSearch on rates/yields returned only undated or older articles, so none are cited. The tape (TLT, XLU, ITB) is the only evidence for the rate cause.
+- No order placed.
+
+### Cycle 380 - 2026-10-19 15:23 ET
+- Account: equity $402.79, cash/BP $298.05, one position (DHI), no open orders. Day trades 1 (forced 1).
+- STOP CHECK: DHI 135.62 (bid 135.64 / ask 135.71), stop 134.30 (~1.0% below), target 139.39. Not triggered. 30-minute hold rule has ended (15:06 ET); no invalidation signal: ITB/XHB/XLU/TLT unchanged on the rate move, no break of the 135.63 base low on a closing basis. Unrealized about -$0.26.
+- Tape: SPY 768.07 (+0.6%), QQQ 720.03 (+1.4%), SMH 551.05 (+2.1%), IGV 106.20 (+1.8%), ITB 85.15 (-1.4%), XHB 94.32 (-0.6%), XLU 41.37 (-2.0%), TLT 79.43 (-0.8%).
+- Mean-reversion scan (-5%): 11 hits (SE, PBF, RBA, BLSH, FIGR, TLK, QXO, FRVO, ALM, IBRX, FRMI). PBF is new (refiner, -5.7%, company/energy-specific cause unverified, not researched). No name passes the four gates; no entry.
+- Momentum scan: 12 hits (MXL, HTFL, SLGN, GMAB, ARQT, CELH, CLDX, PBLS, WRBY, CLF, DXC, HSAI). HTFL and WRBY are new and unresearched. No several-session divergence evidence documented for any; no entry. Entries close at 15:30 ET.
 - No order placed.
