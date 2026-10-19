@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-19 14:43 ET",
+  "as_of": "2026-10-19 14:53 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1601,6 +1601,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-19 14:43 ET",
       "equity": 403.04
+    },
+    {
+      "t": "2026-10-19 14:53 ET",
+      "equity": 402.92
     }
   ],
   "positions": [
@@ -1609,7 +1613,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "mean-reversion",
       "qty": 0.772286,
       "entry": 135.96,
-      "price": 135.95,
+      "price": 135.795,
       "stop": 134.3,
       "target": 139.39
     }
@@ -4799,4 +4803,12 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Tape vs Oct 16 closes: SPY 767.30 (+0.5%), QQQ 718.91 (+1.3%), SMH 549.53 (+1.8%), IGV 106.13 (+1.7%).
 - Mean-reversion scan (widened to -5%): 9 hits: SE 88.88 (-5.2%), RBA 79.175 (-6.1%), BLSH 27.96 (-5.2%), FIGR 25.455 (-6.2%), QXO 10.075 (-7.2%), FRVO 9.175 (-5.2%), ALM 8.795 (-10.5%), IBRX 8.62 (-6.1%), FRMI 2.975 (-5.9%). RBA, QXO, ALM, IBRX: unchanged gate 1 FAILs. New: SE, BLSH, FIGR, FRVO, FRMI were not researched in depth (BLSH and FIGR look like a crypto/fintech group move; FRVO and FRMI are early-stage power names); nothing known about them passes gates 1-4 and none has a verified cause. Disclosed. No entry (also, a second position needs a gate-passing setup, and none is on hand).
 - Momentum scan: 9 hits: MXL 76.84 (+7.7%), SLGN 40.95 (+8.3%), GMAB 38.55 (+4.2%), ARQT 32.72 (+13.5%), PBLS 25.49 (+12.0%, new: Parabilis Medicines, not researched, biotech with XBI up), OCTV 20.655 (+3.1%), DXC 14.365 (+5.5%), CLF 14.175 (+17.0%), HSAI 12.905 (+3.9%). Gate failures unchanged. No entry.
+- No new order.
+
+### Cycle 377 - 2026-10-19 14:53 ET (10-minute cycle; trigger 14:52; Tier C open until 15:30; DHI held)
+- Account: equity $402.92, cash/BP $298.05, one position, no open orders. Day trades 1 (forced 1).
+- STOP CHECK: DHI 0.772286 sh, entry 135.96, last 135.795 (bid 135.75 / ask 135.81), unrealized about -$0.13, stop 134.30 is 1.1% below, target 139.39. 30-minute hold rule ends 15:06 ET. ITB 85.23 (-1.4%), XHB 94.32 (-0.6%), XLU 41.42 (-1.9%), TLT 79.545 (-0.6%): the group is unchanged, DHI is tracking ITB, no relative-strength loss. Hold; no exit signal.
+- Tape vs Oct 16 closes: SPY 767.50 (+0.6%), QQQ 719.33 (+1.3%), SMH 549.73 (+1.8%), IGV 106.20 (+1.8%).
+- Mean-reversion scan (-5%): 8 hits: RBA 79.00 (-6.3%), BLSH 27.98 (-5.1%), FIGR 25.515 (-6.0%), TLK 10.475 (-5.0%), QXO 10.055 (-7.4%), ALM 8.825 (-10.2%), IBRX 8.575 (-6.6%), FRMI 2.98 (-5.7%). Nothing new passes: RBA, QXO, ALM and IBRX keep their gate 1 FAILs; BLSH, FIGR, TLK and FRMI are not verified as sector-tied (BLSH and FIGR look like a crypto/fintech group move) and were not researched in depth. CEG 262.47 is still sitting at its lows (no stabilization). No entry; one position is open and no further gate-passing setup exists.
+- Momentum scan: 10 hits: MXL 77.145 (+8.2%), SLGN 40.97 (+8.4%), GMAB 38.41 (+3.8%), ARQT 32.855 (+14.0%), PBLS 25.38 (+11.6%), OCTV 20.675 (+3.2%), DXC 14.29 (+4.9%), CLF 14.215 (+17.3%), EQPT 14.025 (+3.2%), HSAI 12.955 (+4.3%). Gate failures unchanged. No entry.
 - No new order.
