@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-19 10:42 ET",
+  "as_of": "2026-10-19 10:58 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1504,6 +1504,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-19 10:42 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-19 10:58 ET",
       "equity": 403.05
     }
   ],
@@ -4466,4 +4470,13 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
   - Gate 3 held pullback: NOT MET. Intraday it gapped to 14.20, faded to 12.94 by 10:02 ET (a -9% retrace from the open), then bounced to 13.73 (10:30 ET). A higher-low base exists (lows 12.94 -> 13.00 -> 13.06 -> 13.41), but the 5-minute EMA9 is about 13.47 and EMA20 about 13.51 (only 13 bars, so EMA20 is not reliable), and price 13.46 sits at or just below both, with the 1-minute EMA9 (13.54) rolling over. Continuation trigger (a break back above the 13.73 pullback high with a hold above the averages) has not occurred.
   - Gate 4 timing: PASS (10:35 ET).
   - Result: no entry. Not forced and not a loosened gate; gate 1 fails on the several-session criterion and gate 3 has no continuation trigger. If it reclaims 13.73 and holds above rising EMAs, the next cycle re-evaluates; the stop would sit below the 13.41 pullback low or 13.00 base (a 3-5% risk) with a target of at least 2R, and the gap-and-fade open is a red flag. Follow-up due: CLF close vs 13.46.
+- No order. Zero trades.
+
+### Cycle 353 - 2026-10-19 ~10:58 ET (10-minute cycle; trigger 10:52; Tier A closes 11:30)
+- Account: cash/BP $403.05, no positions, no open orders. Day trades 0.
+- Tape (vs Oct 16 closes): SPY 767.70 (+0.6%), QQQ 720.77 (+1.5%), IWM 271.15 (+0.3%), SMH 552.57 (+2.4%), IGV 105.98 (+1.6%), XLE 67.80 (-0.7%), XLF 55.24 (-0.5%), XLV 175.59 (-0.6%), XLU 41.47 (-1.8%), XME 101.06 (+0.1%), XBI 146.57 (+1.6%), IBB 203.49 (+0.7%).
+- Scans: mean-reversion 1 hit, IBRX 8.42 (-8.3%); momentum 1 hit, CLF 13.73 (+13.3%, rel. vol 1.13). ALM (9.20, -6.4%) dropped out of the scan.
+- IBRX (ImmunityBio, $9.7B): not a candidate. Biotech is up (XBI +1.6%, IBB +0.7%) while IBRX falls 8.3%, so the drop is idiosyncratic, not a sector or macro move; the Tier A sector condition fails (XLV -0.6%). One search found nothing dated Oct 19 (results from 2025 and Feb-Mar 2026), so gate 1 has no verified external cause. Skipped.
+- CLF re-check (momentum): now 13.715 (+13.2%) vs NUE 258.87 (+1.0%), STLD 242.83 (+1.0%), SLX 103.05 (+0.6%), XME +0.1%. The 5-minute bars since 14:30Z hold 13.41-13.73 with closes 13.425, 13.605, 13.595 and a partial 13.65; price is back at the 13.73 pullback high, and the 5-minute EMA9 is about 13.54 (EMA20 13.54, short sample), so price is above both and the higher-low base (13.41) is intact. Gate 3 is therefore closer to met, with the continuation trigger (a clean break above 13.73) only just being tested.
+  - Gate 1 is unchanged and still FAILS the several-session criterion: Oct 9-16 CLF -6.6% vs NUE +2.4% and STLD +0.9%, so today is the first session CLF has led its peers; this is a one-day earnings reaction, not an established leader. Gate 2 passes (Q3 results Oct 19, per the 8-K). I am holding the gate as written and not entering. Noted for calibration: if CLF keeps leading over the next sessions, this skip will look conservative; follow-up due on the close.
 - No order. Zero trades.
