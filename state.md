@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-19 10:22 ET",
+  "as_of": "2026-10-19 10:42 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1500,6 +1500,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-19 10:22 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-19 10:42 ET",
       "equity": 403.05
     }
   ],
@@ -4449,4 +4453,17 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Scans: mean-reversion 1 hit, ALM (Almonty) 8.98, -8.6%, unchanged from 10:08; momentum 0 hits.
 - News (two searches this cycle): neither returned anything dated Oct 19. (1) Wall Street: only undated or older rally recaps; no verified same-day driver for the tech bounce. (2) Tungsten/critical minerals: only 2025 background (China export controls, tungsten at 2013 highs); no dated cause for ALM's drop, and XME is +0.4% so there is no sector move to attach it to.
 - ALM follow-up: gate 1 still unverified/FAIL (company-specific by default, no cause found), Tier A sector condition still fails (XME up). Not a candidate. Tier B opens 11:30 ET.
+- No order. Zero trades.
+
+### Cycle 352 - 2026-10-19 ~10:42 ET (10-minute cycle; trigger 10:32; Tier A open, momentum window open since 10:30)
+- Account: cash/BP $403.05, no positions, no open orders. Day trades 0.
+- Tape (vs Oct 16 closes): SPY 767.19 (+0.5%), QQQ 719.43 (+1.4%), IWM 271.12 (+0.2%), SMH 551.57 (+2.2%), IGV 105.53 (+1.1%), XLE 68.05 (-0.3%), XLF 55.24 (-0.5%), XLV 176.40 (-0.2%), XLU 41.53 (-1.6%), XME 100.74 (-0.2%). MRNA 228.51 (+4.8%), NBIS 169.50 (+2.4%).
+- Scans: mean-reversion 2 hits: ALM 9.08 (-7.6%, unchanged verdict, see 10:08/10:22) and IBRX (ImmunityBio, mkt cap $9.7B) 8.41, -8.4%; momentum 1 hit: CLF (Cleveland-Cliffs) 13.46, +11.1%, rel. vol 1.03.
+- IBRX: not researched. Tier A needs a sector ETF down 2% and a verified cause; XBI/IBB were not checked and nothing has been verified, so gate 1 is unverified (company-specific by default). Skipped; follow-up due on the close. (Disclosure: I did not run a search or ETF check on IBRX this cycle.)
+- CLF momentum gate check (written; the first real momentum candidate of the week):
+  - Gate 1 relative strength: PARTIAL / FAIL on the multi-session test. Today it clearly separates: CLF +11.1% vs NUE +0.7%, STLD +0.4%, SLX +0.2%, XME -0.2%. But the gate wants outperformance "today and over the last several sessions", and over Oct 9-16 CLF fell 12.98 -> 12.12 (-6.6%) while NUE rose 250.33 -> 256.29 (+2.4%) and STLD 238.38 -> 240.54 (+0.9%); over Oct 5-16 it was flat (-0.7%) against XME -6.3%. So the divergence is today's earnings reaction only.
+  - Gate 2 catalyst: PASS. Q3 2026 results released Oct 19 (company 8-K, sec.gov, and the company's earnings announcement): adjusted EPS $0.28 vs $0.21-0.24 estimates, adjusted EBITDA $612M vs the $575M guidance (strongest quarter in three years per the CEO), Q4 adjusted EBITDA guided higher, major debt reduction expected in Q4. The earnings are the thesis, and they have already been reported (the universe rule allows this). No article describing today's price move was found.
+  - Gate 3 held pullback: NOT MET. Intraday it gapped to 14.20, faded to 12.94 by 10:02 ET (a -9% retrace from the open), then bounced to 13.73 (10:30 ET). A higher-low base exists (lows 12.94 -> 13.00 -> 13.06 -> 13.41), but the 5-minute EMA9 is about 13.47 and EMA20 about 13.51 (only 13 bars, so EMA20 is not reliable), and price 13.46 sits at or just below both, with the 1-minute EMA9 (13.54) rolling over. Continuation trigger (a break back above the 13.73 pullback high with a hold above the averages) has not occurred.
+  - Gate 4 timing: PASS (10:35 ET).
+  - Result: no entry. Not forced and not a loosened gate; gate 1 fails on the several-session criterion and gate 3 has no continuation trigger. If it reclaims 13.73 and holds above rising EMAs, the next cycle re-evaluates; the stop would sit below the 13.41 pullback low or 13.00 base (a 3-5% risk) with a target of at least 2R, and the gap-and-fade open is a red flag. Follow-up due: CLF close vs 13.46.
 - No order. Zero trades.
