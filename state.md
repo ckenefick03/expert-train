@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-19 15:23 ET",
+  "as_of": "2026-10-19 15:33 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1617,6 +1617,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-19 15:23 ET",
       "equity": 402.79
+    },
+    {
+      "t": "2026-10-19 15:33 ET",
+      "equity": 402.83
     }
   ],
   "positions": [
@@ -1625,7 +1629,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "mean-reversion",
       "qty": 0.772286,
       "entry": 135.96,
-      "price": 135.62,
+      "price": 135.67,
       "stop": 134.3,
       "target": 139.39
     }
@@ -4849,3 +4853,10 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Mean-reversion scan (-5%): 11 hits (SE, PBF, RBA, BLSH, FIGR, TLK, QXO, FRVO, ALM, IBRX, FRMI). PBF is new (refiner, -5.7%, company/energy-specific cause unverified, not researched). No name passes the four gates; no entry.
 - Momentum scan: 12 hits (MXL, HTFL, SLGN, GMAB, ARQT, CELH, CLDX, PBLS, WRBY, CLF, DXC, HSAI). HTFL and WRBY are new and unresearched. No several-session divergence evidence documented for any; no entry. Entries close at 15:30 ET.
 - No order placed.
+
+### Cycle 381 - 2026-10-19 15:33 ET
+- Account: equity $402.83, cash/BP $298.05, one position (DHI), no open orders. Day trades 1 (forced 1).
+- STOP CHECK: DHI 135.67 (bid 135.63 / ask 135.69), stop 134.30 (~1.0% below), target 139.39. Not triggered. Unrealized about -$0.22.
+- Tape: SPY 768.12 (+0.6%), QQQ 720.55 (+1.5%), SMH 552.15 (+2.3%), IGV 106.27 (+1.8%), ITB 85.08 (-1.5%), XHB 94.28 (-0.7%), XLU 41.30 (-2.2%), TLT 79.41 (-0.8%).
+- Entry window closed (15:30 ET cutoff has passed), so no entry scans were run this cycle (stop check and tape only). No order placed.
+- Next: the 15:47 ET close recap decides DHI close vs overnight hold.
