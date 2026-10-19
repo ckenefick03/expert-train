@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-19 14:14 ET",
+  "as_of": "2026-10-19 14:23 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1588,6 +1588,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-19 14:14 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-19 14:23 ET",
       "equity": 403.05
     }
   ],
@@ -4741,3 +4745,10 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Momentum scan: 8 hits: MXL 77.38 (+8.5%), SLGN 41.00 (+8.5%), GMAB 38.645 (+4.4%), ARQT 32.49 (+12.7%), DXC 14.405 (+5.8%, rel. vol 2.68; fading from its +10.5% high), EQPT 14.08 (+3.6%), CLF 14.04 (+15.8%), HSAI 12.925 (+4.1%). OCTV dropped out. Gate failures unchanged from Cycles 364-372 (no cited catalyst or no several-session divergence; GMAB, EQPT, HSAI, MXL not studied in depth, disclosed). No entry.
 - Follow-ups at 2026-10-19 14:14 ET vs prior close: MRNA 228.35 (+4.7%, new day high); IBRX 8.525 (-7.1%); ALM 8.72 (-11.2%); CLF 14.04 (+15.8%; +4.3% since the 10:35 note of 13.46); ARQT 32.49 (+12.7%); SLGN 41.00 (+8.5%); DXC 14.405 (+5.8%). The skipped names have not produced a loss; the momentum names are up, which is the cost of the strict several-session rule.
 - No order. Zero trades today.
+
+### Cycle 374 - 2026-10-19 14:23 ET (10-minute cycle; trigger 14:22; Tier B open until 14:30)
+- Account: cash/BP $403.05, no positions, no open orders. Day trades 0.
+- Tape vs Oct 16 closes: SPY 767.63 (+0.6%), QQQ 718.98 (+1.3%), SMH 549.42 (+1.8%), IGV 106.12 (+1.7%), XME 101.52 (+0.6%), XBI 147.89 (+2.5%), XHB 94.45 (-0.5%).
+- Mean-reversion scan: 2 hits, both already gate-failed: QXO 10.095 (-7.0%; stock-specific vs building-products peers, no verified cause) and ALM 8.725 (-11.2%; XME is +0.6%). No entry.
+- Momentum scan: 8 hits, same names as Cycle 373: MXL 77.14 (+8.2%), SLGN 41.12 (+8.8%), GMAB 38.65 (+4.5%), ARQT 32.53 (+12.9%), DXC 14.355 (+5.4%), EQPT 14.13 (+4.0%), CLF 14.045 (+15.9%), HSAI 12.925 (+4.1%). Gate failures unchanged. No entry.
+- No order. Zero trades today. Tier C (14:30-15:30, forced-tag only, all four gates) opens next cycle.
