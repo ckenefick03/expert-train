@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-19 13:33 ET",
+  "as_of": "2026-10-19 13:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1572,6 +1572,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-19 13:33 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-19 13:43 ET",
       "equity": 403.05
     }
   ],
@@ -4691,4 +4695,11 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
   - New: MXL (MaxLinear) 78.375 (+9.9%, rel. vol 1.01). Semis today: SMH +2.1%, NVDA +1.7%, AVGO +2.2%, so it outruns the group on the day. MXL reports Q3 after the close on Oct 22 (3 trading days out; the 2-day earnings rule is not triggered yet). No catalyst could be cited and several-session divergence was not established (not researched beyond today's tape). Gate 2 FAIL as uncited; disclosed that gate 1 was not studied in depth. No entry.
   - DXC 14.755 (+8.3%, rel. vol 2.39), CLF 14.045 (+15.9%, rel. vol 2.22), ARQT 32.30 (+12.1%), SLGN 40.86 (+8.1%): all carry the same gate failures logged in Cycles 364-368.
   - GMAB 38.765 (+4.8%) and EQPT 14.17 (+4.3%): not researched beyond the scan (disclosed). No entry.
+- No order. Zero trades today.
+
+### Cycle 370 - 2026-10-19 13:43 ET (10-minute cycle; trigger 13:42; Tier B open)
+- Account: cash/BP $403.05, no positions, no open orders. Day trades 0.
+- Tape vs Oct 16 closes: SPY 767.46 (+0.5%), QQQ 719.55 (+1.4%), SMH 550.11 (+1.9%), IGV 106.40 (+2.0%), XME 101.39 (+0.5%), XBI 147.89 (+2.5%).
+- Mean-reversion scan: 1 hit. ALM 8.895 (-9.5%) while XME is +0.5%: gate 1 FAIL. RBA 78.47 (-6.9%) dropped out of the scan; it was a stock-specific gate 1 FAIL in Cycle 369. No entry.
+- Momentum scan: 7 hits, same names as Cycle 369: MXL 77.965 (+9.3%), SLGN 40.87 (+8.1%), GMAB 38.785 (+4.8%), ARQT 32.535 (+12.9%), DXC 14.70 (+7.9%), EQPT 14.225 (+4.7%), CLF 13.99 (+15.5%). The gate failures logged in Cycles 364-369 are unchanged and nothing new was found. No entry.
 - No order. Zero trades today.
