@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-19 14:03 ET",
+  "as_of": "2026-10-19 14:14 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1584,6 +1584,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-19 14:03 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-19 14:14 ET",
       "equity": 403.05
     }
   ],
@@ -4725,4 +4729,15 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Tape vs Oct 16 closes: SPY 767.33 (+0.5%), QQQ 719.19 (+1.3%), SMH 549.80 (+1.9%), IGV 106.25 (+1.8%), XME 101.49 (+0.6%), XBI 147.67 (+2.3%). Flat-to-slightly-lower tape since mid-morning.
 - Mean-reversion scan: 1 hit. ALM 8.745 (-11.0%) while XME is +0.6%: not sector-driven, no verified external cause, gate 1 FAIL. No entry.
 - Momentum scan: 9 hits. The Cycle 371 eight (MXL 77.36 +8.5%, SLGN 41.06 +8.6%, GMAB 38.62 +4.4%, ARQT 32.54 +12.9%, OCTV 20.645 +3.0%, DXC 14.65 +7.6% rel. vol 2.60, EQPT 14.08 +3.6%, CLF 14.045 +15.9% rel. vol 2.37) plus new HSAI (Hesai Group ADR) 12.925 (+4.1%, rel. vol 1.02), at the scan floor and not researched. Nothing new on the gate failures logged in Cycles 364-371 (disclosed: GMAB, EQPT, OCTV, HSAI and MXL's several-session RS were not studied beyond the scan, and none shows a cited catalyst). No entry.
+- No order. Zero trades today.
+
+### Cycle 373 - 2026-10-19 14:14 ET (hourly cycle with news; trigger 14:12; Tier B open until 14:30, then Tier C forced-tag only until 15:30)
+- Account: cash/BP $403.05, no positions, no open orders. Day trades 0.
+- Tape vs Oct 16 closes: SPY 767.76 (+0.6%), QQQ 719.41 (+1.4%), IWM 271.17 (+0.3%), SMH 550.04 (+1.9%), IGV 106.13 (+1.7%), XLE 67.95 (-0.4%), XLF 55.18 (-0.6%), XLV 176.15 (-0.3%), XLU 41.47 (-1.8%), XME 101.48 (+0.6%), XBI 147.83 (+2.4%). Stable, growth-led, defensives and financials lagging.
+- News: two standard WebSearches (market recap, QXO) returned only undated or earlier-period items (latest market recap was Oct 12). No news is cited as verified for today; the QXO items concern earlier offerings and dilution and are not dated to today.
+- Mean-reversion scan: 2 hits.
+  - New: QXO 10.085 (-7.1%, prior close 10.86). Building-products peers today: BLDR -2.9%, ITB -1.3%, XHB -0.6%, POOL -2.1%, FBIN +1.0%. QXO falls more than twice as much as the sector, which is stock-specific rather than sector or macro. The only filing since Oct 12 is a Form 4 (Oct 13). Search results about offerings and dilution are undated. No verified external cause (gate 1 FAIL), and the stock appears to be in a multi-week downtrend (gate 4 would also FAIL; not fully checked). No entry.
+  - ALM 8.725 (-11.2%) while XME is +0.6%: gate 1 FAIL. No entry.
+- Momentum scan: 8 hits: MXL 77.38 (+8.5%), SLGN 41.00 (+8.5%), GMAB 38.645 (+4.4%), ARQT 32.49 (+12.7%), DXC 14.405 (+5.8%, rel. vol 2.68; fading from its +10.5% high), EQPT 14.08 (+3.6%), CLF 14.04 (+15.8%), HSAI 12.925 (+4.1%). OCTV dropped out. Gate failures unchanged from Cycles 364-372 (no cited catalyst or no several-session divergence; GMAB, EQPT, HSAI, MXL not studied in depth, disclosed). No entry.
+- Follow-ups at 2026-10-19 14:14 ET vs prior close: MRNA 228.35 (+4.7%, new day high); IBRX 8.525 (-7.1%); ALM 8.72 (-11.2%); CLF 14.04 (+15.8%; +4.3% since the 10:35 note of 13.46); ARQT 32.49 (+12.7%); SLGN 41.00 (+8.5%); DXC 14.405 (+5.8%). The skipped names have not produced a loss; the momentum names are up, which is the cost of the strict several-session rule.
 - No order. Zero trades today.
