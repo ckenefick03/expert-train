@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-19 14:53 ET",
+  "as_of": "2026-10-19 15:03 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1605,6 +1605,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-19 14:53 ET",
       "equity": 402.92
+    },
+    {
+      "t": "2026-10-19 15:03 ET",
+      "equity": 402.91
     }
   ],
   "positions": [
@@ -1613,7 +1617,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "mean-reversion",
       "qty": 0.772286,
       "entry": 135.96,
-      "price": 135.795,
+      "price": 135.78,
       "stop": 134.3,
       "target": 139.39
     }
@@ -4812,3 +4816,11 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Mean-reversion scan (-5%): 8 hits: RBA 79.00 (-6.3%), BLSH 27.98 (-5.1%), FIGR 25.515 (-6.0%), TLK 10.475 (-5.0%), QXO 10.055 (-7.4%), ALM 8.825 (-10.2%), IBRX 8.575 (-6.6%), FRMI 2.98 (-5.7%). Nothing new passes: RBA, QXO, ALM and IBRX keep their gate 1 FAILs; BLSH, FIGR, TLK and FRMI are not verified as sector-tied (BLSH and FIGR look like a crypto/fintech group move) and were not researched in depth. CEG 262.47 is still sitting at its lows (no stabilization). No entry; one position is open and no further gate-passing setup exists.
 - Momentum scan: 10 hits: MXL 77.145 (+8.2%), SLGN 40.97 (+8.4%), GMAB 38.41 (+3.8%), ARQT 32.855 (+14.0%), PBLS 25.38 (+11.6%), OCTV 20.675 (+3.2%), DXC 14.29 (+4.9%), CLF 14.215 (+17.3%), EQPT 14.025 (+3.2%), HSAI 12.955 (+4.3%). Gate failures unchanged. No entry.
 - No new order.
+
+### Cycle 378 - 2026-10-19 15:03 ET
+- Account: equity $402.91, cash/BP $298.05, one position (DHI), no open orders. Day trades 1 (forced 1).
+- STOP CHECK: DHI 135.78 (bid 135.74 / ask 135.85), stop 134.30 (~1.1% below), target 139.39. Not triggered. 30-minute hold rule ends 15:06 ET. Unrealized about -$0.14.
+- Tape: SPY 767.79 (+0.6%), QQQ 719.74 (+1.4%), SMH 550.21 (+1.9%), IGV 106.27 (+1.9%), ITB 85.21 (-1.4%), XHB 94.30 (-0.6%), XLU 41.39 (-1.9%), TLT 79.51 (-0.7%).
+- Mean-reversion scan (-5%): 10 hits (SE, RBA, BLSH, FIGR, TLK, QXO, FRVO, ALM, IBRX, FRMI). Same names as prior cycles plus SE/FRVO, which are previously disclosed unresearched names. No gate-checked pass; no new entry. Position already held in the rate-sensitive cluster.
+- Momentum scan: 9 hits (MXL, SLGN, GMAB, ARQT, PBLS, CLF, DXC, EQPT, HSAI); gate failures unchanged from Cycle 377 (no several-session divergence or held-pullback base documented). No entry.
+- No order placed.
