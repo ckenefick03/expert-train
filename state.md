@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-16 15:50 ET",
+  "as_of": "2026-10-19 08:35 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,10 +41,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Oct 16 close: flat all day, 0 trades, no positions, no overnight holds. Cash $403.05.",
+  "status_note": "Oct 19 pre-open: flat, cash $403.05, no positions. Watching for gate-passing setups after the 10:00 ET open (momentum 10:30).",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-10-16",
+    "date": "2026-10-19",
     "start_equity": 403.05,
     "trades": 0,
     "forced": 0
@@ -1481,6 +1481,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-16 15:50 ET",
       "equity": 403.05
+    },
+    {
+      "t": "2026-10-19 08:35 ET",
+      "equity": 403.05
     }
   ],
   "positions": [],
@@ -1547,31 +1551,31 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Risk-off for AI hardware again premarket: memory and storage names -6% to -8% (WDC, STX, SK hynix ADR, MU, SNDK), SMH about -1.7%; Dow/IWM firm; bank earnings under way (GS strong beat, JPM EPS miss); UNH beat and raise; CPI Wednesday.",
+    "read": "Pre-market rebound after Friday's selloff: SMH +3.2%, QQQ +1.3%, SPY +0.6%, IGV +0.8% vs Oct 16 closes; XLE -1.0%. No dated cause found for the bounce. Earnings this week: NFLX, RTX, GE (Tue), META, TSLA, IBM, TXN, LRCX (Wed), HON (Thu). ESMO Oct 23-27 (MRNA).",
     "chips": [
       {
         "name": "SPY",
-        "chg": -0.08
+        "chg": 0.55
       },
       {
         "name": "QQQ",
-        "chg": -0.69
+        "chg": 1.33
       },
       {
         "name": "SMH",
-        "chg": -2.2
+        "chg": 3.15
       },
       {
         "name": "IWM",
-        "chg": -0.31
+        "chg": 0.51
       },
       {
-        "name": "XLV",
-        "chg": 0.33
+        "name": "IGV",
+        "chg": 0.83
       },
       {
-        "name": "KTOS",
-        "chg": -0.26
+        "name": "XLE",
+        "chg": -1.01
       }
     ]
   }
@@ -4376,3 +4380,25 @@ Mean-reversion (Tier A, 42 names): still the biotech/diagnostics/tools block (NT
   - The macro narrative in the 14:22 entry (AI-financing scare, hot inflation, Fed commentary, 10-year near 5.1%) was single-source and intraday and could not be reproduced at the 15:13 pass; it was never used as a verified cause.
   - PDT/day-trade applicability for this limited-margin account is still unverified (no problem hit).
 - Upcoming: Oct 19 open (MRNA/AA/CCI follow-ups); MRNA Phase 3 data reported for Oct 24; Fed meeting Oct 28; CPI date unconfirmed; LADR reported Oct 16, WBS/CMA dates unverified, HDB/IBN earnings Oct 17.
+
+### Pre-open brief - 2026-10-19 08:35 ET (read-only, no orders)
+- Reconcile (live): portfolio $403.05, all cash, buying power $403.05; no positions; no open orders. Stop-check: nothing held. Day reset to 2026-10-19: start equity $403.05, trades 0, forced 0.
+- Correction to the Oct 16 close recap (not rewritten): the recap quoted a 15:48 ET live quote basis (SPY 762.64, QQQ 709.10, SMH 540.67, IGV 104.29, MRNA 215.18). The official Oct 16 closes were SPY 763.25 (-1.1%), QQQ 709.80 (-2.5%), SMH 539.79 (-3.4%), IGV 104.34 (-4.8%), IWM 270.44, XLE 68.24, XLF 55.52, XLV 176.71, XLU 42.21; MRNA closed 218.01 (-7.8% vs 236.50, a bounce from the 15:48 print), AA 41.45, CCI 82.26, HONA 168.09, RTX 193.92, PLTR 186.03, NBIS 165.47. Account equity was unchanged either way ($403.05).
+- Tape first (pre-market vs Oct 16 close; last non-regular trades at 08:28-08:29 ET, thin and with wide spreads on several ETFs): SPY 767.45 (+0.55%), QQQ 719.24 (+1.33%), SMH 556.81 (+3.15%), IWM 271.83 (+0.51%), IGV 105.21 (+0.83%, 105.00/106.25 market), XLE 67.55 (-1.0%), XLF 55.29 (-0.4%), XLV 175.84 (-0.5%), XLU 42.11 (-0.2%). Read: a rebound led by semis and tech after Friday's selloff, energy giving back some of Friday's gain. Single-name pre-market moves: NBIS 177.57 (+7.3%), CRWD 232.46 (+2.2%), PANW 349.69 (+2.3%), SNOW 312.00 (+1.7%), MDB 341.01 (+1.0%), MRNA 214.59 (-1.6%), RTX 190.54 (-1.7%), CNQ 53.12 (-1.3%), CCI 81.27 (-1.2%), AA 41.50 (0.0%), HONA 168.81 (+0.4%), PLTR 186.86 (+0.4%), NVAX 11.30 (+0.4%).
+- News and politics (three searches this cycle): none returned anything dated Oct 19. (1) Futures: only 2018-2020 and Nov 2025 items; no same-day futures coverage found. (2) Chip stocks / NBIS pre-market: only older items (the nearest NBIS item was July 6, 2026); no verified cause for either the semis rebound or the NBIS jump. (3) Moderna: dated and relevant. Topline Phase 3 INTerpath-001 results (Merck/Moderna, melanoma, met RFS and DMFS endpoints) were announced Aug 19, 2026; full data is the Presidential Symposium late-breaker (LBA1) at ESMO 2026, Oct 23-27 in Madrid, and Moderna plans an investor webcast on Sat Oct 24. This confirms the Oct 16 gate-1 reading: MRNA's drop is positioning around its own readout, company-specific. No FDA action found. Politics: no politics search turned up anything dated this cycle; no political catalyst identified.
+- Earnings calendar (get_earnings_calendar, high-market-cap, Oct 19-22; verified dates unless noted): Today Oct 19 pre-market: CLF, FITB (reported), CBZ, DX; after the close: CCK, AGNC, regional banks (ZION, WTFC, BOKF, WAL), STLD, WRB, AERO. Tue Oct 20: pre-market RTX, GE, NOC, GM, HAL, MMM, KEY, ALLY, SYF, MSCI; after the close NFLX, COF, ISRG, UAL, CB, NLY. Wed Oct 21: pre-market NEE, DHR, TMO, ABT, T, PM, ELV, CME, MCO; after the close META, TSLA, IBM, TXN, LRCX, CCI, KMI, CSX, SAP, KALU. Thu Oct 22: pre-market HON, LMT, UNP, PG, NSC, CMCSA, BX, VLO, TTMI; after the close WDC, MXL, NEM, BE, RNG, APPF, VRSN (HON also listed with an unverified second entry). Earnings-window rule (no report within 2 trading days before entry): RTX, GE, NFLX, NOC are excluded for entries today and tomorrow; CCI, META, TSLA, IBM, TXN, LRCX, KALU, SAP fall inside the 2-day window for Oct 20 entries and are watch-only today.
+- Standing rules for today: no entries before 10:00 ET; momentum earliest 10:30; Tier A 10:00-11:30 needs a sector ETF down >=2% (IGV and SMH are up pre-market, so Tier A looks unlikely unless the open reverses), Tier B 11:30-14:30, Tier C 14:30-15:30 forced-tag only with all four gates; none after 15:30. Entry size min($105, BP-$0.50), max 5 positions, $100 daily loss limit, breaker level $394.19 from the $437.99 peak.
+
+#### Watch list (candidates to watch, NOT entries; every name still needs all gates in writing at the time)
+Mean-reversion (needs a fresh drop >=3.5% intraday or >=7% over 3 days, an external dated cause, and stabilization):
+1. PANW / CRWD / SNOW (software/security complex; IGV -4.8% Friday, +0.8% pre-market): watch whether Friday's drop holds after the open; a verified sector cause is still missing (Friday's searches found none).
+2. NBIS (AI-cloud, -12% Friday on rotation out of AI infrastructure, +7.3% pre-market): a pre-market bounce makes a Tier B drop unlikely at the open; candidate only if it fades back below Friday's close.
+3. MRNA (-7.8% Friday close): expected gate-1 FAIL (company-specific positioning ahead of ESMO Oct 23-27); on the list only as a follow-up to check the Oct 16 call.
+4. Semis equipment/optical (AAOI, ACMR, COHU, MXL): large Friday drops but SMH +3.2% pre-market; MXL reports Oct 22 after the close (outside the 2-day window today).
+Momentum (earliest 10:30; needs divergence from the name's own peer complex, a dated catalyst, a held pullback above a rising 9/20 EMA with a higher low):
+1. NBIS: pre-market leader; catalyst unknown (search found nothing dated), peers (CRWV, APLD, IREN) need to be checked for divergence at the open.
+2. CRWD / PANW: +2% pre-market, but they move as a group with IGV.
+3. AA (aluminum), HONA, CNQ/BP/APA/AR/TALO (energy): follow-up on Friday's skipped group moves; XLE -1% pre-market so the energy group is not extended into the open. AA, HONA flat pre-market.
+4. SMH leaders: a +3% group bounce is group beta; only a name diverging from SMH with a dated catalyst qualifies.
+- Follow-ups due on skipped candidates (fill in at the close today): MRNA (Fri close 218.01; today's close), AA (41.45), CCI (82.26), HONA (168.09), CNQ (53.80), RTX (193.92). RTX and CCI report earnings inside the next two sessions.
+- Caveats: pre-market prints are thin; ETF spreads like IGV (105.00/106.25), XLU and XLV were wide at 08:28 ET and last prints are 1-19 minutes old, so the percentages are indicative. No orders were placed.
