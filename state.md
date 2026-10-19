@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-19 13:22 ET",
+  "as_of": "2026-10-19 13:33 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1568,6 +1568,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-19 13:22 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-19 13:33 ET",
       "equity": 403.05
     }
   ],
@@ -4675,4 +4679,16 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Tape vs Oct 16 closes: SPY 767.36 (+0.5%), QQQ 719.73 (+1.4%), SMH 551.68 (+2.2%), IGV 106.23 (+1.8%), XME 101.40 (+0.5%), XBI 148.03 (+2.6%).
 - Mean-reversion scan: 1 hit. ALM 8.845 (-10.0%) while XME is +0.5%: not sector-driven, no verified external cause, gate 1 FAIL. No entry.
 - Momentum scan: 6 hits, same names. DXC 15.045 (+10.5%, rel. vol 2.23), CLF 14.07 (+16.1%, rel. vol 2.17), ARQT 32.40 (+12.4%), SLGN 40.78 (+7.9%), GMAB 38.78 (+4.8%), EQPT 14.19 (+4.5%). All carry the same gate failures logged in Cycles 364-367 (DXC and SLGN: in line with their peer groups over Oct 9-16 and no cited catalyst; CLF: several-session criterion; ARQT: no cited catalyst; GMAB and EQPT: not researched beyond the scan). No entry.
+- No order. Zero trades today.
+
+### Cycle 369 - 2026-10-19 13:33 ET (10-minute cycle; trigger 13:32; Tier B open)
+- Account: cash/BP $403.05, no positions, no open orders. Day trades 0.
+- Tape vs Oct 16 closes: SPY 767.51 (+0.6%), QQQ 719.78 (+1.4%), SMH 550.97 (+2.1%), IGV 106.27 (+1.8%), XME 101.45 (+0.5%), XBI 148.22 (+2.7%).
+- Mean-reversion scan: 2 hits.
+  - New: RBA (RB Global) 78.265 (-7.2%, prior close 84.30). Peers today: CPRT -1.2%, URI -0.5%, ACV +0.5%: the drop is stock-specific, not sector or macro. Filings since Oct 1: Forms 4 (Oct 8-9) and an 8-K (Oct 8), none today. A web search found only undated or older items about a CEO departure and shareholder letters, nothing dated for today, so no cause is verified; the stock-specific pattern alone fails gate 1. No entry.
+  - ALM 8.835 (-10.1%) while XME is +0.5%: not sector-driven, gate 1 FAIL. No entry.
+- Momentum scan: 7 hits.
+  - New: MXL (MaxLinear) 78.375 (+9.9%, rel. vol 1.01). Semis today: SMH +2.1%, NVDA +1.7%, AVGO +2.2%, so it outruns the group on the day. MXL reports Q3 after the close on Oct 22 (3 trading days out; the 2-day earnings rule is not triggered yet). No catalyst could be cited and several-session divergence was not established (not researched beyond today's tape). Gate 2 FAIL as uncited; disclosed that gate 1 was not studied in depth. No entry.
+  - DXC 14.755 (+8.3%, rel. vol 2.39), CLF 14.045 (+15.9%, rel. vol 2.22), ARQT 32.30 (+12.1%), SLGN 40.86 (+8.1%): all carry the same gate failures logged in Cycles 364-368.
+  - GMAB 38.765 (+4.8%) and EQPT 14.17 (+4.3%): not researched beyond the scan (disclosed). No entry.
 - No order. Zero trades today.
