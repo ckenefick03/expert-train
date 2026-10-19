@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-19 13:13 ET",
+  "as_of": "2026-10-19 13:22 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1564,6 +1564,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-19 13:13 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-19 13:22 ET",
       "equity": 403.05
     }
   ],
@@ -4664,4 +4668,11 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
   - SLGN 40.70 (+7.7%, rel. vol 1.13): same skip as Cycles 364-366.
   - GMAB 38.645 (+4.4%) and EQPT 14.12 (+3.9%): not researched beyond the scan (disclosed); neither passes on what is known.
 - Follow-ups at 2026-10-19 13:13 ET vs prior close: MRNA 222.93 (+2.3%, off the 227.38 high of Cycle 361); IBRX 8.62 (-6.1%); ALM 8.905 (-9.4%); CLF 14.115 (+16.5%, vs 13.46 at the 10:35 note: +4.9%); ARQT 32.45 (+12.6%). None of the skipped names has broken its gate failure; the strong runners (CLF, ARQT, DXC, SLGN) are the cost of a strict several-session rule and are tracked, not chased.
+- No order. Zero trades today.
+
+### Cycle 368 - 2026-10-19 13:22 ET (10-minute cycle; trigger 13:22; Tier B open)
+- Account: cash/BP $403.05, no positions, no open orders. Day trades 0.
+- Tape vs Oct 16 closes: SPY 767.36 (+0.5%), QQQ 719.73 (+1.4%), SMH 551.68 (+2.2%), IGV 106.23 (+1.8%), XME 101.40 (+0.5%), XBI 148.03 (+2.6%).
+- Mean-reversion scan: 1 hit. ALM 8.845 (-10.0%) while XME is +0.5%: not sector-driven, no verified external cause, gate 1 FAIL. No entry.
+- Momentum scan: 6 hits, same names. DXC 15.045 (+10.5%, rel. vol 2.23), CLF 14.07 (+16.1%, rel. vol 2.17), ARQT 32.40 (+12.4%), SLGN 40.78 (+7.9%), GMAB 38.78 (+4.8%), EQPT 14.19 (+4.5%). All carry the same gate failures logged in Cycles 364-367 (DXC and SLGN: in line with their peer groups over Oct 9-16 and no cited catalyst; CLF: several-session criterion; ARQT: no cited catalyst; GMAB and EQPT: not researched beyond the scan). No entry.
 - No order. Zero trades today.
