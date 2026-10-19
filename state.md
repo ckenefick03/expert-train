@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-19 09:46 ET",
+  "as_of": "2026-10-19 09:56 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1488,6 +1488,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-19 09:46 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-19 09:56 ET",
       "equity": 403.05
     }
   ],
@@ -4413,3 +4417,8 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Tape (vs Oct 16 official closes): SPY 767.35 (+0.5%), QQQ 719.66 (+1.4%), IWM 271.51 (+0.4%), SMH 553.55 (+2.5%), IGV 105.37 (+1.0%), XLE 68.32 (+0.1%), XLF 55.29 (-0.4%), XLV 176.49 (-0.1%), XLU 41.98 (-0.5%). Risk-on rebound held through the first 15 minutes. MRNA 226.67 (+4.0%), NBIS 172.38 (+4.2%), PANW 347.21 (+1.5%), CRWD 229.03 (+0.7%), SNOW 311.13 (+1.4%).
 - Scans: mean-reversion 0 hits (no market-cap >= $2B, avg-volume >= 1M name is down 7% or more from Friday's close); momentum 0 hits (nothing up 3% or more with relative volume >= 1.0 yet).
 - No candidates, and the 10:00 ET entry window has not opened. The rebound removes Tier A conditions (no sector ETF is down 2%). No order. Zero trades.
+
+### Cycle 349 - 2026-10-19 ~09:56 ET (10-minute cycle; trigger 09:52; entry window opens at 10:00 ET)
+- Account: cash/BP $403.05, no positions, no open orders. Day trades 0.
+- Tape (vs Oct 16 closes): SPY 766.47 (+0.4%), QQQ 718.43 (+1.2%), IWM 270.91 (+0.2%), SMH 552.11 (+2.3%), IGV 105.21 (+0.8%), XLE 68.42 (+0.3%), XLF 55.28 (-0.4%), XLV 176.63 (-0.1%), XLU 41.85 (-0.9%). The rebound is fading slightly from 09:43 but is still positive. MRNA 226.33 (+3.8%), NBIS 170.55 (+3.1%).
+- Scans: mean-reversion 0 hits; momentum 0 hits. No candidates and no sector ETF down 2%. No order. Zero trades.
