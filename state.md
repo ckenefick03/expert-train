@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-19 12:04 ET",
+  "as_of": "2026-10-19 12:15 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1536,6 +1536,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-19 12:04 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-19 12:15 ET",
       "equity": 403.05
     }
   ],
@@ -4563,4 +4567,13 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Momentum scan: 2 hits.
   - ARQT 31.56 (+9.5%, rel. vol 1.16) vs XBI +1.9%. Still no cited catalyst (gate 2 FAIL, as in Cycle 359). No entry.
   - CLF 14.075 (+16.1%, rel. vol 1.63) vs NUE +1.6%, STLD +1.1%. Still fails the several-session criterion in gate 1. No entry.
+- No order. Zero trades today.
+
+### Cycle 361 - 2026-10-19 ~12:15 ET (hourly cycle with news; trigger 12:12; Tier B open)
+- Account: cash/BP $403.05, no positions, no open orders. Day trades 0.
+- Tape vs Oct 16 closes: SPY 768.76 (+0.7%), QQQ 722.59 (+1.8%), IWM 271.91 (+0.5%), SMH 556.05 (+3.0%), IGV 106.29 (+1.9%), XLE 67.73 (-0.8%), XLF 55.14 (-0.7%), XLV 175.49 (-0.7%), XLU 41.53 (-1.6%), XME 101.61 (+0.7%), XBI 147.62 (+2.3%). Tech and growth lead; energy, financials, health care and utilities lag.
+- News: one standard WebSearch for today's midday tape returned only older dates (nothing from Oct 19, 2026), so no news is cited this cycle.
+- Mean-reversion scan: 1 hit. ALM 9.015 (-8.3%) while XME is +0.7%: not sector-driven, no verified external cause, gate 1 FAIL. No entry.
+- Momentum scan: 2 hits. ARQT 31.74 (+10.1%, rel. vol 1.22): still no cited catalyst, gate 2 FAIL. CLF 14.06 (+16.0%, rel. vol 1.68): still fails the several-session criterion in gate 1. No entry.
+- Skipped-candidate follow-ups at 12:15 ET (vs prior close): MRNA 227.38 (+4.3%, up on the day, so a gate 1 skip would not have been a loss); IBRX 8.72 (-5.0%, off its low of ~8.42); ALM 9.015 (-8.3%); CLF 14.06 (vs 13.46 at the 10:35 note: +4.5%, so the gate 1 skip missed a continuation, noted and not a reason to loosen the criterion); ARQT 31.74 (+10.1%).
 - No order. Zero trades today.
