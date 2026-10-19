@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-19 15:42 ET",
+  "as_of": "2026-10-19 15:48 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Oct 19 14:36 ET: entered DHI (Tier C, forced tag) $105 at 135.96, stop 134.30, target 139.39. One position, cash $298.05. 30-minute hold rule runs to 15:06 ET.",
+  "status_note": "Flat at the close. DHI (Tier C, forced tag) bought 14:36 ET at 135.96, sold 15:48 ET at 135.60 for -$0.28. Cash $402.77, no overnight positions.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-19",
@@ -1625,19 +1625,13 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-19 15:42 ET",
       "equity": 402.7
-    }
-  ],
-  "positions": [
+    },
     {
-      "symbol": "DHI",
-      "strategy": "mean-reversion",
-      "qty": 0.772286,
-      "entry": 135.96,
-      "price": 135.51,
-      "stop": 134.3,
-      "target": 139.39
+      "t": "2026-10-19 15:48 ET",
+      "equity": 402.77
     }
   ],
+  "positions": [],
   "trades": [
     {
       "symbol": "TER",
@@ -1698,6 +1692,18 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "score": 0,
       "tag": "adopted",
       "date": "2026-10-13"
+    },
+    {
+      "symbol": "DHI",
+      "strategy": "mean-reversion",
+      "tier": "C",
+      "entry": 135.96,
+      "exit": 135.6,
+      "pnl": -0.28,
+      "r": -0.22,
+      "score": 0,
+      "tag": "forced",
+      "date": "2026-10-19"
     }
   ],
   "regime": {
@@ -4870,3 +4876,17 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - STOP CHECK: DHI 135.51 (bid 135.51 / ask 135.55), stop 134.30 (~0.9% below), target 139.39. Not triggered. Unrealized about -$0.35.
 - Tape: SPY 768.37 (+0.7%), QQQ 720.98 (+1.6%), SMH 552.97 (+2.4%), IGV 106.32 (+1.9%), ITB 85.04 (-1.6%), XHB 94.30 (-0.6%), XLU 41.33 (-2.1%), TLT 79.35 (-0.9%).
 - Entry window closed (after 15:30 ET); no scans run, no order placed. The 15:47 ET close recap decides DHI close vs overnight hold.
+
+### Cycle 383 - Close recap - 2026-10-19 15:48 ET
+- STOP CHECK: DHI 135.62 at 15:47 ET vs stop 134.30 and target 139.39; neither hit.
+- DECISION: closed DHI before the session ended. Market sell of 0.772286 sh, order 6ad673f4-4b48-4133-af93-c6ea153df564, filled 15:48 ET at 135.60 (verified via get_equity_orders; positions empty). Realized about -$0.28 (about -0.22R on a 1R of roughly $1.25).
+- Why not hold overnight: the thesis (rate-driven dislocation in homebuilders that should bounce) had not played out in 70 minutes. ITB -1.5% and XLU -2.0% stayed at lows, TLT -0.8%, no stabilization signal. Fractional shares cannot hold a resting stop, so an overnight hold would have had no stop protection against a gap. The framework horizon is end of day, and the default is to close.
+- Disclosure: review_equity_order again returned customer_approval_required false with text asking for confirmation; per framework section 0 and the standing autonomy instruction it was not applied. The sell filled immediately.
+- OVERNIGHT STATUS: no positions roll overnight. Account is 100% cash, $402.77.
+
+#### Day recap - 2026-10-19
+- Equity: start $403.05, close $402.77, day P&L -$0.28. Peak equity $437.99 unchanged; breaker level $394.19 not approached. Daily loss limit $100 not approached.
+- Trades: 1 (DHI Tier C forced tag, mean-reversion), the minimum-1 target was met by a forced-tag entry, not by loosening gates. Momentum: 0 entries. Mean-reversion Tier A/B: 0 entries (no candidate passed all four gates).
+- Skips: ARQT, CLF, DXC, SLGN, MXL, MRNA (momentum, failed relative-strength or catalyst or held-pullback gates; several ran strongly afterward, the cost of the strict rule) and IBRX, ALM, QXO, RBA, CEG, plus other -5% names (mean-reversion, gate 1/2/3/4 failures; none bounced as far as I saw). Final prior-close to ~15:30 ET moves: CLF +18.5% (14.37), ARQT +11.8% (32.2), SLGN +7.1% (40.47), MXL +8.4% (77.3), DXC +4.4% (14.2); ALM -9.7% (8.88), IBRX -6.3% (8.61), QXO -6.9% (10.11), RBA -6.3% (79.0).
+- Disclosed gaps: mean-reversion scans through Cycle 374 used -7% (stricter than the tiers), fixed from Cycle 375. Only the utilities/REIT/homebuilder cluster was individually gate-checked; the broader -2.5% hits (83 names) and unresearched names (SE, FRVO, FRMI, PBF, HTFL, WRBY, CELH, CLDX, GMAB, EQPT, OCTV, HSAI, PBLS, TLK, BLSH, FIGR) were not. Cycle timestamps drifted a few minutes ahead around Cycle 359 (fixed by Cycle 365). Cycles 381 and 382 ran stop-check only after the 15:30 ET cutoff. No missed cycles recorded this segment.
+- Open items: PDT/day-trade applicability for limited_margin unverified (no PDT alert seen). Upcoming: RTX/GE/NFLX/NOC (Oct 20), META/TSLA/IBM/TXN/LRCX/CCI (Oct 21), HON/LMT/MXL/WDC (Oct 22), Fed meeting Oct 28, DHI earnings Oct 29.
