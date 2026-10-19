@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-19 12:54 ET",
+  "as_of": "2026-10-19 13:03 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1556,6 +1556,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-19 12:54 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-19 13:03 ET",
       "equity": 403.05
     }
   ],
@@ -4629,4 +4633,17 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
   - ARQT 32.11 (+11.4%, rel. vol 1.34): no cited catalyst, gate 2 FAIL. No entry.
   - SLGN 40.38 (+6.8%, rel. vol 1.03): same skip as Cycle 364 (in line with packaging peers Oct 9-16; 8-K content unavailable). No entry.
   - GMAB (Genmab) 38.57 (+4.2%, rel. vol 1.01) and EQPT (EquipmentShare) 14.26 (+5.0%, rel. vol 1.03): new this cycle. Both sit at the scan's rel.-vol floor and I did not research either beyond the scan. GMAB is a biotech and XBI is +2.3%, so the move is mostly group beta (gate 1 not shown). EQPT has no catalyst identified (gate 2 FAIL as not cited). Disclosed: neither was studied in depth, and neither passes on what is known. No entry. Follow-up at the close.
+- No order. Zero trades today.
+
+### Cycle 366 - 2026-10-19 13:03 ET (10-minute cycle; trigger 13:02; Tier B open)
+- Account: cash/BP $403.05, no positions, no open orders. Day trades 0.
+- Tape vs Oct 16 closes: SPY 767.43 (+0.5%), QQQ 719.94 (+1.4%), SMH 552.40 (+2.3%), IGV 105.95 (+1.5%), XME 101.39 (+0.5%), XBI 148.03 (+2.6%). The index lift is fading slowly from the morning highs.
+- Mean-reversion scan: 1 hit. ALM 8.895 (-9.5%) while XME is +0.5%: not sector-driven, no verified external cause, gate 1 FAIL. No entry.
+- Momentum scan: 6 hits.
+  - New: DXC (DXC Technology) 14.27 (+4.8% at the last quote, rel. vol 1.58). IT-services peers today: ACN +2.0%, IBM +1.9%, EPAM +2.4%, CTSH +0.6%, KD +1.2%, so it separates on the day. Over Oct 9-16 DXC was +9.8% vs ACN +9.9% and CTSH +10.2%: in line with the group, not leading it. Gate 1 (several-session divergence) FAILS by the standard used for CLF and SLGN. Gate 2 FAILS: no SEC filings since Oct 1 and no catalyst identified. No entry.
+  - CLF 14.095 (+16.3%, rel. vol 2.03): still fails the several-session criterion in gate 1.
+  - ARQT 32.26 (+11.9%, rel. vol 1.38): no cited catalyst, gate 2 FAIL.
+  - SLGN 40.54 (+7.2%, rel. vol 1.09): same skip as Cycles 364-365.
+  - GMAB 38.71 (+4.6%) and EQPT 14.23 (+4.7%): not researched beyond the scan (disclosed in Cycle 365); neither passes on what is known.
+  - No entry on any of them. Follow-ups at the close.
 - No order. Zero trades today.
