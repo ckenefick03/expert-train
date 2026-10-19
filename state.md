@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-19 13:03 ET",
+  "as_of": "2026-10-19 13:13 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1560,6 +1560,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-19 13:03 ET",
+      "equity": 403.05
+    },
+    {
+      "t": "2026-10-19 13:13 ET",
       "equity": 403.05
     }
   ],
@@ -4646,4 +4650,18 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
   - SLGN 40.54 (+7.2%, rel. vol 1.09): same skip as Cycles 364-365.
   - GMAB 38.71 (+4.6%) and EQPT 14.23 (+4.7%): not researched beyond the scan (disclosed in Cycle 365); neither passes on what is known.
   - No entry on any of them. Follow-ups at the close.
+- No order. Zero trades today.
+
+### Cycle 367 - 2026-10-19 13:13 ET (hourly cycle with news; trigger 13:12; Tier B open)
+- Account: cash/BP $403.05, no positions, no open orders. Day trades 0.
+- Tape vs Oct 16 closes: SPY 767.47 (+0.6%), QQQ 719.88 (+1.4%), IWM 271.28 (+0.3%), SMH 551.96 (+2.3%), IGV 106.13 (+1.7%), XLE 67.93 (-0.5%), XLF 55.15 (-0.7%), XLV 175.70 (-0.6%), XLU 41.47 (-1.8%), XME 101.30 (+0.4%), XBI 147.95 (+2.5%). Growth and tech lead, energy, financials, health care and utilities lag; the index gain has drifted down slightly since the morning.
+- News: one standard WebSearch for today's close returned only earlier sessions (latest Oct 12), so no news is cited this cycle.
+- Mean-reversion scan: 1 hit. ALM 8.905 (-9.4%) while XME is +0.4%: not sector-driven, no verified external cause, gate 1 FAIL. No entry.
+- Momentum scan: 6 hits, same names as Cycle 366.
+  - DXC 14.665 (+7.7%, rel. vol 1.96): the move and volume are growing, but Cycle 366's finding stands: in line with IT-services peers over Oct 9-16 (gate 1 several-session FAIL) and no catalyst identified (gate 2 FAIL). No entry.
+  - CLF 14.115 (+16.5%, rel. vol 2.09): still fails the several-session criterion in gate 1.
+  - ARQT 32.45 (+12.6%, rel. vol 1.40): no cited catalyst, gate 2 FAIL.
+  - SLGN 40.70 (+7.7%, rel. vol 1.13): same skip as Cycles 364-366.
+  - GMAB 38.645 (+4.4%) and EQPT 14.12 (+3.9%): not researched beyond the scan (disclosed); neither passes on what is known.
+- Follow-ups at 2026-10-19 13:13 ET vs prior close: MRNA 222.93 (+2.3%, off the 227.38 high of Cycle 361); IBRX 8.62 (-6.1%); ALM 8.905 (-9.4%); CLF 14.115 (+16.5%, vs 13.46 at the 10:35 note: +4.9%); ARQT 32.45 (+12.6%). None of the skipped names has broken its gate failure; the strong runners (CLF, ARQT, DXC, SLGN) are the cost of a strict several-session rule and are tracked, not chased.
 - No order. Zero trades today.
