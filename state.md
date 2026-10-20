@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-20 10:43 ET",
+  "as_of": "2026-10-20 10:53 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1652,6 +1652,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-20 10:43 ET",
+      "equity": 402.77
+    },
+    {
+      "t": "2026-10-20 10:53 ET",
       "equity": 402.77
     }
   ],
@@ -4975,3 +4979,10 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Mean-reversion scan (-5%): 5 hits, unchanged from Cycle 388 (SE -6.2%, GM -5.1%, MLI -7.0%, CLF -5.2%, AMRO -5.3%). Gate results unchanged: GM and MLI fail gates 1/2 (own earnings), CLF fails gates 1/3, SE and AMRO unresearched; Tier A sector condition not met. No entry.
 - Momentum scan: 3 hits, unchanged (BRZE +50.7% on 35x relative volume, a gap with no base so gate 3 fails; KVYO +8.8%, sympathy with BRZE, gate 1 fails; XPEV +7.1%, no several-session divergence or cited catalyst, gate 1/2 fail). No entry.
 - No order placed.
+
+### Cycle 390 - 2026-10-20 10:53 ET
+- Account: equity $402.77, cash/BP $402.77, no positions. Day trades 0.
+- Tape (vs 10-19 close): SPY 771.52 (+0.7%), QQQ 721.40 (+0.4%), SMH 551.86 (+0.6%), IGV 107.02 (+1.0%), XLU 41.92 (+1.4%), ITB 87.40 (+2.9%), TLT 80.14 (+0.9%), XLE 67.10 (-1.0%), XLF 55.90 (+1.5%), XLV 179.61 (+2.3%), XBI 152.89 (+3.4%), XME 101.46 (+0.1%). No sector ETF is down 2% or more.
+- Mean-reversion scan (-5%): 4 hits (SE -7.0% at 82.24, GM -5.0%, MLI -6.2%, AMRO -5.7%). CLF dropped off the list. Gate results unchanged: GM and MLI fail gates 1/2 (own earnings, MLI a miss), SE and AMRO unresearched, Tier A sector condition not met. No entry.
+- Momentum scan: 3 hits, unchanged (BRZE +50.7% on 39x relative volume, no base, gate 3 fails; KVYO +9.3% sympathy, gate 1 fails; XPEV +7.8%, no divergence evidence or cited catalyst, gate 1/2 fail). No entry.
+- No order placed. The Tier A window closes 11:30 ET and Tier B opens then.
