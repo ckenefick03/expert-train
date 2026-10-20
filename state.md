@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-20 13:23 ET",
+  "as_of": "2026-10-20 13:33 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1713,6 +1713,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-20 13:23 ET",
       "equity": 403.92
+    },
+    {
+      "t": "2026-10-20 13:33 ET",
+      "equity": 404.39
     }
   ],
   "positions": [
@@ -1721,8 +1725,8 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "momentum",
       "qty": 0.990099,
       "entry": 106.05,
-      "price": 107.21,
-      "stop": 103.45,
+      "price": 107.69,
+      "stop": 105.15,
       "target": 111.25
     }
   ],
@@ -5182,4 +5186,12 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Tape: SPY 769.37 (+0.38%), QQQ 719.20 (+0.12%), SMH 548.74 (+0.05%), XLY 115.43 (+0.8%), MAT 17.035 (+0.9%). No sector ETF down 2%.
 - Mean-reversion scan (-3.5%): 19 hits, new vs last cycle: TTMI, IREN (unresearched). Researched names still fail earlier gates. Not gate-checked: SE, SEI, LGN, FPS, DPC, TTMI, IREN, MWH, BTU, FSLY, CTRI, CLF, PTEN. No entry.
 - Momentum scan: 23 hits, new vs last cycle: CRCL +6.0%. HAS held. Not gate-checked: HLT, EFX, TW, SOLS, TREX, BRZE, LIFE, DOCS, RCUS, FIG, KVYO, NU, AAL, LION, LI, XPEV, BB, LBTYK, WIT, CRCL. MMM (+5.5%, rejected earlier) and QGEN (rejected earlier). No new entry.
+- Trades today 1. Positions 1/5.
+
+### Cycle 405 - 2026-10-20 13:33 ET
+- Reconciled: HAS 0.990099 sh, last 107.69 (+9.3% on day, +1.5% / about +1.6 per share vs 106.05, roughly +0.6R); no open orders; cash/BP $297.77; equity $404.39.
+- Stop management: HAS has run above the base for 45+ minutes with rising lows (106.52 -> 107.49 on the last bars). Stop raised from 103.45 to 105.15 (the broken base high, a retest-failure level). This only reduces risk to about -1.05/share (about -1% / -1.0 total), and is still a manual stop (market sell when it trades). Target 111.25 unchanged (now ~3.4x the new risk).
+- Tape: SPY 769.73 (+0.42%), QQQ 719.59 (+0.17%), SMH 549.22 (+0.14%), XLY 115.48 (+0.9%), MAT 17.035 (+0.9%). No sector ETF down 2%.
+- Mean-reversion scan (-3.5%): 17 hits, no new names. Researched names still fail earlier gates. Not gate-checked: SE, SEI, LGN, DPC, TTMI, IREN, MWH, BTU, FSLY, CLF, PTEN. No entry.
+- Momentum scan: 25 hits, new vs last cycle: CBRE +3.1%, PONY +7.7% (unresearched). HAS held. Not gate-checked: HLT, EFX, TW, CBRE, SOLS, TREX, BRZE, LIFE, DOCS, RCUS, FIG, KVYO, NU, AAL, LI, LION, XPEV, BB, LBTYK, PONY, WIT, CRCL. MMM and QGEN rejected earlier. No new entry.
 - Trades today 1. Positions 1/5.
