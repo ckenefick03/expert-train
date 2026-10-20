@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-20 15:24 ET",
+  "as_of": "2026-10-20 15:33 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1761,6 +1761,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-20 15:24 ET",
       "equity": 405.94
+    },
+    {
+      "t": "2026-10-20 15:33 ET",
+      "equity": 405.2
     }
   ],
   "positions": [
@@ -1769,7 +1773,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "momentum",
       "qty": 0.990099,
       "entry": 106.05,
-      "price": 109.26,
+      "price": 108.5,
       "stop": 108.0,
       "target": 111.25
     }
@@ -5335,3 +5339,10 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Momentum scan: 52 hits; new vs last cycle: FITB +4.0%, PRCH +3.1%, NCLH +3.3%, BBD +3.7% (unresearched). HAS held. Hits not gate-checked this cycle: LLY, HLT, HUBS, BIIB, GWRE, EFX, MSTR, TW, BX, HNGE, MNDY, SITE, CRCL, LEN, CDNA, SOLS, HTFL, FITB, TREX, BRZE, RYAN, LIFE, DOCS, HIMS, RCUS, FIG, BMNR, KEY, KVYO, PRCH, APLE, REZI, NCLH, NU, VERX, LION, AAL, STNE, LI, SLS, PAGS, RKT, ASAN, XPEV, BB, LBTYK, PONY, BBD, WIT. MMM and QGEN rejected earlier. No new entry; the momentum cutoff 15:30 ET is 6 minutes away and any entry after this point would have under 20 minutes to run before the close recap, which I count against it (fractional shares cannot hold a resting stop overnight).
 - Close recap due 15:47 ET (default: close HAS before the bell).
 - Trades today 1. Positions 1/5.
+
+### Cycle 417 - 2026-10-20 15:33 ET
+- Entry window closed (after 15:30 ET), so no scans were run this cycle: no entry is permitted regardless of what they would show. Disclosed so the gap is not mistaken for an oversight.
+- Reconciled: HAS 0.990099 sh, last 108.50 (+10.2% on day, +2.3% / about +2.45 per share vs 106.05, roughly +0.95R); no open orders; cash/BP $297.77; equity $405.20.
+- Stop check: stop 108.00 is 0.5% below, no action yet. HAS is fading from the 109.41 high: 19:20 and 19:25 UTC bars (15:20 and 15:25 ET) made lower closes (109.18, 109.03) with a 108.86 low on 26.5k shares. The stop is the only rule that triggers an exit before the recap; the 30-minute hold rule is long over.
+- Tape: SPY 768.36 (+0.25%), QQQ 717.63 (-0.1%), SMH 548.66 (+0.04%), XLY 115.47 (+0.9%), MAT 16.975 (+0.6%). No sector ETF down 2%.
+- Close recap due 15:47 ET: default is to close HAS before the bell (fractional shares cannot hold a resting stop overnight, and the stop at 108.00 is manual only). Trades today 1. Positions 1/5.
