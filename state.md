@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-20 10:18 ET",
+  "as_of": "2026-10-20 10:33 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1645,6 +1645,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-20 10:18 ET",
       "equity": 402.77
+    },
+    {
+      "t": "2026-10-20 10:33 ET",
+      "equity": 402.77
     }
   ],
   "positions": [],
@@ -1723,35 +1727,35 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Indexes firm, semis recovered, healthcare and rate-sensitives bid",
+    "read": "Broad risk-on: indexes, semis, software, healthcare and rate-sensitives up; energy lower",
     "chips": [
       {
         "name": "SPY",
-        "chg": 0.39
+        "chg": 0.59
       },
       {
         "name": "QQQ",
-        "chg": 0.17
+        "chg": 0.35
       },
       {
         "name": "SMH",
-        "chg": 0.07
+        "chg": 0.35
       },
       {
-        "name": "XLU",
-        "chg": 1.07
+        "name": "IGV",
+        "chg": 0.8
       },
       {
         "name": "ITB",
-        "chg": 1.66
+        "chg": 2.46
       },
       {
-        "name": "XLV",
-        "chg": 1.97
+        "name": "XLU",
+        "chg": 1.33
       },
       {
-        "name": "XME",
-        "chg": -1.16
+        "name": "XLE",
+        "chg": -0.92
       }
     ]
   }
@@ -4950,3 +4954,13 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - SCAN GAP (disclosed): the mean-reversion preview_scan (-5%) failed twice this cycle with a transient server-side classifier error (no verdict), so no fresh scan was run. The 10:05 ET scan (Cycle 386) is the latest and it had no gate-passing name. No momentum scan either (earliest 10:30 ET).
 - News: one WebSearch returned only older sessions (latest item dated Oct 15), nothing for today; none cited.
 - No entry possible without a scan; no order placed. Next cycle (10:22 ET) retries the scan, momentum opens at 10:30.
+
+### Cycle 388 - 2026-10-20 10:33 ET
+- Account: equity $402.77, cash/BP $402.77, no positions. Day trades 0. Cycle 387's scan failure is cleared; both scans ran this cycle.
+- Tape (vs 10-19 close): SPY 771.03 (+0.6%), QQQ 720.88 (+0.4%), SMH 550.36 (+0.3%), IGV 106.84 (+0.8%), XLU 41.91 (+1.3%), ITB 87.03 (+2.5%), TLT 80.23 (+1.0%), XLE 67.18 (-0.9%), XLF 55.85 (+1.4%), XLV 179.34 (+2.1%), XBI 151.82 (+2.7%), XME 101.45 (+0.1%). No sector ETF is down 2% or more.
+- Mean-reversion scan (-5%, Tier A): 5 hits: SE -5.9% (83.29), GM -5.0% (78.59), MLI -7.3% (56.37), CLF -5.1% (13.39), AMRO -5.7% (5.29). GM and MLI still fail gates 1 and 2 (own-earnings reaction, MLI EPS miss). CLF is a retrace of its run-up, no external cause, fails gate 1/3. SE and AMRO unresearched (SE repeat); the Tier A sector-ETF condition is not met. No entry.
+- Momentum scan (first of the day, 10:33 ET): 3 hits.
+  - BRZE +50.9% (45.33) on 33x relative volume: a catalyst-driven gap, not a pullback. There is no held-pullback base and no higher low (gate 3 FAIL), and an entry after a +51% gap has no 2R room if the catalyst is a deal. The catalyst was not researched (it fails gate 3 regardless).
+  - KVYO +8.1% (18.94): software-peer sympathy with BRZE, group beta not divergence (gate 1 FAIL).
+  - XPEV +6.9% (9.85): relative volume 1.03; no several-session divergence evidence or cited catalyst (gate 1/2 FAIL).
+- No order placed. The earlier momentum names (MXL, SLGN, CLF, ARQT, DXC) no longer meet the scan thresholds at 10:33 ET.
