@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-20 12:23 ET",
+  "as_of": "2026-10-20 12:33 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1688,6 +1688,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-20 12:23 ET",
+      "equity": 402.77
+    },
+    {
+      "t": "2026-10-20 12:33 ET",
       "equity": 402.77
     }
   ],
@@ -5095,4 +5099,15 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
   - TSEM written gate check (the largest unresearched mover, researched this cycle): Gate 4 FAIL. Daily bars: 258.41 (Oct 6 close) to 195.58 (Oct 16 close), a 24% drop in ten sessions with lower lows (206.25, 197.51, 195.10), a 200.30 close on Oct 19, and today a new low zone of 183.4-184.5, below the Oct 16 low. Intraday it opened at 193.7, hit 183.42 at 09:40 ET, bounced to 196.3 by 10:30 ET, then made lower highs (194.4, 193.9, 191.9, 190.4) and slid back to 184.5 on rising volume in the last bar: no higher low, no stabilization. Gate 1: the SMH is flat (0.0%) while TSEM is -7.9%, so it is not sector-tied today; my search found no dated Tower-specific cause (the results were undated or from other periods, so none is cited). Gate 2: last report Aug 4, EPS 0.88 vs 0.73 (a beat); next report Nov 2 (outside the 2-day window). It fails on gates 1 and 4. NO ENTRY.
   - HWM, ATI, GE, GM, MLI: unchanged fails. SE, DPC, LGN, the rest: unresearched; no entry.
 - Momentum (15 hits): HLT +3.6%, MMM +5.3% (170.66), HAS +6.1% (104.48), SOLS, QGEN, BRZE +51%, LIFE, RCUS, FIG +5.5% (new, unresearched), KVYO, AAL +4.7%, LI, XPEV, BB +6.4%, SBS. MMM and HAS are unchanged in structure (flat range, no break above the morning highs 172.50 and 105.16 on a 5-minute close). No entry.
+- No order placed.
+
+### Cycle 399 - 2026-10-20 12:33 ET
+- Account: equity $402.77, cash/BP $402.77, no positions. Day trades 0.
+- Tape (vs 10-19 close): SPY 769.31 (+0.4%), QQQ 719.19 (+0.1%), SMH 549.71 (+0.2%), IGV 106.95 (+0.9%), XLU 41.90 (+1.3%), ITB 86.91 (+2.3%), TLT 79.88 (+0.5%), XLE 67.65 (-0.2%), XLF 55.64 (+1.1%), XLV 179.62 (+2.3%), XBI 152.84 (+3.4%), XME 100.72 (-0.6%), ITA 205.53 (-1.1%). No sector ETF is down 2% or more.
+- Mean-reversion (Tier B, -3.5% scan, 14 hits): GE -4.2%, HWM -5.1% (208.84), TSEM -7.8% (184.76, still sliding), ATI -3.8%, SE -8.4% (81.05, new lows on the day), GM -8.0%, MLI -8.8%, LGN -5.3%, DPC -7.0%, BAX, MWH, BTU, CLF, SVM. All previously gate-checked names remain fails (HWM gate 1/4, TSEM gate 1/4, ATI gate 3, GE/GM/MLI own earnings). SE, DPC, LGN, BAX, MWH, BTU, CLF, SVM unresearched. No entry. Standing disclosure: the unresearched names keep growing in number; they are listed rather than gate-checked.
+- Momentum (15 hits). Two names examined in depth:
+  - QGEN +6.9% (49.75, relative volume 2.0). 5-minute bars: flat at 46.9-47.1 until 11:00 ET, then a single-bar jump to 47.75 on 482k shares (about 10x a normal bar), a base at 47.9-48.4 for 85 minutes, then the quote at 12:33 ET shows 49.75, well above the last completed bar (48.19 close), i.e. a fresh vertical move. Gate 2 FAIL: no catalyst found. My search surfaced only a Sep 30-Oct 2 move (+7.7% on Oct 2 with no cause cited) and Q2 results, nothing for today. Gate 3 FAIL: price is extended on a spike, not a pullback to rising support. Next report is tentatively Nov 3. NO ENTRY.
+  - MMM +5.9% (171.61). Catalyst cited (EPS 2.50 vs 2.39 this morning). Base 169.75-170.7 for 90 minutes, now turning up (171.47 on the last bar, still below the 172.50 morning high). Gate 3 anchor FAIL on reward-to-risk: a stop under the 169.75 base is about 1.1% away, so 2R needs about 174.0 plus, but the only visible resistance is the 172.50 morning high, 0.5% above price. No documented multi-session divergence from industrial peers either (gate 1 not shown). NO ENTRY. Re-check only on a 5-minute close above 172.50 with the base lows holding.
+  - HAS +6.5% (104.93): flat range 103.5-105.2; 105.16 high not broken on a 5-minute close; gate 3 FAIL as before.
+  - HLT +3.8%, SOLS, BRZE, LIFE, RCUS, FIG, KVYO, AAL, LI, XPEV, BB, SBS: as before (fails or unresearched). No entry.
 - No order placed.
