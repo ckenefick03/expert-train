@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-20 10:53 ET",
+  "as_of": "2026-10-20 11:03 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1656,6 +1656,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-20 10:53 ET",
+      "equity": 402.77
+    },
+    {
+      "t": "2026-10-20 11:03 ET",
       "equity": 402.77
     }
   ],
@@ -4986,3 +4990,10 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Mean-reversion scan (-5%): 4 hits (SE -7.0% at 82.24, GM -5.0%, MLI -6.2%, AMRO -5.7%). CLF dropped off the list. Gate results unchanged: GM and MLI fail gates 1/2 (own earnings, MLI a miss), SE and AMRO unresearched, Tier A sector condition not met. No entry.
 - Momentum scan: 3 hits, unchanged (BRZE +50.7% on 39x relative volume, no base, gate 3 fails; KVYO +9.3% sympathy, gate 1 fails; XPEV +7.8%, no divergence evidence or cited catalyst, gate 1/2 fail). No entry.
 - No order placed. The Tier A window closes 11:30 ET and Tier B opens then.
+
+### Cycle 391 - 2026-10-20 11:03 ET
+- Account: equity $402.77, cash/BP $402.77, no positions. Day trades 0.
+- Tape (vs 10-19 close): SPY 771.11 (+0.6%), QQQ 721.36 (+0.4%), SMH 551.75 (+0.6%), IGV 106.98 (+0.9%), XLU 41.88 (+1.3%), ITB 87.57 (+3.1%), TLT 80.18 (+0.9%), XLE 67.22 (-0.9%), XLF 55.81 (+1.4%), XLV 179.62 (+2.3%), XBI 153.07 (+3.5%), XME 101.60 (+0.2%). No sector ETF is down 2% or more.
+- Mean-reversion scan (-5%): 3 hits (SE -7.0% at 82.24, GM -5.2%, MLI -6.5%). Unchanged gate results: GM and MLI fail gates 1/2 (own earnings, MLI a miss), SE unresearched, Tier A sector condition not met. No entry.
+- Momentum scan: 5 hits. BRZE +50.7% (40x relative volume, no base, gate 3 fail), KVYO +9.6% (sympathy, gate 1 fail), XPEV +7.9% and LI +5.8% (both China EV names moving together: group beta, not divergence, gate 1 fail), LIFE +5.8% (Ethos, 41.11, relative volume 1.1; not researched, no cited catalyst or several-session divergence, gates 1/2 fail). No entry.
+- No order placed. Tier B opens 11:30 ET.
