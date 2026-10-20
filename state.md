@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-20 10:04 ET",
+  "as_of": "2026-10-20 10:18 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1641,6 +1641,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-20 10:04 ET",
       "equity": 402.77
+    },
+    {
+      "t": "2026-10-20 10:18 ET",
+      "equity": 402.77
     }
   ],
   "positions": [],
@@ -1719,35 +1723,35 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Broad market firm, semis mildly lower, rate-sensitives and healthcare bid",
+    "read": "Indexes firm, semis recovered, healthcare and rate-sensitives bid",
     "chips": [
       {
         "name": "SPY",
-        "chg": 0.19
+        "chg": 0.39
       },
       {
         "name": "QQQ",
-        "chg": -0.25
+        "chg": 0.17
       },
       {
         "name": "SMH",
-        "chg": -0.79
+        "chg": 0.07
       },
       {
         "name": "XLU",
-        "chg": 1.13
+        "chg": 1.07
       },
       {
         "name": "ITB",
-        "chg": 1.73
+        "chg": 1.66
       },
       {
         "name": "XLV",
-        "chg": 2.05
+        "chg": 1.97
       },
       {
-        "name": "XBI",
-        "chg": 1.96
+        "name": "XME",
+        "chg": -1.16
       }
     ]
   }
@@ -4939,3 +4943,10 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
   - SE -7.0% (82.29), IREN -5.6%, ELAN -5.6%, SVM -5.1%, AMRO -8.2%: not researched this cycle; sector ETF condition not met for Tier A; no entry. (SE has been on the scan since 10-19 and is a repeat unresearched name; disclosed.)
 - Momentum: earliest 10:30 ET, no scan this cycle.
 - No order placed. Tier B opens 11:30 ET (3.5% intraday threshold).
+
+### Cycle 387 (hourly, news pass) - 2026-10-20 10:18 ET
+- Account: equity $402.77, cash/BP $402.77, no positions. Day trades 0.
+- Tape (vs 10-19 close): SPY 769.49 (+0.4%), QQQ 719.56 (+0.2%), SMH 548.84 (+0.1%, recovered from -1.9% at 09:44), IGV 106.78 (+0.7%), XLU 41.81 (+1.1%), ITB 86.35 (+1.7%), TLT 80.08 (+0.8%), XLE 67.74 (-0.1%), XLF 55.63 (+1.0%), XLV 179.11 (+2.0%), XBI 151.46 (+2.4%), XME 100.19 (-1.2%). No sector ETF is down 2% or more.
+- SCAN GAP (disclosed): the mean-reversion preview_scan (-5%) failed twice this cycle with a transient server-side classifier error (no verdict), so no fresh scan was run. The 10:05 ET scan (Cycle 386) is the latest and it had no gate-passing name. No momentum scan either (earliest 10:30 ET).
+- News: one WebSearch returned only older sessions (latest item dated Oct 15), nothing for today; none cited.
+- No entry possible without a scan; no order placed. Next cycle (10:22 ET) retries the scan, momentum opens at 10:30.
