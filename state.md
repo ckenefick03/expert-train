@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-20 13:03 ET",
+  "as_of": "2026-10-20 13:13 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1705,6 +1705,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-20 13:03 ET",
       "equity": 403.18
+    },
+    {
+      "t": "2026-10-20 13:13 ET",
+      "equity": 403.28
     }
   ],
   "positions": [
@@ -1713,7 +1717,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "momentum",
       "qty": 0.990099,
       "entry": 106.05,
-      "price": 106.47,
+      "price": 106.57,
       "stop": 103.45,
       "target": 111.25
     }
@@ -5157,4 +5161,13 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Tape: SPY 768.60 (+0.28%), QQQ 718.16 (-0.03%), SMH 547.87 (-0.1%), XLY 115.36 (+0.8%), MAT 17.035 (+0.9%). No sector ETF down 2%.
 - Mean-reversion scan (-3.5%): 17 hits; only new name SEI and CTRI (unresearched). Researched names (GE, HWM, TSEM, ATI, GM, MLI) still fail their earlier gates (TSEM now -10.5%, still not sector-tied with SMH flat). Others not gate-checked: SE, SEI, LGN, DPC, BTU, MWH, FSLY, CTRI, CLF, PTEN, SVM. No entry.
 - Momentum scan: 21 hits. HAS held. New: EFX +10.6%, TREX +3.7%, WIT +6.2%; unresearched, not gate-checked (EFX looks like an own-news move; no check made). Also HLT, TW, MMM (rejected earlier), QGEN (rejected earlier), SOLS, BRZE, LIFE, RCUS, FIG, KVYO, NU, AAL, LION, LI, XPEV, BB, SBS. No new entry.
+- Trades today 1. Positions 1/5.
+
+### Cycle 403 (hourly, with news) - 2026-10-20 13:13 ET
+- Reconciled: HAS 0.990099 sh, last 106.57 (+8.2% on day, ~+0.5% / +0.5 unrealized vs 106.05); no open orders (none new); cash/BP $297.77; equity $403.28.
+- Stop check: stop 103.45 is 2.9% below, no action. 13:05 ET bar high 106.63, higher lows (105.91 -> 105.92 -> 106.38). 30-minute hold ends 13:15 ET. Target 111.25 unchanged.
+- Tape: SPY 768.84 (+0.31%), QQQ 718.50 (+0.02%), SMH 548.23 (-0.04%), XLY +0.8%, XLI 166.15 (-0.3%), XLE 67.67 (-0.2%), XLV 179.58 (+2.2%), XLU 41.89 (+1.3%). No sector ETF down 2%, so Tier A sector condition not met.
+- News: WebSearch for Oct 20 market wrap returned nothing dated today (latest hits Oct 12-15), so no market-news claim is made. HAS: SEC 8-K exhibit 99.1 for Q3 2026 appears in results, and the summary matches the thesis (Magic: The Gathering above $600M quarterly revenue, raised 2026 outlook, doubled buyback target, fourth straight double-digit growth quarter). Numeric guidance and analyst reactions not found.
+- Mean-reversion scan (-3.5%): 18 hits, new vs last cycle: FPS (unresearched). Researched names (GE, HWM, TSEM, ATI, GM, MLI) still fail earlier gates. Others not gate-checked: SE, SEI, LGN, FPS, DPC, MWH, BTU, FSLY, CTRI, CLF, PTEN, SVM. No entry.
+- Momentum scan: 22 hits, new vs last cycle: DOCS +7.1%, LBTYK +3.7%. HAS held. Not gate-checked: HLT, EFX, TW, SOLS, TREX, BRZE, LIFE, DOCS, RCUS, FIG, KVYO, NU, AAL, LION, LI, XPEV, BB, LBTYK, WIT. MMM and QGEN rejected earlier. No new entry.
 - Trades today 1. Positions 1/5.
