@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-20 14:53 ET",
+  "as_of": "2026-10-20 15:03 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1748,6 +1748,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-20 14:53 ET",
+      "equity": 405.74
+    },
+    {
+      "t": "2026-10-20 15:03 ET",
       "equity": 405.74
     }
   ],
@@ -5293,4 +5297,13 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Tier C window open (forced tag only, all four gates). Mean-reversion scan (-3.5%): 18 hits, no new names that pass: HWM, ATI, GE, GM, MLI, TSEM failed earlier; BAX (-3.5%, unresearched) is new. Others not gate-checked: SE, SEI, LGN, FPS, DPC, IREN, MWH, BTU, FSLY, PTEN, SVM, BAX. No sector ETF down 2% and no gate-clean dislocation, so no entry and no forced tag.
 - Momentum scan: 42 hits, new vs last cycle: BMNR +5.8%, APLE +3.5%, PAGS +4.6% (unresearched). HAS held. Not gate-checked: LLY, HLT, EFX, MSTR, CBRE, TW, HNGE, MNDY, SITE, CRCL, CDNA, SOLS, HTFL, TREX, BRZE, RYAN, LIFE, DOCS, HIMS, RCUS, FIG, BMNR, KEY, KVYO, APLE, NU, LION, AAL, STNE, LI, SLS, PAGS, RKT, ASAN, XPEV, BB, LBTYK, PONY, WIT. MMM and QGEN rejected earlier. No new entry.
 - Close recap is due 15:47 ET; default is to close HAS before the bell (fractional shares cannot hold a resting stop) unless the thesis is clearly intact and I explicitly decide to hold.
+- Trades today 1. Positions 1/5.
+
+### Cycle 414 - 2026-10-20 15:03 ET
+- Reconciled: HAS 0.990099 sh, last 109.05 (+10.7% on day, +2.8% / about +2.97 per share vs 106.05, roughly +1.15R); no open orders; cash/BP $297.77; equity $405.74.
+- Stop check: stop 106.85 is 2.0% below, no action. 14:50-15:00 ET bars: 109.14 high, then a small dip to a 108.66 low on 16.5k shares; still above the 108.4-108.7 shelf. Target 111.25 unchanged.
+- Tape: SPY 768.99 (+0.33%), QQQ 718.61 (+0.04%), SMH 549.00 (+0.10%), XLY 115.63 (+1.0%), MAT 17.03 (+0.9%). No sector ETF down 2%.
+- Mean-reversion scan (-3.5%, Tier C window, forced tag only): 15 hits; new: ELAN -3.7% (unresearched). Researched names still fail earlier gates (HWM, TSEM, GM, MLI). Not gate-checked: TTMI, SE, LGN, FPS, DPC, IREN, MWH, BTU, ELAN, FSLY, SVM. No sector ETF down 2% and no gate-clean dislocation, so no entry and no forced tag.
+- Momentum scan: 46 hits, new vs last cycle: HUBS +7.1%, BIIB +4.4%, GWRE +8.1% (all unresearched; software names, possibly sector or earnings moves). HAS held. The remaining hits were not gate-checked this cycle (LLY, HLT, EFX, MMM and QGEN rejected earlier, MSTR, TW, HNGE, MNDY, SITE, CRCL, CDNA, SOLS, HTFL, TREX, BRZE, RYAN, LIFE, FIVN, DOCS, HIMS, RCUS, FIG, BMNR, KEY, KVYO, APLE, PBI, NU, LION, AAL, STNE, LI, SLS, PAGS, RKT, ASAN, XPEV, BB, LBTYK, PONY, WIT). No new entry. Momentum entry cutoff is 15:30 ET.
+- Close recap due 15:47 ET (default: close HAS before the bell).
 - Trades today 1. Positions 1/5.
