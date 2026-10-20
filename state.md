@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-20 13:53 ET",
+  "as_of": "2026-10-20 14:03 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1725,6 +1725,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-20 13:53 ET",
       "equity": 404.9
+    },
+    {
+      "t": "2026-10-20 14:03 ET",
+      "equity": 405.22
     }
   ],
   "positions": [
@@ -1733,8 +1737,8 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "momentum",
       "qty": 0.990099,
       "entry": 106.05,
-      "price": 108.2,
-      "stop": 105.15,
+      "price": 108.52,
+      "stop": 106.85,
       "target": 111.25
     }
   ],
@@ -5218,4 +5222,12 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Tape: SPY 769.76 (+0.43%), QQQ 719.56 (+0.17%), SMH 549.74 (+0.23%), XLY 115.48 (+0.9%), MAT 17.005 (+0.7%). No sector ETF down 2%.
 - Mean-reversion scan (-3.5%): 17 hits; TTMI, FPS, SVM back on the list, no new names. Researched names still fail earlier gates. Not gate-checked: SE, LGN, FPS, DPC, TTMI, IREN, MWH, BTU, FSLY, PTEN, SVM. No entry. Tier B window closes 14:30 ET.
 - Momentum scan: 27 hits, new vs last cycle: MNDY +8.1% (unresearched). HAS held. Not gate-checked: HLT, EFX, TW, CBRE, MNDY, SOLS, TREX, BRZE, LIFE, DOCS, RCUS, FIG, KVYO, NU, AAL, LI, STNE, LION, XPEV, BB, LBTYK, PONY, WIT, CRCL. MMM and QGEN rejected earlier. No new entry.
+- Trades today 1. Positions 1/5.
+
+### Cycle 408 - 2026-10-20 14:03 ET
+- Reconciled: HAS 0.990099 sh, last 108.52 (+10.2% on day, +2.3% / about +2.47 per share vs 106.05, roughly +0.95R on the original risk); no open orders; cash/BP $297.77; equity $405.22.
+- Stop management: trailed from 105.15 to 106.85, just under the 13:30 ET bar low (106.90) and the 107.52 pullback low; HAS has made higher lows through 13:55 ET (107.85 -> 108.24) on 62.6k-share buying. This locks in about +0.8 per share if hit (about +0.8 total, discretionary trail, manual market sell if it trades). Target 111.25 unchanged.
+- Tape: SPY 769.51 (+0.40%), QQQ 719.32 (+0.13%), SMH 549.75 (+0.24%), XLY 115.45 (+0.9%), MAT 16.995 (+0.7%). No sector ETF down 2%.
+- Mean-reversion scan (-3.5%): 16 hits, no new names. Researched names still fail earlier gates. Not gate-checked: SE, LGN, FPS, DPC, TTMI, IREN, MWH, BTU, FSLY, PTEN, SVM. No entry. Tier B window closes 14:30 ET.
+- Momentum scan: 30 hits, new vs last cycle: MSTR +5.8%, RYAN +4.3%, SLS +11.8% (unresearched). HAS held. Not gate-checked: HLT, EFX, CBRE, TW, MNDY, MSTR, RYAN, SOLS, TREX, BRZE, LIFE, DOCS, RCUS, FIG, KVYO, NU, LION, AAL, LI, STNE, SLS, XPEV, BB, LBTYK, PONY, WIT, CRCL. MMM and QGEN rejected earlier. No new entry.
 - Trades today 1. Positions 1/5.
