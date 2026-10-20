@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-20 12:04 ET",
+  "as_of": "2026-10-20 12:14 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1680,6 +1680,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-20 12:04 ET",
+      "equity": 402.77
+    },
+    {
+      "t": "2026-10-20 12:14 ET",
       "equity": 402.77
     }
   ],
@@ -5069,4 +5073,13 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
   - MMM: catalyst cited (EPS 2.50 vs 2.39 this morning). 5-minute bars: spike to 172.50 at 10:55 ET, then a slide to 169.75-170.4 and a flat range since 11:10 ET; price below the earlier highs, EMAs flat to falling. Gate 3 FAIL (fading, no held higher low above a rising EMA).
   - HAS: still inside 103.5-105.2 (last 104.01), 105.16 unbroken, gate 3 FAIL.
   - All others unchanged or unresearched. No entry.
+- No order placed.
+
+### Cycle 397 (hourly, news pass) - 2026-10-20 12:14 ET
+- Account: equity $402.77, cash/BP $402.77, no positions. Day trades 0.
+- Tape (vs 10-19 close): SPY 769.17 (+0.4%), QQQ 718.91 (+0.1%), SMH 549.61 (+0.2%), IGV 106.85 (+0.8%), XLU 41.92 (+1.3%), ITB 86.96 (+2.4%), TLT 79.88 (+0.5%), XLE 67.57 (-0.3%), XLF 55.70 (+1.2%), XLV 179.54 (+2.2%), XBI 152.21 (+2.9%), XME 100.75 (-0.6%), ITA 205.26 (-1.2%). Indexes and defensives firm; no sector ETF is down 2% or more.
+- News (one search, found this cycle): a [tikr.com article](https://www.tikr.com/blog/howmet-aerospace-stock-dropped-nearly-11-after-ge-bought-a-rival-casting-supplier-heres-whether-the-selloff-is-an-overreaction) says HWM fell about 11% on Sep 8 after GE Aerospace agreed to buy a rival casting supplier (a customer moving toward making critical parts itself), which matches the Sep 8 gap in the daily bars. The search returned nothing dated today (Oct 20). Consequence for the gate check: HWM's weakness has a company-specific structural driver (customer insourcing risk), not a sector-rotation cause, and GE's earnings day plausibly re-opened it. That is an additional reason HWM fails gate 1, on top of the gate 4 downtrend failure. HWM stays a skip.
+- Mean-reversion (Tier B, -3.5% scan, 14 hits): GE -4.2%, HWM -5.1% (208.81), TSEM -6.4% (187.51), ATI -3.9% (181.86), SE -7.3%, GM -7.2%, MLI -8.5%, LGN -5.1%, DPC -7.3%, BAX -3.6%, MWH -3.6%, BTU -4.4%, CLF -4.2%, SVM -3.6%. Gate results unchanged; TSEM, SE, DPC, LGN and the rest unresearched; no entry.
+- Momentum (14 hits): HLT +3.7%, MMM +5.0% (170.15), HAS +5.8% (104.21), SOLS, QGEN, BRZE +51%, LIFE, RCUS, KVYO, AAL +4.8% (new: reports Oct 22, inside the earnings window for a fresh entry, unresearched), LI, XPEV, BB +7.0% (new, unresearched), SBS. MMM and HAS unchanged from Cycle 396 (gate 3 fail: flat/fading, no held higher low above a rising EMA). No entry.
+- Follow-ups on earlier skips (prior close to now): CLF 14.10 -> 13.51 (-4.2%); HWM 220.03 -> 208.81; MXL, ARQT, SLGN and DXC were not rechecked this cycle (no longer on the momentum scan).
 - No order placed.
