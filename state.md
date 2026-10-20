@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-20 09:43 ET",
+  "as_of": "2026-10-20 09:53 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1632,6 +1632,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-20 09:43 ET",
+      "equity": 402.77
+    },
+    {
+      "t": "2026-10-20 09:53 ET",
       "equity": 402.77
     }
   ],
@@ -4910,3 +4914,8 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Tape (vs 10-19 close, 09:44 ET): SPY 764.62 (-0.24%), QQQ 711.33 (-1.0%), SMH 538.13 (-1.9%), IGV 105.24 (-0.7%), XLU 41.88 (+1.3%), ITB 86.37 (+1.7%), TLT 80.13 (+0.8%), XLE 67.90 (+0.1%), XLF 55.62 (+1.0%).
 - It is before 10:00 ET, so no entries are allowed this cycle and no entry scans were run. Rotation out of tech into bonds/rate-sensitives: yields lower, homebuilders and utilities bouncing. Disclosure: the rate-driven rebound that was the DHI thesis is playing out today, after I closed DHI yesterday at 135.60 for -$0.28. That is a result of the exit rule (no overnight hold without a resting stop), not a gate change.
 - Next cycle after 10:00 ET starts the entry scans: mean-reversion Tier A window (semis if the dislocation holds with a sector-down read) and momentum from 10:30 ET.
+
+### Cycle 385 - 2026-10-20 09:53 ET
+- Account: equity $402.77, cash/BP $402.77, no positions. Day trades 0.
+- Tape (vs 10-19 close): SPY 766.84 (+0.0%), QQQ 714.16 (-0.6%), SMH 541.01 (-1.4%), IGV 106.20 (+0.2%), XLU 41.84 (+1.2%), ITB 86.42 (+1.7%), TLT 80.02 (+0.7%). Semis pressure eased from the open; rate-sensitives still bid.
+- Before 10:00 ET: no entries and no entry scans this cycle. Entry scans start with the first cycle after 10:00 ET.
