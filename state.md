@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-20 11:03 ET",
+  "as_of": "2026-10-20 11:18 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1660,6 +1660,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-20 11:03 ET",
+      "equity": 402.77
+    },
+    {
+      "t": "2026-10-20 11:18 ET",
       "equity": 402.77
     }
   ],
@@ -4997,3 +5001,14 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Mean-reversion scan (-5%): 3 hits (SE -7.0% at 82.24, GM -5.2%, MLI -6.5%). Unchanged gate results: GM and MLI fail gates 1/2 (own earnings, MLI a miss), SE unresearched, Tier A sector condition not met. No entry.
 - Momentum scan: 5 hits. BRZE +50.7% (40x relative volume, no base, gate 3 fail), KVYO +9.6% (sympathy, gate 1 fail), XPEV +7.9% and LI +5.8% (both China EV names moving together: group beta, not divergence, gate 1 fail), LIFE +5.8% (Ethos, 41.11, relative volume 1.1; not researched, no cited catalyst or several-session divergence, gates 1/2 fail). No entry.
 - No order placed. Tier B opens 11:30 ET.
+
+### Cycle 392 (hourly, news pass) - 2026-10-20 11:18 ET
+- Account: equity $402.77, cash/BP $402.77, no positions. Day trades 0.
+- Tape (vs 10-19 close): SPY 769.79 (+0.4%), QQQ 719.98 (+0.2%), SMH 549.54 (+0.2%), IGV 107.00 (+0.9%), XLU 41.93 (+1.4%), ITB 87.53 (+3.0%), TLT 80.12 (+0.8%), XLE 67.38 (-0.6%), XLF 55.74 (+1.2%), XLV 179.51 (+2.2%), XBI 152.78 (+3.3%), XME 101.02 (-0.3%). Indexes firm, defensives and rate-sensitives bid; no sector ETF is down 2% or more.
+- Mean-reversion scan (-3.5%, preparing Tier B which opens 11:30 ET): 11 hits: GE -3.6% (300.14), HWM -4.5% (210.22), TSEM -4.5%, SE -7.5%, GM -4.7%, MLI -7.5%, LGN -4.5%, DPC -5.4%, BTU -4.6%, CLF -4.3%, PTEN -3.6%.
+  - Tier A (-5% or more, window to 11:30): SE, MLI, DPC. MLI fails gate 2 (EPS miss), SE and DPC unresearched, Tier A sector condition not met. No entry.
+  - New for Tier B watch: GE (-3.6%) reported this morning (EPS 2.25 vs 2.01 estimate), so the drop is its own earnings reaction (gate 1 fail for GE). HWM (-4.5%, aerospace supplier) is moving with GE's reaction: a possible sector-tied dip, but unresearched (cause, last earnings datapoint, upcoming report date, anchor). Re-check HWM at 11:30 ET with the full four gates; do not enter on this scan alone.
+  - GM and MLI: own-earnings reactions (gate 1/2 fail). CLF, BTU, PTEN: energy/materials weakness (XLE -0.6%, XME -0.3%), unresearched.
+- Momentum scan: 7 hits: SOLS +4.3% (63.06), QGEN +3.9% (48.36), BRZE +50.7% (gap, no base, gate 3 fail), LIFE +6.4% (41.35), KVYO +9.8% (BRZE sympathy, gate 1 fail), LI +5.5% and XPEV +7.7% (China EV group move, gate 1 fail). SOLS, QGEN and LIFE are new or unresearched: no cited catalyst or several-session divergence evidence. No entry.
+- News: one WebSearch returned only articles from earlier years, nothing for today; none cited.
+- No order placed.
