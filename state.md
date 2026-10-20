@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-20 11:43 ET",
+  "as_of": "2026-10-20 11:53 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1672,6 +1672,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-20 11:43 ET",
+      "equity": 402.77
+    },
+    {
+      "t": "2026-10-20 11:53 ET",
       "equity": 402.77
     }
   ],
@@ -5043,4 +5047,11 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Momentum scan: 10 hits: HLT +3.7%, HAS +6.0% (104.37), SOLS +4.5%, QGEN +3.4%, BRZE +50.9% (gap, no base, gate 3 fail), LIFE +6.9%, RCUS +9.1% (new, biotech, unresearched), KVYO +10.0% (BRZE sympathy, gate 1 fail), LI +5.2% and XPEV +7.0% (China EV group, gate 1 fail).
   - HAS re-check (catalyst: Q3 EPS 2.90 vs 1.85 estimate, gate 2 pass). 5-minute bars 10:30-11:40 ET show a range of 103.53-105.16 with slightly rising lows (103.53, 103.53, 103.76, 103.74) and highs capped near 104.7-105.16; last 104.35-104.68. The 9 and 20 bar EMAs are flat around 104.2, not rising, and price has not broken above 105.16. MAT: 16.945 (+0.4%). Gate 3 still FAIL (support is flat, no continuation yet). NO ENTRY. Trigger to re-check: a 5-minute close above 105.16 with the lows above 103.5 holding.
   - HLT +3.7% (358.92), SOLS, QGEN, LIFE, RCUS: unresearched, no cited catalyst or multi-session divergence on file.
+- No order placed.
+
+### Cycle 395 - 2026-10-20 11:53 ET
+- Account: equity $402.77, cash/BP $402.77, no positions. Day trades 0.
+- Tape (vs 10-19 close): SPY 769.31 (+0.4%), QQQ 718.87 (+0.1%), SMH 548.55 (0.0%), IGV 106.79 (+0.8%), XLU 41.95 (+1.4%), ITB 87.29 (+2.8%), TLT 80.02 (+0.7%), XLE 67.37 (-0.6%), XLF 55.72 (+1.2%), XLV 179.80 (+2.4%), XBI 152.96 (+3.4%), XME 100.88 (-0.5%), ITA 205.10 (-1.3%). No sector ETF is down 2% or more.
+- Mean-reversion (Tier B, -3.5% scan, 16 hits): GE -4.8% (296.29), HWM -5.2% (208.56, still making new lows), TSEM -6.0% (188.29), ATI -3.9% (181.92), SE -7.5%, GM -6.7%, MLI -9.1%, LGN -4.8%, DPC -7.0%, IREN -4.2%, BAX -3.6%, MWH -3.8% (new), BTU -4.4%, FSLY -3.8% (new), CLF -4.4%, PTEN -4.0%. Gate results unchanged for HWM (gate 4 fail), ATI (gate 3 fail, 1.2R), GE/GM/MLI (own earnings). TSEM -6.0% with SMH at 0.0% is a stock-specific move, not sector-tied (gate 1 fail on the sector link; cause not researched). The others are unresearched. No entry.
+- Momentum scan: 11 hits. New: MMM +5.0% (170.06; reported this morning, EPS 2.50 vs 2.39 estimate, a catalyst, but the move is a gap with no structure reviewed this cycle, so not entered). HAS +6.4% (104.75): 5-minute bars 15:20-15:50 ET UTC (11:20-11:50 ET) held 103.74-104.75 with the high 105.16 unbroken, EMAs flat, gate 3 still FAIL. HLT +3.8%, SOLS, QGEN, LIFE, RCUS: unresearched. BRZE +51% (no base), KVYO (sympathy), LI/XPEV (group) fail as before. No entry.
 - No order placed.
