@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-19 15:48 ET",
+  "as_of": "2026-10-20 08:30 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,13 +41,13 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat at the close. DHI (Tier C, forced tag) bought 14:36 ET at 135.96, sold 15:48 ET at 135.60 for -$0.28. Cash $402.77, no overnight positions.",
+  "status_note": "Pre-open brief. Flat, cash $402.77. Watching semis weakness and a pre-market bounce in bonds/utilities.",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-10-19",
-    "start_equity": 403.05,
-    "trades": 1,
-    "forced": 1
+    "date": "2026-10-20",
+    "start_equity": 402.77,
+    "trades": 0,
+    "forced": 0
   },
   "equity_history": [
     {
@@ -1707,31 +1707,27 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Pre-market rebound after Friday's selloff: SMH +3.2%, QQQ +1.3%, SPY +0.6%, IGV +0.8% vs Oct 16 closes; XLE -1.0%. No dated cause found for the bounce. Earnings this week: NFLX, RTX, GE (Tue), META, TSLA, IBM, TXN, LRCX (Wed), HON (Thu). ESMO Oct 23-27 (MRNA).",
+    "read": "Pre-market: risk-off tilt in tech/semis, bonds bid",
     "chips": [
       {
         "name": "SPY",
-        "chg": 0.55
+        "chg": -0.35
       },
       {
         "name": "QQQ",
-        "chg": 1.33
+        "chg": -0.8
       },
       {
         "name": "SMH",
-        "chg": 3.15
+        "chg": -1.6
       },
       {
-        "name": "IWM",
-        "chg": 0.51
+        "name": "TLT",
+        "chg": 0.9
       },
       {
-        "name": "IGV",
-        "chg": 0.83
-      },
-      {
-        "name": "XLE",
-        "chg": -1.01
+        "name": "XLU",
+        "chg": 0.4
       }
     ]
   }
@@ -4890,3 +4886,13 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Skips: ARQT, CLF, DXC, SLGN, MXL, MRNA (momentum, failed relative-strength or catalyst or held-pullback gates; several ran strongly afterward, the cost of the strict rule) and IBRX, ALM, QXO, RBA, CEG, plus other -5% names (mean-reversion, gate 1/2/3/4 failures; none bounced as far as I saw). Final prior-close to ~15:30 ET moves: CLF +18.5% (14.37), ARQT +11.8% (32.2), SLGN +7.1% (40.47), MXL +8.4% (77.3), DXC +4.4% (14.2); ALM -9.7% (8.88), IBRX -6.3% (8.61), QXO -6.9% (10.11), RBA -6.3% (79.0).
 - Disclosed gaps: mean-reversion scans through Cycle 374 used -7% (stricter than the tiers), fixed from Cycle 375. Only the utilities/REIT/homebuilder cluster was individually gate-checked; the broader -2.5% hits (83 names) and unresearched names (SE, FRVO, FRMI, PBF, HTFL, WRBY, CELH, CLDX, GMAB, EQPT, OCTV, HSAI, PBLS, TLK, BLSH, FIGR) were not. Cycle timestamps drifted a few minutes ahead around Cycle 359 (fixed by Cycle 365). Cycles 381 and 382 ran stop-check only after the 15:30 ET cutoff. No missed cycles recorded this segment.
 - Open items: PDT/day-trade applicability for limited_margin unverified (no PDT alert seen). Upcoming: RTX/GE/NFLX/NOC (Oct 20), META/TSLA/IBM/TXN/LRCX/CCI (Oct 21), HON/LMT/MXL/WDC (Oct 22), Fed meeting Oct 28, DHI earnings Oct 29.
+
+### Pre-open brief - 2026-10-20 08:30 ET
+- Account: equity $402.77, cash/BP $402.77, no positions, no open orders (verified at 08:28 ET). Day-start equity for 2026-10-20 is $402.77. Read-only, no orders.
+- Official 10-19 closes vs pre-market (thin pre-market quotes, wide spreads on several names): SPY 766.48 -> 763.81 (-0.35%), QQQ 718.36 -> 712.64 (-0.8%), SMH 548.46 -> 539.42 (-1.6%), IGV 105.99 -> 105.68 (-0.3%), TLT 79.46 -> 80.17 (+0.9%), XLU 41.36 -> 41.51 (+0.4%), ITB quote unreliable (bid/ask 82.69/93.46), XLE 67.80 -> 68.47 (+1.0%), XLF 55.06 -> 55.19 (+0.2%). Read: tech/semis pressured, bonds bid (yields lower), rate-sensitive defensives up slightly. DHI 135.31 close -> 135.50 pre.
+- News: one WebSearch for pre-market/futures/yields returned only undated or other-period articles, so none cited; the tape above is the only evidence for direction.
+- Earnings today (verified): before open RTX, GE, NOC, MMM, GM, HAS, SYF, KEY, ALLY, HAL; after close NFLX, ISRG, UAL, COF, CB. Tomorrow: META, TSLA, IBM, TXN, LRCX (pm); NEE, MHO, TMO, DHR, ABT, T (am). Oct 22: HON, LMT, PHM, NVR, MXL (pm), WDC (pm), UNP, VLO. Names reporting within 2 trading days are excluded from mean-reversion entry (MXL, NEE, MHO, PHM, NVR, semis LRCX/TXN complex is an adjacent read).
+- WATCH, mean-reversion (needs an external cause + gates; none qualifies yet, all must be re-checked live after 10:00 ET): (1) semis/AI hardware dislocation if SMH opens -2% or more with names down more than the sector; LRCX/TXN earnings tomorrow limits direct names. (2) CEG (263.19 close, 260 pre, still at lows, no earnings in window): needs a higher 5-min low and XLU holding. (3) DHI (135.31 close, 135.50 pre): sold Oct 19 at 135.60; re-entry only if the rate move reverses and a fresh dislocation plus all four gates show; PHM/NVR earnings Oct 22 are sector read-throughs, not DHI's own (DHI reports Oct 29). (4) IBRX 8.43, ALM 8.83, QXO 10.14, RBA 79.81 were prior-day losers; re-check for stabilization only, prior gates failed on cause or fundamentals.
+- WATCH, momentum (earliest 10:30 ET; needs several-session divergence from peers, cited catalyst, held pullback above rising 9/20 EMA): CLF (14.10 close, 13.81 pre, -2%: pullback after +18%, needs held higher low), ARQT (31.89, flat pre), SLGN (40.06, 40.40 pre), DXC (14.26, 14.24 pre), MXL (77.11 close, ~74 pre, -4%, earnings Oct 22 after close: earnings-window rule applies unless the catalyst already happened).
+- Follow-ups on skipped candidates (10-19 close vs 15:30 note): CLF 14.10 (prior day close 12.12 on the 16th, so +16%), ARQT 31.89, SLGN 40.06, MXL 77.11, DXC 14.26, IBRX 8.42, ALM 8.83, QXO 10.14, RBA 79.81. Momentum names held most of their gains into the close; mean-reversion skips stayed lower.
+- Standing decisions unchanged: $105 fixed size, max 5 positions, $100 daily loss limit, breaker level $394.19, no entries before 10:00 ET, momentum earliest 10:30 ET.
