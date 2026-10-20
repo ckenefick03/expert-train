@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-20 11:18 ET",
+  "as_of": "2026-10-20 11:34 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Pre-open brief. Flat, cash $402.77. Watching semis weakness and a pre-market bounce in bonds/utilities.",
+  "status_note": "Flat, cash $402.77. Tier B open. Watching HAS (post-earnings base) for a momentum continuation; HWM failed gate 4.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-20",
@@ -1664,6 +1664,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-20 11:18 ET",
+      "equity": 402.77
+    },
+    {
+      "t": "2026-10-20 11:34 ET",
       "equity": 402.77
     }
   ],
@@ -5011,4 +5015,15 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
   - GM and MLI: own-earnings reactions (gate 1/2 fail). CLF, BTU, PTEN: energy/materials weakness (XLE -0.6%, XME -0.3%), unresearched.
 - Momentum scan: 7 hits: SOLS +4.3% (63.06), QGEN +3.9% (48.36), BRZE +50.7% (gap, no base, gate 3 fail), LIFE +6.4% (41.35), KVYO +9.8% (BRZE sympathy, gate 1 fail), LI +5.5% and XPEV +7.7% (China EV group move, gate 1 fail). SOLS, QGEN and LIFE are new or unresearched: no cited catalyst or several-session divergence evidence. No entry.
 - News: one WebSearch returned only articles from earlier years, nothing for today; none cited.
+- No order placed.
+
+### Cycle 393 - 2026-10-20 11:34 ET
+- Account: equity $402.77, cash/BP $402.77, no positions. Day trades 0. First cycle with Tier B open (11:30 ET).
+- Tape (vs 10-19 close): SPY 768.66 (+0.3%), QQQ 718.23 (-0.0%), SMH 547.95 (-0.1%), IGV 106.63 (+0.6%), XLU 41.91 (+1.3%), ITB 87.09 (+2.5%), TLT 80.09 (+0.8%), XLE 67.36 (-0.7%), XLF 55.70 (+1.2%), XLV 179.43 (+2.2%), XBI 153.21 (+3.6%), XME 100.98 (-0.4%), ITA 205.31 (-1.2%). Indexes flat to slightly up, defensives and rate-sensitives bid, aerospace/defense a little soft; no sector ETF is down 2% or more.
+- Mean-reversion (Tier B, scan -3.5%, 11 hits): GE -4.0% (298.82), HWM -4.9% (209.23), TSEM -4.9%, SE -6.7%, GM -6.2%, MLI -9.2%, LGN -4.9%, DPC -5.6%, BAX -3.9%, BTU -4.7%, CLF -3.9%.
+  - HWM written gate check: Gate 1 (external cause): not established. HWM fell 4.9% vs ITA -1.2% on a day GE (a key customer) reported and fell 4.0%; the read-through to HWM is plausible but I found no dated coverage of the reaction (the WebSearch returned only previews and old items), so the cause is unverified. Gate 2 (fundamental datapoint): last report Aug 6, EPS 1.33 vs 1.24 estimate (a beat), pass; next report Oct 29 (7 trading days out, outside the 2-day window). Gate 3 (anchor): prior close 220.03 / Oct 16 high 224.99 gives room, not decisive. Gate 4 (dislocation vs downtrend): FAIL. Daily chart: 259 on Sep 4, a gap down to 231.5 on Sep 8 (-11% on 11.7M volume), a 222-232 range through Oct 9, lower lows 216.8 (Oct 13) and now 209.2, below the Oct 15 low of 211.08. That is a six-week downtrend breaking down, not a one-day dislocation. Intraday it bounced 210.4 -> 215.2 at 10:25 ET, then made lower highs (214.4, 213.5, 213.3) and a lower low 209.4: no higher low and no stabilization. NO ENTRY.
+  - GE: its own earnings reaction (EPS 2.25 vs 2.01 beat, stock down): gate 1 FAIL. GM and MLI: own-earnings reactions (MLI an EPS miss): FAIL. SE, DPC, TSEM, LGN, BAX, BTU, CLF: not researched (SE, CLF and TSEM repeats; disclosed).
+- Momentum scan: 9 hits: HLT +3.7%, HAS +5.9%, SOLS +4.2%, QGEN +3.1%, BRZE +50.8% (gap, no base, gate 3 fail), LIFE +6.2%, KVYO +9.4% (BRZE sympathy, gate 1 fail), LI +5.4% and XPEV +6.9% (China EV group move, gate 1 fail).
+  - HAS written gate check (the first real catalyst candidate today): Gate 2 PASS, catalyst cited: Q3 EPS 2.90 vs 1.85 estimate reported this morning (earnings-window rule waived, the beat is the thesis). Gate 1 PARTIAL: HAS +5.9% today vs MAT +0.8% (MAT 16.88 close, 17.02 now), but over the last several sessions MAT outperformed (12.66 on Sep 30 to 16.88, +33%) while HAS rose 87.6 -> 98.5 (+12%), so there is no clean multi-session divergence. Gate 3 FAIL now: gap-up open 102.40, spike to 108.30 at 09:40, fade to a 102.35 low at 10:15, then a base of 103.5-104.8 with only a marginally higher low (about 103.5); the last six 5-minute bars drifted from 104.7 to 103.76, below the 9/20-bar EMAs, which are flat to falling. Not above a rising short-term EMA. NO ENTRY. Watch: a reclaim of 104.7 with a held higher low at or above 103.5 and price back above a rising 9 EMA (the morning high 108.30 is the anchor; stop under 103.4, about 0.35% of the entry to the stop is too tight, so the stop would be set under the 102.35 low if the base fails).
+  - HLT +3.7%, SOLS, QGEN, LIFE: not researched, no cited catalyst or multi-session divergence on file; no entry.
 - No order placed.
