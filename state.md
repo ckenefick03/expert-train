@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-20 15:03 ET",
+  "as_of": "2026-10-20 15:14 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1753,6 +1753,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-20 15:03 ET",
       "equity": 405.74
+    },
+    {
+      "t": "2026-10-20 15:14 ET",
+      "equity": 406.02
     }
   ],
   "positions": [
@@ -1761,8 +1765,8 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "momentum",
       "qty": 0.990099,
       "entry": 106.05,
-      "price": 109.05,
-      "stop": 106.85,
+      "price": 109.33,
+      "stop": 108.0,
       "target": 111.25
     }
   ],
@@ -5305,5 +5309,16 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Tape: SPY 768.99 (+0.33%), QQQ 718.61 (+0.04%), SMH 549.00 (+0.10%), XLY 115.63 (+1.0%), MAT 17.03 (+0.9%). No sector ETF down 2%.
 - Mean-reversion scan (-3.5%, Tier C window, forced tag only): 15 hits; new: ELAN -3.7% (unresearched). Researched names still fail earlier gates (HWM, TSEM, GM, MLI). Not gate-checked: TTMI, SE, LGN, FPS, DPC, IREN, MWH, BTU, ELAN, FSLY, SVM. No sector ETF down 2% and no gate-clean dislocation, so no entry and no forced tag.
 - Momentum scan: 46 hits, new vs last cycle: HUBS +7.1%, BIIB +4.4%, GWRE +8.1% (all unresearched; software names, possibly sector or earnings moves). HAS held. The remaining hits were not gate-checked this cycle (LLY, HLT, EFX, MMM and QGEN rejected earlier, MSTR, TW, HNGE, MNDY, SITE, CRCL, CDNA, SOLS, HTFL, TREX, BRZE, RYAN, LIFE, FIVN, DOCS, HIMS, RCUS, FIG, BMNR, KEY, KVYO, APLE, PBI, NU, LION, AAL, STNE, LI, SLS, PAGS, RKT, ASAN, XPEV, BB, LBTYK, PONY, WIT). No new entry. Momentum entry cutoff is 15:30 ET.
+- Close recap due 15:47 ET (default: close HAS before the bell).
+- Trades today 1. Positions 1/5.
+
+### Cycle 415 (hourly, with news) - 2026-10-20 15:14 ET
+- Reconciled: HAS 0.990099 sh, last 109.33 (+11.0% on day, +3.1% / about +3.28 per share vs 106.05, roughly +1.25R on the original risk); no open orders; cash/BP $297.77; equity $406.02.
+- Stop management: trailed from 106.85 to 108.00, just under the 108.40-108.66 afternoon shelf low (14:55 ET bar low 108.66) with buffer. If hit, this locks about +1.9 per share (about +1.9 total) rather than risking the whole gain; discretionary trail, manual market sell if it trades. Target 111.25 unchanged.
+- Tape (read before news): SPY 768.73 (+0.29%), QQQ 718.19 (-0.02%), SMH 548.79 (+0.06%), XLY 115.59 (+1.0%), XLI 166.87 (+0.1%), XLE 67.81 (0.0%), XLV 179.40 (+2.1%), XLU 41.92 (+1.3%), MAT 17.105 (+1.3%). No sector ETF down 2%.
+- News: WebSearch for an Oct 20 close returned nothing dated today (latest hits Oct 6), so no market-news claim is made. HAS thesis facts unchanged from the SEC 8-K (see Cycle 403).
+- Mean-reversion scan (-3.5%, Tier C, forced tag only): 16 hits; GE back on, HOS new (unresearched); researched names (GE, HWM, TSEM, GM, MLI) still fail earlier gates. Not gate-checked: SE (-9.3%), LGN, FPS, DPC, IREN, MWH, BTU, ELAN, FSLY, SVM, HOS. No sector ETF down 2% and no gate-clean dislocation, so no entry and no forced tag.
+- Momentum scan: 48 hits; new vs last cycle: BX +3.0%, LEN +3.4%, REZI +3.3%, VERX +5.5%, PGEN +3.7% (unresearched). HAS held. Not gate-checked: LLY, HLT, HUBS, BIIB, GWRE, EFX, MSTR, TW, BX, HNGE, MNDY, SITE, CRCL, LEN, CDNA, SOLS, HTFL, TREX, BRZE, RYAN, LIFE, DOCS, HIMS, RCUS, FIG, BMNR, KEY, KVYO, APLE, REZI, NU, VERX, LION, AAL, STNE, LI, SLS, PAGS, RKT, ASAN, XPEV, BB, PGEN, PONY, WIT. MMM and QGEN rejected earlier. No new entry; the momentum entry cutoff is 15:30 ET.
+- Follow-ups on previously skipped candidates: no change (HWM/TSEM/ATI/GE/GM/MLI fail; MMM and QGEN fail). Honest note: with 48 momentum hits and about 16 reversion hits, most are never gate-checked in a cycle; that is a coverage limit, not a gate loosening.
 - Close recap due 15:47 ET (default: close HAS before the bell).
 - Trades today 1. Positions 1/5.
