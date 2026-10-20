@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-20 10:33 ET",
+  "as_of": "2026-10-20 10:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1648,6 +1648,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-20 10:33 ET",
+      "equity": 402.77
+    },
+    {
+      "t": "2026-10-20 10:43 ET",
       "equity": 402.77
     }
   ],
@@ -4964,3 +4968,10 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
   - KVYO +8.1% (18.94): software-peer sympathy with BRZE, group beta not divergence (gate 1 FAIL).
   - XPEV +6.9% (9.85): relative volume 1.03; no several-session divergence evidence or cited catalyst (gate 1/2 FAIL).
 - No order placed. The earlier momentum names (MXL, SLGN, CLF, ARQT, DXC) no longer meet the scan thresholds at 10:33 ET.
+
+### Cycle 389 - 2026-10-20 10:43 ET
+- Account: equity $402.77, cash/BP $402.77, no positions. Day trades 0.
+- Tape (vs 10-19 close): SPY 771.63 (+0.7%), QQQ 721.70 (+0.5%), SMH 551.29 (+0.5%), IGV 107.10 (+1.0%), XLU 41.92 (+1.3%), ITB 87.13 (+2.6%), TLT 80.25 (+1.0%), XLE 66.99 (-1.2%), XLF 55.89 (+1.5%), XLV 179.53 (+2.2%), XBI 152.49 (+3.1%), XME 101.92 (+0.5%). Broad risk-on; no sector ETF is down 2% or more.
+- Mean-reversion scan (-5%): 5 hits, unchanged from Cycle 388 (SE -6.2%, GM -5.1%, MLI -7.0%, CLF -5.2%, AMRO -5.3%). Gate results unchanged: GM and MLI fail gates 1/2 (own earnings), CLF fails gates 1/3, SE and AMRO unresearched; Tier A sector condition not met. No entry.
+- Momentum scan: 3 hits, unchanged (BRZE +50.7% on 35x relative volume, a gap with no base so gate 3 fails; KVYO +8.8%, sympathy with BRZE, gate 1 fails; XPEV +7.1%, no several-session divergence or cited catalyst, gate 1/2 fail). No entry.
+- No order placed.
