@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-20 12:14 ET",
+  "as_of": "2026-10-20 12:23 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1684,6 +1684,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-20 12:14 ET",
+      "equity": 402.77
+    },
+    {
+      "t": "2026-10-20 12:23 ET",
       "equity": 402.77
     }
   ],
@@ -5082,4 +5086,13 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Mean-reversion (Tier B, -3.5% scan, 14 hits): GE -4.2%, HWM -5.1% (208.81), TSEM -6.4% (187.51), ATI -3.9% (181.86), SE -7.3%, GM -7.2%, MLI -8.5%, LGN -5.1%, DPC -7.3%, BAX -3.6%, MWH -3.6%, BTU -4.4%, CLF -4.2%, SVM -3.6%. Gate results unchanged; TSEM, SE, DPC, LGN and the rest unresearched; no entry.
 - Momentum (14 hits): HLT +3.7%, MMM +5.0% (170.15), HAS +5.8% (104.21), SOLS, QGEN, BRZE +51%, LIFE, RCUS, KVYO, AAL +4.8% (new: reports Oct 22, inside the earnings window for a fresh entry, unresearched), LI, XPEV, BB +7.0% (new, unresearched), SBS. MMM and HAS unchanged from Cycle 396 (gate 3 fail: flat/fading, no held higher low above a rising EMA). No entry.
 - Follow-ups on earlier skips (prior close to now): CLF 14.10 -> 13.51 (-4.2%); HWM 220.03 -> 208.81; MXL, ARQT, SLGN and DXC were not rechecked this cycle (no longer on the momentum scan).
+- No order placed.
+
+### Cycle 398 - 2026-10-20 12:23 ET
+- Account: equity $402.77, cash/BP $402.77, no positions. Day trades 0.
+- Tape (vs 10-19 close): SPY 768.67 (+0.3%), QQQ 718.28 (0.0%), SMH 548.63 (+0.0%), IGV 106.78 (+0.7%), XLU 41.93 (+1.4%), ITB 86.96 (+2.4%), TLT 79.94 (+0.6%), XLE 67.55 (-0.4%), XLF 55.67 (+1.1%), XLV 179.48 (+2.2%), XBI 152.32 (+3.0%), XME 100.56 (-0.8%), ITA 205.11 (-1.3%). Narrow, quiet tape; no sector ETF is down 2% or more.
+- Mean-reversion (Tier B, -3.5% scan, 16 hits): GE -4.5% (297.42), HWM -5.2% (208.57), TSEM -7.9% (184.54), ATI -4.0%, SE -7.7%, GM -7.9%, MLI -8.2%, LGN -5.5%, DPC -7.5%, BAX, MWH, BTU, FSLY, CLF, PTEN, SVM (all -3.7% to -4.5%).
+  - TSEM written gate check (the largest unresearched mover, researched this cycle): Gate 4 FAIL. Daily bars: 258.41 (Oct 6 close) to 195.58 (Oct 16 close), a 24% drop in ten sessions with lower lows (206.25, 197.51, 195.10), a 200.30 close on Oct 19, and today a new low zone of 183.4-184.5, below the Oct 16 low. Intraday it opened at 193.7, hit 183.42 at 09:40 ET, bounced to 196.3 by 10:30 ET, then made lower highs (194.4, 193.9, 191.9, 190.4) and slid back to 184.5 on rising volume in the last bar: no higher low, no stabilization. Gate 1: the SMH is flat (0.0%) while TSEM is -7.9%, so it is not sector-tied today; my search found no dated Tower-specific cause (the results were undated or from other periods, so none is cited). Gate 2: last report Aug 4, EPS 0.88 vs 0.73 (a beat); next report Nov 2 (outside the 2-day window). It fails on gates 1 and 4. NO ENTRY.
+  - HWM, ATI, GE, GM, MLI: unchanged fails. SE, DPC, LGN, the rest: unresearched; no entry.
+- Momentum (15 hits): HLT +3.6%, MMM +5.3% (170.66), HAS +6.1% (104.48), SOLS, QGEN, BRZE +51%, LIFE, RCUS, FIG +5.5% (new, unresearched), KVYO, AAL +4.7%, LI, XPEV, BB +6.4%, SBS. MMM and HAS are unchanged in structure (flat range, no break above the morning highs 172.50 and 105.16 on a 5-minute close). No entry.
 - No order placed.
