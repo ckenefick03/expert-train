@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-20 09:53 ET",
+  "as_of": "2026-10-20 10:04 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1637,6 +1637,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-20 09:53 ET",
       "equity": 402.77
+    },
+    {
+      "t": "2026-10-20 10:04 ET",
+      "equity": 402.77
     }
   ],
   "positions": [],
@@ -1715,31 +1719,35 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Tech/semis down, bonds and rate-sensitives up",
+    "read": "Broad market firm, semis mildly lower, rate-sensitives and healthcare bid",
     "chips": [
       {
         "name": "SPY",
-        "chg": -0.24
+        "chg": 0.19
       },
       {
         "name": "QQQ",
-        "chg": -0.98
+        "chg": -0.25
       },
       {
         "name": "SMH",
-        "chg": -1.88
-      },
-      {
-        "name": "TLT",
-        "chg": 0.84
+        "chg": -0.79
       },
       {
         "name": "XLU",
-        "chg": 1.26
+        "chg": 1.13
       },
       {
         "name": "ITB",
-        "chg": 1.68
+        "chg": 1.73
+      },
+      {
+        "name": "XLV",
+        "chg": 2.05
+      },
+      {
+        "name": "XBI",
+        "chg": 1.96
       }
     ]
   }
@@ -4919,3 +4927,15 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Account: equity $402.77, cash/BP $402.77, no positions. Day trades 0.
 - Tape (vs 10-19 close): SPY 766.84 (+0.0%), QQQ 714.16 (-0.6%), SMH 541.01 (-1.4%), IGV 106.20 (+0.2%), XLU 41.84 (+1.2%), ITB 86.42 (+1.7%), TLT 80.02 (+0.7%). Semis pressure eased from the open; rate-sensitives still bid.
 - Before 10:00 ET: no entries and no entry scans this cycle. Entry scans start with the first cycle after 10:00 ET.
+
+### Cycle 386 - 2026-10-20 10:04 ET
+- Account: equity $402.77, cash/BP $402.77, no positions. Day trades 0.
+- Tape (vs 10-19 close): SPY 767.93 (+0.2%), QQQ 716.59 (-0.2%), SMH 544.14 (-0.8%), IGV 106.56 (+0.5%), XLU 41.83 (+1.1%), ITB 86.41 (+1.7%), TLT 80.03 (+0.7%), XLE 67.85 (+0.1%), XLF 55.69 (+1.1%), XLV 179.24 (+2.0%), XBI 150.76 (+2.0%). No sector ETF is down 2% or more, so Tier A's sector-ETF condition is not met by any sector this cycle.
+- Mean-reversion scan (-5%, Tier A window 10:00-11:30): 9 hits. Written gate check:
+  - GM -5.6% (78.13): fell on its own earnings day (reported this morning, EPS beat 3.70 vs 3.61 per the calendar); company-specific reaction, gate 1 FAIL.
+  - MLI -6.9% (56.60): reported this morning, EPS 1.00 vs 1.15 estimate (a miss), gate 2 FAIL.
+  - CLF -7.2% (13.09): giving back the recent run (14.10 close on 10-19, +16% from 12.12 on 10-16); not an external-cause dislocation, no neutral-or-better fundamental datapoint documented, gate 1/2/3 FAIL.
+  - TSEM -5.6% (189.11): semis group is only -0.8% (SMH), so not sector-tied at the Tier A level; cause not researched, FAIL on the Tier A sector condition.
+  - SE -7.0% (82.29), IREN -5.6%, ELAN -5.6%, SVM -5.1%, AMRO -8.2%: not researched this cycle; sector ETF condition not met for Tier A; no entry. (SE has been on the scan since 10-19 and is a repeat unresearched name; disclosed.)
+- Momentum: earliest 10:30 ET, no scan this cycle.
+- No order placed. Tier B opens 11:30 ET (3.5% intraday threshold).
