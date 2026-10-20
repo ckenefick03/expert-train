@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-20 13:33 ET",
+  "as_of": "2026-10-20 13:42 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1717,6 +1717,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-20 13:33 ET",
       "equity": 404.39
+    },
+    {
+      "t": "2026-10-20 13:42 ET",
+      "equity": 404.59
     }
   ],
   "positions": [
@@ -1725,7 +1729,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "strategy": "momentum",
       "qty": 0.990099,
       "entry": 106.05,
-      "price": 107.69,
+      "price": 107.89,
       "stop": 105.15,
       "target": 111.25
     }
@@ -5195,3 +5199,11 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Mean-reversion scan (-3.5%): 17 hits, no new names. Researched names still fail earlier gates. Not gate-checked: SE, SEI, LGN, DPC, TTMI, IREN, MWH, BTU, FSLY, CLF, PTEN. No entry.
 - Momentum scan: 25 hits, new vs last cycle: CBRE +3.1%, PONY +7.7% (unresearched). HAS held. Not gate-checked: HLT, EFX, TW, CBRE, SOLS, TREX, BRZE, LIFE, DOCS, RCUS, FIG, KVYO, NU, AAL, LI, LION, XPEV, BB, LBTYK, PONY, WIT, CRCL. MMM and QGEN rejected earlier. No new entry.
 - Trades today 1. Positions 1/5.
+
+### Cycle 406 - 2026-10-20 13:42 ET
+- Reconciled: HAS 0.990099 sh, last 107.89 (+9.5% on day, +1.7% / about +1.84 per share vs 106.05, roughly +0.7R on the original risk); no open orders; cash/BP $297.77; equity $404.59.
+- Stop check: stop 105.15 is 2.5% below, no action. 13:30 ET bar was heavy (79.9k sh, low 106.90, close 107.68) and buyers held it; 13:35 bar 107.52-107.85. Target 111.25 unchanged.
+- Tape: SPY 769.72 (+0.42%), QQQ 719.40 (+0.14%), SMH 549.06 (+0.11%), XLY 115.50 (+0.9%), MAT 17.005 (+0.7%). No sector ETF down 2%.
+- Mean-reversion scan (-3.5%): 15 hits, no new names (TTMI and CLF dropped off). Researched names still fail earlier gates. Not gate-checked: SE, SEI, LGN, DPC, IREN, MWH, BTU, FSLY, PTEN. No entry. Tier B window closes 14:30 ET.
+- Momentum scan: 26 hits, new vs last cycle: STNE +4.4%. HAS held. Not gate-checked: HLT, EFX, TW, CBRE, SOLS, TREX, BRZE, LIFE, DOCS, RCUS, FIG, KVYO, NU, AAL, LI, STNE, LION, XPEV, BB, LBTYK, PONY, WIT, CRCL. MMM and QGEN rejected earlier. No new entry.
+- Trades today 1. Positions 1/5. Overnight decision for HAS at the 15:47 ET close recap.
