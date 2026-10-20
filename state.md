@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-20 11:34 ET",
+  "as_of": "2026-10-20 11:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1668,6 +1668,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-20 11:34 ET",
+      "equity": 402.77
+    },
+    {
+      "t": "2026-10-20 11:43 ET",
       "equity": 402.77
     }
   ],
@@ -5026,4 +5030,17 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Momentum scan: 9 hits: HLT +3.7%, HAS +5.9%, SOLS +4.2%, QGEN +3.1%, BRZE +50.8% (gap, no base, gate 3 fail), LIFE +6.2%, KVYO +9.4% (BRZE sympathy, gate 1 fail), LI +5.4% and XPEV +6.9% (China EV group move, gate 1 fail).
   - HAS written gate check (the first real catalyst candidate today): Gate 2 PASS, catalyst cited: Q3 EPS 2.90 vs 1.85 estimate reported this morning (earnings-window rule waived, the beat is the thesis). Gate 1 PARTIAL: HAS +5.9% today vs MAT +0.8% (MAT 16.88 close, 17.02 now), but over the last several sessions MAT outperformed (12.66 on Sep 30 to 16.88, +33%) while HAS rose 87.6 -> 98.5 (+12%), so there is no clean multi-session divergence. Gate 3 FAIL now: gap-up open 102.40, spike to 108.30 at 09:40, fade to a 102.35 low at 10:15, then a base of 103.5-104.8 with only a marginally higher low (about 103.5); the last six 5-minute bars drifted from 104.7 to 103.76, below the 9/20-bar EMAs, which are flat to falling. Not above a rising short-term EMA. NO ENTRY. Watch: a reclaim of 104.7 with a held higher low at or above 103.5 and price back above a rising 9 EMA (the morning high 108.30 is the anchor; stop under 103.4, about 0.35% of the entry to the stop is too tight, so the stop would be set under the 102.35 low if the base fails).
   - HLT +3.7%, SOLS, QGEN, LIFE: not researched, no cited catalyst or multi-session divergence on file; no entry.
+- No order placed.
+
+### Cycle 394 - 2026-10-20 11:43 ET
+- Correction to Cycle 393 (HAS note): the sentence about the stop being "too tight" was garbled. The intended levels: stop just under the base low (about 103.4, roughly 0.9% below 104.4), target the morning high 108.30 (about +3.7%, roughly 4R). Those levels only apply if gate 3 is met, which it is not yet.
+- Account: equity $402.77, cash/BP $402.77, no positions. Day trades 0.
+- Tape (vs 10-19 close): SPY 769.81 (+0.4%), QQQ 719.51 (+0.2%), SMH 549.28 (+0.1%), IGV 106.81 (+0.8%), XLU 41.95 (+1.4%), ITB 87.40 (+2.9%), TLT 80.07 (+0.8%), XLE 67.29 (-0.8%), XLF 55.79 (+1.3%), XLV 179.74 (+2.3%), XBI 153.55 (+3.9%), XME 100.83 (-0.5%), ITA 205.40 (-1.1%). No sector ETF is down 2% or more.
+- Mean-reversion (Tier B, -3.5% scan, 14 hits): GE -4.2% (298.16), HWM -5.1% (208.86), TSEM -5.2%, ATI -3.6% (182.48, new), SE -6.9%, GM -6.4%, MLI -9.2%, LGN -4.3%, DPC -6.0%, IREN -3.5%, BAX -3.7%, BTU -4.8%, CLF -4.4%, PTEN -3.7%.
+  - HWM: unchanged, still gate 4 FAIL (new low 208.86, below the Oct 15 low of 211.08; no higher low).
+  - ATI (aerospace materials, moving with the HWM/GE group): Gate 2 pass (last report Aug 6, EPS 1.23 vs 1.02 estimate; next report Oct 29, outside the 2-day window). Cause is the same unverified GE read-through (gate 1 not established). Gate 3 FAIL: ATI is inside a six-week range of 177-195 (lows 178.26 on Sep 28, 177.01 on Oct 15). At 182.48 it sits near support; the prior close 189.28 is only +3.7% away, while a stop below the 177 swing low is about -3%, which is roughly 1.2R, short of the 2R minimum. NO ENTRY.
+  - GE, GM, MLI: own earnings reactions (gate 1/2 fail). SE, TSEM, DPC, LGN, IREN, BAX, BTU, CLF, PTEN: not researched; no entry.
+- Momentum scan: 10 hits: HLT +3.7%, HAS +6.0% (104.37), SOLS +4.5%, QGEN +3.4%, BRZE +50.9% (gap, no base, gate 3 fail), LIFE +6.9%, RCUS +9.1% (new, biotech, unresearched), KVYO +10.0% (BRZE sympathy, gate 1 fail), LI +5.2% and XPEV +7.0% (China EV group, gate 1 fail).
+  - HAS re-check (catalyst: Q3 EPS 2.90 vs 1.85 estimate, gate 2 pass). 5-minute bars 10:30-11:40 ET show a range of 103.53-105.16 with slightly rising lows (103.53, 103.53, 103.76, 103.74) and highs capped near 104.7-105.16; last 104.35-104.68. The 9 and 20 bar EMAs are flat around 104.2, not rising, and price has not broken above 105.16. MAT: 16.945 (+0.4%). Gate 3 still FAIL (support is flat, no continuation yet). NO ENTRY. Trigger to re-check: a 5-minute close above 105.16 with the lows above 103.5 holding.
+  - HLT +3.7% (358.92), SOLS, QGEN, LIFE, RCUS: unresearched, no cited catalyst or multi-session divergence on file.
 - No order placed.
