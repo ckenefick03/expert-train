@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-21 09:43 ET",
+  "as_of": "2026-10-21 09:54 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1780,6 +1780,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-21 09:43 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-21 09:54 ET",
       "equity": 405.43
     }
   ],
@@ -5401,3 +5405,8 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Mean-reversion scan (-3.5%, 13 hits): SCCO -4.1%, NBIS -3.5%, WING -4.0%, NFLX -3.9% (66.04, recovering from -7%), CRWV -3.6%, ELS -3.8%, CMG -4.1%, T -4.8%, HSAI -9.4%, TAL -7.3%, XPEV -5.4%, MBLY -4.1%, AMRO -3.6%. Observation: the China-linked group (XPEV -5.4%, LI -2.9%, HSAI -9.4%, TAL -7.3%) is weak together after yesterday's rally, a possible sector-tied pullback to examine after 10:00 ET (Tier A needs a sector ETF down 2%+, which is not available here, so any entry would be Tier B/C evidence-based or not at all). T, NFLX, CMG, WING are own-news names. Not gate-checked this cycle.
 - Note on yesterday's exit: HAS is now 111.69 (+2.0% vs the 109.52 close; my 108.74 exit was under the end-of-day rule and the risk of an unprotected overnight hold). That is the cost of the rule, recorded, not a reason to change it; any HAS re-entry needs all four momentum gates again (it would now be above its 111.25 target level and extended).
 - Next: first entries possible from 10:00 ET (reversion) and 10:30 ET (momentum).
+
+### Cycle 421 - 2026-10-21 09:54 ET
+- Reconciled: flat, cash/BP $405.43, equity $405.43, no positions or orders. 9:55 ET is before the 10:00 ET entry opening, so no entry is possible this cycle; scans were not re-run (they were run at 9:43 ET and nothing could be traded on them).
+- Tape: SPY 770.42 (+0.18%), QQQ 721.30 (+0.51%), SMH 551.80 (+1.0%), XLV 179.13 (-0.4%), XLE 67.85 (-0.2%), XLI 168.62 (+1.1%).
+- **Setup to examine first thing next cycle (10:04 ET, Tier A opens 10:00):** KWEB (China internet ETF) 23.755 vs 24.35 close = -2.4%, so the sector ETF is down 2% or more for the first time today; the China-linked names are down more than it: XPEV 9.362 (-5.5% vs 9.91), LI 11.545 (-3.2% vs 11.93), plus HSAI -9.4% and TAL -7.3% from the 9:43 scan. Tier A also requires RSI(14, daily) below 35, a 5-minute higher low, and the four mean-reversion gates, including an external, sector-wide cause (a cited, dated source), a neutral-or-better fundamental datapoint, a real upside anchor with target of at least 2R, and dislocation rather than downtrend. XPEV and LI were up strongly yesterday (XPEV +7%), so the daily RSI may well be above 35, which would fail Tier A. Nothing is decided; it is only the lead to check.
