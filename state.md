@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-21 10:05 ET",
+  "as_of": "2026-10-21 10:18 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1788,6 +1788,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-21 10:05 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-21 10:18 ET",
       "equity": 405.43
     }
   ],
@@ -5425,3 +5429,11 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Rest of the mean-reversion scan (-3.5%, 15 hits): ISRG -4.4% (own earnings), EAT -3.8%, WING -6.1%, ELS -4.6%, MMYT -3.5%, BROS -4.0%, PEGA -4.1%, ERO -3.9%, CMG -4.9%, T -4.9% (own earnings), HSAI, TAL, XPEV, YMM -3.7%. These are mostly restaurant/consumer names and earnings reactions; none is sector-tied with a sourced cause. Not individually gate-checked: EAT, WING, ELS, MMYT, BROS, PEGA, ERO, CMG, YMM. No entry.
 - Momentum: not yet open (10:30 ET). Candidates unchanged from the pre-open brief (DELL, ROIV, SPCX, AMKR, CRDO, VRT); will check divergence from peers and a dated catalyst then.
 - Hourly news pass is the next trigger (10:12 ET). Trades today 0. Positions 0/5.
+
+### Cycle 423 (hourly, with news) - 2026-10-21 10:18 ET
+- Reconciled: flat, equity/BP $405.43, no positions, no open orders. Peak 437.99, breaker 394.19 unchanged.
+- Tape: SPY 768.81, QQQ 720.67, SMH 550.60 (semis/AI hardware lead); KWEB 23.645 (-2.9%), XLC -1.2%, XLV soft.
+- News: three WebSearches (market open Oct 21; Chipotle/Wingstop) returned nothing dated Oct 21. News-dependent gates are unverifiable and therefore FAIL; no news claims made.
+- Mean-reversion: scan returned 21 hits. Restaurant group down together (CMG -4.2%, WING -5.8%, EAT -3.8%, CAVA -3.8%, BROS -4.2%). Only CMG has daily RSI<35 (33.5); WING 65.9, EAT 43.8, CAVA 56.5, BROS 60.0. CMG earnings Oct 28 (not an own-earnings reaction), but no sector ETF check and no sourced external cause, no confirmed 5-min higher low: Tier A FAIL (gate 1 unsourced). China pocket fails Tier A on RSI. Tier B opens 11:30 ET; restaurants remain a lead.
+- Momentum: not eligible before 10:30 ET. Watch: DELL, ROIV, SPCX, AMKR, CRDO, VRT (group-beta caveat; need divergence plus dated catalyst).
+- No order placed; no gate-clean candidate. Trades today 0 (target, not a reason to loosen gates).
