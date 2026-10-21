@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-21 12:03 ET",
+  "as_of": "2026-10-21 12:13 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1828,6 +1828,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-21 12:03 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-21 12:13 ET",
       "equity": 405.43
     }
   ],
@@ -5536,4 +5540,12 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Tape: SPY 772.68 (+0.5%), QQQ 725.91 (+1.2%), SMH 556.52 (+1.9%), KWEB 23.725 (-2.6%), XLV 178.42 (-0.8%). Unchanged character.
 - Mean-reversion scan: 28 hits, same names as prior cycles (WING -6.6%, DXCM -6.4%, TDS -6.0%, RCUS -8.4%, T -6.4% own earnings, HSAI, TAL, XPEV China ADRs, restaurants CMG/EAT/BROS). New small names: PCVX -3.7%, CELH -3.6%. No dated, cited external cause, gate 1 FAIL. No entry.
 - Momentum scan: FTAI +5.3%, SPCX +10.3%, ECHO +8.0%, SUNB +3.2% (new, rel vol 1.29), ROIV +4.6% (rel vol 2.2, fading from +6.6%), SMCI +9.7%. No dated catalyst in hand for any; SPCX/SMCI group beta. Gates 1/2 FAIL. No entry. News pass due at the 12:12 ET hourly.
+- No order placed. Trades today 0 (target, not a reason to loosen gates).
+
+### Cycle 433 (hourly, with news) - 2026-10-21 12:13 ET
+- Reconciled: flat, equity/BP $405.43, no positions, no open orders. Peak 437.99, breaker 394.19.
+- Tape: SPY 772.56 (+0.5%), QQQ 725.73 (+1.1%), SMH 556.20 (+1.8%), KWEB 23.74 (-2.5%), XLV 178.43 (-0.8%). Same shape all session: semis/AI lead, China internet and healthcare soft.
+- News (2 WebSearches: broad market Oct 21; EchoStar): neither returned anything dated Oct 21 (market search surfaced only Oct 15 and undated/older items; EchoStar results were 2025 to Jan 2026 pieces, one noting its SpaceX stake). Gate 1 (mean-reversion) and gate 2 (momentum) news requirements cannot be verified, FAIL. Not citing the older items as today's cause.
+- Mean-reversion scan: 32 hits. Largest: RCUS -10.8% (single-name biotech), TAL -8.7%, WING -6.6%, T -6.4% (own earnings), TDS -6.1%, HSAI -6.1%, DXCM -5.9%, XPEV -5.8%, NFLX -5.0% (earnings reaction). New small hits: MTZ -3.8%, BKNG -3.6%, KOD -3.9%. No sector-ETF-confirmed dislocation (XLV only -0.8%), no sourced cause. No entry.
+- Momentum scan: FTAI +3.8% (fading from +5.3%), SPCX +10.1%, ECHO +8.0%, SUNB +3.1%, ROIV +4.4% (fading, rel vol 2.3), SMCI +9.5%. ECHO holds a SpaceX stake (per older coverage), so its move tracks SPCX = group beta, not divergence; SMCI tracks AI hardware. No dated catalyst for any. FAIL. No entry.
 - No order placed. Trades today 0 (target, not a reason to loosen gates).
