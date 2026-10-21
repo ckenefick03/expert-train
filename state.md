@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-21 12:33 ET",
+  "as_of": "2026-10-21 12:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1840,6 +1840,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-21 12:33 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-21 12:43 ET",
       "equity": 405.43
     }
   ],
@@ -5570,4 +5574,11 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Tape: SPY 772.27 (+0.4%), QQQ 725.27 (+1.1%), SMH 554.86 (+1.6%), KWEB 23.72 (-2.6%), XLV 178.49 (-0.7%). Unchanged.
 - Mean-reversion scan (>=5% down, 9 hits): same set as Cycle 434 (WING -6.9%, DXCM -6.2%, NFLX -5.3%, TDS -7.5%, T -6.4% own earnings, RCUS -11.8%, HSAI, TAL -9.1%, XPEV). Still no dated, cited external cause; gate 1 FAIL. No entry.
 - Momentum scan: SPCX +10.1%, ECHO +8.1%, ROIV +4.7% (rel vol 2.4), SMCI +8.9% (FTAI dropped out below +3%). Group beta / no dated catalyst. FAIL. No entry.
+- No order placed. Trades today 0 (target, not a reason to loosen gates).
+
+### Cycle 436 - 2026-10-21 12:43 ET
+- Reconciled: flat, equity/BP $405.43, no positions, no open orders.
+- Tape: SPY 772.94 (+0.5%), QQQ 726.42 (+1.2%), SMH 556.51 (+1.9%), KWEB 23.73 (-2.5%), XLV 178.10 (-1.0%). Unchanged.
+- Mean-reversion scan (>=5% down, 9 hits): WING -6.7%, DXCM -6.3%, TDS -7.5%, T -6.2% (own earnings), RCUS -12.0%, HSAI -5.5%, TAL -9.1%, XPEV -5.5%, plus new CLMT -5.2% (single-name energy/refining). NFLX moved out of the list. No dated, cited external cause for any; gate 1 FAIL. No entry.
+- Momentum scan: FTAI +3.7%, SPCX +10.2%, ECHO +8.4%, SUNB +3.2%, ROIV +4.1% (rel vol 2.5, fading), SMCI +9.6%. Group beta / no dated catalyst. FAIL. No entry.
 - No order placed. Trades today 0 (target, not a reason to loosen gates).
