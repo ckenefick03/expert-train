@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-21 11:43 ET",
+  "as_of": "2026-10-21 11:53 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1820,6 +1820,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-21 11:43 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-21 11:53 ET",
       "equity": 405.43
     }
   ],
@@ -5514,4 +5518,11 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Tape: SPY 772.44 (+0.4%), QQQ 725.72 (+1.1%), SMH 555.97 (+1.8%), KWEB 23.74 (-2.5%), XLV 178.18 (-0.9%).
 - Mean-reversion scan: 26 hits (Tier B). DXCM -6.3%, WING -6.6%, RCUS -7.2%, HSAI/TAL/XPEV China ADRs -6 to -8%, T -6.7% (own earnings), ABT -4.4% (own earnings), NFLX -4.8% (earnings reaction), TDS -4.8%, IBRX -4.6%, CMG -4.4%, EAT -4.3%. No dated, cited external cause found anywhere (last news pass 11:16 returned nothing dated Oct 21), so gate 1 FAIL for all. No entry.
 - Momentum scan: SPCX +10.8% (rel vol 1.02), ECHO +8.5%, SMCI +10.1%, ROIV +5.2% (rel vol 2.1, fading from +6.6% at 11:16). SPCX and SMCI move with the AI/space-hardware complex (group beta, no divergence); ECHO and ROIV have no dated catalyst. Gates 1/2 FAIL. No entry.
+- No order placed. Trades today 0 (target, not a reason to loosen gates).
+
+### Cycle 431 - 2026-10-21 11:53 ET
+- Reconciled: flat, equity/BP $405.43, no positions, no open orders.
+- Tape: SPY 772.66 (+0.5%), QQQ 726.23 (+1.2%), SMH 556.96 (+1.9%), KWEB 23.71 (-2.6%), XLV 178.16 (-0.9%). Steady, no reversal.
+- Mean-reversion scan (>=5% down, 8 hits): WING -6.5%, DXCM -6.3%, TDS -5.5%, RCUS -7.9%, T -6.8% (own earnings), HSAI -6.5%, TAL -8.6%, XPEV -6.0%. No dated, cited external cause (last news pass 11:16 found none), gate 1 FAIL. No entry.
+- Momentum scan: FTAI +5.3% (new, rel vol 1.0), SPCX +10.5%, ECHO +8.5%, ROIV +5.2% (rel vol 2.2), SMCI +10.3%. SPCX/SMCI group beta; FTAI, ECHO, ROIV have no dated catalyst in hand. Gates 1/2 FAIL. No entry. Next hourly pass (12:12 ET) will search news for these leads.
 - No order placed. Trades today 0 (target, not a reason to loosen gates).
