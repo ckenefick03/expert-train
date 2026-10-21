@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-21 15:03 ET",
+  "as_of": "2026-10-21 15:14 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1901,6 +1901,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-21 15:03 ET",
       "equity": 405.43
+    },
+    {
+      "t": "2026-10-21 15:14 ET",
+      "equity": 405.43
     }
   ],
   "positions": [],
@@ -1991,7 +1995,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "10:05 ET: semis/AI lead (SMH +1.3%, QQQ +0.7%); China internet is the weak pocket (KWEB -2.7%, BABA/PDD -3.4%, XPEV -5.2%); healthcare soft (XLV -1.0%).",
+    "read": "Oct 21 (as of 15:15 ET): indices modestly up but off highs, semis/AI infrastructure and software/security lead, China internet, restaurants, telecom and single-name biotech lag. No dated news explained any move. Account flat all day, zero qualifying setups.",
     "chips": [
       {
         "name": "SPY",
@@ -5738,3 +5742,11 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Mean-reversion (Tier C, forced-tag only): >=5% scan 20 hits (list widened as the tape faded): EXPE -5.1%, WING -8.3%, KOD -5.5%, SE -5.1%, NFLX -5.1% (earnings reaction), FRPT -5.3%, CLMT -6.2%, CELH -5.8%, CMG -5.8%, T -5.6% (own earnings), RCUS -18.3% (new low), RSI -5.3%, HSAI -6.8%, DRVN -5.6%, TAL -9.3%, XPEV -6.4%, AMRO -5.5%, PONY -5.5%, COTY -6.8%, OPEN -6.1%. All still making lows into the afternoon, i.e. no stabilization (gate 4 FAIL) and no dated, cited external cause (gate 1 FAIL). No entry.
 - Momentum (23 hits): software/security/network group (MDB, NET, ZS, OKTA, TENB, FSLY, S, APLD) fading from the highs, but still group beta; SPCX +6.8%, ECHO +6.6%, SMCI +8.4%, SKYD +9.5%, ASST +13.9%, CRCL +5.5%, CIEN +5.8% (new), VST +4.3% (new), BRKR +5.4%, TNGX +5.7%, FTAI/AMBA dropped off. New hits CIEN and VST are optical networking and power (AI-infrastructure complex; group beta with SMCI/APLD). No dated catalyst for any. Gates 1/2 FAIL. No entry.
 - No order placed. Trades today 0 (target, not a reason to loosen gates). Next: 15:12 hourly (final news pass), 15:30 entry cutoff, 15:47 close recap.
+
+### Cycle 451 (hourly, with news) - 2026-10-21 15:14 ET
+- Reconciled: flat, equity/BP $405.43, no positions, no open orders. Peak 437.99, breaker 394.19.
+- Tape: SPY 771.59 (+0.3%), QQQ 724.01 (+0.9%), SMH 554.69 (+1.5%), KWEB 23.645 (-2.9%), XLV 178.66 (-0.6%). Off the highs but intact.
+- News (2 WebSearches: market afternoon Oct 21; restaurants WING/CMG): nothing dated Oct 21 returned. Market results were Feb-Aug 2026 session wraps; restaurant results were 2024-2026 Wingstop pieces (earnings misses, price target cuts, one unreliable May 2026 domain), none today. Gate 1 and gate 2 news requirements unverifiable: FAIL for every candidate. Older items not used as today's cause.
+- Mean-reversion (Tier C, forced-tag only): >=5% scan 19 hits: EXPE -5.2%, WING -8.4%, KOD -5.6%, DXCM -5.4%, SE -5.1%, NFLX -5.2% (earnings reaction), FRPT -5.4%, CLMT -6.6%, CELH -6.0%, CMG -5.8%, T -5.7% (own earnings), RCUS -17.6%, RSI -5.5%, HSAI -6.4%, TAL -9.5%, XPEV -6.2%, AMRO -7.3%, COTY -6.4%, OPEN -5.8%. All at or near lows of the day, no higher low (gate 4), no sourced cause (gate 1). No entry.
+- Momentum: 26 hits. New: TSLA +3.1% (reports earnings after the close today = inside the earnings exclusion window), UAL +4.1%, VST +4.6%, CIEN +5.9%. Software/security/network group still six-to-eight wide (MDB, NET, ZS, OKTA, TENB, FSLY, S, APLD) = group beta; SPCX +7.1%, ECHO +6.9%, SMCI +8.5%, SKYD +9.1%, ASST +13.5%, CRCL +5.0%, BRKR +5.6%, TNGX +6.0%, AMX +5.8%, BEPC +3.6%, FTAI +3.2%, AMBA +3.3% (fading), ROIV +3.9% (rel vol 3.4, fading), SRRK +3.3%. No dated catalyst; TSLA excluded by earnings. Gates 1/2 FAIL. No entry.
+- No order placed. Trades today 0 (target, not a reason to loosen gates). 15:30 ET entry cutoff next; close recap 15:47 ET.
