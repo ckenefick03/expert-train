@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-21 14:23 ET",
+  "as_of": "2026-10-21 14:33 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1884,6 +1884,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-21 14:23 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-21 14:33 ET",
       "equity": 405.43
     }
   ],
@@ -5694,3 +5698,10 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Mean-reversion scan (>=5% down, 9 hits): WING -7.5%, CLMT -5.8%, TDS -8.4%, CMG -5.1%, T -6.3% (own earnings), RCUS -16.9% (still at lows of day), HSAI -5.9%, TAL -8.7%, XPEV -5.3%. DXCM recovered above -5%. No dated, cited external cause (hourly news 14:13 found none); gate 1 FAIL; falling names fail gate 4. No entry. Tier B closes 14:30 ET.
 - Momentum scan (21 hits): software/security group now six-wide (MDB, NET, ZS, OKTA +7.6%, TENB +4.5% new, FSLY +8.0% new) = group beta; SPCX +7.0%, ECHO +7.0%, SMCI +9.3%, SKYD +9.4%, ASST +15.5%, CRCL +6.7%, AMBA +6.1%, TNGX +6.2%, FTAI +4.6%, BEPC +5.1%, AMX +5.5%, ROIV +4.3%, SUNB +3.6%, SRRK +3.4%, ONDS +3.8%. No dated catalyst; group moves. Gates 1/2 FAIL. No entry.
 - No order placed. Trades today 0 (target, not a reason to loosen gates).
+
+### Cycle 447 - 2026-10-21 14:33 ET
+- Reconciled: flat, equity/BP $405.43, no positions, no open orders.
+- Tape: SPY 774.27 (+0.7%), QQQ 727.10 (+1.3%), SMH 557.94 (+2.2%), KWEB 23.745 (-2.5%), XLV 178.79 (-0.6%). Steady.
+- Mean-reversion: 14:30 ET passed, so Tier B is closed and Tier C (2.5% scan, forced-tag only, all four gates still required) is now the live window. Tier C scan: 66 hits. Largest: RCUS -18.2% (still making lows), TDS -8.6%, TAL -8.8%, WING -6.9%, CLMT -6.4%, T -6.2% (own earnings), HSAI -5.9%, COTY -5.4%, XPEV -5.3%, CMG -5.0%, DXCM -5.0%, MBLY -4.9%; the broad 2.5-4.5% tail includes restaurants, China ADRs, travel (EXPE, BKNG), telecom/towers (TMUS, AMT, TDS, CHTR, T), staples (CLX, MKC, CAG), apparel (LULU, UAA). Still no dated, cited external cause for any group and no sector ETF at -2% except KWEB (China ADRs fail on RSI/higher-low earlier), so gate 1 FAIL. A forced-tag entry would not relax any gate; none qualifies. No entry.
+- Momentum (22 hits, entries still allowed to 15:30): software/security group (MDB +6.5%, NET +7.0%, ZS +7.5%, OKTA +7.7%, TENB +4.4%, FSLY +8.1%) = group beta; SPCX +7.0%, ECHO +6.7%, SMCI +9.0%, SKYD +10.2%, ASST +14.5%, CRCL +6.6%, AMBA +6.2%, TNGX +7.0%, FTAI +4.5%, BEPC +5.0%, AMX +5.7%, AXTA +4.1% (new), ROIV +3.5% (rel vol 3.2, fading), SUNB +3.4%, SRRK +3.6%, ONDS +3.3%. No dated catalyst; gates 1/2 FAIL. No entry.
+- No order placed. Trades today 0 (target, not a reason to loosen gates). Close recap due 15:47 ET (flat, nothing to hold).
