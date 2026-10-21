@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-21 09:54 ET",
+  "as_of": "2026-10-21 10:05 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1785,6 +1785,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-21 09:54 ET",
       "equity": 405.43
+    },
+    {
+      "t": "2026-10-21 10:05 ET",
+      "equity": 405.43
     }
   ],
   "positions": [],
@@ -1875,35 +1879,35 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Pre-market 8:28 ET: risk-on tilt led by semis/AI hardware (SMH +1.9%, QQQ +0.6%, SPY +0.25%); healthcare/medtech soft on earnings reactions (XLV -0.8%). No sector ETF down 2%.",
+    "read": "10:05 ET: semis/AI lead (SMH +1.3%, QQQ +0.7%); China internet is the weak pocket (KWEB -2.7%, BABA/PDD -3.4%, XPEV -5.2%); healthcare soft (XLV -1.0%).",
     "chips": [
       {
         "name": "SPY",
-        "chg": 0.25
+        "chg": 0.15
       },
       {
         "name": "QQQ",
-        "chg": 0.64
+        "chg": 0.71
       },
       {
         "name": "SMH",
-        "chg": 1.85
+        "chg": 1.29
+      },
+      {
+        "name": "KWEB",
+        "chg": -2.69
       },
       {
         "name": "XLV",
-        "chg": -0.81
+        "chg": -0.99
       },
       {
-        "name": "XLU",
-        "chg": 0.26
-      },
-      {
-        "name": "TLT",
-        "chg": 0.21
+        "name": "XLI",
+        "chg": 0.92
       },
       {
         "name": "XLE",
-        "chg": -0.01
+        "chg": 0.06
       }
     ]
   }
@@ -5410,3 +5414,14 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Reconciled: flat, cash/BP $405.43, equity $405.43, no positions or orders. 9:55 ET is before the 10:00 ET entry opening, so no entry is possible this cycle; scans were not re-run (they were run at 9:43 ET and nothing could be traded on them).
 - Tape: SPY 770.42 (+0.18%), QQQ 721.30 (+0.51%), SMH 551.80 (+1.0%), XLV 179.13 (-0.4%), XLE 67.85 (-0.2%), XLI 168.62 (+1.1%).
 - **Setup to examine first thing next cycle (10:04 ET, Tier A opens 10:00):** KWEB (China internet ETF) 23.755 vs 24.35 close = -2.4%, so the sector ETF is down 2% or more for the first time today; the China-linked names are down more than it: XPEV 9.362 (-5.5% vs 9.91), LI 11.545 (-3.2% vs 11.93), plus HSAI -9.4% and TAL -7.3% from the 9:43 scan. Tier A also requires RSI(14, daily) below 35, a 5-minute higher low, and the four mean-reversion gates, including an external, sector-wide cause (a cited, dated source), a neutral-or-better fundamental datapoint, a real upside anchor with target of at least 2R, and dislocation rather than downtrend. XPEV and LI were up strongly yesterday (XPEV +7%), so the daily RSI may well be above 35, which would fail Tier A. Nothing is decided; it is only the lead to check.
+
+### Cycle 422 - 2026-10-21 10:05 ET
+- Reconciled: flat, cash/BP $405.43, equity $405.43, 0 positions, no orders. First cycle in the entry window (Tier A opened 10:00 ET; momentum from 10:30 ET).
+- Tape: SPY 770.23 (+0.15%), QQQ 722.75 (+0.71%), SMH 553.39 (+1.3%), KWEB 23.695 (-2.7%), FXI 32.98 (-1.6%), BABA 104.92 (-3.4%), PDD 78.86 (-3.4%), NIO 3.35 (-2.3%), XPEV 9.40 (-5.2%), LI 11.525 (-3.4%), XLV 178.03 (-1.0%), XLI 168.33 (+0.9%), XLE 68.01 (+0.1%), XLF 55.76 (+0.1%), XLU 42.02 (+0.3%), XLY 115.35 (-0.1%).
+- **Tier A check on the China-linked pocket (KWEB is the sector ETF and is down 2.7%, so the sector condition IS met for the first time today):**
+  - XPEV: down 5.2% on the day vs KWEB -2.7% (down more than its sector: pass); intraday drop 5.2% (just meets the 5% threshold). **Daily RSI(14) was 49.4 at yesterday's close (35.1 the day before): it needs to be below 35, so Tier A FAILS.** Even with today's drop the RSI would be near 42-43, still not under 35. Five-minute action 9:30-10:00 ET: lower highs and no higher low (9.36 low at 13:50Z, retest 9.36 at 13:55Z, close 9.39), so the 5-minute higher-low condition is not met either.
+  - LI: -3.4%, daily RSI 56.0 yesterday: fails Tier A (needs 5% drop and RSI below 35). HSAI (-7.8%, RSI 41.0) and TAL (-8.7%, RSI 40.1) also fail the RSI test; BABA RSI 45.5, PDD 55.3, NIO 42.2, KWEB 44.3: none below 35.
+  - Gate 1 (external cause, cited): the WebSearch for the China/Hang Seng selloff returned nothing dated Oct 21, 2026, so no sourced sector-wide cause exists; by rule this is a FAIL. Gate 4 (dislocation vs downtrend): XPEV has fallen from about 11.2 on Sep 1 to 9.2 on Oct 16-19, a seven-week downtrend; yesterday's +7% pop (to 9.91 on 15.5M shares) has now fully reversed, so today looks like a failed bounce inside a downtrend, not a dislocation. Result: no entry.
+- Rest of the mean-reversion scan (-3.5%, 15 hits): ISRG -4.4% (own earnings), EAT -3.8%, WING -6.1%, ELS -4.6%, MMYT -3.5%, BROS -4.0%, PEGA -4.1%, ERO -3.9%, CMG -4.9%, T -4.9% (own earnings), HSAI, TAL, XPEV, YMM -3.7%. These are mostly restaurant/consumer names and earnings reactions; none is sector-tied with a sourced cause. Not individually gate-checked: EAT, WING, ELS, MMYT, BROS, PEGA, ERO, CMG, YMM. No entry.
+- Momentum: not yet open (10:30 ET). Candidates unchanged from the pre-open brief (DELL, ROIV, SPCX, AMKR, CRDO, VRT); will check divergence from peers and a dated catalyst then.
+- Hourly news pass is the next trigger (10:12 ET). Trades today 0. Positions 0/5.
