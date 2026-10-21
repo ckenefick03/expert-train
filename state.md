@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-21 14:04 ET",
+  "as_of": "2026-10-21 14:13 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1876,6 +1876,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-21 14:04 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-21 14:13 ET",
       "equity": 405.43
     }
   ],
@@ -5670,4 +5674,12 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Tape: SPY 773.70 (+0.6%), QQQ 726.46 (+1.2%), SMH 556.92 (+1.9%), KWEB 23.765 (-2.4%), XLV 178.49 (-0.7%). Steady.
 - Mean-reversion scan (>=5% down, 11 hits): RCUS -15.8% (new low of day), WING -7.8%, TAL -8.5%, TDS -7.7%, CLMT -6.0%, DXCM -5.7%, T -6.3% (own earnings), CMG -5.1%, HSAI -5.3%, XPEV -5.3%, MBLY -5.2% (new). No dated, cited external cause; gate 1 FAIL. Still-falling lows (RCUS, WING at lows of day) fail gate 4 (no stabilization). No entry.
 - Momentum scan (18 hits): software group (MDB +6.4%, NET +6.8%, ZS +7.3%), SPCX +7.1% (fading), ECHO +7.3%, SMCI +9.1%, SKYD +8.7%, ASST +14.0% (new, rel vol 1.0, crypto-treasury name, unsourced), AMX +5.5% (new), plus CRCL, AMBA, TNGX, BEPC, SRRK, ONDS, SUNB, FTAI, ROIV (+3.6%, fading, rel vol 3.0). No dated catalyst in hand; group beta or unsourced. Gates 1/2 FAIL. No entry. News pass is the hourly cycle now due at 14:12 ET.
+- No order placed. Trades today 0 (target, not a reason to loosen gates).
+
+### Cycle 445 (hourly, with news) - 2026-10-21 14:13 ET
+- Reconciled: flat, equity/BP $405.43, no positions, no open orders. Peak 437.99, breaker 394.19.
+- Tape: SPY 773.93 (+0.6%), QQQ 726.57 (+1.2%), SMH 557.38 (+2.0%), KWEB 23.76 (-2.4%), XLV 178.61 (-0.7%). Same shape all session.
+- News (2 WebSearches: software/cyber group; broad market close Oct 21): neither returned anything dated Oct 21. Software results were older group-rally pieces (2023-2025, an Aug 4, 2026 Palantir-earnings item, an undated Guggenheim upgrade), none explaining today's move; broad-market results were older (May 8, 2026 and earlier). Gate 1 (mean-reversion) and gate 2 (momentum) news requirements cannot be verified: FAIL. Older items not used as today's cause.
+- Mean-reversion scan (>=3.5% down): 34 hits. RCUS -16.8% (new low of day, still falling), TAL -8.6%, WING -7.8%, TDS -7.7%, CLMT -6.0%, T -6.2% (own earnings), CMG -5.3%, HSAI -5.3%, XPEV -5.2%, DXCM -5.0%, NFLX -4.5% (earnings reaction), EAT -4.4%, BROS -4.3%, CAVA -4.1%, others 3.5-4.5%. Restaurants (WING, CMG, EAT, BROS, CAVA) are a visible group, still no ETF confirmation or sourced cause. Falling to lows of day = no stabilization (gate 4). No entry. Tier B ends 14:30 ET; Tier C (forced-tag only) 14:30-15:30.
+- Momentum scan (19 hits): software/security group four-wide (MDB +6.3%, NET +6.9%, ZS +7.4%, OKTA +7.6% new) = group beta; SPCX +6.4% (fading from +10.8%), ECHO +7.4%, SMCI +9.4%, SKYD +9.1%, ASST +16.1% (crypto-treasury name, unsourced), CRCL +6.7%, AMBA +6.3%, TNGX +6.0%, FTAI +4.5%, BEPC +5.1%, AMX +5.5%, ROIV +4.2%, SUNB +3.8%, SRRK +3.1%, ONDS +3.7%. No dated catalyst for any. Gates 1/2 FAIL. No entry.
 - No order placed. Trades today 0 (target, not a reason to loosen gates).
