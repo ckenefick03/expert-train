@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-20 15:48 ET",
+  "as_of": "2026-10-21 08:29 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,12 +41,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat overnight; day closed +2.66 (+0.66%).",
+  "status_note": "Flat; pre-open brief written, entries open 10:00 ET.",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-10-20",
-    "start_equity": 402.77,
-    "trades": 2,
+    "date": "2026-10-21",
+    "start_equity": 405.43,
+    "trades": 0,
     "forced": 0
   },
   "equity_history": [
@@ -1773,6 +1773,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-20 15:48 ET",
       "equity": 405.43
+    },
+    {
+      "t": "2026-10-21 08:29 ET",
+      "equity": 405.43
     }
   ],
   "positions": [],
@@ -1863,35 +1867,35 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Broad risk-on: indexes, semis, software, healthcare and rate-sensitives up; energy lower",
+    "read": "Pre-market 8:28 ET: risk-on tilt led by semis/AI hardware (SMH +1.9%, QQQ +0.6%, SPY +0.25%); healthcare/medtech soft on earnings reactions (XLV -0.8%). No sector ETF down 2%.",
     "chips": [
       {
         "name": "SPY",
-        "chg": 0.59
+        "chg": 0.25
       },
       {
         "name": "QQQ",
-        "chg": 0.35
+        "chg": 0.64
       },
       {
         "name": "SMH",
-        "chg": 0.35
+        "chg": 1.85
       },
       {
-        "name": "IGV",
-        "chg": 0.8
-      },
-      {
-        "name": "ITB",
-        "chg": 2.46
+        "name": "XLV",
+        "chg": -0.81
       },
       {
         "name": "XLU",
-        "chg": 1.33
+        "chg": 0.26
+      },
+      {
+        "name": "TLT",
+        "chg": 0.21
       },
       {
         "name": "XLE",
-        "chg": -0.92
+        "chg": -0.01
       }
     ]
   }
@@ -5371,3 +5375,17 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - **Overnight: no position rolls.** HAS was closed at 15:43 ET under the end-of-day rule because a fractional position cannot carry a resting stop and the 108.00 stop was manual only. The HAS thesis (Q3 beat, raised 2026 outlook, doubled buyback) is intact, but holding an unprotected position overnight was not worth it; re-entry tomorrow is allowed only if all four momentum gates pass again.
 - Day recap (Oct 20): ran every scheduled cycle from 12:42 ET (Cycle 400) through 15:42 ET plus the hourly news passes at 13:13, 14:13 and 15:14 ET; no cycle was missed. Entries: 1 (HAS momentum, organic). Exits: 1 (HAS, +2.66, +1.03R). Skips: all mean-reversion candidates (no sector ETF down 2%, gate failures documented in Cycles 378-417); no forced trades; Tier C never used. P&L +2.66 on the day (+0.66%), equity 402.77 -> 405.43; peak 437.99 and breaker 394.19 unchanged. Disclosed gaps: unresearched scan hits listed each cycle; no scans in Cycle 417 (post-15:30); WebSearch returned no dated Oct 20 market-wrap news at any hourly pass, so no market-news claims were made; PDT status for limited_margin still unverified.
 - Next session: Oct 21. Pre-open brief runs 12:28Z. Earnings to watch: META, TSLA, IBM, TXN, LRCX (after close), NEE, MHO, TMO, DHR, ABT, T (before open).
+
+### Pre-open brief - 2026-10-21 08:29 ET
+- Reconcile: flat, 0 positions, cash/BP $405.43, equity $405.43, no open orders. Nothing to stop-check. Read-only cycle: no orders placed.
+- Tape (pre-market last vs 10/20 close; bid/ask on thin ETFs are noisy, so I used last trades): SPY 770.94 (+0.25%), QQQ 722.09 (+0.64%), SMH 556.50 (+1.85%), XLY 115.76 (+0.2%), XLI 168.00 (+0.7%, quote spread is broken, treat as unreliable), XLE 67.96 (0.0%), XLV 178.36 (-0.8%), XLU 41.98 (+0.2%), XLF 55.88 (+0.3%), TLT 80.30 (+0.2%), ITB 87.35 (0.0%). Former holding HAS 110.15 pre-market (+0.6% vs 109.52 close; I sold at 108.74).
+- Regime read: risk-on tilt led by semiconductors and AI hardware; healthcare/medtech weak after earnings. No sector ETF down 2%, so Tier A's sector condition is not met at this hour.
+- News (WebSearch, three queries): no dated Oct 21 market wrap, futures report, Netflix result or macro headline was returned (hits were from 2014 to 2025 and older), so I make no news claim and treat every news-dependent gate as unverifiable this morning. Per the framework, an unverifiable gate is a FAIL. Fed meeting is Oct 28; I did not find today's data-release calendar.
+- Earnings (get_earnings_calendar, high market cap): reported this morning with actuals: TMO 6.68 vs 6.40, DHR 2.11 vs 1.92, T 0.65 vs 0.60, ABT 1.42 vs 1.42, NEE 1.24 vs 1.19, ELV 6.99 vs 4.69, MHO 2.70 vs 3.25 (miss), MCO 4.14 vs 4.25 (miss), PM, LAD, WAB, NTRS, TDY, CME. After the close today (avoid, inside the 2-session exclusion): META, TSLA, IBM, TXN, LRCX, URI, KMI, CSX, LVS, LUV, SAP, CACI. Tomorrow before the open (also inside the exclusion for entries today and tomorrow): HON, LMT, UNP, NSC, PHM, NVR, VLO, PG, BX, CMCSA, AAL, CBRE, DOW, TTMI, SPOT; after the close tomorrow: WDC, MXL, BE, NEM, DECK, OMC.
+- Pre-market scan, mean-reversion side (down 3.5% or more, 9 hits): ISRG -6.6%, NFLX -7.1% (price 63.84 suggests a split basis; unverified), T -5.1%, DHR -3.7%, ABT -3.8%, TWST -4.7%, PEGA -4.2%, XPEV -4.5%, JBS -4.1%. Most are reactions to their own earnings (ISRG and NFLX yesterday after the close, T/DHR/ABT today), which is company-specific and fails gate 1.
+- Pre-market scan, momentum side (up 4% or more, 27 hits), dominated by semis and AI infrastructure: DELL +7.1%, LITE +5.5%, WDC +4.2% (reports tomorrow after close), VRT +6.7%, CRDO +7.1%, AMKR +7.9%, SMCI +13.2%, HPE +5.2%, AAOI +5.4%, AXTI +4.7%, COHU, AEHR, SMTC +4.9%, BE +5.3% (reports tomorrow after close), MOD +4.3%, plus ROIV +8.8%, SPCX +8.3%, DOCN +5.4%, ECHO +4.7%, FPS +4.4%, SEI +4.9%, bitcoin miners (HUT, WULF, IREN, GLXY), and others.
+- Candidates to watch (watch only; no entries before 10:00 ET, momentum earliest 10:30 ET):
+  - Momentum: (1) DELL: +7.1% vs a peer complex (HPE +5.2%, SMCI +13%) that is also up, so gate 1 (divergence from peers) likely fails as group beta unless it separates from HPE/SMCI by the 10:30 ET read; need a cited catalyst. (2) ROIV +8.8%: idiosyncratic biotech move, catalyst unknown, needs a dated source. (3) SPCX +8.3% on very heavy volume: unresearched, newly large-cap name, catalyst unknown. (4) AMKR +7.9% or CRDO +7.1% only if one clearly outruns SMH (+1.9%) over several sessions, not just today. (5) VRT +6.7% as the AI-infrastructure leader; same group-beta caveat.
+  - Mean-reversion: honest read is that none qualifies yet. (1) XPEV -4.5% after a +7% day yesterday: a pullback inside an up-move, check whether China EV peers (LI, NIO) are down together, which would make it sector-tied. (2) DHR -3.7% and ABT -3.8%: EPS beats (DHR) / in-line (ABT) with selling suggests sell-the-news or healthcare rotation (XLV -0.8%), but a reaction to a company's own earnings is company-specific, so gate 1 fails unless peers (TMO, XLV) are down in sympathy; they are not clearly. (3) T -5.1%: own earnings reaction, expect FAIL. (4) PEGA -4.2% (software, earnings status unverified). (5) Carry-overs not yet gate-checked: SE, DPC, LGN, FPS (now +4.4% pre-market), IREN (+4.2% pre-market).
+- Held-name risks: none (flat). Open items: PDT status for limited_margin unverified; TTMI, LRCX, MXL, WDC, BE and others on the earnings list are excluded from entries until after their reports.
+- Day plan: Tier A 10:00-11:30 ET only if a sector ETF is down 2% or more with a stock down more than its sector; Tier B 11:30-14:30; momentum from 10:30 ET; $105 size, max 5 positions; no entries after 15:30 ET; close or consciously hold at the 15:47 ET recap.
