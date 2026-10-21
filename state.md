@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-21 08:29 ET",
+  "as_of": "2026-10-21 09:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1776,6 +1776,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-21 08:29 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-21 09:43 ET",
       "equity": 405.43
     }
   ],
@@ -5389,3 +5393,11 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
   - Mean-reversion: honest read is that none qualifies yet. (1) XPEV -4.5% after a +7% day yesterday: a pullback inside an up-move, check whether China EV peers (LI, NIO) are down together, which would make it sector-tied. (2) DHR -3.7% and ABT -3.8%: EPS beats (DHR) / in-line (ABT) with selling suggests sell-the-news or healthcare rotation (XLV -0.8%), but a reaction to a company's own earnings is company-specific, so gate 1 fails unless peers (TMO, XLV) are down in sympathy; they are not clearly. (3) T -5.1%: own earnings reaction, expect FAIL. (4) PEGA -4.2% (software, earnings status unverified). (5) Carry-overs not yet gate-checked: SE, DPC, LGN, FPS (now +4.4% pre-market), IREN (+4.2% pre-market).
 - Held-name risks: none (flat). Open items: PDT status for limited_margin unverified; TTMI, LRCX, MXL, WDC, BE and others on the earnings list are excluded from entries until after their reports.
 - Day plan: Tier A 10:00-11:30 ET only if a sector ETF is down 2% or more with a stock down more than its sector; Tier B 11:30-14:30; momentum from 10:30 ET; $105 size, max 5 positions; no entries after 15:30 ET; close or consciously hold at the 15:47 ET recap.
+
+### Cycle 420 - 2026-10-21 09:43 ET
+- Reconciled: flat, cash/BP $405.43, equity $405.43, no positions, no open orders. Day start equity 405.43; 0 trades. Before 10:00 ET: no entries allowed this cycle (first 30-60 minutes are off-limits), so this is a tape and watch-list update only.
+- Tape (13:43Z): SPY 770.11 (+0.14%), QQQ 720.41 (+0.39%), SMH 552.40 (+1.1%), XLV 179.52 (-0.2%), XLY 115.58 (+0.1%), XLE 67.67 (-0.4%), XLU 42.09 (+0.5%), XLI 168.36 (+0.9%), XLF 55.88 (+0.3%). No sector ETF down 2%, so Tier A's sector condition is not met.
+- Pre-open watch list update: semis/AI hardware group is up together (DELL +4.6%, HPE +2.8%, SMCI +12.4%), so group beta rather than divergence; ROIV +5.3% (catalyst still unsourced). DHR bounced +2.4% (229.73 vs 224.24) and ABT +0.3%, ISRG -2.3% (427.72 vs 438.00), TMO flat: the healthcare earnings dip faded for DHR/ABT.
+- Mean-reversion scan (-3.5%, 13 hits): SCCO -4.1%, NBIS -3.5%, WING -4.0%, NFLX -3.9% (66.04, recovering from -7%), CRWV -3.6%, ELS -3.8%, CMG -4.1%, T -4.8%, HSAI -9.4%, TAL -7.3%, XPEV -5.4%, MBLY -4.1%, AMRO -3.6%. Observation: the China-linked group (XPEV -5.4%, LI -2.9%, HSAI -9.4%, TAL -7.3%) is weak together after yesterday's rally, a possible sector-tied pullback to examine after 10:00 ET (Tier A needs a sector ETF down 2%+, which is not available here, so any entry would be Tier B/C evidence-based or not at all). T, NFLX, CMG, WING are own-news names. Not gate-checked this cycle.
+- Note on yesterday's exit: HAS is now 111.69 (+2.0% vs the 109.52 close; my 108.74 exit was under the end-of-day rule and the risk of an unprotected overnight hold). That is the cost of the rule, recorded, not a reason to change it; any HAS re-entry needs all four momentum gates again (it would now be above its 111.25 target level and extended).
+- Next: first entries possible from 10:00 ET (reversion) and 10:30 ET (momentum).
