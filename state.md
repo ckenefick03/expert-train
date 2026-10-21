@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-21 13:53 ET",
+  "as_of": "2026-10-21 14:04 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1872,6 +1872,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-21 13:53 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-21 14:04 ET",
       "equity": 405.43
     }
   ],
@@ -5659,4 +5663,11 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Tape: SPY 774.02 (+0.6%), QQQ 726.69 (+1.3%), SMH 557.42 (+2.0%), KWEB 23.76 (-2.4%), XLV 178.42 (-0.8%). Steady.
 - Mean-reversion scan (>=5% down, 10 hits): WING -7.3%, DXCM -5.6%, CLMT -5.9%, TDS -9.7%, CMG -5.2% (back on the list), T -6.3% (own earnings), RCUS -14.5%, HSAI -5.5%, TAL -8.8%, XPEV -5.3%. No dated, cited external cause; gate 1 FAIL. No entry.
 - Momentum scan (16 hits): software group now three-wide (MDB +6.2%, NET +6.9% new, ZS +7.5%) = group beta; FTAI +4.3%, SPCX +7.2% (fading), ECHO +7.3%, CRCL +6.8%, SUNB +3.9%, AMBA +7.2%, SRRK +3.3%, ROIV +4.2%, SMCI +9.2%, BEPC +5.0%, TNGX +6.6%, SKYD +8.1%, ONDS +3.4% (new). No dated catalyst in hand for any. Gates 1/2 FAIL. No entry. The hourly news pass runs at 14:12 ET (software/cyber, SKYD, AMBA).
+- No order placed. Trades today 0 (target, not a reason to loosen gates).
+
+### Cycle 444 - 2026-10-21 14:04 ET
+- Reconciled: flat, equity/BP $405.43, no positions, no open orders.
+- Tape: SPY 773.70 (+0.6%), QQQ 726.46 (+1.2%), SMH 556.92 (+1.9%), KWEB 23.765 (-2.4%), XLV 178.49 (-0.7%). Steady.
+- Mean-reversion scan (>=5% down, 11 hits): RCUS -15.8% (new low of day), WING -7.8%, TAL -8.5%, TDS -7.7%, CLMT -6.0%, DXCM -5.7%, T -6.3% (own earnings), CMG -5.1%, HSAI -5.3%, XPEV -5.3%, MBLY -5.2% (new). No dated, cited external cause; gate 1 FAIL. Still-falling lows (RCUS, WING at lows of day) fail gate 4 (no stabilization). No entry.
+- Momentum scan (18 hits): software group (MDB +6.4%, NET +6.8%, ZS +7.3%), SPCX +7.1% (fading), ECHO +7.3%, SMCI +9.1%, SKYD +8.7%, ASST +14.0% (new, rel vol 1.0, crypto-treasury name, unsourced), AMX +5.5% (new), plus CRCL, AMBA, TNGX, BEPC, SRRK, ONDS, SUNB, FTAI, ROIV (+3.6%, fading, rel vol 3.0). No dated catalyst in hand; group beta or unsourced. Gates 1/2 FAIL. No entry. News pass is the hourly cycle now due at 14:12 ET.
 - No order placed. Trades today 0 (target, not a reason to loosen gates).
