@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-21 13:04 ET",
+  "as_of": "2026-10-21 13:13 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1852,6 +1852,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-21 13:04 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-21 13:13 ET",
       "equity": 405.43
     }
   ],
@@ -5604,3 +5608,11 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Mean-reversion scan (>=5% down, 9 hits): WING -7.3%, DXCM -5.6%, CLMT -5.8%, TDS -8.5%, T -5.9% (own earnings), RCUS -13.0%, HSAI -5.5%, TAL -9.0%, XPEV -5.5%. Same set; no dated, cited external cause, gate 1 FAIL. No entry.
 - Momentum scan (9 hits): new names CRCL +6.1% (rel vol 1.0), AMBA +7.5% (rel vol 1.2, semis; moves with SMH +2.0% complex so group beta), TNGX +6.0% (single-name biotech). Plus FTAI +3.7%, SPCX +10.0%, ECHO +7.8%, SUNB +3.2%, ROIV +4.1%, SMCI +9.9%. No dated catalyst in hand for any; news pass at 13:12 ET hourly. Gates 1/2 FAIL. No entry.
 - No order placed. Trades today 0 (target, not a reason to loosen gates).
+
+### Cycle 439 (hourly, with news) - 2026-10-21 13:13 ET
+- Reconciled: flat, equity/BP $405.43, no positions, no open orders. Peak 437.99, breaker 394.19.
+- Tape: SPY 773.79 (+0.6%), QQQ 727.34 (+1.4%), SMH 558.04 (+2.1%), KWEB 23.71 (-2.6%), XLV 178.40 (-0.8%). Steady all session; semis lead, China internet and health care soft.
+- News (2 WebSearches: RCUS; AMBA): neither returned anything dated Oct 21. RCUS results were 2025-and-earlier drops (offering, Q1 loss, target cuts); AMBA results were undated or earlier (an AAII Oct 13 piece whose headline contradicted its own data, so not used). Gate 1 (mean-reversion) and gate 2 (momentum) news requirements cannot be verified: FAIL.
+- Mean-reversion scan (>=3.5% down): 37 hits. RCUS -13.3% (biotech single name), TAL -9.1%, TDS -8.7%, WING -7.2%, CLMT -5.7%, T -5.9% (own earnings), HSAI -5.5%, XPEV -5.5%, DXCM -5.4%, CMG -4.8%, EAT -4.8%, NFLX -4.8% (earnings reaction). Others below 5%: EXPE, MTZ, BKNG, CHTR, BABA, ABT (own earnings), PDD, SE, PCVX, ELS, CAVA, BROS, CELH, JD, KT, RSI, DRVN, STNE, IBRX, YMM, MBLY, PONY, UAA/UA, OPEN. No sector-ETF-confirmed dislocation (XLV -0.8%, KWEB -2.6% but China ADRs fail Tier A RSI), no sourced cause. No entry.
+- Momentum scan: 10 hits. FTAI +4.0%, SPCX +8.4% (fading from +10.4%), ECHO +7.8% (tracks SPCX), CRCL +6.1%, SUNB +3.3%, AMBA +6.6% (semis group), ROIV +4.0% (rel vol 2.7, fading from +6.6%), SMCI +9.8%, BEPC +4.4% (new), TNGX +5.0%. No dated catalyst in hand for any; group moves. Gates 1/2 FAIL. No entry.
+- No order placed. Trades today 0 (target, not a reason to loosen gates). Tier B runs to 14:30 ET, Tier C then 15:30.
