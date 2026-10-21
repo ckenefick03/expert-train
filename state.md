@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-21 10:33 ET",
+  "as_of": "2026-10-21 10:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1796,6 +1796,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-21 10:33 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-21 10:43 ET",
       "equity": 405.43
     }
   ],
@@ -5447,4 +5451,11 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Tape: SPY 769.97 (+0.1%), QQQ 722.48 (+0.7%), SMH 553.11 (+1.2%), KWEB 23.565 (-3.2%).
 - Momentum (first eligible cycle, 10:30+): scan (>=3%, rel vol >=1.0) hit only ROIV (+6.0%, rel vol 1.45). AI-hardware watch list is up strongly (SMCI +11.2%, SPCX +9.6%, CRDO +6.8%, DELL +5.6%, VRT +4.8%, HPE +3.8%) but that is group beta moving together; gate 1 (divergence from own peer complex) FAIL. Two WebSearches (ROIV; SMCI/DELL/AI servers) returned nothing dated Oct 21 (only older Jul-Sep items or spring ROIV earnings), so gate 2 (real, cited, dated catalyst) FAIL for all. No entry.
 - Mean-reversion: CMG 28.215 (-4.8%), WING 122.47 (-6.0%); restaurant group still has no sourced external cause and no sector ETF confirmation, so Tier A FAIL (unchanged from Cycle 423). Tier B opens 11:30 ET.
+- No order placed. Trades today 0 (target, not a reason to loosen gates).
+
+### Cycle 425 - 2026-10-21 10:43 ET
+- Reconciled: flat, equity/BP $405.43, no positions, no open orders.
+- Tape: SPY 769.72 (+0.1%), QQQ 721.79 (+0.6%), SMH 551.88 (+1.0%), KWEB 23.55 (-3.3%), XLV 178.68 (-0.6%).
+- Mean-reversion scan (>=3.5% down): 27 hits. New since last look: T -6.1% (reported earnings Oct 21, own-earnings reaction = FAIL), CHTR -5.7% (cable/telecom, no sourced cause), NFLX -5.1% (earnings-reaction name, FAIL), PEGA -4.0%, FRPT -3.5%, ELS -3.8%. Restaurants unchanged (CMG -4.7%, WING -6.3%, EAT -4.4%, BROS -4.2%), China ADRs (BABA, PDD, JD, VIPS, LI, XPEV, TAL, etc.) still down with KWEB. No news searched this cycle (hourly cycle did it at 10:18; nothing dated found), so gate 1 (cited, dated external cause) FAIL for all. Tier A needs RSI<35 plus sector-ETF -2%: none verified. No entry.
+- Momentum scan (>=3%, rel vol >=1.0): only ROIV (+6.3%, rel vol 1.52). No dated catalyst found in Cycle 424 searches, so gate 2 FAIL; AI-hardware names are group beta. No entry.
 - No order placed. Trades today 0 (target, not a reason to loosen gates).
