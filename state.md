@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-21 11:03 ET",
+  "as_of": "2026-10-21 11:16 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1808,6 +1808,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-21 11:03 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-21 11:16 ET",
       "equity": 405.43
     }
   ],
@@ -5480,4 +5484,12 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Tape: SPY 770.95 (+0.2%), QQQ 723.37 (+0.8%), SMH 552.72 (+1.2%), KWEB 23.53 (-3.4%).
 - Mean-reversion scan: 33 hits. New: ABT -4.4% (reported today = own-earnings reaction, FAIL), DXCM -4.6% (possible sympathy with ABT's report, but no dated source in hand: lead for the 11:12 hourly news pass), SHAK -3.6%, MMYT -3.5%, RCUS -4.7%. Restaurants (WING -6.9%, CMG -4.4%, EAT -4.2%, SHAK, BROS) and China ADRs unchanged and unsourced. Gate 1 FAIL for all pending a dated source. No entry.
 - Momentum scan: only ROIV (+6.5%, rel vol 1.74), still no dated catalyst. No entry.
+- No order placed. Trades today 0 (target, not a reason to loosen gates).
+
+### Cycle 428 (hourly, with news) - 2026-10-21 11:16 ET
+- Reconciled: flat, equity/BP $405.43, no positions, no open orders. Peak 437.99, breaker 394.19.
+- Tape: SPY 771.47 (+0.3%), QQQ 724.41 (+0.9%), SMH 554.35 (+1.5%), KWEB 23.555 (-3.3%), XLV 178.31 (-0.8%), XLC 109.24 (-0.9%). Semis lead; healthcare, comms and China internet soft.
+- News (2 WebSearches this cycle: DXCM/ABT; restaurants): nothing dated Oct 21 returned (DXCM results were 2019/2024 stories; restaurant results were 2024-2025 and undated oil/UBS pieces, not citable for today). Gate 1 (cited, dated external cause) cannot be verified, so FAIL.
+- Mean-reversion scan: 27 hits. Medtech pocket now visible: DXCM -4.8%, ABT -3.9% (ABT reported today, own-earnings), SYK -3.6%; no sourced sector cause and XLV only -0.8%, so Tier A/B sector gate not met. Restaurants (WING -6.9%, CMG -5.1%, EAT -4.4%, BROS -3.9%), telecom/media (T -6.1% own earnings, NFLX -4.7% earnings reaction, CHTR), EXPE -3.7%, China ADRs unchanged and unsourced. No entry. Tier B opens 11:30 ET.
+- Momentum scan: ROIV +6.6% (rel vol 1.83) and SMCI +10.0% (rel vol 1.0). SMCI moves with the AI-hardware group (DELL, HPE, CRDO, VRT), so gate 1 divergence FAIL; no dated catalyst for either, gate 2 FAIL. No entry.
 - No order placed. Trades today 0 (target, not a reason to loosen gates).
