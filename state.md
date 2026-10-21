@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-21 13:13 ET",
+  "as_of": "2026-10-21 13:23 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1856,6 +1856,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-21 13:13 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-21 13:23 ET",
       "equity": 405.43
     }
   ],
@@ -5616,3 +5620,10 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Mean-reversion scan (>=3.5% down): 37 hits. RCUS -13.3% (biotech single name), TAL -9.1%, TDS -8.7%, WING -7.2%, CLMT -5.7%, T -5.9% (own earnings), HSAI -5.5%, XPEV -5.5%, DXCM -5.4%, CMG -4.8%, EAT -4.8%, NFLX -4.8% (earnings reaction). Others below 5%: EXPE, MTZ, BKNG, CHTR, BABA, ABT (own earnings), PDD, SE, PCVX, ELS, CAVA, BROS, CELH, JD, KT, RSI, DRVN, STNE, IBRX, YMM, MBLY, PONY, UAA/UA, OPEN. No sector-ETF-confirmed dislocation (XLV -0.8%, KWEB -2.6% but China ADRs fail Tier A RSI), no sourced cause. No entry.
 - Momentum scan: 10 hits. FTAI +4.0%, SPCX +8.4% (fading from +10.4%), ECHO +7.8% (tracks SPCX), CRCL +6.1%, SUNB +3.3%, AMBA +6.6% (semis group), ROIV +4.0% (rel vol 2.7, fading from +6.6%), SMCI +9.8%, BEPC +4.4% (new), TNGX +5.0%. No dated catalyst in hand for any; group moves. Gates 1/2 FAIL. No entry.
 - No order placed. Trades today 0 (target, not a reason to loosen gates). Tier B runs to 14:30 ET, Tier C then 15:30.
+
+### Cycle 440 - 2026-10-21 13:23 ET
+- Reconciled: flat, equity/BP $405.43, no positions, no open orders.
+- Tape: SPY 774.07 (+0.7%), QQQ 727.61 (+1.4%), SMH 558.69 (+2.3%), KWEB 23.71 (-2.6%), XLV 178.33 (-0.8%). Unchanged.
+- Mean-reversion scan (>=5% down, 9 hits): WING -7.0%, DXCM -5.3%, CLMT -5.5%, TDS -9.3%, T -6.0% (own earnings), RCUS -13.1%, HSAI -5.6%, TAL -9.3%, XPEV -5.5%. Same set; no dated, cited external cause, gate 1 FAIL. No entry.
+- Momentum scan (11 hits): new ZS +7.5% (rel vol 1.0, software/cyber; no sourced catalyst, not found in the 13:13 news pass because it was not on the list then). Others unchanged: FTAI +3.8%, SPCX +8.2%, ECHO +7.5%, CRCL +6.1%, SUNB +3.2%, AMBA +7.5%, ROIV +3.9%, SMCI +10.0%, BEPC +4.5%, TNGX +4.9%. Gates 1/2 FAIL (no dated catalyst, group beta). ZS to be searched at the 14:12 hourly pass. No entry.
+- No order placed. Trades today 0 (target, not a reason to loosen gates).
