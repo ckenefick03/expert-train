@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-22 14:22 ET",
+  "as_of": "2026-10-22 14:32 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2028,6 +2028,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-22 14:22 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-22 14:32 ET",
       "equity": 405.43
     }
   ],
@@ -6103,4 +6107,10 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Reconciled: flat, cash/BP $405.43, no orders today. Tape: SPY 763.51 (-1.2%), QQQ 705.64 (-2.7%), SMH 526.22 (-5.5%), GLD 370.03 (-2.4%).
 - MR scan (<=-5%, RSI<=35): 45 names, same AI-infra/semicap/neocloud/miner/crypto-miner complex as prior cycles; all remain in documented multi-week downtrends or lack a dated cause (gates 1/4 FAIL). Full per-name re-check not repeated this cycle (disclosed).
 - Momentum scan (>=4%, rel vol>=1.5): SPOT, WCN, BBT, RTO, SSL - unchanged; earnings/group moves or no dated catalyst; RTO still blocked on gate 1 "several sessions" pending user rule decision.
+- No entry. Trades today 0.
+
+### Cycle 482 - 2026-10-22 14:32 ET
+- Reconciled: flat, cash/BP $405.43, no orders today. Tape: SPY 761.98 (-1.4%), QQQ 703.73 (-2.9%), SMH 524.97 (-5.7%), GLD 369.97 (-2.4%). Tier C window (14:30-15:30) now open.
+- MR scan (<=-2.5%, RSI<=35, cap>=5B): 29 names. AI-infra/semicap/neocloud/crypto-miner names unchanged (gate 4 FAIL, multi-week downtrends). Newly visible at the Tier C threshold: RIO -3.4%, BHP -3.6%, VALE -3.6% (miners; no dated same-cycle cause, and BHP/VALE documented downtrends), BCS -2.7% (no dated cause), RIVN -3.5%, MP -4.5%, OKLO -4.3%, SKM -4.1% (no dated cause found; no news search run this cycle, hourly news due ~15:12). Gate 1 FAIL for all.
+- Momentum scan (>=3%, rel vol>=1.5): SPOT, WCN, FIBK, BBT, RTO, SSL. Earnings/group moves or no dated catalyst; FIBK is new (+3.1%, no catalyst checked). RTO still blocked on gate 1 "several sessions" clause pending user rule decision.
 - No entry. Trades today 0.
