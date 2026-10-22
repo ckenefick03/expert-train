@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-22 10:05 ET",
+  "as_of": "2026-10-22 10:22 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1937,6 +1937,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-22 10:05 ET",
       "equity": 405.43
+    },
+    {
+      "t": "2026-10-22 10:22 ET",
+      "equity": 405.43
     }
   ],
   "positions": [],
@@ -2027,23 +2031,27 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Oct 22 pre-market (08:28 ET): risk-off. SPY -0.9%, QQQ -1.6%, SMH -3.2%, KWEB -3.5% vs Oct 21 close. Post-earnings gaps in LRCX, IBM, META, TSLA; no dated news found explaining the semis/AI-infrastructure drop. Account flat, no entries before 10:00 ET.",
+    "read": "Oct 22 (as of 10:22 ET): risk-off, led by semis/AI hardware (SMH -4.0%, QQQ -2.0%, SPY -1.1%); healthcare firm. LRCX (reported Oct 21 after close) is down 8.9%; semicap peers KLAC/AMAT/TER down 6-9% with no confirmed higher lows. No dated news explains the move. Account flat, zero qualifying setups so far.",
     "chips": [
       {
         "name": "SPY",
-        "chg": -0.9
+        "chg": -1.1
       },
       {
         "name": "QQQ",
-        "chg": -1.6
+        "chg": -2.0
       },
       {
         "name": "SMH",
-        "chg": -3.2
+        "chg": -4.0
       },
       {
         "name": "KWEB",
-        "chg": -3.5
+        "chg": -2.0
+      },
+      {
+        "name": "XLV",
+        "chg": 1.3
       }
     ]
   }
@@ -5834,3 +5842,10 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Gate 1 (cause): one WebSearch (semi-equipment selloff / LRCX / AMAT / KLA) returned no item dated Oct 22; the newest relevant item was Oct 13 (profit-taking) and Aug 14 (AMAT guidance), prior events, not today's cause. LRCX reported after the close Oct 21, so its own-earnings drop is company-specific; peer sympathy (KLAC, AMAT) is plausible but unsourced this cycle. Unverifiable, so gate 1 FAILS for every candidate. Not forced.
 - Follow-up for the next cycle: check LRCX's reported results via get_earnings_results (a dated, tool-sourced fact) and search the LRCX guidance; if a dated, sector-wide cause is established and KLAC/AMAT hold their higher lows with a target >=2R, they would be evaluated under Tier A (window to 11:30 ET).
 - Momentum (earliest 10:30 ET): not yet open. No order placed. Trades today 0.
+
+### Cycle 459 (hourly, with news) - 2026-10-22 10:22 ET
+- Reconciled: flat, equity/BP $405.43, no positions, no open orders.
+- Tape: SPY 764.90 (-1.1%), QQQ 711.03 (-2.0%), SMH 534.35 (-4.0%, new low of the day), KWEB 23.27 (-2.0%), XLV 181.22 (+1.3%), XLE 67.17 (-1.5%), IWM 275.82 (-0.2%). The selling deepened since 10:04 ET.
+- Follow-up from Cycle 458: get_earnings_results LRCX shows FQ1 2027 reported 2026-10-21 pm, EPS actual 2.20 vs 2.18 estimate (a slight beat, tool-sourced and dated). Guidance and the reason for the -8.9% drop are NOT established. WebSearch (LRCX earnings Oct 21 reaction) found no item dated Oct 22; one undated item mentions a nine-session LRCX losing streak and AMAT declining to forecast wafer-fab-equipment spending at an investor day, but with no date it cannot be tied to today. Cause for peers stays unverified.
+- KLAC 152.29 (-6.8%), AMAT 384.86 (-5.9%), TER 313.57 (-9.2%), LRCX 237.73 (-8.9%). 5-min bars: KLAC lows 152.58, 151.92 (09:40), 152.45, 152.23 (10:10): flat to slightly lower highs (155.04, 154.10, 152.95), no clean higher low; AMAT highs fading from 389.82 to 386.41; SMH made a new low (534.85). Gate 4 FAIL (still making lows with the sector ETF) and gate 1 FAIL (no dated, cited cause). No entry in Tier A.
+- Momentum: window opens 10:30 ET, not yet. No order placed. Trades today 0 (target, not a reason to loosen gates).
