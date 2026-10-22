@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-22 09:56 ET",
+  "as_of": "2026-10-22 10:05 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1932,6 +1932,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-22 09:56 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-22 10:05 ET",
       "equity": 405.43
     }
   ],
@@ -5821,3 +5825,12 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Tape: SPY 766.56 (-0.8%), QQQ 713.77 (-1.6%), SMH 538.77 (-3.2%), KWEB 23.21 (-2.2%), XLV 180.40 (+0.8%). Steady, no bounce yet.
 - Still before the 10:00 ET entry window: no entries permitted, scans skipped as moot. Next cycle (10:02 ET) is the first entry-eligible one.
 - No order placed. Trades today 0.
+
+### Cycle 458 - 2026-10-22 10:05 ET
+- Reconciled: flat, equity/BP $405.43, no positions, no open orders. Peak 437.99, breaker 394.19.
+- Tape: SPY 767.39 (-0.7%), QQQ 714.87 (-1.4%), SMH 539.56 (-3.0%), KWEB 23.27 (-2.0%), XLV 180.83 (+1.1%), XLE 67.36 (-1.2%), IWM 276.83 (+0.1%). Semis/AI hardware are the weak pocket; small caps flat.
+- Mean-reversion scan (>=5% down, Tier A window): 65 hits, dominated by one group: semicap (AMAT -5.3%, KLAC -5.8%, TER -7.0%, LRCX -7.9% own earnings, ENTG -8.7%, FORM, UCTT, COHU, MKSI), optical/connectivity (COHR -7.6%, LITE -5.1%, MTSI -7.5%, CRDO, VIAV, AAOI), AI power/infrastructure (GEV -6.8%, VICR, NVT, MOD, FPS -18%, GNRC), miners (PAAS, HBM, IAG, SSRM), plus META -5.5% (own earnings), TTMI -22% (own earnings), GGG -12.7% (own earnings), ATI -9.8%, HWM -5.6%.
+- Gate check, best structural candidates KLAC and AMAT (sector ETF SMH -3.0% meets the >=2% leg; stock more than 5%; daily RSI(14) as of Oct 21 close: AMAT 30.8, KLAC 31.2, both <35; TER 40.8, COHR 35.5, LITE 41.1, MTSI 44.3, ENTG 47.3 do not qualify). 5-min bars since the 09:30 open show KLAC low 152.58 then 151.92 at 09:40 and higher lows after (152.40, 152.90, 154.04), AMAT low 380.92 then 383.44, 385.09, 387.78. So early stabilization is visible but only ~30 minutes old.
+- Gate 1 (cause): one WebSearch (semi-equipment selloff / LRCX / AMAT / KLA) returned no item dated Oct 22; the newest relevant item was Oct 13 (profit-taking) and Aug 14 (AMAT guidance), prior events, not today's cause. LRCX reported after the close Oct 21, so its own-earnings drop is company-specific; peer sympathy (KLAC, AMAT) is plausible but unsourced this cycle. Unverifiable, so gate 1 FAILS for every candidate. Not forced.
+- Follow-up for the next cycle: check LRCX's reported results via get_earnings_results (a dated, tool-sourced fact) and search the LRCX guidance; if a dated, sector-wide cause is established and KLAC/AMAT hold their higher lows with a target >=2R, they would be evaluated under Tier A (window to 11:30 ET).
+- Momentum (earliest 10:30 ET): not yet open. No order placed. Trades today 0.
