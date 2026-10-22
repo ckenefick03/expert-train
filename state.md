@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-22 10:22 ET",
+  "as_of": "2026-10-22 10:29 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1940,6 +1940,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-22 10:22 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-22 10:29 ET",
       "equity": 405.43
     }
   ],
@@ -5849,3 +5853,10 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Follow-up from Cycle 458: get_earnings_results LRCX shows FQ1 2027 reported 2026-10-21 pm, EPS actual 2.20 vs 2.18 estimate (a slight beat, tool-sourced and dated). Guidance and the reason for the -8.9% drop are NOT established. WebSearch (LRCX earnings Oct 21 reaction) found no item dated Oct 22; one undated item mentions a nine-session LRCX losing streak and AMAT declining to forecast wafer-fab-equipment spending at an investor day, but with no date it cannot be tied to today. Cause for peers stays unverified.
 - KLAC 152.29 (-6.8%), AMAT 384.86 (-5.9%), TER 313.57 (-9.2%), LRCX 237.73 (-8.9%). 5-min bars: KLAC lows 152.58, 151.92 (09:40), 152.45, 152.23 (10:10): flat to slightly lower highs (155.04, 154.10, 152.95), no clean higher low; AMAT highs fading from 389.82 to 386.41; SMH made a new low (534.85). Gate 4 FAIL (still making lows with the sector ETF) and gate 1 FAIL (no dated, cited cause). No entry in Tier A.
 - Momentum: window opens 10:30 ET, not yet. No order placed. Trades today 0 (target, not a reason to loosen gates).
+
+### Cycle 460 - 2026-10-22 10:29 ET
+- Reconciled: flat, equity/BP $405.43, no positions, no open orders.
+- Tape: SPY 763.28 (-1.3%), QQQ 709.81 (-2.1%), SMH 532.83 (-4.3%, another low), KWEB 23.28 (-1.9%), XLV 180.81 (+1.0%), XLE 67.07 (-1.6%), IWM 275.05 (-0.5%). Selling still extending.
+- Mean-reversion (Tier A): KLAC 151.07 (-7.6%) and AMAT 386.31 (-5.5%); KLAC made a new low of the day (below 151.92), so gate 4 FAILS (not stabilizing); gate 1 still unverified (no new news this cycle; hourly search done at 10:22). No entry.
+- Momentum (opens 10:30 ET, one minute away): >=3% up with relative volume >=1.0 returned 0 names. No candidates.
+- No order placed. Trades today 0.
