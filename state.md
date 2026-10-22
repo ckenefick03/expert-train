@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-22 12:18 ET",
+  "as_of": "2026-10-22 12:33 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1980,6 +1980,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-22 12:18 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-22 12:33 ET",
       "equity": 405.43
     }
   ],
@@ -5969,4 +5973,11 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Momentum (>=+7% with relative volume >=1.5): one name, RTO (Rentokil ADR) 22.84 (+8.6%, rel vol 2.0, market cap $10.6B, avg volume 2.0M). Catalyst (gate 2) is real and dated Oct 22: Q3 trading update (Reuters REG via TradingView, Investing.com, MarketBeat/Yahoo call transcripts): organic revenue +3.4%, North America organic +3.2%, FY2026 profit in line with expectations, $200M share buyback, planned separation of North America Residential and Commercial. Earnings window waived (the update is today and is the thesis). Timing (gate 4) OK (12:25 ET). Held base (gate 3): after a gap-up open at 22.38 RTO ground higher to 22.92 by 11:15 ET and has held 22.72-22.92 since, with higher lows (22.72 at 11:30, then 22.81, 22.83, 22.84); break-and-hold above 22.925 would be the continuation. Plausible stop 22.70 (below the base low, about 0.6% below), target >=2R about 23.10.
 - Gate 1 (relative strength vs own peer complex, today and over the last several sessions): blocked. Today RTO +8.6% vs its only US peer ROL (Rollins) +4.5% (ROL's pop is itself sympathy with RTO's news). Over recent sessions RTO did not clearly outperform: Oct 1 to Oct 21 RTO +6.3% vs ROL +9.4%; last 5 sessions RTO +4.0% vs ROL +2.5%; last 3 sessions flat vs flat. The strategy file requires clearly outperforming "today and over the last several sessions"; that persistence clause is not met, so the gate FAILS as written. Not forced, and no gate loosened.
 - Open rule question for the user, logged not acted on: a catalyst gap on a name that had been in line with its peers can never satisfy the several-sessions clause beforehand, so as written the rule excludes fresh post-catalyst gap-and-hold setups like RTO today. If you want those allowed (for example, replacing the clause with relative strength vs the peer complex today plus a dated catalyst), say so and I will add the rule to the strategy file; until then it stays a FAIL. Follow-up to fill in: RTO's price at the close and next day, and whether a 22.70 stop or the 23.10 target would have been hit (a tracking note only).
+- No order placed. Trades today 0 (target, not a reason to loosen gates).
+
+### Cycle 470 - 2026-10-22 12:33 ET
+- Reconciled: flat, equity/BP $405.43, no positions, no open orders.
+- Tape: SPY 764.66 (-1.1%), QQQ 708.28 (-2.3%), SMH 528.37 (-5.1%), XLV 182.05 (+1.7%), KLAC 149.10 (-8.8%), AMAT 380.94 (-6.8%). Unchanged range since 11:30.
+- Mean-reversion: no change (AI complex = multi-week downtrend, gate 4 FAIL; no sourced non-AI pocket). No entry.
+- Momentum (>=+6% with relative volume >=1.2: 5 names): SPOT +8.6% (earnings), WCN +9.0% (waste group with RSG, a group move), RTO +8.7% (rel vol 2.0), SSL +7.3%, AMRO +12.5%. RTO 22.87 vs ROL 34.76 (+3.9%): same picture as Cycle 469, still blocked on gate 1's several-sessions clause (not loosened; open rule question logged in Cycle 469 awaits the user). SSL/AMRO: no dated catalyst checked or found this cycle, gate 2 FAIL.
 - No order placed. Trades today 0 (target, not a reason to loosen gates).
