@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-22 10:43 ET",
+  "as_of": "2026-10-22 10:54 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1948,6 +1948,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-22 10:43 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-22 10:54 ET",
       "equity": 405.43
     }
   ],
@@ -5870,4 +5874,12 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Tape: SPY 762.53 (-1.4%), QQQ 708.53 (-2.3%), SMH 531.90 (-4.5%, new low), KWEB 23.20 (-2.3%), XLV 181.02 (+1.2%), XLE 66.98 (-1.7%), IWM 275.17 (-0.5%). Rotation out of AI hardware into defensives and rate-sensitives.
 - Mean-reversion (Tier A, window to 11:30): 64 names <=-7%, still the semis/AI complex (GEV -9.7%, LITE -8.6%, COHR -11%, CIEN -8.3%, TER -9.4%, LRCX -9.1% own earnings, KLAC -7.5%, ENTG -11.7%, MTSI -10.4%, ATI -11.1%, FPS -20%, TTMI -25.7% own earnings, GGG -13.6% own earnings, VICR -13.9%). SMH is at its low of the day and KLAC 151.24 is not making a higher low (gate 4 FAIL for the group); no dated, cited cause since the 10:22 search (gate 1 FAIL). No entry.
 - Momentum (window now open): 79 names >=+3%. Groups, not divergences: homebuilders after PHM reported today (PHM +3.5%, DHI, LEN, KBH, BLDR, FND), waste haulers (WM, RSG, WCN +7.6%), staples (PG +5.4% own earnings, CL, GIS, KHC, CPB, TAP, STZ), data/info (TRI, EFX, VRSK, TRU), software (INTU, HUBS, MNDY, PEGA, CSGP, Z/ZG, GDDY), airlines (LUV, ALK), utilities/water (AWK, WTRG), REITs (ADC, ELS, EPRT, CURB), rails (CSX +6.3% with UNP/NSC reporting today). Own-earnings today: LMT +6.6%, SPOT +7.7%, ALLE +7.9%, PG, BX, NDAQ +5.9%, CMCSA, DOW. Gate 1 (divergence from peer complex) FAIL for all, gate 2 (dated catalyst) not established. No entry.
+- No order placed. Trades today 0 (target, not a reason to loosen gates).
+
+### Cycle 462 - 2026-10-22 10:54 ET
+- Reconciled: flat, equity/BP $405.43, no positions, no open orders.
+- Tape: SPY 762.31 (-1.4%), QQQ 707.43 (-2.5%), SMH 528.24 (-5.1%, new low of the day), KWEB 23.21 (-2.2%), XLV 181.39 (+1.4%), XLE 66.82 (-2.0%), IWM 275.13 (-0.5%).
+- 5-min bars since 10:15 ET: SMH made lower highs and lower lows every bar (low 528.48 at 10:45 bar); KLAC low 150.27 (new low, down 8.2% on the day); AMAT low 381.81. The semis complex is still trending down, so mean-reversion gate 4 (stabilization, higher low) FAILS for the group; gate 1 (dated, cited cause) also still unverified (hourly news pass is at 11:12). No entry.
+- Momentum: scan scoped to >=+5% this cycle (24 names; the full >=3% list was reviewed at 10:43 and nothing changed in structure). Names: LMT, SPOT, ALLE, PG, NDAQ, TRI(TRI/EFX data group), KSS (all earnings today or group moves), WCN (waste group), LEN/BLDR/FND/KBH (homebuilders after PHM), CSGP/Z/ZG (housing/online real estate), RKT/QXO, CSX (rail), CELC, RTO, SSL, AMRO, AMBP. All are group moves or own-earnings; no divergence from a peer complex and no dated catalyst. Gates 1/2 FAIL. No entry.
+- Disclosure: this cycle used a narrowed momentum scan (>=5%) and did not re-run the mean-reversion list scan, since the decisive failure (the sector is still making lows) was evident from the tape and bars.
 - No order placed. Trades today 0 (target, not a reason to loosen gates).
