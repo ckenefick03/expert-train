@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-22 14:42 ET",
+  "as_of": "2026-10-22 14:53 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2036,6 +2036,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-22 14:42 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-22 14:53 ET",
       "equity": 405.43
     }
   ],
@@ -6123,4 +6127,10 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Reconciled: flat, cash/BP $405.43, no orders today. Tape: SPY 761.75 (-1.5%), QQQ 703.45 (-3.0%), SMH 524.20 (-5.8%), GLD 369.46 (-2.5%). Tier C window open.
 - MR scan (<=-2.5%, RSI<=35, cap>=5B): 30 names, same set as Cycle 482 plus SE (-2.5%, RSI 20; no dated cause checked). AI-infra/semicap/neocloud/crypto-miner names fail gate 4 (multi-week downtrends); miners/banks/RIVN/MP/OKLO/SKM/SE have no dated same-cycle cause (gate 1 FAIL). No news search run (hourly news due ~15:12); no per-name re-check beyond prior cycles (disclosed).
 - Momentum scan (>=3%, rel vol>=1.5): SPOT, WCN, FIBK, BBT, RTO, SSL, plus OWL (+4.6%, no dated catalyst checked). All FAIL gate 1/2 as before; RTO still pending user rule decision.
+- No entry. Trades today 0.
+
+### Cycle 484 - 2026-10-22 14:53 ET
+- Reconciled: flat, cash/BP $405.43, no orders today. Tape: SPY 762.00 (-1.4%), QQQ 703.43 (-3.0%), SMH 524.18 (-5.8%), GLD 369.37 (-2.5%). Tier C window open.
+- MR scan (<=-2.5%, RSI<=35, cap>=5B): 30 names, identical set to Cycle 483. AI-infra/semicap/neocloud/crypto-miner names fail gate 4; miners/BCS/RIVN/MP/OKLO/SKM/SE lack a dated same-cycle cause (gate 1 FAIL). No news search (hourly due ~15:12); no new per-name checks (disclosed).
+- Momentum scan (>=3%, rel vol>=1.5): SPOT, WCN, FIBK, BBT, RTO, SSL, OWL as before, plus new INTU (+5.9%) and BIIB (+4.6%); neither has a dated catalyst checked this cycle, and INTU is likely part of a software group move (no divergence verified). All FAIL gates; RTO still pending user rule decision.
 - No entry. Trades today 0.
