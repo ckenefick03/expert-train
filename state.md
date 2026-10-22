@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-22 15:03 ET",
+  "as_of": "2026-10-22 15:13 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2044,6 +2044,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-22 15:03 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-22 15:13 ET",
       "equity": 405.43
     }
   ],
@@ -6144,3 +6148,10 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - MR scan (<=-2.5%, RSI<=35, cap>=5B): 32 names, Cycle 484 set plus KTOS (-2.5%) and DB (-2.7%); neither has a dated same-cycle cause checked (gate 1 FAIL by default). AI-infra/semicap/neocloud/crypto-miner names fail gate 4; miners/banks/RIVN/MP/OKLO/SKM/SE lack a dated cause. No news search (hourly cycle with news next, ~15:12).
 - Momentum scan (>=3%, rel vol>=1.5): 11 names - SPOT, INTU, BIIB, WCN, PG (earnings mover), CP (rails group), FIBK, BBT, RTO, SSL, OWL. No dated catalyst verified for INTU/BIIB/OWL/CP; PG/SPOT earnings-driven, WCN group move. All FAIL; RTO pending user rule decision.
 - No entry. Trades today 0.
+
+### Cycle 486 (hourly, with news) - 2026-10-22 15:13 ET
+- Reconciled: flat, cash/BP $405.43, no orders today. Tape: SPY 762.55 (-1.4%), QQQ 703.78 (-3.0%), SMH 524.19 (-5.8%), GLD 369.09 (-2.6%). Tier C window open (closes 15:30).
+- News: one WebSearch ("stock market today October 22 2026 Nasdaq selloff why") returned only undated or other-period items (June 6 jobs-report selloff, Feb 26 semis, an undated tech/AI-capex-worry piece); nothing citable as a dated same-cycle source beyond the AI-spending-doubts cause already logged at Cycle 480. No new dated cause for miners, banks, RIVN, MP, OKLO, SKM, SE, KTOS, DB.
+- MR scan (<=-2.5%, RSI<=35, cap>=5B): 30 names (Cycle 485 set minus KTOS/DB). AI-infra/semicap/neocloud/crypto-miner names remain in documented multi-week downtrends (gate 4 FAIL); all others fail gate 1.
+- Momentum scan (>=3%, rel vol>=1.5): 15 names - LMT (+6.7%, earnings mover), SPOT, INTU, BIIB, WCN, PG, CP, FIBK, BBT, RTO, FA (+7.5%, new, no catalyst checked), SSL, OWL, AMRO (+12%, no dated catalyst), AMBP. Earnings, group moves, or no dated catalyst; all FAIL. RTO still blocked on gate 1 "several sessions" clause pending user rule decision.
+- No entry. Trades today 0. Next: 15:22/15:32/15:42 cycles (no entries after 15:30), close recap 15:47 ET.
