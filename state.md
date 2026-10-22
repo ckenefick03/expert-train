@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-22 11:04 ET",
+  "as_of": "2026-10-22 11:21 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1957,6 +1957,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-22 11:04 ET",
       "equity": 405.43
+    },
+    {
+      "t": "2026-10-22 11:21 ET",
+      "equity": 405.43
     }
   ],
   "positions": [],
@@ -2047,7 +2051,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Oct 22 (as of 10:22 ET): risk-off, led by semis/AI hardware (SMH -4.0%, QQQ -2.0%, SPY -1.1%); healthcare firm. LRCX (reported Oct 21 after close) is down 8.9%; semicap peers KLAC/AMAT/TER down 6-9% with no confirmed higher lows. No dated news explains the move. Account flat, zero qualifying setups so far.",
+    "read": "Oct 22 (as of 11:21 ET): risk-off led by an AI-infrastructure liquidation (SMH -4.8%, QQQ -2.2%, SPY -1.2%); money rotating into software, housing, data providers, staples, healthcare. 168 large names are down 5%+ (semis, optical, memory/storage, AI power, miners, crypto-linked). No dated news found explaining it. Account flat, zero qualifying setups.",
     "chips": [
       {
         "name": "SPY",
@@ -2055,19 +2059,19 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "QQQ",
-        "chg": -2.0
+        "chg": -2.2
       },
       {
         "name": "SMH",
-        "chg": -4.0
+        "chg": -4.8
       },
       {
         "name": "KWEB",
-        "chg": -2.0
+        "chg": -2.2
       },
       {
         "name": "XLV",
-        "chg": 1.3
+        "chg": 1.7
       }
     ]
   }
@@ -5893,4 +5897,13 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Tape: SPY 762.90 (-1.3%), QQQ 707.95 (-2.4%), SMH 528.13 (-5.1%), KWEB 23.20 (-2.3%), XLV 181.53 (+1.4%), XLE 66.99 (-1.7%), IWM 275.05 (-0.5%). Flat to slightly lower for 15 minutes; no bounce.
 - Mean-reversion (Tier A, closes 11:30): KLAC 149.37 (-8.6%), AMAT 380.06 (-7.1%), TER 309.30 (-10.5%), COHR 210.17 (-11.5%), LITE 772.09 (-9.2%). 5-min bars to 11:00: SMH low 527.52, KLAC low 149.34, AMAT low 379.88, each making a fresh low in the latest bar. Gate 4 FAILS (no higher low); gate 1 unverified (hourly news pass due at 11:12). No entry.
 - Momentum (>=+4%, 57 names): software/SaaS group bid (INTU, ADBE, HUBS, MNDY, PEGA, WK, TTAN, NCNO, PAYX, EXLS), homebuilders/housing (DHI, LEN, KBH, PHM, BLDR, FND, FBIN, Z/ZG, CSGP, RKT, QXO), data/info (TRI, EFX, VRSK, TRU), waste, staples (PG, GIS, CPB), insurance brokers (BRO, RYAN), REITs, rails (CSX +6.7%), plus own-earnings movers (LMT, SPOT, ALLE, BX, NDAQ, KSS). The tape is a rotation out of AI hardware into software, housing and defensives: group beta, no name diverging from its peer complex, no dated catalyst. Gates 1/2 FAIL. No entry.
+- No order placed. Trades today 0 (target, not a reason to loosen gates).
+
+### Cycle 464 (hourly, with news) - 2026-10-22 11:21 ET
+- Reconciled: flat, equity/BP $405.43, no positions, no open orders.
+- Tape: SPY 764.20 (-1.2%), QQQ 709.07 (-2.2%), SMH 529.72 (-4.8%, off a 525.50 low), KWEB 23.21 (-2.2%), XLV 181.94 (+1.7%), XLE 66.73 (-2.1%), IWM 276.04 (-0.2%).
+- News (2 WebSearches: semis selloff / LRCX guidance Oct 22; market today rotation): nothing dated Oct 22 returned. Results were undated or from other periods (a June 24 2026 LRCX -9% item tied to a WFE outlook comment, an undated memory/energy selloff item, an undated Citi/AI-capex doubts item, 2024-2025 market wraps). None can be cited as today's cause. Gate 1 FAILS for every candidate (unverifiable). Disclosure: these are background only and were not used as causes.
+- Mean-reversion scan (<=-5%): 168 names, a theme-wide liquidation of the AI-infrastructure complex: semis/semicap (AMD -7.4%, AMAT -6.8%, KLAC -8.5%, LRCX -10% own earnings, TER -9.8%, MRVL, ARM, INTC, ENTG -11.7%, FORM, LSCC, MTSI -11.7%), optical/connectivity (LITE -9.4%, COHR -11.7%, CIEN -9.4%, CRDO, ALAB, ANET, VIAV, AAOI), memory/storage (SNDK -6.4%, STX -8.1%, WDC -6.8%), servers (DELL, SMCI), AI power/electrical (GEV -10.2%, VST -9.3%, CEG, NRG, BE, ETN, VRT, NVT, GNRC, MOD, FPS -23%), neoclouds/miners (CRWV, NBIS, IREN, APLD, CIFR, RIOT, MARA, HUT), metals (SCCO, FCX, AEM, WPM, AU, PAAS, AG, HL), plus own-earnings (META, TTMI -26%, GGG -13.8%, TXG, NOK).
+- Stabilization (gate 4): the 15:15 UTC (11:15 ET) 5-min bar printed marginal higher lows (SMH low 525.84 vs 525.50, KLAC 148.42 vs 148.34, AMAT 378.60 vs 378.43, TER 307.07 vs 306.84), but that is one bar against a trend of lower highs and lows since 09:45; not enough to call stabilization. Daily RSI(14) of the semicap names was already <35 (AMAT 30.8, KLAC 31.2 as of Oct 21). Gate 4 not met, gate 1 not met. No entry. Tier B (11:30-14:30) opens in 9 minutes with the same gates; if a dated sector-wide cause appears and the sector forms two or more successive higher lows, KLAC/AMAT are the first names to evaluate.
+- Momentum (>=+5%, 34 names): LMT, SPOT, ALLE, PG, BX, NDAQ, KSS (earnings today), housing/homebuilders (DHI, PHM, LEN, KBH, BLDR, FND, FBIN, Z/ZG, CSGP, RKT, QXO), data/info (EFX, TRI, TRU), waste/pest (WCN, ROL, RTO), staples (GIS, CPB, CALM), LUV, CSX +6.8%, MNDY, CELC, SSL, AMRO. Group moves or earnings; no divergence from a peer complex and no dated catalyst. Gates 1/2 FAIL. No entry.
 - No order placed. Trades today 0 (target, not a reason to loosen gates).
