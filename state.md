@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-22 14:53 ET",
+  "as_of": "2026-10-22 15:03 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2040,6 +2040,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-22 14:53 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-22 15:03 ET",
       "equity": 405.43
     }
   ],
@@ -6133,4 +6137,10 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Reconciled: flat, cash/BP $405.43, no orders today. Tape: SPY 762.00 (-1.4%), QQQ 703.43 (-3.0%), SMH 524.18 (-5.8%), GLD 369.37 (-2.5%). Tier C window open.
 - MR scan (<=-2.5%, RSI<=35, cap>=5B): 30 names, identical set to Cycle 483. AI-infra/semicap/neocloud/crypto-miner names fail gate 4; miners/BCS/RIVN/MP/OKLO/SKM/SE lack a dated same-cycle cause (gate 1 FAIL). No news search (hourly due ~15:12); no new per-name checks (disclosed).
 - Momentum scan (>=3%, rel vol>=1.5): SPOT, WCN, FIBK, BBT, RTO, SSL, OWL as before, plus new INTU (+5.9%) and BIIB (+4.6%); neither has a dated catalyst checked this cycle, and INTU is likely part of a software group move (no divergence verified). All FAIL gates; RTO still pending user rule decision.
+- No entry. Trades today 0.
+
+### Cycle 485 - 2026-10-22 15:03 ET
+- Reconciled: flat, cash/BP $405.43, no orders today. Tape: SPY 761.32 (-1.5%), QQQ 702.47 (-3.1%), SMH 522.61 (-6.1%), GLD 368.92 (-2.6%). Tier C window open (closes 15:30).
+- MR scan (<=-2.5%, RSI<=35, cap>=5B): 32 names, Cycle 484 set plus KTOS (-2.5%) and DB (-2.7%); neither has a dated same-cycle cause checked (gate 1 FAIL by default). AI-infra/semicap/neocloud/crypto-miner names fail gate 4; miners/banks/RIVN/MP/OKLO/SKM/SE lack a dated cause. No news search (hourly cycle with news next, ~15:12).
+- Momentum scan (>=3%, rel vol>=1.5): 11 names - SPOT, INTU, BIIB, WCN, PG (earnings mover), CP (rails group), FIBK, BBT, RTO, SSL, OWL. No dated catalyst verified for INTU/BIIB/OWL/CP; PG/SPOT earnings-driven, WCN group move. All FAIL; RTO pending user rule decision.
 - No entry. Trades today 0.
