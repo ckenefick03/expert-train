@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-22 13:04 ET",
+  "as_of": "2026-10-22 13:13 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1996,6 +1996,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-22 13:04 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-22 13:13 ET",
       "equity": 405.43
     }
   ],
@@ -6015,3 +6019,12 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Mean-reversion: gate 4 FAIL (multi-week downtrend, fresh lows 15 minutes ago); no sourced non-AI pocket. No entry.
 - Momentum: RTO 22.89 (+8.8%) vs ROL 34.96 (+4.5%), unchanged picture, still blocked on gate 1 (rule question open). No other candidate with a dated catalyst. Full scans were last run at 12:53 ET; disclosure: not re-run this cycle.
 - No order placed. Trades today 0 (target, not a reason to loosen gates).
+
+### Cycle 474 (hourly, with news) - 2026-10-22 13:13 ET
+- Reconciled: flat, equity/BP $405.43, no positions, no open orders.
+- Tape: SPY 762.49 (-1.4%), QQQ 705.62 (-2.7%), SMH 526.05 (-5.5%), KWEB 23.17 (-2.4%), XLV 180.34 (+0.8%), XLE 67.25 (-1.3%), IWM 275.68 (-0.3%), GLD 370.14 (-2.3%), KLAC 148.51 (-9.1%), AMAT 380.32 (-7.0%). Flat-lining near the lows.
+- News (2 searches): (a) afternoon market wrap / AI selloff: nothing dated Oct 22 returned (June and September 2026 AI-selloff wraps only; one Reuters subhead from September notes traders then expected a Fed rate increase). The Oct 22 sources already cited in Cycle 465 remain the dated basis for the AI-spending cause. (b) gold miners today: undated Reuters wire summaries (dollar strength, yields, Middle East) and a Bloomberg item from Oct 21 2025 (a year earlier); no source for today's move. Gold-miner gate 1 stays FAIL.
+- Mean-reversion (Tier B, closes 14:30): AI complex fails gate 4 (multi-week downtrend, fresh lows at 12:50); gold miners fail gate 1; no other sourced pocket. No entry.
+- Momentum (>=+4%, rel vol >=1.2: 9 names): LMT +5.7%, SPOT +9.5%, PG +5.9% (earnings today), INTU +5.3% (software group), WCN +9.8% (waste group), BBT +4.8%, SSL +7.5%, AMRO +11.5% (no dated catalyst), RTO +8.7% (dated Oct 22 catalyst; blocked on gate 1's several-sessions clause, see Cycle 469; ROL +4.4%). No entry.
+- Fill-in for the earlier follow-up (RTO, tracking only): 22.86 at 13:13 ET, flat for two hours in 22.81-22.92, stop 22.70 not touched, target 23.10 not reached.
+- No order placed. Trades today 0 (target, not a reason to loosen gates). Tier C (14:30-15:30) opens in 77 minutes; it applies only if all four gates pass.
