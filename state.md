@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-22 11:21 ET",
+  "as_of": "2026-10-22 11:34 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1961,6 +1961,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-22 11:21 ET",
       "equity": 405.43
+    },
+    {
+      "t": "2026-10-22 11:34 ET",
+      "equity": 405.43
     }
   ],
   "positions": [],
@@ -2051,7 +2055,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Oct 22 (as of 11:21 ET): risk-off led by an AI-infrastructure liquidation (SMH -4.8%, QQQ -2.2%, SPY -1.2%); money rotating into software, housing, data providers, staples, healthcare. 168 large names are down 5%+ (semis, optical, memory/storage, AI power, miners, crypto-linked). No dated news found explaining it. Account flat, zero qualifying setups.",
+    "read": "Oct 22 (as of 11:40 ET): AI-infrastructure unwind. Dated reports (Yahoo Finance live blog, Invezz, 24/7 Wall St, all Oct 22) cite AI-spending worries after Meta's capex guidance and IBM's CEO saying customers question AI returns; Nasdaq down about 2%, SMH down about 5% after eight straight down sessions. Money rotating into software, housing, staples, healthcare. Every dislocated AI-complex name sits in a multi-week downtrend, so mean-reversion gate 4 fails. Account flat.",
     "chips": [
       {
         "name": "SPY",
@@ -5907,3 +5911,14 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Stabilization (gate 4): the 15:15 UTC (11:15 ET) 5-min bar printed marginal higher lows (SMH low 525.84 vs 525.50, KLAC 148.42 vs 148.34, AMAT 378.60 vs 378.43, TER 307.07 vs 306.84), but that is one bar against a trend of lower highs and lows since 09:45; not enough to call stabilization. Daily RSI(14) of the semicap names was already <35 (AMAT 30.8, KLAC 31.2 as of Oct 21). Gate 4 not met, gate 1 not met. No entry. Tier B (11:30-14:30) opens in 9 minutes with the same gates; if a dated sector-wide cause appears and the sector forms two or more successive higher lows, KLAC/AMAT are the first names to evaluate.
 - Momentum (>=+5%, 34 names): LMT, SPOT, ALLE, PG, BX, NDAQ, KSS (earnings today), housing/homebuilders (DHI, PHM, LEN, KBH, BLDR, FND, FBIN, Z/ZG, CSGP, RKT, QXO), data/info (EFX, TRI, TRU), waste/pest (WCN, ROL, RTO), staples (GIS, CPB, CALM), LUV, CSX +6.8%, MNDY, CELC, SSL, AMRO. Group moves or earnings; no divergence from a peer complex and no dated catalyst. Gates 1/2 FAIL. No entry.
 - No order placed. Trades today 0 (target, not a reason to loosen gates).
+
+### Cycle 465 (Tier B window opens) - 2026-10-22 11:34 ET
+- Reconciled: flat, equity/BP $405.43, no positions, no open orders.
+- Tape: SPY 763.09 (-1.3%), QQQ 707.88 (-2.4%), SMH 527.91 (-5.2%), KWEB 23.20 (-2.3%), XLV 181.93 (+1.7%), XLE 66.36 (-2.6%), IWM 275.55 (-0.3%).
+- 5-min structure (11:10-11:30 ET): SMH lows 525.50, 525.84, 528.58, 527.71; KLAC 148.34, 148.42, 149.29, 149.14; AMAT 378.43, 378.60, 380.56, 380.75; TER 306.84, 307.07, 311.23, 310.02. Higher lows across the last four bars for all of them: short-term stabilization is visible.
+- News, this cycle (extended searches), now established and dated Oct 22: (1) Yahoo Finance live blog "Stock market today: Dow, S&P 500, Nasdaq tumble as oil climbs, investors weigh Meta, Tesla earnings", Invezz "Dow opens 112 pts lower as AI spending concerns weigh on US stocks", 24/7 Wall St "IBM Sinks 7% as CEO's AI Spending Caution Overshadows Earnings Beat": AI-infrastructure spending doubts after Meta's capex guidance ($135-$145B) and IBM's CEO saying clients question AI returns; the Nasdaq 100 lost 5.5% last week and the Philadelphia Semiconductor Index fell eight straight sessions before today (one source's account; figures vary by source). (2) Lam Research (reported Oct 21 after close; get_earnings_results: EPS 2.20 vs 2.18 est): 247WallSt/GuruFocus/BigGo-type coverage shows record revenue $8.22B, Dec-quarter guide $8.6B +/- $0.4B, 2027 WFE above $200B; shares fell about 6% after hours on high expectations and a wide range. Gate 1 (external sector-wide cause) is therefore PASSABLE for the AI-complex names (sector sentiment on AI capex), not for LRCX/META/IBM themselves (own earnings).
+- Gate 2 (latest fundamental datapoint) for KLAC/AMAT: sector read-through from LRCX is positive (record revenue, WFE outlook above $200B); not a miss. Would pass, not individually verified for KLAC/AMAT.
+- Gate 4 (trend structure) FAILS and is decisive. Daily data: KLAC peaked at 208.68 on Oct 2 and made lower highs and lower lows on nearly every session since (high 202.2, 194.0, 187.3, 184.6, 175.4, 171.7, 173.1, 165.3, 164.9; today low 148.3, -29% from the peak); AMAT peaked at 547.25 on Oct 2 and sits at 381 (-30%); SMH peaked at 639.47 on Oct 6 (-17%) with lower highs and lows through today. The rest of the AI complex is the same shape: GEV (1052 on Oct 6 to 831), VRT (258 to 203), ETN (452 to 366), NVT (176 to 130), CEG (310 to 256), SNDK (1802 to 1290), STX (946 to 640), GLW (170 to 124), WDC. That is a multi-week downtrend of lower highs and lower lows, the strategy file's definition of FAIL "however far it has fallen". The 20-minute intraday higher low does not change a three-week structure.
+- Gate 3 (anchor) not evaluated, moot after gate 4. No Tier B entry.
+- Momentum: names up >=5% reviewed at 11:21 (earnings movers and housing/software/staples/rail group moves); no divergence from a peer complex, no dated catalyst. FAIL. (No new full scan this cycle; the structure was reviewed 12 minutes ago and nothing in the tape changed.)
+- No order placed. Trades today 0 (target, not a reason to loosen gates). The one-trade-a-day target conflicts with strict gate 4 today; the gate stays, and Tier C (14:30-15:30) remains a possibility only if all four gates pass.
