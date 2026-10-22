@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-22 10:29 ET",
+  "as_of": "2026-10-22 10:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1944,6 +1944,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-22 10:29 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-22 10:43 ET",
       "equity": 405.43
     }
   ],
@@ -5860,3 +5864,10 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Mean-reversion (Tier A): KLAC 151.07 (-7.6%) and AMAT 386.31 (-5.5%); KLAC made a new low of the day (below 151.92), so gate 4 FAILS (not stabilizing); gate 1 still unverified (no new news this cycle; hourly search done at 10:22). No entry.
 - Momentum (opens 10:30 ET, one minute away): >=3% up with relative volume >=1.0 returned 0 names. No candidates.
 - No order placed. Trades today 0.
+
+### Cycle 461 - 2026-10-22 10:43 ET
+- Reconciled: flat, equity/BP $405.43, no positions, no open orders.
+- Tape: SPY 762.53 (-1.4%), QQQ 708.53 (-2.3%), SMH 531.90 (-4.5%, new low), KWEB 23.20 (-2.3%), XLV 181.02 (+1.2%), XLE 66.98 (-1.7%), IWM 275.17 (-0.5%). Rotation out of AI hardware into defensives and rate-sensitives.
+- Mean-reversion (Tier A, window to 11:30): 64 names <=-7%, still the semis/AI complex (GEV -9.7%, LITE -8.6%, COHR -11%, CIEN -8.3%, TER -9.4%, LRCX -9.1% own earnings, KLAC -7.5%, ENTG -11.7%, MTSI -10.4%, ATI -11.1%, FPS -20%, TTMI -25.7% own earnings, GGG -13.6% own earnings, VICR -13.9%). SMH is at its low of the day and KLAC 151.24 is not making a higher low (gate 4 FAIL for the group); no dated, cited cause since the 10:22 search (gate 1 FAIL). No entry.
+- Momentum (window now open): 79 names >=+3%. Groups, not divergences: homebuilders after PHM reported today (PHM +3.5%, DHI, LEN, KBH, BLDR, FND), waste haulers (WM, RSG, WCN +7.6%), staples (PG +5.4% own earnings, CL, GIS, KHC, CPB, TAP, STZ), data/info (TRI, EFX, VRSK, TRU), software (INTU, HUBS, MNDY, PEGA, CSGP, Z/ZG, GDDY), airlines (LUV, ALK), utilities/water (AWK, WTRG), REITs (ADC, ELS, EPRT, CURB), rails (CSX +6.3% with UNP/NSC reporting today). Own-earnings today: LMT +6.6%, SPOT +7.7%, ALLE +7.9%, PG, BX, NDAQ +5.9%, CMCSA, DOW. Gate 1 (divergence from peer complex) FAIL for all, gate 2 (dated catalyst) not established. No entry.
+- No order placed. Trades today 0 (target, not a reason to loosen gates).
