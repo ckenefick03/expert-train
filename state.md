@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-22 15:13 ET",
+  "as_of": "2026-10-22 15:23 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2048,6 +2048,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-22 15:13 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-22 15:23 ET",
       "equity": 405.43
     }
   ],
@@ -6155,3 +6159,9 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - MR scan (<=-2.5%, RSI<=35, cap>=5B): 30 names (Cycle 485 set minus KTOS/DB). AI-infra/semicap/neocloud/crypto-miner names remain in documented multi-week downtrends (gate 4 FAIL); all others fail gate 1.
 - Momentum scan (>=3%, rel vol>=1.5): 15 names - LMT (+6.7%, earnings mover), SPOT, INTU, BIIB, WCN, PG, CP, FIBK, BBT, RTO, FA (+7.5%, new, no catalyst checked), SSL, OWL, AMRO (+12%, no dated catalyst), AMBP. Earnings, group moves, or no dated catalyst; all FAIL. RTO still blocked on gate 1 "several sessions" clause pending user rule decision.
 - No entry. Trades today 0. Next: 15:22/15:32/15:42 cycles (no entries after 15:30), close recap 15:47 ET.
+
+### Cycle 487 - 2026-10-22 15:23 ET
+- Reconciled: flat, cash/BP $405.43, no orders today. Tape: SPY 762.26 (-1.4%), QQQ 703.53 (-3.0%), SMH 523.64 (-5.9%), GLD 369.06 (-2.6%). Tier C window open (closes 15:30).
+- MR scan (<=-2.5%, RSI<=35, cap>=5B): 31 names, Cycle 486 set plus ALB (-2.6%, no dated cause checked). Same gate 4 / gate 1 failures as prior cycles. No news search (hourly done at 15:13); no new per-name checks (disclosed).
+- Momentum scan (>=3%, rel vol>=1.5): 17 names - Cycle 486 set plus KSS (+12.6%, earnings mover) and CAG (+6.9%, packaged-food group move alongside PG, no divergence verified). All FAIL; RTO still blocked on gate 1 "several sessions" clause pending user rule decision.
+- No entry. Trades today 0. Next: 15:32 cycle (entries closed after 15:30), close recap 15:47 ET.
