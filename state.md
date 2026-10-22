@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-22 14:03 ET",
+  "as_of": "2026-10-22 14:14 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2021,6 +2021,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-22 14:03 ET",
       "equity": 405.43
+    },
+    {
+      "t": "2026-10-22 14:14 ET",
+      "equity": 405.43
     }
   ],
   "positions": [],
@@ -2111,27 +2115,27 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Oct 22 (as of 12:25 ET): AI-infrastructure unwind (AI-spending worries after Meta capex and IBM comments, Oct 22 reports) with SMH -4.8%, QQQ -2.1%, SPY -1.0%; gold down 2% and miners -5%+; rotation into software, housing, staples, healthcare. Whole AI complex is in a multi-week downtrend (mean-reversion gate 4). One catalyst name: Rentokil (RTO) +8.6% on its Oct 22 Q3 update, a near-miss on momentum gate 1. Account flat.",
+    "read": "Oct 22 (as of 14:20 ET): AI-spending doubts plus an oil-price surge (Proactive Investors markets blog, Oct 22; earlier Oct 22 sources on Meta capex and IBM comments) weigh on tech; Nasdaq about -2.8%, SMH -5.6%, SPY -1.3%. Only healthcare, housing, staples and software are bid. Whole AI complex, miners and crypto-linked names are oversold (51 large names RSI<=35 and down 3.5%+) but all sit in multi-week downtrends. Account flat.",
     "chips": [
       {
         "name": "SPY",
-        "chg": -1.0
+        "chg": -1.3
       },
       {
         "name": "QQQ",
-        "chg": -2.1
+        "chg": -2.8
       },
       {
         "name": "SMH",
-        "chg": -4.8
+        "chg": -5.6
       },
       {
         "name": "KWEB",
-        "chg": -2.1
+        "chg": -2.4
       },
       {
         "name": "XLV",
-        "chg": 1.6
+        "chg": 1.2
       }
     ]
   }
@@ -6082,3 +6086,11 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Mean-reversion (Tier B): gate 4 FAIL (multi-week downtrend, retesting lows); no sourced non-AI pocket. No entry.
 - Momentum (>=+5% rel vol >=1.2: 11 names): LMT, SPOT, PG, KSS (earnings today), INTU/MNDY (software group), WCN (waste group), BBT, SSL, AMRO (no dated catalyst), RTO 22.94 (+9.0%) vs ROL 35.00 (+4.6%) still blocked on gate 1. No entry.
 - No order placed. Trades today 0 (target, not a reason to loosen gates). Hourly with news at 14:12 ET; Tier C opens 14:30 ET.
+
+### Cycle 480 (hourly, with news) - 2026-10-22 14:14 ET
+- Reconciled: flat, equity/BP $405.43, no positions, no open orders.
+- Tape: SPY 762.90 (-1.3%), QQQ 705.02 (-2.8%), SMH 525.45 (-5.6%), KWEB 23.18 (-2.4%), XLV 181.00 (+1.2%), XLE 67.46 (-1.0%), IWM 275.88 (-0.2%), GLD 369.97 (-2.4%), KLAC 148.84 (-8.9%), AMAT 379.67 (-7.2%).
+- News (2 searches this cycle + 1 on miners): Proactive Investors markets blog "MARKETS LIVE: Wall Street in the red as AI spending doubts and oil price surge weigh on sentiment" and Traders Union (both Oct 22, pre-open/early session) add a dated oil-price surge to the AI-spending cause already cited in Cycle 465 (Meta capex guidance and non-voting shares; Tesla capex cut; IBM CEO comments). No afternoon wrap or close found. Miners (BHP, VALE, FCX): nothing dated Oct 22 returned (articles from 2015-2024). Gate 1 for miners/gold FAIL (unsourced).
+- Mean-reversion (Tier B, closes 14:30; Tier C opens at 14:30): scan <=-3.5% with daily RSI(14)<=35: 51 names. AI infrastructure (AMAT 31.0, LRCX 31.8, MKSI, VRT 34.2, KLAC 31.4, NBIS, MOD, SK hynix ADR, CBRS 24.3, DOCN, FLEX 27.3, APH 30.4, AAOI, AEHR, CRWV, ACMR, UCTT, LGN), space and quantum (RKLB, ASTS, PL, RDW, QBTS, RGTI, INFQ), nuclear/uranium/rare earths (OKLO, UEC, UUUU, USAR, MP, ALM), crypto-linked (GLXY, RIOT, CIFR, CLSK, MARA, BTDR, IREN, RUM), metals (BHP -3.6% RSI 32, VALE -3.7%, CDE, SVM), plus HWM, MTZ, GTX, RIVN, DPC, GDS, FRVO. Daily structure check on the non-tech miners: BHP lower highs and lows since the Oct 5-6 high (87.5 to 79.8, today about 77.9), VALE lower highs and lows since Oct 5 (14.73 to 12.63): downtrends, gate 4 FAIL; FCX and SCCO range-bound but with no sourced cause, gate 1 FAIL. AI complex gate 4 FAIL as before. No entry.
+- Momentum (>=+4% with relative volume >=1.5: 5 names): SPOT +10.6% (earnings), WCN +10.1% (waste group move), BBT +6.2% (no dated catalyst checked), RTO +9.1% (rel vol 2.3, Q3 update catalyst dated Oct 22; ROL +4.8%; blocked on gate 1's several-sessions clause, open rule question from Cycle 469), SSL +7.3% (no dated catalyst). No entry.
+- No order placed. Trades today 0. Tier C (14:30-15:30) opens in about 10 minutes; its four gates are the same, so it will not change anything unless a name passes all four.
