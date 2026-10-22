@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-22 12:03 ET",
+  "as_of": "2026-10-22 12:18 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1977,6 +1977,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-22 12:03 ET",
       "equity": 405.43
+    },
+    {
+      "t": "2026-10-22 12:18 ET",
+      "equity": 405.43
     }
   ],
   "positions": [],
@@ -2067,15 +2071,15 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Oct 22 (as of 11:40 ET): AI-infrastructure unwind. Dated reports (Yahoo Finance live blog, Invezz, 24/7 Wall St, all Oct 22) cite AI-spending worries after Meta's capex guidance and IBM's CEO saying customers question AI returns; Nasdaq down about 2%, SMH down about 5% after eight straight down sessions. Money rotating into software, housing, staples, healthcare. Every dislocated AI-complex name sits in a multi-week downtrend, so mean-reversion gate 4 fails. Account flat.",
+    "read": "Oct 22 (as of 12:25 ET): AI-infrastructure unwind (AI-spending worries after Meta capex and IBM comments, Oct 22 reports) with SMH -4.8%, QQQ -2.1%, SPY -1.0%; gold down 2% and miners -5%+; rotation into software, housing, staples, healthcare. Whole AI complex is in a multi-week downtrend (mean-reversion gate 4). One catalyst name: Rentokil (RTO) +8.6% on its Oct 22 Q3 update, a near-miss on momentum gate 1. Account flat.",
     "chips": [
       {
         "name": "SPY",
-        "chg": -1.1
+        "chg": -1.0
       },
       {
         "name": "QQQ",
-        "chg": -2.2
+        "chg": -2.1
       },
       {
         "name": "SMH",
@@ -2083,11 +2087,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "KWEB",
-        "chg": -2.2
+        "chg": -2.1
       },
       {
         "name": "XLV",
-        "chg": 1.7
+        "chg": 1.6
       }
     ]
   }
@@ -5955,4 +5959,14 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Tape: SPY 764.77 (-1.1%), QQQ 709.15 (-2.2%), SMH 529.10 (-5.0%), KWEB 23.25 (-2.1%), XLV 181.65 (+1.5%), XLE 66.80 (-2.0%), IWM 276.31 (-0.1%), GLD 370.97 (-2.1%). Basing sideways since 11:30: SMH 526.2-529.3, KLAC 148.5-149.6, AMAT 379.7-382.8 (tight ranges, low volume), no breakdown and no bounce.
 - Gate check unchanged from Cycles 465-467: AI complex fails gate 4 (multi-week downtrend); gold miners fail gate 1 (no dated source); momentum names are group moves or earnings. No entry.
 - Disclosure: no new preview_scan this cycle (scans ran at 11:21, 11:34, 11:44, 11:53; tape and structure unchanged; hourly cycle with news and full scans is at 12:12 ET).
+- No order placed. Trades today 0 (target, not a reason to loosen gates).
+
+### Cycle 469 (hourly, with news) - 2026-10-22 12:18 ET
+- Reconciled: flat, equity/BP $405.43, no positions, no open orders.
+- Tape: SPY 765.26 (-1.0%), QQQ 709.70 (-2.1%), SMH 530.04 (-4.8%), KWEB 23.24 (-2.1%), XLV 181.76 (+1.6%), XLE 66.90 (-1.9%), IWM 276.49 (0.0%), GLD 370.90 (-2.1%), AU 86.04 (-6.0%). SMH basing between 526 and 530 since 11:30.
+- News (4 searches, all this cycle): (a) gold Oct 22: nothing dated Oct 22; Kitco Sept 24 item (older) says gold eased on oil and yields with markets pricing a 69% chance of an October rate hike (CME FedWatch) at that time; Fed meets Oct 28, a live macro risk but a Sept 24 data point, not today's. Gold miners' gate 1 still FAIL (unsourced for today). (b) Midday market wrap Oct 22: nothing dated today; earlier Oct 22 sources (cycle 465) still stand for the AI-spending cause. (c) Rentokil: see below.
+- Mean-reversion (Tier B): RSI(14, daily) <=32 and <=-3.5% today: 25 names, all AI infrastructure, crypto-linked or AI-adjacent (AMAT 31.0, LRCX 31.8, KLAC 31.4, MKSI, HWM 29.4, MTZ 26.2, CBRS 24.3, FLEX 27.3, APH 30.4, CRWV, ACMR, UCTT, IREN, RIOT, CIFR 23.8, MARA, CLSK, CDE, UUUU 23.1, FRVO, USAR, ALM, GDS, LGN, ASTS). Same multi-week downtrend structure documented in Cycle 465 (gate 4 FAIL); no non-AI pocket with a sourced cause. No entry.
+- Momentum (>=+7% with relative volume >=1.5): one name, RTO (Rentokil ADR) 22.84 (+8.6%, rel vol 2.0, market cap $10.6B, avg volume 2.0M). Catalyst (gate 2) is real and dated Oct 22: Q3 trading update (Reuters REG via TradingView, Investing.com, MarketBeat/Yahoo call transcripts): organic revenue +3.4%, North America organic +3.2%, FY2026 profit in line with expectations, $200M share buyback, planned separation of North America Residential and Commercial. Earnings window waived (the update is today and is the thesis). Timing (gate 4) OK (12:25 ET). Held base (gate 3): after a gap-up open at 22.38 RTO ground higher to 22.92 by 11:15 ET and has held 22.72-22.92 since, with higher lows (22.72 at 11:30, then 22.81, 22.83, 22.84); break-and-hold above 22.925 would be the continuation. Plausible stop 22.70 (below the base low, about 0.6% below), target >=2R about 23.10.
+- Gate 1 (relative strength vs own peer complex, today and over the last several sessions): blocked. Today RTO +8.6% vs its only US peer ROL (Rollins) +4.5% (ROL's pop is itself sympathy with RTO's news). Over recent sessions RTO did not clearly outperform: Oct 1 to Oct 21 RTO +6.3% vs ROL +9.4%; last 5 sessions RTO +4.0% vs ROL +2.5%; last 3 sessions flat vs flat. The strategy file requires clearly outperforming "today and over the last several sessions"; that persistence clause is not met, so the gate FAILS as written. Not forced, and no gate loosened.
+- Open rule question for the user, logged not acted on: a catalyst gap on a name that had been in line with its peers can never satisfy the several-sessions clause beforehand, so as written the rule excludes fresh post-catalyst gap-and-hold setups like RTO today. If you want those allowed (for example, replacing the clause with relative strength vs the peer complex today plus a dated catalyst), say so and I will add the rule to the strategy file; until then it stays a FAIL. Follow-up to fill in: RTO's price at the close and next day, and whether a 22.70 stop or the 23.10 target would have been hit (a tracking note only).
 - No order placed. Trades today 0 (target, not a reason to loosen gates).
