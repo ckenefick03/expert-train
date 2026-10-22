@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-22 12:33 ET",
+  "as_of": "2026-10-22 12:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1984,6 +1984,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-22 12:33 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-22 12:43 ET",
       "equity": 405.43
     }
   ],
@@ -5980,4 +5984,12 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Tape: SPY 764.66 (-1.1%), QQQ 708.28 (-2.3%), SMH 528.37 (-5.1%), XLV 182.05 (+1.7%), KLAC 149.10 (-8.8%), AMAT 380.94 (-6.8%). Unchanged range since 11:30.
 - Mean-reversion: no change (AI complex = multi-week downtrend, gate 4 FAIL; no sourced non-AI pocket). No entry.
 - Momentum (>=+6% with relative volume >=1.2: 5 names): SPOT +8.6% (earnings), WCN +9.0% (waste group with RSG, a group move), RTO +8.7% (rel vol 2.0), SSL +7.3%, AMRO +12.5%. RTO 22.87 vs ROL 34.76 (+3.9%): same picture as Cycle 469, still blocked on gate 1's several-sessions clause (not loosened; open rule question logged in Cycle 469 awaits the user). SSL/AMRO: no dated catalyst checked or found this cycle, gate 2 FAIL.
+- No order placed. Trades today 0 (target, not a reason to loosen gates).
+
+### Cycle 471 - 2026-10-22 12:43 ET
+- Reconciled: flat, equity/BP $405.43, no positions, no open orders.
+- Tape: SPY 763.32 (-1.3%), QQQ 706.97 (-2.5%), SMH 526.95 (-5.3%, drifting toward the day's low of 525.50), XLV 180.77 (+1.0%), KLAC 148.78 (-9.0%, near its 148.34 low), AMAT 380.76 (-6.9%). The 11:30-12:15 base is rolling over: SMH 5-min highs 530.80, 530.77, 529.38, 528.70 are lower; KLAC highs 150.34 to 149.38.
+- Mean-reversion: gate 4 FAIL (multi-week downtrend, and the intraday base is failing). No entry.
+- Momentum: RTO 22.85 (+8.6%), ROL 34.84 (+4.2%); RTO flat in a 22.81-22.92 band for 90 minutes. Still blocked on gate 1 (several-sessions clause), rule question awaiting the user. No other scan this cycle; names up >=6% with relative volume >=1.2 were last reviewed at 12:32 (SPOT earnings, WCN waste group, RTO, SSL, AMRO).
+- Disclosure: scans not re-run this cycle (reviewed 10 minutes earlier, tape unchanged).
 - No order placed. Trades today 0 (target, not a reason to loosen gates).
