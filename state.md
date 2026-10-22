@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-22 14:14 ET",
+  "as_of": "2026-10-22 14:22 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2024,6 +2024,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-22 14:14 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-22 14:22 ET",
       "equity": 405.43
     }
   ],
@@ -6094,3 +6098,9 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Mean-reversion (Tier B, closes 14:30; Tier C opens at 14:30): scan <=-3.5% with daily RSI(14)<=35: 51 names. AI infrastructure (AMAT 31.0, LRCX 31.8, MKSI, VRT 34.2, KLAC 31.4, NBIS, MOD, SK hynix ADR, CBRS 24.3, DOCN, FLEX 27.3, APH 30.4, AAOI, AEHR, CRWV, ACMR, UCTT, LGN), space and quantum (RKLB, ASTS, PL, RDW, QBTS, RGTI, INFQ), nuclear/uranium/rare earths (OKLO, UEC, UUUU, USAR, MP, ALM), crypto-linked (GLXY, RIOT, CIFR, CLSK, MARA, BTDR, IREN, RUM), metals (BHP -3.6% RSI 32, VALE -3.7%, CDE, SVM), plus HWM, MTZ, GTX, RIVN, DPC, GDS, FRVO. Daily structure check on the non-tech miners: BHP lower highs and lows since the Oct 5-6 high (87.5 to 79.8, today about 77.9), VALE lower highs and lows since Oct 5 (14.73 to 12.63): downtrends, gate 4 FAIL; FCX and SCCO range-bound but with no sourced cause, gate 1 FAIL. AI complex gate 4 FAIL as before. No entry.
 - Momentum (>=+4% with relative volume >=1.5: 5 names): SPOT +10.6% (earnings), WCN +10.1% (waste group move), BBT +6.2% (no dated catalyst checked), RTO +9.1% (rel vol 2.3, Q3 update catalyst dated Oct 22; ROL +4.8%; blocked on gate 1's several-sessions clause, open rule question from Cycle 469), SSL +7.3% (no dated catalyst). No entry.
 - No order placed. Trades today 0. Tier C (14:30-15:30) opens in about 10 minutes; its four gates are the same, so it will not change anything unless a name passes all four.
+
+### Cycle 481 - 2026-10-22 14:22 ET
+- Reconciled: flat, cash/BP $405.43, no orders today. Tape: SPY 763.51 (-1.2%), QQQ 705.64 (-2.7%), SMH 526.22 (-5.5%), GLD 370.03 (-2.4%).
+- MR scan (<=-5%, RSI<=35): 45 names, same AI-infra/semicap/neocloud/miner/crypto-miner complex as prior cycles; all remain in documented multi-week downtrends or lack a dated cause (gates 1/4 FAIL). Full per-name re-check not repeated this cycle (disclosed).
+- Momentum scan (>=4%, rel vol>=1.5): SPOT, WCN, BBT, RTO, SSL - unchanged; earnings/group moves or no dated catalyst; RTO still blocked on gate 1 "several sessions" pending user rule decision.
+- No entry. Trades today 0.
