@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-22 11:53 ET",
+  "as_of": "2026-10-22 12:03 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1972,6 +1972,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-22 11:53 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-22 12:03 ET",
       "equity": 405.43
     }
   ],
@@ -5945,3 +5949,10 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Mean-reversion (Tier B): no change from Cycle 466. AI complex fails gate 4 (multi-week downtrend); gold miners fail gate 1 (no dated source found for today's move; GLD -2% and miners -5%+ are a beta-amplified sector move, but unsourced) and AU/WPM are below their October lows. No entry.
 - Momentum (>=+6% scan, 32 names, window open): earnings movers (LMT, SPOT, ALLE, PG, BX, NDAQ, KSS, CELC), software group (INTU, ADBE, HUBS, MNDY), housing (LEN, BLDR, FND, KBH, FBIN, Z/ZG, CSGP, RKT, QXO), data/info (EFX, TRI), waste (WCN, RTO), staples (GIS, CPB, CALM), CSX, SSL, AMRO. Group moves or earnings, no divergence from a peer complex, no dated catalyst. Gates 1/2 FAIL. No entry.
 - No order placed. Trades today 0 (target, not a reason to loosen gates). Next: 12:12 ET hourly with news.
+
+### Cycle 468 - 2026-10-22 12:03 ET
+- Reconciled: flat, equity/BP $405.43, no positions, no open orders.
+- Tape: SPY 764.77 (-1.1%), QQQ 709.15 (-2.2%), SMH 529.10 (-5.0%), KWEB 23.25 (-2.1%), XLV 181.65 (+1.5%), XLE 66.80 (-2.0%), IWM 276.31 (-0.1%), GLD 370.97 (-2.1%). Basing sideways since 11:30: SMH 526.2-529.3, KLAC 148.5-149.6, AMAT 379.7-382.8 (tight ranges, low volume), no breakdown and no bounce.
+- Gate check unchanged from Cycles 465-467: AI complex fails gate 4 (multi-week downtrend); gold miners fail gate 1 (no dated source); momentum names are group moves or earnings. No entry.
+- Disclosure: no new preview_scan this cycle (scans ran at 11:21, 11:34, 11:44, 11:53; tape and structure unchanged; hourly cycle with news and full scans is at 12:12 ET).
+- No order placed. Trades today 0 (target, not a reason to loosen gates).
