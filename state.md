@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-23 14:03 ET",
+  "as_of": "2026-10-23 14:13 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2172,6 +2172,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-23 14:03 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-23 14:13 ET",
       "equity": 405.43
     }
   ],
@@ -6467,3 +6471,11 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - MR scan: HWM (gate 4 downtrend), MGM (-5.2%, group beta/no dated cause), FIGR (no dated cause) - all FAIL.
 - Momentum scan: CCI (tower group move), GMAB (catalyst unchecked), TALO (energy beta) - all FAIL. AMT dropped off.
 - No news search. No entry. Next hourly with news ~14:12 ET; Tier C opens 14:30.
+
+### Cycle 517 (hourly, with news) - 2026-10-23 14:13 ET
+- Flat, 100% cash, equity/BP $405.43; no positions; no orders today; trades 0.
+- Tape: SPY 760.71 (-0.4%), QQQ 705.80 (+0.2%), SMH 528.31 (+0.9%), XLK 183.50 (+0.6%), XLY 113.21 (-1.6%), XLI -1.0%, XLE +2.6%, GLD -0.7%. Tech/semis bid, cyclicals/industrials/consumer-discretionary offered.
+- News: WebSearch for MGM/HWM returned only older, undated articles; no dated same-cycle external cause found (disclosed gap).
+- MR scan: HWM (-3.5%, gate 4 downtrend + no cause), HUT (-3.7%, miner, no dated cause), MGM (-5.3%, no dated cause, group beta/downtrend), FIGR (-4.0%, no dated cause) - all FAIL gate 1. No Tier A/B pass.
+- Momentum scan: AMT/CCI (tower group move, no catalyst), RHI +22% (earnings gap-and-hold, fails gate 1 several-sessions clause and 2-day earnings rule context), GMAB (catalyst unchecked), FIVN +7% (no divergence verified), PBR.A/TALO (energy beta) - all FAIL.
+- No entry. Tier C opens 14:30 (forced tag only if all four gates pass); no entries after 15:30; close recap 15:47.
