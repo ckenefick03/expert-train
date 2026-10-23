@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-23 10:04 ET",
+  "as_of": "2026-10-23 10:17 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2080,6 +2080,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-23 10:04 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-23 10:17 ET",
       "equity": 405.43
     }
   ],
@@ -6231,3 +6235,10 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - MR scan (<=-3.5%, RSI<=35, cap>=5B): GGG (-3.6%, RSI 26) and BWA (-3.9%, RSI 30), both well short of Tier A's 5% intraday threshold and no sector ETF down 2%. Wider scan (<=-5%, any RSI, cap>=2B): 21 names - ACN, BE, CRDO, DLTR, SSNC, WH, PRIM, DAN, PBLS, TNGX, T, GTX, GNTX, SLM, LKQ (-19%), NCLH, CSQR, GPGI, FLG, TKC, STLA. Most are earnings reactions today (T, GNTX, FLG, SLM, LKQ-type, ACN) or company-specific. CRDO/BE (-9/-10%) fall with SMH +1% (not sector-wide; Tier A needs sector ETF >=2% down) and are inside the AI-infra multi-week downtrend (gate 4). No sourced sector-wide dated cause for any name. All FAIL gate 1.
 - Momentum: skipped (before 10:30 ET). No news search this cycle (hourly cycle due ~10:12).
 - No entry. Trades today 0.
+
+### Cycle 494 (hourly, with news) - 2026-10-23 10:17 ET
+- Reconciled: flat, cash/BP $405.43, no positions, no orders today. Tape: SPY 759.48 (-0.6%), QQQ 704.14 (-0.05%), SMH 525.63 (+0.4%), GLD 366.57 (-0.7%), RTO 22.62 (-1.1%). MR Tier A open; momentum starts 10:30.
+- News: two WebSearches (T/VZ/TMUS decline; tower stocks jump) returned only old or undated items - e.g. an undated stock alert tying a past tower rally to a SpaceX spectrum purchase, and a June 29, 2026 carrier selloff. Nothing is a dated source for today, so no news claim is used in gate-checks. Carriers: T 21.50 (-5.5%), VZ 43.88 (-2.9%), TMUS 152.75 (-3.8%); cause unsourced (T may be an earnings reaction, unverified).
+- MR scan (<=-3%, RSI<=35, cap>=2B): 35 names. Groups: miners/metals (WPM, PAAS, AG, HL, CDE, EXK, FSM, SSRM, PPTA, UUUU, USAR) -3 to -5% with GLD only -0.7% (no sector ETF down 2%, no dated cause); industrials (CAT -3.0%, GE -3.4%, HWM -3.7%, HXL, GGG, BWA) - no dated cause; crypto miners/AI-adjacent (RIOT, CIFR, GLXY, OKLO, XE, JOBY, AUR) - multi-week downtrends. Largest: FIGR -5.9%, PRIM -5.8%, TKC -5.1%, GTX -4.9%. Tier A needs >=5% with a sector ETF >=2% down: none. All FAIL gate 1 (no dated sector cause) and several gate 4.
+- Momentum: not yet eligible (10:30 ET). 
+- No entry. Trades today 0. Open item for user: momentum gate 1 "several sessions" clause (RTO, now 22.62 below its 22.72 base - thesis weakened).
