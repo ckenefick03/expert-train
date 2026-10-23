@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-22 15:48 ET",
+  "as_of": "2026-10-23 08:30 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,10 +41,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, 100% cash. Nothing rolls overnight. Oct 22: 0 trades, P&L $0.00.",
+  "status_note": "Flat, 100% cash. Pre-open brief Oct 23; no orders pre-market.",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-10-22",
+    "date": "2026-10-23",
     "start_equity": 405.43,
     "trades": 0,
     "forced": 0
@@ -2065,6 +2065,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-22 15:48 ET",
       "equity": 405.43
+    },
+    {
+      "t": "2026-10-23 08:30 ET",
+      "equity": 405.43
     }
   ],
   "positions": [],
@@ -2155,27 +2159,23 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Oct 22 (as of 14:20 ET): AI-spending doubts plus an oil-price surge (Proactive Investors markets blog, Oct 22; earlier Oct 22 sources on Meta capex and IBM comments) weigh on tech; Nasdaq about -2.8%, SMH -5.6%, SPY -1.3%. Only healthcare, housing, staples and software are bid. Whole AI complex, miners and crypto-linked names are oversold (51 large names RSI<=35 and down 3.5%+) but all sit in multi-week downtrends. Account flat.",
+    "read": "Oct 22 official close: SPY 763.96 (-1.2%), QQQ 704.47 (-2.9%), SMH 523.35 (-6.0%), GLD 369.00. Pre-market (thin): SPY ~761.5 (-0.3%), QQQ ~703.6 (-0.1%), SMH ~525.4 (+0.4%). AI-infrastructure complex still in multi-week downtrend; tentative semis bounce pre-market only.",
     "chips": [
       {
         "name": "SPY",
-        "chg": -1.3
+        "chg": -0.3
       },
       {
         "name": "QQQ",
-        "chg": -2.8
+        "chg": -0.1
       },
       {
         "name": "SMH",
-        "chg": -5.6
+        "chg": 0.4
       },
       {
-        "name": "KWEB",
-        "chg": -2.4
-      },
-      {
-        "name": "XLV",
-        "chg": 1.2
+        "name": "GLD",
+        "chg": 0.0
       }
     ]
   }
@@ -6195,3 +6195,13 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Trades: 0 entries, 0 exits (target of 1 trade/day was not met; gates were not loosened and nothing was forced). P&L: $0.00; equity $405.43 unchanged (peak $437.99, breaker $394.19 not near).
 - Why no trades: AI-infrastructure complex (semis, semicap, optical, neocloud, AI power, crypto miners) fell 5-13% on AI-spending doubts, but all names failed MR gate 4 (multi-week downtrends). Miners/banks/RIVN/MP/OKLO/SKM/SE/KTOS/DB/ALB had no dated same-cycle cause (gate 1). Momentum candidates were earnings movers (LMT, SPOT, PG, KSS), group moves (WCN, CP, CAG, software), or lacked a dated catalyst (BIIB, FA, AMRO, OWL, FIBK, BBT, SSL).
 - Open items for user: (1) momentum gate 1 "several sessions" clause blocks fresh post-catalyst gap-and-hold names like RTO (+9%, held base ~22.72-22.92); user may choose to exempt them (e.g., relative strength today + dated catalyst). Not acted on. (2) PDT/day-trade applicability on limited_margin unverified. (3) Fed meeting Oct 28.
+
+### Pre-open brief - Fri 2026-10-23 - 2026-10-23 08:30 ET
+- Read-only, no orders. Reconciled: flat, cash/BP $405.43, no positions, no open orders. No held names, so no stop checks. Peak $437.99, breaker $394.19.
+- Tape (pre-market, thin liquidity): Oct 22 official closes SPY 763.96, QQQ 704.47, SMH 523.35, GLD 369.00. Pre-market SPY ~761.5 (-0.3%), QQQ ~703.6 (-0.1%), SMH ~525.4 (+0.4%), GLD flat. KLAC ~148.8 (+0.7%), AMAT ~377.5 (+0.5%), LRCX ~230.5 (flat), NBIS ~159.9 (+0.5%), CRWV ~55.1 (-1%). RTO ~22.50 (-1.7%, below yesterday's 22.72 base floor).
+- News: two WebSearches (futures premarket Oct 23; Oct 22 close recap) returned no coverage of Oct 22/23 - only older October items (Oct 8 and Oct 16 AI-stock/oil selloffs) and unrelated dates. No citable dated source for today's tape; no news claim is made for gate-checks. Treat the AI-complex weakness as an established multi-week downtrend regardless of cause.
+- Earnings today (avoid, within 2 sessions): AXP, SLB, E, BAH, RDY, INFY, RCI, FCNCA, ALV, MKTX, GNTX, TMP, FHB, FLG, RITM, GRC, BCPC, PFBC (am); CLBK (pm).
+- Pre-market movers (scanner, >=3% either way; liquidity thin, causes NOT verified): up - AMT +9.7%, SBAC +9.8%, CCI +12.5% (tower group), RNG +14.4%, RHI +6.7%, RITM +6.9%, LITE +3.4%, AXTI +4.8%; down - T -4.9%, VZ -4.5%, TMUS -5.0% (carrier group, opposite to towers), DECK -8.4%, CNX -7.9%, INFY -7.7%, FLG -7.5%, TNGX -10.5%, SARO -5.2%, CRDO -4.5%, MRNA -3.8%, BE -3.9%.
+- Mean-reversion watch (3-5): (1) KLAC/AMAT/LRCX semicap - only if a stabilized 5-min higher low forms AND the multi-week downtrend objection (gate 4) is cleared, which it has not; low odds. (2) T/VZ/TMUS carriers (-4.5 to -5%) - possible sector-wide move; needs a dated sector cause found this cycle and a check that it is not own-earnings; unverified. (3) CNX/natgas (-7.9%) - check energy complex and a dated cause; unverified. (4) NBIS/CRWV neoclouds - same gate 4 problem. (5) DECK is likely company-specific (auto-fail).
+- Momentum watch (3-5): (1) RTO - rule decision pending; pre-market loss of the 22.72 base weakens the thesis. (2) AMT/SBAC/CCI towers (+10-12% pre-market) - group move, needs relative-strength divergence from the peer complex plus a dated catalyst; unverified. (3) LITE (+3.4%) - optical bounce against a falling group (AAOI -12.5% yesterday); check divergence over several sessions. (4) RNG (+14%) - check catalyst (earnings?). (5) RHI (+6.7%) - likely earnings reaction.
+- Window reminders: no entries before 10:00 ET; momentum earliest 10:30 ET; MR Tier A 10:00-11:30, B 11:30-14:30, C 14:30-15:30; none after 15:30. Open item for user: momentum gate 1 "several sessions" clause (RTO).
