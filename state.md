@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-23 09:53 ET",
+  "as_of": "2026-10-23 10:04 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2077,6 +2077,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-23 09:53 ET",
       "equity": 405.43
+    },
+    {
+      "t": "2026-10-23 10:04 ET",
+      "equity": 405.43
     }
   ],
   "positions": [],
@@ -2167,23 +2171,23 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Oct 22 official close: SPY 763.96 (-1.2%), QQQ 704.47 (-2.9%), SMH 523.35 (-6.0%), GLD 369.00. Pre-market (thin): SPY ~761.5 (-0.3%), QQQ ~703.6 (-0.1%), SMH ~525.4 (+0.4%). AI-infrastructure complex still in multi-week downtrend; tentative semis bounce pre-market only.",
+    "read": "Oct 23 early session: SPY -0.4%, QQQ +0.1%, SMH +1.0% (tentative bounce in semis after a -6% day); gold flat/down. Stress is stock-specific (earnings reactions) rather than index-wide. No positions.",
     "chips": [
       {
         "name": "SPY",
-        "chg": -0.3
+        "chg": -0.4
       },
       {
         "name": "QQQ",
-        "chg": -0.1
+        "chg": 0.1
       },
       {
         "name": "SMH",
-        "chg": 0.4
+        "chg": 1.0
       },
       {
         "name": "GLD",
-        "chg": 0.0
+        "chg": -0.2
       }
     ]
   }
@@ -6221,3 +6225,9 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 ### Cycle 492 - 2026-10-23 09:53 ET
 - Before the 10:00 ET entry window: no entries possible, so strategy scans skipped (disclosed). Reconciled: flat, cash/BP $405.43, no positions, no orders today. Tape: SPY 761.03 (-0.4%), QQQ 704.91 (+0.1%), SMH 527.20 (+0.7%), GLD 369.00 (flat).
 - No stops to check. Trades today 0. Next: 10:02 cycle, first with MR Tier A open (full scans).
+
+### Cycle 493 - 2026-10-23 10:04 ET
+- Reconciled: flat, cash/BP $405.43, no positions, no orders today. Tape: SPY 760.58 (-0.4%), QQQ 705.48 (+0.1%), SMH 528.51 (+1.0%), GLD 368.33 (-0.2%), RTO 22.82 (-0.3%). MR Tier A window open (10:00-11:30); momentum not before 10:30.
+- MR scan (<=-3.5%, RSI<=35, cap>=5B): GGG (-3.6%, RSI 26) and BWA (-3.9%, RSI 30), both well short of Tier A's 5% intraday threshold and no sector ETF down 2%. Wider scan (<=-5%, any RSI, cap>=2B): 21 names - ACN, BE, CRDO, DLTR, SSNC, WH, PRIM, DAN, PBLS, TNGX, T, GTX, GNTX, SLM, LKQ (-19%), NCLH, CSQR, GPGI, FLG, TKC, STLA. Most are earnings reactions today (T, GNTX, FLG, SLM, LKQ-type, ACN) or company-specific. CRDO/BE (-9/-10%) fall with SMH +1% (not sector-wide; Tier A needs sector ETF >=2% down) and are inside the AI-infra multi-week downtrend (gate 4). No sourced sector-wide dated cause for any name. All FAIL gate 1.
+- Momentum: skipped (before 10:30 ET). No news search this cycle (hourly cycle due ~10:12).
+- No entry. Trades today 0.
