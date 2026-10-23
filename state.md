@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-23 11:03 ET",
+  "as_of": "2026-10-23 11:18 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2104,6 +2104,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-23 11:03 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-23 11:18 ET",
       "equity": 405.43
     }
   ],
@@ -6290,3 +6294,9 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Reconciled: flat, cash/BP $405.43, no positions, no orders today. Tape: SPY 762.13 (-0.2%), QQQ 707.55 (+0.4%), SMH 530.28 (+1.3%), GLD 366.71 (-0.6%), XLI 164.59 (-1.3%), RTO 22.63 (-1.1%).
 - MR scan (<=-3.5%, RSI<=35, cap>=5B): FIGR only (-4.4%, RSI 32, cause unsourced; below Tier A's 5%). Momentum scan (>=3%, rel vol>=1.2, cap>=2B): 0 names.
 - No news search (hourly cycle with news at ~11:12). No entry. Trades today 0.
+
+### Cycle 500 (hourly, with news) - 2026-10-23 11:18 ET
+- Reconciled: flat, cash/BP $405.43, no positions, no orders today. Tape: SPY 762.52 (-0.2%), QQQ 707.20 (+0.4%), SMH 529.28 (+1.1%), GLD 366.19 (-0.8%), XLI 164.93 (-1.1%), RTO 22.59 (-1.3%).
+- News: one WebSearch (Oct 23 market news) returned no coverage dated Oct 23; the latest dated item was Oct 13 (chip selloff tied by Briefing.com to China's ChangXin memory advances; CPI due) - background only, not a same-cycle cause for today's moves. No citable dated source for the industrials -1.1% move, miners, carriers, or towers; no news claim is used in a gate-check.
+- MR scan (<=-3%, RSI<=35, cap>=5B): MGM (-3.4%, RSI 30) and FIGR (-3.3%, RSI 32) - both below Tier A/B-level thresholds and without a sourced cause (Tier B opens 11:30; threshold >=3.5% intraday). Momentum scan (>=3%, rel vol>=1.2): CCI only (+10.5%, rel vol 1.23) - tower group move (AMT/SBAC/CCI), no dated catalyst sourced, group beta not divergence -> FAIL gates 1/2.
+- No entry. Trades today 0.
