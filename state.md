@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-23 11:18 ET",
+  "as_of": "2026-10-23 11:33 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2108,6 +2108,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-23 11:18 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-23 11:33 ET",
       "equity": 405.43
     }
   ],
@@ -6299,4 +6303,10 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Reconciled: flat, cash/BP $405.43, no positions, no orders today. Tape: SPY 762.52 (-0.2%), QQQ 707.20 (+0.4%), SMH 529.28 (+1.1%), GLD 366.19 (-0.8%), XLI 164.93 (-1.1%), RTO 22.59 (-1.3%).
 - News: one WebSearch (Oct 23 market news) returned no coverage dated Oct 23; the latest dated item was Oct 13 (chip selloff tied by Briefing.com to China's ChangXin memory advances; CPI due) - background only, not a same-cycle cause for today's moves. No citable dated source for the industrials -1.1% move, miners, carriers, or towers; no news claim is used in a gate-check.
 - MR scan (<=-3%, RSI<=35, cap>=5B): MGM (-3.4%, RSI 30) and FIGR (-3.3%, RSI 32) - both below Tier A/B-level thresholds and without a sourced cause (Tier B opens 11:30; threshold >=3.5% intraday). Momentum scan (>=3%, rel vol>=1.2): CCI only (+10.5%, rel vol 1.23) - tower group move (AMT/SBAC/CCI), no dated catalyst sourced, group beta not divergence -> FAIL gates 1/2.
+- No entry. Trades today 0.
+
+### Cycle 501 - 2026-10-23 11:33 ET
+- Reconciled: flat, cash/BP $405.43, no positions, no orders today. Tape: SPY 763.20 (-0.1%), QQQ 708.16 (+0.5%), SMH 530.32 (+1.3%), GLD 366.36 (-0.7%), XLI 164.77 (-1.2%), RTO 22.61 (-1.2%). MR Tier B now open (11:30-14:30).
+- MR scan (<=-3.5%, RSI<=35, cap>=5B): MGM only (-3.6%, RSI 29.7, $28.43). Gate check (full): leisure group is down together (LVS -2.7%, WYNN -3.0%, BYD -2.8%, NCLH -3.8%, CCL -3.2%, RCL -2.7%, CZR -0.7%) so MGM's move is group beta; gate 1 needs a dated sector cause - one search (casino/cruise Oct 23) found nothing dated today (only an Aug 20 cruise item tied to crude and an old NCLH earnings story) -> FAIL. Gate 4: daily data Aug 20 - Oct 22 shows 43.17 -> 28.43 with lower highs and lows for two months (gap down Sep 24 on 19.9M volume) -> real downtrend, FAIL. No entry.
+- Momentum scan (>=3%, rel vol>=1.2): CCI (+11.1%) - tower group move, no dated catalyst, FAIL as before.
 - No entry. Trades today 0.
