@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-23 12:03 ET",
+  "as_of": "2026-10-23 12:15 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2125,6 +2125,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-23 12:03 ET",
       "equity": 405.43
+    },
+    {
+      "t": "2026-10-23 12:15 ET",
+      "equity": 405.43
     }
   ],
   "positions": [],
@@ -2215,11 +2219,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Oct 23 mid-morning: SPY -0.4%, QQQ +0.4%, SMH +1.5% (semis bouncing after a -6% day, still inside the multi-week downtrend); GLD -0.7%, XLI -1.5%. Quiet tape, few outsized movers; no positions.",
+    "read": "Oct 23 midday: SPY -0.2%, QQQ +0.4%, SMH +1.3% (semis bouncing, still in multi-week downtrend); oil up (USO +3.6%, XLE +3.0%) while industrials (XLI -1.1%), leisure/cruise/casinos and aerospace slide; gold -0.6%. Quiet index, rotation under the surface. No positions.",
     "chips": [
       {
         "name": "SPY",
-        "chg": -0.4
+        "chg": -0.2
       },
       {
         "name": "QQQ",
@@ -2227,11 +2231,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "SMH",
-        "chg": 1.5
+        "chg": 1.3
       },
       {
-        "name": "GLD",
-        "chg": -0.7
+        "name": "XLE",
+        "chg": 3.0
       }
     ]
   }
@@ -6342,3 +6346,10 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Momentum scan (>=3%, rel vol>=1.2): CCI (+10.8%) tower group move - FAIL; TALO (+4.0%) - XLE is +3.0% today, so TALO is energy-group beta, not relative-strength divergence from its peer complex (gate 1 FAIL); no dated catalyst sourced.
 - Energy complex up 3% while industrials/aerospace slide: noted for the 12:12 news cycle.
 - No entry. Trades today 0.
+
+### Cycle 505 (hourly, with news) - 2026-10-23 12:15 ET
+- Reconciled: flat, cash/BP $405.43, no positions, no orders today. Tape: SPY 762.46 (-0.2%), QQQ 707.37 (+0.4%), SMH 530.01 (+1.3%), GLD 366.92 (-0.6%), XLI 164.84 (-1.1%), XLE 69.61 (+3.0%), USO 168.39 (+3.6%), RTO 22.72 (-0.7%).
+- News: one WebSearch (oil/energy/industrials Oct 23) returned only old, undated, or other-year pieces; no citable same-day source. The price data itself shows oil up (USO +3.6%) with energy up and oil-sensitive sectors (cruise, casinos, aerospace/industrials) down - a pattern consistent with an oil-price move, but no dated source confirms the cause, so no news claim is used in a gate-check.
+- MR scan (<=-3%, RSI<=35, cap>=5B): HWM (-3.5%, RSI 22) and MGM (-3.6%, RSI 30) - unchanged, both FAIL (HWM six-week downtrend gate 4; MGM group beta + downtrend + no dated cause).
+- Momentum scan (>=3%, rel vol>=1.2): CCI (+10.5%, tower group move) and TALO (+4.1%, energy-group beta with XLE +3.0%) - both FAIL gate 1 (no divergence from own peer complex, no dated catalyst).
+- No entry. Trades today 0. Remaining: Tier B until 14:30, Tier C to 15:30, close recap 15:47 ET.
