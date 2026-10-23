@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-23 09:43 ET",
+  "as_of": "2026-10-23 09:53 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2072,6 +2072,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-23 09:43 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-23 09:53 ET",
       "equity": 405.43
     }
   ],
@@ -6213,3 +6217,7 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 ### Cycle 491 - 2026-10-23 09:43 ET
 - Before the 10:00 ET entry window: no entries possible, so strategy scans skipped (disclosed). Reconciled: flat, cash/BP $405.43, no positions, no orders today. Tape: SPY 760.55 (-0.4%), QQQ 704.01 (-0.1%), SMH 526.22 (+0.5%), GLD 368.81 (-0.1%).
 - No stops to check. Trades today 0. Next: 09:52 cycle, then first scan cycle once 10:00 ET opens MR Tier A.
+
+### Cycle 492 - 2026-10-23 09:53 ET
+- Before the 10:00 ET entry window: no entries possible, so strategy scans skipped (disclosed). Reconciled: flat, cash/BP $405.43, no positions, no orders today. Tape: SPY 761.03 (-0.4%), QQQ 704.91 (+0.1%), SMH 527.20 (+0.7%), GLD 369.00 (flat).
+- No stops to check. Trades today 0. Next: 10:02 cycle, first with MR Tier A open (full scans).
