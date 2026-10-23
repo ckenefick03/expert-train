@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-23 12:33 ET",
+  "as_of": "2026-10-23 12:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2136,6 +2136,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-23 12:33 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-23 12:43 ET",
       "equity": 405.43
     }
   ],
@@ -6372,4 +6376,10 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Reconciled: flat, cash/BP $405.43, no positions, no orders today. Tape: SPY 761.79 (-0.3%), QQQ 706.90 (+0.3%), SMH 529.78 (+1.2%), GLD 366.60 (-0.7%), XLI 164.95 (-1.1%), XLE 69.69 (+3.1%), RTO 22.73 (-0.7%).
 - MR scan (<=-3.5%, RSI<=35, cap>=5B): HWM (-3.7%) and MGM (-4.0%) - unchanged and still FAIL (HWM six-week downtrend, MGM group beta + downtrend + no dated cause).
 - Momentum scan (>=3%, rel vol>=1.2): CCI (+9.1%, tower group), TALO (+4.0%, energy beta), GMAB (+5.7%, catalyst unchecked) - all FAIL as in Cycle 506.
+- No news search (next hourly ~13:12). No entry. Trades today 0.
+
+### Cycle 508 - 2026-10-23 12:43 ET
+- Reconciled: flat, cash/BP $405.43, no positions, no orders today. Tape: SPY 762.44 (-0.2%), QQQ 707.40 (+0.4%), SMH 529.90 (+1.3%), GLD 366.96 (-0.6%), XLI 165.17 (-0.9%), XLE 69.67 (+3.1%), RTO 22.75 (-0.6%).
+- MR scan (<=-3.5%, RSI<=35, cap>=5B): MGM only (-3.9%, RSI 30) - HWM has recovered above the -3.5% line (no longer a candidate this cycle). MGM still FAILs (group beta, downtrend, no dated cause).
+- Momentum scan (>=3%, rel vol>=1.2): CCI (+9.1%), GMAB (+5.2%), TALO (+4.1%) - unchanged FAILs.
 - No news search (next hourly ~13:12). No entry. Trades today 0.
