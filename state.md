@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-23 14:42 ET",
+  "as_of": "2026-10-23 14:53 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2188,6 +2188,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-23 14:42 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-23 14:53 ET",
       "equity": 405.43
     }
   ],
@@ -6515,3 +6519,10 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Tier C MR scan (14 hits): same set as Cycle 519 plus EGO (gold miner, GLD-down beta, no stock cause). HWM/MGM/CLS fail gate 4 (multi-week downtrends, checked last cycle); CTVA spin-off artifact; rest have no dated external cause - all FAIL.
 - Momentum scan: AMT/SBAC/CCI (tower group), RNG +6.5% and FIVN +7.1% (software, no verified catalyst/divergence), RHI +21% (earnings gap), GMAB, INTR - all FAIL.
 - No entry, no forced trade. Entry window closes 15:30; close recap 15:47.
+
+### Cycle 521 - 2026-10-23 14:53 ET
+- Flat, 100% cash, equity/BP $405.43; no positions; trades today 0.
+- Tape: SPY 760.69 (-0.4%), QQQ 705.37 (+0.1%), SMH 529.27 (+1.1%), GLD -0.7%, XLI -0.9%, XLE +2.6%.
+- Tier C MR scan (10 hits, shrinking): CLS, HWM (-3.0%, off lows), GGG, HUT, LVS, EGO, IMVT, MGM (-5.8%), FIGR, CTVA. Verdicts unchanged from Cycles 519-520: HWM/MGM/CLS fail gate 4 (multi-week downtrends), CTVA spin-off artifact, others no dated external cause - all FAIL.
+- Momentum scan (9): AMT/SBAC/CCI (tower group), RNG/FIVN (software, no verified catalyst), RHI (earnings gap), GMAB, TALO (energy beta), INTR - all FAIL.
+- No entry, no forced trade. Last entry window cycles: 15:02, 15:12, 15:22 ET; none after 15:30; recap 15:47.
