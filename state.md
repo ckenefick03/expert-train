@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-23 10:33 ET",
+  "as_of": "2026-10-23 10:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2093,6 +2093,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-23 10:33 ET",
       "equity": 405.43
+    },
+    {
+      "t": "2026-10-23 10:43 ET",
+      "equity": 405.43
     }
   ],
   "positions": [],
@@ -2183,7 +2187,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Oct 23 early session: SPY -0.4%, QQQ +0.1%, SMH +1.0% (tentative bounce in semis after a -6% day); gold flat/down. Stress is stock-specific (earnings reactions) rather than index-wide. No positions.",
+    "read": "Oct 23 mid-morning: SPY -0.4%, QQQ +0.4%, SMH +1.5% (semis bouncing after a -6% day, still inside the multi-week downtrend); GLD -0.7%, XLI -1.5%. Quiet tape, few outsized movers; no positions.",
     "chips": [
       {
         "name": "SPY",
@@ -2191,15 +2195,15 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "QQQ",
-        "chg": 0.1
+        "chg": 0.4
       },
       {
         "name": "SMH",
-        "chg": 1.0
+        "chg": 1.5
       },
       {
         "name": "GLD",
-        "chg": -0.2
+        "chg": -0.7
       }
     ]
   }
@@ -6262,3 +6266,8 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - MR Tier A scan (<=-5%, RSI<=35, cap>=5B): 0 names. Momentum scan (>=3%, rel vol>=1.3, cap>=2B): 0 names (momentum window just opened; early-session relative volume is still low, so few names clear the filter).
 - Nothing to gate-check. No news search (hourly done 10:17; next ~11:12).
 - No entry. Trades today 0.
+
+### Cycle 497 - 2026-10-23 10:43 ET
+- Reconciled: flat, cash/BP $405.43, no positions, no orders today. Tape: SPY 761.00 (-0.4%), QQQ 707.17 (+0.4%), SMH 531.00 (+1.5%), GLD 366.50 (-0.7%), XLI 164.17 (-1.5%), RTO 22.54 (-1.5%).
+- MR scan (<=-4%, RSI<=35, cap>=5B): only FIGR (-4.5%, RSI 32; cause unsourced, below Tier A's 5%). Momentum scan (>=3%, rel vol>=1.0, cap>=2B): 0 names. Quiet tape; the day's outsized movers are earnings reactions/stock-specific and none qualifies.
+- No news search (hourly due ~11:12). No entry. Trades today 0.
