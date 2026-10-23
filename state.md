@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-23 13:04 ET",
+  "as_of": "2026-10-23 13:13 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2148,6 +2148,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-23 13:04 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-23 13:13 ET",
       "equity": 405.43
     }
   ],
@@ -6402,3 +6406,10 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Reconciled: flat, cash/BP $405.43, no positions, no orders today. Tape: SPY 761.28 (-0.4%), QQQ 706.36 (+0.3%), SMH 528.26 (+0.9%), GLD 366.64 (-0.6%), XLI 165.00 (-1.0%), XLE 69.42 (+2.7%), RTO 22.73 (-0.7%).
 - MR scan (<=-3.5%, RSI<=35, cap>=5B): HWM (-3.7%) and MGM (-4.0%) - unchanged FAILs. Momentum scan (>=3%, rel vol>=1.2): AMT, CCI (tower group), GMAB, TALO (energy beta) - unchanged FAILs.
 - No news search (hourly cycle with news ~13:12). No entry. Trades today 0.
+
+### Cycle 511 (hourly, with news) - 2026-10-23 13:13 ET
+- Reconciled: flat, cash/BP $405.43, no positions, no orders today. Tape: SPY 760.56 (-0.4%), QQQ 705.52 (+0.1%), SMH 527.54 (+0.8%), GLD 366.39 (-0.7%), XLI 164.76 (-1.2%), XLE 69.37 (+2.7%), USO 168.26 (+3.5%), RTO 22.72 (-0.7%).
+- News: one WebSearch (tower stocks surge reason) returned only old/other-year items (2017 Sprint/T-Mobile merger collapse, 2019 rallies, 2025 Crown Castle fiber sale); nothing dated today. Observation from price data only: towers (AMT +3.6%, CCI +9.6%) up while carriers (T, VZ, TMUS -3 to -5% earlier) down - cause unsourced; oil +3.5% with energy +2.7% while cruise/casinos/aerospace/industrials fall - consistent with an oil move, unsourced. No news claim used in any gate.
+- MR scan (<=-3%, RSI<=35, cap>=5B): HWM (-4.1%, RSI 22), MGM (-4.2%, RSI 30), GGG (-3.5%, RSI 26, industrial machinery, no cause found). HWM/MGM FAIL as in Cycles 502/501; GGG fails gate 1 (no dated cause) and is below the 3.5%-with-stabilization Tier B bar.
+- Momentum scan (>=3%, rel vol>=1.2): AMT, CCI (tower group), GMAB (+6.5%, catalyst unchecked), TALO (energy beta) - all FAIL.
+- No entry. Trades today 0. Remaining: Tier B to 14:30, Tier C to 15:30, close recap 15:47 ET.
