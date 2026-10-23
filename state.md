@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-23 10:17 ET",
+  "as_of": "2026-10-23 10:23 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2084,6 +2084,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-23 10:17 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-23 10:23 ET",
       "equity": 405.43
     }
   ],
@@ -6242,3 +6246,9 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - MR scan (<=-3%, RSI<=35, cap>=2B): 35 names. Groups: miners/metals (WPM, PAAS, AG, HL, CDE, EXK, FSM, SSRM, PPTA, UUUU, USAR) -3 to -5% with GLD only -0.7% (no sector ETF down 2%, no dated cause); industrials (CAT -3.0%, GE -3.4%, HWM -3.7%, HXL, GGG, BWA) - no dated cause; crypto miners/AI-adjacent (RIOT, CIFR, GLXY, OKLO, XE, JOBY, AUR) - multi-week downtrends. Largest: FIGR -5.9%, PRIM -5.8%, TKC -5.1%, GTX -4.9%. Tier A needs >=5% with a sector ETF >=2% down: none. All FAIL gate 1 (no dated sector cause) and several gate 4.
 - Momentum: not yet eligible (10:30 ET). 
 - No entry. Trades today 0. Open item for user: momentum gate 1 "several sessions" clause (RTO, now 22.62 below its 22.72 base - thesis weakened).
+
+### Cycle 495 - 2026-10-23 10:23 ET
+- Reconciled: flat, cash/BP $405.43, no positions, no orders today. Tape: SPY 759.70 (-0.6%), QQQ 705.10 (+0.1%), SMH 527.79 (+0.8%), GLD 366.17 (-0.8%), XLI 163.32 (-2.0%), RTO 22.54 (-1.5%).
+- MR Tier A scan (<=-5%, RSI<=35, cap>=5B): 0 names. Industrials sector ETF XLI is -2.0% (CAT -3.0%, GE -3.4%, HWM -3.7% per Cycle 494) - a possible sector move worth a dated-cause search, but no member is at Tier A's 5% intraday threshold; Tier B (>=3.5%, from 11:30) is the relevant window and needs a sourced sector-wide cause and a non-downtrend check. Not chased now; no news search this cycle (one done at 10:17).
+- Momentum: starts 10:30 ET, so skipped this cycle (disclosed).
+- No entry. Trades today 0.
