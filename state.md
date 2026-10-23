@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-23 08:30 ET",
+  "as_of": "2026-10-23 09:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2068,6 +2068,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-23 08:30 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-23 09:43 ET",
       "equity": 405.43
     }
   ],
@@ -6205,3 +6209,7 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Mean-reversion watch (3-5): (1) KLAC/AMAT/LRCX semicap - only if a stabilized 5-min higher low forms AND the multi-week downtrend objection (gate 4) is cleared, which it has not; low odds. (2) T/VZ/TMUS carriers (-4.5 to -5%) - possible sector-wide move; needs a dated sector cause found this cycle and a check that it is not own-earnings; unverified. (3) CNX/natgas (-7.9%) - check energy complex and a dated cause; unverified. (4) NBIS/CRWV neoclouds - same gate 4 problem. (5) DECK is likely company-specific (auto-fail).
 - Momentum watch (3-5): (1) RTO - rule decision pending; pre-market loss of the 22.72 base weakens the thesis. (2) AMT/SBAC/CCI towers (+10-12% pre-market) - group move, needs relative-strength divergence from the peer complex plus a dated catalyst; unverified. (3) LITE (+3.4%) - optical bounce against a falling group (AAOI -12.5% yesterday); check divergence over several sessions. (4) RNG (+14%) - check catalyst (earnings?). (5) RHI (+6.7%) - likely earnings reaction.
 - Window reminders: no entries before 10:00 ET; momentum earliest 10:30 ET; MR Tier A 10:00-11:30, B 11:30-14:30, C 14:30-15:30; none after 15:30. Open item for user: momentum gate 1 "several sessions" clause (RTO).
+
+### Cycle 491 - 2026-10-23 09:43 ET
+- Before the 10:00 ET entry window: no entries possible, so strategy scans skipped (disclosed). Reconciled: flat, cash/BP $405.43, no positions, no orders today. Tape: SPY 760.55 (-0.4%), QQQ 704.01 (-0.1%), SMH 526.22 (+0.5%), GLD 368.81 (-0.1%).
+- No stops to check. Trades today 0. Next: 09:52 cycle, then first scan cycle once 10:00 ET opens MR Tier A.
