@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-26 11:25 ET",
+  "as_of": "2026-10-26 11:35 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,12 +41,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, 100% cash. Pre-open brief Oct 26 (Brazil election gap, Fed Oct 28); no orders pre-market.",
+  "status_note": "Long NU (mean-reversion Tier B, organic) 8.495 sh @ 12.36, stop 11.80, target 13.40; default close before the bell unless an explicit hold decision is logged.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-26",
     "start_equity": 405.43,
-    "trades": 0,
+    "trades": 1,
     "forced": 0
   },
   "equity_history": [
@@ -2249,9 +2249,24 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-26 11:25 ET",
       "equity": 405.43
+    },
+    {
+      "t": "2026-10-26 11:35 ET",
+      "equity": 405.09
     }
   ],
-  "positions": [],
+  "positions": [
+    {
+      "symbol": "NU",
+      "strategy": "mean-reversion",
+      "tier": "B",
+      "qty": 8.495214,
+      "entry": 12.36,
+      "price": 12.315,
+      "stop": 11.8,
+      "target": 13.4
+    }
+  ],
   "trades": [
     {
       "symbol": "TER",
@@ -6706,3 +6721,17 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Remaining checks for Tier B decision: Gate 2 fundamentals - ITUB reported 2026 Q2 EPS 0.21 vs 0.22 est (small miss; Q1 same) = neutral at best; NU 2026 Q2 EPS 0.216 vs 0.19 est (beat) = better; next earnings ITUB Nov 3 pm, NU Nov 12 pm, both outside the 2-trading-day window. Gate 3 anchor: NU pre-event base 13.2-13.4 (Oct 1-2 closes) = +8.5% from 12.33, stop under today's low ~11.85 (-3.9%) -> ~2.2R; ITUB base 8.45-8.59 (Oct 1-2) = +13% vs stop 7.235 (-4.4%) ~3R, but ITUB's earnings slightly missed twice. Gate 4 daily structure: NU Sept 1-28 fell 15.4 -> 12.2 (lower highs), then the Oct first-round rally to 16.2 and drift lower 16.19 -> 14.9; today's drop is an event gap back to the Sept 28-Oct 2 base rather than a fresh break to new lows, but the event (non-concession, annulment push) is unresolved. Risks: knife-catch on an ongoing political shock; wide Brazilian-ADR headline risk; Fed Wed.
 - MR scan: empty (RSI<=35 & <=-3.5%). Momentum scan: RRC +15% (earnings Tue pm), SGRY +46% (event gap), SRAD +4% - all FAIL; semis broad group beta.
 - No entry this cycle. 11:32 cycle: re-pull ITUB/NU 5-min, confirm a held higher low after 11:30, then decide Tier B (NU preferred on fundamentals); otherwise log the exact failed gate.
+
+### Cycle 535 - ENTRY: NU (Nu Holdings) mean-reversion Tier B, organic - 2026-10-26 11:35 ET
+- Order: BUY market $105.00 NU, regular hours, gfd, id 6adf72eb-0c73-484b-8bf7-fbf0b279f4bc. FILLED 8.495214 sh @ $12.3599 (cost $105.00). Cash after: $300.43. Account equity $405.09. 30-minute hold rule applies until 12:04 ET.
+- Tier: B (11:30-14:30; no Tier A qualified today - Tier A scan empty, Brazil names fail Tier A on daily RSI>35). Drop from prior close 15.16: -18.6% at entry (needs >=3.5%). Tag: organic.
+- GATES (written):
+  1. Cause: EXTERNAL, country-wide, dated. Lula won the Oct 25 Brazil runoff 51.8%-48.2% (NPR 2026-10-25, Fox News, The American Conservative, found in the 11:23 cycle; pomegra.io for the ADR move); markets had priced a Bolsonaro win (Kalshi >80%, first round Oct 4 had Flavio Bolsonaro ahead). Hit is to all Brazil-domestic ADRs (ITUB -21%, BBD -30%, NU -19%, ambev/telecom/utilities -14% to -26%), not NU-specific = PASS. (PBR deliberately excluded: state-owned interventionism is closer to a single-company policy hit.)
+  2. Fundamental: NU 2026 Q2 EPS 0.216 vs 0.19 estimate (beat), reported 2026-08-13; next report 2026-11-12 (outside the 2-trading-day window) = PASS (neutral-or-better).
+  3. Upside anchor: the Sept 28-Oct 2 base (closes 12.23-13.43, a level held for a week before the first-round rally) retested today: low 11.65 at the open, then reclaimed and held above 11.85-12.0. Target = the 13.29-13.43 Oct 1-2 closing zone (~+8.5%), prior close 15.16 is the longer-run reversion level. Stop 11.80 (below the 11.85-11.99 higher-low shelf, 4.5% below entry) -> reward/risk about 1.9-2.0R at 13.40; trim into 2R+ extensions. = PASS (borderline on 2R, noted).
+  4. Trend: not a multi-week downtrend. Daily lows since the Sept 28 low (12.22) rose through Oct 9 (12.75, 12.95, 14.84, 15.2, 15.43, 15.48, 15.95) and stayed above 14.36 through Oct 23; the Sept 1-28 slide was reversed by the first-round rally. Today's drop is an event gap back to the base, on 197M shares (2.5x average). 5-min stabilization confirmed: lows 11.99 (14:50), 11.99, 12.06, 12.12, 12.24, 12.30 (15:25) = clean series of higher lows with fading volume on dips, price 12.30-12.34 when ordered = PASS.
+- Liquidity: spread $0.01 (0.08%), bid/ask size ~15k shares; fractional tradable; market order acceptable for a large, liquid, tight-spread name (limit not needed). review_equity_order: no order checks, no PDT alert.
+- Risk: R = (12.36-11.80) x 8.495 = $4.76. Max horizon: end of day by default (15:47 recap) - closing today is a day trade; PDT applicability on this limited_margin account is unverified (no broker alert at review). Unresolved political shock (Bolsonaro refusing to concede, seeking annulment) = headline/knife-catch risk; Fed Wed.
+- Thesis: dislocation in a high-quality Brazilian fintech after an upset election result, stabilizing at the prior base; reversion toward 13.4 as panic selling fades.
+- Sizing check: size $105 = min($105, $405.43-$0.50). Positions: 1 of 5. Day loss limit untouched.
+- Momentum scan this cycle: RRC +15.9% (earnings Tue pm), SGRY +46% (event gap), SRAD +3.1% - FAIL. Other MR candidates: ITUB (-21.5%; EPS 0.21 vs 0.22 est = small miss on two quarters, gate 2 not clean) skipped; BBD/ABEV/SBS/CIG etc not evaluated (smaller/lower quality); 5 positions max, one name per theme this cycle to avoid stacking correlated Brazil risk.
