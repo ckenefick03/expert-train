@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-26 15:23 ET",
+  "as_of": "2026-10-26 15:33 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2341,6 +2341,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-26 15:23 ET",
       "equity": 408.83
+    },
+    {
+      "t": "2026-10-26 15:33 ET",
+      "equity": 408.49
     }
   ],
   "positions": [
@@ -2350,7 +2354,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "tier": "B",
       "qty": 8.495214,
       "entry": 12.36,
-      "price": 12.755,
+      "price": 12.71,
       "stop": 12.25,
       "target": 13.4
     }
@@ -6981,3 +6985,9 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Tape: SPY 765.57, QQQ 713.53, SMH 544.83.
 - Tier C scan (last full cycle before 15:30 cutoff): new EQT -2.6% (gas; peers RRC/AR are up, so name-specific, no sourced cause); DG -5.8%, SGI, BRO, YPF, FICO, IBRX, RDDT, AMKR (earnings blackout), Brazil basket (duplicate) - FAIL. Momentum: new TSLA +6.0% (rel vol 1.2, no verified own catalyst this cycle), rest unchanged group moves/event gaps - FAIL.
 - No new entry.
+
+### Cycle 558 - 2026-10-26 15:33 ET
+- STOP CHECK: NU 8.495 sh @ 12.36, last 12.71 (+$2.97, +2.8%), working stop 12.25 (3.6% below), target 13.40. Peers: EWZ 34.40, ITUB 7.745, BBD 2.925, PBR 22.56: basket still firming. HOLD until the 15:47 recap exit decision. Open orders: none (only the filled NU buy of the morning).
+- Account: equity $408.49, cash/BP $300.43, 1/5 positions, 1 trade today (organic), day P&L +$2.97 unrealized.
+- Tape: SPY 765.23, QQQ 712.77, SMH 543.50.
+- Entry window closed at 15:30 ET: no entries possible, so the full preview_scan sweeps were skipped this cycle (disclosed; nothing to act on). No new entry.
