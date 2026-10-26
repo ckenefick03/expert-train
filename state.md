@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-26 08:36 ET",
+  "as_of": "2026-10-26 09:57 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2220,6 +2220,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-26 08:36 ET",
+      "equity": 405.43
+    },
+    {
+      "t": "2026-10-26 09:57 ET",
       "equity": 405.43
     }
   ],
@@ -6623,3 +6627,11 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
   - Excluded: RRC (+9.8% pre, but earnings Tue pm), SGRY (+24%, likely event/earnings-type gap, unverified), CLS (earnings).
 - Risks: Fed Wed Oct 28; oil weakness hits energy beta names that popped Friday (TALO, EQNR - EQNR also reports Wed); Brazil headline risk can swing EM ADRs violently; first 30-60 minutes off-limits.
 - No orders. Entry rules for the day unchanged: MR Tier A 10:00-11:30 / B 11:30-14:30 / C 14:30-15:30 (forced tag only), momentum from 10:30, none after 15:30.
+
+### Cycle 528 (pre-10:00, observation only) - 2026-10-26 09:57 ET
+- Flat, 100% cash, equity/BP $405.43; no positions; trades today 0. No entries before 10:00 ET.
+- Tape: SPY 763.25 (+0.4%), QQQ 706.99 (+0.4%), SMH 533.48 (+1.2%), XLE 69.81 (+0.7%, oil weakness did not carry), GLD -0.2%.
+- Brazil (read-only watch): EWZ 32.66 (-23.3% vs 42.59, off the pre-market low 31.2), ITUB 7.57 (-21.8%), BBD 2.93 (-28%), NU 11.97 (-21%), PBR 22.10 (-15.5%), VALE 11.96 (-3.5%). Partial bounce off pre-market lows, still far below Friday; none qualify for Tier A (RSI>35 except VALE, now at the -3.5% edge).
+- MR scan (RSI<=35, <=-3.5%, cap>=5B): NBIS -4.8% (RSI 30.2, AI-cloud name, no dated cause checked yet) and IONQ -3.9% (RSI 34.4, quantum, no cause checked); neither evaluated for entry (pre-10:00).
+- Optical/semis: LITE +4.7%, COHR +1.2%, TSEM +1.4% vs SMH +1.2% - only LITE outperforms; momentum not eligible before 10:30.
+- No entry. Next cycle ~10:02 ET opens MR Tier A window.
