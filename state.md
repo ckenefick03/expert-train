@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-26 15:43 ET",
+  "as_of": "2026-10-26 15:48 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2348,6 +2348,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-26 15:43 ET",
+      "equity": 408.34
+    },
+    {
+      "t": "2026-10-26 15:48 ET",
       "equity": 408.34
     }
   ],
@@ -7010,3 +7014,9 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - OVERNIGHT STATUS: FLAT. Nothing is held overnight. No open orders.
 - What the day showed: only one setup (Brazil ADR shock) cleared all four mean-reversion gates; dozens of scan hits failed gate 1 (no sourced, dated, sector-wide cause), earnings blackouts (AMKR), duplicate exposure (Brazil basket), or were group moves/event gaps for momentum. WebSearch repeatedly returned old/undated articles and was disclosed as a gap each time.
 - Open items for the user: (1) momentum gate-1 "several sessions" clause blocks fresh post-catalyst gap-and-hold names - possible exemption? (2) PDT/day-trade applicability on limited_margin still unverified (1 same-day round trip done, no alert). (3) Fed decision Wed Oct 28 2pm ET; tomorrow is a new session, pre-open brief ~8:30 ET.
+
+### Cycle 560 - LAST CYCLE / close recap routine - 2026-10-26 15:48 ET
+- Reconcile (live): equity $408.34 = cash/BP $408.34, 0 positions, no open orders. Day's orders (verified): NU buy 8.495214 @ 12.3599 avg (11:34 ET) and NU sell 8.495214 @ 12.7029 avg (15:43 ET), both filled.
+- Stop checks: nothing held, nothing to check. No new entries (window closed 15:30 ET).
+- OVERNIGHT: NOTHING ROLLS. The account is flat, so there is no thesis to carry; NU was closed at 15:43 per the default close-before-the-bell rule (reasoning logged in Cycle 559).
+- Day recap (matches the Day recap already logged above): cycles ran from pre-open brief through Cycle 560 with scheduler bunching/late triggers but no missed 10-minute window that mattered; several triggers were skipped under the 6-minute rule earlier in the day; scans on both strategies ran on full universes each cycle until the 15:30 cutoff (the 15:33 and later cycles skipped scans by design, disclosed). 1 trade (organic), +$2.91 realized, +0.72% on the day, $405.43 -> $408.34. Skips were all documented gate failures. WebSearch returned stale/undated articles repeatedly (disclosed).
