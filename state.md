@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-26 09:57 ET",
+  "as_of": "2026-10-26 10:24 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2225,6 +2225,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-26 09:57 ET",
       "equity": 405.43
+    },
+    {
+      "t": "2026-10-26 10:24 ET",
+      "equity": 405.43
     }
   ],
   "positions": [],
@@ -2315,27 +2319,27 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Oct 26 pre-market: SPY +0.4%, QQQ +0.7%, SMH +1.7% (semis/optical bid), oil weak (USO -2.5%, XLE -1.3%), gold +0.6%. Brazil ADRs gapping down 20-38% after Lula's runoff win (EWZ -27%). Fed decision Wed Oct 28, 2pm. No positions.",
+    "read": "Oct 26 10:23 ET: risk-on. SPY +0.7%, QQQ +0.8%, SMH +1.3%, XLI +1.1%, XLF +0.6%, gold +0.3%; energy flat/down (XLE -0.2%). Brazil ADRs still -15% to -29% after Lula's win, not stabilizing. Fed Wed. No positions.",
     "chips": [
       {
         "name": "SPY",
-        "chg": 0.4
-      },
-      {
-        "name": "QQQ",
         "chg": 0.7
       },
       {
+        "name": "QQQ",
+        "chg": 0.8
+      },
+      {
         "name": "SMH",
-        "chg": 1.7
+        "chg": 1.3
       },
       {
         "name": "XLE",
-        "chg": -1.3
+        "chg": -0.2
       },
       {
         "name": "EWZ",
-        "chg": -26.8
+        "chg": -23.3
       }
     ]
   }
@@ -6635,3 +6639,12 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - MR scan (RSI<=35, <=-3.5%, cap>=5B): NBIS -4.8% (RSI 30.2, AI-cloud name, no dated cause checked yet) and IONQ -3.9% (RSI 34.4, quantum, no cause checked); neither evaluated for entry (pre-10:00).
 - Optical/semis: LITE +4.7%, COHR +1.2%, TSEM +1.4% vs SMH +1.2% - only LITE outperforms; momentum not eligible before 10:30.
 - No entry. Next cycle ~10:02 ET opens MR Tier A window.
+
+### Cycle 529 (covers the delayed :02 and hourly-with-news triggers) - 2026-10-26 10:24 ET
+- Both triggers arrived together at 10:23 ET (scheduled 10:02 and 10:12); one cycle run for both. Flat, 100% cash, equity/BP $405.43; no positions; trades today 0.
+- Tape: SPY 765.12 (+0.7%), QQQ 710.20 (+0.8%), SMH 534.15 (+1.3%), XLI +1.1%, XLF +0.6%, XLE 69.23 (-0.2%), GLD +0.3%. Broad risk-on.
+- Brazil: EWZ 32.65 (-23.3%), ITUB 7.33 (-24%), BBD 2.88 (-29%), NU 12.07 (-20%), PBR 21.54 (-17.7%), VALE 11.98 (-3.4%). No stabilization since the open (ITUB 7.57 at 09:56 -> 7.33 now; lower, not a higher low). They no longer show in the MR scan (daily RSI above 35), so Tier A is unavailable; earliest is Tier B from 11:30 with a held 5-min higher low.
+- MR scan (cap>=5B, <=-3.5%, RSI<=35): only AMKR -3.8% (RSI 30.4) - reports earnings TODAY after the close (calendar) = FAIL. NBIS/IONQ from 09:56 dropped out. No Tier A candidate.
+- Momentum scan: RRC +15.6% (reports Tue pm = inside the 2-day earnings window, FAIL), SGRY +46% on 10x volume (search found only 2025 Bain-buyout items, no dated 2026 source; looks like a deal/event gap with no pullback to buy = FAIL, unverified), SRAD +3.3% (no catalyst/divergence). No pass.
+- News: searches for SGRY and RRC returned only older/undated articles; no new dated same-cycle sources beyond the pre-open Brazil items (disclosed gap).
+- No entry. Next: ~10:32 ET cycle; MR Tier A closes 11:30, Tier B opens then.
