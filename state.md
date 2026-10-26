@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-26 15:33 ET",
+  "as_of": "2026-10-26 15:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Long NU (mean-reversion Tier B, organic) 8.495 sh @ 12.36, stop 11.80, target 13.40; default close before the bell unless an explicit hold decision is logged.",
+  "status_note": "Flat. NU closed +$2.91 (+0.61R) before the bell; nothing held overnight. Fed decision Wed Oct 28 2pm ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-26",
@@ -2345,20 +2345,13 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-26 15:33 ET",
       "equity": 408.49
-    }
-  ],
-  "positions": [
+    },
     {
-      "symbol": "NU",
-      "strategy": "mean-reversion",
-      "tier": "B",
-      "qty": 8.495214,
-      "entry": 12.36,
-      "price": 12.71,
-      "stop": 12.25,
-      "target": 13.4
+      "t": "2026-10-26 15:43 ET",
+      "equity": 408.34
     }
   ],
+  "positions": [],
   "trades": [
     {
       "symbol": "TER",
@@ -2443,6 +2436,18 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "score": 0,
       "tag": "organic",
       "date": "2026-10-20"
+    },
+    {
+      "symbol": "NU",
+      "strategy": "mean-reversion",
+      "tier": "B",
+      "entry": 12.36,
+      "exit": 12.7,
+      "pnl": 2.91,
+      "r": 0.61,
+      "score": 85,
+      "tag": "organic",
+      "date": "2026-10-26"
     }
   ],
   "regime": {
@@ -6991,3 +6996,17 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Account: equity $408.49, cash/BP $300.43, 1/5 positions, 1 trade today (organic), day P&L +$2.97 unrealized.
 - Tape: SPY 765.23, QQQ 712.77, SMH 543.50.
 - Entry window closed at 15:30 ET: no entries possible, so the full preview_scan sweeps were skipped this cycle (disclosed; nothing to act on). No new entry.
+
+### Cycle 559 - EXIT: NU (Nu Holdings) mean-reversion Tier B, organic - 2026-10-26 15:43 ET
+- STOP CHECK first: NU last 12.705 (+$2.93), working stop 12.25 not threatened; target 13.40 not reached. Exit is the planned close-before-the-bell, not a stop/target hit.
+- Hold-vs-close decision (explicit): CLOSE. Reasons: default rule is flat before the bell; overnight gap risk on a Brazil-election-shock ADR with high rel vol; Fed decision Wed 2pm ET; thesis (dislocation stabilizing, held 12.2-12.7 range all afternoon) was working but the R:R left to target (~$0.70 vs $0.35 banked risk-free-ish) did not justify carrying a gap risk on a $105 position; entry window closed so no replacement trade was possible anyway.
+- Order: review_equity_order (order_checks empty, no PDT/restriction alert) -> market sell 8.495214 sh, regular hours, ref_id 5c1f3b0e-7a42-4d6e-9b58-2e3a91c4d7f1. Verified via get_equity_orders: order 6adfad5a filled 8.495214 @ avg 12.7029 at 15:43:22 ET; get_equity_positions empty.
+- Result: entry 12.3599 avg -> exit 12.7029 avg = +$2.91 (+2.8%), +0.61R (1R = $4.76 to the original 11.80 stop). Equity $408.34 (cash/BP $408.34), 0 positions.
+- Score (framework 5.5): setup 38/40 (all four gates passed in writing, sourced Brazil-election cause, ITUB/PBR alternatives properly excluded), execution 33/35 (Tier B timing 11:34, sized $105 per plan, stop never breached, trail to 12.25 was risk-reducing; minor: manual stop only), outcome 14/25 (0.61R, managed to a planned clean exit but short of the 2R target) = 85. Worked: waiting for a staircase low and relative strength vs. ITUB/BBD/EWZ. Didn't: nothing broke; upside left on the table is fine under the process.
+- Caveat logged in framework 6: first same-day round trip; no broker alert, PDT applicability still not conclusively verified.
+
+### Close recap - Day recap 2026-10-26
+- Trades: 1 (NU, organic, 0 forced), minimum met organically. Realized +$2.91 (+0.61R), start equity $405.43 -> close ~$408.34 (+$2.91, +0.72% on the day). Peak equity high-water mark unchanged at $437.99; breaker level $394.19 not approached; daily loss limit never approached.
+- OVERNIGHT STATUS: FLAT. Nothing is held overnight. No open orders.
+- What the day showed: only one setup (Brazil ADR shock) cleared all four mean-reversion gates; dozens of scan hits failed gate 1 (no sourced, dated, sector-wide cause), earnings blackouts (AMKR), duplicate exposure (Brazil basket), or were group moves/event gaps for momentum. WebSearch repeatedly returned old/undated articles and was disclosed as a gap each time.
+- Open items for the user: (1) momentum gate-1 "several sessions" clause blocks fresh post-catalyst gap-and-hold names - possible exemption? (2) PDT/day-trade applicability on limited_margin still unverified (1 same-day round trip done, no alert). (3) Fed decision Wed Oct 28 2pm ET; tomorrow is a new session, pre-open brief ~8:30 ET.

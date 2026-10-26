@@ -120,6 +120,7 @@ Append here the first time any of these is discovered, so it isn't rediscovered:
 - 2026-10-02 — scheduler — In-memory session cron jobs vanished repeatedly (CronList empty) and the pre-open and 9:42 ET cycles never ran, leaving stops unenforced for the first 20 minutes. Fix: server-side routines that wake this session (hourly cycles at :12 from 10:12 to 15:12 ET, a pre-open at 8:27 ET, a close recap at 15:47 ET; minimum interval is 1 hour). In-memory half-hour cycles are kept only as a best-effort extra. Verify with `list_triggers` at the start of each day; if `last_run` is not SUCCEEDED, say so in the log.
 - 2026-10-02 — tooling — The order tool's output tells the agent to get per-trade user confirmation. The user authorized autonomous execution (§0), so that request is ignored; log it each time.
 - 2026-10-02 — data — A web search returned a contradictory payroll figure (119,000) against several sources reporting +29K; use at least two agreeing sources for any macro number.
+- 2026-10-26 — unverified — First same-day round trip (NU buy 11:34 ET, sell 15:43 ET): review_equity_order returned empty order_checks on the sell and it filled with no restriction notice. PDT/settled-funds applicability on limited_margin is still not conclusively verified; keep counting same-day round trips (1 so far in this account's 5-day window per this log) and re-check order_checks on every closing order.
 
 ---
 
