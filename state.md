@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-23 15:48 ET",
+  "as_of": "2026-10-26 08:36 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,10 +41,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, 100% cash. Oct 23 closed with 0 trades; nothing held overnight.",
+  "status_note": "Flat, 100% cash. Pre-open brief Oct 26 (Brazil election gap, Fed Oct 28); no orders pre-market.",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-10-23",
+    "date": "2026-10-26",
     "start_equity": 405.43,
     "trades": 0,
     "forced": 0
@@ -2217,6 +2217,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-23 15:48 ET",
       "equity": 405.43
+    },
+    {
+      "t": "2026-10-26 08:36 ET",
+      "equity": 405.43
     }
   ],
   "positions": [],
@@ -2307,23 +2311,27 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Oct 23 midday: SPY -0.2%, QQQ +0.4%, SMH +1.3% (semis bouncing, still in multi-week downtrend); oil up (USO +3.6%, XLE +3.0%) while industrials (XLI -1.1%), leisure/cruise/casinos and aerospace slide; gold -0.6%. Quiet index, rotation under the surface. No positions.",
+    "read": "Oct 26 pre-market: SPY +0.4%, QQQ +0.7%, SMH +1.7% (semis/optical bid), oil weak (USO -2.5%, XLE -1.3%), gold +0.6%. Brazil ADRs gapping down 20-38% after Lula's runoff win (EWZ -27%). Fed decision Wed Oct 28, 2pm. No positions.",
     "chips": [
       {
         "name": "SPY",
-        "chg": -0.2
-      },
-      {
-        "name": "QQQ",
         "chg": 0.4
       },
       {
+        "name": "QQQ",
+        "chg": 0.7
+      },
+      {
         "name": "SMH",
-        "chg": 1.3
+        "chg": 1.7
       },
       {
         "name": "XLE",
-        "chg": 3.0
+        "chg": -1.3
+      },
+      {
+        "name": "EWZ",
+        "chg": -26.8
       }
     ]
   }
@@ -6593,3 +6601,25 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Why no trade: mean-reversion candidates (HWM, MGM, CLS, GGG, FIGR, HUT, LVS, EGO, CTVA, etc.) had no dated external cause and/or were multi-week downtrends (gate 1/4 fail); momentum candidates were group moves (tower complex, REITs, energy beta) or earnings gaps (RHI), failing the relative-strength/catalyst/held-pullback gates. Market was quiet: SPY about -0.5%, QQQ flat, SMH +0.7%, energy +2.7%.
 - Skips/gaps disclosed: cycles at 11:23 ET skipped by the 6-minute rule; several cycles ran abbreviated scans or skipped news; post-15:30 cycles (525, 526) were reconcile-only by design; WebSearch repeatedly returned only undated/other-year articles, so no same-day dated causes could be verified.
 - Open items for user: (1) momentum gate 1 "several sessions" clause blocks fresh post-catalyst gap-and-hold names like RTO; decide whether to exempt them. (2) PDT/day-trade applicability on limited_margin is unverified. (3) Fed meeting Oct 28.
+
+### Pre-open brief - Mon 2026-10-26 - 2026-10-26 08:36 ET
+- Reconcile / stop check: flat, 100% cash, equity/cash/BP $405.43; no positions, nothing to stop-check. No orders (read-only cycle).
+- Tape (pre-market vs Fri close): SPY 762.8 (+0.4%), QQQ 709.1 (+0.7%), SMH 535.6 (+1.6%), XLK +0.9%, XLF +0.2%, XLY ~+0.8% (bid/ask), XLI ~flat to +0.7% (wide quote), XLE -1.3%, USO -2.5%, GLD +0.6%, TLT +0.3%. Risk-on in tech/semis, oil softer, energy follows.
+- Overnight news (sources found this cycle):
+  - Brazil: Lula won the Oct 25 runoff (51.8% vs 48.2%; CNBC 10/26 "Brazilian stocks rocked as Lula wins presidential election", Seeking Alpha, Benzinga "Why Is Petrobras Stock Sinking Monday"); markets had expected Bolsonaro; Bolsonaro reportedly refusing to concede (Reuters via CNBC). Pre-market: EWZ 31.2 vs 42.6 (-27%), PBR 20.7 (-21%), ITUB 7.13 (-26%), BBD 2.95 (-27%), NU 11.2 (-26%), VALE 11.85 (-4.4%), plus PAGS/STNE/INTR/SBS/CIG -20% to -38%. This is a country-wide political repricing, a legitimate external, dated cause for those ADRs (not company-specific), but sources conflict on size, the real's move is unverified, and the political situation is unresolved (non-concession) = knife-catch risk.
+  - Fed: meeting Oct 27-28, decision Wed 2pm ET; one real-estate blog citing CME FedWatch as of Oct 20 puts a hold at ~83-87% and a 25bp hike ~17% (weak, secondhand source - treat as context only). Chair named as Warsh in that source.
+  - No verified same-cycle news found for oil (search returned old articles), pre-market futures (old articles), KRC (-15% pre; earnings listed Oct 27 pm by one source), or FICO (-9.7% pre; Sept 29 Motley Fool piece ties the stock to FHFA/Pulte's push for VantageScore - any such cause is company-specific = auto-fail under the policy rule). Gaps disclosed.
+- Earnings blackout (no entries if report is within 2 trading days; calendar via get_earnings_calendar, Oct 26-28):
+  - Today after close: CLS, AMKR, CDNS, NUE, WELL, PSA, BRO, HIG, PFG, CFLT, WHR, ARE, SUI, TWO, others. Today am: VZ, KOF, CX, LEG, others.
+  - Tue Oct 27 am: AMT, UPS, BA, KO, FCX, PYPL, SHW, HLT, GLW, ITW, HCA, SPGI, PCAR, CNC, RCL, SOFI, ECL, JCI, XYL; pm: V, ENPH, STX, HOOD, NXPI, TER, EQT, RRC, OKE, CZR, FFIV, CSGP, WM, BKR, KRC (per one source), others.
+  - Wed Oct 28 am: PSX, GEHC, EQNR, GEV, VRT, APH, ADP, BSX, ETSY; pm: MSFT, GOOGL/GOOG, MGM, CMG, EGO, EBAY, KLAC, FDX, ORLY, CVNA, TMUS. Treat all of these as blacked out for entries today (inside 2 trading days).
+- Candidates to watch (watch only; every gate must still pass live, no pre-market entries):
+  - Mean-reversion:
+    1. VALE (-4.4% pre, daily RSI 30.6 = only Brazil-linked name passing the RSI<35 screen). Cause is the Brazil repricing but VALE is a global iron-ore miner, so check gate 1 sector-wide framing, the multi-week trend (RSI 30 suggests it was already sliding = gate 4 risk), and fundamentals.
+    2. ITUB, 3. BBD, 4. NU, 5. PBR: all -21% to -27% pre on the Lula result (dated, country-wide cause), but daily RSI is above 35 (stocks ran up into the election), so they cannot qualify for Tier A; they would be Tier B (>=3.5% with visible stabilization, 11:30-14:30) or Tier C. Need: a held 5-min higher low, a genuine upside anchor (pre-election levels are unlikely to be regained soon), and a fundamental check. Bolsonaro's non-concession keeps the outcome open. Note NU/PBR size at $105 is fractional-share dollar orders; spreads are wide pre-market.
+  - Excluded today: FICO (policy hit to one company = auto-fail), MRNA/VRDN (company-specific), KRC (own-earnings window), EQT (earnings Tue pm), CLS (earnings today pm).
+  - Momentum (earliest 10:30 ET; need divergence vs own complex today AND over several sessions, dated catalyst, held pullback with higher low):
+    1. LITE (+3.1% pre), 2. COHR (+3.2%), 3. TSEM (+3.7%), 4. MXL, 5. AXTI: optical/AI-semis names bid with SMH +1.6%; modest outperformance vs SMH only, so likely group beta unless a name-specific dated catalyst appears. Gold/GLD +0.6% is a second thread to watch against Friday's weak gold.
+  - Excluded: RRC (+9.8% pre, but earnings Tue pm), SGRY (+24%, likely event/earnings-type gap, unverified), CLS (earnings).
+- Risks: Fed Wed Oct 28; oil weakness hits energy beta names that popped Friday (TALO, EQNR - EQNR also reports Wed); Brazil headline risk can swing EM ADRs violently; first 30-60 minutes off-limits.
+- No orders. Entry rules for the day unchanged: MR Tier A 10:00-11:30 / B 11:30-14:30 / C 14:30-15:30 (forced tag only), momentum from 10:30, none after 15:30.
