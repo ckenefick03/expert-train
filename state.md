@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-27 15:43 ET",
+  "as_of": "2026-10-27 15:49 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, $408.34 cash. Pre-open Oct 27: futures-proxy ETFs green, Brazil bounce continuing, earnings-heavy morning. FOMC Wed 2pm ET.",
+  "status_note": "Flat, nothing held overnight. Oct 27: 0 trades, no setup passed gates. FOMC decision Wed Oct 28 2pm ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-27",
@@ -2476,6 +2476,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-27 15:43 ET",
+      "equity": 408.34
+    },
+    {
+      "t": "2026-10-27 15:49 ET",
       "equity": 408.34
     }
   ],
@@ -7374,3 +7378,14 @@ Past the 15:30 ET no-entry cutoff, so no scans run for entries (disclosed: scann
 
 ### Cycle 590 - 2026-10-27 15:43 ET (post-cutoff check)
 Reconciled: equity $408.34, flat, positions empty. Entry window closed (15:30 ET); no scans. Close recap follows at 15:47 ET.
+
+### Cycle 591 - LAST CYCLE / close recap routine - 2026-10-27 15:49 ET
+Stop checks: none (no positions). Reconciled live: equity $408.34 = cash/buying power $408.34, positions empty, no open orders, no orders created today (get_equity_orders since 2026-10-27 empty). Tape at close: SPY +0.7, QQQ +1.5, SMH +3.3, XLE -1.9, EWZ +0.9. No new entries after 15:30 ET (none attempted).
+**Overnight status: NOTHING is held overnight - the account is entirely cash, so there is no thesis to carry.**
+
+### Close recap - Day recap 2026-10-27
+- Start equity $408.34, end $408.34: P&L $0.00, 0 trades, 0 forced, no skips of a qualified setup (no setup qualified).
+- What ran: pre-open brief, then 10-minute cycles 561-591 plus hourly+news cycles (576, 581, 587). Scans covered both full universes each cycle (before ~11:00 ET without the rel-vol filter, per framework section 6).
+- Why nothing traded (gates held, nothing forced): mean-reversion candidates were earnings-day moves (BA, XYL, HSBC, WELL, plus REIT sympathy VTR/AHR/SUI) or had no dated external cause (CTAS, refiners VLO/MPC/PBF, which also never stabilized); momentum names were earnings gaps, group beta (SMH/AI-chip, space), small-cap/new listings, or lacked a dated catalyst plus multi-session divergence.
+- Gaps disclosed: triggers fired late/bunched at times and several were skipped silently under the 6-minute rule; MCP servers disconnected/reconnected around triggers; several news searches returned only undated/older/auto-generated pages and were treated as unverifiable rather than cited (WELL, RKLB, refiners, BA). Cycles 589-590 were post-cutoff flat checks with no scans.
+- Open items for the user (unanswered, not acted on): (1) momentum gate-1 'several sessions' clause blocks fresh post-catalyst gap-and-hold names - possible exemption; (2) PDT/day-trade applicability on limited_margin still unverified; (3) FOMC decision Wed Oct 28 2pm ET - pre-open brief at ~08:30 ET, avoid new late-morning entries into the decision unless exceptional.
