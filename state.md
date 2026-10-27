@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-27 14:36 ET",
+  "as_of": "2026-10-27 14:44 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2449,6 +2449,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-27 14:36 ET",
       "equity": 408.34
+    },
+    {
+      "t": "2026-10-27 14:44 ET",
+      "equity": 408.34
     }
   ],
   "positions": [],
@@ -2567,11 +2571,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "XLE",
-        "chg": -1.9
+        "chg": -2.0
       },
       {
         "name": "EWZ",
-        "chg": 1.1
+        "chg": 0.7
       }
     ]
   }
@@ -7309,3 +7313,9 @@ Reconciled: equity $408.34, flat, no stops. Tape: SPY +0.5, QQQ +1.2, SMH +2.8, 
 - MR (Tier C scan <=-2.5%, rel-vol>=1.2): VLO -8.2%, WELL -6.2%, CTAS -5.0%, BA -10.0%, XYL -12.9%, HSBC -5.4%, plus new VTR -4.7% and AHR -5.0% (healthcare REITs, moving with WELL). Resolved the WELL mystery: get_earnings_results shows WELL reported Q3 2026 after the close on Oct 26 (EPS 1.67 vs 0.90 est), so today's drop is a reaction to its own earnings = company-specific FAIL; VTR/AHR are sympathy moves with no separate dated cause (search for a sector story found nothing from 2026) = FAIL. VLO/CTAS: still no dated cause. BA/XYL/HSBC earnings-day.
 - Momentum: same names plus RRX +5.1% (thin volume, nothing established) and SKM +3.4% - FAIL.
 - No entry. Tier C needs forced tag and all four gates; none met.
+
+### Cycle 584 - 2026-10-27 14:44 ET (Tier C window)
+Reconciled: equity $408.34, flat, no stops. Tape: SPY +0.5, QQQ +1.2, SMH +2.8, XLE -2.0, EWZ +0.7.
+- MR (Tier C <=-2.5%, rel-vol>=1.2): MPC -6.6% (refiner, back in scan), VLO -8.4%, WELL (own earnings), VTR/AHR (sympathy, no cause), CTAS, BA/XYL/HSBC (earnings-day) - FAIL as before; new ONON -2.6% (marginal, no dated external cause checked) - FAIL. Refiners still not oversold-with-stabilization and no sourced cause.
+- Momentum: same list plus STX +4.7% (AI storage, group beta with SMH) and ACHR +7.5% (no catalyst established) - FAIL.
+- No entry.
