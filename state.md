@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-26 15:48 ET",
+  "as_of": "2026-10-27 08:36 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,12 +41,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat. NU closed +$2.91 (+0.61R) before the bell; nothing held overnight. Fed decision Wed Oct 28 2pm ET.",
+  "status_note": "Flat, $408.34 cash. Pre-open Oct 27: futures-proxy ETFs green, Brazil bounce continuing, earnings-heavy morning. FOMC Wed 2pm ET.",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-10-26",
-    "start_equity": 405.43,
-    "trades": 1,
+    "date": "2026-10-27",
+    "start_equity": 408.34,
+    "trades": 0,
     "forced": 0
   },
   "equity_history": [
@@ -2353,6 +2353,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-26 15:48 ET",
       "equity": 408.34
+    },
+    {
+      "t": "2026-10-27 08:36 ET",
+      "equity": 408.34
     }
   ],
   "positions": [],
@@ -2455,27 +2459,27 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Oct 26 13:17 ET: risk-on, quiet. SPY +0.8%, QQQ +1.4%, SMH +3.3%, XLI +1.4%, XLF +0.3%, gold +0.6%, TLT +0.4%. Brazil ADRs clawing back (EWZ -20.3% from -27% pre-market). Long NU. Fed Wed 2pm.",
+    "read": "Oct 27 pre-open (vs Oct 26 close): SPY +0.4%, QQQ +0.6%, SMH +1.5% (AI-optics/infra bid again), XLE -0.6%, EWZ +1.3%, gold +0.3%, TLT flat. Earnings-heavy tape (HLT, HSBC, ITW, XYL, SHW, JCI, RCL, SPGI, SOFI report this morning). Flat; FOMC Wed 2pm ET (hold priced ~83-94%).",
     "chips": [
       {
         "name": "SPY",
-        "chg": 0.8
-      },
-      {
-        "name": "QQQ",
-        "chg": 1.4
-      },
-      {
-        "name": "SMH",
-        "chg": 3.3
-      },
-      {
-        "name": "XLE",
         "chg": 0.4
       },
       {
+        "name": "QQQ",
+        "chg": 0.6
+      },
+      {
+        "name": "SMH",
+        "chg": 1.5
+      },
+      {
+        "name": "XLE",
+        "chg": -0.6
+      },
+      {
         "name": "EWZ",
-        "chg": -20.3
+        "chg": 1.3
       }
     ]
   }
@@ -7020,3 +7024,37 @@ Momentum (earliest 10:30; needs divergence from the name's own peer complex, a d
 - Stop checks: nothing held, nothing to check. No new entries (window closed 15:30 ET).
 - OVERNIGHT: NOTHING ROLLS. The account is flat, so there is no thesis to carry; NU was closed at 15:43 per the default close-before-the-bell rule (reasoning logged in Cycle 559).
 - Day recap (matches the Day recap already logged above): cycles ran from pre-open brief through Cycle 560 with scheduler bunching/late triggers but no missed 10-minute window that mattered; several triggers were skipped under the 6-minute rule earlier in the day; scans on both strategies ran on full universes each cycle until the 15:30 cutoff (the 15:33 and later cycles skipped scans by design, disclosed). 1 trade (organic), +$2.91 realized, +0.72% on the day, $405.43 -> $408.34. Skips were all documented gate failures. WebSearch returned stale/undated articles repeatedly (disclosed).
+
+### Pre-open brief - Tue 2026-10-27 (2026-10-27 08:36 ET) - read-only, no orders
+**1. Reconcile / stop-check.** Live (get_portfolio + get_equity_positions): equity $408.34 = cash/BP $408.34, 0 positions, no open orders (verified). Nothing held, so no stops to check. Drawdown breaker level $394.19 and $100 daily loss limit are untouched. Day 1 of the new session: start equity $408.34, trades 0, forced 0.
+
+**2. Tape first (pre-market vs Oct 26 close, extended-hours last):** SPY 768.15 (+0.36%), QQQ 716.33 (+0.58%), SMH 549.80 (+1.51%), IWM 277.93 (+0.34%), XLK 187.32 (+0.5%), XLF 56.29 (+0.5%), XLE 69.25 (-0.6%), XLV 179.20 (flat), XLI 167.77 (+0.5%, thin quote), GLD 368.85 (+0.3%), TLT 81.67 (flat). Brazil: EWZ 34.58 (+1.3%), NU 12.78 (+1.5%), BBD 2.98 (+1.7%), ITUB 7.75 (+0.6%), PBR 22.53 (+0.2%), VALE 12.12 (+1.0%), XP 16.01 (+1.9%). Read: constructive risk-on open led by semis/AI-optics; the Brazil ADR rebound I traded yesterday is extending (I am flat; not chasing, the dislocation is gone: EWZ is now ~-19% from Oct 23 vs -27% at the low).
+
+**3. News and politics (sourced this cycle only):**
+- Fed: FOMC decision Wed Oct 28, 2pm ET. Funds range is 3.75%-4.00% after a 25bp hike effective Sep 17; CME FedWatch (as cited by noradarealestate.com, ~Oct 20) put hold at ~83-87% and a hike ~13-17%; a separate prediction-market snapshot (defirate.com, Oct 22) had a hike at only ~6%. The sources agree on hold but differ on tail odds, and most are one secondary blog, so treat macro odds as soft; inflation cited 3.7%; December (Dec 8-9) is the bigger hike risk. Event risk lands Wed 2pm ET: no new entries after ~1:30pm Wed unless the setup is exceptional, and expect a thin/choppy Tuesday into it.
+- Futures/market wrap and Brazil/Ibovespa for Oct 27: searches returned only old (2018-2020 Benzinga; Aug-Sep 2026 Rio Times) articles, nothing dated Oct 26-27. DISCLOSED GAP: I cannot cite a dated wrap for today; the tape read above is from live quotes, not news. The sourced Brazil context remains the Oct 25-26 items logged in Cycles 534/535 (Lula runoff win).
+- FICO (-15% Monday session, pre-market -1.7%): cause found = FHFA treating VantageScore 4.0 as equal to classic FICO for mortgage pricing plus a BofA downgrade/PT cut (247wallst.com, dated Oct 1, 2026; parameter.io). That is a single-company policy hit, so it is a gate-1 FAIL by rule (and the sources describe a multi-week downtrend). Not a candidate.
+- Tesla (+6% Monday) and the AI-optics rally (LITE etc.): searches returned nothing dated Oct 26-27 for TSLA; for LITE only Aug-Sep 2026 context (blowout FQ4, Nvidia $2B investment mentioned, hyperscaler-capex dependence). No dated catalyst for today's pre-market move, so these stay unverified.
+
+**4. Earnings (get_earnings_calendar Oct 27-29, high-mcap; parsed from file, all verified=True):** Today AM: CMS, GLXY, HLT, HSBC, INIO, IQV, ITW, JCI, RCL, SHW, SOFI, SPGI, TRU, XYL (FER untimed); today PM: EQT, RRC. Wed Oct 28: FLEX am, AR pm. Thu Oct 29: NCLH am, QSR am, STM am, RDDT pm, VALE pm. AVOID (earnings within 2 trading days): all of the above; this removes RDDT, VALE, RRC, AR, EQT, QSR, NCLH, STM, FLEX from MR/momentum for now. NU/ITUB/BBD/PBR/XP are not in the Oct 27-29 window (ITUB Nov 3, NU Nov 12 per earlier logs).
+
+**5. Pre-market scan (no volume filter; pre-market % vs Oct 26 close):**
+- Down >=3%: HLT -4.4%, SHW -3.6%, ITW -4.1%, XYL -8.5%, HSBC -7.0% (ALL report this morning = earnings-day gaps, company-specific, FAIL gate 1), MRNA -3.2%, BKH -4.0%, QSR -3.3% (earnings Thu), NE -5.7% (offshore driller; XLE only -0.6%, no sourced cause), TLK -4.0%, ONON -3.2%. No sector-wide, externally-caused dislocation visible yet.
+- Up >=3%: earnings-driven gaps: INIO +13.7%, SOFI +11.5%, FER +10.4%, RCL +5.6%, SPGI +4.0%, JCI +4.7%, TRU +4.2%, GLXY +5.1%, IQV +3.4%, VRSK +3.4%, VIPS +4.5%, UPST +4.0% (all earnings or event gaps). AI-infra/optics group (SMH +1.5%): CLS +11.6%, LITE +3.0%, COHR +3.6%, CRDO +4.4%, ALAB +3.7%, AVGO +3.3%, NBIS +3.9%, CRWV +3.9%, TTMI +3.5%, AXTI +3.2%, FLEX +3.3%, STM +3.1%, BE +4.2%, VICR +3.7%, FPS +3.5%, APLD +3.5%, CIFR +3.4%, AMKR +3.5% (reported Mon pm). Others: GM +3.2%, MRP +4.0%, NCLH +3.0%.
+
+**6. Candidates to watch (conditional; all gates must pass live, nothing is a trade yet):**
+Mean-reversion (needs a fresh >=5% intraday drop with a sourced sector/country-wide cause; Tier A 10:00-11:30):
+1. Brazil ADR basket (ITUB, BBD, PBR; NU already extended): only if a NEW leg down occurs with a dated cause (e.g., fiscal/political headline); the Oct 23-26 crash is already being bought back, so a bounce-only chase fails gate 3/4.
+2. Post-earnings gap-down names that are SECTOR-wide, not company-specific: watch whether XYL/ITW/SHW weakness spreads to peers (industrials/water/paint) with a common cited cause; single-name earnings stays FAIL.
+3. NE / offshore drillers: -5.7% pre-market vs XLE -0.6%; needs a sourced sector cause (oil/rig-demand) before it is even a candidate.
+4. Consumer/lodging read-through from HLT -4.4% (and RCL +5.6% divergent): a sector-wide travel/hotel selloff only if peers (MAR, H, etc.) also fall >=4% on cited cause.
+5. FICO and DG: LISTED ONLY TO EXCLUDE (FICO = single-company policy; DG = no sourced cause, down -6% Monday, no earnings until Dec).
+Momentum (earliest 10:30 ET; needs divergence from own peer complex today AND over several sessions, dated catalyst, held pullback with higher low, 2R):
+1. LITE (optical): +10% Monday, +3% pre-market, but it is the sector leader moving with COHR/CRDO/ALAB (group beta) and has no dated catalyst: likely FAIL unless it clearly diverges from COHR/CRDO and holds a pullback.
+2. CLS (+11.6% pre-market): needs the catalyst and a check vs FLEX/peers; earnings status not found in the Oct 27-29 window (verify via get_earnings_results before any entry).
+3. CRDO / ALAB (AI connectivity): same group-beta test vs AVGO/SMH.
+4. TSLA (+6% Mon, +1% pre): no dated catalyst found; momentum gate 2 unverified = FAIL unless one is found.
+5. GM (+3.2% pre-market): needs a dated catalyst (not in the Oct 27-29 earnings window) and divergence from autos.
+Post-earnings gap-and-hold names (INIO, SOFI, FER, SPGI, RCL, JCI, TRU) are NOT candidates today (earnings-day gaps; the "several sessions" clause also excludes them, see open item below).
+
+**7. Risks / plan.** Flat; max 5 positions; $105 sizing (BP $408.34 supports ~3 entries before the cap logic matters). Event risk: FOMC Wed 2pm ET. Day-trade note: one same-day round trip (NU) logged yesterday with no broker alert; still unverified whether PDT applies (framework 6). No entries before 10:00 ET (MR) / 10:30 ET (momentum). Today's first live cycle is the 9:42 ET stop-check/reconcile.
