@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-27 14:05 ET",
+  "as_of": "2026-10-27 14:15 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2437,6 +2437,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-27 14:05 ET",
       "equity": 408.34
+    },
+    {
+      "t": "2026-10-27 14:15 ET",
+      "equity": 408.34
     }
   ],
   "positions": [],
@@ -2555,11 +2559,15 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "XLE",
-        "chg": -1.9
+        "chg": -1.7
       },
       {
         "name": "EWZ",
-        "chg": 1.1
+        "chg": 1.2
+      },
+      {
+        "name": "XLRE",
+        "chg": -1.2
       }
     ]
   }
@@ -7279,3 +7287,9 @@ Reconciled: equity $408.34, flat, no stops. Tape: SPY +0.5, QQQ +1.2, SMH +2.8, 
 - MR (<=-3.5%, rel-vol>=1.2): same six names - VLO -8.2% (no dated cause), WELL -6.1% (no dated cause found last cycle), CTAS -5.3% (no cause), BA -9.3%, XYL -12.0%, HSBC -5.4% (earnings-day) - FAIL. Tier B window closes 14:30 ET.
 - Momentum (>=3%, rel-vol>=1.2): RCL, CBRS, GM, PNR, FER, EQPT, SOFI, SLS as before; new RKLB +8.3% (space group move, no dated catalyst or multi-session divergence established) - FAIL.
 - No entry.
+
+### Cycle 581 - 2026-10-27 14:15 ET (hourly + news)
+Reconciled: equity $408.34, flat, no stops. Tape: SPY +0.5, QQQ +1.2, SMH +2.8, XLE -1.7, EWZ +1.2, XLRE -1.2 (real estate sector down ~1.2%, WELL -6.3% is ~5pts worse than sector).
+- MR: VLO -8.2%, WELL -6.3%, CTAS -5.4%, BA -9.7%, XYL -12.7%, HSBC -5.3% - all FAIL. News: WELL search returned only May-dated/auto-generated pages, nothing dated Oct 27 - gate 1 (dated external cause) unverifiable = FAIL, and a 5pt gap vs XLRE suggests company-specific anyway. Other names as before (earnings / no cause).
+- Momentum: RCL, CBRS, GM, PNR, RKLB, FER, EQPT, SOFI, SLS - RKLB search found no dated Oct 27 catalyst (older/undated syndicated items only) = FAIL; rest as before.
+- No entry. Tier B ends 14:30 ET.
