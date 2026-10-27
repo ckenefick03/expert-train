@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-27 10:06 ET",
+  "as_of": "2026-10-27 10:37 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2365,6 +2365,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-27 10:06 ET",
       "equity": 408.34
+    },
+    {
+      "t": "2026-10-27 10:37 ET",
+      "equity": 408.34
     }
   ],
   "positions": [],
@@ -2467,27 +2471,27 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Oct 27 10:06 ET: risk-on but cooling. SPY +0.1%, QQQ +0.4%, SMH +1.4%, XLE -0.9% with refiners -3.6 to -5.1% (VLO, MPC, PSX, PBF), insurance brokers soft (BRO -3.8%, RYAN -5.3%), EWZ +1.4% (Brazil bounce fading from the open). Flat. FOMC Wed 2pm ET.",
+    "read": "Oct 27 10:37 ET: SPY +0.3%, QQQ +0.7%, SMH +1.8% (AI infra/optics bid). Energy weak: XLE -1.6%, XOP -2.0%, USO -1.3%, refiners -5 to -6% (RSI 50-65: pullback in an uptrend, not oversold). Brazil bounce faded (EWZ +0.8%). Flat, no qualifying setup. FOMC Wed 2pm ET.",
     "chips": [
       {
         "name": "SPY",
-        "chg": 0.1
+        "chg": 0.3
       },
       {
         "name": "QQQ",
-        "chg": 0.4
+        "chg": 0.7
       },
       {
         "name": "SMH",
-        "chg": 1.4
+        "chg": 1.8
       },
       {
         "name": "XLE",
-        "chg": -0.9
+        "chg": -1.6
       },
       {
         "name": "EWZ",
-        "chg": 1.4
+        "chg": 0.8
       }
     ]
   }
@@ -7082,4 +7086,14 @@ Post-earnings gap-and-hold names (INIO, SOFI, FER, SPGI, RCL, JCI, TRU) are NOT 
 - MR Tier A test (>=5% intraday, sector ETF >=2% down, daily RSI<35, down more than sector): RSI<=35 + <=-3.5% scan returns only HSBC (-6.9%, RSI 33.6) = reports earnings this morning = company-specific -> gate 1 FAIL. No other name has RSI<35, so Tier A has NO qualifier (note scanner RSI is last-completed daily bar).
 - Clusters (not Tier A: RSI>35 and ETF move <2%): REFINERS VLO -4.7%, MPC -3.6%, PSX -3.7%, PBF -5.1%, DINO -3.2% (XLE only -0.9%); INSURANCE BROKERS BRO -3.8%, RYAN -5.3%, AJG -2.7%, WTW -2.3%, AON -1.7% (peers all down = sector-wide in form, but multi-month downtrend suspected and no dated cause sourced yet). Both are Tier B candidates from 11:30 ONLY IF a dated sector-wide external cause is sourced and 5-min stabilization shows. Queued for the 10:12 hourly news pass.
 - Other: WELL -5.3% (REIT, single-name, no cause), MRNA -7.0%, RGEN -5.0%, HUBS -4.4%, GWRE -3.7%, RMBS -3.9%, SNAP -4.2% (no sourced causes), NE -5.4% (driller, XLE -0.9%), XYL -9.7%, SHW, HLT -4.2% (earnings) - FAIL gate 1.
+- No entry.
+
+### Cycle 563 (hourly, with news; LATE) - 2026-10-27 10:37 ET
+- SCHEDULER GAP (disclosed): this trigger ("Trading cycle :52", scheduled 13:52Z = 09:52 ET) fired at 14:36Z = 10:36 ET, 44 minutes late. The 10:12 hourly+news, 10:22 and 10:32 triggers were never delivered/logged; last logged cycle before this was 562 at 10:06. Account was flat the whole time (no stops at risk). Missed-window check: at 10:06 no Tier A qualifier existed; at 10:37 none exists either (below), so no entry was lost to the gap.
+- Reconcile (live): equity $408.34 = cash/BP $408.34, 0 positions, no open orders. No stops.
+- Tape: SPY 767.53 (+0.3%), QQQ 717.38 (+0.7%), SMH 551.10 (+1.8%), XLE 68.55 (-1.6%), XOP 200.71 (-2.0%), OIH 403.6 (+0.3%), USO 164.12 (-1.3%), XLF 55.88 (-0.3%), XLV 178.99 (-0.2%), XLI 167.37 (+0.2%). Brazil: EWZ 34.44 (+0.8%), NU 12.62 (+0.2%), ITUB 7.735 (+0.5%): bounce faded.
+- MR (<=-3.5%, mcap>=5B; no rel-vol filter, see framework 6): REFINERS now at Tier A magnitude: VLO -6.4%, MPC -5.5%, PSX -5.1%, PBF -6.2%, DINO -4.5% (XLE -1.6%, USO -1.3%). Gate checks: (1) external sector-wide dated cause: NOT SOURCED. Search found only an undated Quiver note on an earlier 2026 refiner pullback ("oil retreat and pre-earnings positioning") and a Valero Oct 23 piece (247wallst, 2026-10-23: VLO fell ~4% that day despite an earnings beat, YTD +160%, margins ~tripled). Nothing dated Oct 27 explains today's move, so the cause is unverifiable = FAIL. (4) not a real downtrend: daily RSI(14) VLO 54.7, MPC 64.9, PSX 62.6, PBF 50.2, DINO 65.2 = pullback from strength, so Tier A (RSI<35) FAILS outright; Tier B (11:30+) would need a sourced cause plus 5-min stabilization. Upcoming earnings for MPC/PSX/VLO around early Nov (not verified). Verdict: no entry; re-check at 11:30 only if a dated cause appears.
+- Insurance brokers: BRO -4.1% reported Q3 after the close Oct 26 (earningswhispers/finviz release-date notice; slow organic growth, softer pricing cycle cited in pre-earnings coverage); RYAN -5.4%, AJG -3.6%, WTW, AON sympathy = single-company earnings read-through, company-specific origin, and BRO is -25% over a year = multi-month downtrend. gate 1 + 4 FAIL.
+- Other MR names: HCA -4.0%, HLT -4.1% (earnings), WELL -5.2% (RSI 62, no cause), MRNA -7%/RSI 50 (no cause), CTAS -6.6%, BA -6.7% (RSI 42; no sourced cause), GWRE -5.9%, ACN -3.6%, XYL/HSBC (earnings), NE -4.5% (OIH +0.3%, so not a sector-wide energy-services move) - all FAIL gate 1; none has RSI<35 except HSBC (earnings).
+- Momentum (>=3%, rel-vol>=1.2, 10:30 gate now open): only SOFI +13.0% (earnings gap) - FAIL. Watch names: CLS +10.7% (no earnings in window; no dated catalyst), LITE +3.5% / SMH-group beta, TSLA +2.6% (no catalyst found), GM +5.1% (F +1.4%, STLA +2.1%, TM/HMC flat; last earnings Oct 20; the only candidate source, a Yahoo piece tying an auto rally to the Strait of Hormuz reopening lower energy costs, is undated so it cannot be cited; coincides with refiners/crude lower but unverifiable) - gate 2 (dated catalyst) FAIL. GM is the best momentum watch if a dated catalyst appears.
 - No entry.
