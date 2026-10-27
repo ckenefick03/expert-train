@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-27 11:15 ET",
+  "as_of": "2026-10-27 11:36 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2381,6 +2381,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-27 11:15 ET",
       "equity": 408.34
+    },
+    {
+      "t": "2026-10-27 11:36 ET",
+      "equity": 408.34
     }
   ],
   "positions": [],
@@ -2483,7 +2487,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Oct 27 11:07 ET: risk-on, tech-led. SPY +0.5%, QQQ +1.0%, SMH +2.1%. XLE -1.7% (refiners -6%). EWZ +1.5%. Single-name earnings gaps (BA -9.8%, HSBC, SOFI +13%) are the only big movers. Flat, no setup. FOMC Wed 2pm ET.",
+    "read": "Oct 27 11:36 ET: steady risk-on, tech-led (SMH +2.3%). XLE -1.7%, USO -1.4%, refiners -6 to -7% (no dated cause found). Single-name gaps are earnings (BA, HSBC, SOFI). Flat; Tier B open but no sourced sector/country cause. FOMC Wed 2pm ET.",
     "chips": [
       {
         "name": "SPY",
@@ -2495,7 +2499,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "SMH",
-        "chg": 2.1
+        "chg": 2.3
       },
       {
         "name": "XLE",
@@ -2503,7 +2507,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "EWZ",
-        "chg": 1.5
+        "chg": 1.4
       }
     ]
   }
@@ -7134,3 +7138,12 @@ Post-earnings gap-and-hold names (INIO, SOFI, FER, SPGI, RCL, JCI, TRU) are NOT 
 - MR (<=-3.5%, rel-vol>=1.2): same three as Cycle 565: BA -9.8% (earnings), HSBC -6.2% (earnings), CTAS -5.7% (no sourced sector cause) - FAIL. Refiners VLO 396.9 (-7.0%), MPC 442.4 (-6.0%) still no dated cause (deepening, RSI was 55/65 at the open so still not oversold) - FAIL.
 - Momentum (>=3%, rel-vol>=1.2): only SOFI +13.6% (earnings gap) - FAIL. GM 81.13 (+6.3%) still uncatalyzed.
 - No entry. Hourly news pass due ~11:56 (next full search) or earlier if a candidate would otherwise pass; Tier B opens 11:30.
+
+### Cycle 567 (hourly, with news; trigger scheduled 11:12 ET, fired 11:34) - 2026-10-27 11:36 ET
+- Scheduler: fired ~22 min after its 15:12Z schedule; no position at risk. Last cycle 566 was 11:15.
+- Reconcile (live): equity $408.34, cash/BP $408.34, 0 positions. No stops.
+- Tape: SPY 769.33 (+0.5%), QQQ 719.67 (+1.0%), SMH 553.93 (+2.3%), XLE 68.47 (-1.7%), USO 163.89 (-1.4%), XLF 55.95 (-0.1%), XLI 167.63 (+0.4%), XLV 179.31 (0.0%), EWZ 34.64 (+1.4%).
+- Tier B is open (11:30+; no Tier A trade taken today). MR sweep (<=-3.5%, mcap>=5B, rel-vol>=1.2): BA -9.7% (earnings day, miss), HSBC -6.2% (earnings day), CTAS -4.5% (rel vol 1.46; recovering from -5.7%). Refiners VLO 395.2 (-7.4%), MPC 441.1 (-6.3%), PSX 270.1 (-6.5%), PBF 75.3 (-6.6%), DINO 118.3 (-5.6%) keep sliding, no stabilization (new lows at each check).
+- News (searched this cycle): (a) CTAS - get_earnings_results shows NO earnings event (last 2026-09-23, next 2026-12-17); search found only undated/low-quality items (a 10/02 Wealth Awesome note of a -1.6% move; UniFirst-integration concern; Citi Sell) - no dated cause for today's -4.5%, so gate 1 FAIL. (b) Refiners - the only 2026 hit is an undated MarketGauge primer (3-2-1 crack spread near record >$69/bbl, MPC/VLO +80% YTD): context says these names ran hard; consistent with a profit-taking pullback after a +80-160% run, but nothing dated Oct 27 states a cause, and the group has not stabilized (still making new lows), so gates 1 and 4 FAIL. They are NOT an oversold dislocation: daily RSI was 50-65 at the open.
+- Momentum (>=3%, rel-vol>=1.2): only SOFI +14.6% (earnings gap). GM 81.32 (+6.6%, F up) still uncatalyzed. FAIL.
+- No entry. Window math: Tier B until 14:30, Tier C 14:30-15:30; Fed decision tomorrow 2pm ET.
