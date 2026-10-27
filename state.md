@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-27 09:46 ET",
+  "as_of": "2026-10-27 10:06 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2361,6 +2361,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-27 09:46 ET",
       "equity": 408.34
+    },
+    {
+      "t": "2026-10-27 10:06 ET",
+      "equity": 408.34
     }
   ],
   "positions": [],
@@ -2463,27 +2467,27 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Oct 27 09:46 ET: risk-on. SPY +0.3%, QQQ +0.6%, SMH +1.8% (AI infra/optics leading), XLE -0.8% (refiners VLO/DINO/PBF -3.6 to -4.9%), EWZ +2.6% (Brazil bounce extending; ITUB +3.2%, BBD +3.4%). Flat, no entries before 10:00. FOMC Wed 2pm ET.",
+    "read": "Oct 27 10:06 ET: risk-on but cooling. SPY +0.1%, QQQ +0.4%, SMH +1.4%, XLE -0.9% with refiners -3.6 to -5.1% (VLO, MPC, PSX, PBF), insurance brokers soft (BRO -3.8%, RYAN -5.3%), EWZ +1.4% (Brazil bounce fading from the open). Flat. FOMC Wed 2pm ET.",
     "chips": [
       {
         "name": "SPY",
-        "chg": 0.3
+        "chg": 0.1
       },
       {
         "name": "QQQ",
-        "chg": 0.6
+        "chg": 0.4
       },
       {
         "name": "SMH",
-        "chg": 1.8
+        "chg": 1.4
       },
       {
         "name": "XLE",
-        "chg": -0.8
+        "chg": -0.9
       },
       {
         "name": "EWZ",
-        "chg": 2.6
+        "chg": 1.4
       }
     ]
   }
@@ -7070,4 +7074,12 @@ Post-earnings gap-and-hold names (INIO, SOFI, FER, SPGI, RCL, JCI, TRU) are NOT 
 - MR sweep (<=-3.5%, mcap>=5B, no rel-vol filter): VLO -4.8%, DINO -3.6%, PBF -4.9% (REFINERS as a group; needs a dated sector cause, not yet searched), WELL -4.7%, MRNA -6.5%, RGEN -4.8%, BRO -4.3% + RYAN -5.7% (insurance brokers as a pair; BRO reported/reports around now: unverified), NE -5.9% (driller), ONON -3.7%; XYL -8.0%, SHW -3.7%, HSBC -6.6% (all report earnings this morning = company-specific FAIL). No entry possible before 10:00 anyway.
 - Momentum sweep (>=5%, no rel-vol): groups, not divergences: AI infra/optics (CLS +13.5%, NBIS +9.8%, BE +7.9%, CRWV +5.9%, CRDO +5.7%, WDC +6.3%, IREN +8.0%, APLD +8.7%, FPS, VICR), crypto miners (CIFR +9.7%, MARA, RIOT, HUT, WULF), nuclear/uranium (SMR, UUUU, UEC), eVTOL (JOBY, ACHR, FLY), earnings gaps (RCL +8.3%, SOFI +11.4%, FER +6.7%, PNR +9.5%). All FAIL gate 1 as group beta / earnings; earliest momentum entry is 10:30 ET anyway.
 - Next: 10:02 cycle is the first with entries allowed (MR Tier A only if >=5% with sector ETF >=2% down and RSI<35; none seen yet). Heavy news search reserved for the 10:12 hourly cycle or a candidate that otherwise passes (refiners, insurance brokers are the two clusters to source first).
+- No entry.
+
+### Cycle 562 - 2026-10-27 10:06 ET (first cycle with MR entries allowed; momentum from 10:30)
+- Reconcile (live): equity $408.34 = cash/BP $408.34, 0 positions. No stops.
+- Tape: SPY 766.00 (+0.1%), QQQ 714.95 (+0.4%), SMH 549.06 (+1.4%), XLE 69.03 (-0.9%), XLF 55.89 (-0.2%), XLV 178.78 (-0.3%). Brazil: EWZ 34.62 (+1.4%), NU 12.57 (-0.2% vs Oct 26 close), ITUB 7.76 (+0.7%): the open's Brazil spike faded to modest gains.
+- MR Tier A test (>=5% intraday, sector ETF >=2% down, daily RSI<35, down more than sector): RSI<=35 + <=-3.5% scan returns only HSBC (-6.9%, RSI 33.6) = reports earnings this morning = company-specific -> gate 1 FAIL. No other name has RSI<35, so Tier A has NO qualifier (note scanner RSI is last-completed daily bar).
+- Clusters (not Tier A: RSI>35 and ETF move <2%): REFINERS VLO -4.7%, MPC -3.6%, PSX -3.7%, PBF -5.1%, DINO -3.2% (XLE only -0.9%); INSURANCE BROKERS BRO -3.8%, RYAN -5.3%, AJG -2.7%, WTW -2.3%, AON -1.7% (peers all down = sector-wide in form, but multi-month downtrend suspected and no dated cause sourced yet). Both are Tier B candidates from 11:30 ONLY IF a dated sector-wide external cause is sourced and 5-min stabilization shows. Queued for the 10:12 hourly news pass.
+- Other: WELL -5.3% (REIT, single-name, no cause), MRNA -7.0%, RGEN -5.0%, HUBS -4.4%, GWRE -3.7%, RMBS -3.9%, SNAP -4.2% (no sourced causes), NE -5.4% (driller, XLE -0.9%), XYL -9.7%, SHW, HLT -4.2% (earnings) - FAIL gate 1.
 - No entry.
