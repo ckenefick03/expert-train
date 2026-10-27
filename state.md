@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-27 10:58 ET",
+  "as_of": "2026-10-27 11:07 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2373,6 +2373,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-27 10:58 ET",
       "equity": 408.34
+    },
+    {
+      "t": "2026-10-27 11:07 ET",
+      "equity": 408.34
     }
   ],
   "positions": [],
@@ -2475,27 +2479,27 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Oct 27 10:58 ET: risk-on. SPY +0.4%, QQQ +0.9%, SMH +2.0% (AI infra/optics). Energy weak: XLE -1.6%, USO -1.3%, refiners -5 to -6% (uptrend pullback). Earnings-driven single-name gaps dominate (BA -9%, HSBC, SOFI +14%). Brazil bounce faded (EWZ +1.0%, NU -1.1%). Flat, no setup. FOMC Wed 2pm ET.",
+    "read": "Oct 27 11:07 ET: risk-on, tech-led. SPY +0.5%, QQQ +1.0%, SMH +2.1%. XLE -1.7% (refiners -6%). EWZ +1.5%. Single-name earnings gaps (BA -9.8%, HSBC, SOFI +13%) are the only big movers. Flat, no setup. FOMC Wed 2pm ET.",
     "chips": [
       {
         "name": "SPY",
-        "chg": 0.4
+        "chg": 0.5
       },
       {
         "name": "QQQ",
-        "chg": 0.9
+        "chg": 1.0
       },
       {
         "name": "SMH",
-        "chg": 2.0
+        "chg": 2.1
       },
       {
         "name": "XLE",
-        "chg": -1.6
+        "chg": -1.7
       },
       {
         "name": "EWZ",
-        "chg": 1.0
+        "chg": 1.5
       }
     ]
   }
@@ -7112,3 +7116,10 @@ Post-earnings gap-and-hold names (INIO, SOFI, FER, SPGI, RCL, JCI, TRU) are NOT 
   - Refiners (VLO 400.6 -6.1%, MPC 445.8 -5.3%, PSX 274.4 -5.0%, PBF 75.9 -5.7%): unchanged from Cycle 563 (no dated cause found; RSI 50-65, uptrend pullback): FAIL. A search this cycle for a Boeing-day cause also returned only 2025 articles (disclosed gap).
 - Momentum (>=3%, rel-vol>=1.2): only SOFI +13.9% (earnings gap) - FAIL. Watch: GM 81.1 (+6.3%, F +1.6%): no dated catalyst (last earnings Oct 20), FAIL; CLS 271.9 (+10.2%), LITE 856.5 (+4.7%), TSLA 402.5 (+2.8%): AI-optics group beta (SMH +2.0%) / no dated catalyst, FAIL.
 - No entry. Tier A window closes 11:30 ET (nothing qualifies); Tier B opens 11:30 only if a Tier A qualifier did not already trade today (none has).
+
+### Cycle 565 - 2026-10-27 11:07 ET
+- Reconcile (live): equity $408.34 = cash/BP $408.34, 0 positions. No stops.
+- Tape: SPY 768.96 (+0.5%), QQQ 719.25 (+1.0%), SMH 552.74 (+2.1%), XLE 68.46 (-1.7%), XLF 55.89 (-0.2%), XLV 179.27 (0.0%), XLI 167.22 (+0.2%), EWZ 34.68 (+1.5%).
+- MR (<=-3.5%, mcap>=5B, rel-vol>=1.2): BA -9.8% (earnings day, miss; peers flat/up = company-specific), HSBC -6.2% (earnings day), CTAS -5.7% (rel vol 1.30; no sourced sector cause, RSI not <35) - all FAIL gate 1. Refiners VLO 398.7 (-6.6%), MPC 445.6 (-5.3%) unchanged vs 10:58 (no dated cause; uptrend pullback) - FAIL. Tier A: no RSI<35 name besides HSBC (earnings).
+- Momentum (>=3%, rel-vol>=1.2): only SOFI +13.2% (earnings gap). Watch (not passing): GM 81.28 (+6.5%, F +1.6%; no dated catalyst), CLS 271.7 (+10.2%), LITE 851.2 (+4.0%) both SMH-group beta, TSLA 402.6 (+2.8%).
+- No entry. Tier A window closes 11:30; then Tier B (>=3.5%) with stabilization on any name that gets a sourced sector/country cause.
