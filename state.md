@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-27 14:44 ET",
+  "as_of": "2026-10-27 14:54 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2452,6 +2452,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-27 14:44 ET",
+      "equity": 408.34
+    },
+    {
+      "t": "2026-10-27 14:54 ET",
       "equity": 408.34
     }
   ],
@@ -7319,3 +7323,9 @@ Reconciled: equity $408.34, flat, no stops. Tape: SPY +0.5, QQQ +1.2, SMH +2.8, 
 - MR (Tier C <=-2.5%, rel-vol>=1.2): MPC -6.6% (refiner, back in scan), VLO -8.4%, WELL (own earnings), VTR/AHR (sympathy, no cause), CTAS, BA/XYL/HSBC (earnings-day) - FAIL as before; new ONON -2.6% (marginal, no dated external cause checked) - FAIL. Refiners still not oversold-with-stabilization and no sourced cause.
 - Momentum: same list plus STX +4.7% (AI storage, group beta with SMH) and ACHR +7.5% (no catalyst established) - FAIL.
 - No entry.
+
+### Cycle 585 - 2026-10-27 14:54 ET (Tier C window)
+Reconciled: equity $408.34, flat, no stops. Tape: SPY +0.5, QQQ +1.2, SMH +2.8, XLE -2.0, EWZ +0.7. Flat tape since late morning.
+- MR (Tier C <=-2.5%, rel-vol>=1.2): MPC -6.8%, VLO -8.4%, WELL -6.3% (own earnings), VTR -4.8% / AHR -5.0% / new SUI -3.5% (REIT sympathy, no sourced cause), CTAS -5.1%, BA/XYL/HSBC (earnings-day) - all FAIL gate 1; refiners also still sliding with no stabilization.
+- Momentum: STX, RCL, RRX, CBRS, GM, PNR, RKLB, FER, SKM, EQPT, SOFI, SLS, UUUU, ACHR plus new WSC +7.1% and NEO +4.2% - no dated catalyst or multi-session divergence established for any - FAIL.
+- No entry. 0 trades today so far; the 1-trade minimum is a target and does not loosen gates.
