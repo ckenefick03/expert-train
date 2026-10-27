@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-27 10:37 ET",
+  "as_of": "2026-10-27 10:58 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2369,6 +2369,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-27 10:37 ET",
       "equity": 408.34
+    },
+    {
+      "t": "2026-10-27 10:58 ET",
+      "equity": 408.34
     }
   ],
   "positions": [],
@@ -2471,19 +2475,19 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Oct 27 10:37 ET: SPY +0.3%, QQQ +0.7%, SMH +1.8% (AI infra/optics bid). Energy weak: XLE -1.6%, XOP -2.0%, USO -1.3%, refiners -5 to -6% (RSI 50-65: pullback in an uptrend, not oversold). Brazil bounce faded (EWZ +0.8%). Flat, no qualifying setup. FOMC Wed 2pm ET.",
+    "read": "Oct 27 10:58 ET: risk-on. SPY +0.4%, QQQ +0.9%, SMH +2.0% (AI infra/optics). Energy weak: XLE -1.6%, USO -1.3%, refiners -5 to -6% (uptrend pullback). Earnings-driven single-name gaps dominate (BA -9%, HSBC, SOFI +14%). Brazil bounce faded (EWZ +1.0%, NU -1.1%). Flat, no setup. FOMC Wed 2pm ET.",
     "chips": [
       {
         "name": "SPY",
-        "chg": 0.3
+        "chg": 0.4
       },
       {
         "name": "QQQ",
-        "chg": 0.7
+        "chg": 0.9
       },
       {
         "name": "SMH",
-        "chg": 1.8
+        "chg": 2.0
       },
       {
         "name": "XLE",
@@ -2491,7 +2495,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "EWZ",
-        "chg": 0.8
+        "chg": 1.0
       }
     ]
   }
@@ -7097,3 +7101,14 @@ Post-earnings gap-and-hold names (INIO, SOFI, FER, SPGI, RCL, JCI, TRU) are NOT 
 - Other MR names: HCA -4.0%, HLT -4.1% (earnings), WELL -5.2% (RSI 62, no cause), MRNA -7%/RSI 50 (no cause), CTAS -6.6%, BA -6.7% (RSI 42; no sourced cause), GWRE -5.9%, ACN -3.6%, XYL/HSBC (earnings), NE -4.5% (OIH +0.3%, so not a sector-wide energy-services move) - all FAIL gate 1; none has RSI<35 except HSBC (earnings).
 - Momentum (>=3%, rel-vol>=1.2, 10:30 gate now open): only SOFI +13.0% (earnings gap) - FAIL. Watch names: CLS +10.7% (no earnings in window; no dated catalyst), LITE +3.5% / SMH-group beta, TSLA +2.6% (no catalyst found), GM +5.1% (F +1.4%, STLA +2.1%, TM/HMC flat; last earnings Oct 20; the only candidate source, a Yahoo piece tying an auto rally to the Strait of Hormuz reopening lower energy costs, is undated so it cannot be cited; coincides with refiners/crude lower but unverifiable) - gate 2 (dated catalyst) FAIL. GM is the best momentum watch if a dated catalyst appears.
 - No entry.
+
+### Cycle 564 (hourly trigger, delivered ~44 min late) - 2026-10-27 10:58 ET
+- Scheduler note: this "hourly, market hours" run was scheduled 14:12Z (10:12 ET) and fired 14:56Z (10:56 ET). Cycles 10:12-10:32 were not run; Cycle 563 (10:37) covered the gap. No position was ever at risk.
+- Reconcile (live): equity $408.34 = cash/BP $408.34, 0 positions, no open orders. No stops.
+- Tape: SPY 768.46 (+0.4%), QQQ 718.57 (+0.9%), SMH 552.20 (+2.0%), XLE 68.56 (-1.6%), XOP 200.82 (-2.0%), USO 164.11 (-1.3%), XLF 55.90 (-0.2%), XLV 179.16 (-0.1%), XLI 167.23 (+0.2%). Brazil: EWZ 34.51 (+1.0%), NU 12.45 (-1.1% vs 12.59 close; I am flat, no relevance beyond the earlier read).
+- MR sweep with rel-vol>=1.2 (volume now meaningful): CTAS -6.0% (rel vol 1.21), BA -9.4% (rel vol 1.65), HSBC -6.0% (rel vol 1.44). RSI<=40 sweep: only HSBC (RSI 33.6). 
+  - BA: reports Q3 earnings TODAY (get_earnings_results: 2026-10-27 am; EPS -0.34 vs -0.20 est = miss) = earnings-day gap, company-specific; peers do not confirm a sector move (GE +1.9%, RTX -0.6%, LMT -1.2%, NOC -1.1%, GD -0.5%, HWM -1.1%, TDG -0.4%, ITA -0.8%). Gate 1 FAIL; also RSI 42 > 35 so not Tier A. (Process note: my morning earnings-calendar parse used a watchlist that omitted BA; BA was in the Oct 27 list. For future briefs parse the whole file for names that appear in the scan, not a fixed watchlist.)
+  - HSBC: earnings today (company-specific), FAIL. CTAS: -6.0% with no sector-wide cause sourced, RSI not <35: FAIL.
+  - Refiners (VLO 400.6 -6.1%, MPC 445.8 -5.3%, PSX 274.4 -5.0%, PBF 75.9 -5.7%): unchanged from Cycle 563 (no dated cause found; RSI 50-65, uptrend pullback): FAIL. A search this cycle for a Boeing-day cause also returned only 2025 articles (disclosed gap).
+- Momentum (>=3%, rel-vol>=1.2): only SOFI +13.9% (earnings gap) - FAIL. Watch: GM 81.1 (+6.3%, F +1.6%): no dated catalyst (last earnings Oct 20), FAIL; CLS 271.9 (+10.2%), LITE 856.5 (+4.7%), TSLA 402.5 (+2.8%): AI-optics group beta (SMH +2.0%) / no dated catalyst, FAIL.
+- No entry. Tier A window closes 11:30 ET (nothing qualifies); Tier B opens 11:30 only if a Tier A qualifier did not already trade today (none has).
