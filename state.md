@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-27 15:33 ET",
+  "as_of": "2026-10-27 15:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2472,6 +2472,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-27 15:33 ET",
+      "equity": 408.34
+    },
+    {
+      "t": "2026-10-27 15:43 ET",
       "equity": 408.34
     }
   ],
@@ -7367,3 +7371,6 @@ Reconciled: equity $408.34, flat, no stops. Tape: SPY +0.6, QQQ +1.3, SMH +2.9, 
 ### Cycle 589 - 2026-10-27 15:33 ET (entry window closed)
 Reconciled: equity $408.34, flat, no open positions or orders. Tape: SPY +0.7, QQQ +1.4, SMH +2.9, XLE -1.9, EWZ +1.0.
 Past the 15:30 ET no-entry cutoff, so no scans run for entries (disclosed: scanning skipped by design, not a gap). Nothing to stop-check; flat. Day: 0 trades.
+
+### Cycle 590 - 2026-10-27 15:43 ET (post-cutoff check)
+Reconciled: equity $408.34, flat, positions empty. Entry window closed (15:30 ET); no scans. Close recap follows at 15:47 ET.
