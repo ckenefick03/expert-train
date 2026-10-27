@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-27 11:52 ET",
+  "as_of": "2026-10-27 12:04 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2393,6 +2393,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-27 11:52 ET",
       "equity": 408.34
+    },
+    {
+      "t": "2026-10-27 12:04 ET",
+      "equity": 408.34
     }
   ],
   "positions": [],
@@ -2495,7 +2499,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Oct 27 11:36 ET: steady risk-on, tech-led (SMH +2.3%). XLE -1.7%, USO -1.4%, refiners -6 to -7% (no dated cause found). Single-name gaps are earnings (BA, HSBC, SOFI). Flat; Tier B open but no sourced sector/country cause. FOMC Wed 2pm ET.",
+    "read": "Oct 27 12:04 ET: steady risk-on, tech-led (SMH +2.9%); energy weak (XLE -1.8%); earnings-day gaps dominate single names. Flat, no setup. FOMC Wed 2pm ET.",
     "chips": [
       {
         "name": "SPY",
@@ -2503,19 +2507,19 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "QQQ",
-        "chg": 1.3
+        "chg": 1.4
       },
       {
         "name": "SMH",
-        "chg": 2.8
+        "chg": 2.9
       },
       {
         "name": "XLE",
-        "chg": -1.7
+        "chg": -1.8
       },
       {
         "name": "EWZ",
-        "chg": 1.8
+        "chg": 1.4
       }
     ]
   }
@@ -7166,4 +7170,10 @@ Post-earnings gap-and-hold names (INIO, SOFI, FER, SPGI, RCL, JCI, TRU) are NOT 
 - Reconcile: flat, equity $408.34 (cash/BP $408.34), no stops. Tape: SPY 770.39 (+0.7%), QQQ 721.62 (+1.3%), SMH 556.61 (+2.8%), XLE 68.43 (-1.7%), EWZ 34.76 (+1.8%).
 - MR (<=-3.5%, rel-vol>=1.2): BA -9.5% (earnings), XYL -11.9% (earnings, rel vol 1.25), HSBC -6.1% (earnings), CTAS -4.6% (no dated cause) - FAIL. Refiners VLO 394.7 (-7.5%), MPC 441.8 (-6.1%), PBF 75.0 (-6.9%) flat for ~15 min, no sourced cause - FAIL.
 - Momentum (>=3%, rel-vol>=1.2): only SOFI +14.7% (earnings gap) - FAIL; GM 81.11 (+6.3%) uncatalyzed.
+- No entry.
+
+### Cycle 570 - 2026-10-27 12:04 ET
+- Reconcile: flat, equity $408.34 (cash/BP $408.34), no stops. Tape: SPY 770.67 (+0.7%), QQQ 722.11 (+1.4%), SMH 557.50 (+2.9%), XLE 68.41 (-1.8%), XLF 55.97 (-0.1%), XLI 167.63 (+0.4%), XLV 179.18 (-0.1%), EWZ 34.64 (+1.4%).
+- MR (<=-3.5%, rel-vol>=1.2): BA -9.7% (earnings), XYL -11.8% (earnings), HSBC -6.2% (earnings), CTAS -4.2% (rel vol 1.54; no dated cause; slowly recovering) - FAIL. Refiners VLO 395.0, MPC 443.5, PBF 75.2: flat since 11:35, no sourced cause - FAIL.
+- Momentum (>=3%, rel-vol>=1.2): only SOFI +15.4% (earnings gap) - FAIL. GM 81.15 (+6.3%) uncatalyzed.
 - No entry.
