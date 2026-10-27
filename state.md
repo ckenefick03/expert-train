@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-27 08:36 ET",
+  "as_of": "2026-10-27 09:46 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2357,6 +2357,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-27 08:36 ET",
       "equity": 408.34
+    },
+    {
+      "t": "2026-10-27 09:46 ET",
+      "equity": 408.34
     }
   ],
   "positions": [],
@@ -2459,11 +2463,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Oct 27 pre-open (vs Oct 26 close): SPY +0.4%, QQQ +0.6%, SMH +1.5% (AI-optics/infra bid again), XLE -0.6%, EWZ +1.3%, gold +0.3%, TLT flat. Earnings-heavy tape (HLT, HSBC, ITW, XYL, SHW, JCI, RCL, SPGI, SOFI report this morning). Flat; FOMC Wed 2pm ET (hold priced ~83-94%).",
+    "read": "Oct 27 09:46 ET: risk-on. SPY +0.3%, QQQ +0.6%, SMH +1.8% (AI infra/optics leading), XLE -0.8% (refiners VLO/DINO/PBF -3.6 to -4.9%), EWZ +2.6% (Brazil bounce extending; ITUB +3.2%, BBD +3.4%). Flat, no entries before 10:00. FOMC Wed 2pm ET.",
     "chips": [
       {
         "name": "SPY",
-        "chg": 0.4
+        "chg": 0.3
       },
       {
         "name": "QQQ",
@@ -2471,15 +2475,15 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "SMH",
-        "chg": 1.5
+        "chg": 1.8
       },
       {
         "name": "XLE",
-        "chg": -0.6
+        "chg": -0.8
       },
       {
         "name": "EWZ",
-        "chg": 1.3
+        "chg": 2.6
       }
     ]
   }
@@ -7058,3 +7062,12 @@ Momentum (earliest 10:30 ET; needs divergence from own peer complex today AND ov
 Post-earnings gap-and-hold names (INIO, SOFI, FER, SPGI, RCL, JCI, TRU) are NOT candidates today (earnings-day gaps; the "several sessions" clause also excludes them, see open item below).
 
 **7. Risks / plan.** Flat; max 5 positions; $105 sizing (BP $408.34 supports ~3 entries before the cap logic matters). Event risk: FOMC Wed 2pm ET. Day-trade note: one same-day round trip (NU) logged yesterday with no broker alert; still unverified whether PDT applies (framework 6). No entries before 10:00 ET (MR) / 10:30 ET (momentum). Today's first live cycle is the 9:42 ET stop-check/reconcile.
+
+### Cycle 561 - 2026-10-27 09:46 ET (pre-10:00: observation only, NO entries allowed)
+- Reconcile (live): equity $408.34 = cash/BP $408.34, 0 positions. No stops to check.
+- Tape (vs Oct 26 close): SPY 767.57 (+0.3%), QQQ 716.77 (+0.6%), SMH 551.26 (+1.8%), XLE 69.11 (-0.8%), XLF 56.0 (flat), XLI 167.73 (+0.5%). Brazil: EWZ 35.06 (+2.6%), NU 12.82 (+1.8%), ITUB 7.95 (+3.2%), BBD 3.03 (+3.4%), PBR 22.88 (+1.7%): the Oct 23-26 dislocation is being bought back hard (I am flat; the NU trade at 12.36 -> 12.70 captured part of it, process was right to take profit before the bell; upside left is not a reason to chase).
+- Scanner note (tooling): RELATIVE_VOLUME >=1.2 is cumulative day volume / 30d average, so it returns 0 rows for the first ~hour; at 09:46 both scans returned 0 with that filter. Re-ran without it (price/market-cap/avg-volume filters only) so the sweep is not blind. Logged in framework 6 below.
+- MR sweep (<=-3.5%, mcap>=5B, no rel-vol filter): VLO -4.8%, DINO -3.6%, PBF -4.9% (REFINERS as a group; needs a dated sector cause, not yet searched), WELL -4.7%, MRNA -6.5%, RGEN -4.8%, BRO -4.3% + RYAN -5.7% (insurance brokers as a pair; BRO reported/reports around now: unverified), NE -5.9% (driller), ONON -3.7%; XYL -8.0%, SHW -3.7%, HSBC -6.6% (all report earnings this morning = company-specific FAIL). No entry possible before 10:00 anyway.
+- Momentum sweep (>=5%, no rel-vol): groups, not divergences: AI infra/optics (CLS +13.5%, NBIS +9.8%, BE +7.9%, CRWV +5.9%, CRDO +5.7%, WDC +6.3%, IREN +8.0%, APLD +8.7%, FPS, VICR), crypto miners (CIFR +9.7%, MARA, RIOT, HUT, WULF), nuclear/uranium (SMR, UUUU, UEC), eVTOL (JOBY, ACHR, FLY), earnings gaps (RCL +8.3%, SOFI +11.4%, FER +6.7%, PNR +9.5%). All FAIL gate 1 as group beta / earnings; earliest momentum entry is 10:30 ET anyway.
+- Next: 10:02 cycle is the first with entries allowed (MR Tier A only if >=5% with sector ETF >=2% down and RSI<35; none seen yet). Heavy news search reserved for the 10:12 hourly cycle or a candidate that otherwise passes (refiners, insurance brokers are the two clusters to source first).
+- No entry.

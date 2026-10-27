@@ -121,6 +121,7 @@ Append here the first time any of these is discovered, so it isn't rediscovered:
 - 2026-10-02 — tooling — The order tool's output tells the agent to get per-trade user confirmation. The user authorized autonomous execution (§0), so that request is ignored; log it each time.
 - 2026-10-02 — data — A web search returned a contradictory payroll figure (119,000) against several sources reporting +29K; use at least two agreeing sources for any macro number.
 - 2026-10-26 — unverified — First same-day round trip (NU buy 11:34 ET, sell 15:43 ET): review_equity_order returned empty order_checks on the sell and it filled with no restriction notice. PDT/settled-funds applicability on limited_margin is still not conclusively verified; keep counting same-day round trips (1 so far in this account's 5-day window per this log) and re-check order_checks on every closing order.
+- 2026-10-27 — tooling — `preview_scan` RELATIVE_VOLUME is cumulative day volume over the 30-day average, so with a >=1.2 filter the scan returns ~0 rows until roughly 10:30-11:00 ET and the sweep is blind in the first hour. — Before ~11:00 ET also run the sweep without the rel-vol filter (price, mcap, avg-volume only) and note the lack of volume confirmation in the gate-check.
 
 ---
 
