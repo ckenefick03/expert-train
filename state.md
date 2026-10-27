@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-27 11:07 ET",
+  "as_of": "2026-10-27 11:15 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2376,6 +2376,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-27 11:07 ET",
+      "equity": 408.34
+    },
+    {
+      "t": "2026-10-27 11:15 ET",
       "equity": 408.34
     }
   ],
@@ -7123,3 +7127,10 @@ Post-earnings gap-and-hold names (INIO, SOFI, FER, SPGI, RCL, JCI, TRU) are NOT 
 - MR (<=-3.5%, mcap>=5B, rel-vol>=1.2): BA -9.8% (earnings day, miss; peers flat/up = company-specific), HSBC -6.2% (earnings day), CTAS -5.7% (rel vol 1.30; no sourced sector cause, RSI not <35) - all FAIL gate 1. Refiners VLO 398.7 (-6.6%), MPC 445.6 (-5.3%) unchanged vs 10:58 (no dated cause; uptrend pullback) - FAIL. Tier A: no RSI<35 name besides HSBC (earnings).
 - Momentum (>=3%, rel-vol>=1.2): only SOFI +13.2% (earnings gap). Watch (not passing): GM 81.28 (+6.5%, F +1.6%; no dated catalyst), CLS 271.7 (+10.2%), LITE 851.2 (+4.0%) both SMH-group beta, TSLA 402.6 (+2.8%).
 - No entry. Tier A window closes 11:30; then Tier B (>=3.5%) with stabilization on any name that gets a sourced sector/country cause.
+
+### Cycle 566 - 2026-10-27 11:15 ET
+- Reconcile (live): equity $408.34, cash/BP $408.34, 0 positions. No stops.
+- Tape: SPY 769.03 (+0.5%), QQQ 719.35 (+1.0%), SMH 553.70 (+2.2%), XLE 68.50 (-1.6%), XLF 55.86 (-0.3%), XLI 167.38 (+0.3%), XLV 179.34 (0.0%), EWZ 34.50 (+1.0%).
+- MR (<=-3.5%, rel-vol>=1.2): same three as Cycle 565: BA -9.8% (earnings), HSBC -6.2% (earnings), CTAS -5.7% (no sourced sector cause) - FAIL. Refiners VLO 396.9 (-7.0%), MPC 442.4 (-6.0%) still no dated cause (deepening, RSI was 55/65 at the open so still not oversold) - FAIL.
+- Momentum (>=3%, rel-vol>=1.2): only SOFI +13.6% (earnings gap) - FAIL. GM 81.13 (+6.3%) still uncatalyzed.
+- No entry. Hourly news pass due ~11:56 (next full search) or earlier if a candidate would otherwise pass; Tier B opens 11:30.
