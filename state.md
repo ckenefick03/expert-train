@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-27 14:24 ET",
+  "as_of": "2026-10-27 14:36 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2445,6 +2445,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-27 14:24 ET",
       "equity": 408.34
+    },
+    {
+      "t": "2026-10-27 14:36 ET",
+      "equity": 408.34
     }
   ],
   "positions": [],
@@ -2559,15 +2563,15 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "SMH",
-        "chg": 2.9
+        "chg": 2.8
       },
       {
         "name": "XLE",
-        "chg": -1.8
+        "chg": -1.9
       },
       {
         "name": "EWZ",
-        "chg": 1.0
+        "chg": 1.1
       }
     ]
   }
@@ -7299,3 +7303,9 @@ Reconciled: equity $408.34, flat, no stops. Tape: SPY +0.5, QQQ +1.2, SMH +2.9, 
 - MR: same six (VLO -7.9%, WELL -6.3%, CTAS -5.5%, BA -9.8%, XYL -12.8%, HSBC -5.4%) - no dated external cause / earnings-day / company-specific - FAIL. Tier B closes 14:30 ET, Tier C (forced tag only) follows.
 - Momentum: same names plus UUUU +7.5% (uranium/rare-earth small-cap, no catalyst checked, no established divergence) - FAIL.
 - No entry.
+
+### Cycle 583 - 2026-10-27 14:36 ET (Tier C window)
+Reconciled: equity $408.34, flat, no stops. Tape: SPY +0.5, QQQ +1.2, SMH +2.8, XLE -1.9, EWZ +1.1.
+- MR (Tier C scan <=-2.5%, rel-vol>=1.2): VLO -8.2%, WELL -6.2%, CTAS -5.0%, BA -10.0%, XYL -12.9%, HSBC -5.4%, plus new VTR -4.7% and AHR -5.0% (healthcare REITs, moving with WELL). Resolved the WELL mystery: get_earnings_results shows WELL reported Q3 2026 after the close on Oct 26 (EPS 1.67 vs 0.90 est), so today's drop is a reaction to its own earnings = company-specific FAIL; VTR/AHR are sympathy moves with no separate dated cause (search for a sector story found nothing from 2026) = FAIL. VLO/CTAS: still no dated cause. BA/XYL/HSBC earnings-day.
+- Momentum: same names plus RRX +5.1% (thin volume, nothing established) and SKM +3.4% - FAIL.
+- No entry. Tier C needs forced tag and all four gates; none met.
