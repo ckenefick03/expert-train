@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-28 11:58 ET",
+  "as_of": "2026-10-28 12:08 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,12 +41,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat. Brazil Tier B watch (UGP/SBS) awaiting a 5-min higher low; FOMC 2pm ET.",
+  "status_note": "Holding UGP (Tier B mean-reversion). Decide at ~13:30 ET whether to exit before the 2pm FOMC. Close before the bell by default.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-28",
     "start_equity": 408.34,
-    "trades": 0,
+    "trades": 1,
     "forced": 0
   },
   "equity_history": [
@@ -2529,9 +2529,24 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-28 11:58 ET",
       "equity": 408.34
+    },
+    {
+      "t": "2026-10-28 12:08 ET",
+      "equity": 408.29
     }
   ],
-  "positions": [],
+  "positions": [
+    {
+      "symbol": "UGP",
+      "strategy": "mean-reversion",
+      "tier": "B",
+      "qty": 17.022242,
+      "entry": 6.1684,
+      "price": 6.165,
+      "stop": 6.08,
+      "target": 6.4
+    }
+  ],
   "trades": [
     {
       "symbol": "TER",
@@ -2631,7 +2646,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Calm US tape (SPY +0.1, SMH +1.0) but Brazil re-selling: EWZ -2.6% on day 3 of the post-Lula-win shock. FOMC 2pm ET.",
+    "read": "US tape calm (SPY +0.2, SMH +1.3) but Brazil still down (EWZ -2.4%) after the Lula-win shock; holding UGP, a Brazil mean-reversion trade. FOMC 2pm ET.",
     "chips": [
       {
         "name": "SPY",
@@ -2643,7 +2658,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "SMH",
-        "chg": 1.1
+        "chg": 1.3
       },
       {
         "name": "XLE",
@@ -2651,7 +2666,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "EWZ",
-        "chg": -2.5
+        "chg": -2.4
       }
     ]
   }
@@ -7534,3 +7549,16 @@ Unfiltered (no rel-vol) MR scan returned 28 names; the Brazil/EM cluster is wide
 - Decision: NO ENTRY this cycle (gate 4 stabilization not met). Re-check next cycle: need a 5-min higher low on UGP (above 6.14) with EWZ holding 33.3+, then size = min($105, BP) = 17 shares, stop ~6.05, target 6.40; plan to exit before the 2pm FOMC or accept event risk explicitly.
 - SBS: 5-min lows 4.555 -> 4.565 -> 4.57 (higher lows), RSI 29.9, -3.7%, next report Nov 5; but its fundamental datapoint has no consensus estimate (EPS 0.080 vs 0.083 prior quarter), so gate 2 (neutral-or-better) cannot be verified -> not a candidate until it can. CIG: flat 1.85-1.87 range, no estimates either.
 - Momentum (>=3%, rel-vol >=1.2): VRT +12.7% (RSI 38.9 even after the gap, earnings today), GMAB, AXGN, ADT, BHC, STLA - company-specific/earnings; ADT catalyst still unchecked - FAIL.
+
+### Cycle 603 - 2026-10-28 12:08 ET - ENTRY: UGP (mean-reversion, Tier B, organic)
+Reconciled before order: equity $408.34, flat, BP $408.34. Tape: SPY +0.2, QQQ +0.1, SMH +1.3, XLE +1.0, EWZ -2.4% (33.49; 5-min bar lows 33.325 -> 33.36 -> 33.42, last bar swept 33.375 and closed 33.485).
+**Order:** BUY UGP market $105, regular hours, gfd, ref_id 1bb51173-... -> order 6ae21dc4-39f2-4dd7-a08c-340f63eee257 FILLED at 16:07:33Z: 17.022242 sh @ 6.1684 (limit-less market; quote was 6.16 x 6.17), fees $0, order_checks {} (empty), no approval required. Positions verified: UGP 17.022242 sh, avg 6.17. Autonomous per framework section 0.
+**Thesis:** Ultrapar (UGP), a domestic-Brazil fuel/gas/pharmacy distributor, was sold ~4% on the post-election repricing of Brazil (Lula won the Oct 25 runoff against ~80% Bolsonaro odds; Ibovespa -13.9% Oct 26, steadier Oct 27; real/fiscal worries). EWZ is -2.4%. UGP had been in a clean uptrend (6.3 mid-Aug to ~8.0 Oct 21) until the one-day gap; it is a dislocation, not a downtrend. Expect a partial retrace toward the prior close 6.40.
+**Gate-check (all four, written):**
+1. Cause: EXTERNAL and country-wide (election outcome / Brazil macro and fiscal repricing, sources cited in Cycle 596 dated Oct 26-27: Benzinga, Yahoo Finance, CNBC, Rio Times). Not company-specific. Caveat disclosed: no source explains today's incremental ~-2.5% leg; a search this cycle for an Oct 28 fiscal/policy item returned only Aug-Sep Rio Times pages.
+2. Latest fundamental: Q2 2026 EPS 0.28 vs 0.27 est (beat, reported Aug 12); Q1 0.156 vs 0.14 (beat). Neutral-or-better. Next report Nov 11 -> no earnings within 2 trading days.
+3. Upside anchor: prior close 6.40 (Oct 27) and the Oct 26 close 6.56; level held as the post-shock range; 6.40 is +3.8% from entry.
+4. Trend structure: dislocation (uptrend until Oct 23 close 7.74, gap to 6.56 Oct 26, 6.40 Oct 27); not lower-highs/lower-lows over weeks. Stabilization (5-min): washout bar 15:50Z low 6.13 on 212k shares (large vs ~10-60k typical), then higher lows 6.135 (15:55Z) and 6.14 (16:00Z) with closes rising 6.14 -> 6.145 -> 6.165. Modest, two higher lows - accepted as 'visible stabilization' for Tier B (>=3.5% required; UGP was -3.7% vs 6.40 at entry).
+Tier B (11:30-14:30) open because no Tier A qualified today (BBD blocked by gate 2). Rel-vol filter unavailable per name; UGP avg vol 4.7M (>$20M/day), spread 1c on 6.16 (0.16%), fractional tradable, tradability verified.
+**Risk plan:** size $105 (entry cash $105.00 of $408.34; 1 of 5 positions). Stop 6.08 (below the 6.13 day low; -1.4% = 1R ~ $1.50, manual - exit proactively near 6.10). Target 6.40 (+3.8%, ~2.6R ~ $3.94); trim at 2R+ extension. Horizon: end of day; default exit before the bell (15:47 ET recap) unless an explicit hold decision is logged. 30-minute hold rule: invalidation exits suspended until 12:38 ET; only the stop trading triggers earlier. EVENT: FOMC at 2pm ET - I will make an explicit hold/exit-before-the-Fed decision by ~13:30 ET (inputs: position P&L, EWZ trend, UGP vs 6.13 support). Loss limit $100/day and the 10% breaker (equity floor $394.19) are nowhere near.
+Momentum scan this cycle: VRT +13.5% (earnings), TXG +9.7%, GMAB +30%, AXGN +29%, ADT +8.2%, BHC +5.1%, STLA +15.6% - earnings/company-specific or group beta; no momentum entry. Skipped MR candidates: SBS (gate 2 unverifiable: no consensus estimate), CIG (same), BBD (gate 2 miss), ITUB (gate 2 misses), BSBR (earnings today).
