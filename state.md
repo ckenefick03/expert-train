@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-27 15:49 ET",
+  "as_of": "2026-10-28 08:45 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,10 +41,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, nothing held overnight. Oct 27: 0 trades, no setup passed gates. FOMC decision Wed Oct 28 2pm ET.",
+  "status_note": "Flat. Pre-open brief done; FOMC decision today 2pm ET - no new entries after ~13:30 ET unless exceptional.",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-10-27",
+    "date": "2026-10-28",
     "start_equity": 408.34,
     "trades": 0,
     "forced": 0
@@ -2481,6 +2481,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-27 15:49 ET",
       "equity": 408.34
+    },
+    {
+      "t": "2026-10-28 08:45 ET",
+      "equity": 408.34
     }
   ],
   "positions": [],
@@ -2583,27 +2587,27 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Oct 27 12:24 ET: steady risk-on, tech-led (SMH +2.9%); energy weak (XLE -1.9%). Earnings-day gaps dominate single names. Flat, no qualifying setup. FOMC Wed 2pm ET.",
+    "read": "Pre-market risk-on led by semis/AI-power (SMH ~+1%, VRT +15% on earnings); FOMC 2pm ET today (hold priced, sources soft). Earnings-heavy morning.",
     "chips": [
       {
         "name": "SPY",
-        "chg": 0.7
+        "chg": 0.2
       },
       {
         "name": "QQQ",
-        "chg": 1.4
+        "chg": 0.4
       },
       {
         "name": "SMH",
-        "chg": 2.9
+        "chg": 1.0
       },
       {
         "name": "XLE",
-        "chg": -1.9
+        "chg": 0.7
       },
       {
         "name": "EWZ",
-        "chg": 1.0
+        "chg": -0.3
       }
     ]
   }
@@ -7389,3 +7393,21 @@ Stop checks: none (no positions). Reconciled live: equity $408.34 = cash/buying 
 - Why nothing traded (gates held, nothing forced): mean-reversion candidates were earnings-day moves (BA, XYL, HSBC, WELL, plus REIT sympathy VTR/AHR/SUI) or had no dated external cause (CTAS, refiners VLO/MPC/PBF, which also never stabilized); momentum names were earnings gaps, group beta (SMH/AI-chip, space), small-cap/new listings, or lacked a dated catalyst plus multi-session divergence.
 - Gaps disclosed: triggers fired late/bunched at times and several were skipped silently under the 6-minute rule; MCP servers disconnected/reconnected around triggers; several news searches returned only undated/older/auto-generated pages and were treated as unverifiable rather than cited (WELL, RKLB, refiners, BA). Cycles 589-590 were post-cutoff flat checks with no scans.
 - Open items for the user (unanswered, not acted on): (1) momentum gate-1 'several sessions' clause blocks fresh post-catalyst gap-and-hold names - possible exemption; (2) PDT/day-trade applicability on limited_margin still unverified; (3) FOMC decision Wed Oct 28 2pm ET - pre-open brief at ~08:30 ET, avoid new late-morning entries into the decision unless exceptional.
+
+### Pre-open brief - Wed 2026-10-28 (2026-10-28 08:45 ET; trigger fired ~10 min late) - read-only, no orders
+**1. Reconcile / stop-check.** Live: equity $408.34 = cash/BP $408.34, 0 positions, no open orders. Nothing held, no stops. Breaker level $394.19 and $100 daily loss limit untouched. New day: start equity $408.34, trades 0, forced 0.
+
+**2. Tape (pre-market vs Oct 27 close, last non-regular print):** SPY 771.47 (+0.2%), QQQ 723.83 (+0.4%), SMH 563.33 (+1.0%), XLE 68.68 (+0.7%), XLF 55.73 (-0.3%), XLRE 42.49 (+0.1%), EWZ 34.20 (-0.3%). Read: calm, mildly risk-on, semis/AI-power leading; no broad dislocation. Yesterday's names: BA 168.50 (flat), XYL ~91.8 (-1.1% more, already -13%), VLO 393.10 (+1.5% bounce, still ~-7.8% from Oct 26 close), WELL 227.72 (+0.4%), CBRS 117.70 (-1.4%), SOFI 16.46 (flat).
+
+**3. News and politics (sourced this cycle only):** Fed decision today 2pm ET (FOMC Oct 27-28): the only source found this cycle was a generic search that returned 2017-2025 'all eyes on the Fed' pieces, nothing dated today. DISCLOSED GAP: no dated wrap/futures/Fed-odds source this cycle. The last sourced odds (Oct 20-22, secondary blogs) were hold ~83-94%, hike 6-17% - treat as soft. Rule: no new entries after ~13:30 ET into the 2pm decision unless exceptional; expect chop into it.
+
+**4. Earnings (get_earnings_calendar Oct 28-30, high-mcap, parsed from file, 505 rows):** Today AM (partial, relevant to scan names): ADP, TEL, CHRW, GSK, BSX, SW, IP, AVTR, JMKE, VFC, AON, VRT, EAT, WING, DINO, FLEX, STNG, APH, MAS, GEHC, FTV, AXGN, DB, EXTR, HAYW, STLA, PSN; today PM: FORM, COHU. Thu Oct 29: LTH, PWR, XEL am; SNDK, MTZ pm. NVT Fri Oct 30 am. AVOID all of these (earnings within 2 trading days). Verified via get_earnings_results that NXPI (-8.1%), HOOD (-6.6%) and CSGP (-7.8%) all reported Q3 after the close Oct 27 -> pre-market gaps are earnings reactions = gate-1 FAIL. ETN reports Nov 3 (outside the 2-day window).
+
+**5. Pre-market scan (no volume filter, mcap>=$5B/$2B, 30d avg vol>=1M, pre-market % vs Oct 27 close):**
+- Down >=3% (18): ADP -3.4%, NXPI -8.1%, TEL -3.1%, CHRW -6.4%, HOOD -6.6%, UL -3.4%, PSN -3.4%, GSK -5.4%, LTH -5.0%, ST -5.0%, BSX -12.3%, SW -10.3%, IP -4.7%, CSGP -7.8%, AVTR -3.9%, JMKE -3.6%, VFC -4.1%, ICL -3.7%. Almost all are earnings-day (ADP, TEL, CHRW, PSN, GSK, BSX, SW, IP, AVTR, JMKE, VFC) or Oct 27 PM reporters (NXPI, HOOD, CSGP). Unexplained: UL, ST, ICL, LTH (earnings tomorrow = avoid). No sector-wide, externally-caused dislocation visible.
+- Up >=3% (46): AI-power/semis cluster (VRT +15.5% earnings, APH +7.1% earnings, MU +3.1%, SNDK +3.8% earnings Thu, ETN +4.4%, PWR +4.1% earnings Thu, JBL +3.3%, NVT +6.3%, MOD +7.6%, FORM +4.7%, UCTT +14.9%, FPS +7.1%, FLEX +12.5% earnings), crypto-miner/AI-datacenter cluster (HUT, IREN, WULF, CIFR, APLD +3-5%), tankers (STNG, FRO, TRMD +4%), refiner DINO +4.0% (earnings today), STLA +9.4% (earnings), GEHC +8.3% (earnings), MAS +4.9% (earnings), WING +8.5% (earnings), EAT +5.3% (earnings).
+
+**6. Watch list (candidates to re-check at the open; none is a trade yet):**
+Mean-reversion (3-5): (a) VLO/MPC refiners - bounced pre-market but still need a cycle-dated external cause plus RSI(14)<35 context and a 5-min higher low; as of yesterday no sourced cause and no stabilization, so default FAIL unless that changes. (b) UL -3.4% (unexplained; consumer staples ADR - check for a dated cause or peer move, XLP). (c) ICL -3.7% (fertilizer/chem; check peer MOS/NTR/CF and any dated sector story). (d) ST -5.0% (Sensata, unexplained; check TEL's earnings as read-through - TEL reports today, so likely sympathy = FAIL). (e) WELL/VTR/AHR - WELL's own earnings reaction (reported Oct 26 PM); stabilization possible but gate 1 fails by rule.
+Momentum (3-5): (a) ETN +4.4% - non-earnings, but AI-power group beta with VRT/APH/PWR (all earnings) - need own divergence over several sessions plus a dated catalyst before 10:30 ET; default FAIL. (b) MU +3.1% / SMH +1% - semis group, not own divergence. (c) STNG/FRO/TRMD tankers +4% - check for a dated shipping/sanctions catalyst and a multi-session base. (d) HUT/IREN/WULF/CIFR/APLD - crypto-miner/AI-datacenter basket moving together = group beta unless one diverges. (e) CBRS (-1.4% pre-market after +10% yesterday) - no follow-through.
+Honest expectation: earnings-heavy morning, FOMC at 2pm; low odds of a passing setup before ~11:00 ET. Gates unchanged; the 1-trade minimum is a target, not a reason to loosen.
