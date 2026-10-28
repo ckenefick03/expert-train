@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-28 12:54 ET",
+  "as_of": "2026-10-28 13:04 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2549,6 +2549,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-28 12:54 ET",
       "equity": 407.94
+    },
+    {
+      "t": "2026-10-28 13:04 ET",
+      "equity": 407.69
     }
   ],
   "positions": [
@@ -2558,7 +2562,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "tier": "B",
       "qty": 17.022242,
       "entry": 6.1684,
-      "price": 6.145,
+      "price": 6.13,
       "stop": 6.08,
       "target": 6.4
     }
@@ -2666,23 +2670,23 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "chips": [
       {
         "name": "SPY",
-        "chg": 0.2
+        "chg": 0.3
       },
       {
         "name": "QQQ",
-        "chg": 0.1
+        "chg": 0.2
       },
       {
         "name": "SMH",
-        "chg": 1.2
+        "chg": 1.6
       },
       {
         "name": "XLE",
-        "chg": 0.9
+        "chg": 0.8
       },
       {
         "name": "EWZ",
-        "chg": -2.3
+        "chg": -2.4
       }
     ]
   }
@@ -7606,3 +7610,10 @@ Reconciled: equity $407.94 (cash $303.34 + UGP $104.60), 1 position, no open ord
 - MR scan (>=3.5%, rel-vol >=1.0): same 7 earnings reactions/sympathy names (ODFL, GSK, BSX, SW, CSGP, AVTR, BSBR) - nothing new; no entry.
 - Momentum: unchanged list - no entry.
 - FOMC decision planning (due by 13:30 ET): position is small (risk $1.43 to stop), reward to 6.40 is +$4.3. Event risk is two-sided; deferring the explicit hold/exit-before-the-Fed call to the 13:22-13:30 cycle.
+
+### Cycle 608 - 2026-10-28 13:04 ET (fired ~1 min late)
+**Stop check (first):** UGP last 6.13 (bid 6.12 / ask 6.13) - exactly at the day low; unrealized -$0.65 (-0.62%). Stop 6.08 is 0.05 below (0.8%). The 16:55Z 5-min bar opened 6.155 and closed 6.13; support 6.125-6.13 has now been tested ~5 times. Relative strength: EWZ 33.48 (-2.4%, 5-min 16:50Z close 33.605 then 33.495, range-bound), BBD 2.76, ITUB 7.375, NU 12.085 all flat on the day - UGP -4.2% is slightly weaker than the group but no divergence trigger. Action rule set now: exit proactively if UGP prints <= 6.10 (before the 6.08 stop), or if EWZ loses 33.28 (the day low). Otherwise hold.
+Reconciled: equity $407.69 (cash $303.34 + UGP $104.35), 1 position, no open orders. Tape: SPY +0.3, QQQ +0.2, SMH +1.6, XLE +0.8.
+- MR scan (>=3.5% down, rel-vol >=1.0): ODFL, GSK, BSX, SW, CSGP, AVTR, BSBR (earnings/sympathy) + YMM -4.6% (Full Truck Alliance, China logistics ADR; no cause checked, RSI 47.9) - no qualifying new setup.
+- Momentum: not rescanned beyond the unchanged earnings/semis list.
+- FOMC at 2pm ET: hold/exit-before-the-Fed decision at the 13:22 cycle (inputs: UGP vs 6.12 support, EWZ vs 33.28).
