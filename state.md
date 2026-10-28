@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-28 10:59 ET",
+  "as_of": "2026-10-28 11:11 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2509,6 +2509,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-28 10:59 ET",
       "equity": 408.34
+    },
+    {
+      "t": "2026-10-28 11:11 ET",
+      "equity": 408.34
     }
   ],
   "positions": [],
@@ -2615,23 +2619,23 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "chips": [
       {
         "name": "SPY",
-        "chg": 0.0
+        "chg": 0.1
       },
       {
         "name": "QQQ",
-        "chg": -0.1
+        "chg": 0.1
       },
       {
         "name": "SMH",
-        "chg": 0.8
+        "chg": 1.2
       },
       {
         "name": "XLE",
-        "chg": 0.4
+        "chg": 0.5
       },
       {
         "name": "EWZ",
-        "chg": -2.6
+        "chg": -2.4
       }
     ]
   }
@@ -7478,3 +7482,10 @@ Reconciled: equity $408.34, flat. Tape: SPY 0.0, QQQ -0.1, SMH +0.8, XLE +0.4, E
 - Decision: NO ENTRY. Watch at 11:30: NU needs >= 3.5% for Tier B (now -2.5%); gate 2 blocks BBD/ITUB regardless of price. Not loosening gate 2 to make a trade.
 - Other MR >=5% (12 names): TER, ODFL, CHRW, XYL, ON, BKR, BSX, SW, CSGP, NOV, ICL - earnings reactions / sympathy / no cause; unchanged FAIL.
 - Momentum: nothing new reviewed beyond Cycle 596 (earnings reporters and group beta); no entry.
+
+### Cycle 598 - 2026-10-28 11:11 ET (trigger fired ~7 min late)
+Reconciled: equity $408.34, flat. Tape: SPY +0.1, QQQ +0.1, SMH +1.2, XLE +0.5, EWZ -2.4% (33.485; off the 33.28 low), XLRE -1.0, XLI -0.1.
+- Brazil is retracing: BBD 2.77 (-4.8%, now under Tier A's 5% depth; RSI 29.3), ITUB 7.41 (-3.4%), NU 12.05 (-2.8%), BSBR -4.0% (reports earnings today), GGB -4.5%. Gate-2 blocks unchanged (BBD last EPS 0.128 vs 0.130 = miss; ITUB two misses). NU passes gates 1-3 in substance (country-wide cause, beat last quarter, no earnings until Nov 12) but is only -2.8% (Tier C depth; Tier B needs 3.5%; Tier C opens 14:30 and requires the day's minimum unmet, forced tag).
+- MR >=4% (21 rows, no rel-vol): same earnings reactions/sympathy as before (TER, trucking cluster, XYL, BSX, SW, CSGP, BKR, NOV, ON, ICL) plus REITs (VTR RSI 42, CCI RSI 74) and GGB/BSBR - no new passing setup. TER -4.7% (RSI 38.9) still has no sourced cause.
+- Momentum (>=5% up, rel-vol >=1.2 now computable): only GMAB +26.7% (company-specific), AXGN +26.8% (earnings), ADT +10.1% (rel vol 1.4, catalyst not checked, no divergence-over-sessions evidence), BHC +5.5% - FAIL.
+- No entry. Tier A closes 11:30 ET; Tier B next.
