@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-28 15:32 ET",
+  "as_of": "2026-10-28 15:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. Entry window closed 15:30 ET; close recap 15:47 ET.",
+  "status_note": "Flat, all cash. Entry window closed; close recap 15:47 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-28",
@@ -2613,6 +2613,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-28 15:32 ET",
       "equity": 407.69
+    },
+    {
+      "t": "2026-10-28 15:43 ET",
+      "equity": 407.69
     }
   ],
   "positions": [],
@@ -2729,11 +2733,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "regime": {
     "read": "Flat tape into the close: SPY +0.1, QQQ +0.2, SMH +1.3, EWZ -1.9. Flat; no entry.",
     "chips": [
-      "SPY +0.1",
-      "QQQ +0.2",
-      "SMH +1.2",
+      "SPY +0.2",
+      "QQQ +0.3",
+      "SMH +1.5",
       "XLE +0.6",
-      "EWZ -1.9"
+      "EWZ -2.1"
     ]
   }
 }
@@ -7729,3 +7733,6 @@ Equity $407.69, all cash, no positions, no open orders. SPY 770.79 (+0.1%), QQQ 
 
 ### Cycle 623 - 2026-10-28 15:32 ET (entries closed)
 Equity $407.69, all cash, no positions, no open orders. SPY 770.79 (+0.1%), QQQ 722.74 (+0.2%), SMH 564.69 (+1.2%), XLE 68.63, EWZ 33.63 (-1.9%). The 15:30 ET entry cutoff has passed, so no scan was run (disclosed). No entry. Nothing held; flat into the close.
+
+### Cycle 624 - 2026-10-28 15:43 ET (entries closed)
+Equity $407.69, all cash, no positions, no open orders. SPY 771.14 (+0.2%), QQQ 723.59 (+0.3%), SMH 566.36 (+1.5%), XLE 68.62, EWZ 33.60 (-2.1%). Past the 15:30 ET cutoff; no scan (disclosed). No entry. Flat into the close.
