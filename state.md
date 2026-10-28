@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-28 10:48 ET",
+  "as_of": "2026-10-28 10:59 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2505,6 +2505,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-28 10:48 ET",
       "equity": 408.34
+    },
+    {
+      "t": "2026-10-28 10:59 ET",
+      "equity": 408.34
     }
   ],
   "positions": [],
@@ -2611,19 +2615,19 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "chips": [
       {
         "name": "SPY",
-        "chg": 0.1
-      },
-      {
-        "name": "QQQ",
         "chg": 0.0
       },
       {
+        "name": "QQQ",
+        "chg": -0.1
+      },
+      {
         "name": "SMH",
-        "chg": 0.9
+        "chg": 0.8
       },
       {
         "name": "XLE",
-        "chg": 0.3
+        "chg": 0.4
       },
       {
         "name": "EWZ",
@@ -7464,3 +7468,13 @@ Reconciled: equity $408.34, flat. Tape: SPY +0.1, QQQ 0.0, SMH +0.9, XLE +0.3, E
 - Other MR (>=3.5%): GEV -4.4% (RSI 45), TER -5.8% (no cause found), trucking cluster (ODFL, JBHT, XPO, KNX, CHRW; CHRW earnings sympathy), REITs (AMT, CCI RSI 74, VTR), earnings-day names (BKR, NOV, BSX, CSGP, SW, HOOD, ON) - FAIL.
 - Momentum (>=5% up, eligible from 10:30): VRT +13.5%, SKHY +9.9%, GMAB +22%, AXGN +24.6%, WING +11.2%, EAT +9.6%, STLA +14.9%, GEHC +7.9%, FTV +7.0%, PPG +6.1%, CAVA +6.2% - almost all today's earnings reporters or group beta (memory/AI power) - no own-divergence/dated-catalyst -> FAIL.
 - No entry.
+
+### Cycle 597 - 2026-10-28 10:59 ET (trigger fired ~4 min late)
+Timestamp correction: Cycle 596 above was stamped 10:48 ET but the machine clock puts that work at ~10:41-10:43 ET (my estimate was wrong); a 10:43 trigger was skipped under the 6-minute rule on that basis. Content of 596 is unaffected.
+Reconciled: equity $408.34, flat. Tape: SPY 0.0, QQQ -0.1, SMH +0.8, XLE +0.4, EWZ -2.6% (33.415).
+**Brazil re-check (Tier A window ends 11:30):**
+- Stabilization is now appearing on 5-min bars (14:40-14:55Z): ITUB lows 7.320 -> 7.340 -> 7.352 with rising closes (7.350, 7.365, 7.380); NU lows 11.97 -> 11.98 -> 12.00, closing 12.085; EWZ lows 33.28 -> 33.37 -> 33.375; BBD low 2.7324 then 2.740 (one higher low, 2.755 close). So gate-4 stabilization is plausible on ITUB/NU/EWZ and only marginal on BBD.
+- Gate-by-gate on the names that meet depth: **BBD** -5.3% (RSI 29.3, down more than EWZ's -2.6%) is the ONLY Brazil ADR meeting the Tier A 5% depth. Gate 1 passes (external country-wide shock: Lula runoff win Oct 25-26, Ibovespa -13.9%, fiscal worries; sources cited in Cycle 596; today's extra leg unattributed). Gate 2 FAILS under the rule 'a miss = automatic FAIL': Q3 2026 reported Oct 22 pm at EPS 0.128 vs 0.130 est (get_earnings_results; a small miss, and 5 of its last 7 quarters missed). Gate 3 anchor would be Tue close 2.91 (+5.6%, ~2.8R vs a 2.70 stop), gate 4 only marginal. -> FAIL on gate 2, no trade. **BSBR** -4.4%: reports Q3 earnings TODAY (am) -> earnings window FAIL. **ITUB** -3.9% (below Tier A's 5%; Tier B opens 11:30): latest datapoints Q1 0.21 vs 0.22 and Q2 0.21 vs 0.22 (two small misses) -> gate 2 FAIL as well; next report Nov 3. **NU** -2.5% (12.085 vs 12.40): Q2 EPS 0.216 vs 0.19 est (beat), next report Nov 12 so gate 2 passes and no earnings window, but only -2.5% = Tier C depth (14:30+, requires no organic A/B and the day's minimum unmet; would be tagged forced). 
+- Decision: NO ENTRY. Watch at 11:30: NU needs >= 3.5% for Tier B (now -2.5%); gate 2 blocks BBD/ITUB regardless of price. Not loosening gate 2 to make a trade.
+- Other MR >=5% (12 names): TER, ODFL, CHRW, XYL, ON, BKR, BSX, SW, CSGP, NOV, ICL - earnings reactions / sympathy / no cause; unchanged FAIL.
+- Momentum: nothing new reviewed beyond Cycle 596 (earnings reporters and group beta); no entry.
