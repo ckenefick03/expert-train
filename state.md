@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-28 12:08 ET",
+  "as_of": "2026-10-28 12:22 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2533,6 +2533,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-28 12:08 ET",
       "equity": 408.29
+    },
+    {
+      "t": "2026-10-28 12:22 ET",
+      "equity": 408.03
     }
   ],
   "positions": [
@@ -2542,7 +2546,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "tier": "B",
       "qty": 17.022242,
       "entry": 6.1684,
-      "price": 6.165,
+      "price": 6.15,
       "stop": 6.08,
       "target": 6.4
     }
@@ -2658,7 +2662,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "SMH",
-        "chg": 1.3
+        "chg": 1.2
       },
       {
         "name": "XLE",
@@ -7562,3 +7566,10 @@ Reconciled before order: equity $408.34, flat, BP $408.34. Tape: SPY +0.2, QQQ +
 Tier B (11:30-14:30) open because no Tier A qualified today (BBD blocked by gate 2). Rel-vol filter unavailable per name; UGP avg vol 4.7M (>$20M/day), spread 1c on 6.16 (0.16%), fractional tradable, tradability verified.
 **Risk plan:** size $105 (entry cash $105.00 of $408.34; 1 of 5 positions). Stop 6.08 (below the 6.13 day low; -1.4% = 1R ~ $1.50, manual - exit proactively near 6.10). Target 6.40 (+3.8%, ~2.6R ~ $3.94); trim at 2R+ extension. Horizon: end of day; default exit before the bell (15:47 ET recap) unless an explicit hold decision is logged. 30-minute hold rule: invalidation exits suspended until 12:38 ET; only the stop trading triggers earlier. EVENT: FOMC at 2pm ET - I will make an explicit hold/exit-before-the-Fed decision by ~13:30 ET (inputs: position P&L, EWZ trend, UGP vs 6.13 support). Loss limit $100/day and the 10% breaker (equity floor $394.19) are nowhere near.
 Momentum scan this cycle: VRT +13.5% (earnings), TXG +9.7%, GMAB +30%, AXGN +29%, ADT +8.2%, BHC +5.1%, STLA +15.6% - earnings/company-specific or group beta; no momentum entry. Skipped MR candidates: SBS (gate 2 unverifiable: no consensus estimate), CIG (same), BBD (gate 2 miss), ITUB (gate 2 misses), BSBR (earnings today).
+
+### Cycle 604 - 2026-10-28 12:22 ET (hourly cycle; fired ~9 min late)
+**Stop check (first):** UGP 17.022242 sh, avg 6.17 (fill 6.1684); last 6.15 (bid 6.14 / ask 6.15), unrealized -$0.31 (-0.3%). Stop 6.08 is 0.07 below (1.1%) - NOT near; the 12:15Z 5-min bar retested 6.13 (low) and held, the same support as the entry washout low. Target 6.40. 30-minute hold rule active until 12:38 ET (only the stop trading would trigger an exit). Relative strength: UGP -3.9% vs EWZ -2.4% - not diverging worse than the group. No exit.
+Reconciled: equity $408.03 (cash $303.34 + UGP $104.69), 1 position, no open orders. Tape: SPY +0.2, QQQ +0.1, SMH +1.2, XLE +1.0, EWZ -2.4% (33.465, steady 33.42-33.50 range for 40 minutes).
+- MR scan (>=3.5% down, 30 names, no rel-vol): new this cycle only CBRS -5.0% (Cerebras, RSI 32.2; AI-chip IPO name that popped +10% on Oct 27, no external sector cause - semis ETF is +1.2% - company/IPO-specific = gate-1 FAIL), MKC -3.8% and CHWY -4.0% (no cause checked, not sector-driven), ARE -3.7% (RSI 33.5, XLRE -0.9%, no dated cause). Everything else unchanged (earnings reactions, trucking sympathy, REITs) and the Brazil set (BBD -4.9%, ITUB -3.5%, BSBR -4.6%, GGB -4.5%) still blocked by gate 2/earnings. Tier B stays open to 14:30.
+- Momentum: not re-scanned in detail this cycle beyond the prior list (earnings/company-specific names); no entry. Position room: 1 of 5 used; BP $303.34 (enough for 2 more $105 entries).
+- News: skipped a new heavy search this hour; open position's cause (Brazil election repricing) re-checked at entry (12:07 ET), nothing new dated Oct 28 found then. FOMC 2pm ET: hold/exit-before-the-Fed decision due ~13:30 ET.
