@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-28 12:22 ET",
+  "as_of": "2026-10-28 12:34 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2537,6 +2537,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-28 12:22 ET",
       "equity": 408.03
+    },
+    {
+      "t": "2026-10-28 12:34 ET",
+      "equity": 407.77
     }
   ],
   "positions": [
@@ -2546,7 +2550,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "tier": "B",
       "qty": 17.022242,
       "entry": 6.1684,
-      "price": 6.15,
+      "price": 6.135,
       "stop": 6.08,
       "target": 6.4
     }
@@ -2662,15 +2666,15 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "SMH",
-        "chg": 1.2
+        "chg": 1.3
       },
       {
         "name": "XLE",
-        "chg": 1.0
+        "chg": 0.9
       },
       {
         "name": "EWZ",
-        "chg": -2.4
+        "chg": -2.5
       }
     ]
   }
@@ -7573,3 +7577,10 @@ Reconciled: equity $408.03 (cash $303.34 + UGP $104.69), 1 position, no open ord
 - MR scan (>=3.5% down, 30 names, no rel-vol): new this cycle only CBRS -5.0% (Cerebras, RSI 32.2; AI-chip IPO name that popped +10% on Oct 27, no external sector cause - semis ETF is +1.2% - company/IPO-specific = gate-1 FAIL), MKC -3.8% and CHWY -4.0% (no cause checked, not sector-driven), ARE -3.7% (RSI 33.5, XLRE -0.9%, no dated cause). Everything else unchanged (earnings reactions, trucking sympathy, REITs) and the Brazil set (BBD -4.9%, ITUB -3.5%, BSBR -4.6%, GGB -4.5%) still blocked by gate 2/earnings. Tier B stays open to 14:30.
 - Momentum: not re-scanned in detail this cycle beyond the prior list (earnings/company-specific names); no entry. Position room: 1 of 5 used; BP $303.34 (enough for 2 more $105 entries).
 - News: skipped a new heavy search this hour; open position's cause (Brazil election repricing) re-checked at entry (12:07 ET), nothing new dated Oct 28 found then. FOMC 2pm ET: hold/exit-before-the-Fed decision due ~13:30 ET.
+
+### Cycle 605 - 2026-10-28 12:34 ET (fired ~4 min late)
+**Stop check (first):** UGP 17.022242 sh, last 6.135 (bid 6.13 / ask 6.14); unrealized -$0.57 (-0.55% vs 6.1684 fill). Stop 6.08 is 0.055 below (0.9% / ~$0.94 of position); the day low is still 6.13 (15:50Z and 16:15Z bars) and has held 3 tests on 5-min bars (16:20Z/16:25Z lows 6.1426/6.142, flat). It is the closest to the stop so far but not 'close' by my standard (<0.5%); a print through 6.10 would prompt a proactive exit. 30-minute hold rule runs to 12:38 ET (only the stop trading triggers an exit). Group: EWZ 33.425 (-2.5%) with 5-min closes rising 33.46 -> 33.465 -> 33.545 -> 33.535, so the Brazil group is holding while UGP is flat - no relative-strength loss yet.
+Reconciled: equity $407.77 (cash $303.34 + UGP $104.43), 1 position, no open orders. Tape: SPY +0.2, QQQ +0.1, SMH +1.3, XLE +0.9.
+- Momentum (>=3%, rel-vol >=1.2): VRT +14.0%, SKHY +13.1%, GMAB +28.8%, AXGN +27.6%, STLA +16.2%, ADT +8.4%, BHC +5.6%, TXG +8.2%, new DB +4.2% (Deutsche Bank reports earnings today) - earnings/company-specific or group beta (memory/AI power) - no own-divergence + dated catalyst - FAIL.
+- MR: unchanged set (see Cycle 604); Brazil banks blocked by gate 2; no new Tier B name. BP $303.34, 1 of 5 positions.
+- No new entry. Next: 12:38 ET the hold rule ends; FOMC hold/exit decision by ~13:30 ET.
