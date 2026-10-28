@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-28 13:04 ET",
+  "as_of": "2026-10-28 13:17 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Holding UGP (Tier B mean-reversion). Decide at ~13:30 ET whether to exit before the 2pm FOMC. Close before the bell by default.",
+  "status_note": "Flat. UGP closed -$0.65 before the FOMC. 1 trade today. Entries still allowed to 15:30 ET but little expected into/after the Fed.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-28",
@@ -2553,20 +2553,13 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-28 13:04 ET",
       "equity": 407.69
-    }
-  ],
-  "positions": [
+    },
     {
-      "symbol": "UGP",
-      "strategy": "mean-reversion",
-      "tier": "B",
-      "qty": 17.022242,
-      "entry": 6.1684,
-      "price": 6.13,
-      "stop": 6.08,
-      "target": 6.4
+      "t": "2026-10-28 13:17 ET",
+      "equity": 407.69
     }
   ],
+  "positions": [],
   "trades": [
     {
       "symbol": "TER",
@@ -2663,14 +2656,26 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "score": 85,
       "tag": "organic",
       "date": "2026-10-26"
+    },
+    {
+      "symbol": "UGP",
+      "strategy": "mean-reversion",
+      "tier": "B",
+      "entry": 6.1684,
+      "exit": 6.13,
+      "pnl": -0.65,
+      "r": -0.43,
+      "score": 66,
+      "tag": "organic",
+      "date": "2026-10-28"
     }
   ],
   "regime": {
-    "read": "US tape calm (SPY +0.2, SMH +1.3) but Brazil still down (EWZ -2.4%) after the Lula-win shock; holding UGP, a Brazil mean-reversion trade. FOMC 2pm ET.",
+    "read": "US tape calm and mildly up (semis lead); Brazil still ~-2.4% after the election shock, not bouncing. Flat ahead of the 2pm FOMC.",
     "chips": [
       {
         "name": "SPY",
-        "chg": 0.3
+        "chg": 0.2
       },
       {
         "name": "QQQ",
@@ -2678,7 +2683,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "SMH",
-        "chg": 1.6
+        "chg": 1.4
       },
       {
         "name": "XLE",
@@ -7617,3 +7622,13 @@ Reconciled: equity $407.69 (cash $303.34 + UGP $104.35), 1 position, no open ord
 - MR scan (>=3.5% down, rel-vol >=1.0): ODFL, GSK, BSX, SW, CSGP, AVTR, BSBR (earnings/sympathy) + YMM -4.6% (Full Truck Alliance, China logistics ADR; no cause checked, RSI 47.9) - no qualifying new setup.
 - Momentum: not rescanned beyond the unchanged earnings/semis list.
 - FOMC at 2pm ET: hold/exit-before-the-Fed decision at the 13:22 cycle (inputs: UGP vs 6.12 support, EWZ vs 33.28).
+
+### Cycle 609 - 2026-10-28 13:17 ET - EXIT: UGP (pre-FOMC), hourly cycle (fired ~3 min late)
+**Stop check (first):** UGP 6.125 (bid 6.12 / ask 6.13), at the day low, unrealized -$0.73; stop 6.08 not touched. 5-min lows 6.12-6.13 for ~85 minutes; EWZ 33.485 (-2.4%) range-bound 33.45-33.6 with no bounce; UGP -4.3% vs EWZ -2.4% (lagging the group by ~1.9 points since entry). 
+**Hold/exit-before-the-Fed decision (explicit): EXIT now, not at 13:30.** Reasons: (1) the reversion thesis has not started - ~65 minutes after entry price is below entry, at the day low, no bounce toward 6.40 despite EWZ holding; (2) FOMC at 2pm ET is a two-sided event with an EM/dollar sensitivity: the sources found this cycle are soft (aggregator pages, mid-Sept to early Oct snapshots: hold favored, hike odds ~21-25%, conflicting current-rate figures 3.75-4.00% vs 3.5-3.75%, nothing dated Oct 28 on the outcome) - a hawkish surprise would hit Brazil/EM and could gap UGP through the 6.08 stop; (3) the strategy file says to trim ahead of a known catalyst and exit on relative-strength loss; (4) trigger cadence has been late/bunched (up to 12 min), so a firm decision now beats relying on a 13:22-13:30 cycle firing in time. No averaging down, stop respected in spirit (exit above it).
+**Order:** SELL UGP market 17.022242 sh, regular hours, gfd, ref_id d08410f7-... -> order 6ae22dad-8674-4612-8c9d-73fc02d56775 FILLED 17:15:25Z: 17.022242 @ 6.1300 (bid 6.12 / ask 6.13), fees $0, order_checks {}; positions verified empty; account cash/BP $407.69.
+**Result:** entry 6.1684 -> exit 6.1300: P&L -$0.65 (-0.62%), -0.43R (1R = $1.50). Holding time 67 minutes (12:07-13:15 ET). Tag organic, mean-reversion Tier B, 1 trade today (day P&L -$0.65; day-start equity $408.34 -> $407.69, loss limit $100 untouched).
+**Score (framework 5.5): 66/100.** Setup 28/40 (all four gates passed in substance but gate 1 had an unsourced incremental leg and the stabilization was modest - two small higher lows); Execution 30/35 (right tier, timing, market order, sized $105, stop planned, no averaging; no deduction for the exit - made per plan ahead of the catalyst); Outcome 8/25 (-0.43R, closed by decision before a catalyst rather than at stop/target, thesis not resolved). Note: process was sound, the setup simply never got the bounce; the weak point was entering on a thin, low-volume stabilization after the washout rather than waiting for a firmer higher-high.
+Reconciled after trade: equity $407.69, flat, no open orders. Tape: SPY +0.2, QQQ +0.2, SMH +1.4, XLE +0.8, TLT -0.2%, EWZ -2.4%.
+- News (hourly): FOMC search - decision 2:00 pm ET (confirmed schedule), chair's press conference 2:30 pm ET; priced mostly for a hold per the soft aggregator pages above; no Oct 28 outcome yet. DISCLOSED GAP: no primary Fed/CME source this cycle.
+- Entries remain permitted until 15:30 ET (Tier B to 14:30, Tier C 14:30-15:30 forced-tag rules); position room 5 of 5 free, BP $407.69. Per the standing note I will not open new positions into the 2pm decision unless exceptional; post-Fed setups are evaluated after 14:00 ET.
