@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-28 15:43 ET",
+  "as_of": "2026-10-28 15:48 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. Entry window closed; close recap 15:47 ET.",
+  "status_note": "Flat, all cash - nothing held overnight. Day: 1 trade (UGP, -$0.65). Next: pre-open brief Thu 08:28 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-28",
@@ -2617,6 +2617,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-28 15:43 ET",
       "equity": 407.69
+    },
+    {
+      "t": "2026-10-28 15:48 ET",
+      "equity": 407.69
     }
   ],
   "positions": [],
@@ -2731,11 +2735,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Flat tape into the close: SPY +0.1, QQQ +0.2, SMH +1.3, EWZ -1.9. Flat; no entry.",
+    "read": "Close: SPY +0.3, QQQ +0.4, SMH +1.6, EWZ -2.1. Flat overnight; nothing held.",
     "chips": [
-      "SPY +0.2",
-      "QQQ +0.3",
-      "SMH +1.5",
+      "SPY +0.3",
+      "QQQ +0.4",
+      "SMH +1.6",
       "XLE +0.6",
       "EWZ -2.1"
     ]
@@ -7736,3 +7740,15 @@ Equity $407.69, all cash, no positions, no open orders. SPY 770.79 (+0.1%), QQQ 
 
 ### Cycle 624 - 2026-10-28 15:43 ET (entries closed)
 Equity $407.69, all cash, no positions, no open orders. SPY 771.14 (+0.2%), QQQ 723.59 (+0.3%), SMH 566.36 (+1.5%), XLE 68.62, EWZ 33.60 (-2.1%). Past the 15:30 ET cutoff; no scan (disclosed). No entry. Flat into the close.
+
+### Cycle 625 - 2026-10-28 15:48 ET (close recap, last cycle of the day)
+Stop checks: n/a, no positions. Reconciled live: equity $407.69, all cash, positions [], no open orders. SPY 771.74 (+0.3%), QQQ 724.38 (+0.4%), SMH 567.06 (+1.6%). No entries after 15:30 ET.
+**Overnight holds: NONE. Nothing is held overnight; the account is 100% cash, so no thesis needs defending.**
+
+#### Day recap - Wed 2026-10-28
+- Start equity $408.34 -> close $407.69: **-$0.65 (-0.16%)**. Peak equity unchanged at $437.99 (breaker level $394.19, far away); daily loss limit ($100) untouched.
+- Trades: 1 (meets the 1/day minimum, organic, no forced tag). UGP mean-reversion Tier B, entered 12:07 ET at ~$6.1684, exited 13:15 ET at ~$6.13 before the 2pm FOMC: -$0.65, -0.43R, score 66/100. Thesis (Brazil post-election dislocation, passed all four gates) did not bounce in 67 minutes; exited on a not-working thesis plus two-sided Fed risk with EM sensitivity.
+- Skips: BBD and ITUB failed gate 2 (EPS misses); BSBR reported earnings today (company-specific); post-FOMC there were no mean-reversion or momentum names that passed. Momentum candidates all day were group-beta or gap-and-hold moves (AI/semis complex, single-name gaps) without a verified peer divergence, dated catalyst or held pullback. From 14:30 ET Tier C was unavailable (minimum already met); entries closed 15:30 ET.
+- Gaps/disclosures: several triggers fired late or bunched, and cycles inside 6 minutes of the last log were skipped silently. Cycle 596 was mis-stamped 10:48 ET (actual ~10:42), corrected in Cycle 597. Several web searches returned undated or stale pages and were not cited. No date-confirmed source was found for the Oct 28 FOMC decision text. Late-afternoon cycles 619-624 were light (no news searches or 5-min reviews; cycles 620 and 623-624 ran no scan) and were labelled as such.
+- Open items for the user: (1) the momentum gate-1 "several sessions" clause blocks fresh post-catalyst gap-and-hold names - possible exemption? (2) PDT/day-trade applicability on this limited_margin account is unverified (two same-day round trips done, no alert).
+- Next: pre-open brief Thu 2026-10-29 ~08:28 ET.
