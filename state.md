@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-28 12:34 ET",
+  "as_of": "2026-10-28 12:44 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2541,6 +2541,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-28 12:34 ET",
       "equity": 407.77
+    },
+    {
+      "t": "2026-10-28 12:44 ET",
+      "equity": 407.86
     }
   ],
   "positions": [
@@ -2550,7 +2554,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "tier": "B",
       "qty": 17.022242,
       "entry": 6.1684,
-      "price": 6.135,
+      "price": 6.14,
       "stop": 6.08,
       "target": 6.4
     }
@@ -2670,7 +2674,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "XLE",
-        "chg": 0.9
+        "chg": 0.8
       },
       {
         "name": "EWZ",
@@ -7584,3 +7588,10 @@ Reconciled: equity $407.77 (cash $303.34 + UGP $104.43), 1 position, no open ord
 - Momentum (>=3%, rel-vol >=1.2): VRT +14.0%, SKHY +13.1%, GMAB +28.8%, AXGN +27.6%, STLA +16.2%, ADT +8.4%, BHC +5.6%, TXG +8.2%, new DB +4.2% (Deutsche Bank reports earnings today) - earnings/company-specific or group beta (memory/AI power) - no own-divergence + dated catalyst - FAIL.
 - MR: unchanged set (see Cycle 604); Brazil banks blocked by gate 2; no new Tier B name. BP $303.34, 1 of 5 positions.
 - No new entry. Next: 12:38 ET the hold rule ends; FOMC hold/exit decision by ~13:30 ET.
+
+### Cycle 606 - 2026-10-28 12:44 ET
+**Stop check (first):** UGP last 6.14 (bid 6.13 / ask 6.14), unrealized -$0.48 (-0.46%). Stop 6.08 is 0.06 below (1.0%); 5-min lows 6.13 (16:30Z) and 6.125 (16:35Z intrabar) - a marginal new low by half a cent but above the earlier 6.13 day low in closing terms; no print near 6.10. 30-minute hold rule has ended (12:38 ET) - invalidation exits are now live: thesis check = Brazil group (EWZ 33.455, -2.5%, 16:35Z bar low 33.365 above the day low 33.28; BBD 2.755, ITUB 7.375, NU 12.08, all within 0.1-0.3% of the 12:34 prints) is holding, UGP is moving with it, no relative-strength loss. No exit.
+Reconciled: equity $407.86 (cash $303.34 + UGP $104.52), 1 position, no open orders. Tape: SPY +0.2, QQQ +0.1, SMH +1.4, XLE +0.8.
+- MR scan (>=3.5% down, rel-vol >=1.0): ODFL -5.6%, GSK -4.3%, BSX -5.0%, SW -7.5%, CSGP -13.9%, AVTR -4.5% (all earnings reactions or trucking sympathy), BSBR -5.1% (earnings today) - FAIL. No new Tier B name.
+- Momentum: no change from Cycle 605 - no entry.
+- Plan: FOMC 2pm ET - decision on holding UGP through the announcement due by ~13:30 ET.
