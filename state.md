@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-28 15:13 ET",
+  "as_of": "2026-10-28 15:23 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2605,6 +2605,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-28 15:13 ET",
       "equity": 407.69
+    },
+    {
+      "t": "2026-10-28 15:23 ET",
+      "equity": 407.69
     }
   ],
   "positions": [],
@@ -2719,12 +2723,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Late session fade: SPY flat, QQQ +0.1, SMH +1.2 (off highs), EWZ -1.9. Flat; MR windows closed, no momentum candidate.",
+    "read": "Flat tape into the close: SPY +0.1, QQQ +0.2, SMH +1.3, EWZ -1.9. Flat; no entry.",
     "chips": [
-      "SPY +0.0",
-      "QQQ +0.1",
-      "SMH +1.2",
-      "XLE +0.5",
+      "SPY +0.1",
+      "QQQ +0.2",
+      "SMH +1.3",
+      "XLE +0.7",
       "EWZ -1.9"
     ]
   }
@@ -7715,3 +7719,6 @@ Equity $407.69, all cash, no positions, no open orders. SPY 771.76 (+0.3%), QQQ 
 
 ### Cycle 621 - 2026-10-28 15:13 ET (hourly; momentum only)
 Equity $407.69, all cash, no positions, no open orders. SPY 769.74 (0.0%), QQQ 721.89 (+0.1%), SMH 564.86 (+1.2%), XLE 68.56, EWZ 33.65 (-1.9%): the post-FOMC rally has faded to flat. Ran the MR depth scan (mcap>=5B, <=-3.5%): 55 hits, with the oversold-RSI names being XYL (-5.5%, RSI 27.6), VALE (-3.8%, RSI 25.3), BSBR (RSI 26.7), BBD (RSI 29.3), UGP (RSI 26.8), CBRS (-8.4%, RSI 32.2), ARE (-5.4%, RSI 33.5). None eligible: Tier A closed 11:30, Tier B closed 14:30, Tier C requires an unmet daily minimum and today's was met by UGP. The Brazil names are the same post-election dislocation as this morning (UGP lost money on it). No fresh momentum scan or news search this cycle (disclosed): the 14:53 scan found nothing passing and 15:30 is close. No entry. Nothing held.
+
+### Cycle 622 - 2026-10-28 15:23 ET (momentum only; last full window)
+Equity $407.69, all cash, no positions, no open orders. SPY 770.79 (+0.1%), QQQ 722.83 (+0.2%), SMH 565.48 (+1.3%), XLE 68.71, EWZ 33.66 (-1.9%). Momentum scan: 26 hits, the same gap-and-hold set as 14:53 (VRT +17.1%, ORCL +12.5%, SKHY +13.1%, GMAB +29%, AXGN +31%, STLA +13.2%, PWR, GNRC, etc.) plus a few new low-priced names (GEHC, HAYW, NMRK, FTRE). These are group-beta or gap-driven moves with no verified peer divergence, dated catalyst or held-pullback higher low (no news search or 5-min review run - disclosed). With 7 minutes to the 15:30 cutoff, a new entry could not satisfy the 30-minute hold rule before the 15:47 recap without an explicit overnight hold, and none of these merits one. No entry. Nothing held.
