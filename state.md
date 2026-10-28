@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-28 11:38 ET",
+  "as_of": "2026-10-28 11:46 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2521,6 +2521,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-28 11:38 ET",
       "equity": 408.34
+    },
+    {
+      "t": "2026-10-28 11:46 ET",
+      "equity": 408.34
     }
   ],
   "positions": [],
@@ -2631,11 +2635,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "QQQ",
-        "chg": 0.1
+        "chg": 0.2
       },
       {
         "name": "SMH",
-        "chg": 1.1
+        "chg": 1.3
       },
       {
         "name": "XLE",
@@ -2643,7 +2647,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "EWZ",
-        "chg": -2.6
+        "chg": -2.5
       }
     ]
   }
@@ -7511,3 +7515,9 @@ Reconciled: equity $408.34, flat. Tape: SPY +0.2, QQQ +0.1, SMH +1.1, XLE +0.9, 
 - MR scan (mcap >=$5B, >=3.5% down, rel-vol >=1.0): XPO -3.6% (rel vol 1.04, RSI 55; trucking sympathy to CHRW earnings), BSX -5.9% (earnings reaction), CSGP -13.2% (earnings) - FAIL. Brazil ADRs do not clear the volume filter: BBD 2.765 (-5.0%), ITUB 7.41 (-3.4%), NU 12.055 (-2.8%) - unchanged from the prior cycle; gate-2 blocks BBD/ITUB stand and NU is below Tier B depth (3.5%).
 - Momentum (>=3%, rel-vol >=1.2): same five (GMAB +28.7%, AXGN +30.5%, ADT +7.9%, BHC +4.8%, STLA +14.5%) - company-specific/earnings; no own-divergence + dated catalyst for ADT (unchecked) - FAIL.
 - No entry.
+
+### Cycle 601 - 2026-10-28 11:46 ET (Tier B window)
+Reconciled: equity $408.34, flat. Tape: SPY +0.2, QQQ +0.2, SMH +1.3, XLE +0.9, EWZ -2.5% (33.44). Static ahead of FOMC (2pm ET).
+- MR (>=3.5% down, rel-vol >=1.0): only BSX -6.7% and CSGP -13.5% (both earnings reactions) - FAIL. Brazil ADRs flat vs last cycle (BBD 2.765 -5.0%, ITUB 7.42 -3.3%, NU 12.075 -2.6%): gate-2 blocks on BBD/ITUB unchanged, NU below Tier B depth.
+- Momentum (>=3%, rel-vol >=1.2): GMAB, AXGN, ADT, BHC, STLA unchanged (company-specific/earnings; ADT catalyst unchecked, no multi-session divergence evidence) - FAIL.
+- No entry. FOMC at 2pm ET; per standing note, no new entries after ~13:30 ET unless exceptional.
