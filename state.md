@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-28 13:44 ET",
+  "as_of": "2026-10-28 13:54 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2569,6 +2569,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-28 13:44 ET",
       "equity": 407.69
+    },
+    {
+      "t": "2026-10-28 13:54 ET",
+      "equity": 407.69
     }
   ],
   "positions": [],
@@ -2691,7 +2695,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "QQQ",
-        "chg": 0.1
+        "chg": 0.2
       },
       {
         "name": "SMH",
@@ -2703,7 +2707,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "EWZ",
-        "chg": -2.9
+        "chg": -2.7
       }
     ]
   }
@@ -7654,3 +7658,6 @@ Reconciled: equity $407.69, all cash, flat, no open orders. Tape: SPY +0.2, QQQ 
 
 ### Cycle 612 - 2026-10-28 13:44 ET (pre-FOMC, flat)
 Reconciled: equity $407.69, all cash, flat, no open orders. Tape: SPY +0.2, QQQ +0.1, SMH +1.3, XLE +0.7, TLT -0.2, EWZ 33.31 (-2.9%, new low of the day, below the earlier 33.28-33.33 area on the 5-min lows seen at entry time). No scans (16 minutes before the 2pm ET decision; same standing rule). Brazil still making lows with no stabilization - the UGP exit looks fine but is not a basis for hindsight confidence.
+
+### Cycle 613 - 2026-10-28 13:54 ET (6 minutes before the FOMC decision, flat)
+Reconciled: equity $407.69, all cash, flat, no open orders. Tape: SPY +0.2, QQQ +0.2, SMH +1.3, XLE +0.7, TLT -0.2, EWZ 33.365 (-2.7%). No scans (standing rule). The first post-Fed cycle will run full scans; after the decision I will also re-read the macro/Brazil news before any entry.
