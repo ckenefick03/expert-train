@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-28 11:46 ET",
+  "as_of": "2026-10-28 11:58 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat. Watching Brazil (EWZ -2.6%) for stabilization; FOMC 2pm ET.",
+  "status_note": "Flat. Brazil Tier B watch (UGP/SBS) awaiting a 5-min higher low; FOMC 2pm ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-28",
@@ -2525,6 +2525,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-28 11:46 ET",
       "equity": 408.34
+    },
+    {
+      "t": "2026-10-28 11:58 ET",
+      "equity": 408.34
     }
   ],
   "positions": [],
@@ -2635,15 +2639,15 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "QQQ",
-        "chg": 0.2
+        "chg": 0.1
       },
       {
         "name": "SMH",
-        "chg": 1.3
+        "chg": 1.1
       },
       {
         "name": "XLE",
-        "chg": 0.9
+        "chg": 1.0
       },
       {
         "name": "EWZ",
@@ -7521,3 +7525,12 @@ Reconciled: equity $408.34, flat. Tape: SPY +0.2, QQQ +0.2, SMH +1.3, XLE +0.9, 
 - MR (>=3.5% down, rel-vol >=1.0): only BSX -6.7% and CSGP -13.5% (both earnings reactions) - FAIL. Brazil ADRs flat vs last cycle (BBD 2.765 -5.0%, ITUB 7.42 -3.3%, NU 12.075 -2.6%): gate-2 blocks on BBD/ITUB unchanged, NU below Tier B depth.
 - Momentum (>=3%, rel-vol >=1.2): GMAB, AXGN, ADT, BHC, STLA unchanged (company-specific/earnings; ADT catalyst unchecked, no multi-session divergence evidence) - FAIL.
 - No entry. FOMC at 2pm ET; per standing note, no new entries after ~13:30 ET unless exceptional.
+
+### Cycle 602 - 2026-10-28 11:58 ET (Tier B window; fired ~4 min late)
+Reconciled: equity $408.34, flat. Tape: SPY +0.2, QQQ +0.1, SMH +1.1, XLE +1.0, EWZ -2.5% (33.435; 5-min lows 33.325 -> 33.36 -> 33.42: higher lows since 15:25Z).
+Unfiltered (no rel-vol) MR scan returned 28 names; the Brazil/EM cluster is wider than the banks: UGP -4.1% (RSI 26.8), SBS -3.7% (RSI 29.9), CIG -3.9% (RSI 32.3), GGB -4.6%, BSBR -4.9% (reports earnings today), BBD -4.8%, plus ARE -3.7% (RSI 33.5, life-science REIT, sector XLRE -0.9%). Everything else is earnings reactions/sympathy as before (TER, trucking, HOOD, XYL, BSX, SW, CSGP, BKR, NOV, GSK, ON ...).
+**Closest candidate: UGP (Ultrapar, Brazilian fuel/gas/pharmacy distributor), Tier B depth met (-4.1% vs prior close 6.40 at 6.14; EWZ -2.5%):**
+- Gate 1 PASS in substance: country-wide external cause, the Lula runoff shock of Oct 25-26 (Cycle 596 sources); caveat: today's extra leg has no cycle-dated source. Gate 2 PASS: latest datapoint Q2 2026 EPS 0.28 vs 0.27 est (beat); next report Nov 11, so no earnings window. Gate 3: anchor = prior close 6.40 (and 6.56 Oct 26 close); a stop at ~6.05 (below the day's low) gives ~2.7R to 6.40. Gate 4: daily structure is a dislocation, not a downtrend (uptrend 6.3 in mid-Aug to ~8.0 on Oct 21, then a one-day gap to 6.56 on Oct 26 and 6.40 Oct 27). Stabilization FAIL right now: 5-min lows were flat at 6.16 (15:35Z and 15:45Z) and the 15:53Z print/bid at 6.14 undercut that low - a fresh low, not a higher low; volume is thin (5-min bars ~10-20k shares).
+- Decision: NO ENTRY this cycle (gate 4 stabilization not met). Re-check next cycle: need a 5-min higher low on UGP (above 6.14) with EWZ holding 33.3+, then size = min($105, BP) = 17 shares, stop ~6.05, target 6.40; plan to exit before the 2pm FOMC or accept event risk explicitly.
+- SBS: 5-min lows 4.555 -> 4.565 -> 4.57 (higher lows), RSI 29.9, -3.7%, next report Nov 5; but its fundamental datapoint has no consensus estimate (EPS 0.080 vs 0.083 prior quarter), so gate 2 (neutral-or-better) cannot be verified -> not a candidate until it can. CIG: flat 1.85-1.87 range, no estimates either.
+- Momentum (>=3%, rel-vol >=1.2): VRT +12.7% (RSI 38.9 even after the gap, earnings today), GMAB, AXGN, ADT, BHC, STLA - company-specific/earnings; ADT catalyst still unchecked - FAIL.
