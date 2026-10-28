@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-28 09:57 ET",
+  "as_of": "2026-10-28 10:08 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2493,6 +2493,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-28 09:57 ET",
       "equity": 408.34
+    },
+    {
+      "t": "2026-10-28 10:08 ET",
+      "equity": 408.34
     }
   ],
   "positions": [],
@@ -2599,23 +2603,23 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "chips": [
       {
         "name": "SPY",
-        "chg": 0.1
+        "chg": 0.2
       },
       {
         "name": "QQQ",
-        "chg": 0.1
+        "chg": 0.2
       },
       {
         "name": "SMH",
-        "chg": 1.0
+        "chg": 1.4
       },
       {
         "name": "XLE",
-        "chg": -0.1
+        "chg": 0.1
       },
       {
         "name": "EWZ",
-        "chg": -1.2
+        "chg": -1.0
       }
     ]
   }
@@ -7426,3 +7430,9 @@ Disclosure: no cycle was logged between the 08:45 pre-open brief and this one (t
 
 ### Cycle 593 - 2026-10-28 09:57 ET (pre-10:00, no entries allowed; trigger fired ~4 min late)
 Reconciled: equity $408.34, flat. Tape: SPY +0.1, QQQ +0.1, SMH +1.0, XLE -0.1, EWZ -1.2. No scans (entries barred before 10:00 ET). First entry-capable cycle is the next one.
+
+### Cycle 594 - 2026-10-28 10:08 ET (first entry-capable cycle; fired ~4 min late)
+Reconciled: equity $408.34, flat. Tape: SPY +0.2, QQQ +0.2, SMH +1.4, XLE +0.1, EWZ -1.0, XLRE -1.2 (41.93 vs 42.44), XLP -0.4. Quiet ahead of the 2pm FOMC. Scans run WITHOUT rel-vol (first hour, per framework section 6) - no volume confirmation available.
+- MR down-scan (>=3.5%, mcap>=$5B): TER -4.8%, GNRC -5.4%, CHRW -10.0%, XYL -4.8% (day 2 after earnings), VTR -4.9% (REIT; XLRE -1.2%), BKR -6.3%, GSK -4.1%, PSN -4.1%, BSX -8.3%, SW -5.3%, CSGP -9.1%, NOV -6.2%, VFC -4.2%, CLF -3.7%, ICL -4.3%, Brazil ADRs BSBR -3.7% / GGB -4.1% / BBD -3.8% (EWZ -1.0%). Tier A needs >=5% AND sector ETF >=2% down: none of the sectors is >=2% down (OIH -1.1%, XLRE -1.2%, EWZ -1.0%) -> no Tier A. Earnings checks: BKR and NOV both reported Q3 after the close Oct 27 (get_earnings_results) -> earnings-day = company-specific FAIL; CSGP, CHRW, BSX, GSK, PSN, SW, VFC also earnings-day. TER (semis up, SMH +1.4%) and GNRC (-5.4%) have no cause found this cycle (earnings status not verified for either) -> gate 1 unverifiable = FAIL. Brazil ADRs only -1% to -4% = below Tier A/B thresholds yet (Tier B opens 11:30).
+- Momentum (>=4% up; earliest entry 10:30 ET): SNDK/MU/SKHY/VRT/UCTT/FLEX/ACMR/AXTI (memory + AI semis/power: group beta, several are earnings), EAT/WING/CAVA/JMKE (restaurants, earnings), GMAB +18% (Genmab, company-specific), AXGN +22% (earnings), STLA +13% (earnings), tankers STNG/FRO/TRMD/HAFN +4-5% (cluster, no dated catalyst checked), TEM/TXG/TWST (biotech tools). None has own-divergence vs peers + dated catalyst established - not eligible before 10:30 anyway.
+- No entry.
