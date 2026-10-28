@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-28 13:17 ET",
+  "as_of": "2026-10-28 13:24 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2557,6 +2557,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-28 13:17 ET",
       "equity": 407.69
+    },
+    {
+      "t": "2026-10-28 13:24 ET",
+      "equity": 407.69
     }
   ],
   "positions": [],
@@ -2679,19 +2683,19 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "QQQ",
-        "chg": 0.2
+        "chg": 0.1
       },
       {
         "name": "SMH",
-        "chg": 1.4
+        "chg": 1.3
       },
       {
         "name": "XLE",
-        "chg": 0.8
+        "chg": 0.7
       },
       {
         "name": "EWZ",
-        "chg": -2.4
+        "chg": -2.8
       }
     ]
   }
@@ -7632,3 +7636,7 @@ Reconciled: equity $407.69 (cash $303.34 + UGP $104.35), 1 position, no open ord
 Reconciled after trade: equity $407.69, flat, no open orders. Tape: SPY +0.2, QQQ +0.2, SMH +1.4, XLE +0.8, TLT -0.2%, EWZ -2.4%.
 - News (hourly): FOMC search - decision 2:00 pm ET (confirmed schedule), chair's press conference 2:30 pm ET; priced mostly for a hold per the soft aggregator pages above; no Oct 28 outcome yet. DISCLOSED GAP: no primary Fed/CME source this cycle.
 - Entries remain permitted until 15:30 ET (Tier B to 14:30, Tier C 14:30-15:30 forced-tag rules); position room 5 of 5 free, BP $407.69. Per the standing note I will not open new positions into the 2pm decision unless exceptional; post-Fed setups are evaluated after 14:00 ET.
+
+### Cycle 610 - 2026-10-28 13:24 ET (pre-FOMC, flat; fired ~6 min late)
+Reconciled: equity $407.69, all cash, flat, no open orders. Tape: SPY +0.2, QQQ +0.1, SMH +1.3, XLE +0.7, TLT -0.2, EWZ 33.335 (-2.8%, new weakness: ~0.05 above the 33.28 day low). UGP (sold 6.13 at 13:15) is now 6.10 (bid 6.10 / ask 6.11) - the pre-Fed exit avoided ~$0.5 of further loss (vindicated, not a basis for hindsight confidence).
+No scans this cycle by design: standing note = no new entries into the 2pm ET FOMC decision (35 minutes away) unless exceptional, and nothing exceptional appeared at the tape level (no sector-wide dislocation besides Brazil, which is still falling with no stabilization). DISCLOSED: scans skipped, not a tooling gap. Post-Fed scan resumes at the first cycle after 14:00 ET; Tier B closes 14:30, Tier C 14:30-15:30 (forced tag only, all four gates).
