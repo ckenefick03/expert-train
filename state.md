@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-28 13:54 ET",
+  "as_of": "2026-10-28 14:04 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2573,6 +2573,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-28 13:54 ET",
       "equity": 407.69
+    },
+    {
+      "t": "2026-10-28 14:04 ET",
+      "equity": 407.69
     }
   ],
   "positions": [],
@@ -2699,15 +2703,15 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "SMH",
-        "chg": 1.3
+        "chg": 1.5
       },
       {
         "name": "XLE",
-        "chg": 0.7
+        "chg": 0.6
       },
       {
         "name": "EWZ",
-        "chg": -2.7
+        "chg": -2.6
       }
     ]
   }
@@ -7661,3 +7665,10 @@ Reconciled: equity $407.69, all cash, flat, no open orders. Tape: SPY +0.2, QQQ 
 
 ### Cycle 613 - 2026-10-28 13:54 ET (6 minutes before the FOMC decision, flat)
 Reconciled: equity $407.69, all cash, flat, no open orders. Tape: SPY +0.2, QQQ +0.2, SMH +1.3, XLE +0.7, TLT -0.2, EWZ 33.365 (-2.7%). No scans (standing rule). The first post-Fed cycle will run full scans; after the decision I will also re-read the macro/Brazil news before any entry.
+
+### Cycle 614 - 2026-10-28 14:04 ET (first post-FOMC cycle; fired ~2 min late)
+Reconciled: equity $407.69, all cash, flat, no open orders. Tape right after the 2:00 decision: SPY 771.31 (+0.2%), QQQ +0.2%, SMH +1.5%, IWM +0.1%, XLF +0.5%, XLE +0.6%, TLT 81.43 (-0.2%, unchanged), GLD -0.5%, EWZ 33.40 (-2.6%). No visible shock: tape basically flat through the announcement. News search for the Oct 28 FOMC outcome: results were older/other-meeting items only (Kiplinger/Pulse pieces about a Warsh-era 3.50-3.75% hold and 8-4 vote that I cannot date to Oct 28; one source says October hike risk) - DISCLOSED GAP: no cycle-dated confirmation of the decision text; tape says no surprise.
+UGP post-mortem: 6.075 now (-5.1% on the day), already through my 6.08 stop; selling at 6.13 at 13:15 saved ~$0.9 versus a stop-out (stop-out would have been about -$1.5). Decision was right in outcome; still scored on process (66).
+- MR scan (>=3.5%, rel-vol >=1.0, 11 rows): ODFL -6.9%, CHRW -12.0% (earnings), GSK, BSX, SW, CSGP (earnings reactions), NOV (OFS, Oct 27 earnings), BZ, YMM -5.8% (China ADRs, no cause checked), UGP -5.1% (RSI 26.8, back in the scan: Brazil still falling, no stabilization), BSBR -5.7% (earnings today). No new Tier B setup: Brazil is making new lows (UGP 6.075, EWZ ~33.4), so no stabilization; I do not re-enter a name I just exited at a loss without a changed picture.
+- Momentum (>=3%, rel-vol >=1.2, 13 rows): VRT +14.8% (earnings), SKHY +13.2%, GMAB +32% / AXGN +29% (company-specific), TXRH +5.5% (earnings today), TWST +8.8%, TXG +8.4%, ECHO +3.8%, DB +4.2% (RSI 34; earnings today), JMKE, ADT +9.2% (rel vol 3.3, catalyst still unchecked), BHC +6.3%, STLA +13.9% - earnings/company-specific or semis group beta; no own-divergence + dated catalyst established -> FAIL.
+- No entry. Tier B closes 14:30; Tier C (forced tag only) 14:30-15:30 requires the day's minimum unmet - already met by the UGP trade, so Tier C is not available today. Entry candidates after 14:30 would be momentum only.
