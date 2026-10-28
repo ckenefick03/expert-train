@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-28 10:20 ET",
+  "as_of": "2026-10-28 10:48 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat. Pre-open brief done; FOMC decision today 2pm ET - no new entries after ~13:30 ET unless exceptional.",
+  "status_note": "Flat. Watching Brazil (EWZ -2.6%) for stabilization; FOMC 2pm ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-28",
@@ -2501,6 +2501,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-28 10:20 ET",
       "equity": 408.34
+    },
+    {
+      "t": "2026-10-28 10:48 ET",
+      "equity": 408.34
     }
   ],
   "positions": [],
@@ -2603,7 +2607,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Pre-market risk-on led by semis/AI-power (SMH ~+1%, VRT +15% on earnings); FOMC 2pm ET today (hold priced, sources soft). Earnings-heavy morning.",
+    "read": "Calm US tape (SPY +0.1, SMH +1.0) but Brazil re-selling: EWZ -2.6% on day 3 of the post-Lula-win shock. FOMC 2pm ET.",
     "chips": [
       {
         "name": "SPY",
@@ -2611,19 +2615,19 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "QQQ",
-        "chg": 0.1
+        "chg": 0.0
       },
       {
         "name": "SMH",
-        "chg": 1.0
+        "chg": 0.9
       },
       {
         "name": "XLE",
-        "chg": 0.2
+        "chg": 0.3
       },
       {
         "name": "EWZ",
-        "chg": -1.6
+        "chg": -2.6
       }
     ]
   }
@@ -7448,4 +7452,15 @@ Reconciled: equity $408.34, flat. Tape: SPY +0.1, QQQ +0.1, SMH +1.0, XLE +0.2, 
 - News (hourly search): Teradyne - results returned only older (Apr-May 2026 and undated) pieces describing chip-equipment/AI selloffs; nothing dated Oct 28 -> TER cause unverifiable = FAIL (SMH is +1.0%, so it is also stock-specific). Brazil - search returned Rio Times items through Oct 16 only (Ibovespa 205,430 on Oct 16; runoff Oct 25 per earlier cycles); nothing dated Oct 28 explaining the ADR weakness -> gate 1 unverifiable. DISCLOSED GAP: no cycle-dated source for either.
 - Momentum: not yet eligible (10:30 ET earliest).
 - Watch for Tier B at 11:30 ET: Brazil banks (BBD/BSBR RSI <30) if the dislocation reaches >=3.5% with a 5-min higher low AND a dated external cause is found; otherwise no trade.
+- No entry.
+
+### Cycle 596 - 2026-10-28 10:48 ET (trigger fired ~8 min late; first momentum-eligible cycle)
+Reconciled: equity $408.34, flat. Tape: SPY +0.1, QQQ 0.0, SMH +0.9, XLE +0.3, EWZ -2.6% (33.41 vs 34.30; new low of the day on every 5-min bar). Scans without rel-vol (first hour).
+**Brazil is now a real candidate set (Tier A quantitative test met):** EWZ -2.6% (sector ETF >= 2% down); BBD -5.5% (2.75, RSI 29.3), BSBR -4.3% (RSI 26.7), ITUB -4.1% (RSI 32.5), NU -3.3% (11.99 vs 12.40), SBS -3.9% (RSI 29.9), GGB -4.7%, CIG -3.6%. BBD is down more than the sector and has daily RSI < 35.
+- Gate 1 (external, country-wide, dated cause): sources found this cycle (Benzinga/Yahoo/Sunday Guardian/CNBC/Rio Times, Oct 26-27): Lula won the Oct 25 runoff against prediction-market odds favoring Bolsonaro (~77-80%); Ibovespa -13.9% Mon Oct 26 (worst since March 2020), BBD/ITUB ADRs -30%/-20%+ that day; Tue Oct 27 Ibovespa -0.5% (175,710) with the real +1%; investors awaiting Lula fiscal signals, Citi/BCA wary, Bolsonaro disputing the result. That is a dated, external, country-wide cause. CAVEAT: no source explains TODAY'S additional ~-2.6% (no Oct 28 article found), so today's leg is unattributed continuation.
+- Gate 2 (fundamental neutral-or-better): not evaluated - gate 4 already fails, so no further work this cycle.
+- Gate 4 (stabilization): FAIL. BBD 5-min bars 13:30-14:35Z made successive lower lows every bar (2.84 -> 2.755 low), ITUB and EWZ the same (EWZ lows 33.39 at 14:35Z); there is no 5-min higher low. Daily context: this is a 2-day-old shock after a record Oct 5 high (not a multi-week downtrend), but EWZ is now below Tuesday's 34.30 close and heading toward the Oct 26 lows (31.40), so the Oct 27 bounce is failing. Rule: no catching a falling knife.
+- Decision: NO ENTRY. Re-check each cycle; trigger needs (a) a 5-min higher low on BBD/ITUB/EWZ, (b) a cycle-dated cause for today's leg (e.g. Lula fiscal announcement), (c) target >= 2R. Tier A window runs to 11:30 ET, Tier B 11:30-14:30. FOMC at 2pm ET adds event risk; Lula headline risk can gap either way.
+- Other MR (>=3.5%): GEV -4.4% (RSI 45), TER -5.8% (no cause found), trucking cluster (ODFL, JBHT, XPO, KNX, CHRW; CHRW earnings sympathy), REITs (AMT, CCI RSI 74, VTR), earnings-day names (BKR, NOV, BSX, CSGP, SW, HOOD, ON) - FAIL.
+- Momentum (>=5% up, eligible from 10:30): VRT +13.5%, SKHY +9.9%, GMAB +22%, AXGN +24.6%, WING +11.2%, EAT +9.6%, STLA +14.9%, GEHC +7.9%, FTV +7.0%, PPG +6.1%, CAVA +6.2% - almost all today's earnings reporters or group beta (memory/AI power) - no own-divergence/dated-catalyst -> FAIL.
 - No entry.
