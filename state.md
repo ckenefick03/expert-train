@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-28 15:03 ET",
+  "as_of": "2026-10-28 15:13 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2601,6 +2601,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-28 15:03 ET",
       "equity": 407.69
+    },
+    {
+      "t": "2026-10-28 15:13 ET",
+      "equity": 407.69
     }
   ],
   "positions": [],
@@ -2715,12 +2719,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Late session: indices +0.2-0.3%, semis/AI infra bid (SMH +1.6), EWZ -2.0. Flat; no momentum name passed gates.",
+    "read": "Late session fade: SPY flat, QQQ +0.1, SMH +1.2 (off highs), EWZ -1.9. Flat; MR windows closed, no momentum candidate.",
     "chips": [
-      "SPY +0.3",
-      "QQQ +0.4",
-      "SMH +1.7",
-      "XLE +0.6",
+      "SPY +0.0",
+      "QQQ +0.1",
+      "SMH +1.2",
+      "XLE +0.5",
       "EWZ -1.9"
     ]
   }
@@ -7708,3 +7712,6 @@ Equity $407.69, all cash, no positions, no open orders. SPY 771.17 (+0.2%), QQQ 
 
 ### Cycle 620 - 2026-10-28 15:03 ET (momentum only)
 Equity $407.69, all cash, no positions, no open orders. SPY 771.76 (+0.3%), QQQ 724.05 (+0.4%), SMH 567.29 (+1.7%), XLE 68.65, EWZ 33.65 (-1.9%). Tape unchanged since Cycle 619 (10 min ago). No scan run this cycle (disclosed): the 14:53 scan found only group-beta or ungated single-name movers and nothing material changed; no entry. Nothing held.
+
+### Cycle 621 - 2026-10-28 15:13 ET (hourly; momentum only)
+Equity $407.69, all cash, no positions, no open orders. SPY 769.74 (0.0%), QQQ 721.89 (+0.1%), SMH 564.86 (+1.2%), XLE 68.56, EWZ 33.65 (-1.9%): the post-FOMC rally has faded to flat. Ran the MR depth scan (mcap>=5B, <=-3.5%): 55 hits, with the oversold-RSI names being XYL (-5.5%, RSI 27.6), VALE (-3.8%, RSI 25.3), BSBR (RSI 26.7), BBD (RSI 29.3), UGP (RSI 26.8), CBRS (-8.4%, RSI 32.2), ARE (-5.4%, RSI 33.5). None eligible: Tier A closed 11:30, Tier B closed 14:30, Tier C requires an unmet daily minimum and today's was met by UGP. The Brazil names are the same post-election dislocation as this morning (UGP lost money on it). No fresh momentum scan or news search this cycle (disclosed): the 14:53 scan found nothing passing and 15:30 is close. No entry. Nothing held.
