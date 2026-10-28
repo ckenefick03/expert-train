@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-28 11:11 ET",
+  "as_of": "2026-10-28 11:26 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2513,6 +2513,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-28 11:11 ET",
       "equity": 408.34
+    },
+    {
+      "t": "2026-10-28 11:26 ET",
+      "equity": 408.34
     }
   ],
   "positions": [],
@@ -2619,7 +2623,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "chips": [
       {
         "name": "SPY",
-        "chg": 0.1
+        "chg": 0.2
       },
       {
         "name": "QQQ",
@@ -2627,11 +2631,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "SMH",
-        "chg": 1.2
+        "chg": 1.3
       },
       {
         "name": "XLE",
-        "chg": 0.5
+        "chg": 0.7
       },
       {
         "name": "EWZ",
@@ -7489,3 +7493,10 @@ Reconciled: equity $408.34, flat. Tape: SPY +0.1, QQQ +0.1, SMH +1.2, XLE +0.5, 
 - MR >=4% (21 rows, no rel-vol): same earnings reactions/sympathy as before (TER, trucking cluster, XYL, BSX, SW, CSGP, BKR, NOV, ON, ICL) plus REITs (VTR RSI 42, CCI RSI 74) and GGB/BSBR - no new passing setup. TER -4.7% (RSI 38.9) still has no sourced cause.
 - Momentum (>=5% up, rel-vol >=1.2 now computable): only GMAB +26.7% (company-specific), AXGN +26.8% (earnings), ADT +10.1% (rel vol 1.4, catalyst not checked, no divergence-over-sessions evidence), BHC +5.5% - FAIL.
 - No entry. Tier A closes 11:30 ET; Tier B next.
+
+### Cycle 599 - 2026-10-28 11:26 ET (hourly + news; fired ~12 min late)
+Reconciled: equity $408.34, flat. Tape: SPY +0.2, QQQ +0.1, SMH +1.3, XLE +0.7, XLF +0.4, EWZ -2.4% (33.485, flat vs 11:11). Brazil ADRs unchanged: BBD 2.76 (-5.2%), ITUB 7.41 (-3.4%), NU 12.05 (-2.8%).
+- MR scan WITH rel-vol >=1.2 (mcap >=$5B, drop >=3.5%): only BSX -6.9% (rel vol 1.79, RSI 53; earnings reaction today) - FAIL. Everything else seen earlier (TER, trucking, Brazil ADRs) fell out of the volume-confirmed set, i.e. no volume confirmation of the Brazil move right now. BBD back at -5.2% but gate 2 (EPS miss Oct 22) still blocks; ITUB/NU below depth for Tier A.
+- Momentum (>=3%, rel-vol >=1.2): GMAB +28.5% (RSI 79, company-specific), AXGN +29.3% (earnings), ADT +8.8% (RSI 56, catalyst unchecked), BHC +4.4%, STLA +14.3% (earnings) - FAIL.
+- News (hourly search): Fed/market-wrap search returned only 2016-2021 articles plus an April 29, 2026 item about a different meeting; nothing dated Oct 28. DISCLOSED GAP: no cycle-dated macro wrap. FOMC decision remains 2pm ET.
+- No entry. Tier A window closes 11:30 ET; Tier B (>=3.5% with stabilization, only if no Tier A qualified today - none has) opens next.
