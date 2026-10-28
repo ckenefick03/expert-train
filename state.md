@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-28 14:24 ET",
+  "as_of": "2026-10-28 14:34 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2585,6 +2585,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-28 14:24 ET",
       "equity": 407.69
+    },
+    {
+      "t": "2026-10-28 14:34 ET",
+      "equity": 407.69
     }
   ],
   "positions": [],
@@ -2707,7 +2711,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "QQQ",
-        "chg": 0.0
+        "chg": 0.1
       },
       {
         "name": "SMH",
@@ -2715,11 +2719,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "XLE",
-        "chg": 0.9
+        "chg": 0.7
       },
       {
         "name": "EWZ",
-        "chg": -2.6
+        "chg": -2.5
       }
     ]
   }
@@ -7692,3 +7696,9 @@ Reconciled: equity $407.69, all cash, flat, no open orders. Tape: SPY +0.1, QQQ 
 - MR (>=3.5%, rel-vol >=1.0, 12 rows): same earnings/sympathy set (ODFL, CHRW, GSK, SW, CSGP, NOV), HOOD -4.6% (RSI 37.3; reported Q3 after the close Oct 27 - earnings reaction, company-specific), BZ, TLK, YMM, UGP, BSBR (-6.0%, reported earnings today) - no new qualifier. Tier B window ends 14:30 with no Tier A/B entry today besides the UGP trade.
 - Momentum (>=3%, rel-vol >=1.2, 12 rows): VRT +15.3%, SKHY +12.7%, TXRH +5.5% (earnings), TWST, TXG, GMAB +33.5%, AXGN +30%, DB, AVPT +3.3% (RSI 68.5, new, catalyst unchecked), ADT +8.7%, BHC, STLA - unchanged earnings/company-specific/group-beta set; no own-divergence + dated catalyst -> FAIL.
 - No entry. Next cycles are post-14:30: only momentum entries are possible (Tier C needs the day's minimum unmet - it is met).
+
+### Cycle 617 - 2026-10-28 14:34 ET (Tier B closed; momentum only)
+Reconciled: equity $407.69, all cash, flat, no open orders. Tape: SPY +0.1, QQQ +0.1, SMH +1.3, XLE +0.7, TLT -0.4, EWZ 33.43 (-2.5%).
+- Mean-reversion: window closed (Tier B ended 14:30; Tier C needs the day's minimum unmet - met by the UGP trade). No MR scan.
+- Momentum (>=3%, rel-vol >=1.2, 15 rows): VRT +15.6% (RSI 38.9; earnings day, AI-power group), SKHY +12.6%, TXRH +5.3% (earnings), TWST +7.7%, TXG +7.4%, ECHO +4.4% (rel vol 2.4, no catalyst checked), ETSY +4.3%, GMAB +33.5% (RSI 79), AXGN +31.7%, DB +3.9% (RSI 34; earnings today), BEAM +13.8%, AVPT +3.9%, ADT +8.4%, BHC +6.6%, STLA +13.5% - earnings reporters, company-specific, or semis/AI-power group beta. Gate check (momentum): no name shows relative-strength divergence from its own peer complex over several sessions together with a dated catalyst found this cycle; the biggest unexplained mover with decent liquidity (ADT, rel vol 3.5) has no cycle-dated catalyst (search found none). FAIL for all. Late (after 14:30) breakouts also have little time to run before the 15:47 close.
+- No entry.
