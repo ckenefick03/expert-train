@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-28 14:34 ET",
+  "as_of": "2026-10-28 14:44 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat. UGP closed -$0.65 before the FOMC. 1 trade today. Entries still allowed to 15:30 ET but little expected into/after the Fed.",
+  "status_note": "Flat, all cash. Day minimum met (1 trade). Momentum only until 15:30 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-28",
@@ -2589,6 +2589,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-28 14:34 ET",
       "equity": 407.69
+    },
+    {
+      "t": "2026-10-28 14:44 ET",
+      "equity": 407.69
     }
   ],
   "positions": [],
@@ -2703,28 +2707,13 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "US tape calm and mildly up (semis lead); Brazil still ~-2.4% after the election shock, not bouncing. Flat ahead of the 2pm FOMC.",
+    "read": "Post-FOMC: tape drifting up, tech leading (SMH +2.2), EWZ -1.7. Account flat; MR windows closed.",
     "chips": [
-      {
-        "name": "SPY",
-        "chg": 0.1
-      },
-      {
-        "name": "QQQ",
-        "chg": 0.1
-      },
-      {
-        "name": "SMH",
-        "chg": 1.3
-      },
-      {
-        "name": "XLE",
-        "chg": 0.7
-      },
-      {
-        "name": "EWZ",
-        "chg": -2.5
-      }
+      "SPY +0.4",
+      "QQQ +0.6",
+      "SMH +2.2",
+      "XLE +0.7",
+      "EWZ -1.7"
     ]
   }
 }
@@ -7702,3 +7691,6 @@ Reconciled: equity $407.69, all cash, flat, no open orders. Tape: SPY +0.1, QQQ 
 - Mean-reversion: window closed (Tier B ended 14:30; Tier C needs the day's minimum unmet - met by the UGP trade). No MR scan.
 - Momentum (>=3%, rel-vol >=1.2, 15 rows): VRT +15.6% (RSI 38.9; earnings day, AI-power group), SKHY +12.6%, TXRH +5.3% (earnings), TWST +7.7%, TXG +7.4%, ECHO +4.4% (rel vol 2.4, no catalyst checked), ETSY +4.3%, GMAB +33.5% (RSI 79), AXGN +31.7%, DB +3.9% (RSI 34; earnings today), BEAM +13.8%, AVPT +3.9%, ADT +8.4%, BHC +6.6%, STLA +13.5% - earnings reporters, company-specific, or semis/AI-power group beta. Gate check (momentum): no name shows relative-strength divergence from its own peer complex over several sessions together with a dated catalyst found this cycle; the biggest unexplained mover with decent liquidity (ADT, rel vol 3.5) has no cycle-dated catalyst (search found none). FAIL for all. Late (after 14:30) breakouts also have little time to run before the 15:47 close.
 - No entry.
+
+### Cycle 618 - 2026-10-28 14:44 ET (momentum only)
+Equity $407.69, all cash, no positions, no open orders. SPY 773.15, QQQ 725.83, SMH 570.37, XLE 68.67, EWZ 33.72 (-1.7%). MR Tier B closed 14:30; Tier C unavailable (day minimum already met). No momentum scan run this cycle (light cycle); no entries. Nothing held.
