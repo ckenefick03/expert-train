@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-28 14:04 ET",
+  "as_of": "2026-10-28 14:14 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2577,6 +2577,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-28 14:04 ET",
       "equity": 407.69
+    },
+    {
+      "t": "2026-10-28 14:14 ET",
+      "equity": 407.69
     }
   ],
   "positions": [],
@@ -2695,23 +2699,23 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "chips": [
       {
         "name": "SPY",
-        "chg": 0.2
+        "chg": 0.1
       },
       {
         "name": "QQQ",
-        "chg": 0.2
+        "chg": 0.0
       },
       {
         "name": "SMH",
-        "chg": 1.5
+        "chg": 1.1
       },
       {
         "name": "XLE",
-        "chg": 0.6
+        "chg": 0.8
       },
       {
         "name": "EWZ",
-        "chg": -2.6
+        "chg": -2.5
       }
     ]
   }
@@ -7672,3 +7676,9 @@ UGP post-mortem: 6.075 now (-5.1% on the day), already through my 6.08 stop; sel
 - MR scan (>=3.5%, rel-vol >=1.0, 11 rows): ODFL -6.9%, CHRW -12.0% (earnings), GSK, BSX, SW, CSGP (earnings reactions), NOV (OFS, Oct 27 earnings), BZ, YMM -5.8% (China ADRs, no cause checked), UGP -5.1% (RSI 26.8, back in the scan: Brazil still falling, no stabilization), BSBR -5.7% (earnings today). No new Tier B setup: Brazil is making new lows (UGP 6.075, EWZ ~33.4), so no stabilization; I do not re-enter a name I just exited at a loss without a changed picture.
 - Momentum (>=3%, rel-vol >=1.2, 13 rows): VRT +14.8% (earnings), SKHY +13.2%, GMAB +32% / AXGN +29% (company-specific), TXRH +5.5% (earnings today), TWST +8.8%, TXG +8.4%, ECHO +3.8%, DB +4.2% (RSI 34; earnings today), JMKE, ADT +9.2% (rel vol 3.3, catalyst still unchecked), BHC +6.3%, STLA +13.9% - earnings/company-specific or semis group beta; no own-divergence + dated catalyst established -> FAIL.
 - No entry. Tier B closes 14:30; Tier C (forced tag only) 14:30-15:30 requires the day's minimum unmet - already met by the UGP trade, so Tier C is not available today. Entry candidates after 14:30 would be momentum only.
+
+### Cycle 615 - 2026-10-28 14:14 ET (hourly cycle)
+Reconciled: equity $407.69, all cash, flat, no open orders. Tape: SPY +0.1, QQQ 0.0, SMH +1.1, XLE +0.8, EWZ 33.44 (-2.5%); UGP 6.105 (-4.6%) after my 13:15 exit at 6.13.
+- MR (>=3.5%, rel-vol >=1.0, 12 rows): ODFL -7.6%, CHRW -12.3% (earnings), GSK, BSX (-3.5%, rel vol 2.8), SW, CSGP, NOV, BZ, TLK -4.7% (RSI 39.6, Indonesia ADR, no cause checked), YMM, UGP, BSBR - same earnings/sympathy set; Brazil (UGP, BSBR RSI 26.7) is flat to slightly lower with no higher-high; no new Tier B setup. Tier B closes in 16 minutes.
+- Momentum: not rescanned beyond Cycle 614's list. News check (hourly): ADT +8.7% (rel vol 3.3) - search returned only older ADT stories (2020/2022/2024/2025 and a March 2026 buyback item), nothing dated Oct 28; no divergence-over-sessions evidence -> FAIL (cannot establish a dated catalyst). DISCLOSED GAP.
+- No entry.
