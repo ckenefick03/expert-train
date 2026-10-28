@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-28 15:23 ET",
+  "as_of": "2026-10-28 15:32 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. Day minimum met. Momentum entries close 15:30 ET; nothing qualified.",
+  "status_note": "Flat, all cash. Entry window closed 15:30 ET; close recap 15:47 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-28",
@@ -2609,6 +2609,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-28 15:23 ET",
       "equity": 407.69
+    },
+    {
+      "t": "2026-10-28 15:32 ET",
+      "equity": 407.69
     }
   ],
   "positions": [],
@@ -2727,8 +2731,8 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "chips": [
       "SPY +0.1",
       "QQQ +0.2",
-      "SMH +1.3",
-      "XLE +0.7",
+      "SMH +1.2",
+      "XLE +0.6",
       "EWZ -1.9"
     ]
   }
@@ -7722,3 +7726,6 @@ Equity $407.69, all cash, no positions, no open orders. SPY 769.74 (0.0%), QQQ 7
 
 ### Cycle 622 - 2026-10-28 15:23 ET (momentum only; last full window)
 Equity $407.69, all cash, no positions, no open orders. SPY 770.79 (+0.1%), QQQ 722.83 (+0.2%), SMH 565.48 (+1.3%), XLE 68.71, EWZ 33.66 (-1.9%). Momentum scan: 26 hits, the same gap-and-hold set as 14:53 (VRT +17.1%, ORCL +12.5%, SKHY +13.1%, GMAB +29%, AXGN +31%, STLA +13.2%, PWR, GNRC, etc.) plus a few new low-priced names (GEHC, HAYW, NMRK, FTRE). These are group-beta or gap-driven moves with no verified peer divergence, dated catalyst or held-pullback higher low (no news search or 5-min review run - disclosed). With 7 minutes to the 15:30 cutoff, a new entry could not satisfy the 30-minute hold rule before the 15:47 recap without an explicit overnight hold, and none of these merits one. No entry. Nothing held.
+
+### Cycle 623 - 2026-10-28 15:32 ET (entries closed)
+Equity $407.69, all cash, no positions, no open orders. SPY 770.79 (+0.1%), QQQ 722.74 (+0.2%), SMH 564.69 (+1.2%), XLE 68.63, EWZ 33.63 (-1.9%). The 15:30 ET entry cutoff has passed, so no scan was run (disclosed). No entry. Nothing held; flat into the close.
