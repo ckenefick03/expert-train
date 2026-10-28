@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-28 10:08 ET",
+  "as_of": "2026-10-28 10:20 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2497,6 +2497,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-28 10:08 ET",
       "equity": 408.34
+    },
+    {
+      "t": "2026-10-28 10:20 ET",
+      "equity": 408.34
     }
   ],
   "positions": [],
@@ -2603,23 +2607,23 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "chips": [
       {
         "name": "SPY",
-        "chg": 0.2
-      },
-      {
-        "name": "QQQ",
-        "chg": 0.2
-      },
-      {
-        "name": "SMH",
-        "chg": 1.4
-      },
-      {
-        "name": "XLE",
         "chg": 0.1
       },
       {
+        "name": "QQQ",
+        "chg": 0.1
+      },
+      {
+        "name": "SMH",
+        "chg": 1.0
+      },
+      {
+        "name": "XLE",
+        "chg": 0.2
+      },
+      {
         "name": "EWZ",
-        "chg": -1.0
+        "chg": -1.6
       }
     ]
   }
@@ -7435,4 +7439,13 @@ Reconciled: equity $408.34, flat. Tape: SPY +0.1, QQQ +0.1, SMH +1.0, XLE -0.1, 
 Reconciled: equity $408.34, flat. Tape: SPY +0.2, QQQ +0.2, SMH +1.4, XLE +0.1, EWZ -1.0, XLRE -1.2 (41.93 vs 42.44), XLP -0.4. Quiet ahead of the 2pm FOMC. Scans run WITHOUT rel-vol (first hour, per framework section 6) - no volume confirmation available.
 - MR down-scan (>=3.5%, mcap>=$5B): TER -4.8%, GNRC -5.4%, CHRW -10.0%, XYL -4.8% (day 2 after earnings), VTR -4.9% (REIT; XLRE -1.2%), BKR -6.3%, GSK -4.1%, PSN -4.1%, BSX -8.3%, SW -5.3%, CSGP -9.1%, NOV -6.2%, VFC -4.2%, CLF -3.7%, ICL -4.3%, Brazil ADRs BSBR -3.7% / GGB -4.1% / BBD -3.8% (EWZ -1.0%). Tier A needs >=5% AND sector ETF >=2% down: none of the sectors is >=2% down (OIH -1.1%, XLRE -1.2%, EWZ -1.0%) -> no Tier A. Earnings checks: BKR and NOV both reported Q3 after the close Oct 27 (get_earnings_results) -> earnings-day = company-specific FAIL; CSGP, CHRW, BSX, GSK, PSN, SW, VFC also earnings-day. TER (semis up, SMH +1.4%) and GNRC (-5.4%) have no cause found this cycle (earnings status not verified for either) -> gate 1 unverifiable = FAIL. Brazil ADRs only -1% to -4% = below Tier A/B thresholds yet (Tier B opens 11:30).
 - Momentum (>=4% up; earliest entry 10:30 ET): SNDK/MU/SKHY/VRT/UCTT/FLEX/ACMR/AXTI (memory + AI semis/power: group beta, several are earnings), EAT/WING/CAVA/JMKE (restaurants, earnings), GMAB +18% (Genmab, company-specific), AXGN +22% (earnings), STLA +13% (earnings), tankers STNG/FRO/TRMD/HAFN +4-5% (cluster, no dated catalyst checked), TEM/TXG/TWST (biotech tools). None has own-divergence vs peers + dated catalyst established - not eligible before 10:30 anyway.
+- No entry.
+
+### Cycle 595 - 2026-10-28 10:20 ET (hourly + news; fired ~5 min late)
+Reconciled: equity $408.34, flat. Tape: SPY +0.1, QQQ +0.1, SMH +1.0, XLE +0.2, EWZ -1.6, OIH -0.8, XLRE -1.1. Scan run without rel-vol (first hour), with daily RSI column.
+- MR down-scan (>=3.5%, 23 rows): TER -5.2% (RSI 38.9), XYL -5.7% (RSI 27.6; earnings gap Oct 27, company-specific), trucking cluster ODFL -6.9% / JBHT -4.0% / XPO -4.0% / CHRW -10.2% / FDXF -3.9% (RSI 38-55; CHRW reports earnings today and the group is moving in sympathy - single-company origin = FAIL; none oversold), Brazil ADRs BSBR -3.5% (RSI 26.7), BBD -4.3% (RSI 29.3), GGB -4.8% (RSI 37.8), EWZ -1.6%, plus earnings-day names (BSX, CSGP, BKR, NOV, GSK, PSN, SW), CCI -4.1% (RSI 74), VTR -5.0% (RSI 42), ON -4.1%, ICL -4.1%, CLF -3.7%, BZ -3.9%, GNRC rebounded to +2.3%.
+- Tier A (needs >=5% AND sector ETF >=2% down): none - sectors only -0.8% to -1.6%. Tier B opens 11:30 ET (>=3.5% with stabilization).
+- News (hourly search): Teradyne - results returned only older (Apr-May 2026 and undated) pieces describing chip-equipment/AI selloffs; nothing dated Oct 28 -> TER cause unverifiable = FAIL (SMH is +1.0%, so it is also stock-specific). Brazil - search returned Rio Times items through Oct 16 only (Ibovespa 205,430 on Oct 16; runoff Oct 25 per earlier cycles); nothing dated Oct 28 explaining the ADR weakness -> gate 1 unverifiable. DISCLOSED GAP: no cycle-dated source for either.
+- Momentum: not yet eligible (10:30 ET earliest).
+- Watch for Tier B at 11:30 ET: Brazil banks (BBD/BSBR RSI <30) if the dislocation reaches >=3.5% with a 5-min higher low AND a dated external cause is found; otherwise no trade.
 - No entry.
