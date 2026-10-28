@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-28 09:45 ET",
+  "as_of": "2026-10-28 09:57 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2489,6 +2489,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-28 09:45 ET",
       "equity": 408.34
+    },
+    {
+      "t": "2026-10-28 09:57 ET",
+      "equity": 408.34
     }
   ],
   "positions": [],
@@ -2599,19 +2603,19 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "QQQ",
-        "chg": 0.2
-      },
-      {
-        "name": "SMH",
-        "chg": 1.1
-      },
-      {
-        "name": "XLE",
         "chg": 0.1
       },
       {
+        "name": "SMH",
+        "chg": 1.0
+      },
+      {
+        "name": "XLE",
+        "chg": -0.1
+      },
+      {
         "name": "EWZ",
-        "chg": -1.1
+        "chg": -1.2
       }
     ]
   }
@@ -7419,3 +7423,6 @@ Honest expectation: earnings-heavy morning, FOMC at 2pm; low odds of a passing s
 ### Cycle 592 - 2026-10-28 09:45 ET (pre-10:00, no entries allowed)
 Reconciled: equity $408.34, flat, nothing to stop-check. Tape: SPY +0.1, QQQ +0.2, SMH +1.1, XLE +0.1, EWZ -1.1 (EWZ weakest; VLO 386.89 now below yesterday's 387.34 close, so the pre-market bounce faded; ETN +1.6%).
 Disclosure: no cycle was logged between the 08:45 pre-open brief and this one (the 10-minute triggers did not reach this session earlier in the morning). Nothing was missed that could have traded: entries are barred before 10:00 ET and the account was flat. No scans run this cycle for the same reason. Next entry-capable cycle: 10:02 ET. FOMC 2pm ET today.
+
+### Cycle 593 - 2026-10-28 09:57 ET (pre-10:00, no entries allowed; trigger fired ~4 min late)
+Reconciled: equity $408.34, flat. Tape: SPY +0.1, QQQ +0.1, SMH +1.0, XLE -0.1, EWZ -1.2. No scans (entries barred before 10:00 ET). First entry-capable cycle is the next one.
