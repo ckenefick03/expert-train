@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-28 11:26 ET",
+  "as_of": "2026-10-28 11:38 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2517,6 +2517,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-28 11:26 ET",
       "equity": 408.34
+    },
+    {
+      "t": "2026-10-28 11:38 ET",
+      "equity": 408.34
     }
   ],
   "positions": [],
@@ -2631,15 +2635,15 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       },
       {
         "name": "SMH",
-        "chg": 1.3
+        "chg": 1.1
       },
       {
         "name": "XLE",
-        "chg": 0.7
+        "chg": 0.9
       },
       {
         "name": "EWZ",
-        "chg": -2.4
+        "chg": -2.6
       }
     ]
   }
@@ -7500,3 +7504,10 @@ Reconciled: equity $408.34, flat. Tape: SPY +0.2, QQQ +0.1, SMH +1.3, XLE +0.7, 
 - Momentum (>=3%, rel-vol >=1.2): GMAB +28.5% (RSI 79, company-specific), AXGN +29.3% (earnings), ADT +8.8% (RSI 56, catalyst unchecked), BHC +4.4%, STLA +14.3% (earnings) - FAIL.
 - News (hourly search): Fed/market-wrap search returned only 2016-2021 articles plus an April 29, 2026 item about a different meeting; nothing dated Oct 28. DISCLOSED GAP: no cycle-dated macro wrap. FOMC decision remains 2pm ET.
 - No entry. Tier A window closes 11:30 ET; Tier B (>=3.5% with stabilization, only if no Tier A qualified today - none has) opens next.
+
+### Cycle 600 - 2026-10-28 11:38 ET (Tier B window; fired ~3 min late)
+Reconciled: equity $408.34, flat. Tape: SPY +0.2, QQQ +0.1, SMH +1.1, XLE +0.9, EWZ -2.6% (33.41), XLRE -0.9. Quiet into the 2pm FOMC.
+- Tier A window has closed; no Tier A name qualified today (BBD blocked by gate 2; the rest too shallow or earnings-driven). Tier B (>=3.5% with stabilization) now open.
+- MR scan (mcap >=$5B, >=3.5% down, rel-vol >=1.0): XPO -3.6% (rel vol 1.04, RSI 55; trucking sympathy to CHRW earnings), BSX -5.9% (earnings reaction), CSGP -13.2% (earnings) - FAIL. Brazil ADRs do not clear the volume filter: BBD 2.765 (-5.0%), ITUB 7.41 (-3.4%), NU 12.055 (-2.8%) - unchanged from the prior cycle; gate-2 blocks BBD/ITUB stand and NU is below Tier B depth (3.5%).
+- Momentum (>=3%, rel-vol >=1.2): same five (GMAB +28.7%, AXGN +30.5%, ADT +7.9%, BHC +4.8%, STLA +14.5%) - company-specific/earnings; no own-divergence + dated catalyst for ADT (unchecked) - FAIL.
+- No entry.
