@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-29 14:06 ET",
+  "as_of": "2026-10-29 14:17 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Long TEAM 0.516 @ 203.41 (MR Tier B), now 203.68 (+$0.14), stop 199.50, target 211.80. 30-min hold rule until 14:16 ET.",
+  "status_note": "Long TEAM 0.516 @ 203.41 (MR Tier B), now 204.86 (+$0.75), stop 199.50, target 211.80. 30-min hold rule ended 14:16 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-29",
@@ -2717,6 +2717,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-29 14:06 ET",
       "equity": 407.83
+    },
+    {
+      "t": "2026-10-29 14:17 ET",
+      "equity": 408.44
     }
   ],
   "positions": [
@@ -2726,7 +2730,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "tier": "B",
       "qty": 0.516205,
       "entry": 203.4072,
-      "price": 203.68,
+      "price": 204.86,
       "stop": 199.5,
       "target": 211.8
     }
@@ -2844,12 +2848,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "regime": {
     "read": "Software sector dislocation (IGV -4.1%) after ServiceNow guidance; rest of tape flat. Holding TEAM (MR Tier B) entered 13:46 ET.",
     "chips": [
-      "SPY -0.7",
-      "QQQ -1.8",
-      "SMH -1.6",
-      "IGV -4.2",
-      "TEAM -7.5",
-      "IWM +0.7"
+      "SPY -0.6",
+      "QQQ -1.7",
+      "SMH -1.5",
+      "IGV -4.0",
+      "TEAM -6.9",
+      "IWM +0.8"
     ]
   }
 }
@@ -8008,3 +8012,8 @@ No new entry scan this cycle (disclosed): the 13:47 evaluation covered the softw
 
 ### Cycle 648 - 2026-10-29 14:06 ET (position check; 30-min hold rule until 14:16 ET)
 Reconciled live: equity $407.83, cash $302.69, TEAM 0.516205 sh (avg 203.41), no open orders. TEAM 203.68 (bid 203.43 / ask 203.93), unrealized about +$0.14. **Stop check:** stop 199.50 is 2.1% below; target 211.80 is 4.0% above; neither triggered. 5-min bars since 13:30 ET: higher lows (202.39 -> 202.56 -> 202.90 -> 203.06 -> 203.10 -> 203.16 -> 203.20), small steady drift up; relative strength vs IGV (107.26, -4.2%) intact. Tape a bit weaker: SPY 767.11 (-0.7%), QQQ 712.79 (-1.8%), SMH 558.46 (-1.6%), IWM 283.38 (+0.7%); CRM 231.28, WDAY 194.19, NET 301.99 flat. Thesis intact. Hold. No new entry scan (disclosed); 1/5 slots used. Tier B to 14:30 ET; Tier C (14:30-15:30) is unavailable because the day's trade minimum is already met by the TEAM entry.
+
+### Cycle 649 - 2026-10-29 14:17 ET (hourly; position check; 30-min hold rule has now ended)
+Reconciled live: equity $408.44, cash $302.69, TEAM 0.516205 sh (avg 203.41), no open orders. TEAM 204.86 (bid 204.61 / ask 205.11), unrealized about +$0.75 (+0.7%). **Stop check:** stop 199.50 is 2.6% below; target 211.80 is 3.4% above; neither triggered. Relative strength intact: TEAM -6.9% vs IGV 107.38 (-4.0%), with TEAM improving from -7.6% at entry while IGV barely moved (the stock is recovering faster than its sector, consistent with the thesis). CRM 231.34, WDAY 194.51, NET 301.74 flat. Tape: SPY 767.65 (-0.6%), QQQ 713.40 (-1.7%), SMH 558.86 (-1.5%), IWM 283.46 (+0.8%), GDX 81.19 (-3.3%), RIO 82.60 (-3.9%, flat since 13:05, still stock-specific). Thesis intact. Hold, with the proactive-exit rule now in force.
+Scans: Tier B depth scan (22 hits) shows the same names plus AMZN -3.8% (reports tonight, FAIL), PINS -4.6% (RSI 47.8, a social/ad name moving with RDDT, which reports tonight; no own dated cause found; FAIL), RBLX -3.5% and TWLO -4.9% (reports tonight). Momentum scan (22 hits): LLY, LNG +6.0%, VMC, DASH, GKOS, CROX, AVAV, EHC, INSM, TXT, FLS, KTOS, NCLH, ADT, BHC and similar: same one-day gaps / group moves as before; no verified multi-session divergence; FAIL. No second entry: the only open sector thesis is software, and adding CRM or WDAY would double the same factor exposure without meeting the gates better than TEAM did (both were only in line with the sector). Tier B to 14:30 ET. Slots 1/5.
+News: the hourly search was the targeted ServiceNow/software search at 13:45 ET (dated 2026 coverage found, Benzinga/CNBC/others); no further search this cycle.
