@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-29 10:17 ET",
+  "as_of": "2026-10-29 10:25 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. Tier A: no qualifier (gold miners fail gates). Momentum opens 10:30 ET.",
+  "status_note": "Flat, all cash. Momentum opens 10:30 ET; Tier B 11:30 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-29",
@@ -2637,6 +2637,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-29 10:17 ET",
       "equity": 407.69
+    },
+    {
+      "t": "2026-10-29 10:25 ET",
+      "equity": 407.69
     }
   ],
   "positions": [],
@@ -2753,12 +2757,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "regime": {
     "read": "Tech/software/gold weak (QQQ -1.4, SMH -1.3, IGV -3.2, GDX -3.2); financials, health care, small caps and energy firm. Flat; gold-miner dislocation fails gates.",
     "chips": [
-      "SPY -0.5",
+      "SPY -0.4",
       "QQQ -1.4",
-      "SMH -1.3",
-      "IGV -3.2",
-      "GDX -3.2",
-      "IWM +1.0"
+      "SMH -1.2",
+      "IGV -3.5",
+      "GDX -2.7",
+      "IWM +1.1"
     ]
   }
 }
@@ -7801,3 +7805,6 @@ Depth scan (mcap>=5B, <=-3.5%): 43 hits. Gate check, in writing:
 - Own-earnings/company-specific: GOOGL/GOOG -12%, CAT -7.9%, TT -6.7%, HONA -9.8%, ALNY -15.9%, SFM -18.5%, IOVA -31%, HLN -15%: FAIL gate 1.
 - Only RSI<35 names: UMC -3.9% (34.7, too shallow), XP -4.4% (29.9, Brazil broker, too shallow).
 Result: no Tier A qualifier. No entry. Tier B opens 11:30 ET (only if no Tier A qualified today - true so far); momentum opens 10:30 ET. Nothing held.
+
+### Cycle 629 - 2026-10-29 10:25 ET (light; momentum opens 10:30)
+Equity $407.69, all cash, no positions, no open orders. SPY 769.24 (-0.4%), QQQ 715.80 (-1.4%), SMH 561.00 (-1.2%), IGV 107.98 (-3.5%), GDX 81.70 (-2.7%), XLE 68.80 (+0.5%), IWM 284.43 (+1.1%), XLV 183.75 (+2.2%), XLF 57.06 (+1.6%). Tape unchanged from Cycle 628 (8 min ago). No scan run (disclosed): the 10:17 depth scan found nothing passing and nothing material changed; momentum is not open until 10:30 ET and will be scanned at the next cycle. No entry. Nothing held.
