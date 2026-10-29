@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-29 11:58 ET",
+  "as_of": "2026-10-29 12:05 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2665,6 +2665,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-29 11:58 ET",
       "equity": 407.69
+    },
+    {
+      "t": "2026-10-29 12:05 ET",
+      "equity": 407.69
     }
   ],
   "positions": [],
@@ -2783,7 +2787,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "chips": [
       "SPY -0.3",
       "QQQ -1.2",
-      "SMH -0.5",
+      "SMH -0.6",
       "IGV -4.0",
       "ITA +3.4",
       "IWM +1.2"
@@ -7872,3 +7876,7 @@ Equity $407.69, all cash, no positions, no open orders. SPY 769.66 (-0.3%), QQQ 
 Tier B depth scan (mcap>=5B, <=-3.5%, relvol>=1.0): 13 hits, the same set as Cycle 634 (CAT, GOOGL/GOOG, MRVL, ALNY, NOW, SCI, SFM, EGO, AGI, IOVA, HLN, plus AUR -12.1%, a pre-revenue autonomy name with no sector cause found). Unchanged verdict: own-earnings reactions, an unverified MRVL move with SMH only -0.5%, and gold miners inside the 2-day earnings window. No sector-wide, dated, externally caused dislocation. FAIL.
 Momentum scan (mcap>=2B, avgvol>=1M, >=+3%, relvol>=1.5): 4 hits, all one-day gaps: GKOS +32.4%, ADT +33.5%, BHC +24.4%, NCLH +13.2%. None has a verified dated catalyst or multi-session relative strength, and a gap-and-hold has no pullback with a higher low to buy. Gate 1 FAIL; not loosened.
 No entry. Nothing held. Tier B to 14:30 ET.
+
+### Cycle 636 - 2026-10-29 12:05 ET
+Equity $407.69, all cash, no positions, no open orders. SPY 769.84 (-0.3%), QQQ 716.73 (-1.2%), SMH 564.54 (-0.6%), IGV 107.40 (-4.0%), GDX 81.75 (-2.6%), XLE 68.34 (-0.2%), IWM 284.68 (+1.2%), EWZ 33.07 (-1.7%), ITA 214.89 (+3.4%). Tape unchanged from Cycle 635 (7 min ago).
+Tier B depth scan (mcap>=5B, <=-3.5%, relvol>=1.0): 13 hits, the identical set and verdict as Cycle 635 (own-earnings reactions, MRVL unverified with SMH only -0.6%, gold miners inside the 2-day earnings window, software cause unverified). No momentum scan this cycle (disclosed): the 11:58 scan found only one-day gaps and nothing material changed. No entry. Nothing held.
