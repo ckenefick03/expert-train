@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-29 12:54 ET",
+  "as_of": "2026-10-29 13:05 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2689,6 +2689,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-29 12:54 ET",
       "equity": 407.69
+    },
+    {
+      "t": "2026-10-29 13:05 ET",
+      "equity": 407.69
     }
   ],
   "positions": [],
@@ -2809,8 +2813,8 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "QQQ -1.4",
       "SMH -1.0",
       "IGV -4.0",
-      "IWM +1.1",
-      "EWZ -1.9"
+      "GLD -1.4",
+      "IWM +1.2"
     ]
   }
 }
@@ -7924,3 +7928,11 @@ Tier B scan: the same 15 names as Cycle 638 (RDDT is excluded: it reports tonigh
 ### Cycle 641 - 2026-10-29 12:54 ET (Tier B window)
 Equity $407.69, all cash, no positions, no open orders. SPY 769.20 (-0.4%), QQQ 715.56 (-1.4%), SMH 562.10 (-1.0%), IGV 107.41 (-4.0%), GDX 81.38 (-3.1%), XLE 68.35 (-0.1%), IWM 284.28 (+1.1%), EWZ 32.99 (-1.9%). Static tape.
 Tier B scan: 15 hits, identical to Cycle 640 (own-earnings reactions; MRVL, FORM and AUR not sector-wide / unexplained; gold miners inside the 2-day earnings window; RDDT reports tonight). Momentum scan (>=+3%, relvol>=1.2): 8 hits, LLY +6.4% (earnings) plus the same one-day gaps (GKOS, CROX, INSM, NCLH, CNH, ADT, BHC); no verified multi-session relative strength or held pullback. FAIL. No entry. Nothing held. Tier B to 14:30 ET.
+
+### Cycle 642 - 2026-10-29 13:05 ET (Tier B window)
+Equity $407.69, all cash, no positions, no open orders. SPY 769.25 (-0.4%), QQQ 715.36 (-1.4%), SMH 561.88 (-1.0%), IGV 107.43 (-4.0%), GDX 81.55 (-2.9%), XLE 68.38 (-0.1%), IWM 284.52 (+1.2%), EWZ 32.95 (-2.0%), GLD 368.11 (-1.4%), SLV 47.35 (-3.5%).
+Tier B scan: 17 hits = the Cycle 641 names plus FTNT (still -22.6%, own earnings) and one new name, RIO (Rio Tinto, -4.2%, RSI 32.7, relvol 1.7), which I examined in full:
+- Gate 1 (sector cause): peers are not down with it: BHP -1.0%, FCX -0.6%, SCCO -0.8%, VALE -2.1%, COPX -1.3%, XME +0.1%. RIO's -4.3% is about 4x BHP's, so it is stock-specific, not a sector-wide dislocation. The web search found nothing dated Oct 29 2026 about Rio (all older years) -> unverifiable. FAIL.
+- Gate 4 (dislocation + stabilization): the 5-min tape shows RIO flat near 85.0-85.6 (about -0.5%) until 15:55Z (11:55 ET), then a break to 84.60 on ~256k volume and a straight run of lower lows to 82.37 by 16:55Z (12:55 ET) with no higher low yet. Still falling, no stabilization -> FAIL.
+- Earnings data for RIO is not available in the tool (empty result), so the earnings-window rule could not be checked either (disclosed).
+Result: FAIL on gates 1 and 4 (and one rule unverifiable). Not a catch-the-falling-knife entry. No other qualifier. No momentum scan this cycle (disclosed). No entry. Nothing held. Tier B to 14:30 ET.
