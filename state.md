@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-29 14:43 ET",
+  "as_of": "2026-10-29 14:54 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Long TEAM 0.516 @ 203.41 (MR Tier B), now 204.33 (+$0.48), stop 199.50, target 211.80.",
+  "status_note": "Long TEAM 0.516 @ 203.41 (MR Tier B), now 203.57 (+$0.08), stop 199.50, target 211.80. Range-bound 203-206.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-29",
@@ -2733,6 +2733,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-29 14:43 ET",
       "equity": 408.17
+    },
+    {
+      "t": "2026-10-29 14:54 ET",
+      "equity": 407.77
     }
   ],
   "positions": [
@@ -2742,7 +2746,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "tier": "B",
       "qty": 0.516205,
       "entry": 203.4072,
-      "price": 204.33,
+      "price": 203.57,
       "stop": 199.5,
       "target": 211.8
     }
@@ -2860,12 +2864,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "regime": {
     "read": "Software sector dislocation (IGV -4.1%) after ServiceNow guidance; rest of tape flat. Holding TEAM (MR Tier B) entered 13:46 ET.",
     "chips": [
-      "SPY -0.7",
-      "QQQ -1.9",
-      "SMH -1.9",
-      "IGV -4.1",
-      "TEAM -7.2",
-      "IWM +0.6"
+      "SPY -0.6",
+      "QQQ -1.7",
+      "SMH -1.7",
+      "IGV -4.2",
+      "TEAM -7.5",
+      "IWM +0.7"
     ]
   }
 }
@@ -8039,3 +8043,6 @@ Windows: Tier B closed at 14:30 ET; Tier C (14:30-15:30) is unavailable because 
 
 ### Cycle 652 - 2026-10-29 14:43 ET (position check)
 Reconciled live: equity $408.17, cash $302.69, TEAM 0.516205 sh (avg 203.41), no open orders. TEAM 204.33 (bid 204.13 / ask 204.33), unrealized about +$0.48 (+0.5%), a pullback from 205.83 (14:24) but still above the 203.41 entry and the 202-203 zone. **Stop check:** stop 199.50 is 2.4% below; target 211.80 is 3.7% above; neither triggered. Group: IGV 107.27 (-4.1%) and CRM 231.17 are flat; TEAM is -7.2% (slightly weaker than IGV's relative move since 14:24, not a break). Tape drifting lower: SPY 766.89 (-0.7%), QQQ 712.08 (-1.9%), SMH 556.98 (-1.9%). No exit trigger (the relative-strength-loss exit needs TEAM to lag a flat group; it has not). Hold. No scan this cycle (Tier B/C closed, momentum unchanged at 14:34; disclosed). Slots 1/5. Next: 15:47 recap decides close-or-hold; default is close.
+
+### Cycle 653 - 2026-10-29 14:54 ET (position check)
+Reconciled live: equity $407.77, cash $302.69, TEAM 0.516205 sh (avg 203.41), no open orders. TEAM 203.57 (bid 203.26 / ask 203.58), unrealized about +$0.08 (+0.1%); it faded from the 205.83 high at 14:24 back to the entry area. **Stop check:** stop 199.50 is 2.0% below; target 211.80 is 4.0% above; neither triggered; stop distance still comfortable. 5-min bars since 14:00 ET: range 203.12-205.83, last two bars 203.5-203.8, no break below the 203 floor; the day's low 200.05 untouched. Group flat: IGV 107.25 (-4.2%), CRM 230.68, WDAY 194.25; SPY 767.59 (-0.6%), QQQ 713.24 (-1.7%), SMH 558.24 (-1.7%). TEAM -7.5% vs IGV -4.2%: TEAM has given back its relative gain, but is not lagging a *rising* group (the group did not bounce), so no relative-strength exit; thesis (partial reversion of the gap) has not progressed in the last 30 minutes. Hold for now; the time-based default is to close before 15:47 ET if no progress, and I will reassess at the 15:23 and 15:33 cycles. No scans (entries closed in both strategies except momentum, which was unchanged at 14:34; disclosed).
