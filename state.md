@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-29 13:34 ET",
+  "as_of": "2026-10-29 13:47 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,12 +41,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. Tier B/momentum scanned; no candidate passes gates.",
+  "status_note": "Long TEAM 0.516 @ 203.41 (MR Tier B), stop 199.50, target 211.80, EOD horizon. 30-min hold rule until 14:16 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-29",
     "start_equity": 407.69,
-    "trades": 0,
+    "trades": 1,
     "forced": 0
   },
   "equity_history": [
@@ -2705,9 +2705,24 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-29 13:34 ET",
       "equity": 407.69
+    },
+    {
+      "t": "2026-10-29 13:47 ET",
+      "equity": 407.69
     }
   ],
-  "positions": [],
+  "positions": [
+    {
+      "symbol": "TEAM",
+      "strategy": "mean-reversion",
+      "tier": "B",
+      "qty": 0.516205,
+      "entry": 203.4072,
+      "price": 203.41,
+      "stop": 199.5,
+      "target": 211.8
+    }
+  ],
   "trades": [
     {
       "symbol": "TER",
@@ -2819,13 +2834,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Tech and software leaning weaker into the afternoon (QQQ -1.6, SMH -1.3, IGV -4.3); small caps +1.0. Flat; nothing passes gates.",
+    "read": "Software sector dislocation (IGV -4.1%) after ServiceNow guidance; rest of tape flat. Holding TEAM (MR Tier B) entered 13:46 ET.",
     "chips": [
       "SPY -0.5",
       "QQQ -1.5",
-      "SMH -1.1",
-      "IGV -4.2",
-      "GDX -2.9",
+      "IGV -4.1",
+      "TEAM -7.6",
       "IWM +1.0"
     ]
   }
@@ -7964,3 +7978,17 @@ Tier B scan: 17 hits, identical to Cycle 643. RIO now 81.44 (-5.2%, relvol 2.0),
 Equity $407.69, all cash, no positions, no open orders. SPY 768.44 (-0.5%), QQQ 714.75 (-1.5%), SMH 561.57 (-1.1%), IGV 107.24 (-4.2%), GDX 81.53 (-2.9%), XLE 68.35 (-0.1%), IWM 284.03 (+1.0%), EWZ 32.83 (-2.4%), RIO 82.21 (-4.3%, bounced ~1% off its 81.42 low; BHP 81.63, -0.7%).
 Tier B scan: 17 hits, unchanged. RIO bounced from 81.42 to 82.21 but is still stock-specific against BHP (-0.7%) and has no verified cause; a single-bar bounce is not stabilization, and the earnings rule is unverifiable. FAIL. Others unchanged.
 Momentum scan (>=+3%, relvol>=1.2): 13 hits: the earlier one-day gaps plus defense/industrial names moving with their group (AVAV +9.5%, KTOS +6.8%, with ITA +3.4% as the sector), EHC +7.0% (reported this morning), CRH +4.3%, SMR +6.1%. These are group-beta moves (defense, construction materials) or same-day earnings reactions; none shows verified multi-session divergence from its own peer complex plus a held pullback. FAIL. No entry. Nothing held. Tier B to 14:30 ET.
+
+### Cycle 646 - 2026-10-29 13:47 ET - ENTRY: TEAM (mean-reversion, Tier B, organic)
+Re-examined software (IGV -4.1%) with new evidence, and **corrected two of my own earlier logs (Cycles 634 and 642/643)**: (a) I said coverage described IGV as 'already in a long bear market' - the daily bars show the opposite: IGV closed 111.91 on 10/28, up from a 104-105 range in mid/late September, so today's -4.1% is a fresh dislocation, not a multi-week downtrend; (b) I called the software cause 'unverified' because earlier searches returned only older-year pages. A targeted extended search now returned dated 2026 coverage (Benzinga 'Why Is ServiceNow Stock Sinking Thursday', CNBC via secondary sources): ServiceNow reported Q3 on 2026-10-28 after the close, guided Q4 cRPO growth to 18.5% cc, and fell about 24-25% (worst day on record), 'reigniting AI disruption fears'. Searches did not directly cover Salesforce/Workday/Atlassian sympathy; that link is inferred from the tape (IGV -4.1%, nearly every software name down 4-9%).
+**Candidate: TEAM (Atlassian), 203.41 vs 220.12 prior close (-7.6%), IGV -4.1%.** Tier B window (11:30-14:30), no Tier A qualified today, depth >=3.5%.
+Gate answers:
+1. Cause: external sector rotation out of software after ServiceNow's 10/28 print and AI-disruption fears; TEAM has no own news, downgrade or earnings (its next report is 2026-11-05, 5 trading days out). The company-specific event was NOW's, not TEAM's. PASS, with the caveat above that the TEAM-specific sympathy link is tape-inferred, not directly sourced.
+2. Latest fundamental: FQ4 2026 EPS 1.87 vs 1.27 est (reported 2026-08-06): beat. PASS. Not in a 2-day earnings window (next 2026-11-05).
+3. Upside anchor: prior close 220.12 (the pre-print level); consensus mean target 225.52 (29 Buy / 6 Hold / 1 Sell, updated 2026-08-27); structural uptrend from 168 (9/29) to 229.96 (10/22) with higher lows. Named. PASS.
+4. Trend structure: dislocation within an uptrend (daily higher lows 175.96 on 9/29 -> 186.5 -> 196.1 -> 203.1 -> 207.7 -> 214.8 -> 218.4; highs to 229.96), not a multi-week downtrend. 5-min stabilization: low 200.05 at 15:30Z (11:30 ET), then higher lows 200.07, 201.07, 201.57-202.1 through 17:35Z with a rising close. PASS.
+Other checks: tradable and fractional OK; spread about 0.2% (203.11/203.57) within the 0.3% limit; slots 0/5 held; buying power $407.69; daily loss $0; breaker far.
+Thesis: software sold in sympathy with ServiceNow's guide, TEAM fell about 2x the sector with intact fundamentals and a held higher low; partial retrace of the gap toward the prior close.
+Plan: stop 199.50 (below the 200.05 swing low, -1.9%); 1R about $2.0; target 211.80 (+4.1%, about 2R, roughly 50% retrace of the gap, below the 220.12 anchor); horizon end of day by default (close before the 15:47 recap unless a hold decision is logged); never average down.
+Order: market, dollar_amount $105.00 (fractional requires market), ref 9f11edc2-0b97-40a8-86b2-434a2279e5f3, filled 17:46:03Z (13:46 ET): 0.516205 sh @ 203.4072 = $105.00. 30-minute hold rule applies until 14:16 ET: only the stop actually trading triggers an exit before then.
+Skipped alternatives (tier B, same sector): CRM -4.3% (231.77; EPS beat, analyst mean 285.7) was in line with the sector, not more, and its 2R target of about 239.7 needed a roughly 79% retrace of the gap; WDAY -4.9% (194.29; mean target 210.4) target needed about 86% retrace; NET -5.8% (300.26; reported none in window, still sliding, lower highs in the 5-min bars) not stabilised; TWLO -5.9% reports tonight (earnings window, FAIL); NOW/FTNT own-earnings (FAIL). Follow-ups to fill in later: CRM, WDAY, NET closes.
