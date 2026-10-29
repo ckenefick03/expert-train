@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-29 10:38 ET",
+  "as_of": "2026-10-29 11:04 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. Momentum open; leaders are same-day earnings gaps, none passed gates.",
+  "status_note": "Flat, all cash. Tier A closes 11:30 ET; nothing qualified. Missed cycles 10:48-10:58 ET (late triggers).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-29",
@@ -2645,6 +2645,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-29 10:38 ET",
       "equity": 407.69
+    },
+    {
+      "t": "2026-10-29 11:04 ET",
+      "equity": 407.69
     }
   ],
   "positions": [],
@@ -2759,13 +2763,13 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Rotation: tech/software/gold weak (QQQ -1.3, IGV -3.8, GDX -2.8); aerospace/defense/industrials, health care, financials and small caps strong. Flat; momentum movers are earnings gaps.",
+    "read": "Rotation persists: QQQ -1.4, IGV -4.0, GDX -2.8, EWZ -1.6, XLE -0.3; XLV +2.0, XLF +1.6, IWM +1.0. Flat; no mean-reversion qualifier.",
     "chips": [
-      "SPY -0.3",
-      "QQQ -1.3",
+      "SPY -0.4",
+      "QQQ -1.4",
       "SMH -1.0",
-      "IGV -3.8",
-      "IWM +1.1",
+      "IGV -4.0",
+      "EWZ -1.6",
       "XLV +2.0"
     ]
   }
@@ -7817,3 +7821,10 @@ Equity $407.69, all cash, no positions, no open orders. SPY 769.24 (-0.4%), QQQ 
 Equity $407.69, all cash, no positions, no open orders. SPY 769.68 (-0.3%), QQQ 716.08 (-1.3%), SMH 561.90 (-1.0%), IGV 107.66 (-3.8%), GDX 81.63 (-2.8%), XLE 68.74 (+0.4%), IWM 284.27 (+1.1%), XLV 183.38 (+2.0%), XLF 57.08 (+1.7%).
 Momentum scan (mcap>=2B, avgvol>=1M, >=+3%; relative-volume filter left off this early): 129 hits. The leaders cluster in aerospace/defense/industrial names that reported this morning (TXT +12.2%, HWM +5.5%, LHX +6.1%, GE +3.7%, GD +3.5%, DRS +9.7%, ATI +7.9%, FTAI +14.3%, KRMN +5.8%, AVAV +5.2%) and in other same-day earnings gaps (LLY +6.9%, MA +4.5%, PWR +7.0%, CMG +6.9%, CROX +22.9%, ADT +34%, BHC +22.6%, GKOS +28%, INSM +16.8%, DASH +6.4%, FLS +9.8%). Gate check: all of these are one-day gap-and-hold reactions to a same-day report. Textron is the closest to an RS leader (+12.2% vs GD/LHX/GE +3.5-6.1%, EPS 1.76 vs 1.44), but (a) the gate-1 'several sessions' RS clause fails for a fresh gap, (b) +12% in the first hour is extended with no held pullback / higher low yet (no 5-min review run this cycle - disclosed), and (c) no catalyst source beyond the calendar EPS line was checked. I am applying the gate as written and NOT loosening it. FAIL for the group; no entry. This is the second day the 'several sessions' clause screens out every earnings gap - an open item for the user.
 Tier A (re-check): the 10:17 scan found no qualifier and the tape is unchanged; no new scan. Tier B opens 11:30 ET. Nothing held.
+
+### Cycle 631 - 2026-10-29 11:04 ET (Tier A window, 26 min left)
+Gap disclosure: the previous logged cycle was 630 at 10:38 ET; this trigger was scheduled for 10:42 ET but delivered at ~11:02 ET, and the 10:52 trigger never reached the session, so there was no coverage between 10:38 and 11:02 ET (~24 min). No position was open, so nothing was at risk.
+Equity $407.69, all cash, no positions, no open orders. SPY 769.40 (-0.4%), QQQ 715.79 (-1.4%), SMH 562.10 (-0.9%), IGV 107.45 (-4.0%), GDX 81.56 (-2.8%), XLE 68.28 (-0.3%), IWM 284.24 (+1.0%), XLV 183.36 (+2.0%), XLF 57.04 (+1.6%), KRE 73.08 (+1.3%), XBI 158.50 (+0.6%), EWZ 33.08 (-1.6%).
+Mean-reversion scan (mcap>=5B, avgvol>=1M, <=-3.5%, daily RSI<=40): 9 hits: CAT -7.0%, GOOGL/GOOG -12.3%, SFM -21.2% (own earnings: gate 1 FAIL); TER -4.4% (RSI 36.4, SMH only -0.9%); ODFL -3.6%; IREN -6.6% (RSI 38.4); UMC -3.6% (RSI 34.7); XP -6.1% (RSI 29.9).
+Only candidate on depth+RSI: XP (Brazil broker). Gates: (1) sector cause - EWZ is -1.6% (below the 2% Tier A threshold), ITUB -0.7% and NU +0.3% are barely moving, so the drop is idiosyncratic to XP; the web search found no dated Oct 29 source (only stale or older-year pages) -> FAIL, unverifiable; (4) the stock was ~$20.0 on 2026-09-10 per a search snippet and is ~$15.1 now, a multi-week downtrend -> FAIL. Fundamentals fine (Q2 EPS 0.53 vs 0.51; next report 2026-11-16), but two gates fail. No entry. Nothing held.
+Tier A closes 11:30 ET; Tier B (>=3.5% intraday, stabilization, only if no Tier A qualified today - still true) runs 11:30-14:30 ET.
