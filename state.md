@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-29 13:16 ET",
+  "as_of": "2026-10-29 13:24 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2697,6 +2697,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-29 13:16 ET",
       "equity": 407.69
+    },
+    {
+      "t": "2026-10-29 13:24 ET",
+      "equity": 407.69
     }
   ],
   "positions": [],
@@ -2815,9 +2819,9 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "chips": [
       "SPY -0.5",
       "QQQ -1.6",
-      "SMH -1.3",
-      "IGV -4.3",
-      "GLD -1.4",
+      "SMH -1.2",
+      "IGV -4.2",
+      "GDX -2.8",
       "IWM +1.0"
     ]
   }
@@ -7947,3 +7951,7 @@ Tier B scan: 17 hits, identical to Cycle 642 (RIO 82.43 / -4.1%, still near the 
 Momentum scan: 8 hits, identical to Cycle 641 (LLY, GKOS, CROX, INSM, NCLH, CNH, ADT, BHC): one-day gaps, no verified multi-session relative strength or held pullback. FAIL.
 News (hourly search): found no coverage dated Oct 29 2026 for markets, tariffs or politics (all older years or prediction-market stubs). One calendar page suggests Core PCE and a Fed press conference on Oct 29, but the dates are internally inconsistent and unconfirmed, so I am not relying on it (disclosed gap). No verified macro driver.
 No entry. Nothing held. Tier B to 14:30 ET.
+
+### Cycle 644 - 2026-10-29 13:24 ET (Tier B window)
+Equity $407.69, all cash, no positions, no open orders. SPY 768.38 (-0.5%), QQQ 714.35 (-1.6%), SMH 560.61 (-1.2%), IGV 107.18 (-4.2%), GDX 81.57 (-2.8%), XLE 68.21 (-0.4%), IWM 283.97 (+1.0%), EWZ 32.84 (-2.3%).
+Tier B scan: 17 hits, identical to Cycle 643. RIO now 81.44 (-5.2%, relvol 2.0), still making new lows with BHP only about -1%: stock-specific and unstabilised -> FAIL (gates 1 and 4). All others unchanged (own-earnings, unverified/non-sector, earnings-window). No qualifier. No momentum scan this cycle (disclosed; unchanged since 13:16). No entry. Nothing held. Tier B to 14:30 ET.
