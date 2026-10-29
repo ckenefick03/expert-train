@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-29 12:44 ET",
+  "as_of": "2026-10-29 12:54 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2685,6 +2685,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-29 12:44 ET",
       "equity": 407.69
+    },
+    {
+      "t": "2026-10-29 12:54 ET",
+      "equity": 407.69
     }
   ],
   "positions": [],
@@ -2804,9 +2808,9 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "SPY -0.4",
       "QQQ -1.4",
       "SMH -1.0",
-      "IGV -4.1",
+      "IGV -4.0",
       "IWM +1.1",
-      "EWZ -1.5"
+      "EWZ -1.9"
     ]
   }
 }
@@ -7916,3 +7920,7 @@ No other scan this cycle (disclosed): scans at 12:19 and 12:28 showed nothing pa
 ### Cycle 640 - 2026-10-29 12:44 ET (Tier B window)
 Equity $407.69, all cash, no positions, no open orders. SPY 769.13 (-0.4%), QQQ 715.28 (-1.4%), SMH 561.86 (-1.0%), IGV 107.28 (-4.1%), GDX 81.42 (-3.0%), XLE 68.32 (-0.2%), IWM 284.31 (+1.1%), EWZ 33.12 (-1.5%). Unchanged.
 Tier B scan: the same 15 names as Cycle 638 (RDDT is excluded: it reports tonight; the rest are own-earnings reactions, MRVL/FORM not sector-wide, AUR unexplained, gold miners inside the earnings window). No qualifier. No momentum scan this cycle (disclosed; nothing changed since 12:19). No entry. Nothing held. Tier B to 14:30 ET.
+
+### Cycle 641 - 2026-10-29 12:54 ET (Tier B window)
+Equity $407.69, all cash, no positions, no open orders. SPY 769.20 (-0.4%), QQQ 715.56 (-1.4%), SMH 562.10 (-1.0%), IGV 107.41 (-4.0%), GDX 81.38 (-3.1%), XLE 68.35 (-0.1%), IWM 284.28 (+1.1%), EWZ 32.99 (-1.9%). Static tape.
+Tier B scan: 15 hits, identical to Cycle 640 (own-earnings reactions; MRVL, FORM and AUR not sector-wide / unexplained; gold miners inside the 2-day earnings window; RDDT reports tonight). Momentum scan (>=+3%, relvol>=1.2): 8 hits, LLY +6.4% (earnings) plus the same one-day gaps (GKOS, CROX, INSM, NCLH, CNH, ADT, BHC); no verified multi-session relative strength or held pullback. FAIL. No entry. Nothing held. Tier B to 14:30 ET.
