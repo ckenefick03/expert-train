@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-29 13:05 ET",
+  "as_of": "2026-10-29 13:16 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2693,6 +2693,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-29 13:05 ET",
       "equity": 407.69
+    },
+    {
+      "t": "2026-10-29 13:16 ET",
+      "equity": 407.69
     }
   ],
   "positions": [],
@@ -2807,14 +2811,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Steady rotation: QQQ -1.1, SMH -0.5, IGV -4.0, GDX -2.6, EWZ -1.7; IWM +1.2, XLV +2.0, ITA +3.4 (defense). Flat; neither strategy has a qualifying name.",
+    "read": "Tech and software leaning weaker into the afternoon (QQQ -1.6, SMH -1.3, IGV -4.3); small caps +1.0. Flat; nothing passes gates.",
     "chips": [
-      "SPY -0.4",
-      "QQQ -1.4",
-      "SMH -1.0",
-      "IGV -4.0",
+      "SPY -0.5",
+      "QQQ -1.6",
+      "SMH -1.3",
+      "IGV -4.3",
       "GLD -1.4",
-      "IWM +1.2"
+      "IWM +1.0"
     ]
   }
 }
@@ -7936,3 +7940,10 @@ Tier B scan: 17 hits = the Cycle 641 names plus FTNT (still -22.6%, own earnings
 - Gate 4 (dislocation + stabilization): the 5-min tape shows RIO flat near 85.0-85.6 (about -0.5%) until 15:55Z (11:55 ET), then a break to 84.60 on ~256k volume and a straight run of lower lows to 82.37 by 16:55Z (12:55 ET) with no higher low yet. Still falling, no stabilization -> FAIL.
 - Earnings data for RIO is not available in the tool (empty result), so the earnings-window rule could not be checked either (disclosed).
 Result: FAIL on gates 1 and 4 (and one rule unverifiable). Not a catch-the-falling-knife entry. No other qualifier. No momentum scan this cycle (disclosed). No entry. Nothing held. Tier B to 14:30 ET.
+
+### Cycle 643 - 2026-10-29 13:16 ET (hourly; Tier B window)
+Equity $407.69, all cash, no positions, no open orders. SPY 768.28 (-0.5%), QQQ 713.84 (-1.6%), SMH 560.25 (-1.3%), IGV 107.08 (-4.3%), GDX 81.50 (-2.9%), GLD 368.44 (-1.4%), XLE 68.36 (-0.1%), IWM 284.04 (+1.0%), EWZ 32.79 (-2.5%). Tech drifting a bit lower; the pattern is unchanged.
+Tier B scan: 17 hits, identical to Cycle 642 (RIO 82.43 / -4.1%, still near the lows and still stock-specific vs BHP; FTNT, NOW, GOOGL/GOOG, CAT, SFM, ALNY, SCI, HLN, IOVA own-earnings; MRVL -13.1% and FORM -9.6% not sector-wide as SMH is -1.3% with no verified cause; gold miners inside the earnings window; RDDT reports tonight). No qualifier.
+Momentum scan: 8 hits, identical to Cycle 641 (LLY, GKOS, CROX, INSM, NCLH, CNH, ADT, BHC): one-day gaps, no verified multi-session relative strength or held pullback. FAIL.
+News (hourly search): found no coverage dated Oct 29 2026 for markets, tariffs or politics (all older years or prediction-market stubs). One calendar page suggests Core PCE and a Fed press conference on Oct 29, but the dates are internally inconsistent and unconfirmed, so I am not relying on it (disclosed gap). No verified macro driver.
+No entry. Nothing held. Tier B to 14:30 ET.
