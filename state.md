@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-28 15:48 ET",
+  "as_of": "2026-10-29 08:47 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,12 +41,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash - nothing held overnight. Day: 1 trade (UGP, -$0.65). Next: pre-open brief Thu 08:28 ET.",
+  "status_note": "Flat, all cash. Pre-open brief done (read-only). Entries open 10:00 ET.",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-10-28",
-    "start_equity": 408.34,
-    "trades": 1,
+    "date": "2026-10-29",
+    "start_equity": 407.69,
+    "trades": 0,
     "forced": 0
   },
   "equity_history": [
@@ -2621,6 +2621,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-28 15:48 ET",
       "equity": 407.69
+    },
+    {
+      "t": "2026-10-29 08:47 ET",
+      "equity": 407.69
     }
   ],
   "positions": [],
@@ -2735,13 +2739,13 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Close: SPY +0.3, QQQ +0.4, SMH +1.6, EWZ -2.1. Flat overnight; nothing held.",
+    "read": "Pre-market risk-off in tech: QQQ -1.3, SMH -2.0, VRT -4.5; XLE +1.1. GOOG/GOOGL EPS missed after the bell (2.12 vs 2.96); cause/reaction not confirmed by a dated source.",
     "chips": [
-      "SPY +0.3",
-      "QQQ +0.4",
-      "SMH +1.6",
-      "XLE +0.6",
-      "EWZ -2.1"
+      "SPY -0.4 pre",
+      "QQQ -1.3 pre",
+      "SMH -2.0 pre",
+      "XLE +1.1 pre",
+      "EWZ -0.4 pre"
     ]
   }
 }
@@ -7752,3 +7756,19 @@ Stop checks: n/a, no positions. Reconciled live: equity $407.69, all cash, posit
 - Gaps/disclosures: several triggers fired late or bunched, and cycles inside 6 minutes of the last log were skipped silently. Cycle 596 was mis-stamped 10:48 ET (actual ~10:42), corrected in Cycle 597. Several web searches returned undated or stale pages and were not cited. No date-confirmed source was found for the Oct 28 FOMC decision text. Late-afternoon cycles 619-624 were light (no news searches or 5-min reviews; cycles 620 and 623-624 ran no scan) and were labelled as such.
 - Open items for the user: (1) the momentum gate-1 "several sessions" clause blocks fresh post-catalyst gap-and-hold names - possible exemption? (2) PDT/day-trade applicability on this limited_margin account is unverified (two same-day round trips done, no alert).
 - Next: pre-open brief Thu 2026-10-29 ~08:28 ET.
+
+### Pre-open brief - Thu 2026-10-29 (2026-10-29 08:47 ET; trigger fired ~17 min late) - read-only, no orders
+**Account:** equity $407.69, all cash, no positions, no open orders (reconciled live). Stop checks: n/a. Peak $437.99, breaker $394.19, daily loss limit $100. Start-of-day equity $407.69.
+**Tape (premarket vs prior close):** SPY 769.17 (-0.4%), QQQ 716.30 (-1.3%), SMH 556.50 (-2.0%), IWM 282.00 (+0.3%), XLE 69.18 (+1.1%), EWZ 33.50 (-0.4%). AI/semis complex: VRT -4.5%, ORCL -1.8%, SKHY -2.0%, CBRS -2.4%. Small caps and energy are bid; large-cap tech is being sold.
+**Catalysts (calendar data only):** After the bell Oct 28: GOOG/GOOGL EPS 2.12 vs 2.96 est (miss), MSFT 4.89 vs 4.72 (beat), NOW 1.00 vs 0.93, KLAC 1.22 vs 1.18, EQIX 11.64 vs 9.28, CMG 0.27 vs 0.29 (miss). This morning (Oct 29, am): PWR 6.06 vs 4.96, HWM, DASH, CAT 7.20 vs 7.05, MA 5.31 vs 5.16, EME, HII, THC, BLDR and others reported beats; DHI 2.67 vs 3.01 and OSK 2.41 vs 3.05 missed. Today after the close: AMZN, SBUX. NOTE: the calendar lists EPS only; I do not know guidance, revenue or capex, so the GOOG miss is a likely but UNCONFIRMED driver of the tech drop. Web searches this cycle returned only undated or older-year pages for both the Oct 29 futures move and Alphabet's report (disclosed gap, not cited). No politics/macro source dated today was found either.
+**Mean-reversion watch (gates not yet checked; need a dated external sector cause, neutral-or-better fundamental, 2R anchor, stabilization; Tier A opens 10:00 ET):**
+1. VRT (-4.5% pre) / AI-infrastructure complex - only if the sector ETF (SMH) is down >=2% at the open and the drop is sector-wide, not company-specific; check any earnings within 2 trading days.
+2. ORCL, SKHY, CBRS - same condition; CBRS was already -8.4% yesterday (RSI 32), so a multi-day downtrend would fail gate 4.
+3. XYL (RSI 27.6 yesterday, flat premarket) - was down 5.5% on 10/28; cause unverified, likely company-specific.
+4. VALE / BBD / UGP (Brazil, RSI 25-29) - UGP lost $0.65 yesterday on this theme; BBD fails gate 2 (EPS miss Oct 22). Treat as low priority unless a new external cause appears.
+**Momentum watch (earliest 10:30 ET; needs peer divergence + held pullback):**
+1. Energy: XLE +1.1% premarket - find the dated cause and a stock outperforming the group (not just group beta).
+2. PWR (EPS beat 6.06 vs 4.96, reported this morning) - but it was already +4.6% yesterday, so check it is not a one-day gap fading with the AI complex.
+3. Names with large beats this morning: EME, HII, THC, BLDR, DASH, HWM - need price reaction and a held higher low.
+4. Small-cap strength (IWM +0.3% vs QQQ -1.3%) - rotation names; scan after 10:30.
+**Plan:** no entry before 10:00 ET. Standing rules unchanged (entry $105, max 5 positions, 30-minute hold, default flat by 15:47 ET). Open items for the user are unchanged from the Oct 28 recap (momentum gate-1 'several sessions' exemption; PDT applicability).
