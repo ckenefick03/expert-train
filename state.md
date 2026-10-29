@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-29 13:47 ET",
+  "as_of": "2026-10-29 13:54 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Long TEAM 0.516 @ 203.41 (MR Tier B), stop 199.50, target 211.80, EOD horizon. 30-min hold rule until 14:16 ET.",
+  "status_note": "Long TEAM 0.516 @ 203.41 (MR Tier B), now 203.18, stop 199.50, target 211.80. 30-min hold rule until 14:16 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-29",
@@ -2709,6 +2709,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-29 13:47 ET",
       "equity": 407.69
+    },
+    {
+      "t": "2026-10-29 13:54 ET",
+      "equity": 407.57
     }
   ],
   "positions": [
@@ -2718,7 +2722,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "tier": "B",
       "qty": 0.516205,
       "entry": 203.4072,
-      "price": 203.41,
+      "price": 203.18,
       "stop": 199.5,
       "target": 211.8
     }
@@ -2836,10 +2840,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "regime": {
     "read": "Software sector dislocation (IGV -4.1%) after ServiceNow guidance; rest of tape flat. Holding TEAM (MR Tier B) entered 13:46 ET.",
     "chips": [
-      "SPY -0.5",
-      "QQQ -1.5",
-      "IGV -4.1",
-      "TEAM -7.6",
+      "SPY -0.7",
+      "QQQ -1.7",
+      "SMH -1.5",
+      "IGV -4.3",
+      "TEAM -7.7",
       "IWM +1.0"
     ]
   }
@@ -7992,3 +7997,7 @@ Thesis: software sold in sympathy with ServiceNow's guide, TEAM fell about 2x th
 Plan: stop 199.50 (below the 200.05 swing low, -1.9%); 1R about $2.0; target 211.80 (+4.1%, about 2R, roughly 50% retrace of the gap, below the 220.12 anchor); horizon end of day by default (close before the 15:47 recap unless a hold decision is logged); never average down.
 Order: market, dollar_amount $105.00 (fractional requires market), ref 9f11edc2-0b97-40a8-86b2-434a2279e5f3, filled 17:46:03Z (13:46 ET): 0.516205 sh @ 203.4072 = $105.00. 30-minute hold rule applies until 14:16 ET: only the stop actually trading triggers an exit before then.
 Skipped alternatives (tier B, same sector): CRM -4.3% (231.77; EPS beat, analyst mean 285.7) was in line with the sector, not more, and its 2R target of about 239.7 needed a roughly 79% retrace of the gap; WDAY -4.9% (194.29; mean target 210.4) target needed about 86% retrace; NET -5.8% (300.26; reported none in window, still sliding, lower highs in the 5-min bars) not stabilised; TWLO -5.9% reports tonight (earnings window, FAIL); NOW/FTNT own-earnings (FAIL). Follow-ups to fill in later: CRM, WDAY, NET closes.
+
+### Cycle 647 - 2026-10-29 13:54 ET (position check; 30-min hold rule active until 14:16 ET)
+Reconciled live: equity $407.57, cash $302.69, TEAM 0.516205 sh (avg 203.41), no open orders. TEAM 203.18 (bid 203.15 / ask 203.43), unrealized about -$0.12 (-0.11%). **Stop check:** stop 199.50 is 1.8% below, not close; target 211.80 is 4.2% above; neither triggered. Relative strength vs the sector is intact: TEAM -7.7% on the day vs IGV 107.09 (-4.3%); the day's 5-min low 200.05 held. Tape: SPY 767.07 (-0.7%), QQQ 712.94 (-1.7%), SMH 559.35 (-1.5%), CRM 231.72, WDAY 194.03, NET 300.46: a touch lower broadly, no new low for the group. No exit; under the 30-minute rule only the stop trading would trigger an exit before 14:16 ET.
+No new entry scan this cycle (disclosed): the 13:47 evaluation covered the software candidates; slots used 1/5, buying power $302.69. Tier B window runs to 14:30 ET.
