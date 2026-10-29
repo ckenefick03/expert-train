@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-29 14:54 ET",
+  "as_of": "2026-10-29 15:04 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Long TEAM 0.516 @ 203.41 (MR Tier B), now 203.57 (+$0.08), stop 199.50, target 211.80. Range-bound 203-206.",
+  "status_note": "Long TEAM 0.516 @ 203.41 (MR Tier B), now 202.53 (-$0.45), stop 199.50, target 211.80. Watch: invalidation if it trades below 202.39.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-29",
@@ -2737,6 +2737,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-29 14:54 ET",
       "equity": 407.77
+    },
+    {
+      "t": "2026-10-29 15:04 ET",
+      "equity": 407.24
     }
   ],
   "positions": [
@@ -2746,7 +2750,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "tier": "B",
       "qty": 0.516205,
       "entry": 203.4072,
-      "price": 203.57,
+      "price": 202.53,
       "stop": 199.5,
       "target": 211.8
     }
@@ -2868,7 +2872,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "QQQ -1.7",
       "SMH -1.7",
       "IGV -4.2",
-      "TEAM -7.5",
+      "TEAM -8.0",
       "IWM +0.7"
     ]
   }
@@ -8046,3 +8050,7 @@ Reconciled live: equity $408.17, cash $302.69, TEAM 0.516205 sh (avg 203.41), no
 
 ### Cycle 653 - 2026-10-29 14:54 ET (position check)
 Reconciled live: equity $407.77, cash $302.69, TEAM 0.516205 sh (avg 203.41), no open orders. TEAM 203.57 (bid 203.26 / ask 203.58), unrealized about +$0.08 (+0.1%); it faded from the 205.83 high at 14:24 back to the entry area. **Stop check:** stop 199.50 is 2.0% below; target 211.80 is 4.0% above; neither triggered; stop distance still comfortable. 5-min bars since 14:00 ET: range 203.12-205.83, last two bars 203.5-203.8, no break below the 203 floor; the day's low 200.05 untouched. Group flat: IGV 107.25 (-4.2%), CRM 230.68, WDAY 194.25; SPY 767.59 (-0.6%), QQQ 713.24 (-1.7%), SMH 558.24 (-1.7%). TEAM -7.5% vs IGV -4.2%: TEAM has given back its relative gain, but is not lagging a *rising* group (the group did not bounce), so no relative-strength exit; thesis (partial reversion of the gap) has not progressed in the last 30 minutes. Hold for now; the time-based default is to close before 15:47 ET if no progress, and I will reassess at the 15:23 and 15:33 cycles. No scans (entries closed in both strategies except momentum, which was unchanged at 14:34; disclosed).
+
+### Cycle 654 - 2026-10-29 15:04 ET (position check - thesis stalled, invalidation level set)
+Reconciled live: equity $407.24, cash $302.69, TEAM 0.516205 sh (avg 203.41), no open orders. TEAM 202.53 (bid 202.46 / ask 202.58), unrealized about -$0.45 (-0.43%). **Stop check:** stop 199.50 is 1.5% below; target 211.80 is 4.6% above; neither triggered. The group has not moved: IGV 107.19 (-4.2%, flat all afternoon), CRM 230.14 (-4.9%), WDAY 194.29 (-4.9%). TEAM -8.0% has slipped from -6.5% at 14:24, so it is now lagging the flat group by a modest ~1.5 points since then (a relative-strength warning, not yet a break). Tape: SPY 767.49 (-0.6%), QQQ 712.98 (-1.7%), SMH 558.12 (-1.7%).
+Assessment: the reversion thesis has not progressed in 40 minutes and TEAM is sitting on the 202.4-203 floor (the 17:30Z 5-min low was 202.39). A trade below 202.39 would be a lower low that invalidates the 'higher low' stabilisation used at entry. Decision: hold this cycle (loss is small, stop is 1.5% away, and exiting at a roughly -0.4% loss now vs the end-of-day default is not materially different), but the invalidation level is now explicit: **exit at market if TEAM trades at or below 202.39 or loses relative strength further vs a flat IGV; otherwise close before the 15:47 ET recap by default.** This is a judgement call on a small position; recorded so it can be audited. No new scans (entry windows closed; disclosed).
