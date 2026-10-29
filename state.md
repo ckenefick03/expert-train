@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-29 15:44 ET",
+  "as_of": "2026-10-29 15:49 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash ($406.78). Day: 1 trade (TEAM, -$0.91, -0.43R). No new entries after 15:30 ET.",
+  "status_note": "Flat, all cash ($406.78) - nothing held overnight. Day: 1 trade (TEAM, -$0.91, -0.43R). Next: pre-open brief Fri 08:28 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-29",
@@ -2757,6 +2757,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-29 15:44 ET",
       "equity": 406.78
+    },
+    {
+      "t": "2026-10-29 15:49 ET",
+      "equity": 406.78
     }
   ],
   "positions": [],
@@ -2883,13 +2887,13 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Software dislocation did not revert (IGV flat at -4.4% all afternoon); TEAM exited on invalidation. Flat, all cash.",
+    "read": "Close: tech/software weak (QQQ -1.6, IGV -4.2), small caps firm (IWM +0.7). Flat; nothing held overnight.",
     "chips": [
       "SPY -0.5",
       "QQQ -1.6",
-      "SMH -1.3",
+      "SMH -1.4",
       "IGV -4.2",
-      "IWM +0.9"
+      "IWM +0.7"
     ]
   }
 }
@@ -8089,3 +8093,17 @@ Equity $406.78, all cash, no positions, no open orders. SPY 768.62 (-0.5%), QQQ 
 
 ### Cycle 658 - 2026-10-29 15:44 ET (entries closed; flat)
 Equity $406.78, all cash, no positions, no open orders. SPY 768.17 (-0.5%), QQQ 713.39 (-1.6%), SMH 559.34 (-1.5%), IGV 107.26 (-4.2%), IWM 283.37 (+0.7%). Post-exit follow-up: TEAM 202.55 (vs my 201.65 exit, +0.4%, still below my 203.41 entry). Entry cutoff passed; no scan (disclosed). Nothing held. The 15:47 ET close recap follows.
+
+### Cycle 659 - 2026-10-29 15:49 ET (close recap, last cycle of the day)
+Stop checks: n/a, no positions. Reconciled live: equity $406.78, all cash, positions [], no open orders. SPY 768.21 (-0.5%), QQQ 713.70 (-1.5%), SMH 559.64 (-1.4%), IGV 107.24 (-4.2%), IWM 283.37 (+0.7%). No new entries after 15:30 ET.
+**Overnight holds: NONE. Nothing is held overnight; the account is 100% cash, so there is no thesis to defend.**
+
+#### Day recap - Thu 2026-10-29
+- Start equity $407.69 -> close $406.78: **-$0.91 (-0.22%)**. Peak equity unchanged at $437.99 (breaker level $394.19); the $100 daily loss limit was never in play. Two-day total: $408.34 (Oct 28 open) -> $406.78 = -$1.56.
+- Trades: 1 (meets the 1/day minimum; organic, not forced). **TEAM** mean-reversion Tier B, entered 13:46 ET at 203.4072 ($105.00, 0.516205 sh), exited 15:17 ET at 201.65 on the pre-set invalidation rule (a trade below 202.39), held 91 min: -$0.91, -0.43R, score 68/100. Peak open gain +$1.25 at 14:24 ET. Setup: software sold off in sympathy with ServiceNow's 10/28 print (cRPO guide to 18.5%, stock -24-25%, 'AI disruption' fears); TEAM -7.6% vs IGV -4.1%, EPS beat, uptrend structure, higher-low stabilisation. It failed because the sector never bounced (IGV flat at -4% all afternoon).
+- Skips and why: a long list, all logged per cycle. Own-earnings reactions (GOOGL/GOOG -12%, NOW -25%, FTNT -21%, CAT, ALNY, SFM, SCI, HLN, IOVA) = gate 1 FAIL. Gold miners (EGO, AGI, KGC) = inside the 2-day earnings window and no dated cause. RIO -4% = stock-specific vs BHP, no stabilisation, still falling. RDDT, TWLO, AMZN = report after the close. MRVL/FORM = SMH only -1 to -2%. XP = idiosyncratic, multi-week downtrend. Momentum: every hit was a one-day earnings gap or group move (defense, cruise lines, materials) with no multi-session divergence or held pullback. CRM and WDAY were considered and passed over (in line with the sector, 2R target needed 80%+ retrace); both finished lower by the close, so no cost.
+- Tiers: Tier A none (no name met depth + RSI + sector-ETF conditions). Tier B: the TEAM entry. Tier C unavailable (minimum met). Momentum: none.
+- Gaps and disclosures: delayed or bunched triggers produced coverage gaps with no position at risk: 10:38-11:02 ET (24 min), 11:23-11:39 ET (16 min), 11:40-11:57 ET (17 min); the 10:52 trigger was misdescribed as lost in Cycle 631 and corrected in Cycle 632. Several cycles were light (no scan) and each said so. News searches repeatedly returned only older-year or undated pages (disclosed each time); the one that worked was the targeted extended search on ServiceNow at 13:45 ET. I also corrected two of my own earlier statements (software 'bear market' claim; 'unverified' software cause) in Cycle 646.
+- What I'd watch / lessons (not rule changes): (1) After a single-peer print triggers a sector sell-off, check that peer's own tape (NOW) for stabilisation before entering a sympathy name. (2) The gate-1 sourcing standard worked as intended: three sectors failed for lack of a dated cause, and the one trade came when a dated cause was found.
+- Open items for the user (unchanged): (1) momentum gate-1 'several sessions' clause screens out every fresh earnings gap - possible exemption? (2) PDT / settled-funds applicability on this limited_margin account is still unverified; this was the third same-day round trip in two days with no broker alert.
+- Next: pre-open brief Fri 2026-10-30 ~08:28 ET. Note: US clocks fall back on Sun Nov 1, after which ET = UTC-5 and the UTC cron times shift an hour relative to ET.
