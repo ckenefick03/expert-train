@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-29 11:23 ET",
+  "as_of": "2026-10-29 11:40 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. Tier A closes 11:30 ET; none qualified. Tier B next (software is the watch).",
+  "status_note": "Flat, all cash. Tier B (11:30-14:30): no candidate with a verified dated cause.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-29",
@@ -2657,6 +2657,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-29 11:23 ET",
       "equity": 407.69
+    },
+    {
+      "t": "2026-10-29 11:40 ET",
+      "equity": 407.69
     }
   ],
   "positions": [],
@@ -2771,14 +2775,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Rotation persists: QQQ -1.4, IGV -4.0, GDX -2.8, EWZ -1.6, XLE -0.3; XLV +2.0, XLF +1.6, IWM +1.0. Flat; no mean-reversion qualifier.",
+    "read": "Rotation steady: QQQ -1.2, IGV -4.1, GDX -2.4, EWZ -1.9; IWM +1.4, XLV +2%. Flat; Tier B scanned, nothing passes gate 1.",
     "chips": [
       "SPY -0.3",
-      "QQQ -1.3",
-      "SMH -0.7",
+      "QQQ -1.2",
+      "SMH -0.5",
       "IGV -4.1",
-      "EWZ -1.7",
-      "IWM +1.3"
+      "EWZ -1.9",
+      "IWM +1.4"
     ]
   }
 }
@@ -7847,3 +7851,13 @@ Equity $407.69, all cash, no positions, no open orders. SPY 769.74 (-0.3%), QQQ 
 Mean-reversion scan (mcap>=5B, avgvol>=1M, <=-3.5%, RSI<=40): 9 hits: CAT -7.8%, GOOGL/GOOG -11.6%, SFM -21.3% (own earnings, gate 1 FAIL); TER -3.8% (RSI 36.4); ODFL -4.4% (RSI 37.1); IREN -6.2% (RSI 38.4); XP -7.1% (RSI 29.9; failed gates 1 and 4 at 11:04 and nothing changed); ABEV -4.3% (RSI 33.2, Brazil consumer, below the 5% Tier A depth; Tier B only). Tier A (>=5% with RSI<35): only XP -> FAIL. No Tier A qualifier.
 News (the hourly search): searched why software is selling. Results were all earlier-2026 pieces (ServiceNow's January and April reports and an 'AI displacement' bear-market narrative for IGV, one analyst note calling it sector-wide), with nothing dated Oct 29 2026, so I cannot attach a verified, dated, external cause to today's software drop; NOW (-24%) and FTNT (-21%) reported their own earnings after the bell on Oct 28. Under gate 1 that is unverifiable -> FAIL, applied strictly. Software names that are down >=3.5% with intact fundamentals but a high daily RSI (TEAM -7%, WDAY -6%, CRM -3.7%, TWLO -3.6%) do not meet Tier A's RSI<35 and could only be Tier B candidates from 11:30 ET, still subject to gate 1.
 No entry. Nothing held. Tier B 11:30-14:30 ET is still open to us (no Tier A qualifier today).
+
+### Cycle 634 - 2026-10-29 11:40 ET (Tier B window)
+Gap disclosure: previous logged cycle was 633 at 11:23 ET; the 11:32 ET trigger was delivered at ~11:39 ET as the :22 routine's late firing, so there was no cycle between 11:23 and 11:39 (16 min). No position was open.
+Equity $407.69, all cash, no positions, no open orders. SPY 770.22 (-0.3%), QQQ 717.20 (-1.2%), SMH 564.70 (-0.5%), IGV 107.32 (-4.1%), GDX 81.93 (-2.4%), XLE 68.07 (-0.6%), IWM 285.18 (+1.4%), EWZ 33.07 (-1.7%).
+Tier B scan (mcap>=5B, avgvol>=1M, <=-3.5%, relative volume>=1.0): 12 hits. Gate check, in writing:
+- CAT -8.0%, GOOGL/GOOG -11.4%, NOW -25.4%, SFM -21.5%, ALNY -17.4%, SCI -12.8%, HLN -15.4%, IOVA -34.9%: own earnings/company news -> gate 1 FAIL.
+- MRVL -11.4% (RSI 52): SMH is only -0.5%, so the move is not sector-wide; cause not verified -> FAIL.
+- Gold miners AGI -8.0% and EGO -3.8% (GDX -2.4%): both reported Oct 28 after the close (EPS misses) -> inside the 2-trading-day earnings window, FAIL; also no dated cause for gold.
+- Software (IGV -4.1%): TEAM -8.9%, WDAY -5.6%, CRM -5.4% are the sector-wide candidates. Gate 1 needs a dated external cause: this hour's search returned only earlier-2026 coverage, nothing dated Oct 29, and the sector reaction followed NOW's own report; unverifiable -> FAIL. Gate 4 is also doubtful: coverage describes IGV as already in a multi-month bear market (an extended downtrend, not a fresh dislocation), and I did not review 5-minute bars for a higher low. I am not loosening the gates to force a trade.
+No entry. Nothing held. Tier B runs to 14:30 ET.
