@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-29 11:40 ET",
+  "as_of": "2026-10-29 11:58 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. Tier B (11:30-14:30): no candidate with a verified dated cause.",
+  "status_note": "Flat, all cash. Tier B/momentum scanned; no candidate passes gates.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-29",
@@ -2661,6 +2661,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-29 11:40 ET",
       "equity": 407.69
+    },
+    {
+      "t": "2026-10-29 11:58 ET",
+      "equity": 407.69
     }
   ],
   "positions": [],
@@ -2775,14 +2779,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Rotation steady: QQQ -1.2, IGV -4.1, GDX -2.4, EWZ -1.9; IWM +1.4, XLV +2%. Flat; Tier B scanned, nothing passes gate 1.",
+    "read": "Steady rotation: QQQ -1.1, SMH -0.5, IGV -4.0, GDX -2.6, EWZ -1.7; IWM +1.2, XLV +2.0, ITA +3.4 (defense). Flat; neither strategy has a qualifying name.",
     "chips": [
       "SPY -0.3",
       "QQQ -1.2",
       "SMH -0.5",
-      "IGV -4.1",
-      "EWZ -1.9",
-      "IWM +1.4"
+      "IGV -4.0",
+      "ITA +3.4",
+      "IWM +1.2"
     ]
   }
 }
@@ -7861,3 +7865,10 @@ Tier B scan (mcap>=5B, avgvol>=1M, <=-3.5%, relative volume>=1.0): 12 hits. Gate
 - Gold miners AGI -8.0% and EGO -3.8% (GDX -2.4%): both reported Oct 28 after the close (EPS misses) -> inside the 2-trading-day earnings window, FAIL; also no dated cause for gold.
 - Software (IGV -4.1%): TEAM -8.9%, WDAY -5.6%, CRM -5.4% are the sector-wide candidates. Gate 1 needs a dated external cause: this hour's search returned only earlier-2026 coverage, nothing dated Oct 29, and the sector reaction followed NOW's own report; unverifiable -> FAIL. Gate 4 is also doubtful: coverage describes IGV as already in a multi-month bear market (an extended downtrend, not a fresh dislocation), and I did not review 5-minute bars for a higher low. I am not loosening the gates to force a trade.
 No entry. Nothing held. Tier B runs to 14:30 ET.
+
+### Cycle 635 - 2026-10-29 11:58 ET
+Gap disclosure: Cycle 634 was 11:40 ET; the 11:42 ET trigger was delivered at ~11:57 ET (15 min late), so there was no cycle in between. No position was open.
+Equity $407.69, all cash, no positions, no open orders. SPY 769.66 (-0.3%), QQQ 716.77 (-1.2%), SMH 564.72 (-0.5%), IGV 107.46 (-4.0%), GDX 81.74 (-2.6%), XLE 68.29 (-0.2%), IWM 284.59 (+1.2%), EWZ 33.07 (-1.7%), XLV 183.35 (+2.0%), ITA 214.82 (+3.4%).
+Tier B depth scan (mcap>=5B, <=-3.5%, relvol>=1.0): 13 hits, the same set as Cycle 634 (CAT, GOOGL/GOOG, MRVL, ALNY, NOW, SCI, SFM, EGO, AGI, IOVA, HLN, plus AUR -12.1%, a pre-revenue autonomy name with no sector cause found). Unchanged verdict: own-earnings reactions, an unverified MRVL move with SMH only -0.5%, and gold miners inside the 2-day earnings window. No sector-wide, dated, externally caused dislocation. FAIL.
+Momentum scan (mcap>=2B, avgvol>=1M, >=+3%, relvol>=1.5): 4 hits, all one-day gaps: GKOS +32.4%, ADT +33.5%, BHC +24.4%, NCLH +13.2%. None has a verified dated catalyst or multi-session relative strength, and a gap-and-hold has no pullback with a higher low to buy. Gate 1 FAIL; not loosened.
+No entry. Nothing held. Tier B to 14:30 ET.
