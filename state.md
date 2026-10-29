@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-29 11:12 ET",
+  "as_of": "2026-10-29 11:23 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. Tier A closes 11:30 ET; only XP matches depth+RSI and fails gates.",
+  "status_note": "Flat, all cash. Tier A closes 11:30 ET; none qualified. Tier B next (software is the watch).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-29",
@@ -2653,6 +2653,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-29 11:12 ET",
       "equity": 407.69
+    },
+    {
+      "t": "2026-10-29 11:23 ET",
+      "equity": 407.69
     }
   ],
   "positions": [],
@@ -2771,10 +2775,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "chips": [
       "SPY -0.3",
       "QQQ -1.3",
-      "SMH -0.8",
-      "IGV -4.0",
-      "EWZ -1.6",
-      "IWM +1.2"
+      "SMH -0.7",
+      "IGV -4.1",
+      "EWZ -1.7",
+      "IWM +1.3"
     ]
   }
 }
@@ -7837,3 +7841,9 @@ Tier A closes 11:30 ET; Tier B (>=3.5% intraday, stabilization, only if no Tier 
 Correction to Cycle 631 (append-only): it said the 10:52 trigger never reached the session. It did arrive, about 11 minutes late (fired ~11:03 ET), and was skipped under the 6-minute rule because Cycle 631 had just been logged. The 10:38-11:02 ET coverage gap stands.
 Equity $407.69, all cash, no positions, no open orders. SPY 769.78 (-0.3%), QQQ 716.45 (-1.3%), SMH 563.27 (-0.8%), IGV 107.38 (-4.0%), GDX 81.58 (-2.8%), XLE 68.12 (-0.5%), IWM 284.59 (+1.2%), EWZ 33.09 (-1.6%). Tape essentially unchanged from Cycle 631.
 Tier A scan (mcap>=5B, avgvol>=1M, <=-5%, RSI<=35): 1 hit, XP (-6.0%, RSI 29.9), the same name that failed gates 1 and 4 last cycle (idiosyncratic, EWZ only -1.6%, multi-week downtrend from ~$20). No change, no new evidence. No Tier A qualifier. No entry. Nothing held.
+
+### Cycle 633 - 2026-10-29 11:23 ET (hourly; Tier A closes in 7 min)
+Equity $407.69, all cash, no positions, no open orders. SPY 769.74 (-0.3%), QQQ 716.32 (-1.3%), SMH 563.33 (-0.8%), IGV 107.29 (-4.1%), GDX 81.74 (-2.6%), XLE 68.15 (-0.4%), IWM 285.00 (+1.3%), EWZ 33.06 (-1.7%), XLV 183.78 (+2.3%). Unchanged rotation: out of software/tech/gold, into small caps and health care.
+Mean-reversion scan (mcap>=5B, avgvol>=1M, <=-3.5%, RSI<=40): 9 hits: CAT -7.8%, GOOGL/GOOG -11.6%, SFM -21.3% (own earnings, gate 1 FAIL); TER -3.8% (RSI 36.4); ODFL -4.4% (RSI 37.1); IREN -6.2% (RSI 38.4); XP -7.1% (RSI 29.9; failed gates 1 and 4 at 11:04 and nothing changed); ABEV -4.3% (RSI 33.2, Brazil consumer, below the 5% Tier A depth; Tier B only). Tier A (>=5% with RSI<35): only XP -> FAIL. No Tier A qualifier.
+News (the hourly search): searched why software is selling. Results were all earlier-2026 pieces (ServiceNow's January and April reports and an 'AI displacement' bear-market narrative for IGV, one analyst note calling it sector-wide), with nothing dated Oct 29 2026, so I cannot attach a verified, dated, external cause to today's software drop; NOW (-24%) and FTNT (-21%) reported their own earnings after the bell on Oct 28. Under gate 1 that is unverifiable -> FAIL, applied strictly. Software names that are down >=3.5% with intact fundamentals but a high daily RSI (TEAM -7%, WDAY -6%, CRM -3.7%, TWLO -3.6%) do not meet Tier A's RSI<35 and could only be Tier B candidates from 11:30 ET, still subject to gate 1.
+No entry. Nothing held. Tier B 11:30-14:30 ET is still open to us (no Tier A qualifier today).
