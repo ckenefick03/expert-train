@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-29 11:04 ET",
+  "as_of": "2026-10-29 11:12 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. Tier A closes 11:30 ET; nothing qualified. Missed cycles 10:48-10:58 ET (late triggers).",
+  "status_note": "Flat, all cash. Tier A closes 11:30 ET; only XP matches depth+RSI and fails gates.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-29",
@@ -2649,6 +2649,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-29 11:04 ET",
       "equity": 407.69
+    },
+    {
+      "t": "2026-10-29 11:12 ET",
+      "equity": 407.69
     }
   ],
   "positions": [],
@@ -2765,12 +2769,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "regime": {
     "read": "Rotation persists: QQQ -1.4, IGV -4.0, GDX -2.8, EWZ -1.6, XLE -0.3; XLV +2.0, XLF +1.6, IWM +1.0. Flat; no mean-reversion qualifier.",
     "chips": [
-      "SPY -0.4",
-      "QQQ -1.4",
-      "SMH -1.0",
+      "SPY -0.3",
+      "QQQ -1.3",
+      "SMH -0.8",
       "IGV -4.0",
       "EWZ -1.6",
-      "XLV +2.0"
+      "IWM +1.2"
     ]
   }
 }
@@ -7828,3 +7832,8 @@ Equity $407.69, all cash, no positions, no open orders. SPY 769.40 (-0.4%), QQQ 
 Mean-reversion scan (mcap>=5B, avgvol>=1M, <=-3.5%, daily RSI<=40): 9 hits: CAT -7.0%, GOOGL/GOOG -12.3%, SFM -21.2% (own earnings: gate 1 FAIL); TER -4.4% (RSI 36.4, SMH only -0.9%); ODFL -3.6%; IREN -6.6% (RSI 38.4); UMC -3.6% (RSI 34.7); XP -6.1% (RSI 29.9).
 Only candidate on depth+RSI: XP (Brazil broker). Gates: (1) sector cause - EWZ is -1.6% (below the 2% Tier A threshold), ITUB -0.7% and NU +0.3% are barely moving, so the drop is idiosyncratic to XP; the web search found no dated Oct 29 source (only stale or older-year pages) -> FAIL, unverifiable; (4) the stock was ~$20.0 on 2026-09-10 per a search snippet and is ~$15.1 now, a multi-week downtrend -> FAIL. Fundamentals fine (Q2 EPS 0.53 vs 0.51; next report 2026-11-16), but two gates fail. No entry. Nothing held.
 Tier A closes 11:30 ET; Tier B (>=3.5% intraday, stabilization, only if no Tier A qualified today - still true) runs 11:30-14:30 ET.
+
+### Cycle 632 - 2026-10-29 11:12 ET (Tier A window, 18 min left)
+Correction to Cycle 631 (append-only): it said the 10:52 trigger never reached the session. It did arrive, about 11 minutes late (fired ~11:03 ET), and was skipped under the 6-minute rule because Cycle 631 had just been logged. The 10:38-11:02 ET coverage gap stands.
+Equity $407.69, all cash, no positions, no open orders. SPY 769.78 (-0.3%), QQQ 716.45 (-1.3%), SMH 563.27 (-0.8%), IGV 107.38 (-4.0%), GDX 81.58 (-2.8%), XLE 68.12 (-0.5%), IWM 284.59 (+1.2%), EWZ 33.09 (-1.6%). Tape essentially unchanged from Cycle 631.
+Tier A scan (mcap>=5B, avgvol>=1M, <=-5%, RSI<=35): 1 hit, XP (-6.0%, RSI 29.9), the same name that failed gates 1 and 4 last cycle (idiosyncratic, EWZ only -1.6%, multi-week downtrend from ~$20). No change, no new evidence. No Tier A qualifier. No entry. Nothing held.
