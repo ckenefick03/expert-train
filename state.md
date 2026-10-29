@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-29 12:36 ET",
+  "as_of": "2026-10-29 12:44 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2681,6 +2681,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-29 12:36 ET",
       "equity": 407.69
+    },
+    {
+      "t": "2026-10-29 12:44 ET",
+      "equity": 407.69
     }
   ],
   "positions": [],
@@ -2797,12 +2801,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "regime": {
     "read": "Steady rotation: QQQ -1.1, SMH -0.5, IGV -4.0, GDX -2.6, EWZ -1.7; IWM +1.2, XLV +2.0, ITA +3.4 (defense). Flat; neither strategy has a qualifying name.",
     "chips": [
-      "SPY -0.5",
-      "QQQ -1.5",
-      "SMH -1.1",
-      "IGV -4.2",
+      "SPY -0.4",
+      "QQQ -1.4",
+      "SMH -1.0",
+      "IGV -4.1",
       "IWM +1.1",
-      "META +3.5"
+      "EWZ -1.5"
     ]
   }
 }
@@ -7908,3 +7912,7 @@ Tier B scan (mcap>=5B, <=-3.5%, relvol>=1.0): 15 hits: the same 13 names as befo
 Equity $407.69, all cash, no positions, no open orders. SPY 768.82 (-0.5%), QQQ 714.91 (-1.5%), SMH 561.57 (-1.1%), IGV 107.26 (-4.2%), XLE 68.33 (-0.2%), IWM 284.27 (+1.1%). Tech a touch weaker; otherwise unchanged. META +3.5% (633.88 vs 612.49) while Alphabet is -12%: the weakness is not an across-the-board megacap or capex selloff, which weakens any 'AI sector' reading for the hardware names.
 Follow-up from Cycle 638: RDDT (-4.5%, 128.65 vs 134.70). The earnings check shows RDDT reports Q3 TODAY after the close (2026-10-29 pm, verified), so it is inside the 2-trading-day pre-earnings window -> hard FAIL, independent of gate 1. Dropped from the watch list.
 No other scan this cycle (disclosed): scans at 12:19 and 12:28 showed nothing passing and the tape is unchanged. No entry. Nothing held. Tier B to 14:30 ET.
+
+### Cycle 640 - 2026-10-29 12:44 ET (Tier B window)
+Equity $407.69, all cash, no positions, no open orders. SPY 769.13 (-0.4%), QQQ 715.28 (-1.4%), SMH 561.86 (-1.0%), IGV 107.28 (-4.1%), GDX 81.42 (-3.0%), XLE 68.32 (-0.2%), IWM 284.31 (+1.1%), EWZ 33.12 (-1.5%). Unchanged.
+Tier B scan: the same 15 names as Cycle 638 (RDDT is excluded: it reports tonight; the rest are own-earnings reactions, MRVL/FORM not sector-wide, AUR unexplained, gold miners inside the earnings window). No qualifier. No momentum scan this cycle (disclosed; nothing changed since 12:19). No entry. Nothing held. Tier B to 14:30 ET.
