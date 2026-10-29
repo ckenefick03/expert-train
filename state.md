@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-29 10:09 ET",
+  "as_of": "2026-10-29 10:17 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. Tier A window open; scan returned no qualifier.",
+  "status_note": "Flat, all cash. Tier A: no qualifier (gold miners fail gates). Momentum opens 10:30 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-29",
@@ -2633,6 +2633,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-29 10:09 ET",
       "equity": 407.69
+    },
+    {
+      "t": "2026-10-29 10:17 ET",
+      "equity": 407.69
     }
   ],
   "positions": [],
@@ -2747,12 +2751,13 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Tech/software selloff easing: QQQ -1.3, SMH -1.2, IGV -2.9, GDX -3.1; IWM +1.0, XLE +0.5. Flat; no Tier A qualifier.",
+    "read": "Tech/software/gold weak (QQQ -1.4, SMH -1.3, IGV -3.2, GDX -3.2); financials, health care, small caps and energy firm. Flat; gold-miner dislocation fails gates.",
     "chips": [
-      "SPY -0.4",
-      "QQQ -1.3",
-      "SMH -1.2",
-      "IGV -2.9",
+      "SPY -0.5",
+      "QQQ -1.4",
+      "SMH -1.3",
+      "IGV -3.2",
+      "GDX -3.2",
       "IWM +1.0"
     ]
   }
@@ -7786,3 +7791,13 @@ Equity $407.69, all cash, no positions. SPY 767.68 (-0.6%), QQQ 713.08 (-1.7%), 
 
 ### Cycle 627 - 2026-10-29 10:09 ET (Tier A window; momentum not yet open)
 Equity $407.69, all cash, no positions, no open orders (portfolio read live). SPY 769.57 (-0.4%), QQQ 716.31 (-1.3%), SMH 560.91 (-1.2%), XLK 189.05 (-1.0%), IGV 108.64 (-2.9%), GDX 81.32 (-3.1%), XLE 68.82 (+0.5%), IWM 284.23 (+1.0%). Tier A scan (mcap>=5B, avgvol>=1M, <=-5% on the day, daily RSI<=35): **0 hits**. Tier A also needs the sector ETF >=2% down; SMH has recovered to -1.2% from -2.0% at 09:58, so the sector leg fails for the AI-hardware names (TER -5.8%, MRVL -12.6%, CLS -5.8%, NBIS -5.1%, CIEN -3.4%, ALAB -3.3%, ORCL -3.7%). Software (IGV -2.9%) and gold miners (GDX -3.1%) are the only sectors near the threshold, with no dated cause found yet and no search run this cycle (disclosed). GOOGL/GOOG, NOW, FTNT, CAT, TT, HONA remain own-earnings reactions (gate 1 FAIL). Tier B opens 11:30 ET (needs >=3.5% intraday or >=7%/3d plus stabilization, and no Tier A qualifier today); momentum opens 10:30 ET. No entry. Nothing held.
+
+### Cycle 628 - 2026-10-29 10:17 ET (hourly; Tier A window)
+Equity $407.69, all cash, no positions, no open orders. SPY 768.72 (-0.5%), QQQ 715.28 (-1.4%), SMH 560.00 (-1.3%), IGV 108.35 (-3.2%), GDX 81.29 (-3.2%), XLE 68.79 (+0.5%), IWM 284.08 (+1.0%), XLF 57.04 (+1.6%), XLV 183.78 (+2.3%). Rotation: out of tech/software/gold, into financials, health care, small caps.
+Depth scan (mcap>=5B, <=-3.5%): 43 hits. Gate check, in writing:
+- Gold miners are the only group with a sector ETF >=2% down and members >=5% (EGO -8.0%, AGI -8.7%, KGC -5.2%; AEM -3.7%, IAG -3.9%, EQX -4.0%). **Gate 1 FAIL**: a dated cause was not found (the web search returned only older-year pages, nothing for Oct 29 2026), so it is unverifiable. **Gate 2 / earnings rule FAIL**: EGO (EPS 0.49 vs 0.56) and AGI (0.44 vs 0.45) both missed on Oct 28 after the close, and KGC and AEM also reported then, so all are within 2 trading days of earnings. **RSI FAIL**: EGO 42, AGI 47, KGC 40.5 (need <35).
+- Software (IGV -3.2%): NOW -24%, FTNT -21%, TEAM -7%, WDAY -6% are own-earnings reactions (FAIL); CRM -3.7% and TWLO -3.6% are under the 5% depth.
+- AI hardware: SMH only -1.3% (<2%), so Tier A's sector leg fails; MRVL -13% cause unverified, TER -5.7% (RSI 36.4, just over 35), CLS -4.8%.
+- Own-earnings/company-specific: GOOGL/GOOG -12%, CAT -7.9%, TT -6.7%, HONA -9.8%, ALNY -15.9%, SFM -18.5%, IOVA -31%, HLN -15%: FAIL gate 1.
+- Only RSI<35 names: UMC -3.9% (34.7, too shallow), XP -4.4% (29.9, Brazil broker, too shallow).
+Result: no Tier A qualifier. No entry. Tier B opens 11:30 ET (only if no Tier A qualified today - true so far); momentum opens 10:30 ET. Nothing held.
