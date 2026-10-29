@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-29 14:17 ET",
+  "as_of": "2026-10-29 14:24 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Long TEAM 0.516 @ 203.41 (MR Tier B), now 204.86 (+$0.75), stop 199.50, target 211.80. 30-min hold rule ended 14:16 ET.",
+  "status_note": "Long TEAM 0.516 @ 203.41 (MR Tier B), now 205.83 (+$1.25), stop 199.50, target 211.80.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-29",
@@ -2721,6 +2721,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-29 14:17 ET",
       "equity": 408.44
+    },
+    {
+      "t": "2026-10-29 14:24 ET",
+      "equity": 408.94
     }
   ],
   "positions": [
@@ -2730,7 +2734,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "tier": "B",
       "qty": 0.516205,
       "entry": 203.4072,
-      "price": 204.86,
+      "price": 205.83,
       "stop": 199.5,
       "target": 211.8
     }
@@ -2850,9 +2854,9 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "chips": [
       "SPY -0.6",
       "QQQ -1.7",
-      "SMH -1.5",
-      "IGV -4.0",
-      "TEAM -6.9",
+      "SMH -1.6",
+      "IGV -3.8",
+      "TEAM -6.5",
       "IWM +0.8"
     ]
   }
@@ -8017,3 +8021,6 @@ Reconciled live: equity $407.83, cash $302.69, TEAM 0.516205 sh (avg 203.41), no
 Reconciled live: equity $408.44, cash $302.69, TEAM 0.516205 sh (avg 203.41), no open orders. TEAM 204.86 (bid 204.61 / ask 205.11), unrealized about +$0.75 (+0.7%). **Stop check:** stop 199.50 is 2.6% below; target 211.80 is 3.4% above; neither triggered. Relative strength intact: TEAM -6.9% vs IGV 107.38 (-4.0%), with TEAM improving from -7.6% at entry while IGV barely moved (the stock is recovering faster than its sector, consistent with the thesis). CRM 231.34, WDAY 194.51, NET 301.74 flat. Tape: SPY 767.65 (-0.6%), QQQ 713.40 (-1.7%), SMH 558.86 (-1.5%), IWM 283.46 (+0.8%), GDX 81.19 (-3.3%), RIO 82.60 (-3.9%, flat since 13:05, still stock-specific). Thesis intact. Hold, with the proactive-exit rule now in force.
 Scans: Tier B depth scan (22 hits) shows the same names plus AMZN -3.8% (reports tonight, FAIL), PINS -4.6% (RSI 47.8, a social/ad name moving with RDDT, which reports tonight; no own dated cause found; FAIL), RBLX -3.5% and TWLO -4.9% (reports tonight). Momentum scan (22 hits): LLY, LNG +6.0%, VMC, DASH, GKOS, CROX, AVAV, EHC, INSM, TXT, FLS, KTOS, NCLH, ADT, BHC and similar: same one-day gaps / group moves as before; no verified multi-session divergence; FAIL. No second entry: the only open sector thesis is software, and adding CRM or WDAY would double the same factor exposure without meeting the gates better than TEAM did (both were only in line with the sector). Tier B to 14:30 ET. Slots 1/5.
 News: the hourly search was the targeted ServiceNow/software search at 13:45 ET (dated 2026 coverage found, Benzinga/CNBC/others); no further search this cycle.
+
+### Cycle 650 - 2026-10-29 14:24 ET (position check)
+Reconciled live: equity $408.94, cash $302.69, TEAM 0.516205 sh (avg 203.41), no open orders. TEAM 205.83 (bid 205.51 / ask 205.81), unrealized about +$1.25 (+1.2%), up from 204.86 at 14:17. **Stop check:** stop 199.50 is 3.1% below; target 211.80 is 2.9% above; neither triggered; about 0.6R of the 2R target. IGV 107.62 (-3.8%), CRM 231.76; TEAM is leading the software group back up (-6.5% vs IGV -3.8%). SPY 767.46 (-0.6%), QQQ 713.36 (-1.7%), SMH 558.73 (-1.6%). Thesis intact; hold (default: close before the 15:47 recap; will reassess a trim near the target). No new scan (Tier B ends 14:30 ET; nothing new since 14:17, disclosed). Nothing else open.
