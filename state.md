@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-29 12:28 ET",
+  "as_of": "2026-10-29 12:36 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -2677,6 +2677,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-29 12:28 ET",
       "equity": 407.69
+    },
+    {
+      "t": "2026-10-29 12:36 ET",
+      "equity": 407.69
     }
   ],
   "positions": [],
@@ -2793,12 +2797,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "regime": {
     "read": "Steady rotation: QQQ -1.1, SMH -0.5, IGV -4.0, GDX -2.6, EWZ -1.7; IWM +1.2, XLV +2.0, ITA +3.4 (defense). Flat; neither strategy has a qualifying name.",
     "chips": [
-      "SPY -0.4",
-      "QQQ -1.4",
-      "SMH -0.9",
-      "IGV -4.0",
-      "EWZ -2.0",
-      "IWM +1.2"
+      "SPY -0.5",
+      "QQQ -1.5",
+      "SMH -1.1",
+      "IGV -4.2",
+      "IWM +1.1",
+      "META +3.5"
     ]
   }
 }
@@ -7899,3 +7903,8 @@ No entry. Nothing held. Tier B to 14:30 ET.
 ### Cycle 638 - 2026-10-29 12:28 ET (Tier B window)
 Equity $407.69, all cash, no positions, no open orders. SPY 769.29 (-0.4%), QQQ 715.39 (-1.4%), SMH 562.29 (-0.9%), IGV 107.43 (-4.0%), GDX 81.53 (-2.9%), XLE 68.31 (-0.2%), IWM 284.68 (+1.2%), EWZ 32.94 (-2.0%). Unchanged from Cycle 637.
 Tier B scan (mcap>=5B, <=-3.5%, relvol>=1.0): 15 hits: the same 13 names as before plus RDDT -4.6% (RSI 34.2) and FORM -8.2% (RSI 45.2). RDDT is the only new one: a single social-media name with no sector ETF move that explains it and no dated cause found; I did not run an earnings-date or news check on it this cycle (disclosed), so I treat it as FAIL under gate 1 (unverified cause) and not a pass; I will check its earnings date next cycle if it persists. FORM is a semicap name with SMH only -0.9% (not sector-wide). No entry. No momentum scan this cycle (the 12:19 scan found only one-day gaps). Nothing held. Tier B to 14:30 ET.
+
+### Cycle 639 - 2026-10-29 12:36 ET (Tier B window; light)
+Equity $407.69, all cash, no positions, no open orders. SPY 768.82 (-0.5%), QQQ 714.91 (-1.5%), SMH 561.57 (-1.1%), IGV 107.26 (-4.2%), XLE 68.33 (-0.2%), IWM 284.27 (+1.1%). Tech a touch weaker; otherwise unchanged. META +3.5% (633.88 vs 612.49) while Alphabet is -12%: the weakness is not an across-the-board megacap or capex selloff, which weakens any 'AI sector' reading for the hardware names.
+Follow-up from Cycle 638: RDDT (-4.5%, 128.65 vs 134.70). The earnings check shows RDDT reports Q3 TODAY after the close (2026-10-29 pm, verified), so it is inside the 2-trading-day pre-earnings window -> hard FAIL, independent of gate 1. Dropped from the watch list.
+No other scan this cycle (disclosed): scans at 12:19 and 12:28 showed nothing passing and the tape is unchanged. No entry. Nothing held. Tier B to 14:30 ET.
