@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-29 10:25 ET",
+  "as_of": "2026-10-29 10:38 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. Momentum opens 10:30 ET; Tier B 11:30 ET.",
+  "status_note": "Flat, all cash. Momentum open; leaders are same-day earnings gaps, none passed gates.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-29",
@@ -2641,6 +2641,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-29 10:25 ET",
       "equity": 407.69
+    },
+    {
+      "t": "2026-10-29 10:38 ET",
+      "equity": 407.69
     }
   ],
   "positions": [],
@@ -2755,14 +2759,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Tech/software/gold weak (QQQ -1.4, SMH -1.3, IGV -3.2, GDX -3.2); financials, health care, small caps and energy firm. Flat; gold-miner dislocation fails gates.",
+    "read": "Rotation: tech/software/gold weak (QQQ -1.3, IGV -3.8, GDX -2.8); aerospace/defense/industrials, health care, financials and small caps strong. Flat; momentum movers are earnings gaps.",
     "chips": [
-      "SPY -0.4",
-      "QQQ -1.4",
-      "SMH -1.2",
-      "IGV -3.5",
-      "GDX -2.7",
-      "IWM +1.1"
+      "SPY -0.3",
+      "QQQ -1.3",
+      "SMH -1.0",
+      "IGV -3.8",
+      "IWM +1.1",
+      "XLV +2.0"
     ]
   }
 }
@@ -7808,3 +7812,8 @@ Result: no Tier A qualifier. No entry. Tier B opens 11:30 ET (only if no Tier A 
 
 ### Cycle 629 - 2026-10-29 10:25 ET (light; momentum opens 10:30)
 Equity $407.69, all cash, no positions, no open orders. SPY 769.24 (-0.4%), QQQ 715.80 (-1.4%), SMH 561.00 (-1.2%), IGV 107.98 (-3.5%), GDX 81.70 (-2.7%), XLE 68.80 (+0.5%), IWM 284.43 (+1.1%), XLV 183.75 (+2.2%), XLF 57.06 (+1.6%). Tape unchanged from Cycle 628 (8 min ago). No scan run (disclosed): the 10:17 depth scan found nothing passing and nothing material changed; momentum is not open until 10:30 ET and will be scanned at the next cycle. No entry. Nothing held.
+
+### Cycle 630 - 2026-10-29 10:38 ET (momentum open; Tier A window)
+Equity $407.69, all cash, no positions, no open orders. SPY 769.68 (-0.3%), QQQ 716.08 (-1.3%), SMH 561.90 (-1.0%), IGV 107.66 (-3.8%), GDX 81.63 (-2.8%), XLE 68.74 (+0.4%), IWM 284.27 (+1.1%), XLV 183.38 (+2.0%), XLF 57.08 (+1.7%).
+Momentum scan (mcap>=2B, avgvol>=1M, >=+3%; relative-volume filter left off this early): 129 hits. The leaders cluster in aerospace/defense/industrial names that reported this morning (TXT +12.2%, HWM +5.5%, LHX +6.1%, GE +3.7%, GD +3.5%, DRS +9.7%, ATI +7.9%, FTAI +14.3%, KRMN +5.8%, AVAV +5.2%) and in other same-day earnings gaps (LLY +6.9%, MA +4.5%, PWR +7.0%, CMG +6.9%, CROX +22.9%, ADT +34%, BHC +22.6%, GKOS +28%, INSM +16.8%, DASH +6.4%, FLS +9.8%). Gate check: all of these are one-day gap-and-hold reactions to a same-day report. Textron is the closest to an RS leader (+12.2% vs GD/LHX/GE +3.5-6.1%, EPS 1.76 vs 1.44), but (a) the gate-1 'several sessions' RS clause fails for a fresh gap, (b) +12% in the first hour is extended with no held pullback / higher low yet (no 5-min review run this cycle - disclosed), and (c) no catalyst source beyond the calendar EPS line was checked. I am applying the gate as written and NOT loosening it. FAIL for the group; no entry. This is the second day the 'several sessions' clause screens out every earnings gap - an open item for the user.
+Tier A (re-check): the 10:17 scan found no qualifier and the tape is unchanged; no new scan. Tier B opens 11:30 ET. Nothing held.
