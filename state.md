@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-29 15:04 ET",
+  "as_of": "2026-10-29 15:17 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Long TEAM 0.516 @ 203.41 (MR Tier B), now 202.53 (-$0.45), stop 199.50, target 211.80. Watch: invalidation if it trades below 202.39.",
+  "status_note": "Flat, all cash ($406.78). Day: 1 trade (TEAM, -$0.91, -0.43R). No new entries after 15:30 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-29",
@@ -2741,20 +2741,13 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-29 15:04 ET",
       "equity": 407.24
-    }
-  ],
-  "positions": [
+    },
     {
-      "symbol": "TEAM",
-      "strategy": "mean-reversion",
-      "tier": "B",
-      "qty": 0.516205,
-      "entry": 203.4072,
-      "price": 202.53,
-      "stop": 199.5,
-      "target": 211.8
+      "t": "2026-10-29 15:17 ET",
+      "equity": 406.78
     }
   ],
+  "positions": [],
   "trades": [
     {
       "symbol": "TER",
@@ -2863,16 +2856,27 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "score": 66,
       "tag": "organic",
       "date": "2026-10-28"
+    },
+    {
+      "symbol": "TEAM",
+      "strategy": "mean-reversion",
+      "tier": "B",
+      "entry": 203.4072,
+      "exit": 201.65,
+      "pnl": -0.91,
+      "r": -0.43,
+      "score": 68,
+      "tag": "organic",
+      "date": "2026-10-29"
     }
   ],
   "regime": {
-    "read": "Software sector dislocation (IGV -4.1%) after ServiceNow guidance; rest of tape flat. Holding TEAM (MR Tier B) entered 13:46 ET.",
+    "read": "Software dislocation did not revert (IGV flat at -4.4% all afternoon); TEAM exited on invalidation. Flat, all cash.",
     "chips": [
       "SPY -0.6",
       "QQQ -1.7",
-      "SMH -1.7",
-      "IGV -4.2",
-      "TEAM -8.0",
+      "SMH -1.8",
+      "IGV -4.4",
       "IWM +0.7"
     ]
   }
@@ -8054,3 +8058,13 @@ Reconciled live: equity $407.77, cash $302.69, TEAM 0.516205 sh (avg 203.41), no
 ### Cycle 654 - 2026-10-29 15:04 ET (position check - thesis stalled, invalidation level set)
 Reconciled live: equity $407.24, cash $302.69, TEAM 0.516205 sh (avg 203.41), no open orders. TEAM 202.53 (bid 202.46 / ask 202.58), unrealized about -$0.45 (-0.43%). **Stop check:** stop 199.50 is 1.5% below; target 211.80 is 4.6% above; neither triggered. The group has not moved: IGV 107.19 (-4.2%, flat all afternoon), CRM 230.14 (-4.9%), WDAY 194.29 (-4.9%). TEAM -8.0% has slipped from -6.5% at 14:24, so it is now lagging the flat group by a modest ~1.5 points since then (a relative-strength warning, not yet a break). Tape: SPY 767.49 (-0.6%), QQQ 712.98 (-1.7%), SMH 558.12 (-1.7%).
 Assessment: the reversion thesis has not progressed in 40 minutes and TEAM is sitting on the 202.4-203 floor (the 17:30Z 5-min low was 202.39). A trade below 202.39 would be a lower low that invalidates the 'higher low' stabilisation used at entry. Decision: hold this cycle (loss is small, stop is 1.5% away, and exiting at a roughly -0.4% loss now vs the end-of-day default is not materially different), but the invalidation level is now explicit: **exit at market if TEAM trades at or below 202.39 or loses relative strength further vs a flat IGV; otherwise close before the 15:47 ET recap by default.** This is a judgement call on a small position; recorded so it can be audited. No new scans (entry windows closed; disclosed).
+
+### Cycle 655 - 2026-10-29 15:17 ET (hourly) - EXIT: TEAM (invalidation), -$0.91, -0.43R
+Stop check at 15:16 ET: TEAM 201.83 (bid 201.83 / ask 202.06), through the 202.39 invalidation level I set in Cycle 654. 5-min bars confirm lower lows: 19:05Z low 202.22, 19:10Z low 201.67 (vs the 202.39 / 202.56 / 203.1 higher lows that underpinned entry). IGV 106.99 (-4.4%) was flat to lower, CRM 229.31, WDAY 194.15: no sector bounce, and TEAM -8.3%. The 'higher low' stabilisation and the reversion thesis are both invalidated, and the group is not bouncing. Rule: exit-on-invalidation (mean-reversion.md position management); the 30-minute hold rule ended at 14:16 ET.
+Order: market sell 0.516205 TEAM, ref 8e8a6812-b695-4e8d-a2fd-2e8feb12991f, order 6ae39bab-0b5d-4354-bfd6-5b9cb6ccfe38, filled 19:16:59Z (15:17 ET) at 201.65 (bid was 201.83; about $0.18/sh slippage on a market order, about $0.09 total).
+Result: entry 203.4072 (13:46 ET) -> exit 201.65 (15:17 ET), held 91 minutes: **-$0.91 (-0.45%), -0.43R** (1R about $2.1). Equity $406.78 (cash). No open positions, no open orders. The 199.50 stop and 211.80 target were never touched; day high 205.83, day low after entry 201.65.
+Score (§5.5): **68/100.** Setup 32/40: all four gates passed and the thesis was clear, but gate 1's TEAM-specific link was tape-inferred, not directly sourced (disclosed at entry). Execution 28/35: right tier and window, sized per rule, 30-minute rule honoured, invalidation level written before use and obeyed; the entry used a market order (fractional shares require it; spread about 0.2%). Outcome 8/25: small loss, exited on the plan's invalidation rule before the stop, target never in play.
+What worked / did not: the entry gates and stabilisation read were sound for ~40 minutes (+$1.25 peak at 14:24), but the sector never bounced: IGV sat at -4% all afternoon, so with no group reversion the single-name thesis decayed. Lesson to test, not a rule change: after a sector dislocation caused by a single peer's print, the sympathy bounce may need that peer (NOW) to stabilise first; I did not check NOW's own tape as a leading indicator.
+Skipped-candidate follow-ups (prices at 15:16 ET): CRM 229.31 (was 231.77 at the 13:47 evaluation; would have lost about 1.1%), WDAY 194.15 (was 194.29; about flat), NET not rechecked. So passing on CRM/WDAY did not cost anything.
+Other: no Tier C (the day's minimum is met), no new momentum entries (the 14:34 scan showed only one-day gaps; no further scan this cycle, disclosed). Flag for the user (unchanged open item): this is the second same-day round trip in two days on a limited_margin account and PDT/settled-funds applicability is still unverified in §6.
+Next: 15:47 ET close recap (nothing held overnight).
