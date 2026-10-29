@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-29 08:47 ET",
+  "as_of": "2026-10-29 09:58 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. Pre-open brief done (read-only). Entries open 10:00 ET.",
+  "status_note": "Flat, all cash. Entry windows open 10:00 ET; candidates being gated.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-29",
@@ -2625,6 +2625,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-29 08:47 ET",
       "equity": 407.69
+    },
+    {
+      "t": "2026-10-29 09:58 ET",
+      "equity": 407.69
     }
   ],
   "positions": [],
@@ -2739,13 +2743,13 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Pre-market risk-off in tech: QQQ -1.3, SMH -2.0, VRT -4.5; XLE +1.1. GOOG/GOOGL EPS missed after the bell (2.12 vs 2.96); cause/reaction not confirmed by a dated source.",
+    "read": "Risk-off in large-cap tech at the open: QQQ -1.7, SMH -2.0, GOOGL -12.9 on its earnings; IWM +0.9 and XLE +0.7 firm. Flat; entries open at 10:00 ET.",
     "chips": [
-      "SPY -0.4 pre",
-      "QQQ -1.3 pre",
-      "SMH -2.0 pre",
-      "XLE +1.1 pre",
-      "EWZ -0.4 pre"
+      "SPY -0.6",
+      "QQQ -1.7",
+      "SMH -2.0",
+      "XLE +0.7",
+      "IWM +0.9"
     ]
   }
 }
@@ -7772,3 +7776,6 @@ Stop checks: n/a, no positions. Reconciled live: equity $407.69, all cash, posit
 3. Names with large beats this morning: EME, HII, THC, BLDR, DASH, HWM - need price reaction and a held higher low.
 4. Small-cap strength (IWM +0.3% vs QQQ -1.3%) - rotation names; scan after 10:30.
 **Plan:** no entry before 10:00 ET. Standing rules unchanged (entry $105, max 5 positions, 30-minute hold, default flat by 15:47 ET). Open items for the user are unchanged from the Oct 28 recap (momentum gate-1 'several sessions' exemption; PDT applicability).
+
+### Cycle 626 - 2026-10-29 09:58 ET (pre-entry window; no entries before 10:00)
+Equity $407.69, all cash, no positions. SPY 767.68 (-0.6%), QQQ 713.08 (-1.7%), SMH 556.34 (-2.0%), XLE 68.91 (+0.7%), IWM 283.76 (+0.9%), EWZ 33.42 (-0.6%). Rotation out of large-cap tech into small caps and energy. Depth scan (mcap>=5B, <=-5%): 30 hits, mostly earnings reactions: GOOGL -12.9% and GOOG -12.7% (own earnings miss, company-specific -> gate 1 FAIL), NOW -23.4%, FTNT -21.1%, SFM -19.1%, ALNY -15.6%, IOVA -27.7%, CAT -7.9%, HONA -11.5%, TT -7.0% (all own-earnings/company-specific, FAIL). Sector-flavoured AI-hardware names: MRVL -13.5% (cause unverified), TER -7.1% (RSI 36.4), CLS -6.8%, NBIS -6.2%, CIEN -5.5%, ALAB -5.1%, MXL -7.0%, ORCL -3.3%; the group is weak with Alphabet's report as a plausible but still unconfirmed shared cause (no dated source found). Gold miners (EGO, AGI, KGC, -5 to -9%) also hit, cause unknown. Not entering anything: the clock is before 10:00 ET and no candidate has cleared gate 1 yet. Tier A will be evaluated from the 10:02 cycle with a dated-cause search, stabilization (5-min higher low) and the earnings-within-2-days check. Nothing held.
