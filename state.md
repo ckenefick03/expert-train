@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-30 14:16 ET",
+  "as_of": "2026-10-30 14:36 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Hourly cycle: semis grinding to new lows, defensives bid; no gate-passing setup. Flat, no entry.",
+  "status_note": "Tier C open, day minimum unmet (forced tag would apply). Semis still sliding to lows; no stabilized setup. No entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-30",
@@ -2833,6 +2833,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-30 14:16 ET",
       "equity": 406.78
+    },
+    {
+      "t": "2026-10-30 14:36 ET",
+      "equity": 406.78
     }
   ],
   "positions": [],
@@ -2959,14 +2963,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Risk-off tech continues into mid-afternoon: SMH -8.2% at new lows, defensive staples/pharma bid.",
+    "read": "Selloff accelerating again into mid-afternoon: SMH -8.8% new lows, QQQ -4.3%, SPY -2.4%.",
     "chips": [
-      "SPY -2.1%",
-      "QQQ -4.0%",
-      "SMH -8.2%",
-      "IGV -3.9%",
-      "GDX -6.3%",
-      "XLE +1.4%"
+      "SPY -2.4%",
+      "QQQ -4.3%",
+      "SMH -8.8%",
+      "IGV -4.2%",
+      "GDX -6.7%",
+      "XLE +1.2%"
     ]
   }
 }
@@ -8370,3 +8374,12 @@ Momentum scan (>=+2.5%, relvol>=1.0): 15 names: SPOT +5.6%, AZN +7.3%, GPN +11.5
 MR depth scan not re-run (13:55 scan stands).
 No entry. 0 trades today vs the 1/day target; the target is not a reason to loosen gates.
 Plan: Tier C opens 14:30 (forced tag, all four gates; the day's minimum is unmet so it would be forced); the 15:47 recap states overnight status (default flat); no weekend holding without an explicit hold decision.
+
+### Cycle 677 - 14:36 ET (Fri Oct 30)
+(The 14:22 trigger was skipped under the 6-minute rule; this trigger is the 14:32 run, delivered 14:33.) Tier C (14:30-15:30) is now open; the day's minimum (1 trade) is unmet, so any entry would carry the forced tag. Forced does not relax any of the four gates.
+Equity $406.78, cash/buying power $406.78, flat, no positions (orders not re-checked; nothing open or placed).
+Tape at 14:33: SPY 751.15 (-2.4%), QQQ 684.41 (-4.3%), SMH 512.43 (-8.8%), IGV 103.42 (-4.2%), GDX 75.91 (-6.7%), XLE 69.56 (+1.2%). AMD 493.59 (-12.9%), ARM 199.17 (-12.9%), AVGO 319.77 (-7.3%), TSM 401.17 (-7.1%), MU 865.04 (-7.4%), NVDA 201.29 (-5.8%), MRVL 190.38 (-12.8%).
+5-min 18:00-18:30Z: lower lows in every name: SMH 513.21 then 513.30, AMD 495.30, AVGO 320.21, TSM 401.50, MU 864.10, NVDA 201.49, MRVL 190.73. The 13:45-14:15 flat base is broken; the selloff is extending into the 14:30 hour. Gate 4 (5-min higher low) FAILS for all of them, so no mean-reversion forced entry is possible.
+Scans not re-run this cycle (momentum 14:13: all rejected; MR depth 13:55; disclosed). No new dated source needed; none of the candidates would otherwise pass.
+No entry. 0 trades today vs the 1/day target; the target is not a reason to loosen gates, and the forced tag does not waive the stabilization gate. A day with no trade is logged honestly as a missed minimum, not filled with a bad entry.
+Plan: Tier C continues to 15:30 (re-check for a 5-min higher low as the session closes; any entry after about 15:15 would have a short runway before the 15:47 flat default); 15:47 recap states overnight status (default flat; Friday weekend risk applies).
