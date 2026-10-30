@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-29 15:49 ET",
+  "as_of": "2026-10-30 08:36 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,12 +41,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash ($406.78) - nothing held overnight. Day: 1 trade (TEAM, -$0.91, -0.43R). Next: pre-open brief Fri 08:28 ET.",
+  "status_note": "Flat, all cash ($406.78). Pre-open brief done (read-only). Entries open 10:00 ET. Large AI-semis dislocation to evaluate.",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-10-29",
-    "start_equity": 407.69,
-    "trades": 1,
+    "date": "2026-10-30",
+    "start_equity": 406.78,
+    "trades": 0,
     "forced": 0
   },
   "equity_history": [
@@ -2761,6 +2761,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-29 15:49 ET",
       "equity": 406.78
+    },
+    {
+      "t": "2026-10-30 08:36 ET",
+      "equity": 406.78
     }
   ],
   "positions": [],
@@ -2887,13 +2891,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Close: tech/software weak (QQQ -1.6, IGV -4.2), small caps firm (IWM +0.7). Flat; nothing held overnight.",
+    "read": "Risk-off at the open: Nasdaq futures about -2.5%, SMH -5.2% premarket after Intel guided far below consensus (INTC -25%) and Amazon fell about 7% on capex/free-cash-flow worries, on top of Alphabet. Gold miners and crypto stocks also weak. Energy firm on XOM/CVX beats.",
     "chips": [
-      "SPY -0.5",
-      "QQQ -1.6",
-      "SMH -1.4",
-      "IGV -4.2",
-      "IWM +0.7"
+      "SPY -1.0 pre",
+      "QQQ -2.5 pre",
+      "SMH -5.2 pre",
+      "XLE +1.4 pre",
+      "GDX -3.0 pre",
+      "IWM -0.5 pre"
     ]
   }
 }
@@ -8107,3 +8112,17 @@ Stop checks: n/a, no positions. Reconciled live: equity $406.78, all cash, posit
 - What I'd watch / lessons (not rule changes): (1) After a single-peer print triggers a sector sell-off, check that peer's own tape (NOW) for stabilisation before entering a sympathy name. (2) The gate-1 sourcing standard worked as intended: three sectors failed for lack of a dated cause, and the one trade came when a dated cause was found.
 - Open items for the user (unchanged): (1) momentum gate-1 'several sessions' clause screens out every fresh earnings gap - possible exemption? (2) PDT / settled-funds applicability on this limited_margin account is still unverified; this was the third same-day round trip in two days with no broker alert.
 - Next: pre-open brief Fri 2026-10-30 ~08:28 ET. Note: US clocks fall back on Sun Nov 1, after which ET = UTC-5 and the UTC cron times shift an hour relative to ET.
+
+### Pre-open brief - Fri 2026-10-30 (2026-10-30 08:37 ET; trigger fired ~5 min late) - read-only, no orders
+**Account:** equity $406.78, all cash, no positions, no open orders (reconciled live). Stop checks: n/a. Peak $437.99, breaker $394.19, daily loss limit $100. Start-of-day equity $406.78.
+**Tape (premarket vs Thursday's close):** SPY 761.5 (-1.0%), QQQ 697.1 (-2.5%), SMH 532.5 (-5.2%), IWM 282.5 (-0.5%), IGV 106.8 (-1.1%), XLE 69.6 (+1.4%), GDX 78.9 (-3.0%), EWZ 32.7 (-1.3%). Semis: AMD 512.6 (-9.5%), MU 874.9 (-6.4%), SNDK 1202 (-9.6%), AVGO 330.0 (-4.4%), TSM 415.0 (-3.9%), NVDA 207.6 (-2.8%), INTC 69.3 (-24.7%), MPWR 1189 (-0.8%). Mega-caps: AMZN 226.0 (-7.3%), AAPL 344.5 (-1.3%), META 614 (-1.7%), MSFT 527.8 (-0.4%), GOOGL 280.7 (-1.1%). Other: RDDT 100.9 (-22%), TWLO 195 (-19%), RBLX 43.9 (-16%), COIN 150 (-6.5%), MSTR 131.6 (-7.1%), PINS 18.6 (-6.6%); up: GILD 173 (+4.7%), DXCM 83 (+3-4%).
+**News (sources found this cycle, all dated Oct 29/30 2026):** CNBC live blog 'Nasdaq-100 futures fall 2% as Amazon and Intel tumble after earnings', TipRanks, Invezz, TradingKey, BigGo. Intel guided Q4 revenue to $15-16B vs about $17.05B consensus and said PC weakness may last into 1H 2027; shares about -25% premarket. Amazon about -7% on negative free-cash-flow concerns with 2026 capex held at $220B. SanDisk -8-9% despite beating and guiding up (read as risk reduction, not fundamentals). One analyst warned semis could fall another 10-15% before finding support. Alphabet's results the day before were cited as the earlier trigger for AI-spending worries. Gold reported below $4,000. A crypto sell-off was mentioned by one source. I could not find a dated source on the cause of the RDDT/TWLO/RBLX moves beyond their own results (all three reported Oct 29 after the close).
+**Earnings (calendar):** reported Oct 29 after the close, so inside the 2-trading-day window today (do NOT trade): AMZN, INTC, SNDK, MPWR, RDDT, TWLO, RBLX, PINS, COIN, MSTR, GILD, DXCM, FSLR, SBUX, RMD, DLR, ILMN. Reported this morning (Oct 30): XOM, CVX, ABBV, REGN, AZN, GD, BP, CL, CBOE, EXC and others, all beats on EPS except LYB and OMF (small misses). I did not find AMD, MU, AVGO, NVDA or TSM on the Oct 29-30 calendar (high-cap filter), so they are not in a 2-day window as far as the calendar shows; re-verify AMD (due early Nov) at the open.
+**Mean-reversion watch (gates not yet checked; Tier A opens 10:00 ET and needs >=5% on the stock, sector ETF >=2% down, daily RSI<35, a dated external cause, a 5-min higher low):**
+1. AMD (-9.5% pre): SMH -5.2%, cause = sector selloff triggered by Intel's guide (Intel's own earnings is the trigger, not AMD's); check daily RSI (likely well above 35 after a big run, which would block Tier A and leave Tier B from 11:30), the earnings date, and stabilisation.
+2. MU (-6.4%) and AVGO (-4.4%): same logic; AVGO may be too shallow for Tier A.
+3. NVDA (-2.8%) / TSM (-3.9%): likely too shallow for Tier A, possible Tier B if they extend to -3.5% and stabilise.
+4. Gold miners (GDX -3.0% on top of -2.8% yesterday, gold below $4,000): second straight down day; gate 4 (trend structure) and gate 1 (dated cause, plus the Oct 28 earnings misses at EGO/AGI) need checking; likely FAIL.
+5. Excluded as own-earnings or inside the window: INTC, AMZN, SNDK, MPWR, RDDT, TWLO, RBLX, PINS, COIN, MSTR.
+**Momentum watch (earliest 10:30 ET; needs divergence from the peer group over several sessions, a dated catalyst and a held pullback with a higher low):** 1) Energy majors XOM / CVX (EPS 4.23 vs 4.01 and 5.28 vs 4.82 reported this morning; XLE +1.4% pre): check which outperforms the group and holds a higher low. 2) REGN (EPS 20.07 vs 15.75) and AZN (2.79 vs 1.44): earnings gaps, likely fail the 'several sessions' clause. 3) GILD (+4.7%, reported Oct 29 pm): inside the earnings window for MR but not a momentum blocker; one-day gap. 4) GD (4.49 vs 4.13) as part of defense. 5) Defensive/low-beta names holding up on a risk-off day.
+**Plan:** no entry before 10:00 ET. Standing rules unchanged ($105 entry, max 5 positions, 30-minute hold, default flat by 15:47 ET). Today is Friday: overnight/weekend holds are a larger risk than usual (the weekend, plus the Nov 1 clock change), so the default 'flat before the bell' applies strongly. Open items for the user are unchanged (momentum 'several sessions' exemption; PDT / settled funds on limited_margin). DST note: ET becomes UTC-5 on Sun Nov 1; the UTC cron times will then land an hour earlier in ET from Monday.
