@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-30 11:58 ET",
+  "as_of": "2026-10-30 12:16 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Hourly cycle: only momentum name (SPOT) lacks a dated catalyst; MR semis still falling. Flat, no entry.",
+  "status_note": "Flat. Semis making new lows, no base; momentum scan only repeats SPOT/CDNA/CLBK. No entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-30",
@@ -2801,6 +2801,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-30 11:58 ET",
       "equity": 406.78
+    },
+    {
+      "t": "2026-10-30 12:16 ET",
+      "equity": 406.78
     }
   ],
   "positions": [],
@@ -2927,12 +2931,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Tape flat to slightly lower into midday; semis no base, only SPOT/CDNA up on volume. Energy mildly bid.",
+    "read": "Grinding lower: SMH and AMD at new session lows at 12:15. No rebound.",
     "chips": [
-      "SPY -1.5%",
-      "QQQ -3.0%",
-      "SMH -6.6%",
-      "IGV -3.1%",
+      "SPY -1.6%",
+      "QQQ -3.2%",
+      "SMH -7.1%",
+      "IGV -3.2%",
       "GDX -5.3%",
       "XLE +1.4%"
     ]
@@ -8251,3 +8255,12 @@ MR: depth scan not re-run (last 11:18, all rejected); semis RSI test (<35 for Ti
 0 trades today vs the 1/day target; the target is not a reason to loosen gates.
 Open items for the user (unchanged): (1) momentum gate-1 "several sessions" clause screens out every fresh earnings gap; (2) PDT/settled-funds on limited_margin unverified.
 Plan: 12:12 onward keep watching a 5-min base in semis; Tier C opens 14:30; recap at 15:47 with explicit flat/overnight status.
+
+### Cycle 669 - 12:16 ET (Fri Oct 30)
+(The 10:22 trigger fired late at 12:14 ET; the 12:02 trigger was skipped under the 6-minute rule.)
+Equity $406.78, cash/buying power $406.78, flat, no positions (orders not re-checked; nothing open or placed).
+Tape at 12:14: SPY 756.94 (-1.6%), QQQ 692.15 (-3.2%), SMH 522.06 (-7.1%), IGV 104.55 (-3.1%), GDX 77.02 (-5.3%), XLE 69.65 (+1.4%). AMD 505.79 (-10.7%), ARM 203.69 (-11.0%), AVGO 325.25 (-5.7%), TSM 406.82 (-5.8%), MU 882.20 (-5.6%), NVDA 204.87 (-4.1%).
+5-min structure 15:40-16:10Z: new session lows again (AMD 507.00, SMH 522.65, ARM 202.74 at 16:00Z, MU 880.22, TSM 407.25, AVGO 325.11). No higher low, so gate 4 (stabilization) still FAILS for the whole semis complex.
+Momentum scan (mcap>=2B, avgvol>=1M, >=+2.5%, relvol>=1.0): the same 3 names, SPOT +5.3%, CDNA +22.9%, CLBK +3.1%, all rejected in Cycle 668 (no dated catalyst/no several-session divergence/2R target unreachable before the flat). No new names.
+MR depth scan not re-run (last 11:18); no new RSI<35 semis names; no entry. No news search this cycle (hourly search done at 11:55).
+0 trades today vs the 1/day target; the target is not a reason to loosen gates. Tier C opens 14:30 only for the unmet minimum, forced tag, all four gates still apply; stabilization failure is not waived by a tag.
