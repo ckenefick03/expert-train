@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-30 13:58 ET",
+  "as_of": "2026-10-30 14:16 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat. Broadened RSI<40 depth scan (42 names); MRVL examined and rejected; semis still at lows. No entry.",
+  "status_note": "Hourly cycle: semis grinding to new lows, defensives bid; no gate-passing setup. Flat, no entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-30",
@@ -2829,6 +2829,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-30 13:58 ET",
       "equity": 406.78
+    },
+    {
+      "t": "2026-10-30 14:16 ET",
+      "equity": 406.78
     }
   ],
   "positions": [],
@@ -2955,14 +2959,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Selloff persists into the afternoon: SMH -8.1% at 515.9, QQQ -3.9%. Broad AI/semis and software lows.",
+    "read": "Risk-off tech continues into mid-afternoon: SMH -8.2% at new lows, defensive staples/pharma bid.",
     "chips": [
-      "SPY -2.0%",
-      "QQQ -3.9%",
-      "SMH -8.1%",
-      "IGV -4.0%",
-      "GDX -6.1%",
-      "XLE +1.3%"
+      "SPY -2.1%",
+      "QQQ -4.0%",
+      "SMH -8.2%",
+      "IGV -3.9%",
+      "GDX -6.3%",
+      "XLE +1.4%"
     ]
   }
 }
@@ -8355,3 +8359,14 @@ Broadened MR depth scan (mcap>=5B, avgvol>=1M, <=-5%, daily RSI<40): 42 names. N
 Momentum: not re-scanned (13:33 scan stands; disclosed).
 No entry. 0 trades today vs the 1/day target; the target is not a reason to loosen gates.
 Plan: re-check the semis base at the next cycles; Tier C 14:30 only if the minimum is unmet (forced tag), still all four gates; a stabilization requires at least two clean higher 5-min lows, a sector bounce is not the same as a stock stabilizing.
+
+### Cycle 676 (hourly) - 14:16 ET (Fri Oct 30)
+(Hourly trigger scheduled 14:12 ET, delivered 14:13 ET.)
+Equity $406.78, cash/buying power $406.78, flat, no positions (orders not re-checked; nothing open or placed).
+Tape at 14:13: SPY 753.23 (-2.1%), QQQ 686.69 (-4.0%), SMH 515.45 (-8.2%), IGV 103.79 (-3.9%), GDX 76.19 (-6.3%), XLE 69.69 (+1.4%). AMD 498.49 (-12.0%), ARM 201.21 (-12.0%), AVGO 321.89 (-6.7%), TSM 403.28 (-6.6%), MU 869.17 (-7.0%), NVDA 202.58 (-5.2%), MRVL 191.86 (-12.1%).
+5-min 17:50-18:10Z: the 13:58 sector base did not hold: SMH low 514.86 (below the 516.91 retest), AMD 497.00 (below 498.00), AVGO 321.61 (below 322.96), MU 868.03 (below 868.40... lower), MRVL 190.80 (below 191.70). New lows across the complex again. Gate 4 FAILS for all.
+News: dated Oct 30 sources from Cycles 664 and 670 stand for the semis/AI cause. A search for the Oct 29 MRVL drop found no source covering Oct 29 (only mid-October pieces: a Trefis piece on MRVL -17.2% over Oct 9-16 and its Oct 6 Investor Day; next earnings about Nov 30/Dec 1). MRVL's Oct 29 -13% leg remains unexplained, so MRVL stays rejected (gate 1 partly unverified, gate 4 downtrend and lower lows).
+Momentum scan (>=+2.5%, relvol>=1.0): 15 names: SPOT +5.6%, AZN +7.3%, GPN +11.5% (relvol 5.0), BAH +5.8% (RSI 74), CDNA +19.1%, VRTX +3.3%, PEP +3.4%, MDLZ +3.8%, SJM +3.3%, FIS +3.3%, FISV +2.9%, BALL +2.7%, TCOM +2.7%, CELH +2.9%, CLBK +2.8%. The cluster is defensive staples/pharma and payments rotation out of tech; none has a sourced Oct 30 catalyst pulled this cycle other than AZN's earnings (one-day gap), and none was checked for multi-session divergence: GPN/FIS/FISV (payments move together with no sourced reason), BAH RSI 74 chasing, staples (PEP/MDLZ/SJM/CELH) are sector rotation, not stock-specific leadership. All FAIL gate 1 (no dated stock-level catalyst) and the several-sessions clause is unverified; I do not trade a rotation bid without a catalyst. Disclosed gap: no per-name catalyst search was run for the staples cluster.
+MR depth scan not re-run (13:55 scan stands).
+No entry. 0 trades today vs the 1/day target; the target is not a reason to loosen gates.
+Plan: Tier C opens 14:30 (forced tag, all four gates; the day's minimum is unmet so it would be forced); the 15:47 recap states overnight status (default flat); no weekend holding without an explicit hold decision.
