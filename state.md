@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-30 10:55 ET",
+  "as_of": "2026-10-30 11:05 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Hourly cycle: full MR RSI<35 scan done, every candidate fails trend gate. Flat, no entry.",
+  "status_note": "Flat. Tape flat-to-weak, no momentum names, no stabilized MR setup. Tier B opens 11:30.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-30",
@@ -2785,6 +2785,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-30 10:55 ET",
       "equity": 406.78
+    },
+    {
+      "t": "2026-10-30 11:05 ET",
+      "equity": 406.78
     }
   ],
   "positions": [],
@@ -2911,14 +2915,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Risk-off tech, small bounce off lows. No momentum leaders (zero +3% names with volume). Energy mildly bid.",
+    "read": "Risk-off tech persists, no rebound; no up-movers with volume. Energy mildly bid.",
     "chips": [
-      "SPY -1.2%",
-      "QQQ -2.6%",
-      "SMH -5.6%",
-      "IGV -2.4%",
-      "GDX -4.6%",
-      "XLE +1.5%"
+      "SPY -1.4%",
+      "QQQ -2.8%",
+      "SMH -6.2%",
+      "IGV -2.7%",
+      "GDX -4.8%",
+      "XLE +1.3%"
     ]
   }
 }
@@ -8197,3 +8201,11 @@ Momentum: scan at 10:43 found zero +3% names. XLE +1.5% only; no qualifying lead
 Gap: IREN not examined; the standard morning search returned no Oct 30 sources but this extended search did.
 0 trades today vs the 1/day target; gates unchanged.
 Plan: 11:30 Tier B review for semis leaders; Tier C (14:30-15:30) opens only if the day's minimum is unmet and carries the forced tag.
+
+### Cycle 665 - 11:05 ET (Fri Oct 30)
+Equity $406.78, cash/buying power $406.78, flat, no positions (orders not re-checked; nothing open or placed).
+Tape at 11:04: SPY 758.92 (-1.4%), QQQ 695.29 (-2.8%), SMH 526.82 (-6.2%), IGV 105.01 (-2.7%), GDX 77.47 (-4.8%), XLE 69.60 (+1.3%). AMD 512.88 (-9.5%), MU 890.35 (-4.7%), AVGO 326.56 (-5.3%), NVDA 206.28 (-3.5%), TSM 411.95 (-4.6%), ARM 204.35 (-10.7%), TER 273.00 (-7.8%).
+Momentum scan (mcap>=2B, avgvol>=1M, >=+2.5%, relvol>=1.0): 0 results. No momentum candidates.
+MR: the full RSI<35 depth scan was run at 10:55 (Cycle 664); every candidate failed. No new scan this cycle (disclosed). Semis are still making no 5-min base: SMH is at new lows for the day versus 10:43. Tier A RSI test still unmet for AMD/MU/AVGO/NVDA/TSM/ARM (no daily RSI re-check this cycle, last AMD 51). No entry.
+0 trades today vs the 1/day target; gates unchanged.
+Plan: 11:30 Tier B review (>=3.5% intraday or >=7%/3d, stabilization, dated source in hand from Cycle 664) for semis leaders; check daily structure for each (AVGO, TSM, NVDA were in uptrends before today).
