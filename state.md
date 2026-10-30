@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-30 14:36 ET",
+  "as_of": "2026-10-30 14:46 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Tier C open, day minimum unmet (forced tag would apply). Semis still sliding to lows; no stabilized setup. No entry.",
+  "status_note": "Tier C open, flat. Semis printing fresh lows (SMH 511.6); small bounce, no higher low. No entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-30",
@@ -2837,6 +2837,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-30 14:36 ET",
       "equity": 406.78
+    },
+    {
+      "t": "2026-10-30 14:46 ET",
+      "equity": 406.78
     }
   ],
   "positions": [],
@@ -2963,14 +2967,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Selloff accelerating again into mid-afternoon: SMH -8.8% new lows, QQQ -4.3%, SPY -2.4%.",
+    "read": "Late-session pressure persists; SMH low 511.63 at 14:35 ET then a small uptick; no confirmed base.",
     "chips": [
-      "SPY -2.4%",
-      "QQQ -4.3%",
-      "SMH -8.8%",
-      "IGV -4.2%",
-      "GDX -6.7%",
-      "XLE +1.2%"
+      "SPY -2.3%",
+      "QQQ -4.2%",
+      "SMH -8.6%",
+      "IGV -4.0%",
+      "GDX -6.5%",
+      "XLE +1.4%"
     ]
   }
 }
@@ -8383,3 +8387,12 @@ Tape at 14:33: SPY 751.15 (-2.4%), QQQ 684.41 (-4.3%), SMH 512.43 (-8.8%), IGV 1
 Scans not re-run this cycle (momentum 14:13: all rejected; MR depth 13:55; disclosed). No new dated source needed; none of the candidates would otherwise pass.
 No entry. 0 trades today vs the 1/day target; the target is not a reason to loosen gates, and the forced tag does not waive the stabilization gate. A day with no trade is logged honestly as a missed minimum, not filled with a bad entry.
 Plan: Tier C continues to 15:30 (re-check for a 5-min higher low as the session closes; any entry after about 15:15 would have a short runway before the 15:47 flat default); 15:47 recap states overnight status (default flat; Friday weekend risk applies).
+
+### Cycle 678 - 14:46 ET (Fri Oct 30)
+Equity $406.78, cash/buying power $406.78, flat, no positions (orders not re-checked; nothing open or placed). Tier C open; day minimum unmet (forced tag would apply; all four gates still required).
+Tape at 14:43: SPY 751.49 (-2.3%), QQQ 684.95 (-4.2%), SMH 513.56 (-8.6%), IGV 103.69 (-4.0%), GDX 76.07 (-6.5%), XLE 69.67 (+1.4%). AMD 494.95 (-12.6%), ARM 199.87 (-12.6%), AVGO 320.54 (-7.1%), TSM 400.86 (-7.2%), MU 865.77 (-7.3%), NVDA 201.65 (-5.6%), MRVL 192.01 (-12.1%).
+5-min 18:30-18:40Z: SMH low 511.63 (new session low) then a green bar; AMD low 492.24, AVGO 319.30, TSM 400.56, MU 861.59, NVDA 200.92, MRVL 190.15: new lows again in the 18:30-18:35 bars, then the first small green bars (the 18:35 closes are above the 18:30 closes). One bounce bar after fresh lows is not a higher low; gate 4 FAILS.
+MR depth scan (RSI<35, <=-5%, mcap>=5B): 15 names, same set as before (TER, APP, CBRS, NOW, RDDT, HOOD, CORT, AGI, SSRM, IREN, KGC, UMC, XP, CDE, AUR). XP is new (RSI 28.5, -5.0%, Brazilian broker, no dated cause sourced; FAIL gate 1). All others as already rejected; APP and HOOD hit new lows (APP -11.3%, HOOD -10.3%). NOW and RDDT remain excluded for earnings.
+Momentum not re-scanned (14:13 scan: all names rejected).
+No entry. 0 trades today vs the 1/day target; the forced tag does not waive the stabilization gate.
+Plan: re-check for a clean 5-min higher low before 15:15 cutoff for any practical entry; 15:47 recap states overnight status (default flat).
