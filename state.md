@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-30 11:20 ET",
+  "as_of": "2026-10-30 11:46 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat. Last Tier A minutes: no candidate passes. Tier B opens 11:30.",
+  "status_note": "Tier B open, flat. Semis grinding lower with no 5-min base. No entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-30",
@@ -2793,6 +2793,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-30 11:20 ET",
       "equity": 406.78
+    },
+    {
+      "t": "2026-10-30 11:46 ET",
+      "equity": 406.78
     }
   ],
   "positions": [],
@@ -2919,14 +2923,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Risk-off tech holds; flat session lows, no rebound. Metals miners and crypto-miners also weak.",
+    "read": "Slow bleed lower across tech/semis; no stabilization at 11:45. Energy mildly bid.",
     "chips": [
-      "SPY -1.4%",
-      "QQQ -2.8%",
-      "SMH -6.2%",
-      "IGV -2.7%",
-      "GDX -5.0%",
-      "XLE +1.5%"
+      "SPY -1.5%",
+      "QQQ -3.1%",
+      "SMH -6.7%",
+      "IGV -3.3%",
+      "GDX -5.4%",
+      "XLE +1.3%"
     ]
   }
 }
@@ -8222,3 +8226,11 @@ MR depth scan (mcap>=5B, avgvol>=1M, <=-5%, daily RSI<38), 21 names: TER, APP, W
 Momentum: none (last scan 11:04 found zero; no re-run this cycle).
 0 trades today vs the 1/day target; gates unchanged.
 Plan: from 11:30 Tier B for semis leaders: AMD -9.3%, ARM -10.4%, AVGO -5.2%, TSM -4.8%, MU -4.6% need a 5-min higher low and daily-structure check (AMD/ARM/AVGO daily trend before today to be pulled).
+
+### Cycle 667 - 11:46 ET (Fri Oct 30)
+Equity $406.78, cash/buying power $406.78, flat, no positions (orders not re-checked; nothing open or placed). Tier B window (11:30-14:30) now open.
+Tape at 11:44: SPY 757.56 (-1.5%), QQQ 693.21 (-3.1%), SMH 524.41 (-6.6%), IGV 104.44 (-3.3%), GDX 76.91 (-5.4%), XLE 69.61 (+1.3%). AMD 511.65 (-9.7%), ARM 203.67 (-11.0%), AVGO 325.93 (-5.5%), TSM 408.30 (-5.4%), MU 883.59 (-5.4%), NVDA 205.68 (-3.7%).
+5-min structure 15:00-15:40Z (11:00-11:40 ET): every semis name is making lower highs and lower lows into the latest bar: AMD 510.52 low (latest), ARM 203.00, AVGO 325.67, TSM 408.08, MU 884.23, SMH 524.03. No higher low anywhere, so gate 4 (5-min stabilization) FAILS for all. Dated cause (Oct 30 CNBC/Morningstar, Cycle 664) still stands for gate 1, but daily structure/earnings window not re-checked for AMD/ARM/AVGO/TSM/MU as they cannot pass stabilization anyway.
+No new scans this cycle (MR depth scan run 11:18, momentum 11:04; disclosed). No entry.
+0 trades today vs the 1/day target; the target is not a reason to loosen gates. Tier C (14:30-15:30) opens only if the day's minimum is unmet and would carry the forced tag; all four gates still apply.
+Plan: keep watching for a 5-min higher low in semis leaders; a falling knife is not bought. Weekend risk applies to anything held past 15:47 ET.
