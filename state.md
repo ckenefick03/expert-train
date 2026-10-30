@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-30 13:35 ET",
+  "as_of": "2026-10-30 13:45 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat. Semis starting to base (higher 5-min lows since 13:15) but no name passes all gates. No entry.",
+  "status_note": "Flat. Semis bounce attempt failed; new 5-min lows again. No entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-30",
@@ -2821,6 +2821,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-30 13:35 ET",
       "equity": 406.78
+    },
+    {
+      "t": "2026-10-30 13:45 ET",
+      "equity": 406.78
     }
   ],
   "positions": [],
@@ -2947,14 +2951,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Semis mild bounce attempt off 517.3 lows; still near session lows. Defensives (AZN, PEP) bid.",
+    "read": "Semis bounce failed at 13:35-13:40 ET, new session lows (SMH 516.9, TSM 403.0, MU 870.9).",
     "chips": [
-      "SPY -1.9%",
+      "SPY -1.8%",
       "QQQ -3.7%",
       "SMH -7.8%",
-      "IGV -3.7%",
-      "GDX -5.8%",
-      "XLE +1.6%"
+      "IGV -3.9%",
+      "GDX -5.9%",
+      "XLE +1.5%"
     ]
   }
 }
@@ -8328,3 +8332,10 @@ Gate review: AMD has the best 5-min shape but FAILS the earnings rule (Nov 3 pm)
 Momentum scan (>=+2.5%, relvol>=1.0): SPOT +5.6%, AZN +7.5%, PEP +3.5%, GPN +10.0%, CDNA +21.9%, BALL +2.7% (new, RSI 64, $17B), FIS +3.0%. BALL: no catalyst sourced and no multi-session divergence evidence pulled, FAIL; the rest unchanged from Cycle 672 (FAIL).
 No entry. 0 trades today vs the 1/day target; the target is not a reason to loosen gates.
 Plan: watch for the semis bounce to build into a base by 14:30; any Tier C attempt (forced tag) still needs all four gates; 15:47 recap states overnight status (default flat).
+
+### Cycle 674 - 13:45 ET (Fri Oct 30)
+Equity $406.78, cash/buying power $406.78, flat, no positions (orders not re-checked; nothing open or placed).
+Tape at 13:42: SPY 755.16 (-1.8%), QQQ 688.57 (-3.7%), SMH 517.86 (-7.8%), IGV 103.81 (-3.9%), GDX 76.50 (-5.9%), XLE 69.75 (+1.5%). AMD 499.70 (-11.8%), ARM 202.64, AVGO 324.05 (-6.1%), TSM 403.86 (-6.5%), MU 873.82 (-6.5%), NVDA 203.22 (-4.9%).
+5-min 17:30-17:40Z: the bounce from Cycle 673 failed. SMH low 516.91 (below the 517.34 prior low), AMD low 498.00 (below 498.05), TSM 403.02 (below 404.15), MU 870.85 (below 874.27), AVGO 322.96 (below 323.16), NVDA 202.83. New lows across the complex, so gate 4 (higher low) FAILS for all; no mean-reversion candidate qualifies, and AVGO/TSM/MU/NVDA still fail the down-more-than-SMH clause.
+Scans not re-run (momentum 13:33, MR depth 13:15; disclosed). No entry.
+0 trades today vs the 1/day target; the target is not a reason to loosen gates. Tier C opens 14:30 (forced tag, all four gates). Friday weekend-risk applies; 15:47 recap next; default flat.
