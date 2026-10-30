@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-30 13:20 ET",
+  "as_of": "2026-10-30 13:35 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Hourly cycle: semis at fresh lows again, momentum names are one-day gaps. Flat, no entry.",
+  "status_note": "Flat. Semis starting to base (higher 5-min lows since 13:15) but no name passes all gates. No entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-30",
@@ -2817,6 +2817,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-30 13:20 ET",
       "equity": 406.78
+    },
+    {
+      "t": "2026-10-30 13:35 ET",
+      "equity": 406.78
     }
   ],
   "positions": [],
@@ -2943,14 +2947,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Selloff extending: SMH new lows 517.6 at 13:15; defensives/health care (AZN earnings beat) bid.",
+    "read": "Semis mild bounce attempt off 517.3 lows; still near session lows. Defensives (AZN, PEP) bid.",
     "chips": [
-      "SPY -1.8%",
+      "SPY -1.9%",
       "QQQ -3.7%",
       "SMH -7.8%",
-      "IGV -3.9%",
-      "GDX -5.7%",
-      "XLE +1.7%"
+      "IGV -3.7%",
+      "GDX -5.8%",
+      "XLE +1.6%"
     ]
   }
 }
@@ -8314,3 +8318,13 @@ Momentum scan (>=+2.5%, relvol>=1.0): SPOT +5.6%, AZN +7.5%, PEP +3.5%, GPN +12.
 No entry. 0 trades today vs the 1/day target; the target is not a reason to loosen gates.
 Open items for the user (unchanged): (1) momentum gate-1 "several sessions" clause screens out every fresh earnings gap, e.g. AZN today; (2) PDT/settled-funds on limited_margin unverified.
 Plan: Tier C 14:30-15:30 only if the minimum is unmet (forced tag, all four gates); the 15:47 recap states overnight status (default flat).
+
+### Cycle 673 - 13:35 ET (Fri Oct 30)
+(The 13:32 ET trigger fired at 13:33 ET; the 13:22 trigger was skipped under the 6-minute rule.)
+Equity $406.78, cash/buying power $406.78, flat, no positions (orders not re-checked; nothing open or placed).
+Tape at 13:33: SPY 755.02 (-1.9%), QQQ 688.65 (-3.7%), SMH 517.72 (-7.8%), IGV 103.94 (-3.7%), GDX 76.63 (-5.8%), XLE 69.82 (+1.6%). AMD 498.63 (-12.0%), ARM 202.91 (-11.3%), AVGO 323.82 (-6.1%), TSM 403.65 (-6.5%), MU 872.50 (-6.6%), NVDA 203.14 (-4.9%).
+5-min 17:10-17:30Z: SMH lows 517.60, 517.34, 517.94, 518.50, so the first two higher lows since the 517.34 low have appeared; AMD lows 498.36, 498.05, 498.93, 499.26 (three higher lows into a small green sequence); AVGO 323.37/323.38/323.16/323.38 and TSM 404.44/404.15/404.22/404.36 are flat, not rising; MU still printing lows (874.27). A bounce attempt is just starting, after a long decline, so it is early to call a base.
+Gate review: AMD has the best 5-min shape but FAILS the earnings rule (Nov 3 pm) and daily-trend gate. AVGO/TSM/MU/NVDA are down less than SMH (-6.1/-6.5/-6.6/-4.9% vs -7.8%): FAIL the stock-down-more-than-sector clause. ARM FAIL (5-week downtrend; Cycle 671). No other mean-reversion candidates (depth scan from 13:15 stands; not re-run, disclosed).
+Momentum scan (>=+2.5%, relvol>=1.0): SPOT +5.6%, AZN +7.5%, PEP +3.5%, GPN +10.0%, CDNA +21.9%, BALL +2.7% (new, RSI 64, $17B), FIS +3.0%. BALL: no catalyst sourced and no multi-session divergence evidence pulled, FAIL; the rest unchanged from Cycle 672 (FAIL).
+No entry. 0 trades today vs the 1/day target; the target is not a reason to loosen gates.
+Plan: watch for the semis bounce to build into a base by 14:30; any Tier C attempt (forced tag) still needs all four gates; 15:47 recap states overnight status (default flat).
