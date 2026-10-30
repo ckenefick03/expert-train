@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-30 11:46 ET",
+  "as_of": "2026-10-30 11:58 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Tier B open, flat. Semis grinding lower with no 5-min base. No entry.",
+  "status_note": "Hourly cycle: only momentum name (SPOT) lacks a dated catalyst; MR semis still falling. Flat, no entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-30",
@@ -2797,6 +2797,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-30 11:46 ET",
       "equity": 406.78
+    },
+    {
+      "t": "2026-10-30 11:58 ET",
+      "equity": 406.78
     }
   ],
   "positions": [],
@@ -2923,14 +2927,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Slow bleed lower across tech/semis; no stabilization at 11:45. Energy mildly bid.",
+    "read": "Tape flat to slightly lower into midday; semis no base, only SPOT/CDNA up on volume. Energy mildly bid.",
     "chips": [
       "SPY -1.5%",
-      "QQQ -3.1%",
-      "SMH -6.7%",
-      "IGV -3.3%",
-      "GDX -5.4%",
-      "XLE +1.3%"
+      "QQQ -3.0%",
+      "SMH -6.6%",
+      "IGV -3.1%",
+      "GDX -5.3%",
+      "XLE +1.4%"
     ]
   }
 }
@@ -8234,3 +8238,16 @@ Tape at 11:44: SPY 757.56 (-1.5%), QQQ 693.21 (-3.1%), SMH 524.41 (-6.6%), IGV 1
 No new scans this cycle (MR depth scan run 11:18, momentum 11:04; disclosed). No entry.
 0 trades today vs the 1/day target; the target is not a reason to loosen gates. Tier C (14:30-15:30) opens only if the day's minimum is unmet and would carry the forced tag; all four gates still apply.
 Plan: keep watching for a 5-min higher low in semis leaders; a falling knife is not bought. Weekend risk applies to anything held past 15:47 ET.
+
+### Cycle 668 (hourly) - 11:58 ET (Fri Oct 30)
+Equity $406.78, cash/buying power $406.78, flat, no positions (orders not re-checked; nothing open or placed).
+Tape at 11:54: SPY 757.57 (-1.5%), QQQ 693.48 (-3.0%), SMH 524.48 (-6.6%), IGV 104.62 (-3.1%), GDX 77.00 (-5.3%), XLE 69.64 (+1.4%). AMD 510.45 (-9.9%), MU 885.67 (-5.2%), AVGO 326.06 (-5.5%), NVDA 205.85 (-3.7%), TSM 408.49 (-5.4%), ARM 204.20 (-10.7%). Semis flat-to-lower since 11:44, still no 5-min higher low (not re-pulled; prices within about 0.2% of the 11:44 readings).
+News: standard web search for the Oct 30 midday session returned nothing dated Oct 30 (older/other years only). The Oct 30 sources from Cycle 664 (CNBC, Morningstar, investingLive, MarketScreener) remain the dated cause. Gap disclosed.
+Momentum scan (mcap>=2B, avgvol>=1M, >=+2%, relvol>=1.0): 3 names: SPOT +5.5% (RSI 57), CDNA +23.8% (RSI 67), CLBK +2.8% (RSI 41).
+- SPOT FAIL: reported Q3 on Oct 22 (EPS 2.85 vs 3.11 est, a miss, stock +11% on the day); daily path since: 584 (Oct 23) down to 538 (Oct 28), back to 587 today, so it has recovered the whole pullback, not "held" it. No dated catalyst for today found (search returned no Oct 30 item). Momentum target >=2R: stop under the day's low (570.2, about -2.9%) means +5.8% target (about 621), above the Oct 23 high of 593.8 and not reachable before the 15:47 flat. Fails gates 2 and 3.
+- CDNA FAIL: +23.8% single-session gap (earnings-type), mcap about 3.7B; fails the several-sessions divergence clause; no catalyst sourced; would be a one-day gap chase.
+- CLBK FAIL: a $2.9B bank at +2.8%, no catalyst, RSI 41, not a leader.
+MR: depth scan not re-run (last 11:18, all rejected); semis RSI test (<35 for Tier A) not met; Tier B on semis blocked by gate 4 stabilization.
+0 trades today vs the 1/day target; the target is not a reason to loosen gates.
+Open items for the user (unchanged): (1) momentum gate-1 "several sessions" clause screens out every fresh earnings gap; (2) PDT/settled-funds on limited_margin unverified.
+Plan: 12:12 onward keep watching a 5-min base in semis; Tier C opens 14:30; recap at 15:47 with explicit flat/overnight status.
