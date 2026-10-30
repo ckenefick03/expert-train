@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-30 08:36 ET",
+  "as_of": "2026-10-30 09:50 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash ($406.78). Pre-open brief done (read-only). Entries open 10:00 ET. Large AI-semis dislocation to evaluate.",
+  "status_note": "Pre-10:00, flat, no entries. AI-semis selloff; daily RSI not yet <35 on the big semis.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-30",
@@ -2765,6 +2765,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-30 08:36 ET",
       "equity": 406.78
+    },
+    {
+      "t": "2026-10-30 09:50 ET",
+      "equity": 406.78
     }
   ],
   "positions": [],
@@ -2891,14 +2895,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Risk-off at the open: Nasdaq futures about -2.5%, SMH -5.2% premarket after Intel guided far below consensus (INTC -25%) and Amazon fell about 7% on capex/free-cash-flow worries, on top of Alphabet. Gold miners and crypto stocks also weak. Energy firm on XOM/CVX beats.",
+    "read": "Risk-off tech: Intel guide/Amazon capex drove an AI-semis rout. Energy bid, gold miners weak.",
     "chips": [
-      "SPY -1.0 pre",
-      "QQQ -2.5 pre",
-      "SMH -5.2 pre",
-      "XLE +1.4 pre",
-      "GDX -3.0 pre",
-      "IWM -0.5 pre"
+      "SPY -1.2%",
+      "QQQ -2.7%",
+      "SMH -5.4%",
+      "IGV -1.9%",
+      "GDX -4.1%",
+      "XLE +1.6%"
     ]
   }
 }
@@ -8126,3 +8130,9 @@ Stop checks: n/a, no positions. Reconciled live: equity $406.78, all cash, posit
 5. Excluded as own-earnings or inside the window: INTC, AMZN, SNDK, MPWR, RDDT, TWLO, RBLX, PINS, COIN, MSTR.
 **Momentum watch (earliest 10:30 ET; needs divergence from the peer group over several sessions, a dated catalyst and a held pullback with a higher low):** 1) Energy majors XOM / CVX (EPS 4.23 vs 4.01 and 5.28 vs 4.82 reported this morning; XLE +1.4% pre): check which outperforms the group and holds a higher low. 2) REGN (EPS 20.07 vs 15.75) and AZN (2.79 vs 1.44): earnings gaps, likely fail the 'several sessions' clause. 3) GILD (+4.7%, reported Oct 29 pm): inside the earnings window for MR but not a momentum blocker; one-day gap. 4) GD (4.49 vs 4.13) as part of defense. 5) Defensive/low-beta names holding up on a risk-off day.
 **Plan:** no entry before 10:00 ET. Standing rules unchanged ($105 entry, max 5 positions, 30-minute hold, default flat by 15:47 ET). Today is Friday: overnight/weekend holds are a larger risk than usual (the weekend, plus the Nov 1 clock change), so the default 'flat before the bell' applies strongly. Open items for the user are unchanged (momentum 'several sessions' exemption; PDT / settled funds on limited_margin). DST note: ET becomes UTC-5 on Sun Nov 1; the UTC cron times will then land an hour earlier in ET from Monday.
+
+### Cycle 660 - 09:50 ET (Fri Oct 30)
+Equity $406.78, cash $406.78, flat. Pre-10:00, no entries permitted. Orders were not checked this cycle (no positions open, none expected).
+Depth scan (mcap>=5B, avgvol>=1M, <=-3.5%, 148 names) parsed from the saved file. Daily RSI<35 among decliners: RDDT, CBRS, HOOD(35), UMC, IREN, APP, CDE, TER, SSRM, KGC, AGI, SNEX, CRS, AUR, XP. None of the AI-semis leaders meet Tier A RSI: AMD 51, MU ~, ARM 42, SNDK 41, DELL 44, COHR 41, INTC 41. RDDT is excluded (earnings Oct 29 after close). Others (APP, TER, UMC, IREN, HOOD) need a dated external cause, an earnings-window check and 5-min stabilization after 10:00; none is cleared yet.
+Gap: no new dated web source was searched this cycle; gate 1 for any name remains unmet until it is.
+Plan: from 10:02, gate-check APP/TER/UMC/HOOD in writing; semis are Tier B candidates only if they reach -3.5% with stabilization.
