@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-30 09:50 ET",
+  "as_of": "2026-10-30 10:05 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Pre-10:00, flat, no entries. AI-semis selloff; daily RSI not yet <35 on the big semis.",
+  "status_note": "Tier A window open, flat. TER is the only semi candidate; not yet stabilized. No entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-30",
@@ -2769,6 +2769,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-30 09:50 ET",
       "equity": 406.78
+    },
+    {
+      "t": "2026-10-30 10:05 ET",
+      "equity": 406.78
     }
   ],
   "positions": [],
@@ -2895,14 +2899,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Risk-off tech: Intel guide/Amazon capex drove an AI-semis rout. Energy bid, gold miners weak.",
+    "read": "Risk-off tech: AI-semis rout continues; no bounce yet. Energy bid, gold miners weak.",
     "chips": [
       "SPY -1.2%",
-      "QQQ -2.7%",
-      "SMH -5.4%",
-      "IGV -1.9%",
-      "GDX -4.1%",
-      "XLE +1.6%"
+      "QQQ -2.5%",
+      "SMH -5.3%",
+      "IGV -1.6%",
+      "GDX -5.0%",
+      "XLE +1.8%"
     ]
   }
 }
@@ -8136,3 +8140,15 @@ Equity $406.78, cash $406.78, flat. Pre-10:00, no entries permitted. Orders were
 Depth scan (mcap>=5B, avgvol>=1M, <=-3.5%, 148 names) parsed from the saved file. Daily RSI<35 among decliners: RDDT, CBRS, HOOD(35), UMC, IREN, APP, CDE, TER, SSRM, KGC, AGI, SNEX, CRS, AUR, XP. None of the AI-semis leaders meet Tier A RSI: AMD 51, MU ~, ARM 42, SNDK 41, DELL 44, COHR 41, INTC 41. RDDT is excluded (earnings Oct 29 after close). Others (APP, TER, UMC, IREN, HOOD) need a dated external cause, an earnings-window check and 5-min stabilization after 10:00; none is cleared yet.
 Gap: no new dated web source was searched this cycle; gate 1 for any name remains unmet until it is.
 Plan: from 10:02, gate-check APP/TER/UMC/HOOD in writing; semis are Tier B candidates only if they reach -3.5% with stabilization.
+
+### Cycle 661 - 10:05 ET (Fri Oct 30)
+Equity $406.78, cash/buying power $406.78, flat, no open positions (orders not re-checked: nothing open or placed). Tier A window open. No entry.
+Tape at 10:04: SPY 760.23 (-1.2%), QQQ 697.22 (-2.5%), SMH 532.01 (-5.3%), IGV 106.28 (-1.6%), GDX 77.26 (-5.0%), XLE 69.93 (+1.8%). Candidates: TER 276.63 (-6.6%), UMC 16.76 (-7.1%), APP 240.00 (-5.8%), HOOD 84.12 (-8.2%), AMD -9.0%, MU -3.7%, AVGO -4.6%, TSM -3.6%, NVDA -2.8%.
+Gate checks:
+- UMC FAIL: reported Oct 28 am (EPS 0.206 vs 0.23 est, a miss), so gate 2 fails and it sits inside the 2-trading-day earnings window.
+- APP FAIL: the relevant sector ETF (IGV) is only -1.6%, under the 2% Tier A requirement.
+- HOOD FAIL: daily RSI 35, not <35; no sector ETF cause identified.
+- AMD/MU/AVGO/NVDA/TSM FAIL Tier A: daily RSI not <35 (AMD 51); NVDA/TSM/MU too shallow for Tier A. Tier B opens 11:30.
+- TER (reported Oct 27 pm, EPS 2.29 vs 2.05, so outside the window and gate 2 passes; down more than SMH; RSI 33; anchor prior close 296.23): gate 4 stabilization FAILS. 5-min lows were 275.31, 278.54, 279.27, 278.00, 278.58, 278.61 through 10:00, but price is now 276.63, back under the last bar's low, so there is no confirmed higher low. Gate 1 also not re-sourced this cycle (the pre-open brief cited CNBC/TipRanks on the Intel guide and Amazon capex, dated today; no fresh search run). Daily trend/multi-week structure for TER not yet checked.
+Gap: no web search this cycle. Momentum scan not run (before 10:30).
+Plan: re-check TER at 10:12-10:22 for a 5-min higher low and check its daily structure; if it passes all four gates with a fresh dated source, enter $105.
