@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-30 15:34 ET",
+  "as_of": "2026-10-30 15:45 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Holding MU (forced Tier C), -$0.20. Stop 849 far. Flat by ~15:42-15:47.",
+  "status_note": "Flat. MU closed +$0.21 (+0.09R, forced Tier C) per the default-flat plan; nothing held over the weekend.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-30",
@@ -2857,20 +2857,13 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-30 15:34 ET",
       "equity": 406.63
-    }
-  ],
-  "positions": [
+    },
     {
-      "symbol": "MU",
-      "strategy": "mean-reversion",
-      "tier": "C",
-      "qty": 0.120876,
-      "entry": 868.6568,
-      "price": 867.0,
-      "stop": 849.0,
-      "target": 908.0
+      "t": "2026-10-30 15:45 ET",
+      "equity": 406.99
     }
   ],
+  "positions": [],
   "trades": [
     {
       "symbol": "TER",
@@ -2991,14 +2984,26 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "score": 68,
       "tag": "organic",
       "date": "2026-10-29"
+    },
+    {
+      "symbol": "MU",
+      "strategy": "mean-reversion",
+      "tier": "C",
+      "entry": 868.6568,
+      "exit": 870.3801,
+      "pnl": 0.21,
+      "r": 0.09,
+      "score": 63,
+      "tag": "forced",
+      "date": "2026-10-30"
     }
   ],
   "regime": {
-    "read": "Semis chop above the 14:50 base; SMH 516.6-518. No new entries after 15:30.",
+    "read": "Semis holding the 14:50 base into the close but still about -7.8% on the day.",
     "chips": [
       "SPY -2.1%",
-      "QQQ -4.0%",
-      "SMH -8.0%",
+      "QQQ -3.9%",
+      "SMH -7.8%",
       "IGV -3.8%",
       "GDX -6.1%",
       "XLE +1.5%"
@@ -8460,3 +8465,11 @@ Equity $406.63 (cash $301.78 + MU $104.85). Open position: MU 0.120876 sh, avg $
 Tape at 15:32: SPY 752.78, QQQ 686.89, SMH 516.60 (-8.0%; 5-min lows 515.47, 516.04, 517.63: still above the 511.6 base low). MU 5-min lows 867.75, 865.41, 865.70, 868.64 (support 862-863 intact). The sector base is holding but not extending.
 No entry (past 15:30 ET); no new scans.
 Plan unchanged: sell MU at market in the 15:42 cycle (about 15:42-15:45 ET), or sooner if the 849.0 stop trades or SMH loses 511.6; the 15:47 recap reports the realized P&L and states the position is flat (no weekend hold).
+
+### Cycle 683 - 15:45 ET (Fri Oct 30) - EXIT: MU (mean-reversion, Tier C, forced) closed, flat
+Exit: sold 0.120876 MU at market, filled at an average $870.3801 at 15:43:24 ET (order 6ae4f35c-7ece-4ad2-a00d-0570eeb83e3d), bid/ask at order time 870.14/870.48. Reason: the logged default-flat plan (Cycle 680), not a stop or invalidation; the 849.0 stop never traded (day low after entry about 865.4), the target 908 was not reached.
+P&L: entry $868.6568 x 0.120876 = $105.00; exit $870.3801 x 0.120876 = $105.21; realized +$0.21 (+0.20%). 1R was about $2.40 (stop 849.0), so +0.09R. Fees $0.00. Account equity $406.99 (cash $406.99), no positions, no open orders. Day P&L +$0.21 vs the day's start equity $406.78; peak equity stays $437.99 (breaker level $394.19, far).
+Tag: forced (Tier C, no organic A/B qualified). Hold time 30 minutes; no stop within the 30-minute hold window.
+Score (framework §5.5; my own estimate, not user-confirmed): setup 24/40 (the cause was external and dated and the fundamentals were fine, but this was a forced entry into a failed-base sell-off, MU was not down more than SMH, and the trend gate was borderline), execution 28/35 (waited for a four-bar higher-low base, filled within a cent of the quote, held the stop plan and exited on schedule; the entry came late in the session with a short runway), outcome 11/25 (a small scratch gain, no stop and no target). Total 63. Note: the entry was at the late end of the Tier C window with a 2R target that could not realistically be reached in the available 30 minutes; for forced late entries, record a realistic intraday target alongside the 2R plan.
+Lesson (not a rule change): a base that survives for four bars after several failures can still be only a one-hour bounce; the base was real but the remaining runway was the binding constraint. The earlier rejections (13:15, 13:45, 14:00, 14:35, 14:54) all printed new lows within one or two bars, which supports waiting for four bars rather than two.
+Follow-up for the skipped MU at 14:54 ET (Cycle 679): MU later traded 868-872 (entry price level), so the skip cost nothing.
