@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-30 10:45 ET",
+  "as_of": "2026-10-30 10:55 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat. Semis basing slightly but TER fails multi-week-downtrend gate; no momentum names. No entry.",
+  "status_note": "Hourly cycle: full MR RSI<35 scan done, every candidate fails trend gate. Flat, no entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-30",
@@ -2780,6 +2780,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-10-30 10:45 ET",
+      "equity": 406.78
+    },
+    {
+      "t": "2026-10-30 10:55 ET",
       "equity": 406.78
     }
   ],
@@ -8178,3 +8182,18 @@ Mean reversion: only TER was examined this cycle (no new full MR depth scan; dis
 AMD/MU/AVGO/NVDA/TSM: daily RSI not <35 (AMD 51 at 09:43), so Tier A is unavailable; Tier B opens 11:30.
 0 trades today vs the 1/day target; the target is not a reason to loosen gates.
 Plan: at 11:30 evaluate Tier B for the semis leaders (>=3.5% intraday, stabilization, daily structure, dated source). Search more specifically for a dated Oct 30 source for gate 1 if a candidate otherwise passes.
+
+### Cycle 664 (hourly, with news) - 10:55 ET (Fri Oct 30)
+Equity $406.78, flat (state from Cycle 663 minutes earlier; no order activity). Hourly full cycle run on request of the hourly routine.
+News (dated Oct 30, sourced this cycle): CNBC 2026-10-30 "Amazon falls 2%, Intel dives 29%, as tech stocks sell off in post-earnings rout"; Morningstar "Tech Stocks Sell Off as Amazon and Intel Earnings Spook Investors"; investingLive "Amazon and Intel results deepen worries over AI boom costs"; MarketScreener "Semiconductor Stocks Fall as Intel Earnings Trigger Broad Tech Selloff". Cause: Intel Q4 guide below consensus (PC demand, memory prices, Israel factory explosion/2-week shutdown), Amazon Q3 miss with negative FCF of $42.4B and $220B capex. S&P about -1.5%, Nasdaq >-2%, chip index 21% below its June record. Some analysts say Intel's PC problem is not an AI-chip read-through. All figures are premarket/early session. Gate 1 (external, dated, sourced) is satisfied for semis/AI names this cycle.
+MR scan (mcap>=5B, avgvol>=1M, <=-5% today, daily RSI<35): 11 names: TER (-7.1%, RSI 32.8), APP (-7.9%, 34.0), CBRS (-6.5%, 31.9), RDDT (-26.6%, 30.9), HOOD (-8.3%, 34.7), AGI (-5.2%, 34.9), SSRM (-5.2%, 34.2), IREN (-6.7%, 33.7), KGC (-7.3%, 33.3), UMC (-7.5%, 31.4), CDE (-6.2%, 32.8).
+Gate checks:
+- TER: gate 4 FAIL (daily downtrend 449 on Oct 2 to 296 on Oct 29, lower highs and lows).
+- APP: FAIL. Daily downtrend 332 (Sep 15) to 255 (Oct 29); 5-min lows still falling (234.84 at 14:40Z); earnings Nov 4 pm. IGV is only about -2.4%, and the cause for APP is not the Intel/Amazon read-through (ad-tech, no sourced link).
+- HOOD: FAIL. Daily downtrend 124 (Sep 22) to 92 (Oct 29); no sourced external cause for HOOD specifically; reported Oct 27 pm. 5-min is flat 83.5-84.4.
+- UMC: FAIL (EPS miss Oct 28 am, inside the earnings window). RDDT: FAIL (reported Oct 29 pm). CBRS: FAIL (recent listing, no usable daily trend/earnings history verified). IREN: not examined this cycle (crypto-miner/AI hosting; no dated cause). Gold miners AGI/KGC/SSRM/CDE: FAIL, second down day for GDX, cause (gold below $4,000) not sourced this cycle and Oct 28 earnings misses at AGI/EGO are company-specific; trend not stabilized.
+- AMD/MU/AVGO/NVDA/TSM/ARM/SNDK: no names meet daily RSI<35 (AMD ~51 earlier); Tier A unavailable. Tier B from 11:30.
+Momentum: scan at 10:43 found zero +3% names. XLE +1.5% only; no qualifying leader.
+Gap: IREN not examined; the standard morning search returned no Oct 30 sources but this extended search did.
+0 trades today vs the 1/day target; gates unchanged.
+Plan: 11:30 Tier B review for semis leaders; Tier C (14:30-15:30) opens only if the day's minimum is unmet and carries the forced tag.
