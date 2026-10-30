@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-30 13:45 ET",
+  "as_of": "2026-10-30 13:58 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat. Semis bounce attempt failed; new 5-min lows again. No entry.",
+  "status_note": "Flat. Broadened RSI<40 depth scan (42 names); MRVL examined and rejected; semis still at lows. No entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-30",
@@ -2825,6 +2825,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-30 13:45 ET",
       "equity": 406.78
+    },
+    {
+      "t": "2026-10-30 13:58 ET",
+      "equity": 406.78
     }
   ],
   "positions": [],
@@ -2951,14 +2955,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Semis bounce failed at 13:35-13:40 ET, new session lows (SMH 516.9, TSM 403.0, MU 870.9).",
+    "read": "Selloff persists into the afternoon: SMH -8.1% at 515.9, QQQ -3.9%. Broad AI/semis and software lows.",
     "chips": [
-      "SPY -1.8%",
-      "QQQ -3.7%",
-      "SMH -7.8%",
-      "IGV -3.9%",
-      "GDX -5.9%",
-      "XLE +1.5%"
+      "SPY -2.0%",
+      "QQQ -3.9%",
+      "SMH -8.1%",
+      "IGV -4.0%",
+      "GDX -6.1%",
+      "XLE +1.3%"
     ]
   }
 }
@@ -8339,3 +8343,15 @@ Tape at 13:42: SPY 755.16 (-1.8%), QQQ 688.57 (-3.7%), SMH 517.86 (-7.8%), IGV 1
 5-min 17:30-17:40Z: the bounce from Cycle 673 failed. SMH low 516.91 (below the 517.34 prior low), AMD low 498.00 (below 498.05), TSM 403.02 (below 404.15), MU 870.85 (below 874.27), AVGO 322.96 (below 323.16), NVDA 202.83. New lows across the complex, so gate 4 (higher low) FAILS for all; no mean-reversion candidate qualifies, and AVGO/TSM/MU/NVDA still fail the down-more-than-SMH clause.
 Scans not re-run (momentum 13:33, MR depth 13:15; disclosed). No entry.
 0 trades today vs the 1/day target; the target is not a reason to loosen gates. Tier C opens 14:30 (forced tag, all four gates). Friday weekend-risk applies; 15:47 recap next; default flat.
+
+### Cycle 675 - 13:58 ET (Fri Oct 30)
+Equity $406.78, cash/buying power $406.78, flat, no positions (orders not re-checked; nothing open or placed).
+Tape at 13:53: SPY 753.92 (-2.0%), QQQ 687.27 (-3.9%), SMH 515.91 (-8.1%), IGV 103.65 (-4.0%), GDX 76.34 (-6.1%), XLE 69.61 (+1.3%). AMD 498.86 (-11.9%), ARM 201.67 (-11.8%), AVGO 322.97 (-6.4%), TSM 402.76 (-6.7%), MU 869.80 (-6.9%), NVDA 202.43 (-5.3%).
+5-min 17:35-17:50Z: SMH low 516.91 twice (a retest, not a break, but no higher low yet), AMD lows 498.00 then 499.26 then 499.64 (rising small), AVGO 322.96 then 323.36 then 323.72, TSM 403.02 then 403.51 then 403.36, MU 870.85 then 872.90 then 871.01: flat to slightly rising lows over the last three bars; a base is forming on the sector (SMH retest of 516.9) but is only about 15 minutes old. Not enough to treat as confirmed stabilization; and the stock-vs-sector and earnings clauses still block AMD/AVGO/TSM/MU/NVDA (AMD earnings Nov 3; the rest down less than SMH).
+Broadened MR depth scan (mcap>=5B, avgvol>=1M, <=-5%, daily RSI<40): 42 names. New names beyond the RSI<35 list: LRCX (-7.7%, RSI 38.6), MRVL (-12.5%, 39.8), NOW (-5.0%, 28.5), MKSI, MOD, GLW, LSCC, DOCN, FORM, TTMI, FCX, HUT, CRWV, ASTS, U, IONQ, WPM/AU/PAAS/AG/HL/IAG/EQX (miners), LYG, etc.
+- MRVL (down more than SMH; next earnings Dec 1, outside the window): daily path 287.0 (Oct 6) to 218.3 (Oct 29), with a -13.2% single-day drop on Oct 29 on 42M shares (2x normal) BEFORE the Intel/Amazon news, then -12.5% again today. The Oct 29 piece has no cause sourced this cycle (company- or peer-specific is possible), and a two-day -23% leg in a multi-week downtrend, 5-min lows still printing lower (191.70 in the 17:45Z bar). Gates 1 (partly unverified), 4 (downtrend and no higher low) FAIL.
+- LRCX: -7.7% is less than SMH's -8.1%, FAIL the stock-down-more-than-sector clause.
+- NOW (RSI 28.5): reported Oct 28, inside the 2-trading-day earnings window and company-specific, FAIL. LSCC, FORM, MKSI, TTMI, MOD, GLW, DOCN, CRWV, IONQ, HUT, U: not examined individually; the same dated external cause but no stabilization, no sector-relative or earnings-date checks run (disclosed gap). Miners (WPM/AU/PAAS/AG/HL/IAG/EQX) share the gold decline, which has no dated cause sourced, FAIL.
+Momentum: not re-scanned (13:33 scan stands; disclosed).
+No entry. 0 trades today vs the 1/day target; the target is not a reason to loosen gates.
+Plan: re-check the semis base at the next cycles; Tier C 14:30 only if the minimum is unmet (forced tag), still all four gates; a stabilization requires at least two clean higher 5-min lows, a sector bounce is not the same as a stock stabilizing.
