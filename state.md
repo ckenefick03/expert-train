@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-30 13:02 ET",
+  "as_of": "2026-10-30 13:20 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat. SMH broke to new lows (518.6) at 12:50; ARM fails daily-trend gate. No entry.",
+  "status_note": "Hourly cycle: semis at fresh lows again, momentum names are one-day gaps. Flat, no entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-30",
@@ -2813,6 +2813,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-30 13:02 ET",
       "equity": 406.78
+    },
+    {
+      "t": "2026-10-30 13:20 ET",
+      "equity": 406.78
     }
   ],
   "positions": [],
@@ -2939,14 +2943,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Semis made fresh lows around 12:50 ET, selloff persists into early afternoon; software also weak.",
+    "read": "Selloff extending: SMH new lows 517.6 at 13:15; defensives/health care (AZN earnings beat) bid.",
     "chips": [
-      "SPY -1.7%",
-      "QQQ -3.5%",
-      "SMH -7.4%",
-      "IGV -3.8%",
-      "GDX -5.2%",
-      "XLE +1.6%"
+      "SPY -1.8%",
+      "QQQ -3.7%",
+      "SMH -7.8%",
+      "IGV -3.9%",
+      "GDX -5.7%",
+      "XLE +1.7%"
     ]
   }
 }
@@ -8296,3 +8300,17 @@ ARM (the open item from Cycle 670): earnings Nov 4 pm (3rd trading day after Fri
 Other candidates unchanged from Cycle 670 (AMD earnings Nov 3; AVGO/TSM/MU/NVDA not down more than SMH; TER/APP/HOOD etc. downtrends). No new scans run this cycle (momentum and MR scans from 12:43 stand; disclosed).
 No entry. 0 trades today vs the 1/day target; the target is not a reason to loosen gates.
 Plan: Tier B continues to 14:30; Tier C only if the day's minimum is unmet, with forced tag and all four gates; 15:47 recap states overnight status (default flat).
+
+### Cycle 672 (hourly) - 13:20 ET (Fri Oct 30)
+(The 13:12 ET hourly trigger fired at 13:14 ET; the 13:02 cycle was Cycle 671.)
+Equity $406.78, cash/buying power $406.78, flat, no positions (orders not re-checked; nothing open or placed).
+Tape at 13:15: SPY 755.31 (-1.8%), QQQ 689.12 (-3.7%), SMH 517.93 (-7.8%), IGV 103.73 (-3.9%), GDX 76.73 (-5.7%), XLE 69.87 (+1.7%). AMD 498.77 (-11.9%), ARM 202.22 (-11.6%), AVGO 323.50 (-6.2%), TSM 404.48 (-6.3%), MU 876.06 (-6.2%), NVDA 203.37 (-4.8%).
+5-min 16:40-17:10Z: SMH made lower lows again (519.26, 518.63, 518.88, 517.64, 517.60); AMD lows 500.93, 500.00, 499.75, 499.12, 498.36; AVGO 322.57 at 16:50Z, TSM 403.94, MU 876.01. No higher low in any semis name: gate 4 FAILS. Now AVGO/TSM/MU are down 6.2-6.3% vs SMH -7.8%, still less than the sector, so the stock-down-more-than-sector clause also fails for them.
+News: standard search for the Oct 30 afternoon returned no Oct 30 session wrap (it returned Oct 22 and older material only). The dated Oct 30 sources from Cycles 664 and 670 remain the cause. Gap disclosed.
+MR depth scan (<=-5%, RSI<35, mcap>=5B): 13 names, the 11 from Cycle 664 plus CORT (-5.7%, RSI 25.8) and AUR (-5.7%, RSI 31.2, a $8.9B autonomous-trucking name, no cause sourced). All FAIL as before; CORT and AUR have no sourced external cause (gate 1). TER 267.70 (-9.6%), APP 232.08 (-9.0%), HOOD 83.00 (-9.4%), IREN 23.46 (-10.6%) keep making new lows.
+Momentum scan (>=+2.5%, relvol>=1.0): SPOT +5.6%, AZN +7.5%, PEP +3.5%, GPN +12.1% (relvol 4.3), CDNA +21.1%, FIS +3.5%.
+- AZN FAIL: reported Q3 today (EPS 2.79 vs 1.44 est), so it is a one-day earnings gap (several-session clause fails), though gate 1 catalyst is dated (earnings, Oct 30).
+- GPN FAIL: earnings are Nov 5, so today's +12% on 4.3x relative volume is not earnings; no catalyst sourced and no search done this cycle; unexplained spikes are not bought. FIS (+3.5%, earnings Nov 4): inside the earnings window of a near-term catalyst, no catalyst sourced, FAIL. PEP +3.5%: no sourced catalyst, RSI 54, a defensive rotation bid, FAIL. SPOT, CDNA: unchanged from Cycle 668 (FAIL).
+No entry. 0 trades today vs the 1/day target; the target is not a reason to loosen gates.
+Open items for the user (unchanged): (1) momentum gate-1 "several sessions" clause screens out every fresh earnings gap, e.g. AZN today; (2) PDT/settled-funds on limited_margin unverified.
+Plan: Tier C 14:30-15:30 only if the minimum is unmet (forced tag, all four gates); the 15:47 recap states overnight status (default flat).
