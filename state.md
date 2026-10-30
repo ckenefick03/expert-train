@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-30 12:50 ET",
+  "as_of": "2026-10-30 13:02 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Hourly cycle: semis flat-lining at lows; AMD fails earnings window (Nov 3), others not down more than SMH. Flat, no entry.",
+  "status_note": "Flat. SMH broke to new lows (518.6) at 12:50; ARM fails daily-trend gate. No entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-30",
@@ -2809,6 +2809,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-30 12:50 ET",
       "equity": 406.78
+    },
+    {
+      "t": "2026-10-30 13:02 ET",
+      "equity": 406.78
     }
   ],
   "positions": [],
@@ -2935,14 +2939,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Tech selloff holding at lows, narrow ranges since 12:00. Intel/Amazon AI-capex worry; Binance cyberattack hits crypto names. Energy mildly bid.",
+    "read": "Semis made fresh lows around 12:50 ET, selloff persists into early afternoon; software also weak.",
     "chips": [
-      "SPY -1.5%",
-      "QQQ -3.2%",
-      "SMH -7.1%",
-      "IGV -3.6%",
-      "GDX -5.3%",
-      "XLE +1.4%"
+      "SPY -1.7%",
+      "QQQ -3.5%",
+      "SMH -7.4%",
+      "IGV -3.8%",
+      "GDX -5.2%",
+      "XLE +1.6%"
     ]
   }
 }
@@ -8282,3 +8286,13 @@ MR candidates (Tier B, down >=3.5% intraday):
 - TER (-9.0%, RSI 32.8): lower again (269.45), daily downtrend, FAIL. APP, HOOD, UMC, RDDT, CBRS, IREN, KGC, CDE, SSRM: unchanged from Cycle 664/666 (FAIL). CORT (new, -5.6%, RSI 25.8, mcap 9.3B): no cause sourced, healthcare/company-specific, FAIL gate 1.
 Momentum (>=+2.5%, relvol>=1.0): SPOT +5.6%, GPN +11.3% (relvol 3.2), CDNA +22.6%, CLBK +2.6%. GPN FAIL: single-day gap on high volume (daily range 78-86 for weeks), no sourced catalyst, no several-session divergence. SPOT, CDNA, CLBK unchanged (FAIL).
 0 trades today vs the 1/day target; the target is not a reason to loosen gates. Tier C 14:30; the 15:47 recap is next after that.
+
+### Cycle 671 - 13:02 ET (Fri Oct 30)
+(The 12:52 ET trigger fired late at 12:59 ET; the 12:32, 12:22 and 12:42 triggers were skipped under the 6-minute rule after Cycle 670.)
+Equity $406.78, cash/buying power $406.78, flat, no positions (orders not re-checked; nothing open or placed).
+Tape at 12:59: SPY 755.94 (-1.7%), QQQ 690.58 (-3.5%), SMH 520.01 (-7.4%), IGV 103.86 (-3.8%), GDX 77.07 (-5.2%), XLE 69.80 (+1.6%). AMD 501.28 (-11.5%), ARM 202.97 (-11.3%), AVGO 324.51 (-5.9%), TSM 405.52 (-6.1%), MU 880.59 (-5.7%), NVDA 204.01 (-4.5%).
+SMH 5-min: 16:45Z bar low 519.26 and 16:50Z bar low 518.63, versus 521.74-522.02 lows earlier, so the mild higher-low sequence broke (a new low on high volume of 128K/92K). Gate 4 stabilization FAILS for the sector.
+ARM (the open item from Cycle 670): earnings Nov 4 pm (3rd trading day after Friday, outside a 2-day window), gate 1 met by the dated Oct 30 sources. But daily structure is a 5-week downtrend: 333.2 (Sep 22) to 210.1 (Oct 22), a bounce to 235.9 (Oct 28), then back to 203 today; lower highs and lower lows, so gate 4 FAILS (multi-week downtrend); its 5-min lows also fell again (202.22 at 16:50Z).
+Other candidates unchanged from Cycle 670 (AMD earnings Nov 3; AVGO/TSM/MU/NVDA not down more than SMH; TER/APP/HOOD etc. downtrends). No new scans run this cycle (momentum and MR scans from 12:43 stand; disclosed).
+No entry. 0 trades today vs the 1/day target; the target is not a reason to loosen gates.
+Plan: Tier B continues to 14:30; Tier C only if the day's minimum is unmet, with forced tag and all four gates; 15:47 recap states overnight status (default flat).
