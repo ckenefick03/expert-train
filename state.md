@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-30 15:24 ET",
+  "as_of": "2026-10-30 15:34 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Holding MU (forced Tier C), +$0.04. Stop 849, target 908; default flat 15:44-15:47.",
+  "status_note": "Holding MU (forced Tier C), -$0.20. Stop 849 far. Flat by ~15:42-15:47.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-10-30",
@@ -2853,6 +2853,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-30 15:24 ET",
       "equity": 406.81
+    },
+    {
+      "t": "2026-10-30 15:34 ET",
+      "equity": 406.63
     }
   ],
   "positions": [
@@ -2862,7 +2866,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "tier": "C",
       "qty": 0.120876,
       "entry": 868.6568,
-      "price": 869.02,
+      "price": 867.0,
       "stop": 849.0,
       "target": 908.0
     }
@@ -2990,11 +2994,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Semis holding the 14:50 base; SMH 517.5 (-7.9%). MU flat to entry.",
+    "read": "Semis chop above the 14:50 base; SMH 516.6-518. No new entries after 15:30.",
     "chips": [
       "SPY -2.1%",
-      "QQQ -3.9%",
-      "SMH -7.9%",
+      "QQQ -4.0%",
+      "SMH -8.0%",
       "IGV -3.8%",
       "GDX -6.1%",
       "XLE +1.5%"
@@ -8450,3 +8454,9 @@ Equity $406.81 (cash $301.78 + MU $105.03), 1 open position: MU 0.120876 sh, avg
 Tape at 15:22: SPY 752.98, QQQ 687.08, SMH 517.52 (-7.9%), AMD 498.81, NVDA 202.84. MU 5-min lows 866.71, 867.75, 865.41 (a small pullback bar at 19:15Z that held above the 862-863 support, not a break of the base).
 No new scans and no new entries this cycle (one position open, it is 15:24, last entry time 15:30; the existing position is the day's trade). 
 Plan: re-check at about 15:35 and 15:42; exit MU at market by about 15:44-15:47 ET (default flat; explicit decision logged in Cycle 680: no weekend hold, AMD Nov 3 / ARM Nov 4 earnings catalysts), earlier on a stop trade at 849.0 or if SMH loses the 14:50 base low (511.6).
+
+### Cycle 682 - 15:34 ET (Fri Oct 30) - position check, MU (entry window closed at 15:30)
+Equity $406.63 (cash $301.78 + MU $104.85). Open position: MU 0.120876 sh, avg $868.66, last $867.00 (-$0.20, -0.19%). Stop 849.0 is 2.1% below the quote (not near); target 908. No open orders.
+Tape at 15:32: SPY 752.78, QQQ 686.89, SMH 516.60 (-8.0%; 5-min lows 515.47, 516.04, 517.63: still above the 511.6 base low). MU 5-min lows 867.75, 865.41, 865.70, 868.64 (support 862-863 intact). The sector base is holding but not extending.
+No entry (past 15:30 ET); no new scans.
+Plan unchanged: sell MU at market in the 15:42 cycle (about 15:42-15:45 ET), or sooner if the 849.0 stop trades or SMH loses 511.6; the 15:47 recap reports the realized P&L and states the position is flat (no weekend hold).
