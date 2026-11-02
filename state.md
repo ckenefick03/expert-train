@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-02 09:06 ET",
+  "as_of": "2026-11-02 09:29 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Pre-10:00, flat, no entries permitted. Premarket bounce continues (QQQ +0.8%, SMH +1.4%).",
+  "status_note": "Hourly cycle at 09:29 ET: pre-open, flat; bounce intact into the open. No entries permitted before 10:00.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-02",
@@ -2873,6 +2873,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-02 09:06 ET",
       "equity": 406.99
+    },
+    {
+      "t": "2026-11-02 09:29 ET",
+      "equity": 406.99
     }
   ],
   "positions": [],
@@ -3011,14 +3015,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Premarket relief bounce holding: semis +1-2%, gold miners +2%, energy -2%. No dislocation to buy.",
+    "read": "Premarket gains broad: QQQ +0.75%, SMH +1.4%, gold miners +2.4%, energy -2.0%. AAPL/PLTR report after the close.",
     "chips": [
       "SPY +0.5% pre",
-      "QQQ +0.8% pre",
+      "QQQ +0.75% pre",
       "SMH +1.4% pre",
       "GDX +2.4% pre",
       "XLE -2.0% pre",
-      "IGV ~flat (wide)"
+      "IWM +0.8% pre"
     ]
   }
 }
@@ -8526,3 +8530,9 @@ Equity $406.99, cash/buying power $406.99, 0 positions, 0 open orders (positions
 Premarket tape 09:04 ET: SPY 759.49 (+0.5%), QQQ 695.77 (+0.8%), SMH 529.86 (+1.4%), GDX 78.92 (+2.4%), XLE 68.60 (-2.0%), IGV quote too wide to read. AMD 513.00 (+1.6%), MU 896.59 (+1.3%), NVDA 207.02 (+1.2%), TSM 413.32 (+1.8%). The relief bounce from the pre-open brief is intact; energy is the only weak sector.
 No scans run (before 10:00 ET and the bounce leaves no >=5% sector-driven dislocation to examine; disclosed). No entry.
 Plan: from 10:02 ET scan both strategies; Tier A needs a >=5% drop with the sector ETF down >=2% (unlikely with SMH +1.4% premarket); momentum from 10:30 ET with a dated catalyst; avoid earnings names (AAPL/PLTR/LSCC today, AMD/SMCI/ANET Tue, APP/ARM/QCOM Wed). The close-recap cron timing issue is still open for the user (19:47Z = 14:47 ET).
+
+### Cycle 686 (hourly) - 09:29 ET (Mon Nov 2) - pre-open
+(This is the 09:12 ET hourly trigger, delivered 09:27 ET.)
+Equity $406.99, cash/buying power $406.99, 0 positions (checked), orders not re-checked (nothing placed). Premarket 09:27 ET: SPY 759.73 (+0.5%), QQQ 695.67 (+0.75%), SMH 529.68 (+1.4%), GDX 78.94 (+2.4%), XLE 68.66 (-2.0%), IWM 281.67 (+0.8%); AMD 511.00 (+1.2%), MU 894.64 (+1.1%), NVDA 207.21 (+1.3%), TSM 413.89 (+1.9%), AVGO 328.50 (+0.7%), AAPL 344.02 (-0.2%), PLTR 186.86 (+1.5%).
+No entries (before 10:00 ET) and no scans (the open has not printed; premarket scan results are thin). No new news search this cycle: the Nov 2 sources are in the pre-open brief. Gap disclosed.
+Next cycle (10:02 ET): scan both strategies on live regular-session prices; Tier A needs a >=5% drop and the sector ETF down >=2%, which the premarket tape does not suggest; momentum from 10:30 ET.
