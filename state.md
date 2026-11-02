@@ -8654,3 +8654,5 @@ No entry. Momentum from 10:30 ET: not yet run. 0 trades today vs the 1/day targe
 - 30-minute hold rule active until about 12:53 ET: only the stop trading triggers an exit; the daily loss limit and breaker still override.
 - Tag: organic (Tier B), not forced. Score to be assigned at exit.
 - Overnight status: none planned; DVN reports Nov 5 pm, so this must not be held through that print.
+
+- Correction to Cycle 693 (append-only): the 5-min base bars are 11:55-12:15 ET (labels 16:55Z-17:15Z), not "12:55/13:00". Base lows: 49.54 (11:55), 49.645 (12:00), 49.76 (12:05), 49.77 (12:10), 49.71 (12:15). Fill was 12:23 ET, so the 30-minute hold rule runs to about 12:53 ET.
