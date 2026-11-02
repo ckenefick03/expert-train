@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-10-30 15:50 ET",
+  "as_of": "2026-11-02 07:40 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,13 +41,13 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Closed flat Fri Oct 30: 1 trade (MU, forced Tier C, +$0.21). No positions roll over the weekend.",
+  "status_note": "Pre-open Mon Nov 2: flat, cash $406.99. Futures bouncing after Friday's -7% semis rout; earnings week (AAPL/PLTR today pm, AMD Tue, APP/ARM Wed).",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-10-30",
-    "start_equity": 406.78,
-    "trades": 1,
-    "forced": 1
+    "date": "2026-11-02",
+    "start_equity": 406.99,
+    "trades": 0,
+    "forced": 0
   },
   "equity_history": [
     {
@@ -2865,6 +2865,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-10-30 15:50 ET",
       "equity": 406.99
+    },
+    {
+      "t": "2026-11-02 07:40 ET",
+      "equity": 406.99
     }
   ],
   "positions": [],
@@ -3003,14 +3007,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Risk-off tech day (Intel guide + Amazon capex): SMH about -7.6% at the close, semis bounced off the 14:50 lows. Month-end Friday; Nasdaq heading for roughly -5% on the month.",
+    "read": "Relief bounce premarket (QQQ +0.6%, SMH +1.5%) after Friday's AI-capex rout. Busy week: Apple and Palantir after the close, midterm elections Nov 3, AMD Nov 3 pm.",
     "chips": [
-      "SPY -2.0%",
-      "QQQ -3.7%",
-      "SMH -7.6%",
-      "IGV -3.8%",
-      "GDX -6.1%",
-      "XLE +1.5%"
+      "SPY +0.4% pre",
+      "QQQ +0.6% pre",
+      "SMH +1.5% pre",
+      "GDX +1.4% pre",
+      "XLE -1.1% pre",
+      "IGV ~flat (wide quote)"
     ]
   }
 }
@@ -8490,3 +8494,24 @@ Day recap, Fri 2026-10-30:
 - Rule-interpretation note: the mean-reversion file says "no report within 2 trading days before entry"; framework §2 step 3 also says to avoid names reporting within 2 sessions. I applied both directions (reports in the 2 days before entry AND upcoming within 2 sessions), which excluded AMD (Nov 3) and NOW (Oct 28). The stricter reading cost nothing today and I will keep it unless told otherwise.
 Open items for the user (unchanged, unanswered): (1) the momentum "several sessions" divergence clause screens out every fresh earnings gap (e.g., AZN today); (2) PDT/day-trade and settled-funds rules on the limited_margin account are unverified (one same-day round trip today, no broker alert; also three on Oct 28-29).
 DST: clocks fall back Sun Nov 1. From Monday Nov 2 the UTC crons land one hour earlier in ET (the pre-open brief at 12:27Z becomes 07:27 ET, and the 10-minute cycles start before the open; no entries are allowed before 10:00 ET, and the open/entry windows stay in ET). Next: Mon Nov 2 pre-open brief, with AMD (Nov 3 pm), ARM and APP (Nov 4 pm) and FIS/GPN (Nov 4-5) earnings ahead this week.
+
+### Pre-open brief - Mon 2026-11-02 (written 07:40 ET; the pre-open trigger fired 07:35 ET, scheduled 07:27 ET)
+Read-only, no orders. TIME NOTE: US clocks fell back on Sun Nov 1, so Eastern is now UTC-5. The existing UTC crons therefore fire one hour earlier in ET than before: the "close recap" cron at 19:47Z now fires at 14:47 ET (before Tier C ends at 15:30 and an hour before the bell), and the 10-minute cycles now start at 07:02 ET. Entry windows are written in ET, so nothing in the strategy changes and no entries are allowed before 10:00 ET; but the recap cron should be moved to 20:47Z if you want it at 15:47 ET. I have not changed any schedule (outside my instructions).
+Reconcile: equity $406.99, cash/buying power $406.99, 0 positions, 0 open orders (positions and orders checked). No stop checks needed. Peak $437.99, breaker level $394.19 (equity is 7.1% below peak). Day start equity for Nov 2: $406.99.
+Friday official closes (SIP): SPY 755.72 (-1.8%), QQQ 690.49 (-3.5%), SMH 522.49 (-7.0%), AMD 504.80, MU 884.74, AVGO 326.08, NVDA 204.64, TSM 406.13, ARM 205.97, MRVL 196.40, TER 274.37, APP 228.50, HOOD 84.99, INTC 65.76, AMZN 240.35, GDX 77.09, XLE 70.02, IWM 279.33, IGV 104.29. (The earlier close-recap figure of SMH -7.6% came from the 15:48 quote; the official close was -7.0%. After my 15:43 sale MU closed at 884.74, +1.7% above my 870.38 exit: a missed +$1.75 on 0.1209 sh, noted, the plan was flat.)
+Tape first (premarket, 07:36 ET): SPY 758.41 (+0.4%), QQQ 694.96 (+0.65%), SMH ~530.2 (+1.5%), IWM ~280.8 (+0.5%), GDX ~78.2 (+1.4%), XLE ~69.3 (-1.0%), IGV quote too wide to read (101.00 x 108.00). AMD 512.66 (+1.6%), MU 900.23 (+1.7%), NVDA 206.77 (+1.0%), TSM 413.15 (+1.7%), ARM 210.16 (+2.0%), AVGO 327.05 (+0.3%), MRVL 196.30 (0.0%), TER 281.71 (+2.7%), APP 236.00 (+3.3%), HOOD 85.46 (+0.6%), INTC 64.91 (-1.3%), AMZN 241.17 (+0.3%). A broad relief bounce, led by semis and the highest-beta names; energy is the one soft sector.
+News (sources found this cycle; dated Nov 2 unless noted): Yahoo Finance live blog "Stock market today: Dow, S&P 500, Nasdaq futures recover from bruising sell-off ahead of busy week" (Nov 2); Invezz "Nasdaq-100 futures gain 240 pts: Five things to know before Wall Street opens" (Nov 2); TradingView News "Nasdaq futures rebound with Apple earnings, US midterm elections ahead"; Stocktwits "S&P 500, Nasdaq futures rise premarket after Wall Street's worst week in months: AAPL, PLTR, GOOGL, INTC, TGTX in focus"; BigGo Finance (chip stocks and SK Hynix leading the memory sector). Summary: Nasdaq-100 futures +0.8%, S&P futures +0.4-0.5% after the Nasdaq briefly entered a correction on Friday (the Philadelphia semiconductor index fell more than 7%); chip names (AMD, Micron, Nvidia, TSMC) are bid on dip-buying; Intel's premarket move is reported inconsistently (+0.8% in one source, -0.3% in another; my feed shows -1.3%). Catalysts this week: Apple and Palantir earnings after today's close, the Nov 3 midterm elections, AMD Nov 3 pm, Qualcomm/Arm/AppLovin Nov 4 pm. No policy/Fed headline was found for today's open (the PCE/FOMC details were not searched this cycle; gap).
+Earnings this week (get_earnings_calendar, high market cap; the 943-row response was saved to a file and filtered with python for my watchlist; I read it in full): Mon pm: AAPL, PLTR, LSCC. Tue am: FISV, SHOP; Tue pm: AMD, SMCI, ANET. Wed am: UBER, CVS, DDOG, FIS; Wed pm: QCOM, APP, ARM. Thu am: AZN, GPN; Thu pm: ABNB, TEAM, IREN. Per framework §2 step 3 (avoid names reporting today or within 2 sessions) and the strategy file, today's entries must avoid AAPL, PLTR, LSCC (today), FISV, SHOP, AMD, SMCI, ANET (Tue) and UBER, CVS, DDOG, FIS, QCOM, APP, ARM (Wed).
+Mean-reversion watch (the bounce means fewer Tier A candidates; a dislocation needs a >=5% drop today with the sector down >=2%; none exists premarket, so Tier A is likely unavailable unless the bounce fails):
+1. MU (premarket +1.7%): Friday's trade, support 849-862, last report Sep 30 (beat), next about Dec 16; only a candidate on a renewed sector break-and-reclaim; not overlapped by earnings.
+2. NVDA (+1.0%) and TSM (+1.7%): not reporting this week; both were in multi-week lower-high/lower-low downtrends on Friday (gate 4 FAIL as of Friday); they pass only if that structure changes (a higher low above Friday's 200.9 / 400.5 lows).
+3. MRVL (0.0% premarket, still near Friday's close): fell -13% on Oct 29 with no cause found; next earnings about Dec 1; needs a sourced cause and a base.
+4. TER (+2.7%) and HOOD (+0.6%): RSI was 32.8 / 34.7 on Friday, still in downtrends (gate 4 FAIL); the bounce does not repair the trend.
+Excluded outright: AMD, ARM, APP, QCOM, SMCI, ANET (earnings within 2 sessions); AAPL, PLTR (today after the close).
+Momentum watch (earliest 10:30 ET; needs divergence from the peer complex over several sessions, a dated catalyst, a held pullback with a higher low, and a target >=2R; a one-day earnings gap fails the several-session clause):
+1. SPOT: the strongest non-tech name on Friday (+5.6%, higher low 538 on Oct 28, reclaimed 587); earnings were Oct 22 (a miss, yet +11% on the day); no dated Oct 30 catalyst was found, so it needs a catalyst to qualify.
+2. Defensive rotation leaders (PEP, MDLZ, SJM, AZN [reports Thu am, so avoid], VRTX): sector rotation, not stock-specific leadership; low odds under the catalyst gate.
+3. MU / TSM / NVDA semis leaders if the bounce continues with a higher low above Friday's lows: more a mean-reversion-reclaim than momentum; watch relative strength vs SMH.
+4. Energy (XLE soft premarket): no momentum leader; skip unless crude headlines change.
+No orders were placed (read-only). Standing rules unchanged: entry $105 (min of $105 and buying power less $0.50), 5-position cap, $100 daily loss limit, 10% breaker, 30-minute hold rule, default flat before the bell, no weekend/overnight holds without an explicit written decision.
+Open items for the user (unchanged): (1) the momentum "several sessions" clause vs fresh earnings gaps; (2) PDT/settled-funds on limited_margin unverified; (3) NEW: the close-recap cron timing after the clock change (above).
