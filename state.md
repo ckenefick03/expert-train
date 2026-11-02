@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-02 13:40 ET",
+  "as_of": "2026-11-02 14:01 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, 1 trade today (DVN stop, -$1.35). Scan bug found and fixed (ratio units); 144 decliners screened, none passes gate 1 (no sourced external cause). Tier B to 14:30 ET.",
+  "status_note": "Flat, 1 trade today (DVN stop, -$1.35). Semis/AI-infra sell-off is a multi-week downtrend still making new lows (gate 4 fail); no valid MR or momentum setup. Tier B ends 14:30 ET; Tier C not available (minimum met).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-02",
@@ -2929,6 +2929,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-02 13:40 ET",
       "equity": 405.64
+    },
+    {
+      "t": "2026-11-02 14:01 ET",
+      "equity": 405.64
     }
   ],
   "positions": [],
@@ -3079,14 +3083,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Tech and AI infrastructure weakening into the afternoon (XLK -1.3%, SMH -0.8%, QQQ flat); cyclicals strong; energy weak on oil.",
+    "read": "Risk-off in tech: semis, AI infrastructure and software extend Friday's losses to new session lows while cyclicals and financials hold up.",
     "chips": [
-      "SPY +0.3%",
-      "QQQ -0.05%",
-      "SMH -0.8%",
-      "XLK -1.3%",
-      "XLY +2.8%",
-      "XLE -3.3%"
+      "SPY +0.2%",
+      "QQQ -0.2%",
+      "SMH -1.2%",
+      "XLK -1.5%",
+      "IGV -0.4%",
+      "XLE -3.5%"
     ]
   }
 }
@@ -8735,3 +8739,17 @@ No entry. Momentum from 10:30 ET: not yet run. 0 trades today vs the 1/day targe
   - Mean-reversion (mcap>=2B, ADV>=1M, <=-3.5%): 144 names (file read in full with python; the 80 largest decliners reviewed). Groups: (a) energy/oil (DVN -6.0% RSI 63.6, APA, OVV, MTDR, MUR, PTEN, RIG, EQNR, TRGP etc., RSI 60-79) - cause is real (oil), but the DVN base failed this morning and none shows a reclaim; (b) AI-infra/semis (LITE -15.9%, MRVL -10.2%, CBRS -9.9%, CIEN -9.1%, ALAB -7.6%, AAOI -6.9%, STX -6.6%, TSEM -6.3%, INTC -6.1%, CRWV -5.8%, NBIS -5.5%, WDC -5.7%, ORCL -7.0%) - many have RSI 25-45; (c) crypto miners (HUT, RIOT, CIFR, WULF, GLXY, RSI 25-40); (d) software (OKTA, DDOG).
   - Search (extended, one query): Intel's -28.6% was Oct 30 on earnings; Oracle fell on a $10B stock offering plus a $10B bond sale (company-specific dilution; one source dated inconsistently); CoreWeave is tied to AI-infrastructure debt worries triggered by the Oracle bond news; no sourced same-day (Nov 2) external cause for the optical/semis/crypto-miner declines (the LITE/MRVL deal is company-specific). Sources were conflicting or undated -> Gate 1 unverifiable = FAIL for all of group (b), (c), (d). Gate 1 for group (a) passes but 5-min stabilization has not been shown.
 - Decision: no trade. 1 of 10 trades today; the minimum is met. Follow-ups to fill: DVN 49.02 at 13:32 ET (exited 49.12); energy still lower. Next cycle: re-check 5-min structure on APA/OVV/MTDR/DVN only if energy shows a reclaim; Tier B ends 14:30 ET.
+
+### Cycle 700 - 14:01 ET (Mon Nov 2) - valid full scan, semis downtrend, no entry
+- Trigger scheduled 13:52 ET, delivered 13:52 ET. Last cycle 699 at 13:40 ET (12 min), cycle run. Account flat: equity/cash/buying power $405.64, no positions.
+- Tape: SPY 757.16 (+0.2%), QQQ 689.03 (-0.2%), SMH 516.35 (-1.2%), IGV 103.85 (-0.4%), XLK 176.75 (-1.5%), XLE 67.55 (-3.5%), XLF 57.59 (+1.9%), XLY 118.64 (+2.8%), GDX 79.42 (+3.0%), IWM 280.40 (+0.4%).
+- Valid MR scan (mcap>=5B, ADV>=1M, <=-3.5%, RSI<40; ratio units): 33 names, nearly all AI infrastructure / semis / software: SNDK -4.3% RSI 32.7, STX -7.0% 37.4, AMD -5.1% 39.7, DELL -4.8% 35.7, NET -3.8% 35.7, TER -4.4% 28.9, CLS -5.8% 37.9, ALAB -8.8% 37.5, LRCX -3.6% 33.8, MTSI -4.0%, DDOG -6.2%, MRVL -10.6%, TSEM -6.5%, NBIS -5.9%, CRDO -5.2%, FTNT -4.8% 26.6, MOD -4.7%, CBRS -10.6%, TTMI, AAOI -7.9%, INTC -6.7% 25.1, HUT, RKLB, CRWV -5.9% 33.4, YPF, ASTS, AMKR, IONQ, VIAV, FPS, IREN, APLD, MBLY. Valid momentum scan (>=+3%, relvol>=1.3): NXT +14.7%, ZG +5.8%, WSC +8.0% (new), BILI +7.8%, SRAD +7.2%, XPEV +7.3% - same exclusions as cycle 699 (ZG, SRAD in the earnings window; NXT no catalyst, gap; BILI/XPEV/WSC no pullback structure or catalyst check; WSC not researched, extended +8%).
+- Candidate deep check - LRCX (best liquid RSI<40 name, -3.6%, $230.9, earnings Oct 21 done, analyst mean $366.7 with 30 buy / 5 hold):
+  1. Cause: tech/semis risk-off continuing after Friday's AI-capex rout (SMH -7.0% Oct 30; Intel's -28.6% was company earnings on Oct 30) - a read-through, no dated Nov 2 source for the continuation. Partial at best (Gate 1 not cleanly sourced).
+  2. Fundamental: last quarter Oct 21 EPS 2.20 vs 2.18 est (small beat) -> pass.
+  3. Anchor: analyst mean $366.7 (+59%), prior close 239.11; level 225-230 held on Oct 22-23 -> pass.
+  4. Structure: FAIL. Daily: 352 (Oct 2 high) -> 230 (Oct 22-23) -> lower high 260.6 (Oct 29) -> 239 (Oct 30) -> 231 now; -34% in a month with lower highs and a retest of the lows - a multi-week downtrend, not a dislocation. SMH itself: 638 (Oct 6) -> 517, lower highs and lows for four weeks. 5-min: LRCX is a staircase of lower highs from 235.8 (12:30 ET) to 231.1 (13:45 ET) with a 230.40 low; SMH new low 516.37 at 13:45 ET; STX 598.85 low at 13:40 ET; SNDK 1102.80 low at 13:45 ET; TER 262.09 low at 13:45 ET: all still making lower lows, no base.
+  -> FAIL (gate 4 and stabilization). The same logic applies to STX/SNDK/TER/ALAB/CLS/AMD/NET/FTNT/CRWV: same group, same downtrend; AMD (Nov 3 pm), NET/FTNT/DDOG (this week) are also inside the earnings window.
+- Energy re-check: XLE 67.55, still near the lows, RSI of names 60-79, no reclaim -> no entry.
+- Decision: no trade. 1 of 10 trades today; the 1-trade minimum is met, so Tier C is not available and nothing forces a lower standard. Tier B ends 14:30 ET. If nothing qualifies, stay flat into the close (no overnight positions).
+- Process note: the cycle 691-698 scan units error is the reason the full valid screen only appears from cycle 699; the list above is the first complete one since 11:28 ET.
