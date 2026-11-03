@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-03 13:24 ET",
+  "as_of": "2026-11-03 13:33 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -3057,6 +3057,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-03 13:24 ET",
       "equity": 405.64
+    },
+    {
+      "t": "2026-11-03 13:33 ET",
+      "equity": 405.64
     }
   ],
   "positions": [],
@@ -3207,14 +3211,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Firm tech, soft discretionary/financials; no sector down 2%; Tier B window; election day",
+    "read": "Firm tech/small caps, soft discretionary; no sector down 2%; Tier B window; election day",
     "chips": [
-      "SPY +0.5%",
-      "QQQ +0.8%",
-      "SMH +2.3%",
-      "IGV +1.0%",
-      "IWM +0.7%",
-      "XLE -0.2%",
+      "SPY +0.6%",
+      "QQQ +1.0%",
+      "SMH +2.5%",
+      "IGV +1.1%",
+      "IWM +0.8%",
+      "XLE -0.1%",
       "XLY -0.7%"
     ]
   }
@@ -9100,3 +9104,9 @@ No entry. Momentum from 10:30 ET: not yet run. 0 trades today vs the 1/day targe
 - MR scan: 8 names (LKQ dropped off): SHOP -5.4% / DT -11.9% own earnings, ADM -5.3%, SFM -4.7%, SHC -7.0%, TLK -4.1%, ICL -3.5%, BBD -3.7%. No sourced, dated external cause for any -> Gate 1 FAIL/unverifiable. (Hourly news search was done in Cycle 729; found nothing dated.)
 - Momentum scan: GRAB +11.0% (1.4x rel vol; one-day, unverified catalyst), TV +4.5% (2.6x rel vol; no dated catalyst, multi-session strength not established) -> FAIL.
 - No orders. 0 trades today.
+
+### Cycle 731 - ~13:33 ET (Tue Nov 3) - flat, no setup (Tier B)
+- Equity/cash/BP $405.64, no positions. SPY +0.6%, QQQ +1.0%, SMH +2.5%, IGV +1.1%, XLK +1.7%, IWM +0.8%, XLE -0.1%, XLF -0.4%, XLY -0.7%, GDX -1.4%. No sector down 2%.
+- MR scan: same 8 names (SHOP -4.8% / DT -11.0% own earnings, ADM -5.5%, SFM -4.5%, SHC -7.0%, TLK -4.0%, ICL -3.6%, BBD -3.5%). No sourced, dated external cause for any -> Gate 1 FAIL/unverifiable.
+- Momentum scan: 3 names. New: JAN (Janus Living, ~$6.7B mcap) +3.3% on 1.36x rel vol: single-session, no dated catalyst identified, no multi-session divergence -> FAIL. GRAB +11.2% (one-day, unverified catalyst) and TV +5.2% (2.8x rel vol, no dated catalyst) -> FAIL.
+- No search run (nothing would otherwise pass). No orders. 0 trades today.
