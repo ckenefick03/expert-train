@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-03 11:43 ET",
+  "as_of": "2026-11-03 11:53 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -3017,6 +3017,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-03 11:43 ET",
       "equity": 405.64
+    },
+    {
+      "t": "2026-11-03 11:53 ET",
+      "equity": 405.64
     }
   ],
   "positions": [],
@@ -3167,15 +3171,15 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Flat-to-firm tape; semis +2.1%; no sector down 2%; Tier B window; election day",
+    "read": "Flat-to-firm tape; semis +2.3%; no sector down 2%; Tier B window; election day",
     "chips": [
       "SPY +0.4%",
       "QQQ +0.7%",
-      "SMH +2.1%",
+      "SMH +2.3%",
       "IGV +0.8%",
       "IWM +0.6%",
-      "XLE -0.4%",
-      "XLY -0.9%"
+      "XLE -0.3%",
+      "XLY -1.0%"
     ]
   }
 }
@@ -8997,4 +9001,10 @@ No entry. Momentum from 10:30 ET: not yet run. 0 trades today vs the 1/day targe
 - Equity/cash/BP $405.64, no positions. SPY +0.4%, QQQ +0.7%, SMH +2.1%, IGV +0.8%, XLK +1.2%, IWM +0.6%, XLE -0.4%, XLF -0.5%, XLY -0.9%, GDX -1.4%. No sector down 2%.
 - MR scan (<=-3.5%, RSI<45): 10 names, same set as Cycle 719 plus SFM (-4.5%, RSI 37) back. SCCO -4.0%, SHOP -6.8% / DT -11.7% (own earnings), ADM -5.7%, MOS -3.7%, SHC -6.1%, TLK -3.6%, ICL -3.8%, BBD -4.3%. No sourced, dated external cause for any -> Gate 1 FAIL/unverifiable. No search run (no candidate would otherwise pass).
 - Momentum scan: TV +3.5% on 2.0x rel vol only; one-day, no dated catalyst -> FAIL.
+- No orders. 0 trades today.
+
+### Cycle 721 - ~11:53 ET (Tue Nov 3) - flat, no setup (Tier B)
+- Equity/cash/BP $405.64, no positions. SPY +0.4%, QQQ +0.7%, SMH +2.3%, IGV +0.8%, XLK +1.3%, IWM +0.6%, XLE -0.3%, XLF -0.6%, XLY -1.0%, GDX -1.5%. No sector down 2%.
+- MR scan (<=-3.5%, RSI<45): 9 names (MOS dropped off): SCCO -4.2%, SHOP -6.8% / DT -11.4% (own earnings), ADM -5.4%, SFM -4.8%, SHC -5.5%, TLK -4.0%, ICL -3.6%, BBD -4.1%. No sourced, dated external cause for any -> Gate 1 FAIL/unverifiable. No search run (no candidate would otherwise pass).
+- Momentum scan: TV +3.7% on 2.0x rel vol only; one-day, no dated catalyst -> FAIL.
 - No orders. 0 trades today.
