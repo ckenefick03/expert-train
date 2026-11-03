@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-03 14:44 ET",
+  "as_of": "2026-11-03 14:48 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, 0 trades today. No MR candidate passes Gate 1; momentum scan empty.",
+  "status_note": "Flat, 0 trades Tue Nov 3 so far. Close-recap trigger fired at 14:47 ET (an hour early); recap is provisional, cycles continue to 16:00 ET. Nothing rolls overnight.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-03",
@@ -3088,6 +3088,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-03 14:44 ET",
+      "equity": 405.64
+    },
+    {
+      "t": "2026-11-03 14:48 ET",
       "equity": 405.64
     }
   ],
@@ -9183,3 +9187,14 @@ No entry. Momentum from 10:30 ET: not yet run. 0 trades today vs the 1/day targe
 - MR scan: 7 names, same as Cycle 737: ADM -7.5% (new lows), SHC -8.1%, SHOP -7.3% / DT -12.7% own earnings, SCCO -3.7%, SFM -4.4%, ICL -4.2%. Gate 4 FAIL (still making lows), Gate 1 FAIL/unverifiable for all. Tier C gates unchanged.
 - Momentum scan: 10 names. New: NBIX +15.8% (reported Q3 Nov 2 after close: earnings gap), FISV +13.9% (reported Q3 this morning: earnings gap), RAL +8.5% (reports Q3 tomorrow Nov 4 am: inside the 2-session earnings exclusion), ROL +4.6% (1.33x rel vol; last reported Oct 21; one-day, no dated catalyst identified). Others unchanged: TLN / BETA earnings gaps, RIOT +15.8% unverified, JAN +4.6%, GRAB +9.8%, TV +6.4% one-day. All FAIL. (earnings checked via get_earnings_results)
 - No orders. 0 trades today. Window to enter closes 15:30 ET.
+
+### Cycle 739 - ~14:48 ET (Tue Nov 3) - CLOSE RECAP TRIGGER (fired 1h early; PROVISIONAL)
+- The "Trading close recap" routine fired at 19:47Z = 14:47 ET, 73 minutes before the 16:00 ET bell. It's written for EDT; ET is UTC-5 now, so it should be 20:47Z. Not changed (still an open item for the user). I am treating this as a provisional recap and will keep running 10-minute cycles to 16:00 ET; entries remain possible until 15:30 ET.
+- Stop checks / reconcile: live account = equity $405.64, cash $405.64, buying power $405.64, no positions, no open orders, and no orders at all placed today (get_equity_orders since 2026-11-03 returned empty).
+- **Overnight status: nothing rolls overnight. The account is 100% cash; no position, no thesis to defend, no hold decision made.**
+- Tape (14:47 ET vs Mon close): SPY +0.4%, QQQ +0.7%, SMH +1.9%, IGV +0.6%, IWM +0.5%, XLE -0.6%, XLF -0.5%, XLY -0.7%, GDX -1.7%.
+- Day recap (Tue Nov 3, so far): Start equity $405.64 -> $405.64, day P&L $0.00, 0 trades (0 forced). The 1-trade minimum was NOT met; it is a target, not a reason to loosen gates, and the gates were not loosened.
+  - What ran: cycles 717-739 (from 11:14 ET), with the hourly news search at ~11:14, 12:14, 13:14 and 14:14 ET (all returned only older-year election-day articles, nothing dated Nov 3 2026: gaps, not cited as causes). Pre-open brief earlier (Tue 07:28 ET) and the cycles before 11:14 ET are logged above (cycles ~706-716).
+  - Skips: no sector fell 2% so Tier A never triggered. All MR scan hits (SHOP/DT own earnings; ADM, SHC making new lows; SCCO, SFM, ICL, TLK, BBD, LKQ, MOS, PLTR with no sourced dated cause) failed Gate 1, and ADM/SHC failed Gate 4. All momentum hits failed: earnings gaps (TLN, BETA, FISV, NBIX), earnings tomorrow (RAL) or one-day unverified/uncatalyzed moves (GRAB, TV, JAN, RIOT, ROL).
+  - Missed cycles: none since 11:14 ET. Earlier today: the session was idle from Mon 14:53 ET to Tue 07:28 ET (disclosed previously), and cycles before 11:14 ET were handled in the prior context.
+  - Open items for the user: (1) momentum 'several sessions' clause screens out every fresh earnings gap; (2) PDT / settled-funds applicability on limited_margin unverified; (3) cron times are an hour early in ET (close recap 19:47Z should be 20:47Z).
