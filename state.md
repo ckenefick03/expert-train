@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-02 14:48 ET",
+  "as_of": "2026-11-03 07:35 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,12 +41,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat. Day so far: 1 trade (DVN stop-out, -$1.35). No positions to roll overnight. Recap written at 14:48 ET (cron fires an hour early); cycles continue to the 16:00 ET close.",
+  "status_note": "Pre-open: flat, no orders. Midterm election day. Monday close: QQQ -1.5%, SMH -2.7%, XLE -4.0% (oil -7.6%), XLF +1.9%. Pre-market semis +2%, AAPL -4%, PLTR -7.5%. Watch lists posted; entries only after 10:00 ET (momentum 10:30).",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-11-02",
-    "start_equity": 406.99,
-    "trades": 1,
+    "date": "2026-11-03",
+    "start_equity": 405.64,
+    "trades": 0,
     "forced": 0
   },
   "equity_history": [
@@ -2949,6 +2949,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-02 14:48 ET",
       "equity": 405.64
+    },
+    {
+      "t": "2026-11-03 07:35 ET",
+      "equity": 405.64
     }
   ],
   "positions": [],
@@ -3099,13 +3103,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Tech and semis closing weak (QQQ -1.0%, SMH -2.5%); financials and discretionary strong; energy lower on oil.",
+    "read": "Risk-off tech after Friday's AI-capex rout and Monday's follow-through; cyclicals, financials and gold miners were the relative winners; pre-market bounce in semis; election-day event risk.",
     "chips": [
-      "SPY -0.3%",
-      "QQQ -1.0%",
-      "SMH -2.5%",
-      "XLK -2.6%",
-      "XLE -3.4%"
+      "QQQ -1.5% Mon",
+      "SMH -2.7% Mon",
+      "XLE -4.0% Mon",
+      "XLF +1.9% Mon",
+      "SMH +2.2% pre",
+      "AAPL -4.0% pre"
     ]
   }
 }
@@ -8802,3 +8807,33 @@ No entry. Momentum from 10:30 ET: not yet run. 0 trades today vs the 1/day targe
   - Missed cycles: no outright gaps in coverage, but the scan error is the material one.
 - Open questions for the user (unchanged): (1) the momentum "several sessions" clause screens out every fresh earnings gap; (2) PDT/settled-funds applicability on this limited_margin account is unverified (two round trips this week, no broker alert); (3) the close-recap cron (19:47Z) should be moved to 20:47Z so it lands at 15:47 ET, and the other UTC crons now land an hour earlier in ET than designed; I did not change any schedule.
 - Follow-ups to fill later: DVN closed at ? (exited 49.12; 49.xx intraday), LRCX/STX/SNDK/TER and energy names' closing levels versus today's skip levels; next-day (Nov 3) move of the semis complex as a test of the gate-4 downtrend call.
+
+### Pre-open brief - 07:35 ET (Tue Nov 3) - read-only, no orders
+- Trigger "Trading pre-open brief" scheduled 07:27 ET (12:27Z), delivered 07:28 ET. Read-only, no orders.
+- Coverage gap to disclose: the session was idle between the 14:48 ET close recap (cycle 704) and now, so cycles for Mon 14:53-16:00 ET were NOT run and not logged (about 7 cycles). The account was flat, orders for Nov 2 show only the DVN buy and sell, and equity is unchanged at $405.64, so no position or stop went unmonitored.
+- Reconciliation: equity/cash/buying power $405.64, no positions, no open orders. Nothing to stop-check. Daily P&L reset; Nov 2 realised -$1.35 (day -0.33%); drawdown from the $437.99 peak is 7.4% (breaker $394.19).
+- Monday Nov 2 official closes and the tape: SPY 752.10 (-0.5%), QQQ 681.09 (-1.4% vs 690.49), SMH 508.31 (-2.7%), XLK 174.22 (-2.9%), IGV 101.90 (-2.3%), XLE 67.25 (-4.0%), XLF 57.56 (+1.9%), XLY 118.16 (+2.4%), XLI 169.71 (+1.4%), XLV 184.60 (-0.1%), XLU 43.67 (+0.6%), GDX 79.15 (+2.7%), IWM 279.14 (-0.1%). So the day was tech/semis/AI infrastructure (and software) down hard, energy down hard on oil, and cyclicals, financials, discretionary and gold miners up.
+- Pre-market (Tue ~07:28 ET, thin liquidity, wide spreads): SPY ~751.6 (-0.1%), QQQ ~683.3 (+0.3%), SMH ~519.5 (+2.2%), XLK ~174.4 (+0.1%), XLE ~67.8 (+0.8%), IGV ~100.5 (-1.4%), XLF ~57.3 (-0.5%), GDX ~78.0 (-1.5%). Single names: LRCX ~235.6 (+3.5%), STX ~608 (+2.4%), SNDK ~1119 (+4.1%), TER ~268.5 (+2.9%), MU ~860 (+3.2%), NVDA ~205.2 (+1.6%), WDC ~347.9 (+2.7%), CLS ~255 (+2.3%), INTC ~61.8 (+3.1%), MRVL ~175.5 (+2.4%, reported pre-market gain on S&P 500 inclusion news), CRWV ~51.4 (+2.5%), AAPL ~324.8 (-4.0% after Monday's after-close earnings), PLTR ~165 (-7.5%, Monday after-close earnings), DVN ~49.0 (+0.8%), OXY ~61.2 (+0.9%), NEM ~107.4 (-1.5%).
+- News / politics (every item tied to a source found this cycle; searches were extended mode):
+  - Oil: crude fell about 7.6% on Monday on hopes of US-Iran peace talks (CNBC live blog; STL.News; TheStreet; StockTitan Nov 2 market wraps), lifting cyclicals and small caps while energy was the worst sector. This is the dated external cause for the energy drop that I used yesterday.
+  - Tech: Nasdaq Composite closed 25,164.32 (-1.07%), S&P 500 -0.51% to 7,541.40 (third straight loss), Dow +0.4% (Yahoo Finance index summary; STL.News). One source (Rio Times Nov 2 briefing) attributes Friday's 2.9% Nasdaq plunge to Fed rate-hike fears and the 10-year yield sits near 4.9%; single source, so treat as unconfirmed. Intel fell again after its -28.6% Friday on weak guidance (Benzinga). CoreWeave/neocloud weakness was tied to AI-infrastructure debt worries after Oracle's $10B stock plus $10B bond financing (Investing.com); that is a company/financing story, not a clean sector-macro cause.
+  - Apple fell after slower earnings growth (TheStreet Nov 2); Apple is -4% pre-market. PLTR -7.5% pre-market on its own results (company-specific).
+  - Politics: US midterm elections are TODAY (Tue Nov 3): expect event-risk volatility around the polls closing and Wednesday's open (Schwab/Yahoo pre-market notes).
+  - A Nov 3 pre-market wrap with a clean explanation of today's semis bounce was not found (the search returned Monday coverage); the semis bounce is unexplained and may fade.
+- Earnings (calendar, Nov 3-6; earnings-window rule applies to the 2 sessions after today as well): TODAY am: FISV, SHOP, PFE, SRAD. TODAY pm: AMD, ALAB, ANET, SMCI, AMGN, EA, XYZ. Wed am: CVS, DDOG, FIS, HUT, NVO, UBER. Wed pm: APP, ARM, QCOM, SNAP, KVYO, VIAV, ZG. Thu am: AZN, COP, DUK, GPN, MTSI, TAP, U. Thu pm: AAOI, ABNB, AFRM, AKAM, DKNG, DOCS, DVN, EOG, IONQ, IREN, LYFT, NET, TEAM, WSC. Not in the Nov 3-6 calendar: LRCX, STX, SNDK, TER, MU, NVDA, WDC, CLS, MRVL, INTC, OXY, XOM, CVX. Excluded from entry: AMD, ALAB, ANET, SMCI, DDOG, HUT, ARM, QCOM, APP, ZG, KVYO, DVN, EOG, COP, NET, AAOI, IREN, TAP, WSC (all within 2 sessions), plus company-specific movers AAPL, PLTR, INTC, LITE, MRVL, ORCL.
+- Yesterday's follow-ups (for the skip log): DVN exited 49.12, closed 48.63 (-1.0% below my exit; the stop was right). LRCX skipped at 230.9 (13:50 ET) closed 227.56 (-1.4%); STX 598.9 -> 593.76 (-0.9%); SNDK 1104.8 -> 1075.08 (-2.7%); TER 262.7 -> 261.01 (-0.6%); SMH 517 -> 508.31 (-1.7%). The gate-4 downtrend call on the semis complex was right through the close.
+- WATCH LIST - mean-reversion (Tier A 10:00-11:30 ET needs >=5% intraday drop with the sector ETF down >=2%, daily RSI<35, a stock weaker than its sector, a sourced external cause and 5-min higher lows; Tier B 11:30-14:30 needs >=3.5%; nothing is a trade until the gates are written):
+  1. LRCX - Mon close 227.56, daily RSI about 34, analyst mean $366.7 (30 buy), reported Oct 21; downtrend risk (lower highs since early Oct) so only a washed-out undercut that holds with higher 5-min lows. Pre-market +3.5%: a MR entry requires a fresh sell-off first.
+  2. STX - Mon close 593.76, RSI about 37, mean target $1,062, reported already.
+  3. TER - Mon close 261.01, RSI about 29, mean target $431, reported Oct 28.
+  4. WDC - Mon close 338.59, RSI about 43; reported earlier this week/month, liquidity good.
+  5. OXY - Mon close 60.72 (-5.1% day on oil), earnings Nov 9, RSI about 64 (fails Tier A RSI), Tier B only with a real base after the Iran-talks drop; XOM/CVX are the same group.
+  Rule reminders for today: the AI-infra complex stays a downtrend until it reclaims a prior lower high; a Tier A/B entry needs the written cause to be dated and external (Friday's rate-fear/AI-capex sell-off is the candidate cause, single-sourced for the rate part) and a base of at least four 5-min bars. Stops go below the base low with at least about 1% of room (Monday's lesson), and I check any open position every cycle with extra urgency when within 0.2% of the stop.
+- WATCH LIST - momentum (earliest 10:30 ET; needs a multi-session relative-strength divergence, a dated catalyst, a held pullback with a higher low, target >=2R):
+  1. XLF constituents - JPM 340.58, GS 898.72, BAC 49.57. XLF has risen from 55.06 (Oct 19) to 57.56 (higher highs; +1.9% Monday while QQQ fell 1.5%): multi-session relative strength; catalyst is lower oil/rate relief (to verify) and election-day rotation. Pre-market XLF is -0.5%, so wait for a pullback that holds.
+  2. CAT 613.62 (XLI +1.4% Monday, up from 164.6 to 169.7 over two weeks).
+  3. AMZN 245.63 / XLY 118.16 (+2.4% Monday): consumer discretionary leadership as oil falls; AMZN has no earnings this week in the calendar view.
+  4. NEM 109.09 / GDX 79.15 (+2.7% Monday); GDX is choppy (-5% on Oct 22 and Oct 30) and -1.5% pre-market, so a weaker candidate.
+  5. NVDA 202.06 (pre-market +1.6%) and MU 833.59 (+3.2% pre) only if the semis bounce holds with a higher low after 10:30; a relief bounce inside a downtrend does not satisfy the relative-strength clause by itself.
+- Risk plan: $105 fixed size (buying power $405.64 allows 3 entries; the cap is 5 positions), $100 daily loss limit, 10% breaker at $394.19, no entries before 10:00 ET, momentum from 10:30 ET, none after 15:30 ET, default flat before the bell. 1 trade minimum / 10 maximum; the minimum is a target and gates never loosen to hit it. Election-day volatility argues for waiting out the first 30 minutes.
+- Scan hygiene: use ratio values (0.03 = 3%; -0.035 = -3.5%) for % Change filters. Note the premarket quotes above are thin and wide; do not infer entries from them.
