@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-04 09:55 ET",
+  "as_of": "2026-11-04 10:06 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -3129,6 +3129,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-04 09:55 ET",
       "equity": 405.64
+    },
+    {
+      "t": "2026-11-04 10:06 ET",
+      "equity": 405.64
     }
   ],
   "positions": [],
@@ -3279,15 +3283,15 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Risk-on rally (QQQ +1.7%, small caps, discretionary, gold); ENERGY -3.2% the only sector >=2% down (refiners worse); semis -0.4%; energy cause unsourced; entries open at 10:00 ET",
+    "read": "Risk-on (QQQ +1.9%, small caps, discretionary, gold); energy -3.6% on sourced Iran-peace / no-strike news and Democratic midterm sweep; semis -0.7%; Tier A thresholds (>=5%, RSI<35) not met by any energy name",
     "chips": [
-      "SPY +1.7%",
-      "QQQ +1.7%",
-      "SMH -0.4%",
-      "XLE -3.2%",
-      "XOM -3.2%",
-      "MPC -5.1%",
-      "GDX +6.9%"
+      "SPY +1.8%",
+      "QQQ +1.9%",
+      "SMH -0.7%",
+      "XLE -3.6%",
+      "XOM -3.5%",
+      "MPC -6.1%",
+      "GDX +6.3%"
     ]
   }
 }
@@ -9315,3 +9319,13 @@ Honest expectation: with no sector down 2% and every momentum idea an earnings g
 - Gate 1 (sourced dated cause): hourly-style standard search ('oil prices tumble Exxon Chevron Nov 4 2026 why') returned only older items: Apr 1 2026 Iran de-escalation drop, 2013-2025 episodes. Nothing dated Nov 4. A same-theme precedent (Iran talks pushing oil down) exists but is NOT a dated cause for today; cannot be cited. Gate 1 = FAIL/unverifiable today unless a dated source appears.
 - Plan 10:02 ET: confirm energy still down >=2%; check 5-min bars of XOM/CVX/OXY/MPC for base (>=4 clean 5-min higher lows; stop >=~1% under base low); retry a dated search; no forced trade.
 - No orders possible. 0 trades.
+
+### Cycle 748 (first entry-eligible cycle, Tier A) - ~10:06 ET (Wed Nov 4) - flat, no setup
+- Equity/cash/BP $405.64, no positions. Quotes (10:03 ET) vs Tue close: SPY +1.8%, QQQ +1.9%, SMH -0.7%, IGV +1.7%, IWM +1.2%, XLK +1.5%, XLF +1.8%, XLY +3.7%, XLV +1.5%, XLU -1.1%, GDX +6.3%, XLE -3.6% (64.25). XOM -3.5% (171.30), CVX -2.9% (218.76), OXY -3.6% (58.27), MPC -6.1% (401.0), VLO -5.2% (367.5), PSX -4.0%.
+- **Gate 1 evidence found (extended search, dated Wed Nov 4 2026, several outlets: Gulf News, Free Press Journal, Coinpaper, rallies.ai, 5paisa, Upstox):** crude fell again today (Brent ~$102-103, -1.4%; WTI ~$95, -0.9%) after a ~7% drop on Nov 3, on US-Iran peace-talk hopes and President Trump telling the Financial Times the US has no immediate plans to strike Iran; Democrats also won control of both chambers of Congress. US crude stocks fell 5.27M barrels (API, week to Oct 30), a partial offset. Caveats: aggregator outlets, intraday snapshots, no settlement prices. This is a sector-wide external cause, so energy is no longer 'unsourced'; it is a news-driven drop (same pattern as Mon Nov 2, when DVN failed), so Gate 4 must demand a reclaim.
+- Gate check, Tier A (needs >=5% intraday, sector ETF >=2% down, daily RSI<35, stock down more than the sector, clean 5-min higher low):
+  - XOM, CVX, OXY: Gate 1 pass (sector news), Gate 2 pass (last quarters beat: XOM 4.23 vs 4.01, CVX 5.28 vs 4.82; OXY reports Nov 9, outside window), but intraday move only -2.9% to -3.6% (<5%) and not RSI<35 (not in the RSI<45 scan at -5%) -> Tier A FAIL. 5-min bars since 10:30 ET are flat, not a base (XOM lows 171.33, 170.69, 171.49, 171.67, 171.25, 171.17: no clean higher lows).
+  - MPC (-6.1%, RSI 44.7) and VLO (-5.2%, RSI 42.2): intraday >=5% but RSI not <35 and still stepping down (MPC 5-min closes 411.4 -> 406.5 -> 405.7 -> 406.3 -> 403.1 -> 401.3): Gate 4 FAIL (no stabilization).
+  - AI-infra / semis names (LITE -7.2%, DELL -7.2%, CLS, MRVL, STX, VST -10.7%, NVT -10.5%, MOD -20.8%, AAON -13.7%, HUT -17.5%, DDOG -9.4%, etc.; 30 names >=5% down): SMH only -0.7%, so the 2% sector condition fails; no sourced cause found for the group; VST/DDOG/HUT own earnings or earnings within 2 sessions. FAIL.
+- Tier B opens 11:30 ET (>=3.5% intraday or >=7%/3d, stabilization, only if no Tier A qualified): energy names near -3.5% and XLE about -8% over 3 sessions are the thing to watch; require gates incl. >=4 clean 5-min higher lows, stop >=~1% under base low, target >=2R named anchor (e.g. Tue close), and no earnings within 2 sessions.
+- Momentum: not yet (10:30 ET). No orders. 0 trades today.
