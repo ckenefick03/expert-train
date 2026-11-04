@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-04 09:43 ET",
+  "as_of": "2026-11-04 09:55 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -3125,6 +3125,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-04 09:43 ET",
       "equity": 405.64
+    },
+    {
+      "t": "2026-11-04 09:55 ET",
+      "equity": 405.64
     }
   ],
   "positions": [],
@@ -3275,14 +3279,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Risk-on rally (QQQ +1.5%, small caps, discretionary, gold); ENERGY -3.1% is the only sector >=2% down; semis recovered to -0.3%; cause of energy drop unsourced; no entries before 10:00 ET",
+    "read": "Risk-on rally (QQQ +1.7%, small caps, discretionary, gold); ENERGY -3.2% the only sector >=2% down (refiners worse); semis -0.4%; energy cause unsourced; entries open at 10:00 ET",
     "chips": [
-      "SPY +1.6%",
-      "QQQ +1.5%",
-      "SMH -0.3%",
-      "IWM +2.0%",
-      "XLY +3.1%",
-      "XLE -3.1%",
+      "SPY +1.7%",
+      "QQQ +1.7%",
+      "SMH -0.4%",
+      "XLE -3.2%",
+      "XOM -3.2%",
+      "MPC -5.1%",
       "GDX +6.9%"
     ]
   }
@@ -9303,4 +9307,11 @@ Honest expectation: with no sector down 2% and every momentum idea an earnings g
 - Equity/cash/BP $405.64, no positions. Quotes (09:42 ET) vs Tue close: SPY +1.6% (766.4), QQQ +1.5%, SMH -0.3% (516.8: semis recovered from -1.5%), IGV +0.8%, IWM +2.0%, XLK +1.3%, XLF +1.9%, XLY +3.1%, XLV +2.0%, XLU -0.9%, GDX +6.9%, **XLE -3.1%**.
 - Energy detail (vs Tue close): XOM -3.2%, CVX -2.8%, COP -3.1% (reports Thu am: earnings exclusion), OXY -3.5%, DVN -3.0% and EOG -3.3% (both report Thu pm: earnings exclusion), SLB -1.8%. Energy is the only sector >=2% down, so the Tier A sector condition holds from 10:00 ET for energy; but no energy major is >=5% intraday (Tier A needs >=5%; Tier B needs >=3.5% intraday or >=7% over 3 days). XLE: Mon -4.0%, Tue -0.8%, today -3.1% -> about -7.7% over three sessions.
 - Candidates after 10:00 ET would be XOM, CVX, OXY (no earnings within 2 sessions that I know of; verify with get_earnings_results first). Still blocked at Gate 1 (no sourced, dated cause: the 09:34 ET search found none) and Gate 4 (stabilization / 4+ clean higher lows, stop room >=~1% under base low; DVN lesson). Semis side of Tier A is off: SMH -0.3%.
+- No orders possible. 0 trades.
+
+### Cycle 747 - ~09:55 ET (Wed Nov 4) - pre-10:00 prep; no entries possible; flat
+- Equity/cash/BP $405.64, no positions. (09:53 ET vs Tue close) SPY +1.7%, QQQ +1.7%, SMH -0.4%, XLE -3.2% (64.51). Energy names: XOM -3.2% (171.85), CVX -2.6% (219.33), OXY -3.3% (58.44), SLB -2.2%, HAL -3.0%, PSX -3.2%, MPC -5.1% (405.6), VLO -4.6% (369.6). Refiners are the weakest (MPC/VLO beyond -4.5%).
+- Earnings check (get_earnings_results): XOM and CVX last reported Oct 30 (no earnings within 2 sessions); OXY reports Nov 9 pm (outside the window). So XOM, CVX, OXY are not excluded by earnings. (COP/DVN/EOG remain excluded: report Thu.)
+- Gate 1 (sourced dated cause): hourly-style standard search ('oil prices tumble Exxon Chevron Nov 4 2026 why') returned only older items: Apr 1 2026 Iran de-escalation drop, 2013-2025 episodes. Nothing dated Nov 4. A same-theme precedent (Iran talks pushing oil down) exists but is NOT a dated cause for today; cannot be cited. Gate 1 = FAIL/unverifiable today unless a dated source appears.
+- Plan 10:02 ET: confirm energy still down >=2%; check 5-min bars of XOM/CVX/OXY/MPC for base (>=4 clean 5-min higher lows; stop >=~1% under base low); retry a dated search; no forced trade.
 - No orders possible. 0 trades.
