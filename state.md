@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-04 12:13 ET",
+ "as_of": "2026-11-04 12:23 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Flat, 0 trades. Hourly: energy has a sourced cause and an uptrend pullback, but no clean higher-low base yet; semis fail Gate 1.",
+ "status_note": "Flat, 0 trades. Energy broke to new lows (base failed); semis range-bound, Gate 1 unmet.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-04",
@@ -3180,6 +3180,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   },
   {
    "t": "2026-11-04 12:13 ET",
+   "equity": 405.64
+  },
+  {
+   "t": "2026-11-04 12:23 ET",
    "equity": 405.64
   }
  ],
@@ -9467,3 +9471,10 @@ Honest expectation: with no sector down 2% and every momentum idea an earnings g
 - Gate 2: XOM/CVX fundamentals neutral-or-better, last earnings already reported (not rechecked in detail this cycle). Gate 3: a named anchor exists (Nov 3 close: XOM 177.46, CVX 225.27, i.e. about 5% above, over 2R against a ~1% stop) but it relies on peace headlines fading.
 - Gate 4 base (5-min, 11:30-12:10 ET): XOM lows 168.86/168.26/168.43/168.37/168.25, CVX 216.09/215.44/215.77/216.04/215.87, OXY 56.92/56.82/56.92/56.89/56.87, XLE 62.95/62.83/62.92/62.94/62.94. No clean rising lows (XOM keeps retesting 168.25); XLE slightly rising only. Lesson: news-driven sell-offs need a reclaim of a lower high or VWAP; not shown. FAIL for now. Also OXY earnings date unverified, so skip OXY.
 - Semis/AI: Gate 1 unchanged (company-specific/unsourced). Momentum: nothing new. Decision: no trade, 0 trades today. Energy is the lead candidate for Tier B/C if a real base (>=4 rising lows) or a lower-high reclaim forms.
+
+### Cycle 761 - ~12:23 ET (Wed Nov 4) - Tier B; flat, no setup
+- Account: equity/cash/BP $405.64, no positions.
+- Tape: SPY +1.8%, QQQ +1.5%, SMH -2.2% (506.97), XLE -5.9% (62.77, new low).
+- Energy base FAILED: the 12:15-12:20 ET bar broke down (XOM low 167.45, now 167.70; CVX 214.73, now 215.00; XLE 62.66). The retested 168.25 level did not hold, so the 12:13 candidate setup is invalid; no entry.
+- Semis: MRVL 157.5 (low 156.95), INTC 58.23 (bouncing), CAT 586 range. Gate 1 unchanged: company-specific/unsourced. Momentum: nothing new.
+- Decision: no trade, 0 trades today.
