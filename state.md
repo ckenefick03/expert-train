@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-04 10:36 ET",
+  "as_of": "2026-11-04 10:46 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -3141,6 +3141,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-04 10:36 ET",
       "equity": 405.64
+    },
+    {
+      "t": "2026-11-04 10:46 ET",
+      "equity": 405.64
     }
   ],
   "positions": [],
@@ -3291,15 +3295,15 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Risk-on (QQQ +1.6%, discretionary, small caps, gold); energy -3.4% (XOM bouncing off lows); industrials -1.9% on AI-power/data-center repricing after Democratic midterm sweep; no setup",
+    "read": "Risk-on (QQQ +1.8%, discretionary +4%, gold +6.9%); energy -3.7%, industrials -1.7%, semis -1.5% (all short of or only just past Tier A triggers); no setup",
     "chips": [
-      "SPY +1.6%",
-      "QQQ +1.6%",
+      "SPY +1.8%",
+      "QQQ +1.8%",
       "SMH -1.5%",
-      "XLE -3.4%",
-      "XLI -1.9%",
-      "GEV -11.1%",
-      "GDX +6.1%"
+      "XLE -3.7%",
+      "XLI -1.7%",
+      "XLY +4.0%",
+      "GDX +6.9%"
     ]
   }
 }
@@ -9353,3 +9357,10 @@ Honest expectation: with no sector down 2% and every momentum idea an earnings g
 - CAT: -5.9% with RSI 26 and XLI -1.9% (just short of the 2% sector trigger), cause is post-earnings/guidance plus sector; still printing lows -> FAIL.
 - Momentum scan (>=3% up, rel vol >=1.3): 1 name, BEKE +5.6% (1.4x rel vol, China real-estate platform): one-day, no dated catalyst identified -> FAIL (multi-session relative strength not established).
 - No orders. 0 trades today.
+
+### Cycle 751 - ~10:46 ET (Wed Nov 4) - Tier A; flat, no setup
+- Equity/cash/BP $405.64, no positions. Quotes (10:43 ET) vs Tue close: SPY +1.8%, QQQ +1.7%, SMH -1.4% (511.0), IGV +2.2%, IWM +1.2%, XLK +1.2%, XLF +2.2%, XLY +4.0%, XLV +1.5%, XLU -1.0%, XLI -1.7%, GDX +6.9%, XLE -3.7% (64.23). XOM -2.9% (172.25), CVX -2.8%, OXY -3.5%, MPC -7.4%, VLO -5.8%.
+- Tier A scan (>=5% down, RSI<35): 10 names: SNDK -6.2%, LITE -9.4%, STX -5.9%, TER -5.3%, ALAB -7.1%, MRVL -6.7%, MOD -23.2%, DOCN -5.1%, AAOI -6.4% (all AI infra / semis / optical / storage) and CAT -5.7%. SMH is -1.4% (below the 2% sector trigger) and XLI -1.7%; no sourced dated cause for the AI-infra group (see Cycle 750). Tier A FAIL on the sector condition and Gate 1.
+- Energy: XLE is the only sector >=2% down (-3.7%) but the large names are -2.8% to -3.5% (<5%) and not RSI<35 -> Tier A FAIL. MPC -7.4% / VLO -5.8% (refiners) have RSI ~40s -> FAIL on RSI.
+- Momentum (>=3%, rel vol >=1.3): only BEKE +5.8% (1.5x rel vol): one-day, no catalyst -> FAIL.
+- No orders. 0 trades today. Tier A closes 11:30 ET; Tier B (>=3.5% intraday or >=7%/3d, stabilization, all four gates) follows.
