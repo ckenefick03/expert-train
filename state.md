@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-03 14:48 ET",
+  "as_of": "2026-11-04 07:30 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,10 +41,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, 0 trades Tue Nov 3 so far. Close-recap trigger fired at 14:47 ET (an hour early); recap is provisional, cycles continue to 16:00 ET. Nothing rolls overnight.",
+  "status_note": "Flat, all cash, 0 trades. Pre-open brief Wed Nov 4. Tue 15:02-16:00 ET cycles were not run (session idle); account was flat with no orders.",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-11-03",
+    "date": "2026-11-04",
     "start_equity": 405.64,
     "trades": 0,
     "forced": 0
@@ -3093,6 +3093,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-03 14:48 ET",
       "equity": 405.64
+    },
+    {
+      "t": "2026-11-04 07:30 ET",
+      "equity": 405.64
     }
   ],
   "positions": [],
@@ -3243,15 +3247,15 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Tech fading, energy/gold/discretionary soft; no sector down 2%; Tier C window (min unmet, gates unchanged); election day",
+    "read": "Pre-market risk-on broad (small caps, financials, health care bid), gold miners surging, semis flat; no sector down 2%; unsourced",
     "chips": [
-      "SPY +0.4%",
-      "QQQ +0.7%",
-      "SMH +1.8%",
-      "IGV +0.6%",
-      "IWM +0.5%",
-      "XLE -0.7%",
-      "XLY -0.7%"
+      "SPY +0.9%",
+      "QQQ +0.4%",
+      "IWM +1.5%",
+      "XLF +1.6%",
+      "XLV +1.8%",
+      "GDX +6.1%",
+      "SMH -0.2%"
     ]
   }
 }
@@ -9198,3 +9202,35 @@ No entry. Momentum from 10:30 ET: not yet run. 0 trades today vs the 1/day targe
   - Skips: no sector fell 2% so Tier A never triggered. All MR scan hits (SHOP/DT own earnings; ADM, SHC making new lows; SCCO, SFM, ICL, TLK, BBD, LKQ, MOS, PLTR with no sourced dated cause) failed Gate 1, and ADM/SHC failed Gate 4. All momentum hits failed: earnings gaps (TLN, BETA, FISV, NBIX), earnings tomorrow (RAL) or one-day unverified/uncatalyzed moves (GRAB, TV, JAN, RIOT, ROL).
   - Missed cycles: none since 11:14 ET. Earlier today: the session was idle from Mon 14:53 ET to Tue 07:28 ET (disclosed previously), and cycles before 11:14 ET were handled in the prior context.
   - Open items for the user: (1) momentum 'several sessions' clause screens out every fresh earnings gap; (2) PDT / settled-funds applicability on limited_margin unverified; (3) cron times are an hour early in ET (close recap 19:47Z should be 20:47Z).
+
+### Pre-open brief - Wed Nov 4, ~07:30 ET (read-only, no orders)
+**Disclosure first (missed cycles).** After the provisional recap at 14:48 ET Tue (Cycle 739) this session did not run again until this 07:27 ET brief. The 15:02, 15:12 (hourly), 15:22, 15:32, 15:42, 15:52 ET Tuesday cycles and any final 16:00 close check were NOT run. Impact: none to the account. It was all cash (no positions, no stops to watch) and get_equity_orders since 2026-11-03 returns no orders at all. Tue Nov 3 final: 0 trades, day P&L $0.00, equity $405.64, nothing carried overnight. (The ~15:02-15:30 ET window would have been the last Tier C chance; I can't say whether a setup appeared in it.)
+
+**Account (reconciled):** equity/cash/BP $405.64, no positions, no open orders. No stops to check. Peak equity still $437.99, breaker level $394.19 (not close).
+
+**Tape.** Tue Nov 3 official closes vs Mon: SPY 754.35 (+0.30%), QQQ 685.28 (+0.62%), SMH 518.52 (+2.0%), IWM 279.79 (+0.2%), XLF 57.19 (-0.65%), XLE 66.68 (-0.8%), XLY 117.33 (-0.7%), GDX 77.60 (-2.0%), XLV 184.02, XLU 43.42.
+Pre-market Wed (~07:28 ET, extended-hours prints, thin): SPY 761.46 (+0.94%), QQQ 687.99 (+0.4%), IWM 283.84 (+1.45%), XLF 58.12 (+1.6%), XLV 187.40 (+1.8%), XLK 177.18 (+0.4%), SMH 517.38 (-0.2%), XLE 66.58 (-0.15%), XLY ~118.0 (+0.6%), GDX 82.30 (+6.1%). The pre-market is broad risk-on (small caps, banks, health care up) while semis are flat after Tuesday's +2%. No sector is down 2%, so Tier A is not in play at the open unless something changes.
+**Single-name pre-market moves:** ANET 181.60 (+6.9%, reported Tue pm), SMCI 32.76 (+4.4%, reported Tue pm), AMD 493.00 (+1.9%, reported Tue pm), ALAB 223.00 (-4.5%), TLN 341 (-4.5%, fading yesterday's earnings pop), RIOT 13.34 (-4.8%), SHOP 143.70 (+0.8%), DT 46.63 (-0.9%), ADM 71.35 (+1.1%), SHC ~16.0 (no trade), FISV 58.78 (+0.6%), NBIX 164.9 (flat).
+**Gold complex:** GDX +6.1% pre-market with miners/silver up 5-12% (HL +11.9%, AG +7.7%, CDE +7.4%, PAAS +6.6%, AGI +6.6%, KGC +6.0%, WPM +6.2%). I could not find the cause: the news search returned only older gold-rally articles, nothing dated Nov 4 2026. Cause unverified.
+
+**News / politics (WebSearch, 2 standard searches).** Both searches (US midterm election results/futures; gold rally) returned only 2014/2018/2022/2025 articles and nothing dated Nov 3-4 2026. Gap: I have no sourced, dated read on the midterm outcome or the gold move. Nothing here is cited as a cause. Per the gates, an unverifiable cause = FAIL.
+
+**Earnings calendar (avoid names reporting today or within 2 sessions, both directions).**
+- Wed Nov 4 am: CVS, DDOG, FIS, HUT, MCD, EMR, COR, KHC, CDW, CRCL, FLUT, MLM, BTU, GFS, GWW, RAL, UBER and others. Wed pm: APP, ARM, QCOM-adjacent AI names (ARM, COHR), ALB, CF, CAVA, AFL, ALL, APA, CDE, CHRD, and ~200 more.
+- Thu Nov 5 am: AZN, COP, DUK, CI, CMI, BDX, APD, CELH, CYBR, ... pm: ABNB, AFRM, AKAM, AXON, DKNG, DOCS, DVN, EOG, DBX, ... Fri Nov 6 am: VST, HUM, CHTR, MRNA, ENB, ...
+- Practical effect: gold names like CDE report today pm (excluded); ALB reports today pm; DDOG, UBER, MCD, CVS today am (excluded).
+
+**Watch lists (candidates to WATCH only; none is a recommendation, none pre-passes a gate).**
+Mean-reversion (needs a sourced dated external cause, sector confirmation for Tier A, stabilization):
+1. ADM (-7.5% Tue, RSI 23): fertilizer/ag complex weak; still no sourced cause; pre-market +1% is not a base. Watch for a sourced cause and 4+ higher lows.
+2. ICL (-4.2%, RSI 24, ~$4.35): same ag/fertilizer cluster with MOS; no cause.
+3. SCCO (RSI 31, pre-market +3.6% on strength in metals/gold): already bouncing; no longer a dislocation if it holds.
+4. SHC (-8.1% Tue): healthcare services, likely company-specific -> probable Gate 1 fail.
+5. Oversold-RSI large caps if a sector breaks down: GOOGL/GOOG (RSI 21-22), INTC (23.7), CAT (26), BAC (26.8), MRVL (29), VALE (22). None is down 3.5% intraday yet; they matter only if a >=2% sector sell-off gives Tier A a trigger.
+Momentum (earliest 10:30 ET; needs multi-session relative strength, dated catalyst, held pullback, >=2R; one-day earnings gaps fail the 'several sessions' clause):
+1. Gold/silver miners (HL, CDE excluded for earnings, AG, AGI, KGC, WPM, PAAS): huge pre-market move, but the cause is unverified and the group fell -2% Tue (no multi-session RS). Fails as things stand.
+2. ANET (+6.9%), SMCI (+4.4%), AMD (+1.9%): post-earnings reactions; ANET/SMCI are earnings gaps (fail 'several sessions'). Watch only whether AMD/SMH build multi-day strength.
+3. Financials (XLF +1.6% pre-market, banks with oversold RSI like BAC): a sector re-rating could produce multi-session RS later; today is a one-day move.
+Honest expectation: with no sector down 2% and every momentum idea an earnings gap or unsourced move, the gates may again yield no entry. The 1-trade minimum is a target, not a reason to loosen them.
+
+**Open items for the user (unchanged):** (1) the momentum 'several sessions' clause screens out every fresh earnings gap; (2) PDT / settled-funds applicability on limited_margin is unverified (two round trips so far); (3) cron times land an hour early in ET (close recap fired 14:47 ET; pre-open at 07:27 ET instead of ~08:27; set to 20:47Z / 13:27Z).
