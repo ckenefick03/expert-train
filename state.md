@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-04 11:22 ET",
+ "as_of": "2026-11-04 11:32 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Flat, 0 trades. First small bounce in semis (MRVL/INTC/TER), but causes company-specific and bases under 4 bars.",
+ "status_note": "Flat, 0 trades. Tier B open; semis stabilizing in a range but Gate 1 unmet (company-specific/unsourced causes).",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-04",
@@ -3160,6 +3160,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   },
   {
    "t": "2026-11-04 11:22 ET",
+   "equity": 405.64
+  },
+  {
+   "t": "2026-11-04 11:32 ET",
    "equity": 405.64
   }
  ],
@@ -9409,3 +9413,11 @@ Honest expectation: with no sector down 2% and every momentum idea an earnings g
 - 5-min bars 12:00-12:20 ET-ish (16:00-16:20Z): MRVL lows 155.6/154.8/156.6/157.3 and INTC lows 57.0/56.8/57.4/57.6 show only ~3 rising-low bars (first bounce), TER 245.9 low then 249.3/252.1, SNDK and STX choppy with no clean higher lows, CAT flat 585 (no base, no sourced cause), MPC still sliding (388.7).
 - Gates: MRVL and INTC fail Gate 1 (company-specific causes: Lumentum deal dilution, Intel guidance) and the base is under ~4 bars; TER/SNDK/STX/CAT fail Gate 4 and Gate 1 (unsourced). Energy RSI above 35 for majors; refiners fail the base check.
 - Not re-searched (hourly search done at 11:13). Decision: no trade, 0 trades today. Watch MRVL/INTC/TER bases into Tier B, but Gate 1 stays the blocker for company-specific names.
+
+### Cycle 756 - ~11:32 ET (Wed Nov 4) - Tier B opens; flat, no setup
+- Correction to Cycle 755: its bar-window label "12:00-12:20 ET-ish" was wrong; the bars were 16:00-16:20Z = 11:00-11:20 ET. Conclusions unchanged.
+- Account: equity/cash/BP $405.64, no positions.
+- Tape: SPY +1.4%, QQQ +1.0%, SMH -2.6% (505.01, off the low), XLE -4.8% (63.49, new low), XLI -1.6%. XOM 170.42 and MPC 385.97 still sliding: no energy stabilization.
+- 5-min bars through 11:30 ET: MRVL 157.0-158.4 range, lows 156.97/156.25 (flat, not higher), INTC 57.15-57.9 range, TER 250-253 range, SNDK 1020-1033 range, STX 560-565 range, LITE ~607 range, ALAB bounced 208.5 to 218 then eased 215.7, CAT 583-586 drifting lower. Several semis are stabilizing in ranges but none shows >=4 clean higher lows with room: Gate 4 FAILS for all.
+- Gate 1 unchanged: sourced causes found are company-specific (Marvell-Lumentum, Intel guidance) or none (ALAB, TER, SNDK, STX, CAT). FAIL. No new Tier B name qualifies on its own sourced cause.
+- Momentum: nothing new. Decision: no trade, 0 trades today. Tier C (14:30-15:30) is the last window if gates ever pass; not loosened.
