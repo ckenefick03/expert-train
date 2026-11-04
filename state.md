@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-04 11:52 ET",
+ "as_of": "2026-11-04 12:03 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Flat, 0 trades. Tier B; semis stabilizing mildly but Gate 1 unmet; energy still making lows.",
+ "status_note": "Flat, 0 trades. Tier B; energy (dated peace/oil cause) first flattening, base not yet 4 bars; semis fail Gate 1.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-04",
@@ -3172,6 +3172,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   },
   {
    "t": "2026-11-04 11:52 ET",
+   "equity": 405.64
+  },
+  {
+   "t": "2026-11-04 12:03 ET",
    "equity": 405.64
   }
  ],
@@ -9443,3 +9447,10 @@ Honest expectation: with no sector down 2% and every momentum idea an earnings g
 - Energy: XOM 168.87 (new low, falling each 5-min bar), MPC 384 range. No stabilization: FAIL.
 - Semis/AI 5-min bars 11:30-11:50 ET: INTC lows 57.38/57.36/57.50/57.71 (mild rising lows, 3 of 4), MRVL 157.3/156.9/157.0/157.7 (mixed), TER 251.7/250.2/250.5/252.8 (mixed), ALAB 215.8/214.2/215.1/216.7, LITE and CAT range-bound. Best is INTC, still under the ~4 clean higher lows I require, and it has a company-specific cause (guidance cut): Gate 1 FAILS. Others fail Gates 1 and 4.
 - Momentum: no new names beyond Cycle 757 one-day gaps. Decision: no trade, 0 trades today.
+
+### Cycle 759 - ~12:03 ET (Wed Nov 4) - Tier B; flat, no setup (energy on watch)
+- Account: equity/cash/BP $405.64, no positions.
+- Tape: SPY +1.7%, QQQ +1.4%, SMH -2.3% (506.45), XLE -5.2% (63.19, off the 62.83 low), XLI -1.2%.
+- Energy (the only group with a dated, sourced, sector-wide cause: US-Iran peace hopes/oil drop, per earlier cycles): XOM 169.02 (-4.8%), CVX 216.79 (-3.8%), OXY 57.15 (-5.4%), MPC 386.3, VLO 356.7. 5-min bars 12:45-12:55Z... correction: 16:45-17:00Z = 11:45-12:00 ET: XOM lows 168.86/168.26/168.43, CVX 216.09/215.44/215.77, OXY 56.92/56.82/56.92. First flattening, but only ~3 bars and no rising-low sequence yet: Gate 4 base check NOT met. Gate 3 (named upside anchor, >=2R) also not yet written for any energy name. Watch next cycles; this is the lead candidate for Tier B/C if a >=4-bar base forms. XLE -8% over 3 sessions may also be flagged as a multi-session downtrend (Gate 4): must be assessed before any entry.
+- Semis: MRVL 158.75, INTC 57.76 (higher lows 57.70/57.75/58.08), TER 253.3, CAT 587.6 (small bounce). Gate 1 still FAILS (company-specific/unsourced).
+- Momentum: no new names. Decision: no trade, 0 trades today.
