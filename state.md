@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-04 08:44 ET",
+  "as_of": "2026-11-04 08:53 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -3101,6 +3101,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-04 08:44 ET",
       "equity": 405.64
+    },
+    {
+      "t": "2026-11-04 08:53 ET",
+      "equity": 405.64
     }
   ],
   "positions": [],
@@ -3251,15 +3255,15 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Pre-market rotation: AI-infra/semis/power under pressure (SMH -1.2%), small caps, financials, health care, discretionary and gold miners bid; cause unsourced; no entries before 10:00 ET",
+    "read": "Pre-market rotation: semis/AI-infra down (SMH -1.5%), small caps, financials, health care, discretionary and gold miners bid; no entries before 10:00 ET",
     "chips": [
       "SPY +1.1%",
-      "QQQ +0.5%",
-      "SMH -1.2%",
+      "QQQ +0.4%",
+      "SMH -1.5%",
       "IWM +1.7%",
-      "XLF +1.8%",
-      "XLV +2.4%",
-      "GDX +5.9%"
+      "XLF +2.0%",
+      "XLV +2.7%",
+      "GDX +6.0%"
     ]
   }
 }
@@ -9246,3 +9250,8 @@ Honest expectation: with no sector down 2% and every momentum idea an earnings g
 - MR scan (>=3.5% down vs close, RSI<45; pre-market, informational only): 22 names, dominated by one theme, AI infrastructure / data-center / power: LITE -4.0%, STX -3.9%, DELL -5.6%, WDC -3.7%, CLS -3.6%, ALAB -6.2% (reported Tue pm), DDOG -11.6% (reports today am), CRDO -4.3%, SPCX -5.5%, VST -9.0%, NVT -5.2%, MOD -7.5%, NRG -4.4%, DOCN -4.7%, ESTC -6.0%, RMBS -4.4%, HUT -12.0% (reports today am), CRWV -6.3%, SM -4.6%, FPS -6.0%, IREN -4.9%, APLD -4.9%. Gate 1 (sourced dated external cause this cycle): none run yet: the earlier pre-open searches found nothing dated Nov 3-4. Several are own-earnings names (DDOG, HUT, ALAB, DELL?) -> company-specific = FAIL. The theme could meet Tier A (sector ETF >=2% down, stock down more than sector, >=5% intraday) if SMH deepens after the 09:30 open; to be re-checked from 10:00 ET with a fresh sourced search.
 - Momentum: not scanned (earliest 10:30 ET).
 - No orders (none allowed). 0 trades today.
+
+### Cycle 741 - ~08:53 ET (Wed Nov 4) - pre-10:00, no entries possible; flat
+- Equity/cash/BP $405.64, no positions. Pre-market (thin) vs Tue close: SPY +1.1%, QQQ +0.4%, SMH -1.5% (511.0), IGV +0.4%, IWM +1.7%, XLK +0.1%, XLF +2.0%, XLV +2.7%, XLY +1.6%, XLE -0.6%, XLU 0.0%, GDX +6.0%. SMH is the weakest sector (-1.5%), still short of the 2% Tier A trigger; the rotation out of semis/AI infra into small caps, financials, health care and gold is widening.
+- No scan this cycle (pre-10:00; the 08:44 ET scan stands). Fresh sourced search for the semis weakness to run at/after 10:00 ET if SMH is >=2% down.
+- No orders possible. 0 trades.
