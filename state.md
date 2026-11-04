@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-04 07:30 ET",
+  "as_of": "2026-11-04 08:44 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -3097,6 +3097,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-04 07:30 ET",
       "equity": 405.64
+    },
+    {
+      "t": "2026-11-04 08:44 ET",
+      "equity": 405.64
     }
   ],
   "positions": [],
@@ -3247,15 +3251,15 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Pre-market risk-on broad (small caps, financials, health care bid), gold miners surging, semis flat; no sector down 2%; unsourced",
+    "read": "Pre-market rotation: AI-infra/semis/power under pressure (SMH -1.2%), small caps, financials, health care, discretionary and gold miners bid; cause unsourced; no entries before 10:00 ET",
     "chips": [
-      "SPY +0.9%",
-      "QQQ +0.4%",
-      "IWM +1.5%",
-      "XLF +1.6%",
-      "XLV +1.8%",
-      "GDX +6.1%",
-      "SMH -0.2%"
+      "SPY +1.1%",
+      "QQQ +0.5%",
+      "SMH -1.2%",
+      "IWM +1.7%",
+      "XLF +1.8%",
+      "XLV +2.4%",
+      "GDX +5.9%"
     ]
   }
 }
@@ -9234,3 +9238,11 @@ Momentum (earliest 10:30 ET; needs multi-session relative strength, dated cataly
 Honest expectation: with no sector down 2% and every momentum idea an earnings gap or unsourced move, the gates may again yield no entry. The 1-trade minimum is a target, not a reason to loosen them.
 
 **Open items for the user (unchanged):** (1) the momentum 'several sessions' clause screens out every fresh earnings gap; (2) PDT / settled-funds applicability on limited_margin is unverified (two round trips so far); (3) cron times land an hour early in ET (close recap fired 14:47 ET; pre-open at 07:27 ET instead of ~08:27; set to 20:47Z / 13:27Z).
+
+### Cycle 740 - ~08:44 ET (Wed Nov 4) - pre-10:00, NO ENTRIES POSSIBLE; flat
+- No cycles were logged between the pre-open brief (07:30 ET) and this one (08:44 ET); the :02-:32 UTC triggers in that window did not reach this session (no log, not a skip decision). Account was flat, so nothing could have been missed on the stop side.
+- Reconciled: equity/cash/BP $405.64, no positions (positions check earlier at 07:28 ET; portfolio equity_value 0 now).
+- Pre-market (extended-hours prints, thin) vs Tue close: SPY +1.1% (762.9), QQQ +0.5%, SMH -1.2% (512.5), IGV +0.4%, IWM +1.7%, XLK +0.2%, XLF +1.8%, XLV +2.4%, XLY +1.6%, XLE -0.7%, XLU -0.1%, GDX +5.9%. No sector ETF is down 2% (SMH -1.2% is closest); Tier A cannot trigger on a 2% sector drop yet, and no entries are allowed before 10:00 ET in any case.
+- MR scan (>=3.5% down vs close, RSI<45; pre-market, informational only): 22 names, dominated by one theme, AI infrastructure / data-center / power: LITE -4.0%, STX -3.9%, DELL -5.6%, WDC -3.7%, CLS -3.6%, ALAB -6.2% (reported Tue pm), DDOG -11.6% (reports today am), CRDO -4.3%, SPCX -5.5%, VST -9.0%, NVT -5.2%, MOD -7.5%, NRG -4.4%, DOCN -4.7%, ESTC -6.0%, RMBS -4.4%, HUT -12.0% (reports today am), CRWV -6.3%, SM -4.6%, FPS -6.0%, IREN -4.9%, APLD -4.9%. Gate 1 (sourced dated external cause this cycle): none run yet: the earlier pre-open searches found nothing dated Nov 3-4. Several are own-earnings names (DDOG, HUT, ALAB, DELL?) -> company-specific = FAIL. The theme could meet Tier A (sector ETF >=2% down, stock down more than sector, >=5% intraday) if SMH deepens after the 09:30 open; to be re-checked from 10:00 ET with a fresh sourced search.
+- Momentum: not scanned (earliest 10:30 ET).
+- No orders (none allowed). 0 trades today.
