@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-04 10:06 ET",
+  "as_of": "2026-11-04 10:17 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -3133,6 +3133,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-04 10:06 ET",
       "equity": 405.64
+    },
+    {
+      "t": "2026-11-04 10:17 ET",
+      "equity": 405.64
     }
   ],
   "positions": [],
@@ -3283,14 +3287,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Risk-on (QQQ +1.9%, small caps, discretionary, gold); energy -3.6% on sourced Iran-peace / no-strike news and Democratic midterm sweep; semis -0.7%; Tier A thresholds (>=5%, RSI<35) not met by any energy name",
+    "read": "Risk-on (QQQ +2.2%, discretionary, small caps, gold); energy -3.2% on Iran-peace news; AI-power/electrical-infrastructure names -7% to -10% with SMH flat (rotation); no entry setup",
     "chips": [
       "SPY +1.8%",
-      "QQQ +1.9%",
-      "SMH -0.7%",
-      "XLE -3.6%",
-      "XOM -3.5%",
-      "MPC -6.1%",
+      "QQQ +2.2%",
+      "SMH -0.1%",
+      "XLE -3.2%",
+      "XLI -1.5%",
+      "GEV -9.1%",
       "GDX +6.3%"
     ]
   }
@@ -9329,3 +9333,11 @@ Honest expectation: with no sector down 2% and every momentum idea an earnings g
   - AI-infra / semis names (LITE -7.2%, DELL -7.2%, CLS, MRVL, STX, VST -10.7%, NVT -10.5%, MOD -20.8%, AAON -13.7%, HUT -17.5%, DDOG -9.4%, etc.; 30 names >=5% down): SMH only -0.7%, so the 2% sector condition fails; no sourced cause found for the group; VST/DDOG/HUT own earnings or earnings within 2 sessions. FAIL.
 - Tier B opens 11:30 ET (>=3.5% intraday or >=7%/3d, stabilization, only if no Tier A qualified): energy names near -3.5% and XLE about -8% over 3 sessions are the thing to watch; require gates incl. >=4 clean 5-min higher lows, stop >=~1% under base low, target >=2R named anchor (e.g. Tue close), and no earnings within 2 sessions.
 - Momentum: not yet (10:30 ET). No orders. 0 trades today.
+
+### Cycle 749 (hourly) - ~10:17 ET (Wed Nov 4) - Tier A checked again; flat, no setup
+- Equity/cash/BP $405.64, no positions. Quotes (10:13 ET) vs Tue close: SPY +1.8%, QQQ +2.2%, SMH -0.1%, IGV +2.5%, IWM +1.3%, XLK +1.9%, XLF +1.5%, XLY +3.6%, XLV +1.1%, XLU -1.1%, XLI -1.5%, GDX +6.3%, XLE -3.2% (64.55). XOM -3.0% (172.09), CVX -2.4% (219.90), OXY -3.0% (58.62), MPC -5.1% (405.7), VLO -4.6%, PSX -3.2%.
+- Energy 5-min bars (09:30-10:10 ET): flat/choppy. XOM lows 171.33, 170.69, 171.49, 171.67, 171.25, 171.17, 171.18, 171.36: no run of >=4 clean higher lows yet (a faint higher low at 10:05). MPC 5-min: 411.4, 406.5, 405.7, 406.3, 403.1, 401.3, 401.5, 404.1: a first bounce, not a base. XOM/CVX/OXY are only -2.4% to -3.0% (Tier A needs >=5% and RSI<35). Tier A FAIL on threshold and Gate 4.
+- Tier A scan (>=5% down, RSI<35): 3 names. LITE -6.7% (RSI 34): AI-infra; SMH only -0.1%, no sector trigger and no sourced cause -> FAIL. MOD -21.7% (RSI 31): company-specific/unsourced -> FAIL. CAT -5.1% (592.8, RSI 26): checked in detail: XLI only -1.5% (<2% sector condition); last earnings Oct 29 (EPS 7.20 vs 7.05, but revenue-miss / guidance-caution narrative and analyst target cuts: a company-specific post-earnings slide, not a dated external cause today). Gate 1 FAIL, sector gate FAIL. (Extended search: sources conflicted on today's price, so treated as unreliable.)
+- AI power / electrical-infrastructure theme sell-off with SMH flat: GEV -9.1%, PWR -9.9%, ETN -7.5%, VST -10.7%, NRG -8.4%, NVT -10.5%, CAT -5.1%; plus semis/optical LITE, DELL, CLS etc. No sourced, dated cause found for the group (hourly search at 10:04 ET found energy news only). Several (VST Fri, DDOG, HUT, MOD) are earnings-excluded or own-earnings. FAIL by Gate 1.
+- Momentum scan: not yet (10:30 ET).
+- No orders. 0 trades today.
