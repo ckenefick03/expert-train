@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-04 13:23 ET",
+ "as_of": "2026-11-04 13:34 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,12 +41,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Flat, 0 trades. Energy trigger (XOM 5-min close >168.40) not met: probed 168.43, closed 168.11/167.82. Still armed.",
+ "status_note": "1 position: XOM Tier B mean-reversion entered 13:33 ET at 169.06 (stop 165.70, anchor 177.46). Flat-before-bell default applies.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-04",
   "start_equity": 405.64,
-  "trades": 0,
+  "trades": 1,
   "forced": 0
  },
  "equity_history": [
@@ -3209,9 +3209,24 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-04 13:23 ET",
    "equity": 405.64
+  },
+  {
+   "t": "2026-11-04 13:34 ET",
+   "equity": 405.62
   }
  ],
- "positions": [],
+ "positions": [
+  {
+   "symbol": "XOM",
+   "strategy": "mean-reversion",
+   "tier": "B",
+   "qty": 0.621081,
+   "entry": 169.0599,
+   "price": 169.105,
+   "stop": 165.7,
+   "target": 177.46
+  }
+ ],
  "trades": [
   {
    "symbol": "TER",
@@ -9547,3 +9562,11 @@ Honest expectation: with no sector down 2% and every momentum idea an earnings g
 - Armed energy trigger (XOM 5-min close above 168.40 with CVX/XLE confirming, no new low): NOT MET. The 13:10 ET bar (18:10Z) probed 168.43 intraday but closed 168.105 (rejected at the lower-high zone), the 13:15 bar closed 167.82 (low 167.69, still above the 167.51 base low). CVX bar highs 216.00 then 215.70, closing 215.08 (lower). XLE high 63.185 faded to 62.935. No confirmation; no entry. Setup still alive (no new low below 167.40) so it stays armed.
 - Not re-scanned the full universe this cycle beyond energy and the tape (hourly full scan at 13:14 ET). Disclosed. Semis/AI-infra decisions from Cycle 766 stand.
 - Decision: no trade, 0 trades today.
+
+### Cycle 768 - ~13:34 ET (Wed Nov 4) - Tier B ENTRY: XOM (mean-reversion, organic)
+- Trigger from Cycle 766/767 FIRED: XOM 5-min bars 13:20 and 13:25 ET closed 168.45 then 169.03 (above the 168.40 trigger), high 169.215 above the prior 169.05 lower high (13:00 bar), no new low (base low 167.40 held, retest low 167.51). CVX confirmed (closes 215.72, 216.14; 13:25 high 216.31 above 216.00), XLE confirmed (closes 63.125, 63.265; high 63.33 above 63.185). Reclaim of the lower highs satisfies the news-driven sell-off lesson.
+- Gates: (1) dated, sourced sector cause: US-Iran peace hopes, midterms, oil -7% (CNBC, Benzinga, OilPrice, Nov 2-4): PASS. (2) Q3 reported Oct 30, EPS 4.23 vs 4.01 est, next report late Jan: PASS. (3) anchor Nov 3 close 177.46 (+5.0% from entry); stop 165.70 (about 1% under the 167.40 base low), risk 3.36 per share, reward 8.40, about 2.5R: PASS. (4) 3-session pullback inside a roughly 2-month uptrend (not multi-week downtrend), 4-bar base then lower-high reclaim, stop room >=1%: PASS. Tier B window (11:30-14:30), sector ETF XLE -5%: PASS. Earnings Nov 4-6: none for XOM.
+- Risk limits: size min($105, BP 405.64 - 0.50) = $105; 0 open positions (1 after this), day P&L 0, breaker far (peak 437.99, level 394.19), trade 1 of 10 (day minimum met organically).
+- Order: review_equity_order clean (no alerts, no customer approval needed); place_equity_order market $105.00, regular_hours, gfd, ref_id 49933513-59d1-4a20-a826-95be5e34b7f2. Order id 6aeb7a62-9b03-4480-bd64-2355ee9b9d8c: FILLED 0.621081 sh at avg 169.0599 (verified via get_equity_orders; portfolio: equity 104.98 + cash 300.64 = 405.62, BP 300.64).
+- Exit plan (software-monitored each cycle, no resting stop since this is a fractional position): stop 165.70, anchor 177.46; honor the 30-minute hold rule; default flat before the bell unless a hold decision is logged. Note that the close-recap routine fires at 14:47 ET, which is an hour early, and cycles continue to the bell; I will evaluate the exit at 15:3x ET.
+- Risk note logged honestly: headline-driven setup (Iran talks) can gap either way; max loss at the stop is about $2.09 (about 2.0% of the position).
