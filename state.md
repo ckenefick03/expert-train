@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-04 09:05 ET",
+  "as_of": "2026-11-04 09:17 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -3109,6 +3109,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-04 09:05 ET",
       "equity": 405.64
+    },
+    {
+      "t": "2026-11-04 09:17 ET",
+      "equity": 405.64
     }
   ],
   "positions": [],
@@ -3259,14 +3263,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Pre-market rotation: semis down (SMH -1.7%), small caps, financials, health care, discretionary, gold miners bid; no entries before 10:00 ET",
+    "read": "Pre-market rotation: semis/AI-infra down (SMH -1.4%), small caps, financials, health care, discretionary, gold miners bid; cause unsourced; no entries before 10:00 ET",
     "chips": [
-      "SPY +1.1%",
-      "QQQ +0.3%",
-      "SMH -1.7%",
-      "IWM +1.7%",
-      "XLF +2.2%",
-      "XLV +2.6%",
+      "SPY +1.2%",
+      "QQQ +0.4%",
+      "SMH -1.4%",
+      "IWM +1.8%",
+      "XLF +2.3%",
+      "XLV +2.3%",
       "GDX +6.0%"
     ]
   }
@@ -9264,3 +9268,10 @@ Honest expectation: with no sector down 2% and every momentum idea an earnings g
 - Equity/cash/BP $405.64, no positions. Pre-market (thin) vs Tue close: SPY +1.1%, QQQ +0.3%, SMH -1.7% (509.6), IGV +0.5%, IWM +1.7%, XLK +0.1%, XLF +2.2%, XLV +2.6%, XLY +1.6%, XLE -0.9%, XLU -0.1%, GDX +6.0%. SMH keeps sliding (-1.2% at 08:44, -1.5% at 08:53, -1.7% now); still short of -2%.
 - No scan (pre-10:00). Plan from 10:00 ET: full MR scan, then a fresh sourced search for the semis / AI-infra weakness if SMH is >=2% down and any name is >=5% intraday below the sector.
 - No orders possible. 0 trades.
+
+### Cycle 743 (hourly) - ~09:17 ET (Wed Nov 4) - pre-10:00, no entries possible; flat
+- Equity/cash/BP $405.64, no positions, nothing to stop-check.
+- Pre-market (thin) vs Tue close: SPY +1.2%, QQQ +0.4%, SMH -1.4% (511.3; -1.2% / -1.5% / -1.7% / -1.4% across 08:44-09:17), IGV +0.5%, IWM +1.8%, XLK +0.1%, XLF +2.3%, XLV +2.3%, XLY +1.6%, XLE -1.1%, XLU -0.1%, GDX +6.0%. No sector -2%.
+- AI-infra names pre-market: DDOG -12.2% (reports today am: own earnings), VST -9.0% (reports Fri Nov 6 am: inside the 2-session earnings exclusion), CRWV -5.8%, LITE -4.4%, DELL -4.9%.
+- News/politics (hourly standard WebSearch on the AI/semis/power sell-off): returned only 2025 and Feb-2026 articles (DeepSeek Jan 2025, Nvidia Nov 2025, pre-Nvidia-earnings Feb 2026); nothing dated Nov 4 2026. Gap, not cited. No sourced dated cause exists yet for the theme, so Gate 1 would FAIL for any AI-infra name at 10:00 unless a dated source turns up.
+- No orders possible (before 10:00 ET). 0 trades.
