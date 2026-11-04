@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-04 12:03 ET",
+ "as_of": "2026-11-04 12:13 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Flat, 0 trades. Tier B; energy (dated peace/oil cause) first flattening, base not yet 4 bars; semis fail Gate 1.",
+ "status_note": "Flat, 0 trades. Hourly: energy has a sourced cause and an uptrend pullback, but no clean higher-low base yet; semis fail Gate 1.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-04",
@@ -3176,6 +3176,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   },
   {
    "t": "2026-11-04 12:03 ET",
+   "equity": 405.64
+  },
+  {
+   "t": "2026-11-04 12:13 ET",
    "equity": 405.64
   }
  ],
@@ -9454,3 +9458,12 @@ Honest expectation: with no sector down 2% and every momentum idea an earnings g
 - Energy (the only group with a dated, sourced, sector-wide cause: US-Iran peace hopes/oil drop, per earlier cycles): XOM 169.02 (-4.8%), CVX 216.79 (-3.8%), OXY 57.15 (-5.4%), MPC 386.3, VLO 356.7. 5-min bars 12:45-12:55Z... correction: 16:45-17:00Z = 11:45-12:00 ET: XOM lows 168.86/168.26/168.43, CVX 216.09/215.44/215.77, OXY 56.92/56.82/56.92. First flattening, but only ~3 bars and no rising-low sequence yet: Gate 4 base check NOT met. Gate 3 (named upside anchor, >=2R) also not yet written for any energy name. Watch next cycles; this is the lead candidate for Tier B/C if a >=4-bar base forms. XLE -8% over 3 sessions may also be flagged as a multi-session downtrend (Gate 4): must be assessed before any entry.
 - Semis: MRVL 158.75, INTC 57.76 (higher lows 57.70/57.75/58.08), TER 253.3, CAT 587.6 (small bounce). Gate 1 still FAILS (company-specific/unsourced).
 - Momentum: no new names. Decision: no trade, 0 trades today.
+
+### Cycle 760 - ~12:13 ET (Wed Nov 4) - hourly full cycle with news; Tier B; flat, no setup (energy closest)
+- Clarification of Cycle 759: its energy bar window was 16:45-17:00Z = 11:45-12:00 ET (the "12:45-12:55Z" text there was a typo).
+- Account: equity/cash/BP $405.64, no positions, no open orders.
+- Energy daily context (Sep 1 - Nov 3): XOM 164 (Sep) to 187.25 (Oct 30 peak), then 179.67 / 177.46; CVX 211 to 235.5 then 227.8 / 225.3; OXY, XLE similar (XLE 64.8 to 70.0 then 67.25 / 66.68). Today XLE about -5.3% intraday. So this is a sharp 3-session pullback inside a roughly 2-month uptrend, not a multi-week downtrend: that part of Gate 4 PASSES.
+- Gate 1 (news, extended search): CNBC Nov 2/Nov 3, OilPrice, GulfNews, Rigzone report Brent fell about 7.6% Monday to ~$104.77 and ~$103.60 on Nov 3-4 on US-Iran diplomacy hopes plus the midterms. Dated, external, sector-wide: PASSES as a cause, but signals conflict (Iran says it will not accept diplomacy based on coercion; Goldman raised Dec Brent to $105; Brent still above $100). Headline risk is two-way.
+- Gate 2: XOM/CVX fundamentals neutral-or-better, last earnings already reported (not rechecked in detail this cycle). Gate 3: a named anchor exists (Nov 3 close: XOM 177.46, CVX 225.27, i.e. about 5% above, over 2R against a ~1% stop) but it relies on peace headlines fading.
+- Gate 4 base (5-min, 11:30-12:10 ET): XOM lows 168.86/168.26/168.43/168.37/168.25, CVX 216.09/215.44/215.77/216.04/215.87, OXY 56.92/56.82/56.92/56.89/56.87, XLE 62.95/62.83/62.92/62.94/62.94. No clean rising lows (XOM keeps retesting 168.25); XLE slightly rising only. Lesson: news-driven sell-offs need a reclaim of a lower high or VWAP; not shown. FAIL for now. Also OXY earnings date unverified, so skip OXY.
+- Semis/AI: Gate 1 unchanged (company-specific/unsourced). Momentum: nothing new. Decision: no trade, 0 trades today. Energy is the lead candidate for Tier B/C if a real base (>=4 rising lows) or a lower-high reclaim forms.
