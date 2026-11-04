@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-04 08:53 ET",
+  "as_of": "2026-11-04 09:05 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -3105,6 +3105,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-04 08:53 ET",
       "equity": 405.64
+    },
+    {
+      "t": "2026-11-04 09:05 ET",
+      "equity": 405.64
     }
   ],
   "positions": [],
@@ -3255,14 +3259,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Pre-market rotation: semis/AI-infra down (SMH -1.5%), small caps, financials, health care, discretionary and gold miners bid; no entries before 10:00 ET",
+    "read": "Pre-market rotation: semis down (SMH -1.7%), small caps, financials, health care, discretionary, gold miners bid; no entries before 10:00 ET",
     "chips": [
       "SPY +1.1%",
-      "QQQ +0.4%",
-      "SMH -1.5%",
+      "QQQ +0.3%",
+      "SMH -1.7%",
       "IWM +1.7%",
-      "XLF +2.0%",
-      "XLV +2.7%",
+      "XLF +2.2%",
+      "XLV +2.6%",
       "GDX +6.0%"
     ]
   }
@@ -9254,4 +9258,9 @@ Honest expectation: with no sector down 2% and every momentum idea an earnings g
 ### Cycle 741 - ~08:53 ET (Wed Nov 4) - pre-10:00, no entries possible; flat
 - Equity/cash/BP $405.64, no positions. Pre-market (thin) vs Tue close: SPY +1.1%, QQQ +0.4%, SMH -1.5% (511.0), IGV +0.4%, IWM +1.7%, XLK +0.1%, XLF +2.0%, XLV +2.7%, XLY +1.6%, XLE -0.6%, XLU 0.0%, GDX +6.0%. SMH is the weakest sector (-1.5%), still short of the 2% Tier A trigger; the rotation out of semis/AI infra into small caps, financials, health care and gold is widening.
 - No scan this cycle (pre-10:00; the 08:44 ET scan stands). Fresh sourced search for the semis weakness to run at/after 10:00 ET if SMH is >=2% down.
+- No orders possible. 0 trades.
+
+### Cycle 742 - ~09:05 ET (Wed Nov 4) - pre-10:00, no entries possible; flat
+- Equity/cash/BP $405.64, no positions. Pre-market (thin) vs Tue close: SPY +1.1%, QQQ +0.3%, SMH -1.7% (509.6), IGV +0.5%, IWM +1.7%, XLK +0.1%, XLF +2.2%, XLV +2.6%, XLY +1.6%, XLE -0.9%, XLU -0.1%, GDX +6.0%. SMH keeps sliding (-1.2% at 08:44, -1.5% at 08:53, -1.7% now); still short of -2%.
+- No scan (pre-10:00). Plan from 10:00 ET: full MR scan, then a fresh sourced search for the semis / AI-infra weakness if SMH is >=2% down and any name is >=5% intraday below the sector.
 - No orders possible. 0 trades.
