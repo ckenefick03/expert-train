@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-04 14:49 ET",
+ "as_of": "2026-11-05 07:30 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,12 +41,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Flat into the close: XOM Tier B closed 14:48 ET at 168.96 (-$0.06, -0.03R), no overnight position. Day: 1 trade, equity 405.58.",
+ "status_note": "Pre-open Thu Nov 5: flat, no positions, 405.58 cash. Read-only brief; no orders before 10:00 ET.",
  "peak_equity": 437.99,
  "day": {
-  "date": "2026-11-04",
-  "start_equity": 405.64,
-  "trades": 1,
+  "date": "2026-11-05",
+  "start_equity": 405.58,
+  "trades": 0,
   "forced": 0
  },
  "equity_history": [
@@ -3245,6 +3245,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-04 14:49 ET",
    "equity": 405.58
+  },
+  {
+   "t": "2026-11-05 07:30 ET",
+   "equity": 405.58
   }
  ],
  "positions": [],
@@ -3407,15 +3411,16 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "Risk-on (QQQ +1.8%, discretionary +4%, gold +6.9%); energy -3.7%, industrials -1.7%, semis -1.5% (all short of or only just past Tier A triggers); no setup",
+  "read": "Pre-open: Nasdaq futures weaker on chips and AI infrastructure (SMH -2.8% premarket), energy bouncing (XLE +0.9%), financials/health care/gold firm. Midterm aftermath: Dow +3% yesterday, chips lag.",
   "chips": [
-   "SPY +1.8%",
-   "QQQ +1.8%",
-   "SMH -1.5%",
-   "XLE -3.7%",
-   "XLI -1.7%",
-   "XLY +4.0%",
-   "GDX +6.9%"
+   "SPY +0.1%",
+   "QQQ -0.7%",
+   "SMH -2.8%",
+   "XLE +0.9%",
+   "XLF +1.2%",
+   "XLV +1.0%",
+   "GDX +2.0%",
+   "XLK -1.5%"
   ]
  }
 }
@@ -9667,3 +9672,14 @@ Honest expectation: with no sector down 2% and every momentum idea an earnings g
 - P&L: -$0.06 realized. Equity 405.64 to 405.58. Peak equity 437.99 (breaker level 394.19, far). Daily loss limit untouched.
 - Process notes (honest): the Cycle 759 and 755 log entries contained time-label typos, corrected in Cycles 756 and 760 (append-only). Several mid-afternoon cycles checked only the held position, its peers and the tape rather than a full-universe scan; each entry says so (last full MR/momentum scans 14:13 ET).
 - OPEN ITEMS for the user (unanswered, no action taken): (1) the momentum "several sessions" clause screens out every fresh earnings or event gap, so momentum has produced almost no entries in event-driven tapes; (2) PDT/settled-funds treatment on this limited_margin account is still unverified (three round trips so far); (3) the cron times land an hour early in Eastern time: the close recap fires 14:47 ET (should be 20:47Z) and the pre-open brief 07:27 ET (should be 13:27Z), and the 10-minute cycles stop after the recap run, leaving the last hour of the session unmanaged. I did not change any schedules.
+
+### Pre-open brief - Thu Nov 5, 2026 (~07:30 ET; read-only, no orders)
+- Account: equity/cash/BP 405.58, no positions, no open orders. Peak equity 437.99, breaker level 394.19. Nothing to stop-check (flat). Yesterday: 1 trade (XOM, -$0.06), flat into the close.
+- Timing note: this routine fired at 07:27 ET (12:27Z), about an hour before the 08:30 ET target in framework section 2.1; premarket liquidity is thin and prices below are indicative only.
+- Tape (premarket vs Nov 4 close): SPY 767.40 (+0.08%), QQQ 687.14 (-0.69%), SMH 490.20 (-2.8%), XLK 173.86 (-1.5%), IWM 284.84 (+0.3%), XLF 59.88 (+1.2%), XLV 191.65 (+1.0%), XLY 123.04 (+0.6%), XLE 64.12 (+0.9%), XLI 169.01 (-0.3%), GDX 86.30 (+2.0%), IGV flat. Held names: none. Reference names: XOM 171.48 (+1.3%), CVX 219.30 (+1.1%), MRVL 153.57 (-3.9%), INTC 56.86 (-2.4%), CAT 582.08 (-1.6%).
+- Honest note on yesterday's exit: I sold XOM at 168.96 on the flat-before-bell rule; it is now indicated near 171.5 premarket (about +1.5% above my exit). That is the cost of the flat-before-bell/unmonitored-last-hour rule, not an error; the rule stays.
+- News tied to sources found this cycle: (1) Reuters/Yahoo: S&P futures steady after the midterm rally; Nasdaq lags on chip and data-center weakness (Nasdaq 100 e-minis about -0.6% at 5:04 ET); chip and AI-infrastructure stocks down again after the Democratic win, data-center operators/equipment suppliers pressured, UBS strategists put about 30% of expected 2028 data-center additions at risk from project pauses/local opposition. (2) Qualcomm -8% to -10% premarket on a Q4 smartphone-chip sales miss (company-specific, automatic Gate 1 fail). (3) Oil: Brent fell more than 8% Wednesday and is bouncing modestly (Brent about 96.7, WTI about 89.5); Abu Dhabi talks Nov 10-11, Iran conditions unresolved. (4) Gold reclaiming $4,000 ahead of ADP data (TradingKey). (5) Apple margin concerns weighed on tech; AMD jumped on a blowout quarter (CNBC/Yahoo). Calendar/economic data: ADP employment today (per TradingKey); not otherwise verified.
+- Earnings avoid-list (calendar saved at the tool-results file; parsed Nov 5-6; names reporting today or within 2 sessions): Nov 5 AM includes APD, AZN, BDX, CI, CMI, CNQ, COP, CORZ, CYBR, DUK, EPAM, GPN, INSW, IRM, KMB (COP is energy-relevant); Nov 5 PM includes AAOI, ABNB, AFRM, AKAM, AXON, BILL, CRSR, DBX, DKNG, DVN, EOG, FIVN, IAG, IONQ, IREN, KTOS, LYFT, LYV, MCHP, MNST, MP, MTD, WPM; Nov 6 AM has 52 names (full list in the saved calendar file; not individually checked here). Treat any candidate as unqualified until its own earnings date is checked at entry.
+- MR WATCH (Tier A 10:00-11:30 needs >=5% intraday, sector ETF >=2% down, RSI<35, 5-min higher low): SMH -2.8% premarket already meets the sector condition, so semis/memory are the live group. Watch: (1) SNDK -5.5% (RSI 30.7), (2) STX -4.9% (RSI 30.7) and WDC -4.8% (RSI 36.4) as storage, (3) ARM -5.1% (RSI 32.6), (4) ALAB -4.4% (RSI 31.5), (5) LRCX -4.1% (RSI 30.0). Gate status pre-open: Gate 1 is only plausibly met for sector-wide "AI/data-center policy and opposition" pressure (Reuters/UBS), not for company-specific drivers; Gate 4 is the likely blocker because these names are in a multi-week downtrend since mid-October (checked for AI-infra yesterday, not yet for each memory/storage name); no base can be judged pre-open. Qualcomm and any earnings-day name are excluded. Expect NO qualifying setup before a clean base forms; Tier A closes 11:30.
+- MOMENTUM WATCH (earliest 10:30 ET; needs multi-session relative-strength divergence, dated catalyst, held pullback with a higher low): (1) Gold complex AEM/GFI/EGO (GDX +2.0% premarket, third strong session; WPM and IAG report PM today, avoid), but already extended with no pullback yet; (2) financials (XLF +1.2%; DB, NWG, BCS were strong Wednesday), watch for a held pullback; (3) energy leaders XOM/CVX (pullback held and now bouncing, relative strength vs semis; momentum needs a dated catalyst: oil/Iran headlines, two-way risk); (4) health care (XLV +1.0%; HCA/ISRG gapped on earnings, one-day gaps fail the several-sessions clause). Event gaps seen premarket (APP +19.6%, U +21.5%, EPAM +16.8%, WRBY, ADMA, RUN) are earnings/news gaps and fail the several-sessions clause.
+- Plan: no orders before 10:00 ET (none before 10:30 for momentum). Hourly news cycle at about 08:15/09:15 ET UTC-5 equivalents is mistimed (crons land an hour early); I will follow the scheduled triggers as they arrive. Open items for the user remain: the momentum several-sessions clause, PDT/settled-funds check, and the cron timing (should be 13:27Z pre-open, 20:47Z close recap).
