@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-05 07:30 ET",
+ "as_of": "2026-11-05 08:45 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Pre-open Thu Nov 5: flat, no positions, 405.58 cash. Read-only brief; no orders before 10:00 ET.",
+ "status_note": "Flat, no positions. Pre-window (entries open 10:00 ET): SMH -3.2% premarket, energy bouncing.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-05",
@@ -3248,6 +3248,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   },
   {
    "t": "2026-11-05 07:30 ET",
+   "equity": 405.58
+  },
+  {
+   "t": "2026-11-05 08:45 ET",
    "equity": 405.58
   }
  ],
@@ -9683,3 +9687,9 @@ Honest expectation: with no sector down 2% and every momentum idea an earnings g
 - MR WATCH (Tier A 10:00-11:30 needs >=5% intraday, sector ETF >=2% down, RSI<35, 5-min higher low): SMH -2.8% premarket already meets the sector condition, so semis/memory are the live group. Watch: (1) SNDK -5.5% (RSI 30.7), (2) STX -4.9% (RSI 30.7) and WDC -4.8% (RSI 36.4) as storage, (3) ARM -5.1% (RSI 32.6), (4) ALAB -4.4% (RSI 31.5), (5) LRCX -4.1% (RSI 30.0). Gate status pre-open: Gate 1 is only plausibly met for sector-wide "AI/data-center policy and opposition" pressure (Reuters/UBS), not for company-specific drivers; Gate 4 is the likely blocker because these names are in a multi-week downtrend since mid-October (checked for AI-infra yesterday, not yet for each memory/storage name); no base can be judged pre-open. Qualcomm and any earnings-day name are excluded. Expect NO qualifying setup before a clean base forms; Tier A closes 11:30.
 - MOMENTUM WATCH (earliest 10:30 ET; needs multi-session relative-strength divergence, dated catalyst, held pullback with a higher low): (1) Gold complex AEM/GFI/EGO (GDX +2.0% premarket, third strong session; WPM and IAG report PM today, avoid), but already extended with no pullback yet; (2) financials (XLF +1.2%; DB, NWG, BCS were strong Wednesday), watch for a held pullback; (3) energy leaders XOM/CVX (pullback held and now bouncing, relative strength vs semis; momentum needs a dated catalyst: oil/Iran headlines, two-way risk); (4) health care (XLV +1.0%; HCA/ISRG gapped on earnings, one-day gaps fail the several-sessions clause). Event gaps seen premarket (APP +19.6%, U +21.5%, EPAM +16.8%, WRBY, ADMA, RUN) are earnings/news gaps and fail the several-sessions clause.
 - Plan: no orders before 10:00 ET (none before 10:30 for momentum). Hourly news cycle at about 08:15/09:15 ET UTC-5 equivalents is mistimed (crons land an hour early); I will follow the scheduled triggers as they arrive. Open items for the user remain: the momentum several-sessions clause, PDT/settled-funds check, and the cron timing (should be 13:27Z pre-open, 20:47Z close recap).
+
+### Cycle 777 - ~08:45 ET (Thu Nov 5) - pre-window cycle; flat, no entries (before 10:00 ET)
+- Correction to the pre-open brief: its last bullet about hourly cycle timing was garbled; the intended point is only that cron times land an hour early in Eastern time (pre-open 07:27 ET, close recap 14:47 ET) and I follow the triggers as they arrive.
+- Account: equity/cash/BP 405.58, no positions, no open orders. Nothing to stop-check.
+- Premarket tape (08:44 ET, thin): SPY 767.99 (+0.2%), QQQ 686.94 (-0.7%), SMH 487.90 (-3.3%), XLE 64.24 (+1.1%), XLF 59.95 (+1.3%), XLV 191.54 (+1.0%), GDX 86.33 (+2.1%). SNDK 971.8 (-6.3%), STX 530 (-4.8%), ARM 178.6 (-6.9%), LRCX 210.4 (-5.0%), XOM 171.65 (+1.4%).
+- No scan-driven decision: entries are not permitted before 10:00 ET (momentum 10:30). Semis/memory/storage are the Tier A watch group for 10:00-11:30 (sector condition met premarket); Gate 1 (sector-wide sourced cause) and Gate 4 (multi-week downtrend, base) must be checked at the open. Decision: none; 0 trades today.
