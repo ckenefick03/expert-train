@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-06 10:53 ET",
+ "as_of": "2026-11-06 11:05 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Flat. No setup passes gates; broad tape firming (SPY +1.1%, SMH +4.0%).",
+ "status_note": "Flat. Regime: stable/rising but range-bound. No setup passes gates.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-06",
@@ -3449,6 +3449,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-06 10:53 ET",
    "equity": 405.58
+  },
+  {
+   "t": "2026-11-06 11:05 ET",
+   "equity": 405.58
   }
  ],
  "positions": [],
@@ -3611,12 +3615,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "Risk-on drift higher: SPY +1.1%, QQQ +2.1%, SMH +4.0%.",
+  "read": "Stable/range-bound: SPY +0.8% holding 737-741 since 09:45 ET; chips +3.5% (SMH).",
   "chips": [
-   "SPY +1.1%",
-   "QQQ +2.1%",
-   "SMH +4.0%",
-   "XLK +2.3%"
+   "SPY +0.8%",
+   "QQQ +1.9%",
+   "SMH +3.5%",
+   "XLK +2.0%"
   ]
  }
 }
@@ -10082,3 +10086,9 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 
 ### Change log - ~11:03 ET (Fri Nov 6) - daily loss limit $100 -> $60 (user decision)
 - framework.md section 3 daily loss limit is now $60 (realized + unrealized for the day; at $60 no new entries for the rest of the day and flag it). Cycle and hourly scheduled-task prompts updated from $100 to $60 and now cite the regime switch (framework 4.1). $105 size, 5-position cap and 10% breaker unchanged. Today's P&L so far: $0.00, so the limit has no effect on current state. Note: the $60 limit equals about 57% of one $105 position, so at the 3-4% stops used here it cannot be hit by one trade; it matters only across several losses.
+
+### Cycle 826 - ~11:05 ET (Fri Nov 6) - flat, no setup (first cycle under the $60 limit and regime label)
+- Regime (framework 4.1): STABLE/RANGE-BOUND. SPY 739.21 (+0.8%), above its open, 5-min closes oscillating 737.5-741 since 09:45 ET (not trending, no new session lows). Momentum on; MR on only if a name's own sector is down 2%+ (none). QQQ +1.9%, SMH +3.5%, XLK +2.0%.
+- Equity $405.58, no positions, daily P&L $0.00 (limit $60 not in play).
+- Momentum scan (>=+5%, RVOL>=1.3, avg vol>=1M, cap>=2B): 0 names. FROG 97.43 (+30.6%) is NOT in the scan, so it fails the universe/RVOL filter (liquidity or RVOL<1.3; not separately checked) - fail. Also gate 3: FROG 5-min lows flat (97.0/97.0/97.1/97.2/97.0) with no higher low and no breakout over 99.72, volume fading to 20-40k/5min; exact gap-day VWAP not computed. NET 275.91 (+12.8%), AKAM 84.66 (+8.8%), ABNB 186.00 (+9.3%) drifting sideways, not in the scan either. No entry.
+- MR: MCHP 56.82 (-12.4%, RSI 32.5, volume 13.9M) is the only name; sector ETF SMH is UP 3.5%, so the cause is company-specific -> gate 1 FAIL. No entry.
