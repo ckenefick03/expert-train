@@ -66,7 +66,7 @@ Run this every cycle, in this order.
 |---|---|
 | Position size | **$105 maximum per entry; use the cash available when it is lower** (user decision 2026-10-05: "just use the money you have"). Size = min($105, buying power minus a $0.50 buffer, rounded down to the cent); skip the entry if that is under $50. **$105 fixed per entry** (25% of $420; the user's range was 10-30% = $42-$126; raised from $80 on 2026-10-01 under the user's delegation), identical every trade; strategy quality is the only variable. Never scale with conviction. Three full positions = $315 (about 75% of equity); four = $420 (100%). |
 | Max concurrent positions | **5**, shared across all strategies (raised from 3 on 2026-10-01 at the user's request). **Cash is the real limit:** five $105 positions would cost $525, more than the account, so every entry still requires the full $105 of buying power. At current equity the effective maximum is about 4. |
-| Daily loss limit | **$100**, hard stop. When realized + unrealized loss for the day reaches $100: close nothing out of panic, but take **no new entries** for the rest of the day and flag it. |
+| Daily loss limit | **$60**, hard stop (user decision 2026-11-06, was $100). When realized + unrealized loss for the day reaches $60: close nothing out of panic, but take **no new entries** for the rest of the day and flag it. |
 | Circuit breaker | **10% drawdown from peak equity**: halve position size to **$52** and **pause all new entries until the user reviews**. Peak equity is tracked in `state.md`. |
 | Min / max trades per day | 1 / 10 |
 | Instruments | Long US equities only. **No leverage, no options, no shorting, no averaging down on a broken thesis.** |
