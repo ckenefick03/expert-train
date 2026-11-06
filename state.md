@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-06 14:13 ET",
+ "as_of": "2026-11-06 14:23 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "LION long +$0.79 (14.105 vs 14.00). Stop 13.65, target 14.70.",
+ "status_note": "LION long +$1.80 (14.24 vs 14.00), new day high. Stop 13.65, target 14.70.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-06",
@@ -3525,6 +3525,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-06 14:13 ET",
    "equity": 406.37
+  },
+  {
+   "t": "2026-11-06 14:23 ET",
+   "equity": 407.38
   }
  ],
  "positions": [
@@ -3534,7 +3538,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
    "tier": "-",
    "qty": 7.500053,
    "entry": 14.0,
-   "price": 14.105,
+   "price": 14.24,
    "stop": 13.65,
    "target": 14.7
   }
@@ -3698,11 +3702,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "Stable, near highs: SPY +0.8% (738.8), chips +3.8%.",
+  "read": "Stable, near highs: SPY +0.6% (737.6), chips +3.5%.",
   "chips": [
-   "SPY +0.8%",
-   "QQQ +1.9%",
-   "SMH +3.8%",
+   "SPY +0.6%",
+   "QQQ +1.7%",
+   "SMH +3.5%",
    "XLC +1.1%"
   ]
  }
@@ -10306,3 +10310,11 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - MR (Tier B, ends 14:30): MCHP 57.87 (-10.8%, RSI 32.5); SMH +3.8% so the drop is company-specific -> gate 1 FAIL. No entry.
 - Hourly-cycle disclosure: no news/politics search this hour (the earlier-hour search surfaced nothing dated today, and nothing is pending a news-dependent entry; I used the primary-source search for LION's catalyst at 13:15). Follow-ups on skipped candidates: FROG (rejected for RVOL at 11:34) was 100.12-101.38 before; not re-measured now. STX/COIN (12:54 skips) not re-checked this cycle.
 - Risk: daily P&L +$0.79 (limit $60), positions 1/5, BP $300.58. Close plan: flat before the 16:00 bell unless a hold decision is written; the 14:47 ET recap trigger now fires at 15:47 ET (moved to 20:47Z), so it is the last scheduled cycle before the bell besides the :52 at 15:52 ET.
+
+### Cycle 845 - ~14:23 ET (Fri Nov 6) - LION long +$1.80, new day high; no new entries
+- Reconcile: portfolio $407.38 (cash/BP $300.58, equity $106.80), 1 position LION 7.500053 sh avg 14.00, no open orders. LION 14.24 (bid 14.23 / ask 14.25): +0.24/sh = +$1.80 (+1.7%, +0.68R). 5-min: 19:10Z 14.09-14.16 (close 14.16), 19:15Z 14.15-14.20 (close 14.175): broke the 14.15 range high to a new day high (about 14.24 now), lows rising (14.07, 14.09, 14.15). STOP CHECK: stop 13.65 is 4.1% below, not close; target 14.70 is +3.2% away (about 1.4R from here). No trim yet (2R target at 14.70 not reached); stop stays 13.65 for now. Management note: LION is within about 0.5R of my first trim level; if it reaches 14.70, trim and move the stop to breakeven (14.00) per the position-management rules; if it fades back under 14.05 on a 5-min close with the lows turning down, that would flag invalidation.
+- Relative strength: LION +13.4% vs DIS +0.2%, NFLX -2.6%, FOXA -0.2%, ROKU +0.7%, XLC +1.1%, SPY +0.6%: intact. RVOL 2.75.
+- Regime: STABLE. SPY 737.64 (+0.6%), last 5-min bar 738.07 close after a 738.84 high (a small pullback), QQQ +1.7%, SMH +3.5%, no new session lows.
+- Scan: LION, IMVT 30.12 (+6.1%; earnings Mon 11/9 am -> FAIL), ZLAB 25.43 (+12.5%, RVOL 1.59; 13:34 liquidity failure stands, not re-measured), FLY 20.19 (+33.0%; earnings 11/10 pm -> FAIL). No new entry.
+- MR (Tier B, closes 14:30): MCHP 58.14 (-10.3%, RSI 32.5); SMH +3.5%, company-specific -> gate 1 FAIL. No entry. Tier C opens at 14:30 only if the day's minimum is unmet; it is met.
+- Risk: daily P&L +$1.80 (limit $60), positions 1/5, BP $300.58.
