@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-06 12:04 ET",
+ "as_of": "2026-11-06 12:15 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Flat. LION (post-earnings, +9.7%) on watch: waiting for a continuation break above 13.96; no entry yet.",
+ "status_note": "Flat. LION pulling back deeper (13.72) without a continuation break; no entry.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-06",
@@ -3473,6 +3473,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-06 12:04 ET",
    "equity": 405.58
+  },
+  {
+   "t": "2026-11-06 12:15 ET",
+   "equity": 405.58
   }
  ],
  "positions": [],
@@ -3635,12 +3639,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "Stable, slightly off highs: SPY +0.8% (739.1); chips +3.5%.",
+  "read": "Stable, sideways: SPY +0.9% (739.3) in a 738.5-741 band; chips +3.7%.",
   "chips": [
-   "SPY +0.8%",
+   "SPY +0.9%",
    "QQQ +1.9%",
-   "SMH +3.5%",
-   "XLC +1.0%"
+   "SMH +3.7%",
+   "XLC +0.9%"
   ]
  }
 }
@@ -10148,3 +10152,10 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Decision: NO ENTRY this cycle. The strategy enters on the continuation (break back above the pullback high ~13.96 or reclaim of the short-term average), not inside the pullback. Pre-written plan if it triggers: entry ~13.97-14.00 (limit; market fractional dollar order is the usual path), stop below the base higher low ~13.30 (about 4.8% below entry, under the 6% cap), 1R about $5.0 on $105, target >=2R about 14.95 (+7%), horizon end of day, flat before the bell unless a hold decision is logged. I am NOT leaving a resting stop-limit buy because it would fill between cycles without a gate re-check.
 - Other: FROG 99.94 (+33.9%) slipping back under 100, RVOL gate unmet, no entry; NET 272.59, ABNB 189.73, AKAM 84.21: not in scan. MR (Tier B, <=-3.5%, RSI<35, cap>=5B): MCHP 56.41 (-13.0%, RSI 32.5, vol 18.1M) only; SMH +3.5% so company-specific -> gate 1 FAIL. No entry.
 - Follow-up to fill next cycle: whether LION reclaims 13.96 on a 5-min close, and where it holds.
+
+### Cycle 832 - ~12:15 ET (Fri Nov 6) - hourly full cycle; flat, LION still no trigger
+- Regime: STABLE/SIDEWAYS. SPY 739.33 (+0.9%), 5-min bars 738.5-741.1, no new lows. QQQ +1.9%, SMH +3.7%, XLK +2.0%, XLC +0.9%. Equity $405.58, no positions, no orders, daily P&L $0.00 ($60 limit not in play).
+- Momentum scan (cap>=2B, avg vol>=1M, >=+5%, RVOL>=1.3): LION only (13.72, +9.2%, volume 4.04M, RVOL 1.51). My first scan attempt this cycle errored because I added a duplicate RVOL column; I re-ran it without the column (disclosure, no effect on results). Peers: DIS +0.1%, NFLX -2.4%, FOXA +0.3%, ROKU +0.9%, XLC +0.9%, SPY +0.9% -> separation still ~8+ points; RVOL passes.
+- LION structure (follow-up to the 12:04 plan): the pullback from the 13.96 high is deepening, not resolving. 5-min lows have gone 13.82 -> 13.77 -> 13.70 -> 13.72 (a lower low versus 13.77 and 13.82), highs 13.95 -> 13.93 -> 13.83. It has NOT reclaimed 13.96 and has not made a new higher low; the base low is still the 13.35-13.37 area. Trigger (5-min close above ~13.96, or a reclaim of the short-term average after a higher low) not met -> NO ENTRY. Gates 1, 2 and 4 hold as written at 12:04; gate 3 (held pullback with a higher low) is not currently satisfied. Re-check next cycle.
+- FROG 100.85 (+35.1%), still RVOL < 1.3 (not re-measured this cycle; FROG and the others not in the scan), no entry. MR (Tier B, <=-3.5%, RSI<35, cap>=5B): MCHP 55.97 (-13.7%, RSI 32.5, volume 18.9M) only; SMH +3.7%, company-specific -> gate 1 FAIL. No entry.
+- News/politics: the one hourly WebSearch (market/jobs report, Nov 6 2026) returned only 2023-2025 articles, nothing dated today. Discarded; no news claim is made for today. The earlier "no catalyst article" note for LION stands: the catalyst rests on the tool-verified Nov 5 EPS beat.
