@@ -86,6 +86,13 @@ Run this every cycle, in this order.
 | Mean-reversion (tiered by drop depth and time of day) | `strategies/mean-reversion.md` | Active — runs in parallel with the others every cycle, full universe re-scanned each time |
 | Momentum / relative-strength | `strategies/momentum.md` | Active — runs in parallel with the others every cycle, full universe re-scanned each time |
 
+### §4.1 — Regime switch (user decision 2026-11-06: "Just change it")
+Read SPY on 5-minute bars at the start of every cycle and label the tape before scanning:
+- **Falling:** SPY still making new session lows. Mean-reversion is OFF (no catching knives); momentum only for names with a fresh non-fading catalyst gap.
+- **Stabilizing:** SPY has made about 3 consecutive higher 5-minute lows and has stopped making new lows. Mean-reversion is ON (all four gates still apply).
+- **Stable/rising:** SPY is above its open and above a rising short-term average. Momentum is ON; mean-reversion only if a name's own sector is down 2%+ (unchanged gate).
+The regime label is written in every cycle entry. This switch only ever narrows the entry set; it never relaxes a gate, size, stop or loss limit.
+
 ---
 
 ## §5 — Metrics
