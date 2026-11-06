@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-06 10:35 ET",
+ "as_of": "2026-11-06 10:43 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Flat. Momentum window open; no setup passes gates (FROG leads but no breakout, fading volume).",
+ "status_note": "Flat. No setup passes gates; FROG still range-bound, MCHP oversold but sector is up.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-06",
@@ -3441,6 +3441,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-06 10:35 ET",
    "equity": 405.58
+  },
+  {
+   "t": "2026-11-06 10:43 ET",
+   "equity": 405.58
   }
  ],
  "positions": [],
@@ -3603,13 +3607,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "Chip bounce fading (SMH +2.7% from +5.8%); SPY +0.7%, QQQ +1.5%.",
+  "read": "Chip bounce holding ~+2.9% (SMH); SPY +0.8%, QQQ +1.7%.",
   "chips": [
-   "SPY +0.7%",
-   "QQQ +1.5%",
-   "SMH +2.7%",
-   "XLK +1.4%",
-   "XLP -0.7%"
+   "SPY +0.8%",
+   "QQQ +1.7%",
+   "SMH +2.9%",
+   "XLK +1.6%"
   ]
  }
 }
@@ -10057,3 +10060,8 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Momentum scan (cap>=2B, avg vol>=1M, >=+5%, RVOL>=1.3): 0 names.
 - FROG (+30.9%): separates from infra-software peers (AKAM +7.2%, DOCN +2.1%), higher lows earlier (89.3 > 93.0 > 94.4 > 96.5), but sideways since ~14:50Z with no breakout above ~99.7 and fading volume. Gap-day VWAP was NOT computed this cycle (scope limit), so the not-fading test is unconfirmed. FAIL gate 3/entry trigger: no continuation. NET (+10.8%) drifting lower on thin volume; ABNB (+8.7%) flat on thin volume: both fail.
 - MR: no candidates. No order placed.
+
+### Cycle 824 - ~10:43 ET (Fri Nov 6) - flat, no setup
+- Equity $405.58, no positions, no open-order check beyond flat positions. SPY +0.8%, QQQ +1.7%, SMH +2.9%, XLK +1.6%.
+- Momentum scan (>=+5%, RVOL>=1.3): 0 names. FROG 98.05 (+31.4%), still in the ~97-99.7 range, no breakout; NET 272.8 (+11.6%), ABNB 185.2 (+8.9%), AKAM 83.07 (+6.7%): no continuation trigger/base confirmation. No entry. No VWAP computed (scope limit).
+- MR scan (cap>=5B, <=-5%, RSI<35): MCHP 56.02 (-13.6%, RSI 32.5). FAIL gate 1: SMH is UP ~2.9% so the drop is company-specific, and the sector ETF is not >=2% down (Tier A). No news search done (would not pass anyway). No entry.
