@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-06 15:42 ET",
+  "as_of": "2026-11-06 15:48 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. Past the 15:30 ET entry cutoff; no new entries today.",
+  "status_note": "Closed flat, all cash ($405.36). Day: 1 trade (LION, -$0.22). Nothing rolls over the weekend.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-06",
@@ -3560,6 +3560,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-06 15:42 ET",
+      "equity": 405.36
+    },
+    {
+      "t": "2026-11-06 15:48 ET",
       "equity": 405.36
     }
   ],
@@ -10408,3 +10412,11 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 ### Cycle 853 - ~15:42 ET (Fri Nov 6) - past entry cutoff; flat, no scans
 - Portfolio $405.36 all cash, BP $405.36, no positions. SPY 737.20 (+0.57%), QQQ 658.18 (+1.7%), SMH 464.46 (+3.7%).
 - Entry cutoff (15:30 ET) passed; strategy scans skipped by rule. No order placed.
+
+### Cycle 854 - ~15:48 ET (Fri Nov 6) - CLOSE RECAP (last cycle of the day)
+- Reconciled live: portfolio $405.36 all cash, BP $405.36, no positions, no open orders. Today's orders (verified): LION buy 7.500053 @ 13.9999 (18:23Z) and LION sell @ 13.9701 (20:03Z), both filled. No stop checks needed (flat).
+- Tape: SPY 737.38 (+0.6%), QQQ 657.79 (+1.7%), SMH 463.39 (+3.5%). No entries after 15:30 ET; scans skipped by rule.
+- **Overnight / weekend: NOTHING rolls. The account is 100% cash; no position, no open order.** No thesis to defend over the weekend.
+- Day recap: start equity $405.58, end $405.36, realized -$0.22 (-0.05%). 1 trade (LION momentum, post-earnings beat, entered 13:23 ET at 13.9999, exited ~15:03 ET at 13.9701, -0.08R, score 58). Minimum of 1 trade met organically (0 forced). Daily loss limit ($60) and breaker ($394.19) never close.
+- Skips/disclosures: most of the day was no-trade because gates failed (EXTR, ZLAB, FLY, IMVT, MCHP, etc. per cycle logs); the schedule/regime/$60-limit changes were made mid-day per user direction; WebSearch returned stale or undated results several times and was discarded; one scan errored in Cycle 827 (duplicate column) and was re-run; the LION exit came ~2 minutes before the written bar-close trigger (judgment call, disclosed in Cycle 849). Scheduler MCP disconnects around triggers were handled by reloading tools; no cycle is known to have been missed after the cron fix.
+- Open for the user: profit-protection rule (breakeven stop after +1R or take half at +1R) and whether to change the $105 size; neither changed.
