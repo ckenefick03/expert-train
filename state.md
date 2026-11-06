@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-06 14:44 ET",
+ "as_of": "2026-11-06 14:54 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "LION long +$1.46 (14.195 vs 14.00). EXTR rejected (fading, lower lows). Stop 13.65, target 14.70.",
+ "status_note": "LION long +$0.45 (14.06 vs 14.00), fading off 14.27 on a heavier-volume bar. Exit trigger: 5-min close under 14.05. Stop 13.65.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-06",
@@ -3537,6 +3537,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-06 14:44 ET",
    "equity": 407.04
+  },
+  {
+   "t": "2026-11-06 14:54 ET",
+   "equity": 406.03
   }
  ],
  "positions": [
@@ -3546,7 +3550,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
    "tier": "-",
    "qty": 7.500053,
    "entry": 14.0,
-   "price": 14.195,
+   "price": 14.06,
    "stop": 13.65,
    "target": 14.7
   }
@@ -3710,12 +3714,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "Stable: SPY +0.7% (738.0), chips +3.6%.",
+  "read": "Stable, flat: SPY +0.6% (737.5), chips +3.5%.",
   "chips": [
-   "SPY +0.7%",
-   "QQQ +1.8%",
-   "SMH +3.6%",
-   "XLC +1.1%"
+   "SPY +0.6%",
+   "QQQ +1.7%",
+   "SMH +3.5%",
+   "XLC +1.0%"
   ]
  }
 }
@@ -10340,3 +10344,12 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Momentum scan (5 names): LION; IMVT 30.17 (+6.3%; earnings Mon 11/9 am -> FAIL); ZLAB 25.45 (+12.6%, RVOL 1.67; 13:34 liquidity/spread failure stands, not re-measured); FLY 20.43 (+34.6%; earnings 11/10 pm -> FAIL); NEW EXTR (Extreme Networks) 23.89 (+13.5%, RVOL 1.30 borderline, avg vol 1.6M, cap $2.76B): FAIL. Reasons: (a) gate 3/not-fading: the stock spiked to 26.30 at 14:40Z (+25%) on the first minutes and has bled every hour since, lower highs and lower lows (24.4 -> 24.3 -> 24.1 -> 24.0 -> 23.85) with price at the session low area now, having given back about 46% of the high-to-prior-close gain and still sliding; no higher low exists; (b) catalyst not identified: EXTR's earnings were 2026-10-28 (not today), so today's spike has no confirmed catalyst (I ran no news search; the networking peers are mixed: ANET +6.9%, CIEN +4.7%, HPE +1.4%, FFIV +0.7%, CSCO -1.7%, NTCT -0.4%, so it also moves with a sector bid); (c) it is 14:44 ET with a horizon of only ~45 minutes before the 15:30 cutoff and flat-by-close, leaving no room for the 2R. No entry. Follow-up to fill: where EXTR trades at the close.
 - MR: Tier B closed 14:30; Tier C needs the day's minimum unmet (it is met). MCHP 58.36 (-10.0%, RSI 32.5; SMH +3.6%) is company-specific -> gate 1 FAIL. No entry. Disclosure: this cycle's MR scan used the Tier A/B depth <=-5% (not -3.5%).
 - Risk: daily P&L +$1.46 (limit $60), positions 1/5, BP $300.58.
+
+### Cycle 848 - ~14:54 ET (Fri Nov 6) - LION long +$0.45, fading off the high; written exit trigger set
+- Reconcile: portfolio $406.03 (cash/BP $300.58, equity $105.45), 1 position LION 7.500053 sh avg 14.00, no open orders. LION 14.06 (bid 14.04 / ask 14.07): +0.06/sh = +$0.45 (+0.4%, +0.17R), down from +$2.03 (14.27 high) 30 minutes ago. 5-min: 19:35Z close 14.215 (low 14.165), 19:40Z close 14.18 (low 14.17), 19:45Z open 14.185, low 14.07, close 14.075 on 139k shares (about 2.5-3x the prior bars): a lower low and the first heavy-volume down bar since the breakout. The closes are now below the 14.09-14.10 support from 19:00-19:10Z but above the 14.05 swing low and well above the 13.96 breakout. Not yet an invalidation by my written rule (a 5-min close back below the rising short-term support), but the margin is thin (about 0.01 from the 14.05 line). STOP CHECK: hard stop 13.65 is 2.9% below, not close.
+- Relative strength vs peers: LION +11.9% vs DIS +0.1%, NFLX -2.9%, FOXA -0.5%, ROKU +0.5%, XLC +1.0%, SPY +0.6%: still strong (RVOL 3.10, 8.29M shares), so there is no RS-loss exit; the weakness is intraday giveback only.
+- WRITTEN EXIT TRIGGER (for the next cycles): sell all if (a) a 5-min bar closes below 14.05, or (b) LION loses its lead (peer complex rising/LION flat), or (c) the hard stop 13.65 trades; otherwise hold toward 14.70 and flat before the bell (not later than the 15:52 ET cycle; the 15:47 ET recap cycle is the last full review). If it is still green at the close I will sell rather than hold overnight unless a hold decision is logged with a reason; weekend gap risk argues for flat.
+- Regime: STABLE/flat. SPY 737.47 (+0.6%), 5-min closes 737.74, 737.89, 737.80; session low 734.58 intact.
+- Scan (5 names): IMVT 30.26 (+6.6%; earnings Mon 11/9 am -> FAIL), ZLAB 25.45 (+12.6%, RVOL 1.70; 13:34 liquidity failure stands), EXTR 23.94 (+13.7%, RVOL 1.32; rejected at 14:44 as fading with no catalyst; follow-up: 23.94 now, basically unchanged vs 23.89 at 14:44), FLY 20.57 (+35.5%; earnings 11/10 pm -> FAIL), LION. No new entry. Also: it is 14:54 ET, so a new entry would have under 40 minutes before the 15:30 cutoff and the flat-before-close rule.
+- MR: MCHP 57.95 (-10.6%, RSI 32.5; SMH +3.5%) company-specific -> gate 1 FAIL. No entry.
+- Risk: daily P&L +$0.45 (limit $60), positions 1/5, BP $300.58.
