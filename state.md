@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-06 12:15 ET",
+ "as_of": "2026-11-06 12:23 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Flat. LION pulling back deeper (13.72) without a continuation break; no entry.",
+ "status_note": "Flat. LION pullback deepening (13.61); no entry.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-06",
@@ -3477,6 +3477,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-06 12:15 ET",
    "equity": 405.58
+  },
+  {
+   "t": "2026-11-06 12:23 ET",
+   "equity": 405.58
   }
  ],
  "positions": [],
@@ -3639,10 +3643,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "Stable, sideways: SPY +0.9% (739.3) in a 738.5-741 band; chips +3.7%.",
+  "read": "Stable, sideways: SPY +0.9% (739.6) in a 738.5-741 band; chips +3.7%.",
   "chips": [
    "SPY +0.9%",
-   "QQQ +1.9%",
+   "QQQ +2.0%",
    "SMH +3.7%",
    "XLC +0.9%"
   ]
@@ -10159,3 +10163,9 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - LION structure (follow-up to the 12:04 plan): the pullback from the 13.96 high is deepening, not resolving. 5-min lows have gone 13.82 -> 13.77 -> 13.70 -> 13.72 (a lower low versus 13.77 and 13.82), highs 13.95 -> 13.93 -> 13.83. It has NOT reclaimed 13.96 and has not made a new higher low; the base low is still the 13.35-13.37 area. Trigger (5-min close above ~13.96, or a reclaim of the short-term average after a higher low) not met -> NO ENTRY. Gates 1, 2 and 4 hold as written at 12:04; gate 3 (held pullback with a higher low) is not currently satisfied. Re-check next cycle.
 - FROG 100.85 (+35.1%), still RVOL < 1.3 (not re-measured this cycle; FROG and the others not in the scan), no entry. MR (Tier B, <=-3.5%, RSI<35, cap>=5B): MCHP 55.97 (-13.7%, RSI 32.5, volume 18.9M) only; SMH +3.7%, company-specific -> gate 1 FAIL. No entry.
 - News/politics: the one hourly WebSearch (market/jobs report, Nov 6 2026) returned only 2023-2025 articles, nothing dated today. Discarded; no news claim is made for today. The earlier "no catalyst article" note for LION stands: the catalyst rests on the tool-verified Nov 5 EPS beat.
+
+### Cycle 833 - ~12:23 ET (Fri Nov 6) - flat; LION pullback deepening, no entry
+- Regime: STABLE/SIDEWAYS. SPY 739.64 (+0.9%), 5-min bars 738.5-740.8, no new lows. QQQ +2.0%, SMH +3.7%, XLK +2.1%, XLC +0.9%. Equity $405.58, no positions, daily P&L $0.00.
+- Momentum scan (>=+5%, RVOL>=1.3): LION only, 13.64 scan / 13.61 quote (+8.6%), volume 4.31M, RVOL 1.61. Peers flat: DIS +0.2%, NFLX -2.3%, FOXA +0.3%, ROKU +0.9%. Separation still ~7.5 points, RVOL passes, gap not fading beyond half (gave back about 0.35 of a 1.40 high-to-close gain, 25%).
+- LION structure: 5-min lows 13.82 -> 13.77 -> 13.70 -> 13.72 -> 13.62 -> 13.59 (lower lows), highs 13.96 -> 13.93 -> 13.83 -> 13.79 -> 13.69. This is a lower-high/lower-low drift back toward the 13.35-13.37 base low, not a held pullback. Gate 3 FAIL, no continuation trigger. NO ENTRY. Follow-up: stop level 13.30 not hit.
+- FROG 100.40 (+34.6%), not in the scan (RVOL gate unmet, not re-measured). MR (Tier B): MCHP 56.45 (-13.0%, RSI 32.5, vol 19.6M) only; SMH +3.7% so company-specific -> gate 1 FAIL. No entry.
