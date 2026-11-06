@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-06 11:43 ET",
+ "as_of": "2026-11-06 11:53 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Flat. Stable tape; FROG holds >100 but fails RVOL; no setup.",
+ "status_note": "Flat. Stable tape; no setup passes gates.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-06",
@@ -3465,6 +3465,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-06 11:43 ET",
    "equity": 405.58
+  },
+  {
+   "t": "2026-11-06 11:53 ET",
+   "equity": 405.58
   }
  ],
  "positions": [],
@@ -3627,11 +3631,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "Stable, edging up: SPY +1.0% (740.3), new 5-min highs near 741; no new lows.",
+  "read": "Stable/range-bound near highs: SPY +1.0% (740.4); chips +4.0%.",
   "chips": [
    "SPY +1.0%",
    "QQQ +2.1%",
-   "SMH +3.9%",
+   "SMH +4.0%",
    "XLK +2.2%"
   ]
  }
@@ -10123,3 +10127,8 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Regime: STABLE/edging up. SPY 740.32 (+1.0%), 5-min highs near 741.06, no new lows; QQQ +2.1%, SMH +3.9%, XLK +2.2%. Equity $405.58, no positions, daily P&L $0.00.
 - Momentum scan (>=+5%, RVOL>=1.3, avg vol>=1M, cap>=2B): 0 names. Follow-up on the 11:34 skipped FROG candidate: FROG 101.07 (+35.4%), 5-min highs 101.15, holding above the 100 breakout and above the 99.7 range high, so the rejected setup (entry ~100.7, stop <96.27) is currently +0.4%, not hit. Volume is thin (26-49k per 5 min), RVOL still about 0.67-0.7 from the earlier check, so the gate-1 RVOL requirement is still not met; this cycle did not re-run the RVOL column. NET 273.66 (+11.9%), ABNB 189.69 (+11.5%), AKAM 84.58 (+8.7%): not in the scan, no new trigger.
 - MR: MCHP 56.99 (-12.1%, RSI 32.5) only; SMH +3.9% -> company-specific, gate 1 FAIL. Tier A closes 11:30; Tier B (>=3.5% intraday, stabilization) still requires a sector-wide cause. No entry.
+
+### Cycle 830 - ~11:53 ET (Fri Nov 6) - flat, no setup (Tier B window)
+- Regime: STABLE near highs. SPY 740.39 (+1.0%), QQQ 660.77 (+2.1%), SMH 465.82 (+4.0%), XLK 165.96 (+2.2%). Equity $405.58, no positions, daily P&L $0.00.
+- Momentum scan (>=+5%, RVOL>=1.3, avg vol>=1M, cap>=2B): 0 names. FROG 101.38 (+35.9%) holding above 100 but RVOL gate still unmet (last measured 0.67; not re-measured); NET 272.51 (+11.5%), ABNB 189.33 (+11.3%), AKAM 83.78 (+7.6%, fading from 84.9): no scan hit, no trigger. No entry.
+- MR (Tier B, scan threshold widened to <=-3.5%, RSI<35, cap>=5B): MCHP 57.42 (-11.5%, RSI 32.5, volume 17.4M) only. Gate 1 FAIL (SMH up 4.0%, company-specific, no sector ETF down 2%+); gate 4 not evaluated since gate 1 already fails. No entry.
