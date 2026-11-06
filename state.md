@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-06 15:22 ET",
+  "as_of": "2026-11-06 15:32 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. Last full cycle before the 15:30 ET entry cutoff; no qualifying setup.",
+  "status_note": "Flat, all cash. Past the 15:30 ET entry cutoff; no new entries today.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-06",
@@ -3552,6 +3552,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-06 15:22 ET",
+      "equity": 405.36
+    },
+    {
+      "t": "2026-11-06 15:32 ET",
       "equity": 405.36
     }
   ],
@@ -10392,3 +10396,7 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Momentum scan: IMVT (earnings 11/9, fail), ZLAB (spread/liquidity fail), EXTR (fading, no catalyst), FLY (earnings 11/10, fail), LION (already traded and exited; setup not re-entered). None qualifies.
 - MR scan: MCHP -10.6%, RSI 32.5, but SMH is up so the move is company-specific, gate 1 fails. Tier C not applicable (day minimum already met).
 - Decision: no entry; under 8 minutes to cutoff. No order placed.
+
+### Cycle 852 - ~15:32 ET (Fri Nov 6) - past entry cutoff; flat, no scans
+- Portfolio $405.36 all cash, BP $405.36, no positions. SPY 737.78 (+0.65%), QQQ 658.72 (+1.8%), SMH 464.77 (+3.8%).
+- 15:30 ET entry cutoff has passed, so no strategy scans were run this cycle (disclosed: scan skipped by rule, not by error). No order placed.
