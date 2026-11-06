@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-06 11:53 ET",
+ "as_of": "2026-11-06 12:04 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Flat. Stable tape; no setup passes gates.",
+ "status_note": "Flat. LION (post-earnings, +9.7%) on watch: waiting for a continuation break above 13.96; no entry yet.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-06",
@@ -3469,6 +3469,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-06 11:53 ET",
    "equity": 405.58
+  },
+  {
+   "t": "2026-11-06 12:04 ET",
+   "equity": 405.58
   }
  ],
  "positions": [],
@@ -3631,12 +3635,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "Stable/range-bound near highs: SPY +1.0% (740.4); chips +4.0%.",
+  "read": "Stable, slightly off highs: SPY +0.8% (739.1); chips +3.5%.",
   "chips": [
-   "SPY +1.0%",
-   "QQQ +2.1%",
-   "SMH +4.0%",
-   "XLK +2.2%"
+   "SPY +0.8%",
+   "QQQ +1.9%",
+   "SMH +3.5%",
+   "XLC +1.0%"
   ]
  }
 }
@@ -10132,3 +10136,15 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Regime: STABLE near highs. SPY 740.39 (+1.0%), QQQ 660.77 (+2.1%), SMH 465.82 (+4.0%), XLK 165.96 (+2.2%). Equity $405.58, no positions, daily P&L $0.00.
 - Momentum scan (>=+5%, RVOL>=1.3, avg vol>=1M, cap>=2B): 0 names. FROG 101.38 (+35.9%) holding above 100 but RVOL gate still unmet (last measured 0.67; not re-measured); NET 272.51 (+11.5%), ABNB 189.33 (+11.3%), AKAM 83.78 (+7.6%, fading from 84.9): no scan hit, no trigger. No entry.
 - MR (Tier B, scan threshold widened to <=-3.5%, RSI<35, cap>=5B): MCHP 57.42 (-11.5%, RSI 32.5, volume 17.4M) only. Gate 1 FAIL (SMH up 4.0%, company-specific, no sector ETF down 2%+); gate 4 not evaluated since gate 1 already fails. No entry.
+
+### Cycle 831 - ~12:04 ET (Fri Nov 6) - flat; first live momentum candidate LION, no entry yet
+- Regime: STABLE, slightly off highs. SPY 739.06 (+0.8%), QQQ +1.9%, SMH +3.5%, XLK +1.9%, XLC +1.0%. Equity $405.58, no positions, daily P&L $0.00.
+- NEW momentum scan hit (cap>=2B, avg vol>=1M, >=+5%, RVOL>=1.3): LION (Lionsgate Studios) 13.78 (+9.7% vs 12.56 close), volume 3.92M, avg vol 3.36M, RVOL 1.47, cap $3.7B. Bid/ask 13.77/13.79 (0.15% spread). Fractional tradable.
+- Gate check (written):
+  1. Relative strength: PASS. Peers: DIS 117.41 (+0.2%), NFLX 64.13 (-2.2%), FOXA 67.95 (+0.4%), ROKU 161.95 (+1.0%), XLC +1.0%, SPY +0.8%. LION is up about 8.7-9.5 percentage points more than peers/SPY (>=2 required). Not fading: price above the prior close and above an estimated VWAP (I did not compute exact VWAP; the 5-min lows rose from 12.50 to ~13.8 all day), and it has given back about 0.18 of a 1.40 gain from the 13.96 high (<50%). RVOL 1.47 >= 1.3. Not a foreign ADR move (NYSE-listed). Note the move built during the session; the open gap was only about +0.5%.
+  2. Catalyst: PASS (tool-verified, web search not usable). get_earnings_results shows LION reported FQ2 2027 on 2026-11-05 after the close: EPS $0.07 vs -$0.06 estimate (beat). The report already happened and is the thesis, so the earnings-window exclusion does not apply. My WebSearch returned nothing dated Nov 6 2026 (only older stories), so I cannot cite a news article for today's follow-through; the catalyst rests on the EPS beat alone.
+  3. Held pullback/higher low: PARTIAL. 5-min lows are stair-stepping up (12.50, 12.77, 13.11, 13.29, 13.35, 13.48, 13.59, 13.72, 13.82). The last bar (16:55Z) printed a 13.77 low, 0.05 under the prior 13.82 low, so the nearest higher-low is 13.35-13.37 (16:05-16:15Z). Price is pulling back to 13.78 from the 13.96 high, i.e. it is in the pullback, not the continuation.
+  4. Timing: PASS (12:04 ET, between 10:30 and 15:30).
+- Decision: NO ENTRY this cycle. The strategy enters on the continuation (break back above the pullback high ~13.96 or reclaim of the short-term average), not inside the pullback. Pre-written plan if it triggers: entry ~13.97-14.00 (limit; market fractional dollar order is the usual path), stop below the base higher low ~13.30 (about 4.8% below entry, under the 6% cap), 1R about $5.0 on $105, target >=2R about 14.95 (+7%), horizon end of day, flat before the bell unless a hold decision is logged. I am NOT leaving a resting stop-limit buy because it would fill between cycles without a gate re-check.
+- Other: FROG 99.94 (+33.9%) slipping back under 100, RVOL gate unmet, no entry; NET 272.59, ABNB 189.73, AKAM 84.21: not in scan. MR (Tier B, <=-3.5%, RSI<35, cap>=5B): MCHP 56.41 (-13.0%, RSI 32.5, vol 18.1M) only; SMH +3.5% so company-specific -> gate 1 FAIL. No entry.
+- Follow-up to fill next cycle: whether LION reclaims 13.96 on a 5-min close, and where it holds.
