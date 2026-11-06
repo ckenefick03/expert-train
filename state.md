@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-06 15:04 ET",
+ "as_of": "2026-11-06 15:13 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Flat. LION momentum trade closed -$0.22 (-0.08R). First trade of the day logged.",
+ "status_note": "Flat, all cash. Day: 1 trade (LION -$0.22). No entries; cutoff 15:30 ET.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-06",
@@ -3545,6 +3545,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-06 15:04 ET",
    "equity": 405.36
+  },
+  {
+   "t": "2026-11-06 15:13 ET",
+   "equity": 405.36
   }
  ],
  "positions": [],
@@ -3719,12 +3723,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "Stable, flat: SPY +0.7% (738.0), chips +4.0%.",
+  "read": "Stable, edging up: SPY +0.8% (738.7), chips +4.1%.",
   "chips": [
-   "SPY +0.7%",
-   "QQQ +1.9%",
-   "SMH +4.0%",
-   "XLC +0.9%"
+   "SPY +0.8%",
+   "QQQ +2.0%",
+   "SMH +4.1%",
+   "XLC +1.0%"
   ]
  }
 }
@@ -10369,3 +10373,12 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Regime/tape: STABLE/flat. SPY 738.01 (+0.7%), QQQ +1.9%, SMH +4.0%; SPY 5-min lows 737.04-737.38 (a 267k-share bar at 19:50Z), no new session low. 
 - Account after exit: portfolio $405.36, all cash, BP $405.36, no positions, no open orders. Daily P&L -$0.22 (limit $60). Day: 1 trade, 0 forced. Equity vs the 10% breaker level $394.19: well above.
 - Scan/other at this cycle: not re-run after the exit decision (the exit was the priority; a scan was last run at 14:54 ET: IMVT/FLY earnings-fail, ZLAB liquidity-fail, EXTR fading). Scope limit noted. The next cycles at 15:12 (hourly), 15:22, 15:32, 15:42, 15:47 and 15:52 ET continue; entries stop at 15:30 ET, and with the position flat there is nothing to carry into the close or the weekend.
+
+### Cycle 850 - ~15:13 ET (Fri Nov 6) - hourly full cycle; flat, no entries; LION exit follow-up
+- Reconcile: portfolio $405.36 all cash, BP $405.36, no positions, no open orders. Daily P&L -$0.22 (limit $60). 
+- LION exit follow-up (honest check): after my 15:03 ET sell at 13.9701, the 20:00Z 5-min bar closed 13.915 (low 13.91), i.e. the written trigger (a 5-min close below 14.05) did print right after the exit; the 20:05Z bar low was 13.885 and it has since bounced to 14.075 (+0.1/sh above my exit, i.e. +$0.79 on 7.5 shares versus what holding would show now). Holding through the dip would have risked the 13.65 stop with the breakout level (13.96) broken for several minutes; the realized result is -$0.22. Verdict: neutral to slightly early; no rule change.
+- Regime: STABLE, edging up. SPY 738.69 (+0.8%), 5-min SPY 20:05Z close 738.94 (high 739.08), 5-min lows 737.6-737.7; QQQ +2.0%, SMH +4.1%, XLK +2.0%; session low 734.58 intact.
+- Momentum scan (5 names), nothing qualifies: IMVT 30.26 (+6.6%, RVOL 1.54): earnings Mon 11/9 am, inside the window -> FAIL. ZLAB 25.51 (+12.9%, RVOL 1.79): 13:34 liquidity (spread 0.39%, avg vol 1.008M) failure; not re-measured. EXTR 24.03 (+14.2%, RVOL 1.35): no catalyst identified, faded earlier; it has bounced from 23.89 to 24.03, still below the 26.30 spike high, no base shown; not entered. FLY 20.62 (+35.8%, RVOL 2.02): earnings 11/10 after the close -> FAIL. LION 14.075 (+12.1%, RVOL 3.29): the setup is no longer valid after the lower highs/lower lows, and re-entering the name I just exited would be chasing; no fresh base. Also 15:13 ET leaves under 17 minutes before the 15:30 cutoff with a flat-by-close horizon (the horizon would be about 45 minutes). No entry.
+- MR scan (cap>=5B, <=-3.5%, RSI<35): MCHP 58.30 (-10.1%, RSI 32.5); SMH +4.1%, so the drop is company-specific -> gate 1 FAIL. Tier C 14:30-15:30 applies only when the day's minimum is unmet; it was met by the LION trade. No entry. 
+- Disclosure: no news/politics search this hour (nothing news-dependent was pending; earlier searches this session returned nothing dated for today). Follow-ups on earlier skipped candidates: FROG (11:34 reject) not re-checked this cycle; STX/COIN (12:54 skips) not re-checked.
+- Day status: 1 trade (LION momentum, -$0.22, -0.08R, score 58), 0 forced. The next scheduled cycles: 15:22, 15:32, 15:42, 15:47 (recap) and 15:52 ET; no entries after 15:30 ET, so the account will end the day flat and nothing rolls over the weekend.
