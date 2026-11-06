@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-06 12:54 ET",
+ "as_of": "2026-11-06 13:04 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Flat. Tape softening (SPY +0.3%); LION forming higher lows under 13.96; no entry.",
+ "status_note": "Flat. LION 13.78 coiling under 13.96; no trigger yet.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-06",
@@ -3493,6 +3493,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-06 12:54 ET",
    "equity": 405.58
+  },
+  {
+   "t": "2026-11-06 13:04 ET",
+   "equity": 405.58
   }
  ],
  "positions": [],
@@ -3655,12 +3659,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "Softening: SPY +0.3% (735.4) near its 734.6 session low; chips +2.1%, XLK +0.9%. Momentum only on own-catalyst names; MR off (no sector-wide cause, falling).",
+  "read": "Choppy: SPY +0.4% (736.2) bouncing off 735.1; chips +2.4%.",
   "chips": [
-   "SPY +0.3%",
-   "QQQ +1.1%",
-   "SMH +2.1%",
-   "XLK +0.9%"
+   "SPY +0.4%",
+   "QQQ +1.3%",
+   "SMH +2.4%",
+   "XLK +1.1%"
   ]
  }
 }
@@ -10199,3 +10203,8 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Momentum scan: FLY 19.27 (+27.0%, RVOL 1.35) and LION 13.70 (+9.1%, RVOL 1.76, volume 4.70M). FLY still FAILS (reports 11/10 after the close, inside the 2-trading-day window; no catalyst identified). LION: 5-min lows have now turned up: 13.59 (17:35Z), 13.66 (17:40Z), 13.70 (17:45Z) with closes 13.66, 13.75, 13.745. That is a short sequence of higher lows (3 bars) after the earlier drift to 13.58-13.59, base low 13.35-13.37 intact, pullback high 13.96 not reclaimed (current 13.70, 1.9% below). Peers: DIS -0.1%, NFLX -2.7%, FOXA -0.2%, ROKU +0.7%, XLC +0.8% vs SPY +0.3%: LION still leads by about 8 points. Gate 3 is forming but the entry trigger (5-min close above ~13.96, or a hold above the short-term average with a clearly higher low) has not occurred, and the market is softening. NO ENTRY. 
 - MR Tier B scan (cap>=5B, <=-3.5%, RSI<35): 3 names. MCHP 54.87 (-15.4%, RSI 32.5; SMH +2.1%, company-specific -> gate 1 FAIL), STX Seagate 449.75 (-3.6%, RSI 24.8, vol 4.4M; hardware/semis sector is up, no sector-wide cause identified -> gate 1 FAIL), COIN 131.88 (-3.6%, RSI 34.2; crypto-wide cause not verified, no news search run, price still falling with SPY -> gate 1 and the stabilization/higher-low check not met). None enters. Logged as skipped scans with follow-ups to fill later (did they bounce or keep falling?).
 - FROG 100.12 (+34.2%) not in the scan (RVOL gate unmet, not re-measured). No entry.
+
+### Cycle 837 - ~13:04 ET (Fri Nov 6) - flat; LION coiling under 13.96, no trigger
+- Regime: CHOPPY/stable. SPY 736.24 (+0.4%); 5-min low 735.13 (17:50Z) then a bounce to 737.05 close; session low 734.58 still intact (no new low). QQQ +1.3%, SMH +2.4%, XLK +1.1%, XLC +0.7%. Equity $405.58, no positions, daily P&L $0.00.
+- Momentum scan: FLY 19.50 (+28.5%, RVOL 1.39) - FAIL, earnings 11/10 pm (inside the window), unchanged. LION 13.78 (+9.7%, RVOL 1.80, volume 4.80M): 5-min lows 13.59, 13.66, 13.70, 13.68, 13.725 (broadly rising; one tick lower at 13.68), closes 13.66, 13.75, 13.745, 13.72, 13.79; highs 13.75, 13.755, 13.745, 13.795. Peers DIS -0.2%, NFLX -2.9%, FOXA -0.4%, ROKU +0.6%, XLC +0.7% vs SPY +0.4%: LION leads by 9+ points. It is coiling about 1.3% under the 13.96 pullback high with a rising-low structure; the trigger (5-min close above 13.96 / reclaim) has NOT printed. No entry. Plan unchanged: entry ~13.97-14.00, stop under ~13.65 (the new higher-low base) rather than 13.30 if the base is re-anchored: that would be about 2.3% stop distance, so 1R about $2.4 on $105 and the >=2R target about 14.65. I will re-anchor only at the time of entry and write it down then.
+- MR Tier B scan: only MCHP 55.77 (-14.0%, RSI 32.5; SMH +2.4%, company-specific -> gate 1 FAIL). The 12:54 skipped names recovered out of the scan: STX 454.42 (-2.6%), COIN 132.60 (-3.1%). Follow-up for the log: both bounced modestly after the 12:54 print (STX -3.6% -> -2.6%, COIN -3.6% -> -3.1%); a gate-compliant entry would not have been available anyway. No entry.
