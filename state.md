@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-06 14:03 ET",
+ "as_of": "2026-11-06 14:13 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "LION long +$0.49 (14.065 vs 14.00). Stop 13.65, target 14.70.",
+ "status_note": "LION long +$0.79 (14.105 vs 14.00). Stop 13.65, target 14.70.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-06",
@@ -3521,6 +3521,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-06 14:03 ET",
    "equity": 406.07
+  },
+  {
+   "t": "2026-11-06 14:13 ET",
+   "equity": 406.37
   }
  ],
  "positions": [
@@ -3530,7 +3534,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
    "tier": "-",
    "qty": 7.500053,
    "entry": 14.0,
-   "price": 14.065,
+   "price": 14.105,
    "stop": 13.65,
    "target": 14.7
   }
@@ -3694,12 +3698,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "Stable, near highs: SPY +0.7% (738.3), chips +3.5%.",
+  "read": "Stable, near highs: SPY +0.8% (738.8), chips +3.8%.",
   "chips": [
-   "SPY +0.7%",
-   "QQQ +1.8%",
-   "SMH +3.5%",
-   "XLC +1.0%"
+   "SPY +0.8%",
+   "QQQ +1.9%",
+   "SMH +3.8%",
+   "XLC +1.1%"
   ]
  }
 }
@@ -10294,3 +10298,11 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Scan: LION, IMVT (30.02, +5.7%, RVOL 1.40; earnings Mon 11/9 am -> FAIL), ZLAB (25.62, +13.4%, RVOL 1.51; liquidity/spread failure from 13:34 stands, not re-measured), FLY (19.78, +30.3%, RVOL 1.60; earnings 11/10 pm -> FAIL). No new entry. 
 - MR (Tier B, ends 14:30): MCHP 57.39 (-11.5%, RSI 32.5); SMH +3.5%, company-specific -> gate 1 FAIL. Tier C opens 14:30 but only if the day's minimum is unmet; the minimum is already met (1 trade) so Tier C is not needed.
 - Risk: daily P&L +$0.49, positions 1/5, BP $300.58. Close plan: the position is to be flat before the 16:00 bell unless a hold decision is written; the next hourly/10-min cycles keep watching the stop and the 14.70 target. 
+
+### Cycle 844 - ~14:13 ET (Fri Nov 6) - hourly full cycle; LION long +$0.79, holding; no new entries
+- Reconcile: portfolio $406.37 (cash/BP $300.58, equity $105.79), 1 position LION 7.500053 sh avg 14.00, no open orders. LION 14.105 (bid 14.10 / ask 14.11): +0.105/sh = +$0.79 (+0.75%, +0.30R). 5-min: 18:55Z 14.095-14.125 (close 14.095), 19:00Z 14.05-14.14 (close 14.08, volume 288k), 19:05Z 14.07-14.115 (close 14.09): flat in a tight 14.05-14.15 range for about 45 minutes, lows 14.05-14.095 holding well above the 13.96 breakout; day high 14.15 not yet exceeded. STOP CHECK: stop 13.65 is 3.2% below, not close; target 14.70 (+4.2%). Invalidation checks (hold rule ended 13:53 ET): no close below short-term support; relative strength intact (LION +12.3% vs DIS +0.1%, NFLX -2.6%, FOXA -0.2%, ROKU +0.7%, XLC +1.1%, SPY +0.8%); RVOL 2.66. No exit signal.
+- Regime: STABLE near highs. SPY 738.78 (+0.8%), 5-min lows 738.1-738.2 (steady), QQQ +1.9%, SMH +3.8%, XLK +1.9%, XLF -0.1%, XLV +0.1%, XLE +0.4%.
+- Scan: LION; IMVT 30.15 (+6.2%, RVOL 1.42; earnings Mon 11/9 am -> FAIL); ZLAB 25.46 (+12.7%, RVOL 1.54; the 13:34 spread/liquidity failure stands, not re-measured; it has slipped from 25.99); FLY 20.23 (+33.3%, RVOL 1.75; reports 11/10 after the close -> FAIL). No new entry.
+- MR (Tier B, ends 14:30): MCHP 57.87 (-10.8%, RSI 32.5); SMH +3.8% so the drop is company-specific -> gate 1 FAIL. No entry.
+- Hourly-cycle disclosure: no news/politics search this hour (the earlier-hour search surfaced nothing dated today, and nothing is pending a news-dependent entry; I used the primary-source search for LION's catalyst at 13:15). Follow-ups on skipped candidates: FROG (rejected for RVOL at 11:34) was 100.12-101.38 before; not re-measured now. STX/COIN (12:54 skips) not re-checked this cycle.
+- Risk: daily P&L +$0.79 (limit $60), positions 1/5, BP $300.58. Close plan: flat before the 16:00 bell unless a hold decision is written; the 14:47 ET recap trigger now fires at 15:47 ET (moved to 20:47Z), so it is the last scheduled cycle before the bell besides the :52 at 15:52 ET.
