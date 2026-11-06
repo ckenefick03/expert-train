@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-06 14:54 ET",
+ "as_of": "2026-11-06 15:04 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,12 +41,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "LION long +$0.45 (14.06 vs 14.00), fading off 14.27 on a heavier-volume bar. Exit trigger: 5-min close under 14.05. Stop 13.65.",
+ "status_note": "Flat. LION momentum trade closed -$0.22 (-0.08R). First trade of the day logged.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-06",
   "start_equity": 405.58,
-  "trades": 0,
+  "trades": 1,
   "forced": 0
  },
  "equity_history": [
@@ -3541,20 +3541,13 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-06 14:54 ET",
    "equity": 406.03
-  }
- ],
- "positions": [
+  },
   {
-   "symbol": "LION",
-   "strategy": "momentum",
-   "tier": "-",
-   "qty": 7.500053,
-   "entry": 14.0,
-   "price": 14.06,
-   "stop": 13.65,
-   "target": 14.7
+   "t": "2026-11-06 15:04 ET",
+   "equity": 405.36
   }
  ],
+ "positions": [],
  "trades": [
   {
    "symbol": "TER",
@@ -3711,15 +3704,27 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
    "score": 78,
    "tag": "organic",
    "date": "2026-11-04"
+  },
+  {
+   "symbol": "LION",
+   "strategy": "momentum",
+   "tier": "-",
+   "entry": 13.9999,
+   "exit": 13.9701,
+   "pnl": -0.22,
+   "r": -0.08,
+   "score": 58,
+   "tag": "organic",
+   "date": "2026-11-06"
   }
  ],
  "regime": {
-  "read": "Stable, flat: SPY +0.6% (737.5), chips +3.5%.",
+  "read": "Stable, flat: SPY +0.7% (738.0), chips +4.0%.",
   "chips": [
-   "SPY +0.6%",
-   "QQQ +1.7%",
-   "SMH +3.5%",
-   "XLC +1.0%"
+   "SPY +0.7%",
+   "QQQ +1.9%",
+   "SMH +4.0%",
+   "XLC +0.9%"
   ]
  }
 }
@@ -10353,3 +10358,14 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Scan (5 names): IMVT 30.26 (+6.6%; earnings Mon 11/9 am -> FAIL), ZLAB 25.45 (+12.6%, RVOL 1.70; 13:34 liquidity failure stands), EXTR 23.94 (+13.7%, RVOL 1.32; rejected at 14:44 as fading with no catalyst; follow-up: 23.94 now, basically unchanged vs 23.89 at 14:44), FLY 20.57 (+35.5%; earnings 11/10 pm -> FAIL), LION. No new entry. Also: it is 14:54 ET, so a new entry would have under 40 minutes before the 15:30 cutoff and the flat-before-close rule.
 - MR: MCHP 57.95 (-10.6%, RSI 32.5; SMH +3.5%) company-specific -> gate 1 FAIL. No entry.
 - Risk: daily P&L +$0.45 (limit $60), positions 1/5, BP $300.58.
+
+### Cycle 849 - ~15:03 ET (Fri Nov 6) - EXIT: LION momentum long closed (7.500053 sh @ 13.9701, -$0.22, -0.08R)
+- STOP CHECKS FIRST: LION 13.99 (bid 13.97 / ask 14.00) at 20:02Z. 5-min since the 14:54 ET note: 19:50Z 14.05-14.095 (close 14.09, 24k), 19:55Z 14.018-14.09 (close 14.05, 28k): lower highs and lower lows for about 40 minutes (14.27 -> 14.255 -> 14.225 -> 14.19 -> 14.095 -> 14.09), the 19:55Z bar closing exactly on the 14.05 line with a 14.018 low, and the live 20:00Z bar trading at 13.97-13.99, i.e. below 14.05 and below my 14.00 entry, about to test the 13.96 breakout. Hard stop 13.65 was not hit (2.2% away).
+- DECISION: SELL ALL. Reasoning, stated plainly: my written trigger from 14:54 ET was "a 5-min bar closes below 14.05"; at the time of the decision the 19:55Z bar had closed AT 14.05 (not below) and the 20:00Z bar was still open at 13.97-13.99, so the literal trigger had not yet printed. I exited about 2 minutes before that bar closed because (1) price was already through the line and the entry, (2) a momentum entry that has round-tripped to breakeven with a series of lower highs/lows on a flat tape has lost its edge, (3) the next scheduled check was about 10 minutes away at the 15:12 ET hourly cycle, and (4) the plan was flat before the close anyway. This is a judgment call that tightened the written rule by a few minutes; it may prove a premature exit (the 13.96 level may hold) or a good one. 
+- Fill: market sell 7.500053 sh, regular hours, gfd, ref 9d2c7f40-3a1b-4e68-8c5d-1b7e0a4f6c93, order id 6aee328e-d808-46da-830b-5b1402c20c1f, filled 20:03:27Z at 13.9701. Order tool confirmation request not applicable (framework section 0).
+- TRADE RECORD (momentum, organic): LION entered 13:23 ET at 13.9999 (7.500053 sh, $105.00), exited 15:03 ET at 13.9701 ($104.78). P&L -$0.22 (-0.21%), -0.08R on a planned 1R of $2.63. Peak unrealized +$2.03 (14.27 high, about +0.77R) around 14:23-14:33 ET, not captured (no trim rule triggers below 2R and the 14.70 target was never reached). Hold time 1h 40m. Peer complex for the setup: media (DIS, NFLX, FOXA, ROKU, XLC); relative strength at entry about +10 points, at exit still about +11 points (+11.3% vs peers flat/down), so the loss came from giving back the intraday gain, not from relative-strength loss.
+- Score (framework 5.5, 0-100): setup 28/40 (all four gates passed with a sourced catalyst and clean 5x-volume breakout, but the entry was a retest below the planned 13.97-14.00 level inside a widening spread, and the pullback base was moderate and 'LION coiling' rather than a textbook higher-low base); execution 20/35 (sound stop 2.5% and 1R sizing, a clean fill; deductions for entering inside the retest instead of waiting for a confirmed 5-min close above 13.96, for no profit-protection rule between +0.5R and 2R, and for exiting two minutes before the written trigger); outcome 10/25 (a small loss near breakeven after a +0.77R open gain). Total 58/100. Tag: organic (not forced; the day's 1-trade minimum was met by a gate-passing setup).
+- Lesson logged (not a rule change): add a profit-protection rule for the next review, e.g. move the stop to breakeven after +1R or take half at +1R. This is a suggestion for the user; no rule was changed.
+- Regime/tape: STABLE/flat. SPY 738.01 (+0.7%), QQQ +1.9%, SMH +4.0%; SPY 5-min lows 737.04-737.38 (a 267k-share bar at 19:50Z), no new session low. 
+- Account after exit: portfolio $405.36, all cash, BP $405.36, no positions, no open orders. Daily P&L -$0.22 (limit $60). Day: 1 trade, 0 forced. Equity vs the 10% breaker level $394.19: well above.
+- Scan/other at this cycle: not re-run after the exit decision (the exit was the priority; a scan was last run at 14:54 ET: IMVT/FLY earnings-fail, ZLAB liquidity-fail, EXTR fading). Scope limit noted. The next cycles at 15:12 (hourly), 15:22, 15:32, 15:42, 15:47 and 15:52 ET continue; entries stop at 15:30 ET, and with the position flat there is nothing to carry into the close or the weekend.
