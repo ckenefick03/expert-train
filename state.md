@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-06 13:24 ET",
+ "as_of": "2026-11-06 13:34 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "LION momentum long opened 13:23 ET (7.5 sh @ 14.00). Stop 13.65, target 14.70.",
+ "status_note": "LION long open, flat (14.00 vs 14.00 entry). Stop 13.65, target 14.70. 30-min hold rule until 13:53.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-06",
@@ -3505,6 +3505,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-06 13:24 ET",
    "equity": 405.58
+  },
+  {
+   "t": "2026-11-06 13:34 ET",
+   "equity": 405.54
   }
  ],
  "positions": [
@@ -3514,7 +3518,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
    "tier": "-",
    "qty": 7.500053,
    "entry": 14.0,
-   "price": 14.0,
+   "price": 13.995,
    "stop": 13.65,
    "target": 14.7
   }
@@ -3678,12 +3682,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "Stable/choppy: SPY +0.45% (736.3), no new lows; chips +2.5%.",
+  "read": "Stable, edging up: SPY +0.76% (738.5), chips +3.2%.",
   "chips": [
-   "SPY +0.4%",
-   "QQQ +1.3%",
-   "SMH +2.5%",
-   "XLC +0.8%"
+   "SPY +0.8%",
+   "QQQ +1.7%",
+   "SMH +3.2%",
+   "XLC +0.9%"
   ]
  }
 }
@@ -10246,3 +10250,13 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - TRADE PLAN: entry 14.00 (fill 13.9999). STOP 13.65 (manual, below the 13.68-13.70 higher-low cluster; 2.5% below entry; well inside the 6% cap). 1R = 0.35 x 7.5 = $2.63. TARGET 14.70 (2R = +5%, $5.25), then trim into 14.70+ and move the stop to breakeven/new higher low per the position-management rules. HORIZON: end of day; flat before the bell unless an explicit hold decision is written (no overnight catalyst expected; weekend gap risk argues for flat). 30-minute hold rule applies until 13:53 ET (only the stop actually trading exits before then; the daily loss limit $60 and breaker still override).
 - Sizing/risk checks: $105.00 = min($105, BP $405.58 - 0.50); positions 1/5; daily P&L before entry $0.00; max loss at the stop about $2.63 (the $60 daily limit is not at risk); BP after entry about $300.58. Order: market, dollar_amount 105.00, regular hours, gfd, ref 3f6a1d52-8b7e-4c19-9a3d-5e2b7c8f1a04; order id 6aee1b12-3610-4555-8fbd-38376878ee3d; state filled 18:23:14Z, avg 13.9999, 7.500053 sh. The order tool's confirmation request was not applicable (framework section 0 standing authorization).
 - Other: FLY 19.60 (+29.1%) still FAIL (earnings 11/10 pm). MR (Tier B): MCHP 56.02 (-13.6%) only, SMH +2.5% -> company-specific, gate 1 FAIL. No other entries. Position tags for the scoring: organic (not forced; this is the day's first trade, not forced to meet the 1-trade minimum).
+
+### Cycle 840 - ~13:34 ET (Fri Nov 6) - LION long open, flat; two new scan hits rejected
+- Reconcile: portfolio $405.54 (cash/BP $300.58, equity $104.96), 1 position LION 7.500053 sh avg 14.00, no open orders. LION 13.995 (bid 13.99 / ask 14.00): unrealized about -$0.04 (-0.04%). 5-min bars since entry: 18:20Z 14.02-14.06 (close 14.03), 18:25Z 13.97-14.03 (close 14.00, volume 109k): holding the 13.96 breakout level and the low of the last bar is 13.97, far above the 13.65 stop. STOP CHECK: stop 13.65 is 2.5% away, not close; target 14.70. 30-minute hold rule: active until 13:53 ET (only the stop trading would exit). Peers: DIS +0.04%, NFLX -2.7%, FOXA -0.1%, ROKU +0.7%, XLC +0.9%, SPY +0.76%: LION still leads (+11.5%) so no relative-strength loss; no invalidation.
+- Regime: STABLE/edging up. SPY 738.55 (+0.76%), QQQ +1.7%, SMH +3.2%, XLK +1.3%; no new session lows. Momentum on.
+- Momentum scan (cap>=2B, avg vol>=1M, >=+5%, RVOL>=1.3) now 4 names: LION (held, RVOL 2.12), FLY, IMVT, ZLAB.
+  - FLY 19.91 (+31.2%, RVOL 1.47): FAIL, earnings 11/10 after the close (inside the window); unchanged.
+  - IMVT Immunovant 30.27 (+6.6%, RVOL 1.31, cap $5.9B): FAIL, reports FQ2 2027 on 2026-11-09 before the open, which is the next trading day (inside the 2-session earnings window, not yet reported). Also a thin RVOL.
+  - ZLAB Zai Lab 25.83 (+14.3%, RVOL 1.33, avg vol 1.008M, cap $2.9B): earnings already reported 2026-11-05 am, EPS -$0.04 vs -$0.58 estimate (a large beat), so earnings is the thesis and the window does not exclude it. Biotech peers: XBI +3.0%, IBB +2.3%, LEGN +5.2%, so ZLAB leads the complex by about 9-11 points. But FAIL the liquidity criterion: bid/ask 25.79/25.89 = about 0.39% spread (limit 0.3%), average volume only about 1.008M (barely at the 1M floor), and 10-minute volume is thin (5k-55k shares), RVOL 1.33 is borderline. Held-pullback/higher low is not demonstrated in this look (steady drift up in 10-min bars from 24.0 to 25.7, no retest). Not entered; follow-up: record ZLAB at 25.83 for later review.
+- MR (Tier B): MCHP 56.77 (-12.5%, RSI 32.5, vol 24.9M); SMH +3.2%, company-specific -> gate 1 FAIL. No entry.
+- Risk checks: daily P&L about -$0.04 (limit $60); positions 1/5; BP $300.58. No new entries this cycle.
