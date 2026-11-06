@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-06 13:04 ET",
+ "as_of": "2026-11-06 13:15 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Flat. LION 13.78 coiling under 13.96; no trigger yet.",
+ "status_note": "Flat. LION 13.89 pressing the 13.96 trigger; catalyst now sourced (8-K). No entry yet.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-06",
@@ -3497,6 +3497,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-06 13:04 ET",
    "equity": 405.58
+  },
+  {
+   "t": "2026-11-06 13:15 ET",
+   "equity": 405.58
   }
  ],
  "positions": [],
@@ -3659,12 +3663,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "Choppy: SPY +0.4% (736.2) bouncing off 735.1; chips +2.4%.",
+  "read": "Stable/choppy: SPY +0.5% (737.0); chips +2.5%; sector ETFs mixed (XLF -0.1%, XLV +0.3%, XLE +0.6%).",
   "chips": [
-   "SPY +0.4%",
-   "QQQ +1.3%",
-   "SMH +2.4%",
-   "XLK +1.1%"
+   "SPY +0.5%",
+   "QQQ +1.4%",
+   "SMH +2.5%",
+   "XLC +0.8%"
   ]
  }
 }
@@ -10208,3 +10212,10 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Regime: CHOPPY/stable. SPY 736.24 (+0.4%); 5-min low 735.13 (17:50Z) then a bounce to 737.05 close; session low 734.58 still intact (no new low). QQQ +1.3%, SMH +2.4%, XLK +1.1%, XLC +0.7%. Equity $405.58, no positions, daily P&L $0.00.
 - Momentum scan: FLY 19.50 (+28.5%, RVOL 1.39) - FAIL, earnings 11/10 pm (inside the window), unchanged. LION 13.78 (+9.7%, RVOL 1.80, volume 4.80M): 5-min lows 13.59, 13.66, 13.70, 13.68, 13.725 (broadly rising; one tick lower at 13.68), closes 13.66, 13.75, 13.745, 13.72, 13.79; highs 13.75, 13.755, 13.745, 13.795. Peers DIS -0.2%, NFLX -2.9%, FOXA -0.4%, ROKU +0.6%, XLC +0.7% vs SPY +0.4%: LION leads by 9+ points. It is coiling about 1.3% under the 13.96 pullback high with a rising-low structure; the trigger (5-min close above 13.96 / reclaim) has NOT printed. No entry. Plan unchanged: entry ~13.97-14.00, stop under ~13.65 (the new higher-low base) rather than 13.30 if the base is re-anchored: that would be about 2.3% stop distance, so 1R about $2.4 on $105 and the >=2R target about 14.65. I will re-anchor only at the time of entry and write it down then.
 - MR Tier B scan: only MCHP 55.77 (-14.0%, RSI 32.5; SMH +2.4%, company-specific -> gate 1 FAIL). The 12:54 skipped names recovered out of the scan: STX 454.42 (-2.6%), COIN 132.60 (-3.1%). Follow-up for the log: both bounced modestly after the 12:54 print (STX -3.6% -> -2.6%, COIN -3.6% -> -3.1%); a gate-compliant entry would not have been available anyway. No entry.
+
+### Cycle 838 - ~13:15 ET (Fri Nov 6) - hourly full cycle; LION pressing the trigger, catalyst sourced, no entry yet
+- Regime: STABLE/CHOPPY. SPY 737.01 (+0.5%), 5-min closes 736.3 -> 737.2 -> 736.3 -> 737.2, session low 734.58 intact, no new lows. QQQ +1.4%, SMH +2.5%, XLK +1.2%, XLC +0.8%, XLF -0.1%, XLV +0.3%, XLE +0.6%. Equity $405.58, no positions, no orders, daily P&L $0.00.
+- Momentum scan: FLY 19.53 (+28.7%, RVOL 1.42) FAIL - reports 11/10 after the close (inside the 2-trading-day window), no change. LION 13.87-13.89 (+10.6% at the scan, volume 5.00M, RVOL 1.87): 5-min lows 13.70, 13.68, 13.725, 13.75, 13.735 and closes 13.745, 13.72, 13.79, 13.76, 13.78 (a steady higher-low staircase over the last hour), now pressing the 13.96 pullback high from below (about 0.5% away). Peers DIS 0.0%, NFLX -2.8%, FOXA -0.4%, ROKU +0.6%, XLC +0.8%: separation about 10 points. The trigger (5-min close above ~13.96) has NOT printed yet, so no entry this cycle.
+- Catalyst (gate 2, now with a primary source): WebSearch surfaced the company's Form 8-K earnings release exhibit for the fiscal 2027 Q2 (SEC.gov, ex991earningsreleaseq2f2027) - release after the close on Thu 11/5, call 5:00 PM ET. Per the search summary: Motion Picture revenue +30% y/y to $359.3M (segment profit $88.7M, driven by 'Michael' and library), Television Production revenue +56% to $309.5M (segment profit +73% to $21.6M), management expects to roughly double scripted deliveries in fiscal 2027. I did not read the full exhibit, so total revenue, net income and leverage are NOT confirmed (leverage near 4.3x was flagged pre-release, prior quarter). Combined with the tool-verified EPS beat ($0.07 vs -$0.06 est.), the catalyst is real and already reported, so the earnings-window exclusion does not apply (thesis).
+- Updated entry plan if it triggers on a 5-min close above 13.96 with the lows still rising: market/fractional $105 (about 7.6 shares), entry about 13.97-14.00, stop below the latest higher-low base ~13.65-13.68 (about 2.5% below entry; 1R about $2.6), target >= 2R about 14.65-14.70 (+5%), end-of-day horizon, flat before the bell unless a hold decision is written. Must re-verify peers, RVOL, VWAP/not-fading and SPY not breaking its 734.58 low at the moment of entry.
+- MR (Tier B): MCHP 56.25 (-13.3%, RSI 32.5, vol 23.7M); SMH +2.5% so company-specific -> gate 1 FAIL. No other names in the scan. No entry.
