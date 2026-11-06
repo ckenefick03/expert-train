@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-06 12:34 ET",
+ "as_of": "2026-11-06 12:44 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Flat. LION basing flat at ~13.6; no trigger.",
+ "status_note": "Flat. Market dipped (SPY +0.5%); LION still basing; FLY rejected (earnings window).",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-06",
@@ -3485,6 +3485,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-06 12:34 ET",
    "equity": 405.58
+  },
+  {
+   "t": "2026-11-06 12:44 ET",
+   "equity": 405.58
   }
  ],
  "positions": [],
@@ -3647,12 +3651,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "Stable, sideways: SPY +0.75% (738.5); chips +3.3% (SMH), off highs slightly.",
+  "read": "Pullback: SPY +0.5% (736.9) after a heavy-volume 12:35 dip to 735.54; chips +2.4%. Not a new session low.",
   "chips": [
-   "SPY +0.8%",
-   "QQQ +1.7%",
-   "SMH +3.3%",
-   "XLC +0.9%"
+   "SPY +0.5%",
+   "QQQ +1.4%",
+   "SMH +2.4%",
+   "XLK +1.2%"
   ]
  }
 }
@@ -10178,3 +10182,10 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Regime: STABLE/SIDEWAYS. SPY 738.52 (+0.75%), QQQ +1.7%, SMH +3.3%, XLK +1.7%, XLC +0.9%; SPY 5-min lows 738.3-739.2, no new session lows. Equity $405.58, no positions, daily P&L $0.00.
 - Momentum scan: LION only, 13.615 (+8.4%), volume 4.43M, RVOL 1.66; peers DIS +0.1%, NFLX -2.6%, FOXA 0.0%, ROKU +0.7%. LION 5-min lows last four bars: 13.62, 13.59, 13.58, 13.62 (flat), highs 13.79, 13.69, 13.69, 13.685; no higher low and no reclaim of 13.96 or a short-term average. Gate 3 still not met -> NO ENTRY. Base low 13.35-13.37 untouched.
 - FROG 101.20 (+35.6%), not in the scan (RVOL gate unmet, not re-measured). MR (Tier B): MCHP 55.78 (-14.0%, RSI 32.5, vol 20.3M) only; SMH +3.3% so company-specific -> gate 1 FAIL. No entry.
+
+### Cycle 835 - ~12:44 ET (Fri Nov 6) - flat; new scan hit FLY rejected (earnings window), LION basing
+- Regime: tape weakened. SPY 736.85 (+0.5%), the 17:35Z bar dropped to 735.54 (close 737.06) on 491k shares (3-5x recent volume), then 736.85 now; the session low is 734.58 (14:30Z bar) so no new session low yet. QQQ +1.4%, SMH +2.4% (from +3.7% an hour ago), XLK +1.2%, XLC +0.9%. Momentum only for names with their own catalyst; MR needs a sector-wide cause and a stabilization base, none exists (chips are still up on the day). Equity $405.58, no positions, daily P&L $0.00.
+- Momentum scan: 2 names.
+  1) FLY (Firefly Aerospace) 19.11 (+25.9% vs 15.175 close), volume 6.88M, RVOL 1.30 (borderline), cap $2.54B. Space peers: RKLB +9.7%, LUNR +14.3%, PL +6.8%, ASTS +3.6%, ARKX +3.6%, ITA +0.9%, so FLY leads its complex by about 12 points and the sector is also bid. FAIL: earnings. get_earnings_results shows FLY reports FQ3 2026 on 2026-11-10 after the close, which is 2 trading days from today (Mon 11/9, Tue 11/10), inside the 2-trading-day avoidance window, and the report has not happened so it is not the thesis. Also no catalyst identified (no search run); the move is a sector/space-theme rally. Also the stock has pulled back from a 19.97 high to 19.11 (gave back about 18% of the day's gain) with 5-min lows turning down (19.07). No entry.
+  2) LION 13.71 (+9.2%, RVOL 1.71, volume 4.57M): 5-min lows 13.59, 13.58, 13.62, 13.59 (flat) over the last five bars, highs capped 13.69; still no higher low and no reclaim of 13.96. Gate 3 unmet; no entry. SPY's 12:35 dip did not break LION's 13.35 base.
+- FROG 100.78 (+35.1%) not in scan (RVOL gate unmet, not re-measured). MR (Tier B): MCHP 55.36 (-14.6%, RSI 32.5, vol 21.1M) only; SMH +2.4% so company-specific -> gate 1 FAIL. No entry.
