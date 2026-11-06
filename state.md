@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-06 14:33 ET",
+ "as_of": "2026-11-06 14:44 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "LION long +$1.61 (14.215 vs 14.00). Stop 13.65, target 14.70.",
+ "status_note": "LION long +$1.46 (14.195 vs 14.00). EXTR rejected (fading, lower lows). Stop 13.65, target 14.70.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-06",
@@ -3533,6 +3533,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-06 14:33 ET",
    "equity": 407.19
+  },
+  {
+   "t": "2026-11-06 14:44 ET",
+   "equity": 407.04
   }
  ],
  "positions": [
@@ -3542,7 +3546,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
    "tier": "-",
    "qty": 7.500053,
    "entry": 14.0,
-   "price": 14.215,
+   "price": 14.195,
    "stop": 13.65,
    "target": 14.7
   }
@@ -3706,11 +3710,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "Stable: SPY +0.6% (737.7), small drift off 738.8 highs; chips +3.4%.",
+  "read": "Stable: SPY +0.7% (738.0), chips +3.6%.",
   "chips": [
-   "SPY +0.6%",
-   "QQQ +1.7%",
-   "SMH +3.4%",
+   "SPY +0.7%",
+   "QQQ +1.8%",
+   "SMH +3.6%",
    "XLC +1.1%"
   ]
  }
@@ -10329,3 +10333,10 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Scan: LION, IMVT 30.13 (+6.1%; earnings Mon 11/9 am -> FAIL), ZLAB 25.48 (+12.7%, RVOL 1.63; 13:34 spread/liquidity failure stands, not re-measured), FLY 20.30 (+33.7%; earnings 11/10 pm -> FAIL). No new entry. 
 - MR: Tier B window closed 14:30; Tier C (14:30-15:30) opens only if the day's minimum is unmet - it is met (1 trade). MCHP 58.15 (-10.3%, RSI 32.5; SMH +3.4%, company-specific -> gate 1 FAIL) is the only scan name regardless. No entry.
 - Risk: daily P&L +$1.61 (limit $60), positions 1/5, BP $300.58. Close plan: the position is to be flat before the bell; last scheduled cycles before 16:00 are 15:02, 15:12 (hourly), 15:22, 15:32, 15:42, 15:47 (recap) and 15:52 ET.
+
+### Cycle 847 - ~14:44 ET (Fri Nov 6) - LION long +$1.46, holding; new scan hit EXTR rejected
+- Reconcile: portfolio $407.04 (cash/BP $300.58, equity $106.46), 1 position LION 7.500053 sh avg 14.00, no open orders. LION 14.195 (bid 14.19 / ask 14.20): +0.195/sh = +$1.46 (+1.4%, +0.56R). 5-min: 19:30Z 14.21-14.255 (close 14.215), 19:35Z 14.165-14.225 (close 14.215, volume 45k): flat just under the 14.27 day high; the 19:35Z low of 14.165 is the first slightly lower low (previous low 14.21) but it holds far above the 14.05-14.09 support and the 13.96 breakout. STOP CHECK: stop 13.65 is 3.8% below, not close; target 14.70 (+3.6%). No invalidation: LION +13.0% vs DIS +0.2%, NFLX -2.7%, FOXA +0.1%, ROKU +0.8%, XLC +1.1%, SPY +0.7%, RVOL 2.95.
+- Regime: STABLE. SPY 737.99 (+0.7%), 5-min SPY closes 738.07, 738.04, 737.89, 737.50, 737.74 (a gentle drift off 738.8), lows 737.36-737.82, session low 734.58 intact; QQQ +1.8%, SMH +3.6%.
+- Momentum scan (5 names): LION; IMVT 30.17 (+6.3%; earnings Mon 11/9 am -> FAIL); ZLAB 25.45 (+12.6%, RVOL 1.67; 13:34 liquidity/spread failure stands, not re-measured); FLY 20.43 (+34.6%; earnings 11/10 pm -> FAIL); NEW EXTR (Extreme Networks) 23.89 (+13.5%, RVOL 1.30 borderline, avg vol 1.6M, cap $2.76B): FAIL. Reasons: (a) gate 3/not-fading: the stock spiked to 26.30 at 14:40Z (+25%) on the first minutes and has bled every hour since, lower highs and lower lows (24.4 -> 24.3 -> 24.1 -> 24.0 -> 23.85) with price at the session low area now, having given back about 46% of the high-to-prior-close gain and still sliding; no higher low exists; (b) catalyst not identified: EXTR's earnings were 2026-10-28 (not today), so today's spike has no confirmed catalyst (I ran no news search; the networking peers are mixed: ANET +6.9%, CIEN +4.7%, HPE +1.4%, FFIV +0.7%, CSCO -1.7%, NTCT -0.4%, so it also moves with a sector bid); (c) it is 14:44 ET with a horizon of only ~45 minutes before the 15:30 cutoff and flat-by-close, leaving no room for the 2R. No entry. Follow-up to fill: where EXTR trades at the close.
+- MR: Tier B closed 14:30; Tier C needs the day's minimum unmet (it is met). MCHP 58.36 (-10.0%, RSI 32.5; SMH +3.6%) is company-specific -> gate 1 FAIL. No entry. Disclosure: this cycle's MR scan used the Tier A/B depth <=-5% (not -3.5%).
+- Risk: daily P&L +$1.46 (limit $60), positions 1/5, BP $300.58.
