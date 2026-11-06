@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-06 13:15 ET",
+ "as_of": "2026-11-06 13:24 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Flat. LION 13.89 pressing the 13.96 trigger; catalyst now sourced (8-K). No entry yet.",
+ "status_note": "LION momentum long opened 13:23 ET (7.5 sh @ 14.00). Stop 13.65, target 14.70.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-06",
@@ -3501,9 +3501,24 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-06 13:15 ET",
    "equity": 405.58
+  },
+  {
+   "t": "2026-11-06 13:24 ET",
+   "equity": 405.58
   }
  ],
- "positions": [],
+ "positions": [
+  {
+   "symbol": "LION",
+   "strategy": "momentum",
+   "tier": "-",
+   "qty": 7.500053,
+   "entry": 14.0,
+   "price": 14.0,
+   "stop": 13.65,
+   "target": 14.7
+  }
+ ],
  "trades": [
   {
    "symbol": "TER",
@@ -3663,10 +3678,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "Stable/choppy: SPY +0.5% (737.0); chips +2.5%; sector ETFs mixed (XLF -0.1%, XLV +0.3%, XLE +0.6%).",
+  "read": "Stable/choppy: SPY +0.45% (736.3), no new lows; chips +2.5%.",
   "chips": [
-   "SPY +0.5%",
-   "QQQ +1.4%",
+   "SPY +0.4%",
+   "QQQ +1.3%",
    "SMH +2.5%",
    "XLC +0.8%"
   ]
@@ -10219,3 +10234,15 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Catalyst (gate 2, now with a primary source): WebSearch surfaced the company's Form 8-K earnings release exhibit for the fiscal 2027 Q2 (SEC.gov, ex991earningsreleaseq2f2027) - release after the close on Thu 11/5, call 5:00 PM ET. Per the search summary: Motion Picture revenue +30% y/y to $359.3M (segment profit $88.7M, driven by 'Michael' and library), Television Production revenue +56% to $309.5M (segment profit +73% to $21.6M), management expects to roughly double scripted deliveries in fiscal 2027. I did not read the full exhibit, so total revenue, net income and leverage are NOT confirmed (leverage near 4.3x was flagged pre-release, prior quarter). Combined with the tool-verified EPS beat ($0.07 vs -$0.06 est.), the catalyst is real and already reported, so the earnings-window exclusion does not apply (thesis).
 - Updated entry plan if it triggers on a 5-min close above 13.96 with the lows still rising: market/fractional $105 (about 7.6 shares), entry about 13.97-14.00, stop below the latest higher-low base ~13.65-13.68 (about 2.5% below entry; 1R about $2.6), target >= 2R about 14.65-14.70 (+5%), end-of-day horizon, flat before the bell unless a hold decision is written. Must re-verify peers, RVOL, VWAP/not-fading and SPY not breaking its 734.58 low at the moment of entry.
 - MR (Tier B): MCHP 56.25 (-13.3%, RSI 32.5, vol 23.7M); SMH +2.5% so company-specific -> gate 1 FAIL. No other names in the scan. No entry.
+
+### Cycle 839 - ~13:23 ET (Fri Nov 6) - ENTRY: LION momentum long (7.500053 sh @ 13.9999, $105.00)
+- Trigger: LION's 5-min bar at 18:10Z closed 13.96 on 139k shares (5x the recent bars) and the 18:15Z bar closed 14.01 (high 14.02), i.e. a 5-min close above the 13.96 pullback high after a staircase of higher lows. Scan: LION 14.01 (+11.5%), RVOL 1.98, volume 5.28M. Between the scan and the order the quote slipped to 13.94 (bid 13.89 / ask 13.96, spread about 0.5%) before the fill at 13.9999; I entered anyway because the pullback retest held above the 18:15Z low of 13.93 and above the 13.77 low of the prior bar. Risk: this is a retest of the breakout, not an extension; if 13.96 fails, the trade is wrong quickly.
+- GATE ANSWERS (written, all four):
+  1. Relative-strength divergence: PASS. LION +11.5% vs DIS 0.0%, NFLX -2.8%, FOXA -0.3%, ROKU +0.7%, XLC +0.8%, SPY +0.45%. Up about 10 points more than peers and SPY (>=2 required). Not fading: price at/near the day high (14.02), well above the prior close and above an estimated VWAP (VWAP not computed exactly), has given back well under half the day's gain. RVOL 1.98 (>=1.3). NYSE-listed (not a foreign ADR session move).
+  2. Real catalyst: PASS. Fiscal Q2 2027 earnings, reported after the close 11/5: EPS $0.07 vs -$0.06 estimate (get_earnings_results, verified), 8-K exhibit (SEC.gov, ex991earningsreleaseq2f2027): Motion Picture revenue +30% to $359.3M, Television Production revenue +56% to $309.5M, scripted deliveries expected to roughly double in fiscal 2027 (from the search summary; full exhibit not read; total revenue, net income, leverage unconfirmed). Report already happened -> earnings-window exclusion does not apply.
+  3. Held pullback/retest: PASS (moderate). Pullback from 13.96 to 13.58 (17:20-17:35Z), then higher lows 13.59 -> 13.66 -> 13.70 -> 13.725 -> 13.735 -> 13.77 -> 13.93 with price above a rising short-term average; the break above 13.96 occurred on 5x volume.
+  4. Timing: PASS. 13:23 ET, inside 10:30-15:30. Regime: stable/choppy (SPY +0.45%, no new session lows), momentum on.
+- THESIS: post-earnings drift in a reported-and-beaten studio name that separated from media peers all session and just broke its pullback high on volume.
+- TRADE PLAN: entry 14.00 (fill 13.9999). STOP 13.65 (manual, below the 13.68-13.70 higher-low cluster; 2.5% below entry; well inside the 6% cap). 1R = 0.35 x 7.5 = $2.63. TARGET 14.70 (2R = +5%, $5.25), then trim into 14.70+ and move the stop to breakeven/new higher low per the position-management rules. HORIZON: end of day; flat before the bell unless an explicit hold decision is written (no overnight catalyst expected; weekend gap risk argues for flat). 30-minute hold rule applies until 13:53 ET (only the stop actually trading exits before then; the daily loss limit $60 and breaker still override).
+- Sizing/risk checks: $105.00 = min($105, BP $405.58 - 0.50); positions 1/5; daily P&L before entry $0.00; max loss at the stop about $2.63 (the $60 daily limit is not at risk); BP after entry about $300.58. Order: market, dollar_amount 105.00, regular hours, gfd, ref 3f6a1d52-8b7e-4c19-9a3d-5e2b7c8f1a04; order id 6aee1b12-3610-4555-8fbd-38376878ee3d; state filled 18:23:14Z, avg 13.9999, 7.500053 sh. The order tool's confirmation request was not applicable (framework section 0 standing authorization).
+- Other: FLY 19.60 (+29.1%) still FAIL (earnings 11/10 pm). MR (Tier B): MCHP 56.02 (-13.6%) only, SMH +2.5% -> company-specific, gate 1 FAIL. No other entries. Position tags for the scoring: organic (not forced; this is the day's first trade, not forced to meet the 1-trade minimum).
