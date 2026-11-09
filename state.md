@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-09 13:54 ET",
+  "as_of": "2026-11-09 14:04 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. Scans unchanged; nothing passes any gate. Day: 1 trade (FRVO, -$2.91).",
+  "status_note": "Flat, all cash. Scans unchanged; FRVO has recovered above my entry after the invalidation exit (follow-up logged).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-09",
@@ -3684,6 +3684,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-09 13:54 ET",
+      "equity": 402.45
+    },
+    {
+      "t": "2026-11-09 14:04 ET",
       "equity": 402.45
     }
   ],
@@ -10742,3 +10746,10 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Portfolio $402.45 all cash, no positions. Tape: SPY 753.04 (+2.4%), QQQ 677.94 (+3.3%), SMH 485.66 (+4.7%), XLE +0.3%, XLU +1.9%, IWM +3.2%, XBI +3.1%. Stable/rising; no sector down.
 - MR (Tier B): NVDA 176.95 (-5.2%), ARWR 48.53 (-16.6%), IONS 30.17 (-23.5%), MGY 22.74 (-3.9%): company-specific vs rising sectors, gate 1 FAIL. AXON (302.70, -3.3%) fell below the -3.5% floor and dropped off the list.
 - Momentum (9 rows): WRBY 31.22 (+22.5%), QXO 13.92 (+20.4%): no catalyst; SGRY (take-private), TTD (earnings tonight), LFST (+6.5%), JHX (foreign ADR), VIR, TIC: FAIL. FRVO 11.175 (+23.8%, scan RVOL 1.62): it is 2.7% above my 10.88 exit and nearly back at the 11.19 entry; no setup to re-enter (no pullback or higher low to anchor a stop, and I do not chase a name I exited on invalidation). No order placed.
+
+### Cycle 884 - ~14:04 ET (Mon Nov 9) - flat, no entries; scans unchanged; FRVO exit follow-up
+- Portfolio $402.45 all cash, no positions. Tape: SPY 752.89 (+2.4%), QQQ 677.81 (+3.3%), SMH 484.65 (+4.5%), XLE +0.3%, XLU +2.0%, IWM +3.2%, XBI +3.1%. Stable/rising; no sector down.
+- MR (Tier B): AXON 301.69 (-3.6%, RSI 23.9; own-earnings waterfall, defense peers up; gate 1 FAIL), NVDA 176.57 (-5.4%), AKAM 80.15 (-3.5%), ARWR 48.55 (-16.5%), IONS 30.28 (-23.2%), MGY 22.74 (-3.9%): all company-specific vs rising sectors, FAIL.
+- Momentum (9 rows): WRBY 31.26 (+22.7%), QXO 13.90 (+20.2%): no catalyst; SGRY (take-private), TTD (earnings tonight), LFST (+6.6%), JHX (foreign ADR), VIR, TIC: FAIL. FRVO 11.195 (+24.0%, RVOL 1.69).
+- **Follow-up on the FRVO exit (10.88 at 13:24 ET):** FRVO is now 11.195, i.e. +2.9% above my exit and +0.05% above my 11.1899 entry. Had I held through the dip, the position would be about break-even and the stop (10.85) would not have been hit: the invalidation exit (a flat-to-slightly-down bleed, 5-min close below the 20-EMA) turned a recoverable draw-down into a realised -$2.91. Counter-evidence: the exit came after a staircase of lower lows and the base low broke; FRVO later recovered, which a stop-only rule would have kept. This is one data point; recorded for the momentum review after 5 trades (compare invalidation-exit vs stop-only). No change to rules, no re-entry (no new setup, no pullback structure).
+- No order placed.
