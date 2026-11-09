@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-09 08:54 ET",
+  "as_of": "2026-11-09 09:04 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -3576,6 +3576,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-09 08:54 ET",
+      "equity": 405.36
+    },
+    {
+      "t": "2026-11-09 09:04 ET",
       "equity": 405.36
     }
   ],
@@ -10451,3 +10455,7 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 ### Cycle 856 - ~8:54 ET (Mon Nov 9) - pre-10:00 ET, flat, no scans
 - Portfolio $405.36 all cash, no positions. Pre-market: SPY 742.41 (+1.0%), QQQ 662.73 (+1.0%), SMH 465.52 (+0.3%). Firming slightly vs the 8:43 read.
 - Entries barred before 10:00 ET (momentum 10:30), so scans skipped by rule. No order placed. Trigger arrived about 2 minutes after its 13:52Z schedule.
+
+### Cycle 857 - ~9:04 ET (Mon Nov 9) - pre-10:00 ET, flat, no scans
+- Portfolio $405.36 all cash, no positions. Pre-market: SPY 741.92 (+0.9%), QQQ 662.06 (+0.9%), SMH 465.00 (+0.2%). Steady.
+- Entries barred before 10:00 ET, so scans skipped by rule. No order placed. Trigger arrived about 2 minutes after its 14:02Z schedule.
