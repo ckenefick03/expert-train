@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-06 15:48 ET",
+  "as_of": "2026-11-09 08:35 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Closed flat, all cash ($405.36). Day: 1 trade (LION, -$0.22). Nothing rolls over the weekend.",
+  "status_note": "Pre-open Mon Nov 9: flat, all cash. Futures/pre-market up (SPY +0.8%, IWM +1.3%). Watching IMVT/KGS post-earnings gaps; NVDA -5.5% pre-market.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-06",
@@ -3565,6 +3565,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-06 15:48 ET",
       "equity": 405.36
+    },
+    {
+      "t": "2026-11-09 08:35 ET",
+      "equity": 405.36
     }
   ],
   "positions": [],
@@ -3739,12 +3743,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Stable, edging up: SPY +0.8% (738.7), chips +4.1%.",
+    "read": "Pre-market risk-on: SPY +0.8%, QQQ +0.8%, IWM +1.3%, XLV +1.1%, SMH flat. Regime to be set from the first 5-min bars (framework 4.1).",
     "chips": [
-      "SPY +0.8%",
-      "QQQ +2.0%",
-      "SMH +4.1%",
-      "XLC +1.0%"
+      "SPY +0.8% pre",
+      "IWM +1.3% pre",
+      "SMH flat",
+      "NVDA -5.5% pre"
     ]
   }
 }
@@ -10420,3 +10424,14 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Day recap: start equity $405.58, end $405.36, realized -$0.22 (-0.05%). 1 trade (LION momentum, post-earnings beat, entered 13:23 ET at 13.9999, exited ~15:03 ET at 13.9701, -0.08R, score 58). Minimum of 1 trade met organically (0 forced). Daily loss limit ($60) and breaker ($394.19) never close.
 - Skips/disclosures: most of the day was no-trade because gates failed (EXTR, ZLAB, FLY, IMVT, MCHP, etc. per cycle logs); the schedule/regime/$60-limit changes were made mid-day per user direction; WebSearch returned stale or undated results several times and was discarded; one scan errored in Cycle 827 (duplicate column) and was re-run; the LION exit came ~2 minutes before the written bar-close trigger (judgment call, disclosed in Cycle 849). Scheduler MCP disconnects around triggers were handled by reloading tools; no cycle is known to have been missed after the cron fix.
 - Open for the user: profit-protection rule (breakeven stop after +1R or take half at +1R) and whether to change the $105 size; neither changed.
+
+### Pre-open brief - ~8:35 ET (Mon Nov 9) - read-only, no orders
+- Reconcile: portfolio $405.36 all cash, BP $405.36, no positions, nothing to stop-check. Triggers: the pre-open routine was scheduled 13:27Z and reached this session 13:31Z (about 4 minutes late, tools reloaded after an MCP reconnect).
+- Tape (pre-market vs Fri close): SPY 741.45 (+0.84%), QQQ 661.45 (+0.82%), IWM 277.29 (+1.3%), XLV 186.76 (+1.1%), XLF 57.71 (+1.0%), XLK 165.25 (+0.3%), SMH 464.00 (flat), XLE 61.35 (-0.4%). Broad risk-on, semis lag. NVDA 176.41 vs 186.64 (-5.5%) while SMH is flat: company-specific, cause not verified this cycle.
+- News: one WebSearch ("stock futures Monday November 9 2026 premarket") returned only old 2017-2020 and 2025 articles, nothing dated today. Discarded. **No news cause is verified for any pre-market move, so every mean-reversion gate 1 is FAIL until a dated, sourced sector-wide cause is found in-session.** Macro/Fed/tariff/geopolitics coverage was therefore not obtained this cycle (disclosed).
+- Earnings today (get_earnings_calendar, verified dates): AM reported: IMVT (EPS -0.47 vs -0.72 est), KGS (0.70 vs 0.66), CEG (5.06 vs 3.89), NRG (4.68 vs 3.11), KKR, MNDY, IONS (-0.40 vs -0.99 est, yet stock -20% pre-market), SGI (-6.5%), TGTX, ROIV, UNIT. PM today (avoid): TTD, OXY, ASTS, RKLB, HIMS, MARA, PLUG, TTWO, ACHR, LCID, ONTO, QRVO, ZETA. Tomorrow (avoid, within 2 sessions): FLY (pm), CRWV (pm), TDG, ONON, SE, QBTS, RGTI, WIX.
+- Pre-market scans (cap >=2B, avg vol >=1M, move >=4%): UP: IMVT +10.5% (33.75, wide 32.00/35.20 spread), VIR +10.6%, KGS +8.2% (45.07), IFF +6.6% (88.05, bid 68.59 is a stale/odd quote), ASX +6.3%, TTD +6.2% (earnings PM, avoid), UMC +5.9%, QXO +5.6%, PPTA +5.3%, UAL +4.1%, JHX, OTEX, TECK, BKH, HBM, AG, NG. DOWN (cap >=5B, <=-4%): IONS -20%, IBRX -12.7%, ARWR -8.5%, ETR -7.7%, SGI -6.5%, SSL -6.4%, NVDA -5.5%, AKAM -5.3%, BMNR -4.1%. Pre-market spreads are wide and thin; nothing here is tradable before 10:00/10:30 ET.
+- Momentum watch (earliest 10:30 ET, needs loosened Gate 1 and RVOL >=1.3): 1) KGS (gas-compression, beat; check not fading above gap VWAP). 2) IMVT (biotech post-report; spread and liquidity must clear). 3) UMC/ASX (foreign ADR pre-market moves track their home sessions, so they fail the ADR rule unless US-session confirms). 4) UAL (+4.1%; needs a named catalyst). 5) QXO.
+- Mean-reversion watch (needs sector-wide dated cause, MR gate 1): 1) NVDA (-5.5%, only if SMH confirms a sector selloff; currently SMH flat so it looks company-specific, fail). 2) AKAM (-5.3%, own cause likely, fail unless proven). 3) ETR (-7.7%, utility; check XLU and the cause). None passes gate 1 now.
+- Regime read: Stable/rising pre-market, momentum on, MR only if a name's own sector is down >=2%. Decided after the first 5-min bars.
+- Open items: the stale WebSearch results again. No order placed.
