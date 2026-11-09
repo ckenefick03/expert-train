@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-09 10:04 ET",
+  "as_of": "2026-11-09 10:17 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. Strong rally (SPY +1.75%, SMH +3.0%). MR scan: only IONS (earnings-driven, fails). Momentum opens 10:30.",
+  "status_note": "Flat, all cash. Rally extends (SPY +1.9%, SMH +3.8%). MR: only IONS (fails). Momentum opens 10:30; watching SGRY, VIR.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-06",
@@ -3601,6 +3601,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-09 10:04 ET",
       "equity": 405.36
+    },
+    {
+      "t": "2026-11-09 10:17 ET",
+      "equity": 405.36
     }
   ],
   "positions": [],
@@ -3775,12 +3779,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Stable/rising: broad rally, every sector ETF up (XLK +2.4%). MR effectively off; momentum on from 10:30.",
+    "read": "Stable/rising: broad rally, no sector down. MR off; momentum on from 10:30.",
     "chips": [
-      "SPY +1.75%",
-      "QQQ +2.5%",
-      "SMH +3.0%",
-      "XLE +0.2%",
+      "SPY +1.9%",
+      "QQQ +2.8%",
+      "SMH +3.8%",
       "rising"
     ]
   }
@@ -10502,3 +10505,8 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Portfolio $405.36 all cash, no positions, no open orders expected (none placed). Tape: SPY 748.17 (+1.75%), QQQ 672.44 (+2.5%), SMH 477.99 (+3.0%), XLK +2.4%, XLF +1.0%, XLV +0.9%, XLU +0.9%, IWM +2.0%, XLE +0.2%. No sector is down; regime stable/rising (framework 4.1).
 - Mean-reversion scan (cap >=5B, avg vol >=1M, <=-5%, RSI<35, Tier A window): 1 row, IONS -25.2% (29.47, RSI 33.5, 3.7M vol). Gate 1 FAIL: the drop follows its own earnings today (company-specific, not a sector-wide cause; no sector ETF is down), and earnings-day names are excluded. No entry.
 - Momentum: not scanned; earliest entry 10:30 ET. Next full momentum scan at the 10:12/10:22/10:32 cycles. News search skipped (no candidate would otherwise pass). No order placed.
+
+### Cycle 863 - ~10:17 ET (Mon Nov 9) - hourly trigger; flat, no entries (momentum window opens 10:30)
+- Portfolio $405.36 all cash, no positions. Tape: SPY 749.05 (+1.9%), QQQ 674.35 (+2.8%), SMH 481.49 (+3.8%), XLK +2.8%, XLF +1.1%, XLV +0.8%, XLU +0.8%, IWM +2.1%, XLE +0.1%. No sector down; regime stable/rising. The hourly :12 trigger arrived at 15:17Z, 5 minutes after its 15:12Z slot.
+- Mean-reversion scan (cap >=5B, <=-5%, RSI<35): IONS only (28.37, -28%, RSI 33.5). Gate 1 FAIL again: own earnings today, company-specific, no sector down. No entry.
+- Momentum pre-view (cap >=2B, >=+4%, RVOL >=1.3), informational only since entries start 10:30: SGRY +11.8% (25.93, RVOL 1.32), VIR +12.9% (13.78, RVOL 1.78, cap about $2.09B, borderline universe). Neither is gate-checked: catalysts and peer comparison not yet sourced, and SGRY/VIR gaps are against a market up ~2%, so the +2 pts over SPY/peers test needs a verified catalyst. To check at 10:22/10:32. News search not run (no candidate has passed yet). No order placed.
