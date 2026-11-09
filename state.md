@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-09 15:44 ET",
+  "as_of": "2026-11-09 15:49 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. Entry window closed 15:30 ET. FRVO momentum loss -2.91 earlier.",
+  "status_note": "Flat, all cash at the close. Nothing rolls overnight. Day: 1 trade, FRVO momentum -2.91 (-0.91R).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-09",
@@ -3728,6 +3728,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-09 15:44 ET",
+      "equity": 402.45
+    },
+    {
+      "t": "2026-11-09 15:49 ET",
       "equity": 402.45
     }
   ],
@@ -10859,3 +10863,16 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Disclosure: no preview_scan run (no entry is permitted after 15:30 ET; deliberate skip).
 - Tape: SPY 754.16 (+2.6%), QQQ 680.33 (+3.7%), SMH 488.57 (+5.3%). Stable/rising.
 - Close recap trigger follows at 15:47 ET. Account is flat; nothing rolls overnight.
+
+### Cycle 895 - ~15:47 ET (Mon Nov 9) - CLOSE RECAP; flat, nothing rolls overnight
+- Close-recap trigger fired 20:47:43Z (on slot). Reconciled live: portfolio $402.45 all cash, BP $402.45, no positions, no open orders. Stop checks: nothing held, so none apply. No new entries (cutoff 15:30 ET passed). Order history for the day (get_equity_orders since 14:00Z) shows exactly two orders, both FRVO, both filled: buy 9.383461 @ 11.1899 (17:54:20Z, id 6af208cc-...) and sell 9.383461 @ 10.8801 (18:24:32Z, id 6af20fe0-...). It matches this log.
+- Tape at 15:47 ET: SPY 754.51 (+2.6%), QQQ 681.08 (+3.8%), SMH 489.64 (+5.4%).
+- OVERNIGHT STATUS: no positions roll overnight. The account ends the day flat in cash, so there is no thesis to carry and no hold decision to log.
+
+#### Day recap - Monday Nov 9, 2026
+- What ran: pre-open brief (~8:35 ET), then the 10-minute cycles through the day plus the hourly news cycles, and this close recap. A regime of stable/rising tape all day: SPY +2.6%, QQQ +3.8%, SMH +5.4% at the close, with no sector ETF down. Mean reversion was effectively off by the regime switch and the sector-cause gate all day.
+- Trades: 1. FRVO momentum long (Gate 1 loosened single-session catalyst separation), entered 12:55 ET @ 11.1899 on a pullback-hold, stopped out on invalidation at 13:24 ET @ 10.8801: -$2.91, -0.91R, score 48 (setup 24/40, execution 20/35, outcome 4/25), tagged organic. Forced trades: 0. The 1-trade/day minimum was met organically; no gate was loosened to meet it.
+- P&L: equity $405.36 at the start of the day, $402.45 at the close = -$2.91 (-0.72%). Well inside the $60 daily loss limit; equity is above the $394.19 drawdown breaker level (peak $437.99).
+- Skips, with reasons: SGRY (take-private deal peg, capped upside), TTD (earnings tonight), VIR/TIC/WRBY/QXO/SKYD/AMC/ASO (no verified catalyst or too little separation from its peer group; WRBY and QXO kept running, so skipping them was a missed run, noted again for the gate review), LFST (no verified catalyst; the earlier cycles' "below the 2-pt floor" wording was wrong and was corrected in Cycle 889), JHX (foreign ADR), AXON/NVDA/ARWR/IONS/AKAM/PEGA (company-specific drops against rising sectors), MUR/SM/MGY (energy names down against a flat XLE with no sourced cause). No other order was placed.
+- Disclosures: web searches (market news, ASO, others) returned stale or undated results all day, so none was cited as a gate source. Triggers often arrived 1-7 minutes after their slots. After the 15:30 ET cutoff (Cycles 893 and 894) I deliberately skipped the preview_scan passes since no entry was possible. I know of no missed cycle; I did not independently audit the trigger history for gaps.
+- Open items for the user (nothing changed without approval): profit-protection rule (breakeven stop or take half at +1R), the $105 size, and whether invalidation exits vs stop-only should change. Planned review after 5 momentum trades under the loosened Gate 1; FRVO was trade 2 of those. A follow-up on FRVO: it recovered to about 11.1-11.2 after my 10.88 exit, which is relevant to the invalidation-vs-stop question.
