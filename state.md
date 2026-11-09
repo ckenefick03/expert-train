@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-09 09:33 ET",
+  "as_of": "2026-11-09 09:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -3588,6 +3588,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-09 09:33 ET",
+      "equity": 405.36
+    },
+    {
+      "t": "2026-11-09 09:43 ET",
       "equity": 405.36
     }
   ],
@@ -10475,3 +10479,8 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 ### Cycle 859 - ~9:33 ET (Mon Nov 9) - first minutes of the session; flat, no scans
 - Portfolio $405.36 all cash, no positions. Regular session open: SPY 742.20 (+0.9%), QQQ 663.81 (+1.2%), SMH 465.40 (+0.3%). Gap-up open holding.
 - Entries barred before 10:00 ET (momentum 10:30), so scans skipped by rule. No order placed. Trigger arrived about 2.5 minutes after its 14:30Z slot... (scheduled 14:32Z, fired 14:32:34Z, no delay).
+
+### Cycle 860 - ~9:43 ET (Mon Nov 9) - flat, no scans; correction to Cycle 859
+- Correction to Cycle 859: its last line was garbled. The :32 trigger fired on time (scheduled 14:32Z, fired 14:32:34Z); there was no delay.
+- Portfolio $405.36 all cash, no positions. SPY 745.95 (+1.45%), QQQ 669.05 (+2.0%), SMH 471.49 (+1.6%). Rally broadening into semis since the open.
+- Entries barred before 10:00 ET (momentum 10:30), so scans skipped by rule. No order placed. Regime read (framework 4.1): stable/rising, momentum on from 10:30, MR only for a name whose own sector is down >=2%.
