@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-09 15:34 ET",
+  "as_of": "2026-11-09 15:44 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -3724,6 +3724,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-09 15:34 ET",
+      "equity": 402.45
+    },
+    {
+      "t": "2026-11-09 15:44 ET",
       "equity": 402.45
     }
   ],
@@ -10849,3 +10853,9 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Disclosure: I did NOT run the preview_scan passes this cycle. No entry is permitted after 15:30 ET, so a scan could not lead to an order; this is a deliberate skip, not an error.
 - Tape: SPY 754.59 (+2.6%), QQQ 680.96 (+3.8%), SMH 489.80 (+5.6%), XLE 61.88 (+0.4%), IWM 283.51 (+3.6%), XBI 157.87 (+3.7%). Stable/rising into the close.
 - Account state for the close: flat, nothing to roll overnight. Close recap due at 15:47 ET.
+
+### Cycle 894 - ~15:42 ET (Mon Nov 9) - flat; entry window closed, scans skipped
+- Trigger fired 20:42:35Z (on slot; previous commit 20:32:51Z), 15:42 ET, after the 15:30 ET entry cutoff. Portfolio $402.45 all cash, BP $402.45, no positions, no stop checks apply.
+- Disclosure: no preview_scan run (no entry is permitted after 15:30 ET; deliberate skip).
+- Tape: SPY 754.16 (+2.6%), QQQ 680.33 (+3.7%), SMH 488.57 (+5.3%). Stable/rising.
+- Close recap trigger follows at 15:47 ET. Account is flat; nothing rolls overnight.
