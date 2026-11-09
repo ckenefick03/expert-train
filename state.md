@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-09 09:43 ET",
+  "as_of": "2026-11-09 09:53 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Pre-open Mon Nov 9: flat, all cash. Futures/pre-market up (SPY +0.8%, IWM +1.3%). Watching IMVT/KGS post-earnings gaps; NVDA -5.5% pre-market.",
+  "status_note": "Flat, all cash. Strong open: SPY +1.7%, QQQ +2.5%, SMH +3.0%. Entries open at 10:00 (MR) / 10:30 (momentum).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-06",
@@ -3593,6 +3593,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-09 09:43 ET",
       "equity": 405.36
+    },
+    {
+      "t": "2026-11-09 09:53 ET",
+      "equity": 405.36
     }
   ],
   "positions": [],
@@ -3767,12 +3771,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Pre-market risk-on: SPY +0.8%, QQQ +0.8%, IWM +1.3%, XLV +1.1%, SMH flat. Regime to be set from the first 5-min bars (framework 4.1).",
+    "read": "Stable/rising: broad rally led by semis (SMH +3.0%). Momentum on from 10:30; MR only for a name whose own sector is down >=2%.",
     "chips": [
-      "SPY +0.8% pre",
-      "IWM +1.3% pre",
-      "SMH flat",
-      "NVDA -5.5% pre"
+      "SPY +1.7%",
+      "QQQ +2.5%",
+      "SMH +3.0%",
+      "rising"
     ]
   }
 }
@@ -10484,3 +10488,7 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Correction to Cycle 859: its last line was garbled. The :32 trigger fired on time (scheduled 14:32Z, fired 14:32:34Z); there was no delay.
 - Portfolio $405.36 all cash, no positions. SPY 745.95 (+1.45%), QQQ 669.05 (+2.0%), SMH 471.49 (+1.6%). Rally broadening into semis since the open.
 - Entries barred before 10:00 ET (momentum 10:30), so scans skipped by rule. No order placed. Regime read (framework 4.1): stable/rising, momentum on from 10:30, MR only for a name whose own sector is down >=2%.
+
+### Cycle 861 - ~9:53 ET (Mon Nov 9) - flat, no scans (entries open at 10:00)
+- Portfolio $405.36 all cash, no positions. SPY 747.60 (+1.7%), QQQ 672.44 (+2.5%), SMH 478.08 (+3.0%). Strong, semis-led rally.
+- Entries barred before 10:00 ET (momentum 10:30), so scans skipped by rule. No order placed. Next cycle (10:02 ET) is the first with scans.
