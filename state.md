@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-09 10:33 ET",
+  "as_of": "2026-11-09 10:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. First momentum scan with entries open: SGRY (pinned at 26.00, deal-like) and VIR (no catalyst) rejected.",
+  "status_note": "Flat, all cash. Same scan results as 10:33: SGRY (pinned 26.00), VIR (no catalyst), IONS (earnings) all rejected.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-06",
@@ -3608,6 +3608,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-09 10:33 ET",
+      "equity": 405.36
+    },
+    {
+      "t": "2026-11-09 10:43 ET",
       "equity": 405.36
     }
   ],
@@ -10523,3 +10527,7 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
   - SGRY 25.96 (+11.9%, RVOL 1.41). No earnings (next 11/20, tentative). 5-min bars 14:30-15:30Z are pinned in a 25.89-26.09 band around 26.00 on thin volume after the first 10 minutes: this looks like a deal-price peg (a take-private/offer), not a trend. Upside is capped at the offer; no 2R target. Catalyst unverified: the web search returned only 2024-2025 articles, nothing dated today. FAIL.
   - VIR 13.70 (+12.2%, RVOL 1.89, cap about $2.09B, borderline). Reported 11/4. No catalyst found (search returned only old items). Bars: opened 13.18, spiked to 14.38, now drifting down to 13.58 (lower highs, below its 14.38 high and falling toward its opening range), i.e. fading, with no held higher low. FAIL.
 - News: WebSearch run for the two candidates; both returned stale/undated results, so no catalyst was verified (disclosed). No order placed.
+
+### Cycle 865 - ~10:43 ET (Mon Nov 9) - flat, no entries; same candidates, still failing
+- Portfolio $405.36 all cash, no positions. Tape: SPY 749.93 (+2.0%), QQQ 674.84 (+2.9%), SMH 481.35 (+3.8%), XLK +2.9%, XLF +1.0%, XLV +1.0%, XLU +1.2%, IWM +2.3%, XLE +0.2%, XBI +1.9%. Rally holding; no sector down; stable/rising.
+- MR scan: IONS only (28.64, -27.3%, RSI 33.5), gate 1 FAIL (own earnings). Momentum scan: SGRY 26.00 (+12.1%, RVOL 1.45) still pinned at exactly 26.00 (deal-peg look, capped upside, no catalyst verified), VIR 13.81 (+13.1%, RVOL 1.97) no catalyst verified, fading from the 14.38 high. Both remain FAIL per Cycle 864; nothing new entered the scans. No new news search (no candidate would otherwise pass). No order placed.
