@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-09 08:35 ET",
+  "as_of": "2026-11-09 08:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -3568,6 +3568,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-09 08:35 ET",
+      "equity": 405.36
+    },
+    {
+      "t": "2026-11-09 08:43 ET",
       "equity": 405.36
     }
   ],
@@ -10435,3 +10439,7 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Mean-reversion watch (needs sector-wide dated cause, MR gate 1): 1) NVDA (-5.5%, only if SMH confirms a sector selloff; currently SMH flat so it looks company-specific, fail). 2) AKAM (-5.3%, own cause likely, fail unless proven). 3) ETR (-7.7%, utility; check XLU and the cause). None passes gate 1 now.
 - Regime read: Stable/rising pre-market, momentum on, MR only if a name's own sector is down >=2%. Decided after the first 5-min bars.
 - Open items: the stale WebSearch results again. No order placed.
+
+### Cycle 855 - ~8:43 ET (Mon Nov 9) - pre-10:00 ET, flat, no scans
+- Portfolio $405.36 all cash, BP $405.36, no positions. Pre-market: SPY 741.21 (+0.8%), QQQ 661.18 (+0.8%), SMH 464.50 (flat), unchanged from the pre-open brief.
+- No entries are allowed before 10:00 ET (and momentum not before 10:30), so strategy scans were skipped by rule. No order placed.
