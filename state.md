@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-09 10:17 ET",
+  "as_of": "2026-11-09 10:33 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. Rally extends (SPY +1.9%, SMH +3.8%). MR: only IONS (fails). Momentum opens 10:30; watching SGRY, VIR.",
+  "status_note": "Flat, all cash. First momentum scan with entries open: SGRY (pinned at 26.00, deal-like) and VIR (no catalyst) rejected.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-06",
@@ -3605,6 +3605,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-09 10:17 ET",
       "equity": 405.36
+    },
+    {
+      "t": "2026-11-09 10:33 ET",
+      "equity": 405.36
     }
   ],
   "positions": [],
@@ -3779,11 +3783,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Stable/rising: broad rally, no sector down. MR off; momentum on from 10:30.",
+    "read": "Stable/rising: SPY +1.9%, QQQ +2.9%, SMH +3.9%, no sector down. MR off; momentum on but no candidate passes Gate 1.",
     "chips": [
       "SPY +1.9%",
-      "QQQ +2.8%",
-      "SMH +3.8%",
+      "QQQ +2.9%",
+      "SMH +3.9%",
       "rising"
     ]
   }
@@ -10510,3 +10514,12 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Portfolio $405.36 all cash, no positions. Tape: SPY 749.05 (+1.9%), QQQ 674.35 (+2.8%), SMH 481.49 (+3.8%), XLK +2.8%, XLF +1.1%, XLV +0.8%, XLU +0.8%, IWM +2.1%, XLE +0.1%. No sector down; regime stable/rising. The hourly :12 trigger arrived at 15:17Z, 5 minutes after its 15:12Z slot.
 - Mean-reversion scan (cap >=5B, <=-5%, RSI<35): IONS only (28.37, -28%, RSI 33.5). Gate 1 FAIL again: own earnings today, company-specific, no sector down. No entry.
 - Momentum pre-view (cap >=2B, >=+4%, RVOL >=1.3), informational only since entries start 10:30: SGRY +11.8% (25.93, RVOL 1.32), VIR +12.9% (13.78, RVOL 1.78, cap about $2.09B, borderline universe). Neither is gate-checked: catalysts and peer comparison not yet sourced, and SGRY/VIR gaps are against a market up ~2%, so the +2 pts over SPY/peers test needs a verified catalyst. To check at 10:22/10:32. News search not run (no candidate has passed yet). No order placed.
+
+### Cycle 864 - ~10:33 ET (Mon Nov 9) - first momentum scan with entries open; flat, no entries
+- Skipped the 10:22 slot: the :22 trigger (15:22:55Z) fired 5.5 minutes after Cycle 863 was committed (15:17:35Z), inside the 6-minute rule, so it was skipped silently; this is the first cycle since 10:17 ET.
+- Portfolio $405.36 all cash, no positions. Tape: SPY 749.31 (+1.9%), QQQ 675.04 (+2.9%), SMH 482.25 (+3.9%), XLK +3.0%, XLF +0.8%, XLV +0.8%, XLU +0.8%, IWM +2.2%, XLE +0.3%, XBI +1.7%. No sector down; regime stable/rising.
+- Mean-reversion (Tier A, cap >=5B, <=-5%, RSI<35): IONS only (28.22, -28.4%, RSI 33.5): own earnings today, company-specific, gate 1 FAIL. No entry.
+- Momentum (cap >=2B, avg vol >=1M, >=+4%, RVOL >=1.3; entries open): 2 names.
+  - SGRY 25.96 (+11.9%, RVOL 1.41). No earnings (next 11/20, tentative). 5-min bars 14:30-15:30Z are pinned in a 25.89-26.09 band around 26.00 on thin volume after the first 10 minutes: this looks like a deal-price peg (a take-private/offer), not a trend. Upside is capped at the offer; no 2R target. Catalyst unverified: the web search returned only 2024-2025 articles, nothing dated today. FAIL.
+  - VIR 13.70 (+12.2%, RVOL 1.89, cap about $2.09B, borderline). Reported 11/4. No catalyst found (search returned only old items). Bars: opened 13.18, spiked to 14.38, now drifting down to 13.58 (lower highs, below its 14.38 high and falling toward its opening range), i.e. fading, with no held higher low. FAIL.
+- News: WebSearch run for the two candidates; both returned stale/undated results, so no catalyst was verified (disclosed). No order placed.
