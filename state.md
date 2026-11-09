@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-09 12:04 ET",
+  "as_of": "2026-11-09 12:15 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. New MR row MGY fails gate 1 (XLE up). Everything else unchanged; no entry.",
+  "status_note": "Flat, all cash. SGRY confirmed as a pending take-private (capped upside). LFST (+4.2%) fails the +2pt-over-SPY test. No entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-06",
@@ -3641,6 +3641,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-09 12:04 ET",
       "equity": 405.36
+    },
+    {
+      "t": "2026-11-09 12:15 ET",
+      "equity": 405.36
     }
   ],
   "positions": [],
@@ -3815,11 +3819,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Stable/rising: SPY +2.0%, QQQ +3.0%, SMH +4.2%; no sector down. NVDA -6% is against a rising semis tape (company-specific). MR off; momentum candidates all fail Gate 1.",
+    "read": "Stable/rising: SPY +2.3%, QQQ +3.3%, SMH +4.7%, no sector down. MR off; momentum on but no candidate passes Gate 1.",
     "chips": [
-      "SPY +2.0%",
-      "QQQ +3.0%",
-      "SMH +4.2%",
+      "SPY +2.3%",
+      "QQQ +3.3%",
+      "SMH +4.7%",
       "rising"
     ]
   }
@@ -10602,3 +10606,9 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - MR (Tier B): NVDA 176.95 (-5.2%), ARWR 47.84 (-17.8%), IONS 28.72 (-27.1%) unchanged, gate 1 FAIL. New row: MGY 22.80 (-3.7%, RSI 37.5, cap $6.4B, E&P): XLE is +0.7% on the day, so MGY is falling against its own sector tape (company-specific), no sourced cause; gate 1 FAIL, and the -3.7% intraday is barely over the Tier B 3.5% floor. No entry.
 - Momentum: SGRY 26.13, VIR 13.77, TIC 11.14, TTD 14.98 (earnings tonight): unchanged, no catalysts; FAIL.
 - No order placed. No news search (nothing would otherwise pass).
+
+### Cycle 873 - ~12:15 ET (Mon Nov 9) - hourly full cycle; flat, no entries
+- Portfolio $405.36 all cash, no positions. The hourly :12 trigger arrived 17:14:02Z, 2 minutes after its slot (disclosed). Tape: SPY 751.99 (+2.3%), QQQ 677.55 (+3.3%), SMH 485.68 (+4.7%), XLK +3.4%, XLF +1.5%, XLV +1.4%, XLU +1.7%, IWM +2.8%, XLE +0.8%, XBI +2.0%. Stable/rising; no sector down.
+- News (hourly search, targeted at the biggest unexplained mover): SGRY. Result: a Goodwin press release dated 2026-10-26 says Surgery Partners agreed to a $5.7B all-cash takeover by HealthSpan Partners (affiliate of Bon Secours Mercy Health), expected to close Q1 2027. I could not confirm the per-share price or the company's own filing from the search, and nothing dated today explains why the stock is +12.7% now (the gap vs Friday's $23.20 close is not explained by an Oct 26 deal alone; may be a bump, a go-shop outcome, or a deal-price reset). Either way a stock trading at a fixed-cash take-private price has capped upside: no >=2R target. SGRY FAIL (take-private arb, not momentum).
+- Mean-reversion (Tier B): NVDA 177.35 (-5.0%), ARWR 47.69 (-18.0%), IONS 28.89 (-26.7%), MGY 22.83 (-3.6%, XLE +0.8%): all company-specific vs rising sector ETFs, gate 1 FAIL. No entry.
+- Momentum: SGRY (above, FAIL), VIR 13.65 (+11.8%, RVOL 2.52, no catalyst, slipping), TIC 11.16 (+7.6%, no catalyst), TTD 15.02 (+16.2%, earnings tonight). New: LFST 14.35 (+4.2%, RVOL 2.53, cap $5.2B, healthcare services): only 1.9 pts above SPY (+2.3%), below the 2-pt-over-SPY floor in the loosened Gate 1, and no catalyst source found; FAIL. No order placed.
