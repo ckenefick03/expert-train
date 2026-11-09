@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-09 13:15 ET",
+  "as_of": "2026-11-09 13:25 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Long FRVO 9.383 sh @ 11.19 (11.04, -$1.42, -0.45R), stop 10.85, target ~12.0. Peers hold; FRVO drifting lower on lower highs. 30-min hold rule to 13:24 ET; invalidation = 5-min close below 10.97.",
+  "status_note": "Flat, all cash. FRVO momentum long closed -2.91 (-0.91R) on invalidation (relative-strength loss vs peers, broke 20-EMA and the 10.97 base low).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-09",
@@ -3669,20 +3669,13 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-09 13:15 ET",
       "equity": 403.81
-    }
-  ],
-  "positions": [
+    },
     {
-      "symbol": "FRVO",
-      "strategy": "momentum",
-      "tier": "-",
-      "qty": 9.383461,
-      "entry": 11.1899,
-      "price": 11.04,
-      "stop": 10.85,
-      "target": 12.0
+      "t": "2026-11-09 13:25 ET",
+      "equity": 402.45
     }
   ],
+  "positions": [],
   "trades": [
     {
       "symbol": "TER",
@@ -3851,6 +3844,18 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "score": 58,
       "tag": "organic",
       "date": "2026-11-06"
+    },
+    {
+      "symbol": "FRVO",
+      "strategy": "momentum",
+      "tier": "-",
+      "entry": 11.1899,
+      "exit": 10.8801,
+      "pnl": -2.91,
+      "r": -0.91,
+      "score": 48,
+      "tag": "organic",
+      "date": "2026-11-09"
     }
   ],
   "regime": {
@@ -10698,3 +10703,13 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Thesis check on the news (hourly search): the web search returned Fervo's Q2 results (Aug 12) and a preview saying the stock had lost about two-thirds of its value into the Q3 print; I could not find the Q3 release or any note on why it jumped today. So the reason for the +22% is still unverified; the AI-power sector beats (CEG, NRG) remain the only sourced driver. Not new information that changes the gates; flagged.
 - Tape: SPY 752.62 (+2.4%), QQQ 677.00 (+3.2%), SMH 484.28 (+4.4%), XLE +0.8%, XLU +2.0%, IWM +3.0%, XBI +2.7%. Stable/rising.
 - MR (Tier B): NVDA 176.63 (-5.4%), ARWR 48.07 (-17.3%), IONS 29.84 (-24.3%), MGY 22.76 (-3.9%) and new AKAM 80.03 (-3.7%, RSI 36.5, XLK +3.2%): company-specific vs rising sectors, gate 1 FAIL. Momentum: JHX (foreign ADR, home-driven), SGRY (take-private), TTD (earnings tonight), LFST (+5.3%, below the 2-pt floor), QXO 13.93 (+20.5%, no catalyst, no pullback), VIR, TIC: FAIL, unchanged. FRVO is held (1 of 5 slots). No new order.
+
+### Cycle 880 - ~13:24 ET (Mon Nov 9) - EXIT: FRVO momentum long closed (9.383461 sh @ 10.8801, -$2.91, -0.91R)
+- **Order:** market sell 9.383461 sh (the full position), regular hours, gfd, order id 6af20fe0-128a-40b7-8e6c-c29c507cef83, placed 18:24:32Z, filled 18:24:32.43Z at an average 10.8801, no fees. Verified: no open positions, account all cash $402.45. The tool's confirmation request was ignored (framework 0 standing authorization). The 30-minute hold rule (entry fill 17:54:20Z) expired at 18:24:20Z; I confirmed the clock before sending (the sell went out 12 seconds after expiry).
+- **Result:** entry 11.1899, exit 10.8801, P&L -$2.91 (-0.91R against the planned 1R of $3.19 at the 10.85 stop). Day equity: start $405.36, now $402.45.
+- **Why exit (invalidation, not the stop trading):** (1) the last completed 5-min bar (18:15Z) closed 10.985, below both the 20-EMA (about 11.04) and the 9-EMA (about 11.10), and the strategy treats a close back below rising short-term support as an invalidation; (2) FRVO printed 10.92-10.95 on the minute bars, through the 10.967-10.97 base low that defined the setup; (3) FRVO was bleeding from its 11.43 high (-4.0%) while its AI-power peers were flat (CEG 274 vs 275, OKLO 26.74 vs 26.89, BE 194 vs 195), which the strategy names as an exit signal by itself; and (4) lower highs and lower lows on every 5-min bar since 17:45Z on thin volume. The 10.85 stop had not traded; the hold rule kept me in until 13:24:20 ET and I exited at the first permitted moment.
+- **Honesty notes:** the fill (10.8801) was 4 cents under the last print I had seen (10.92) because the price kept falling in the seconds before the order, so the early exit saved only about 3 cents a share versus the stop (10.85); the exit did not materially beat the stop. The entry itself was a judgement call I flagged at the time (pullback-hold entry after the trigger bar, borderline RVOL, unverified cause for the outsized move). The loss is the cost of those flagged weaknesses; no rule broke.
+- **Score (framework 5.5): 48/100.** Setup 24/40 (Gates 1-2 clean on the peer test and sourced sector driver, but the company-specific cause was never verified and RVOL was borderline); execution 20/35 (waited for the trigger and held the plan; entered below the trigger bar's close; exited on written invalidation at the first permitted moment); outcome 4/25 (-0.91R). Lesson for review: a +23% intraday surge that the stock's own report does not explain, in a counter-trend name, bled out within 30 minutes of entry even with the sector complex intact; require a verified company-specific cause (or wait for a stronger second leg through the 11.43 high) before entering a standout whose peers are far less extended. Not changing any rule; to be reviewed after 5 momentum trades (this is trade 2 under the loosened Gate 1).
+- Scans this cycle: MR (Tier B): NVDA 176.26 (-5.6%), AKAM 80.03 (-3.7%), ARWR 48.28 (-17.0%), IONS 29.88 (-24.2%), MGY 22.72 (-4.0%): company-specific vs rising sectors, gate 1 FAIL. Momentum: JHX (foreign ADR), SGRY (take-private), TTD (earnings tonight), LFST (+6.5%, still below the 2-pt-over-SPY floor), QXO (+20.6%, no catalyst), VIR, TIC: FAIL. No re-entry in FRVO. Tape: SPY 752.0 (+2.3%), QQQ 676.2 (+3.1%), SMH 483.4 (+4.2%).
+- Trade count today: 1 (organic). Daily P&L -$2.91, well inside the $60 limit; equity far above the $394.19 breaker. **Overnight: flat, nothing held.**
+
