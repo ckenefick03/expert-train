@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-09 09:20 ET",
+  "as_of": "2026-11-09 09:33 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -3584,6 +3584,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-09 09:20 ET",
+      "equity": 405.36
+    },
+    {
+      "t": "2026-11-09 09:33 ET",
       "equity": 405.36
     }
   ],
@@ -10467,3 +10471,7 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 ### Cycle 858 - ~9:20 ET (Mon Nov 9) - hourly trigger; pre-10:00 ET, flat, no scans
 - Portfolio $405.36 all cash, no positions. Pre-market: SPY 741.66 (+0.9%), QQQ 661.96 (+0.9%), SMH 464.70 (+0.2%), NVDA 174.81 (-6.3%, still company-specific with SMH flat), KGS 44.31 (+6.3%, fading from 45.07), IMVT 33.64 (+10.2%).
 - Entries barred before 10:00 ET (momentum 10:30), so scans skipped by rule. No order placed. The hourly :12 trigger arrived at 14:19Z, about 7 minutes after its 14:12Z schedule (disclosed).
+
+### Cycle 859 - ~9:33 ET (Mon Nov 9) - first minutes of the session; flat, no scans
+- Portfolio $405.36 all cash, no positions. Regular session open: SPY 742.20 (+0.9%), QQQ 663.81 (+1.2%), SMH 465.40 (+0.3%). Gap-up open holding.
+- Entries barred before 10:00 ET (momentum 10:30), so scans skipped by rule. No order placed. Trigger arrived about 2.5 minutes after its 14:30Z slot... (scheduled 14:32Z, fired 14:32:34Z, no delay).
