@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-09 11:04 ET",
+  "as_of": "2026-11-09 11:17 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. Same scan results; SGRY holds 26.40 but no catalyst verified. No entry.",
+  "status_note": "Flat, all cash. Hourly cycle: NVDA -6% (company-specific, SMH up), SGRY/VIR/TTD/TIC fail. No entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-06",
@@ -3621,6 +3621,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-09 11:04 ET",
       "equity": 405.36
+    },
+    {
+      "t": "2026-11-09 11:17 ET",
+      "equity": 405.36
     }
   ],
   "positions": [],
@@ -3795,11 +3799,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Stable/rising: SPY +2.1%, QQQ +3.2%, SMH +4.7%, no sector down. MR off; momentum on but no candidate passes Gate 1.",
+    "read": "Stable/rising: SPY +2.0%, QQQ +3.0%, SMH +4.2%; no sector down. NVDA -6% is against a rising semis tape (company-specific). MR off; momentum candidates all fail Gate 1.",
     "chips": [
-      "SPY +2.1%",
-      "QQQ +3.2%",
-      "SMH +4.7%",
+      "SPY +2.0%",
+      "QQQ +3.0%",
+      "SMH +4.2%",
       "rising"
     ]
   }
@@ -10554,3 +10558,9 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - MR (Tier A): IONS only (28.65, -27.3%), earnings-driven, gate 1 FAIL.
 - Momentum: SGRY 26.40 (+13.8%, RVOL 2.29) now holding above the 26.00 level for a while, so it is not simply pinned, but still no catalyst source for the move (no earnings, no dated news found) and no peer comparison possible; Gate 1 needs a verified catalyst. FAIL. VIR 13.88 (+13.6%, RVOL 2.18): no catalyst found; FAIL. TTD 15.01 (+16.1%): earnings tonight after the close; FAIL.
 - No order placed. No new news search (nothing would otherwise pass).
+
+### Cycle 868 - ~11:17 ET (Mon Nov 9) - hourly full cycle; flat, no entries
+- Portfolio $405.36 all cash, no positions. The hourly :12 trigger arrived at 16:15:50Z, about 4 minutes after its 16:12Z slot (disclosed). Tape: SPY 749.91 (+2.0%), QQQ 676.07 (+3.0%), SMH 483.57 (+4.2%), XLK +3.1%, XLF +1.2%, XLV +1.1%, XLU +1.4%, IWM +2.6%, XLE +0.6%, XBI +2.2%. Slight giveback from the 11:04 highs. No sector down; stable/rising.
+- Mean-reversion (Tier A, cap >=5B, <=-5%, RSI<35): 2 rows. NVDA 175.38 (-6.0%, RSI 30.8, cap about $4.5T, volume 234M). Gate 1 FAIL: SMH is +4.2% and every sector ETF is up, so there is no sector-wide cause; a name falling 6% into a +4% semis tape is company-specific, and I have no dated source for the cause. Regime rule also bars MR unless its own sector is down >=2%. IONS 28.68 (-27.3%): own earnings, FAIL. No entry.
+- Momentum: 4 rows. SGRY 26.13 (+12.6%, RVOL 2.37) and VIR 13.92 (+14.0%, RVOL 2.27): no catalyst found, FAIL (unchanged). TTD 14.85 (+14.8%): earnings tonight after the close, FAIL. New: TIC 11.26 (+8.6%, RVOL 1.34, cap about $2.26B): reported 11/5 (EPS -0.05 vs 0.18 est), no earnings today; 5-min bars ran 10.64 -> 11.69 in the first 35 minutes, then faded to a 11.14-11.28 range (lower high, no breakout), no catalyst found. FAIL (fading, no cause, ~2R target unnamed).
+- News: one hourly WebSearch (market rally cause) returned only Nov 2025 items and one undated summary; nothing dated today, so I treat the market-wide driver as unverified and cite nothing from it in a gate. No order placed.
