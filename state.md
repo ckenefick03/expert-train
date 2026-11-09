@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-09 12:23 ET",
+  "as_of": "2026-11-09 12:36 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. Scans unchanged (SGRY deal-capped, VIR/TIC/LFST no catalyst, TTD earnings tonight). No entry.",
+  "status_note": "Flat, all cash. FRVO (+23%, AI-power leader) is the first real momentum candidate: Gates 1-2 pass, Gate 3 (continuation trigger) not met yet. Armed for the next cycles.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-06",
@@ -3649,6 +3649,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-09 12:23 ET",
       "equity": 405.36
+    },
+    {
+      "t": "2026-11-09 12:36 ET",
+      "equity": 405.36
     }
   ],
   "positions": [],
@@ -3823,12 +3827,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Stable/rising: SPY +2.3%, QQQ +3.3%, SMH +4.7%, no sector down. MR off; momentum on but no candidate passes Gate 1.",
+    "read": "Stable/rising: SPY +2.4%, QQQ +3.3%, SMH +4.7%, AI-power complex +6-14% on CEG/NRG earnings beats. MR off; momentum on, FRVO armed (needs continuation).",
     "chips": [
-      "SPY +2.3%",
-      "QQQ +3.3%",
+      "SPY +2.4%",
       "SMH +4.7%",
-      "rising"
+      "AI-power +10%",
+      "FRVO armed"
     ]
   }
 }
@@ -10621,3 +10625,15 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Portfolio $405.36 all cash, no positions. Tape: SPY 752.31 (+2.3%), QQQ 677.90 (+3.3%), SMH 485.70 (+4.7%), XLK +3.5%, XLF +1.6%, XLV +1.5%, XLU +1.6%, IWM +2.8%, XLE +0.9%, XBI +2.1%. Stable/rising; no sector down.
 - MR (Tier B): NVDA 177.57 (-4.9%), ARWR 47.45 (-18.4%), IONS 29.09 (-26.2%): company-specific vs rising sectors, gate 1 FAIL (MGY dropped off the list, now above -3.5%). Momentum: SGRY 26.16 (+12.8%, take-private/deal-capped), TTD 15.04 (earnings tonight), LFST 14.35 (+4.2%, below 2-pt-over-SPY floor), VIR 13.68 (+12.0%) and TIC 11.11 (+7.1%): no catalysts; all FAIL.
 - No order placed. Cycle dedupe check: Cycle 873 committed 17:14:40Z, 8 minutes before this one.
+
+### Cycle 875 - ~12:36 ET (Mon Nov 9) - FRVO gate-check: Gates 1-2 pass, Gate 3 trigger not met; no entry (armed for the next cycles)
+- Portfolio $405.36 all cash, BP $405.36, no positions. Tape: SPY 752.70 (+2.4%), QQQ 677.97 (+3.3%), SMH 485.71 (+4.7%), XLK +3.5%, XLF +1.6%, XLV +1.5%, XLU +1.7%, IWM +2.9%, XLE +0.9%, XBI +2.3%. Stable/rising; no sector down.
+- MR (Tier B): NVDA 177.99 (-4.6%), ARWR 47.29 (-18.7%), IONS 29.14 (-26.1%), MGY 22.82 (-3.6%): company-specific vs rising sector ETFs, gate 1 FAIL. SGRY (take-private, capped), TTD (earnings tonight), LFST (below the 2-pt floor), VIR, TIC: unchanged FAIL.
+- **New momentum candidate: FRVO (Fervo Energy), 11.13 (+23.3% vs 9.025 prior close), scan RVOL 1.30, cap $2.66B, spread 11.12/11.13 (0.09%).** Gate-check, in writing:
+  - Gate 1 (separation): peer complex = AI-power / generation: OKLO +13.0%, BE +13.8%, CEG +9.6%, NRG +9.1%, GEV +7.3%, VST +6.4% (mean about +9.9%); SPY +2.4%. FRVO is +13 pts over the peer mean and +21 pts over SPY: PASS (>=2 pts over both). Not a conventional open gap (pre-market was flat 8.5-9.1; it surged after the 9:30 open), so I am treating it as a same-session catalyst separation and flagging that. Not fading: price 11.13 is above the prior close (9.025) and above day VWAP (about 10.50 from the 5-min bars); the day high is 11.43 and it has given back 0.30 of the 2.41 gain (12%, well under half). RVOL: scan reports 1.30-1.31 (11.8M shares vs 9.0M 30-day average), a bare pass; note the 5-min bar volumes sum to only 7.3M (bars appear to undercount vs the scan feed; same pattern as SGRY), so volume confirmation is borderline and I am saying so. Foreign ADR: no. Earnings: FRVO reported this morning (Q3 EPS -0.07 vs -0.07 est, in line, verified in the earnings tool this cycle), so the report already happened and is part of the thesis.
+  - Gate 2 (real catalyst): sector driver sourced this cycle from the earnings tool: CEG reported Q3 EPS 5.06 vs 3.89 est and NRG 4.68 vs 3.11 est this morning (both verified 2026-11-09 am), and the whole AI-power complex is up 6-14%. FRVO's own report was in line, so I could not find a company-specific reason for FRVO's outsized +23% (the web search returned only IPO-era and June items; nothing dated today). I count the sector driver plus its own report as a PASS but mark the company-specific cause as UNVERIFIED.
+  - Gate 3 (held pullback / continuation): structure is constructive: swing lows 10.59 (16:15Z) -> 10.80 (16:25Z) -> 10.97 (17:25Z) are rising; the pullback from the 11.43 high is 4%. But the last six bars are making lower highs (11.315, 11.27, 11.25, 11.235, 11.215, 11.17) and lower lows; the last completed close 11.08 is BELOW the 9-EMA (11.13, now slightly falling from 11.16) though above a rising 20-EMA (10.93). The live price (11.13) is at the 9-EMA, not a reclaim. The entry rule requires a continuation (break back above the pullback high, or a hold-and-reclaim of the short-term average) and bars a bounce-tick entry: **FAIL for now** (not a fail of the setup, a timing fail).
+  - Gate 4 (timing): 12:36 ET, inside the window: PASS.
+  - Risk plan if it triggers: **trigger** = a completed 5-min bar closing above 11.235 (the 17:15Z bar high, i.e. above the lower-high sequence and the 9-EMA). Stop below the higher low that formed the base: 10.85 (below the 10.97 low), about 3.4% under a ~11.24 entry, 1R about $3.6 on a $105 position; target >=2R at ~12.0 (prior high 11.43 plus the 1.70 base-leg measured move from 10.97 gives 12.67); horizon end of day. Hard cutoff: no entry after 15:30 ET. If price loses 10.97 first, the setup is invalid.
+  - Concerns noted: the stock fell from about 20 to 7.6 over two months (this is a counter-trend spike), the report was in line, the +23% is unexplained, and RVOL is borderline. These favour waiting for the trigger rather than anticipating it.
+- No order placed. Follow-up for FRVO to be filled in at the 12:42 and 12:52 cycles (did the 11.235 trigger print, did 10.97 hold).
