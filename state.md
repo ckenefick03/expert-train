@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-09 13:04 ET",
+  "as_of": "2026-11-09 13:15 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Long FRVO 9.383 sh @ 11.19 (11.12, -$0.66, -0.2R), stop 10.85, target ~12.0. 30-min hold rule runs to 13:24 ET. Peers firm; no exit signal.",
+  "status_note": "Long FRVO 9.383 sh @ 11.19 (11.04, -$1.42, -0.45R), stop 10.85, target ~12.0. Peers hold; FRVO drifting lower on lower highs. 30-min hold rule to 13:24 ET; invalidation = 5-min close below 10.97.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-09",
@@ -3665,6 +3665,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-09 13:04 ET",
       "equity": 404.61
+    },
+    {
+      "t": "2026-11-09 13:15 ET",
+      "equity": 403.81
     }
   ],
   "positions": [
@@ -3674,7 +3678,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "tier": "-",
       "qty": 9.383461,
       "entry": 11.1899,
-      "price": 11.12,
+      "price": 11.04,
       "stop": 10.85,
       "target": 12.0
     }
@@ -10686,3 +10690,11 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Tape: SPY 752.57 (+2.3%), QQQ 677.18 (+3.2%), SMH 484.35 (+4.4%). Stable/rising.
 - MR (Tier B): NVDA 176.79 (-5.3%), ARWR 47.86 (-17.7%), IONS 29.83 (-24.3%), MGY 22.82 (-3.6%): company-specific drops, gate 1 FAIL; no entry.
 - Momentum: 8 rows. New: JHX 29.87 (+7.2%, RVOL 1.31): James Hardie is a foreign ADR (Australian primary listing), so its US-session move is home-market driven: FAIL by rule. QXO 13.87 (+19.9%, RVOL 1.33, cap $12B): ran steadily from the 12.65 open to 13.88 at the high of the day on the last bar (no pullback or base to enter on) vs BLDR +4.9% and SPY +2.3%. No catalyst found (search returned only old Apollo/Kodiak/GMS items; nothing dated today), and its Q3 report is 11/12 pm, 3 sessions out, so no earnings thesis. Gates 2 and 3 FAIL (no cited catalyst, no held pullback, buying a bar at the high). Skipped; follow-up: whether QXO holds the 13.6-13.7 area on a pullback. SGRY/TTD/LFST/VIR/TIC unchanged FAIL. FRVO already held. No new order placed (1 of 5 slots used, BP $300.36).
+
+### Cycle 879 - ~13:15 ET (Mon Nov 9) - hourly full cycle; STOP CHECK: FRVO held (inside the 30-min hold window); correction to Cycle 878
+- Correction to Cycle 878: one sentence there was garbled ("about 0.7R of room used? no: ..."). The correct statement is: FRVO 11.12 was 0.27 (2.4%) above the 10.85 stop with an unrealised -$0.66 (about -0.2R). The hourly :12 trigger for this cycle fired 18:13:41Z, 1.7 minutes after its slot (disclosed).
+- **Stop check first.** FRVO long 9.383461 @ 11.1899: last 11.038 (bid 11.03 / ask 11.04), unrealised -$1.42 (-0.45R), 0.19 (1.7%) above the 10.85 stop. No open orders. The last 5-min bars: closes 11.185, 11.180, 11.130, 11.105; highs 11.26, 11.225, 11.185, 11.155 and lows 11.15, 11.18, 11.10, 11.065: a slow staircase of lower highs and lower lows, volume light (48k-85k per bar). The 10.97 base low has NOT been broken. Account: cash $300.36 + equity $103.45 = $403.81.
+- Relative-strength check: AI-power peers: OKLO +13.7%, BE +12.2%, CEG +10.1%, NRG +9.6%, VST +6.4%, GEV +6.3% (mean about +9.7%); FRVO +22.3% (scan). Still far ahead of the complex, but FRVO is now bleeding from its 11.43 high while the peers hold, which the strategy treats as an exit signal in its own right. **The 30-minute hold rule is in force until 13:24 ET**, so the invalidation exit does not trigger yet; only the stop trading, the $60 limit or the breaker could force an exit now (none have). Plan at the 13:22/13:32 cycles: if FRVO closes a 5-min bar below 10.97, or is still making lower lows with the peers holding, exit on invalidation (do not wait for the 10.85 stop). Decision this cycle: HOLD.
+- Thesis check on the news (hourly search): the web search returned Fervo's Q2 results (Aug 12) and a preview saying the stock had lost about two-thirds of its value into the Q3 print; I could not find the Q3 release or any note on why it jumped today. So the reason for the +22% is still unverified; the AI-power sector beats (CEG, NRG) remain the only sourced driver. Not new information that changes the gates; flagged.
+- Tape: SPY 752.62 (+2.4%), QQQ 677.00 (+3.2%), SMH 484.28 (+4.4%), XLE +0.8%, XLU +2.0%, IWM +3.0%, XBI +2.7%. Stable/rising.
+- MR (Tier B): NVDA 176.63 (-5.4%), ARWR 48.07 (-17.3%), IONS 29.84 (-24.3%), MGY 22.76 (-3.9%) and new AKAM 80.03 (-3.7%, RSI 36.5, XLK +3.2%): company-specific vs rising sectors, gate 1 FAIL. Momentum: JHX (foreign ADR, home-driven), SGRY (take-private), TTD (earnings tonight), LFST (+5.3%, below the 2-pt floor), QXO 13.93 (+20.5%, no catalyst, no pullback), VIR, TIC: FAIL, unchanged. FRVO is held (1 of 5 slots). No new order.
