@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-09 10:43 ET",
+  "as_of": "2026-11-09 10:53 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. Same scan results as 10:33: SGRY (pinned 26.00), VIR (no catalyst), IONS (earnings) all rejected.",
+  "status_note": "Flat, all cash. Rally extends (SPY +2.1%, SMH +4.7%). SGRY, VIR (no catalyst) and TTD (earnings tonight) all fail; IONS fails MR gate 1.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-06",
@@ -3613,6 +3613,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-09 10:43 ET",
       "equity": 405.36
+    },
+    {
+      "t": "2026-11-09 10:53 ET",
+      "equity": 405.36
     }
   ],
   "positions": [],
@@ -3787,11 +3791,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Stable/rising: SPY +1.9%, QQQ +2.9%, SMH +3.9%, no sector down. MR off; momentum on but no candidate passes Gate 1.",
+    "read": "Stable/rising: SPY +2.1%, QQQ +3.2%, SMH +4.7%, no sector down. MR off; momentum on but no candidate passes Gate 1.",
     "chips": [
-      "SPY +1.9%",
-      "QQQ +2.9%",
-      "SMH +3.9%",
+      "SPY +2.1%",
+      "QQQ +3.2%",
+      "SMH +4.7%",
       "rising"
     ]
   }
@@ -10531,3 +10535,12 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 ### Cycle 865 - ~10:43 ET (Mon Nov 9) - flat, no entries; same candidates, still failing
 - Portfolio $405.36 all cash, no positions. Tape: SPY 749.93 (+2.0%), QQQ 674.84 (+2.9%), SMH 481.35 (+3.8%), XLK +2.9%, XLF +1.0%, XLV +1.0%, XLU +1.2%, IWM +2.3%, XLE +0.2%, XBI +1.9%. Rally holding; no sector down; stable/rising.
 - MR scan: IONS only (28.64, -27.3%, RSI 33.5), gate 1 FAIL (own earnings). Momentum scan: SGRY 26.00 (+12.1%, RVOL 1.45) still pinned at exactly 26.00 (deal-peg look, capped upside, no catalyst verified), VIR 13.81 (+13.1%, RVOL 1.97) no catalyst verified, fading from the 14.38 high. Both remain FAIL per Cycle 864; nothing new entered the scans. No new news search (no candidate would otherwise pass). No order placed.
+
+### Cycle 866 - ~10:53 ET (Mon Nov 9) - flat, no entries; no candidate passes Gate 1
+- Portfolio $405.36 all cash, no positions. Tape: SPY 750.85 (+2.1%), QQQ 676.97 (+3.2%), SMH 485.68 (+4.7%), XLK +3.4%, XLF +1.1%, XLV +1.1%, XLU +1.3%, IWM +2.5%, XLE +0.3%, XBI +2.4%. No sector down; stable/rising.
+- MR scan: IONS only (28.41, -27.9%): own earnings, gate 1 FAIL.
+- Momentum scan: 3 rows.
+  - SGRY 26.45 (+14.0%, RVOL 1.87): the 5-min bars through 15:50Z sat pinned at 25.95-26.01 on tiny volume (deal-peg look); the 26.45 print came after the last completed bar and I cannot tell whether it is a real break or a single print. No catalyst found (searches earlier this morning returned only 2024-2025 items). Not chased: a one-print pop on an unexplained, possibly deal-capped name does not meet Gate 1 (verified catalyst, held structure, >=2R target). FAIL.
+  - VIR 14.02 (+14.8%, RVOL 2.09): last completed 5-min bars show a recovering higher low (13.58 -> 13.65 -> 13.74) and a push to 14.08, but still no catalyst found after two searches (stale results), and it sits below its 14.38 morning high. A move with no verifiable cause is not a Gate 1 pass. FAIL.
+  - TTD 14.88 (+15.1%, RVOL 1.40, cap about $6.1B): reports earnings after the close today (calendar: 11/9 pm). Avoid names reporting today. FAIL.
+- No news search this cycle beyond the above (none passed). No order placed.
