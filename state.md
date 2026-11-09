@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-09 11:17 ET",
+  "as_of": "2026-11-09 11:33 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. Hourly cycle: NVDA -6% (company-specific, SMH up), SGRY/VIR/TTD/TIC fail. No entry.",
+  "status_note": "Flat, all cash. Tier B window open: NVDA/ARWR/IONS all company-specific drops in a rising tape (MR gate 1 fail); momentum names have no catalyst.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-06",
@@ -3624,6 +3624,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-09 11:17 ET",
+      "equity": 405.36
+    },
+    {
+      "t": "2026-11-09 11:33 ET",
       "equity": 405.36
     }
   ],
@@ -10564,3 +10568,9 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Mean-reversion (Tier A, cap >=5B, <=-5%, RSI<35): 2 rows. NVDA 175.38 (-6.0%, RSI 30.8, cap about $4.5T, volume 234M). Gate 1 FAIL: SMH is +4.2% and every sector ETF is up, so there is no sector-wide cause; a name falling 6% into a +4% semis tape is company-specific, and I have no dated source for the cause. Regime rule also bars MR unless its own sector is down >=2%. IONS 28.68 (-27.3%): own earnings, FAIL. No entry.
 - Momentum: 4 rows. SGRY 26.13 (+12.6%, RVOL 2.37) and VIR 13.92 (+14.0%, RVOL 2.27): no catalyst found, FAIL (unchanged). TTD 14.85 (+14.8%): earnings tonight after the close, FAIL. New: TIC 11.26 (+8.6%, RVOL 1.34, cap about $2.26B): reported 11/5 (EPS -0.05 vs 0.18 est), no earnings today; 5-min bars ran 10.64 -> 11.69 in the first 35 minutes, then faded to a 11.14-11.28 range (lower high, no breakout), no catalyst found. FAIL (fading, no cause, ~2R target unnamed).
 - News: one hourly WebSearch (market rally cause) returned only Nov 2025 items and one undated summary; nothing dated today, so I treat the market-wide driver as unverified and cite nothing from it in a gate. No order placed.
+
+### Cycle 869 - ~11:33 ET (Mon Nov 9) - Tier B window open; flat, no entries
+- Portfolio $405.36 all cash, no positions. Tape: SPY 749.51 (+1.9%), QQQ 674.39 (+2.8%), SMH 480.42 (+3.5%), XLK +2.7%, XLF +1.4%, XLV +1.4%, XLU +1.6%, IWM +2.7%, XLE +0.8%, XBI +2.3%. No sector down; stable/rising, slow fade of the semis lead since 11:04.
+- Mean-reversion (Tier B, cap >=5B, <=-3.5%, RSI<40): NVDA 174.47 (-6.5%, RSI 30.8), ARWR 47.99 (-17.5%, RSI 39.6, biotech, XBI +2.3%), IONS 28.91 (-26.7%). All three fall hard into a rising sector tape (SMH +3.5%, XBI +2.3%), so each is company-specific with no sourced sector-wide cause: gate 1 FAIL on all. Also barred by the regime rule (MR only if the name's own sector is down >=2%). No entry.
+- Momentum: SGRY 26.14 (+12.7%, RVOL 2.48), VIR 13.98 (+14.5%, RVOL 2.33), TIC 11.29 (+8.8%, RVOL 1.43), TTD 14.85 (+14.8%, earnings tonight): unchanged from Cycle 868, no catalysts found; all FAIL.
+- No order placed. No news search this cycle (hourly search done in Cycle 868; nothing would otherwise pass).
