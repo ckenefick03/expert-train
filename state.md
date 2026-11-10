@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-10 11:50 ET",
+  "as_of": "2026-11-10 11:57 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. AAON momentum came closest to a pass but fails the 2R/volume bar; Tier B MR list (22) has no sourced sector cause.",
+  "status_note": "Flat, all cash. SPY testing the 746.00 session low; no MR sector cause sourced; AAON volume dried up.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-10",
@@ -3805,6 +3805,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-10 11:50 ET",
       "equity": 402.45
+    },
+    {
+      "t": "2026-11-10 11:57 ET",
+      "equity": 402.45
     }
   ],
   "positions": [],
@@ -3991,13 +3995,13 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Soft range near the lows: SPY 746.77 (-0.8%), 5-minute lows 746.85, 746.80, 746.79 vs the 746.00 session low. No new low, not a rising sequence. AI-hardware/semis weakest (SMH -1.7%). MR allowed only through all four gates.",
+    "read": "SPY is retesting the session low: 5-minute lows 746.79, 746.61, 746.06 (16:45Z) vs the 746.00 low. Close to a new low, not yet below it. Treated as Falling-edge: MR off unless a sourced sector cause and clean bounce appear.",
     "chips": [
       "SPY -0.8%",
-      "QQQ -1.1%",
-      "SMH -1.7%",
-      "IWM -1.4%",
-      "XBI -2.0%",
+      "QQQ -1.3%",
+      "SMH -2.2%",
+      "IWM -1.5%",
+      "XBI -2.1%",
       "XRT -0.9%",
       "XLE +0.3%"
     ]
@@ -11098,3 +11102,11 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
   - What would flip it to a re-check: a 5-minute close above about 77.8 with volume back near 60-100k per bar and VWAP holding, which lifts the reward to the 80.10 high above 2R, or a pullback to the 76.3-76.5 area that holds the 76.52 low.
   - CSQR: 5-minute VWAP was 17.86 at 11:23 ET and the price is now below it (17.46); unchanged FAIL on VWAP and on an unverified catalyst (EPS miss).
 - No order placed. No news search this cycle (hourly at 12:12 ET; candidate-driven searches were done at 11:33 ET).
+
+### Cycle 913 - ~11:53 ET (Tue Nov 10) - flat, no entries
+- Trigger fired 16:52:46Z (scheduled 16:52Z; previous commit 16:44:01Z). Portfolio $402.45 all cash, BP $402.45, no positions, no stop checks apply.
+- Tape: SPY 746.72 (-0.79%), QQQ 670.53 (-1.3%), SMH 476.51 (-2.2%), XLE 62.13 (+0.3%), XLU 43.63 (-0.4%), IWM 278.74 (-1.3%), XBI 153.65 (-2.1%), XRT 92.05 (-0.8%). SMH and XBI are now both past the 2% mark, but I have no dated source for either sector move.
+- Regime (SPY 5-minute): 16:35Z L 746.79; 16:40Z L 746.61; 16:45Z L 746.06 C 746.50. Retesting the 746.00 session low (15:50Z); no new low yet and no higher lows either. Falling-edge: MR stays off unless a sourced sector cause and a clean bounce appear, per framework 4.1 the "Stabilizing" label needs about 3 higher lows, which is not true now.
+- MR (cap >=$5B, down >=7%, RSI <40, a stricter screen than Tier B's 3.5% because the Tier B list is long and unsourced): 4 rows. ASTS 33.55 (-9.1%, RSI 39.9, space/satellite), IONS 28.49 (-8.1%, RSI 20.0), IREN 19.71 (-7.9%, RSI 36.0, crypto-miner/AI-hosting), HIMS 18.75 (-18.3%, RSI 36.3, company-specific). Gate 1 (dated, sourced sector-wide cause): FAIL for all four; HIMS and IONS are company-specific, ASTS has no source, IREN rides the unsourced crypto/AI-infrastructure weakness. Regime and gate 1 both block. No order.
+- Momentum (cap >=$2B, avg vol >=1M, up >=5%, RVOL >=1.3): AAON 76.77 (+22.1%, RVOL 1.36), CSQR 17.48 (+14.5%, RVOL 1.42). AAON 5-minute: highs/lows 77.50/76.97 (16:30Z), 77.50/76.83, 77.10/76.80, 76.77/76.65 (16:45Z): drifting down on 6-9k shares per bar, below the 5-minute EMA(9) of about 77.0, still above the 75.30 low. That drift on thin volume is the opposite of the clean continuation I need; reward/risk to the 80.10 high is no better than at 11:43 (about 1.9R at a 75.20 stop). FAIL, unchanged. CSQR unchanged FAIL (below VWAP, EPS miss, no verified catalyst).
+- No news search this cycle (hourly at 12:12 ET). No order placed.
