@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-10 11:57 ET",
+  "as_of": "2026-11-10 12:06 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. SPY testing the 746.00 session low; no MR sector cause sourced; AAON volume dried up.",
+  "status_note": "Flat, all cash. SPY new session low (745.89): regime Falling, MR off. Momentum names AAON/CSQR still fail.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-10",
@@ -3809,6 +3809,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-10 11:57 ET",
       "equity": 402.45
+    },
+    {
+      "t": "2026-11-10 12:06 ET",
+      "equity": 402.45
     }
   ],
   "positions": [],
@@ -3995,15 +3999,15 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "SPY is retesting the session low: 5-minute lows 746.79, 746.61, 746.06 (16:45Z) vs the 746.00 low. Close to a new low, not yet below it. Treated as Falling-edge: MR off unless a sourced sector cause and clean bounce appear.",
+    "read": "FALLING: SPY broke the 746.00 session low (745.89 in the 16:55Z bar, 745.89 vs 746.00) with the heaviest volume of the last hour (207k). Per framework 4.1 mean reversion is OFF; momentum only for a fresh non-fading catalyst gap. AI hardware/semis selling off (SMH -2.4%).",
     "chips": [
       "SPY -0.8%",
       "QQQ -1.3%",
-      "SMH -2.2%",
-      "IWM -1.5%",
-      "XBI -2.1%",
-      "XRT -0.9%",
-      "XLE +0.3%"
+      "SMH -2.4%",
+      "IWM -1.2%",
+      "XBI -1.8%",
+      "XRT -1.0%",
+      "new session low"
     ]
   }
 }
@@ -11110,3 +11114,11 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - MR (cap >=$5B, down >=7%, RSI <40, a stricter screen than Tier B's 3.5% because the Tier B list is long and unsourced): 4 rows. ASTS 33.55 (-9.1%, RSI 39.9, space/satellite), IONS 28.49 (-8.1%, RSI 20.0), IREN 19.71 (-7.9%, RSI 36.0, crypto-miner/AI-hosting), HIMS 18.75 (-18.3%, RSI 36.3, company-specific). Gate 1 (dated, sourced sector-wide cause): FAIL for all four; HIMS and IONS are company-specific, ASTS has no source, IREN rides the unsourced crypto/AI-infrastructure weakness. Regime and gate 1 both block. No order.
 - Momentum (cap >=$2B, avg vol >=1M, up >=5%, RVOL >=1.3): AAON 76.77 (+22.1%, RVOL 1.36), CSQR 17.48 (+14.5%, RVOL 1.42). AAON 5-minute: highs/lows 77.50/76.97 (16:30Z), 77.50/76.83, 77.10/76.80, 76.77/76.65 (16:45Z): drifting down on 6-9k shares per bar, below the 5-minute EMA(9) of about 77.0, still above the 75.30 low. That drift on thin volume is the opposite of the clean continuation I need; reward/risk to the 80.10 high is no better than at 11:43 (about 1.9R at a 75.20 stop). FAIL, unchanged. CSQR unchanged FAIL (below VWAP, EPS miss, no verified catalyst).
 - No news search this cycle (hourly at 12:12 ET). No order placed.
+
+### Cycle 914 - ~12:03 ET (Tue Nov 10) - flat, no entries; new SPY session low, regime Falling, MR off
+- Trigger fired 17:03:06Z (scheduled 17:02Z; previous commit 16:53:17Z). Portfolio $402.45 all cash, BP $402.45, no positions, no stop checks apply.
+- Tape: SPY 746.62 (-0.80%), QQQ 670.30 (-1.3%), SMH 475.83 (-2.4%), XLE 62.14 (+0.3%), XLU 43.59 (-0.5%), IWM 278.60 (-1.4%), XBI 154.01 (-1.8%), XRT 91.99 (-0.9%).
+- Regime (SPY 5-minute): 16:45Z L 746.06; 16:50Z L 746.33; 16:55Z O 746.60 H 746.60 L 745.89 C 746.19 on 207k shares, the heaviest bar since 15:50Z. The 745.89 low is below the 746.00 session low from 15:50Z: a new session low. Per framework 4.1 the tape is Falling: mean reversion OFF, momentum only for names with a fresh non-fading catalyst gap.
+- MR (cap >=$5B, down >=3.5%, RSI <40): 28 rows (up from 22 at 11:43). New ones are the semis/AI-hardware complex (MU -3.8%, TSEM -4.1%, VICR -3.6%, GLW -4.2%, SMCI -4.0%), joining NVDA -6.7% (RSI 27), SNDK -5.3%, DELL -5.4%, ARM -4.6%, NBIS -5.6%, plus the crypto (COIN, MSTR, CRCL, IREN -8.6%, BMNR) and biotech (IONS -7.4%, ALNY, CORT, CAI) names. The sector-wide hit is now broad in AI hardware, but (a) the regime switch is Falling so MR is OFF, and (b) I still have no dated, sourced cause (searches at 11:16 and 11:33 returned nothing dated 2026-11-10; this cycle runs no search, the hourly one is at 12:12 ET). Nothing reaches the other gates. No order.
+- Momentum (cap >=$2B, avg vol >=1M, up >=5%, RVOL >=1.3): AAON 76.70 (+22.0%, RVOL 1.39), CSQR 17.29 (+13.2%, RVOL 1.46). Neither improved: AAON is flat at 76.7 on thin volume, still below 80.10 with the same reward/risk issue; CSQR is still below its VWAP, with an EPS miss and no verified catalyst. FAIL, unchanged. Neither is a fresh catalyst gap with a non-fading profile in a Falling tape.
+- No news search this cycle. No order placed.
