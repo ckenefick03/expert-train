@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-10 14:46 ET",
+  "as_of": "2026-11-10 14:56 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $402.45. 14:43 ET Tier C: SPY 748.56, range/Stabilizing. No candidate passes gates.",
+  "status_note": "Flat, all cash $402.45. 14:53 ET Tier C: SPY 749.39, rising; Stabilizing. No candidate passes gates.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-10",
@@ -3836,6 +3836,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-10 13:18 ET",
+      "equity": 402.45
+    },
+    {
+      "t": "2026-11-10 13:26 ET",
       "equity": 402.45
     },
     {
@@ -11293,3 +11297,11 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - MR (cap >=$5B, down >=5%, RSI <40): 12 names, the 11 from 14:33 ET plus IBRX (-5.9%, RSI 38.6, company-specific biotech). Gate 1 FAIL for all (no dated sourced sector cause; the 14:15 ET hourly search found none). No order.
 - Momentum: EMBJ (foreign ADR) FAIL; AAON 74.98 (+19.3%, RVOL 1.91) FAIL, now below the 75.30 level it had been holding, so also not holding; CSQR 18.05 FAIL (no verified catalyst); PRCH 22.11 (+7.1%, RVOL 1.88) FAIL (no verified catalyst, per the 14:33 ET check). No order.
 - Day minimum unmet; gates not loosened. Entries stop 15:30 ET (47 minutes). No news search (next hourly 15:12 ET). No order placed.
+
+### Cycle 929 - ~14:53 ET (Tue Nov 10) - flat, no entries (Tier C)
+- Trigger fired 19:52:47Z (scheduled 19:52Z; previous commit 19:43:43Z). Portfolio $402.45 all cash, BP $402.45, no positions.
+- Tape: SPY 749.39 (-0.4%), QQQ 673.15 (-0.9%), SMH 481.79 (-1.2%), XLE 62.33 (+0.6%), XLU 43.69, IWM 280.33 (-0.8%), XBI 154.40 (-1.6%), XRT 92.41 (-0.4%).
+- Regime (SPY 5-minute): lows 748.37, 748.17, 748.18, 748.52; closes 748.23, 748.61, 749.48. A higher low and a higher close, no new low. Stabilizing, drifting up; MR permitted subject to all four gates.
+- MR (cap >=$5B, down >=5%, RSI <40): 11 names (HUBS -5.4%, NVDA -6.5% RSI 27.4, TEAM, NBIS, CBRS, ASTS -10.6%, IONS -7.6% RSI 20.0, FPS, IREN -9.4%, HIMS -17.8%, IBRX -6.4%); FIG dropped off. Gate 1 FAIL for all (no dated sourced sector cause; hourly search at 14:15 ET found none, next due 15:12 ET). No order.
+- Momentum: EMBJ (foreign ADR) FAIL; AAON 75.64 (+20.3%, RVOL 1.95) unchanged FAIL (about 1.9R to the 80.10 high); CSQR 18.04 FAIL (EPS miss, no verified catalyst); PRCH 22.18 (+7.5%, RVOL 1.93) FAIL (no verified catalyst per the 14:33 ET check). No order.
+- Day minimum unmet; gates not loosened. Entries stop 15:30 ET (37 minutes). No order placed.
