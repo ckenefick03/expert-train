@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-10 12:36 ET",
+  "as_of": "2026-11-10 12:49 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. Range-bound near the lows; same 11 MR names, AAON/CSQR momentum names unchanged and failing.",
+  "status_note": "Flat, all cash. SPY new session low (744.87): regime Falling, MR off. AAON broke its 75.30 retest low: momentum setup dead for today.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-10",
@@ -3825,6 +3825,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-10 12:36 ET",
       "equity": 402.45
+    },
+    {
+      "t": "2026-11-10 12:49 ET",
+      "equity": 402.45
     }
   ],
   "positions": [],
@@ -4011,14 +4015,15 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Bouncing off the low: SPY lows 745.87, 746.29, 747.09, 746.91 (17:00Z-17:15Z); two higher lows then a slightly lower one. Closer to Stabilizing but not the ~3 clean higher lows; MR remains blocked by gate 1 regardless.",
+    "read": "FALLING: SPY broke to a new session low of 744.87 (17:40Z) on heavy volume (280k/244k per 5-minute bar), -1.0% on the day. AI hardware plus software (NOW, HUBS) and crypto names are all lower. MR OFF; momentum only for fresh non-fading catalyst gaps, and none qualifies.",
     "chips": [
-      "SPY -0.7%",
-      "QQQ -1.2%",
-      "SMH -2.0%",
-      "IWM -1.2%",
-      "XBI -1.5%",
-      "XRT -0.5%"
+      "SPY -1.0%",
+      "QQQ -1.7%",
+      "SMH -2.4%",
+      "IWM -1.0%",
+      "XBI -1.3%",
+      "XRT -0.6%",
+      "XLE +0.4%"
     ]
   }
 }
@@ -11158,3 +11163,11 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - MR (cap >=$5B, down >=5%, RSI <40): the same 11 names (NVDA -6.3%, DELL -6.0%, SNDK -5.5%, NBIS -5.9%, ASTS -10.4%, IONS -7.4%, FPS -6.5%, IREN -9.6%, HIMS -18.7%, FIG -5.7%, BMNR -6.0%). No dated, sourced sector cause for today; gate 1 FAIL for all. No order.
 - Momentum: AAON 75.41 (+19.9%, RVOL 1.54) sits on the 75.30 retest low without breaking it; CSQR 17.50 (+14.6%, RVOL 1.55), unchanged EPS-miss/VWAP failure. Both FAIL. No order.
 - No news search this cycle. No order placed.
+
+### Cycle 918 - ~12:46 ET (Tue Nov 10) - flat, no entries; new SPY low, regime Falling, AAON setup dead
+- Trigger scheduled 17:42Z, fired 17:46:26Z (about 4 minutes late; previous commit 17:33:36Z). Portfolio $402.45 all cash, BP $402.45, no positions, no stop checks apply.
+- Tape: SPY 745.22 (-0.98%), QQQ 667.62 (-1.7%), SMH 475.55 (-2.4%), XLE 62.20 (+0.4%), XLU 43.79 (0.0%), IWM 279.56 (-1.0%), XBI 154.81 (-1.3%), XRT 92.26 (-0.6%). The Nasdaq complex is leading lower; defensives (XLU flat, XLE up) hold.
+- Regime (SPY 5-minute): 17:30Z L 746.73; 17:35Z O 746.88 L 745.19 C 745.34 on 280k shares; 17:40Z L 744.87 C 745.72 on 244k. A new session low (744.87 vs 745.87) on the heaviest volume since 15:50Z: Falling. MR OFF; momentum only on a fresh non-fading catalyst gap.
+- MR (cap >=$5B, down >=5%, RSI <40): 18 rows, up from 11: the AI-hardware names (SNDK -6.2%, DELL -6.5%, ARM -5.3%, NVDA -6.7%, TSEM -5.1%, NBIS -6.7%) now joined by software (NOW -5.0% RSI 28.6, HUBS -5.2%), crypto (MSTR -5.3%, CRCL -5.7%, IREN -10.7%, BMNR -6.3%), RDDT -5.1%, ASTS -11.2%, IONS, FPS, FIG, HIMS (-19.6%). That is a broad risk-off across growth/AI. Blocked by the Falling regime; gate 1 still unsourced for today's move. No order.
+- Momentum (cap >=$2B, avg vol >=1M, up >=5%, RVOL >=1.3): 3 rows. New: EMBJ (Embraer S.A.) 82.64 (+7.2%, RVOL 1.30, cap $13.8B): a foreign ADR (Brazil), which fails the foreign-ADR rule outright; it also reported earnings this morning per the calendar, but the ADR rule decides. AAON 75.08 (+19.4%, RVOL 1.57): the 17:25Z bar printed a low of 74.985 and the 17:40Z bar 74.985, below the 75.30 retest low (a break of the base, even though the closes are 75.0-75.5 on thin volume): the pullback has failed to hold; the setup is dead for today, per the condition I logged at 11:43 and 12:23 ET. CSQR 17.52 (+14.7%): unchanged FAIL. No order.
+- No news search this cycle (done at 12:14 ET). No order placed.
