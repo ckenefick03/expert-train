@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-10 11:27 ET",
+  "as_of": "2026-11-10 11:40 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. Momentum candidate CSQR rejected (below VWAP, earnings EPS miss, no verified catalyst); MR names fail gates.",
+  "status_note": "Flat, all cash. Tier B MR: broad list, no sourced sector cause; momentum AAON rejected (no held higher low, restatement/material weakness risk), CSQR rejected.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-10",
@@ -3797,6 +3797,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-10 11:27 ET",
       "equity": 402.45
+    },
+    {
+      "t": "2026-11-10 11:40 ET",
+      "equity": 402.45
     }
   ],
   "positions": [],
@@ -3983,14 +3987,15 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Stabilizing / range: SPY 5-minute lows 746.78, 747.28, 747.45, 747.08 (the 16:15Z bar dipped under the prior low), so the higher-low sequence is not clean any more. Price 747.4 (-0.7%). MR allowed only if gates pass.",
+    "read": "Range / Stabilizing at best: SPY 748.3 (-0.6%) with 5-minute lows 747.08, 746.85, 746.80 (16:15-16:25Z), above the 746.00 session low. Not clean higher lows; not making new lows. MR gated by its four gates.",
     "chips": [
-      "SPY -0.7%",
-      "QQQ -0.9%",
-      "SMH -1.1%",
-      "IWM -1.3%",
-      "XBI -2.0%",
-      "XRT -1.0%"
+      "SPY -0.6%",
+      "QQQ -0.8%",
+      "SMH -1.0%",
+      "IWM -1.2%",
+      "XBI -1.9%",
+      "XRT -0.9%",
+      "XLE +0.2%"
     ]
   }
 }
@@ -11064,3 +11069,16 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
   - Result: FAIL on gates 1 (VWAP) and 2 (catalyst). No order. Follow-up: if CSQR reclaims VWAP with a sourced catalyst, re-check.
 - News search: only the CSQR query this cycle (the candidate-triggered kind); the hourly market search was done at 11:16 ET. No order placed.
 - Clock: Tier A ends 11:30 ET; Tier B (>=3.5% intraday, RSI<40) from 11:30 ET.
+
+### Cycle 911 - ~11:33 ET (Tue Nov 10) - flat, no entries; Tier B open, wide MR list, two momentum candidates rejected
+- Trigger fired 16:33:12Z (scheduled 16:32Z; previous commit 16:23:24Z). Portfolio $402.45 all cash, BP $402.45, no positions, no stop checks apply.
+- Tape: SPY 748.30 (-0.58%), QQQ 673.92 (-0.8%), SMH 482.61 (-1.0%), XLE 62.04 (+0.2%), XLU 43.57 (-0.5%), IWM 279.16 (-1.2%), XBI 153.87 (-1.9%), XRT 91.97 (-0.9%). No sector ETF down >=2%.
+- Regime (SPY 5-minute): lows 747.28, 747.45, 747.08, 746.85, 746.80 (16:05Z-16:25Z). Drifting sideways to slightly lower, above the 746.00 session low; not a clean higher-low sequence and no new session low. Treated as range / stabilizing at best; MR only through its four gates.
+- MR Tier B (cap >=$5B, down >=3.5%, RSI(14) <40): 20 rows (the first time the Tier B screen has been run today). Down 3.6%-8.2%: SNDK, CAT, DELL, NVDA (-5.2%, RSI 27), ALNY, COIN, MSTR, RDDT, CORT, CRCL, GIL, ASTS (-8.2%), IONS (-8.2%, RSI 20), CAI, FPS, IREN (-5.6%), HIMS (-17.5%, company-specific), FIG, BMNR (-5.0%), XP. Clusters: crypto-linked (COIN, MSTR, CRCL, IREN, BMNR), AI hardware/semis (NVDA, SNDK, DELL), biotech (IONS, ALNY, CORT, CAI).
+  - Gate 1 (external, dated, sourced SECTOR-wide cause) for every name: FAIL. The crypto cluster is the one real sector move, but my search (bitcoin/crypto stocks, Nov 10) returned only July 31 / May 2026, 2025 and undated items about earlier selloffs; none is dated Nov 10, so I cannot name a verified cause and I do not use the undated ones. SMH is -1.0% and XBI -1.9%, both under the 2% sector bar, with no source. HIMS (-17.5%) is plainly company-specific. Therefore no MR candidate reaches the other gates.
+  - No order.
+- Momentum (cap >=$2B, avg vol >=1M, up >=5%, RVOL >=1.3): 2 rows.
+  - AAON 77.32 (+23.0% vs 62.87, RVOL 1.32, cap $5.18B). Gate 2 catalyst: the calendar shows Q3 reported after the close on Nov 9 with EPS 0.83 vs 0.57 estimated (a beat); a search surfaced the company's SEC 8-K (revenue +84.1% to $707.4M, raised full-year outlook) but ALSO a restatement of Q1/Q2 2026 and a disclosed material weakness in internal controls, and no source on the price reaction. Catalyst: verified as an earnings beat with guidance raise, but with a restatement/control-weakness risk. Gate 1: +23.6 pts over SPY, peers not checked; fading? day high 80.10 (15:20Z), now 77.32, given back about 16% of the gain (inside the half-gain limit). Gate 3 (held pullback with a higher low): 10-minute lows 77.69, 77.56, 77.00, 75.80, 76.19, 77.12, 76.18, 75.30 (16:20Z bar): the most recent low is the lowest since 14:50, so there is no clean higher low. A first bar that opened 71.59, spiked to 74.74 and cratered to 67.87 also signals a violently two-sided open. Target: 2R above a 75.3 stop is about 81.3, above the 80.10 day high, with no named anchor; fail on gate 3 and the target. No order. Follow-up: AAON stays on the watch list if it prints a clean higher low above 76 with VWAP support.
+  - CSQR 17.67 (+15.7%, RVOL 1.38): still the rejection from Cycle 910 (Q3 EPS -0.58 vs -0.49 estimate, a miss, no sourced reason for the pop; price below the 5-minute VWAP of about 17.86 at the time). Unchanged; FAIL.
+- Search count this cycle: 2 (crypto, AAON), both candidate-triggered. No order placed.
+- Clock: 4 hours until the 15:30 ET cutoff; Tier B runs to 14:30 ET.
