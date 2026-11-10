@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-10 14:07 ET",
+  "as_of": "2026-11-10 14:20 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $402.45. 14:06 ET: SPY 747.87, rising lows, no new low; Stabilizing. No candidate passes gates.",
+  "status_note": "Flat, all cash $402.45. 14:15 ET hourly: SPY ~747.8, rising lows; Stabilizing. News search found no dated Nov 10 cause. No candidate passes gates.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-10",
@@ -3836,6 +3836,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-10 13:18 ET",
+      "equity": 402.45
+    },
+    {
+      "t": "2026-11-10 13:26 ET",
       "equity": 402.45
     },
     {
@@ -11244,3 +11248,12 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - MR (cap >=$5B, down >=5%, RSI <40): 11 names (HUBS -5.1%, NVDA -5.9% RSI 27.4, NBIS, CBRS, CRCL, ASTS -12.7%, IONS -7.0% RSI 20.0, FPS, IREN -10.0%, HIMS -17.7%, FIG). Same names as 13:53 ET minus DELL, TEAM, RDDT (recovered above -5%). No dated, sourced sector cause (last hourly search found none); gate 1 FAIL for all. No order.
 - Momentum: EMBJ 82.44 (foreign ADR) FAIL; AAON 76.10 (+21.0%, RVOL 1.82) unchanged FAIL (about 1.9R); PRCH 22.05 (+6.8%, RVOL 1.39) no verified catalyst, FAIL; CSQR 18.05 (+18.2%, RVOL 1.95) no verified catalyst (EPS miss), FAIL. No order.
 - No news search (hourly one due 14:12 ET, next cycle). No order placed.
+
+### Cycle 925 - ~14:15 ET (Tue Nov 10) - hourly full cycle; flat, no entries
+- Trigger "Trading cycle (hourly)" fired 19:15:15Z (scheduled 19:12Z, about 3 minutes late; previous commit 19:06:19Z). Portfolio $402.45 all cash, BP $402.45, no positions, no open orders today. No stop checks apply.
+- Tape: SPY 747.80 (-0.65%), QQQ 671.26 (-1.2%), SMH 480.67 (-1.4%), XLE 62.24 (+0.5%), XLU 43.64 (-0.4%), IWM 279.91 (-0.9%), XBI 154.55 (-1.5%), XRT 92.23 (-0.6%).
+- Regime (SPY 5-minute): lows 747.04, 747.73, 747.67, 747.80, 747.88; high 749.11 at 19:10Z, close 747.98. Rising lows, no new low since 745.61. Stabilizing, so MR is permitted subject to its four gates.
+- News (hourly search, two standard queries): (1) market selloff Nov 10 2026: no reliable dated explanation. One headline mentions an AI-stock selloff plus signs of a weakening labor market but is dated only "November 11" with no year, so unverified; a Nvidia item reads as 2025. (2) NVDA/AI-chip selloff: only dated hit is the Nov 5 2026 NVDA -9.3% AI-chip selloff, attributed to election-related uncertainty and data-center demand worries (context, not a dated Nov 10 cause). Nothing citable as a dated, sourced sector cause for today's moves.
+- MR (cap >=$5B, down >=5%, RSI <40): 10 names (HUBS -5.4%, NVDA -5.7% RSI 27.4, TEAM -5.2% RSI 27.6, NBIS -6.3%, ASTS -12.3%, IONS -7.0% RSI 20.0, FPS, IREN -10.0%, HIMS -18.3%, FIG). Gate 1 FAIL for all (no dated sourced sector cause); NVDA/TEAM/IONS also gate 4 (RSI in the 20s, multi-day declines). No order.
+- Momentum: EMBJ 82.62 (foreign ADR) FAIL; AAON 75.74 (+20.5%, RVOL 1.84) unchanged FAIL (about 1.9R, thin volume); PRCH 22.03 (+6.7%, RVOL 1.44) and CSQR 18.04 (+18.1%, RVOL 2.00): no verified catalyst, FAIL. No order.
+- Day minimum (1 trade) unmet; gates are not loosened for it. Tier C opens 14:30 ET (only if every gate passes); entries stop 15:30 ET. No order placed.
