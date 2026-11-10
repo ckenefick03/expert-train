@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-10 08:46 ET",
+  "as_of": "2026-11-10 08:56 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -3740,6 +3740,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-10 08:46 ET",
+      "equity": 402.45
+    },
+    {
+      "t": "2026-11-10 08:56 ET",
       "equity": 402.45
     }
   ],
@@ -10902,3 +10906,8 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Disclosure: no preview_scan run. No entry is allowed before 10:00 ET (momentum 10:30 ET) and scan fields reflect the regular session, so a scan could not lead to an order; deliberate skip.
 - Pre-market (extended-hours last trades vs Monday's close, wide spreads, indicative): SPY 748.13 (-0.6%), QQQ 670.89 (-1.2%), SMH 475.79 (-2.4%). The soft tape has deepened since the 8:31 brief (SPY was -0.3%, SMH -2.0%). No verified news driver yet (nothing found this morning).
 - Next: first live cycles after the open; the regime label comes from SPY 5-minute bars, and the MR window opens at 10:00 ET.
+
+### Cycle 897 - ~8:54 ET (Tue Nov 10) - flat; before the entry window, scans skipped
+- Trigger fired 13:53:53Z (scheduled 13:52Z; previous commit 13:45:02Z). Portfolio $402.45 all cash, BP $402.45, no positions, no stop checks apply.
+- Disclosure: no preview_scan run; no entry is allowed before 10:00 ET (momentum 10:30 ET). Deliberate skip.
+- Pre-market (indicative, wide spreads): SPY 748.13 (-0.6%), QQQ 670.98 (-1.2%), SMH 475.92 (-2.4%). Unchanged from the 8:44 reading. No verified news driver.
