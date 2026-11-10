@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-10 12:06 ET",
+  "as_of": "2026-11-10 12:18 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. SPY new session low (745.89): regime Falling, MR off. Momentum names AAON/CSQR still fail.",
+  "status_note": "Flat, all cash. SPY made another new low (745.87) then bounced; regime Falling-to-bounce, MR off. No candidate passes.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-10",
@@ -3813,6 +3813,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-10 12:06 ET",
       "equity": 402.45
+    },
+    {
+      "t": "2026-11-10 12:18 ET",
+      "equity": 402.45
     }
   ],
   "positions": [],
@@ -3999,15 +4003,15 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "FALLING: SPY broke the 746.00 session low (745.89 in the 16:55Z bar, 745.89 vs 746.00) with the heaviest volume of the last hour (207k). Per framework 4.1 mean reversion is OFF; momentum only for a fresh non-fading catalyst gap. AI hardware/semis selling off (SMH -2.4%).",
+    "read": "FALLING with a first bounce: SPY printed 745.87 at 17:00Z (a new session low), then a higher low 746.29 (17:05Z) and closed 747.07. One higher low is not the ~3 needed for Stabilizing, so MR stays OFF. AI hardware selloff (NVDA -6.3%, SMH -2.1%) continues; a Nov 5 AI-chip selloff is documented in one source, no source for today.",
     "chips": [
-      "SPY -0.8%",
-      "QQQ -1.3%",
-      "SMH -2.4%",
-      "IWM -1.2%",
-      "XBI -1.8%",
-      "XRT -1.0%",
-      "new session low"
+      "SPY -0.7%",
+      "QQQ -1.2%",
+      "SMH -2.1%",
+      "IWM -1.0%",
+      "XBI -1.5%",
+      "XRT -0.6%",
+      "XLE +0.3%"
     ]
   }
 }
@@ -11122,3 +11126,12 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - MR (cap >=$5B, down >=3.5%, RSI <40): 28 rows (up from 22 at 11:43). New ones are the semis/AI-hardware complex (MU -3.8%, TSEM -4.1%, VICR -3.6%, GLW -4.2%, SMCI -4.0%), joining NVDA -6.7% (RSI 27), SNDK -5.3%, DELL -5.4%, ARM -4.6%, NBIS -5.6%, plus the crypto (COIN, MSTR, CRCL, IREN -8.6%, BMNR) and biotech (IONS -7.4%, ALNY, CORT, CAI) names. The sector-wide hit is now broad in AI hardware, but (a) the regime switch is Falling so MR is OFF, and (b) I still have no dated, sourced cause (searches at 11:16 and 11:33 returned nothing dated 2026-11-10; this cycle runs no search, the hourly one is at 12:12 ET). Nothing reaches the other gates. No order.
 - Momentum (cap >=$2B, avg vol >=1M, up >=5%, RVOL >=1.3): AAON 76.70 (+22.0%, RVOL 1.39), CSQR 17.29 (+13.2%, RVOL 1.46). Neither improved: AAON is flat at 76.7 on thin volume, still below 80.10 with the same reward/risk issue; CSQR is still below its VWAP, with an EPS miss and no verified catalyst. FAIL, unchanged. Neither is a fresh catalyst gap with a non-fading profile in a Falling tape.
 - No news search this cycle. No order placed.
+
+### Cycle 915 - ~12:14 ET (Tue Nov 10) - hourly full cycle; flat, no entries
+- Hourly trigger scheduled 17:12Z, fired 17:14:00Z (about 2 minutes late; previous commit 17:03:38Z). Portfolio $402.45 all cash, BP $402.45, no positions, no open orders; no stop checks apply.
+- Tape: SPY 747.27 (-0.72%), QQQ 670.81 (-1.2%), SMH 477.28 (-2.1%), XLE 62.16 (+0.3%), XLU 43.68 (-0.25%), IWM 279.12 (-1.2%), XBI 154.56 (-1.5%), XRT 92.19 (-0.6%), NVDA 167.30 (-6.4%). The AI-hardware complex is the weakness; the broad market is -0.7%.
+- Regime (SPY 5-minute): 16:55Z L 745.89; 17:00Z L 745.87 (a fresh session low by 2 cents) C 746.66; 17:05Z L 746.29 C 747.07. One higher low after the final low: not 3. Falling-with-a-bounce; MR stays OFF per framework 4.1.
+- News (hourly search, two queries): (1) Nvidia/AI-chip selloff for Nov 10: found a single dated 2026 source, heygotrade.com, "Nvidia (NVDA) falls 9.3% as AI chip stocks slide (Nov 5)": a selloff on Nov 5, 2026, said to be tied to election-related uncertainty and data-center demand worries, not company-specific news. That is five days old and a different session; NVDA closed Mon at 178.67 and is -6.4% today, so today's drop is a new leg that no source explains. (2) Midday market wrap for today: nothing dated Nov 10; results were Sep 14, Jul 30 and 2025. Therefore: context only, NOT a cited cause for any gate today. The first query also returned an undated ABC piece saying chip stocks have been weak on and off for about a month; also not used.
+- MR (Tier B window, cap >=$5B, down >=5%, RSI <40): 11 rows: SNDK -5.2%, DELL -5.3%, NVDA -6.3% (RSI 27.4), NBIS -5.4%, CRCL -5.0%, ASTS -8.3%, IONS -6.3% (RSI 20.0), FPS -5.5%, IREN -8.5%, HIMS -18.2%, BMNR -6.0%. Blocked first by the regime switch (Falling, MR OFF), and gate 1 (dated, sourced, sector-wide cause for today's move) fails for every name. NVDA and the AI cluster fail gate 4 too: a multi-day decline (Nov 5 -9.3%, then a further -6.3% today), so it is a falling knife rather than an exhausted selloff, with no clean higher lows. No order.
+- Momentum (cap >=$2B, avg vol >=1M, up >=5%, RVOL >=1.3): AAON 75.68 (+20.4%, RVOL 1.49) and CSQR 17.34 (+13.5%, RVOL 1.50). AAON slid to 75.75 and is now below the 5-minute EMA(20) region (76.1 at 11:43 ET) and close to the 75.30 retest low; the 2R target logic is worse, and an SPY at new lows with AI-infrastructure names under pressure is a poor tape for it. CSQR unchanged. Both FAIL. No order.
+- No order placed. Next: 12:22 ET; Tier B runs to 14:30 ET.
