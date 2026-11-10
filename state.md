@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-10 11:19 ET",
+  "as_of": "2026-11-10 11:27 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. Regime now Stabilizing (3 higher lows), but the only MR hit (IONS) fails gates; momentum scan empty.",
+  "status_note": "Flat, all cash. Momentum candidate CSQR rejected (below VWAP, earnings EPS miss, no verified catalyst); MR names fail gates.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-10",
@@ -3793,6 +3793,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-10 11:19 ET",
       "equity": 402.45
+    },
+    {
+      "t": "2026-11-10 11:27 ET",
+      "equity": 402.45
     }
   ],
   "positions": [],
@@ -3979,15 +3983,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "STABILIZING: after the 746.00 low at 10:50 ET SPY printed higher 5-minute lows (746.13, 746.78, 747.28, 747.45) and no new low. MR is allowed by the regime switch; each name still needs all four gates. Tape remains below Monday's close (-0.6%).",
+    "read": "Stabilizing / range: SPY 5-minute lows 746.78, 747.28, 747.45, 747.08 (the 16:15Z bar dipped under the prior low), so the higher-low sequence is not clean any more. Price 747.4 (-0.7%). MR allowed only if gates pass.",
     "chips": [
-      "SPY -0.6%",
-      "QQQ -0.7%",
-      "SMH -0.6%",
+      "SPY -0.7%",
+      "QQQ -0.9%",
+      "SMH -1.1%",
       "IWM -1.3%",
-      "XBI -1.9%",
-      "XRT -0.9%",
-      "higher lows"
+      "XBI -2.0%",
+      "XRT -1.0%"
     ]
   }
 }
@@ -11048,3 +11051,16 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - MR Tier A (cap >=$5B, down >=5%, RSI <35): 1 row, IONS 28.26 (-8.8%, RSI 20.0, volume 1.87M vs avg 3.36M, cap $5.15B). Gate 1 (external dated sourced SECTOR-wide cause): FAIL; XBI is -1.9%, below the 2% bar, and no source was found; IONS's own -22% on Monday and further fall today read as company-specific. Gate 4 (not a multi-day downtrend, clean 5-minute higher lows): FAIL while it is still making new lows after a -22% day. No order.
 - Momentum (cap >=$2B, avg vol >=1M, up >=5%, RVOL >=1.3): 0 rows. No candidate. Follow-ups on skipped candidates from yesterday: none on today's scans.
 - No order placed. Tier A closes 11:30 ET; Tier B (>=3.5% intraday or >=7% over 3 days) opens then.
+
+### Cycle 910 - ~11:23 ET (Tue Nov 10) - flat, no entries; first momentum candidate checked and rejected
+- Trigger fired 16:22:27Z (scheduled 16:22Z; previous commit 16:16:07Z, about 6.5 minutes earlier, so no dedupe skip). Portfolio $402.45 all cash, BP $402.45, no positions, no stop checks apply.
+- Tape: SPY 747.42 (-0.70%), QQQ 673.49 (-0.9%), SMH 481.86 (-1.1%), XLE 61.93 (0.0%), XLU 43.47 (-0.7%), IWM 278.85 (-1.3%), XBI 153.80 (-2.0%), XRT 91.87 (-1.0%). XBI is exactly at the 2% mark (-1.98%): a biotech sector-down reading for the first time today.
+- Regime (SPY 5-minute lows): 746.78, 747.28, 747.45, 747.08 (16:15Z bar). The last bar undercut the prior low, so the clean higher-low sequence from 11:16 is broken; still above the 746.00 session low. Range-bound / Stabilizing-at-best. MR remains gated by its four gates.
+- MR Tier A (cap >=$5B, down >=5%, RSI <35): 2 rows. NVDA 168.98 (-5.4%, RSI 27.4, volume 189M vs avg 127M): SMH is -1.1%, no sector-wide 2% drop and no dated source for the cause, gate 1 FAIL. IONS 28.30 (-8.7%, RSI 20.0): now XBI is -2.0%, so the "sector down >=2%" test is borderline for biotech, but I have no dated source for a biotech-wide cause (a sector move without a source is not a gate pass), IONS also had a -22% company-specific day yesterday and is still making new lows, so gates 1 and 4 FAIL. No order.
+- Momentum (cap >=$2B, avg vol >=1M, up >=5%, RVOL >=1.3): 1 row, CSQR (Csquare) 17.56 (+15.0% vs 15.27 close, RVOL 1.31, cap $2.54B). Gate checks:
+  - Gate 1 (separation, not fading): +15.7 pts over SPY (-0.7%), but fading: day high 18.34 at 11:05 ET, now 17.56 (given back about 26% of the gain, under the half-gain limit), and price is BELOW the 5-minute VWAP of 17.86 (the rule needs price above the gap-day VWAP). FAIL on the VWAP condition. RVOL 1.31 only just clears 1.3 and bar volumes undercount, so the confirmation is borderline.
+  - Gate 2 (verified catalyst): the company reported Q3 after the close on Nov 9; get_earnings_results shows EPS -0.58 vs -0.49 estimated, a miss. I found no source for why the stock is +15%; revenue/guidance are unknown, and my search returned only quote pages (one stale, dated Nov 3), nothing on the reaction. UNVERIFIED, so FAIL.
+  - Gate 3 (held pullback with higher low): morning lows 16.86 / 16.98; pullback lows 17.66, 17.44 (16:05Z), so the pullback is holding above the morning base; EMA(20, 5-min) 17.53 vs price 17.56, which is on the line. Not a clean rising-EMA hold.
+  - Result: FAIL on gates 1 (VWAP) and 2 (catalyst). No order. Follow-up: if CSQR reclaims VWAP with a sourced catalyst, re-check.
+- News search: only the CSQR query this cycle (the candidate-triggered kind); the hourly market search was done at 11:16 ET. No order placed.
+- Clock: Tier A ends 11:30 ET; Tier B (>=3.5% intraday, RSI<40) from 11:30 ET.
