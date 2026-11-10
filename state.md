@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-10 13:06 ET",
+  "as_of": "2026-11-10 13:18 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. SPY off the 744.87 low with 3 higher lows (Stabilizing); no MR candidate has a sourced sector cause; AAON bounced but still under 2R.",
+  "status_note": "Flat, all cash. News search found nothing dated today; MR list (17) unsourced; AAON/CSQR/EMBJ momentum names fail.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-10",
@@ -3833,6 +3833,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-10 13:06 ET",
       "equity": 402.45
+    },
+    {
+      "t": "2026-11-10 13:18 ET",
+      "equity": 402.45
     }
   ],
   "positions": [],
@@ -4019,15 +4023,15 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "STABILIZING: after the 744.87 low (17:40Z) SPY printed higher 5-minute lows 745.07, 745.51, 746.13 (17:45Z-17:55Z) and closes 745.86, 746.25, 746.63; it is -0.9% on the day, off the low. MR is allowed by the regime switch; every name still needs all 4 gates, and none has a sourced sector cause.",
+    "read": "Range above the 744.87 low: SPY lows 745.07, 745.51, 746.13, then 745.72 (18:00Z bar), so the 3-higher-lows sequence broke by a few cents; SPY -0.9%, closes near 746. Range / weakly Stabilizing; MR needs a sourced sector cause, none exists.",
     "chips": [
       "SPY -0.9%",
       "QQQ -1.5%",
-      "SMH -1.9%",
-      "IWM -1.2%",
-      "XBI -1.7%",
-      "XRT -0.7%",
-      "XLE +0.3%"
+      "SMH -2.0%",
+      "IWM -1.1%",
+      "XBI -1.4%",
+      "XRT -0.6%",
+      "XLE +0.4%"
     ]
   }
 }
@@ -11183,3 +11187,12 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - MR (cap >=$5B, down >=7%, RSI <40; the narrower screen, as the broad one is a long unsourced list): 3 rows. ASTS 32.68 (-11.4%, RSI 39.9; satellite/space), IREN 19.27 (-10.0%, RSI 36.0; bitcoin miner/AI-hosting), HIMS 18.57 (-19.1%, RSI 36.3; telehealth, company-specific). Gate 1 (external, dated, sourced, sector-wide cause): FAIL for all three. HIMS is company-specific (an automatic fail). ASTS and IREN have no source for their drop; IREN rides the unsourced crypto/AI-infrastructure weakness. I did not run a news search for them: with no sourced cause the result cannot be a pass, and the hourly search (13:12 ET) will look again at the sector causes. No order.
 - Momentum (cap >=$2B, avg vol >=1M, up >=5%, RVOL >=1.3): EMBJ 82.41 (+6.9%): foreign ADR, FAIL. AAON 76.73 (+22.0%, RVOL 1.62): it recovered from the 74.985 undercut (bounced to 76.7) but that does not repair the setup: the stop would again sit below 74.98, risk about 1.7 (2.2%), reward to the 80.10 high about 3.4 = 1.9R, with the failed hold of 75.30 behind it. FAIL (under 2R, hold broke and recovered). CSQR 17.59 (+15.2%): unchanged FAIL (EPS miss, no verified catalyst, below VWAP). No order.
 - No order placed. Hourly news search due at 13:12 ET.
+
+### Cycle 920 - ~13:13 ET (Tue Nov 10) - hourly full cycle; flat, no entries
+- Hourly trigger scheduled 18:12Z, fired 18:12:41Z (on slot; previous commit 18:03:35Z). Portfolio $402.45 all cash, BP $402.45, no positions, no open orders; no stop checks apply.
+- Tape: SPY 746.06 (-0.88%), QQQ 669.06 (-1.5%), SMH 477.92 (-2.0%), XLE 62.17 (+0.4%), XLU 43.74 (-0.1%), IWM 279.51 (-1.1%), XBI 154.79 (-1.4%), XRT 92.26 (-0.6%). Unchanged range: the Nasdaq complex is the weak spot; defensives and energy hold.
+- Regime (SPY 5-minute): 17:45Z L 745.07; 17:50Z L 745.51; 17:55Z L 746.13; 18:00Z L 745.72 (a lower low by 0.41, closes 746.17); the 18:05Z bar has only 8.6k shares so far (partial). Still above the 744.87 low and no new low; the three-higher-lows count broke by a few cents. Treated as a range off the low.
+- News (hourly search, two queries): (1) market selloff/tech reason for Nov 10: nothing dated 2026-11-10; the most recent 2026 item is Oct 22 ("Nasdaq plunges 2.6% as AI spending fears spark tech selloff"), with earlier 2026 pieces from February (software selloff on AI-disruption fears). (2) NOW/HUBS software drop: undated Barchart piece about a UBS downgrade of ServiceNow, a rate-pressure item, and 2026 background (Jan HubSpot -11.5%, "ServiceNow has lost more than 40% in 2026"). None is dated Nov 10, so none is cited as a cause. The theme (AI-disruption/AI-spending fears hitting tech/software) recurs across months, which fits a persistent multi-week downtrend for these names: that counts against gate 4 (not a multi-week downtrend) for software and AI hardware, and it is still no sourced cause for today.
+- MR (cap >=$5B, down >=5%, RSI <40): 17 rows: AI hardware (SNDK, DELL, ARM, NVDA, NBIS), software (HUBS -5.5%, NOW -5.1% RSI 28.6, TEAM -5.6% RSI 27.6, RDDT, FIG), crypto (CRCL, IREN -10.1%, BMNR), ASTS -12.1%, IONS, FPS, HIMS -19.0%. Gate 1 FAIL for all (no dated sector cause); gate 4 also fails for NVDA, NOW, TEAM (multi-week/multi-day declines and RSI already in the 20s: falling knives); HIMS and IONS are company-specific. No order.
+- Momentum: EMBJ 82.38 (+6.9%, RVOL 1.38): foreign ADR (Brazil), FAIL. AAON 76.03 (+20.9%, RVOL 1.65): unchanged FAIL (about 1.9R to the 80.10 high; the 75.30 hold was broken and recovered; thin volume). CSQR 17.60 (+15.2%, RVOL 1.64): unchanged FAIL (EPS miss, no verified catalyst). No order.
+- No order placed.
