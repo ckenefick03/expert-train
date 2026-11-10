@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-10 08:33 ET",
+  "as_of": "2026-11-10 08:46 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. Pre-open Nov 10: futures-proxy ETFs soft (SMH -2.0% pre-market). Prior day: FRVO momentum -2.91.",
+  "status_note": "Flat, all cash. Pre-market soft (SPY -0.6%, SMH -2.4%). Entries not open until 10:00 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-10",
@@ -3736,6 +3736,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-10 08:33 ET",
+      "equity": 402.45
+    },
+    {
+      "t": "2026-11-10 08:46 ET",
       "equity": 402.45
     }
   ],
@@ -10892,3 +10896,9 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Watch list, mean reversion (nothing qualifies in advance; each needs all 4 gates at the time): (1) SMH-complex names, e.g. NVDA, if SMH is down >=2% on the session and a dated sector-wide cause is sourced; (2) TTD only if the post-earnings drop becomes a sector-wide ad-tech move (a single-company earnings reaction is a company-specific automatic FAIL); (3) energy E&Ps (MUR, MGY, SM) if XLE is down >=2% with a sourced cause (XLE is -0.8% pre-market now); (4) IONS and (5) ARWR: ARWR reports Nov 12, within 2 sessions, so AVOID.
 - Watch list, momentum (needs separation from SPY and peers, verified catalyst, held pullback after 10:30 ET): (1) FRVO 11.24 pre-market vs 11.38 close; I exited at 10.88 yesterday, a re-entry would need a new higher low and a catalyst I can source; (2) WRBY 29.91 (-1.0%) and (3) QXO 13.74 (-0.3%) fade: no catalyst, and QXO reports Nov 12, so AVOID; (4) any fresh gap-up names with an earnings or news catalyst from today's morning reporters (e.g. WIX, ONON, TDG beat their estimates per the calendar, but I did not check price reaction) once they show a held pullback; (5) names from the morning scan. I did not run a pre-market preview_scan: scan fields reflect the regular session and would mostly show Monday's data, so a pre-market scan would not be informative. Disclosed as a scope limit.
 - No order placed (pre-open is read-only).
+
+### Cycle 896 - ~8:44 ET (Tue Nov 10) - flat; before the entry window, scans skipped
+- Trigger fired 13:44:32Z (scheduled 13:42Z, about 2.5 minutes late; previous commit 13:30:49Z). Portfolio $402.45 all cash, BP $402.45, no positions, no stop checks apply.
+- Disclosure: no preview_scan run. No entry is allowed before 10:00 ET (momentum 10:30 ET) and scan fields reflect the regular session, so a scan could not lead to an order; deliberate skip.
+- Pre-market (extended-hours last trades vs Monday's close, wide spreads, indicative): SPY 748.13 (-0.6%), QQQ 670.89 (-1.2%), SMH 475.79 (-2.4%). The soft tape has deepened since the 8:31 brief (SPY was -0.3%, SMH -2.0%). No verified news driver yet (nothing found this morning).
+- Next: first live cycles after the open; the regime label comes from SPY 5-minute bars, and the MR window opens at 10:00 ET.
