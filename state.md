@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-10 12:49 ET",
+  "as_of": "2026-11-10 13:06 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. SPY new session low (744.87): regime Falling, MR off. AAON broke its 75.30 retest low: momentum setup dead for today.",
+  "status_note": "Flat, all cash. SPY off the 744.87 low with 3 higher lows (Stabilizing); no MR candidate has a sourced sector cause; AAON bounced but still under 2R.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-10",
@@ -3829,6 +3829,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-10 12:49 ET",
       "equity": 402.45
+    },
+    {
+      "t": "2026-11-10 13:06 ET",
+      "equity": 402.45
     }
   ],
   "positions": [],
@@ -4015,15 +4019,15 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "FALLING: SPY broke to a new session low of 744.87 (17:40Z) on heavy volume (280k/244k per 5-minute bar), -1.0% on the day. AI hardware plus software (NOW, HUBS) and crypto names are all lower. MR OFF; momentum only for fresh non-fading catalyst gaps, and none qualifies.",
+    "read": "STABILIZING: after the 744.87 low (17:40Z) SPY printed higher 5-minute lows 745.07, 745.51, 746.13 (17:45Z-17:55Z) and closes 745.86, 746.25, 746.63; it is -0.9% on the day, off the low. MR is allowed by the regime switch; every name still needs all 4 gates, and none has a sourced sector cause.",
     "chips": [
-      "SPY -1.0%",
-      "QQQ -1.7%",
-      "SMH -2.4%",
-      "IWM -1.0%",
-      "XBI -1.3%",
-      "XRT -0.6%",
-      "XLE +0.4%"
+      "SPY -0.9%",
+      "QQQ -1.5%",
+      "SMH -1.9%",
+      "IWM -1.2%",
+      "XBI -1.7%",
+      "XRT -0.7%",
+      "XLE +0.3%"
     ]
   }
 }
@@ -11171,3 +11175,11 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - MR (cap >=$5B, down >=5%, RSI <40): 18 rows, up from 11: the AI-hardware names (SNDK -6.2%, DELL -6.5%, ARM -5.3%, NVDA -6.7%, TSEM -5.1%, NBIS -6.7%) now joined by software (NOW -5.0% RSI 28.6, HUBS -5.2%), crypto (MSTR -5.3%, CRCL -5.7%, IREN -10.7%, BMNR -6.3%), RDDT -5.1%, ASTS -11.2%, IONS, FPS, FIG, HIMS (-19.6%). That is a broad risk-off across growth/AI. Blocked by the Falling regime; gate 1 still unsourced for today's move. No order.
 - Momentum (cap >=$2B, avg vol >=1M, up >=5%, RVOL >=1.3): 3 rows. New: EMBJ (Embraer S.A.) 82.64 (+7.2%, RVOL 1.30, cap $13.8B): a foreign ADR (Brazil), which fails the foreign-ADR rule outright; it also reported earnings this morning per the calendar, but the ADR rule decides. AAON 75.08 (+19.4%, RVOL 1.57): the 17:25Z bar printed a low of 74.985 and the 17:40Z bar 74.985, below the 75.30 retest low (a break of the base, even though the closes are 75.0-75.5 on thin volume): the pullback has failed to hold; the setup is dead for today, per the condition I logged at 11:43 and 12:23 ET. CSQR 17.52 (+14.7%): unchanged FAIL. No order.
 - No news search this cycle (done at 12:14 ET). No order placed.
+
+### Cycle 919 - ~13:03 ET (Tue Nov 10) - flat, no entries; regime back to Stabilizing
+- Trigger fired 18:03:02Z (scheduled 18:02Z; the 12:52 ET trigger was skipped by the dedupe rule at 5m54s; previous commit 17:46:56Z). Portfolio $402.45 all cash, BP $402.45, no positions, no stop checks apply.
+- Tape: SPY 745.92 (-0.9%), QQQ 669.17 (-1.5%), SMH 478.19 (-1.9%), XLE 62.15 (+0.3%), XLU 43.76 (-0.1%), IWM 279.22 (-1.2%), XBI 154.23 (-1.7%), XRT 92.15 (-0.7%).
+- Regime (SPY 5-minute): 17:40Z L 744.87 (session low); 17:45Z L 745.07 C 745.86; 17:50Z L 745.51 C 746.25; 17:55Z L 746.13 C 746.63. Three consecutive higher lows after the low and no new low: Stabilizing per framework 4.1, so MR is ON in principle (all four gates still apply).
+- MR (cap >=$5B, down >=7%, RSI <40; the narrower screen, as the broad one is a long unsourced list): 3 rows. ASTS 32.68 (-11.4%, RSI 39.9; satellite/space), IREN 19.27 (-10.0%, RSI 36.0; bitcoin miner/AI-hosting), HIMS 18.57 (-19.1%, RSI 36.3; telehealth, company-specific). Gate 1 (external, dated, sourced, sector-wide cause): FAIL for all three. HIMS is company-specific (an automatic fail). ASTS and IREN have no source for their drop; IREN rides the unsourced crypto/AI-infrastructure weakness. I did not run a news search for them: with no sourced cause the result cannot be a pass, and the hourly search (13:12 ET) will look again at the sector causes. No order.
+- Momentum (cap >=$2B, avg vol >=1M, up >=5%, RVOL >=1.3): EMBJ 82.41 (+6.9%): foreign ADR, FAIL. AAON 76.73 (+22.0%, RVOL 1.62): it recovered from the 74.985 undercut (bounced to 76.7) but that does not repair the setup: the stop would again sit below 74.98, risk about 1.7 (2.2%), reward to the 80.10 high about 3.4 = 1.9R, with the failed hold of 75.30 behind it. FAIL (under 2R, hold broke and recovered). CSQR 17.59 (+15.2%): unchanged FAIL (EPS miss, no verified catalyst, below VWAP). No order.
+- No order placed. Hourly news search due at 13:12 ET.
