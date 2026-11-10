@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-10 14:25 ET",
+  "as_of": "2026-11-10 14:37 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $402.45. 14:23 ET: SPY 748.41, rising lows; Stabilizing. No candidate passes gates.",
+  "status_note": "Flat, all cash $402.45. 14:33 ET Tier C: SPY 748.66, Stabilizing. PRCH checked (steady grind up, no verified catalyst): FAIL. No entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-10",
@@ -3836,6 +3836,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-10 13:18 ET",
+      "equity": 402.45
+    },
+    {
+      "t": "2026-11-10 13:26 ET",
       "equity": 402.45
     },
     {
@@ -11269,3 +11273,11 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - MR (cap >=$5B, down >=5%, RSI <40): 12 names, the same as 14:15 ET plus CBRS and XP (XP is a Brazil-based fintech, foreign). HUBS, NVDA, TEAM, NBIS, ASTS -12.0%, IONS, FPS, IREN -10.1%, HIMS -17.8%, FIG. Gate 1 FAIL for all (the 14:15 ET hourly search found no dated sourced sector cause). No new search this cycle. No order.
 - Momentum: EMBJ 82.74 (foreign ADR) FAIL; AAON 75.92 (+20.8%, RVOL 1.86) unchanged FAIL (about 1.9R); PRCH 22.04 and CSQR 17.98: no verified catalyst, FAIL. No order.
 - Day minimum unmet; gates not loosened. Tier C opens 14:30 ET; entries stop 15:30 ET. No order placed.
+
+### Cycle 927 - ~14:33 ET (Tue Nov 10) - flat, no entries (Tier C window open)
+- Trigger fired 19:32:39Z (scheduled 19:32Z; previous commit 19:23:28Z). Portfolio $402.45 all cash, BP $402.45, no positions.
+- Tape: SPY 748.66 (-0.5%), QQQ 672.21 (-1.1%), SMH 480.82 (-1.4%), XLE 62.23 (+0.5%), XLU 43.69, IWM 279.98 (-0.9%), XBI 154.63 (-1.4%), XRT 92.27 (-0.5%).
+- Regime (SPY 5-minute): lows 747.68, 748.20, 748.34; closes 748.31, 748.36, 748.57. Rising lows, no new low. Stabilizing; MR permitted, Tier C is open (day minimum unmet), but every gate is still required.
+- MR (cap >=$5B, down >=5%, RSI <40): 11 names, same as 14:23 ET minus XP (HUBS, NVDA, TEAM, NBIS, CBRS, ASTS -11.1%, IONS, FPS, IREN -10.0%, HIMS -18.4%, FIG). Gate 1 FAIL for all (no dated sourced sector cause from the 14:15 ET hourly search). No order.
+- Momentum: EMBJ (foreign ADR) FAIL; AAON 75.72 (+20.4%, RVOL 1.88) unchanged FAIL (about 1.9R); CSQR 18.05 unchanged FAIL (no verified catalyst). PRCH 22.22 (+7.7%, RVOL 1.78, rising) got a candidate-triggered look: 10-minute bars show a steady grind up from 20.57 at the open with no gap and no pullback, closing 22.17 at 19:20Z, above its 5-minute VWAP (21.72). It is not fading, but Gate 2 (verified catalyst) fails: one standard search returned only older items (Feb/Apr/May 2026 and 2025 earnings jumps, with a market-cap figure inconsistent with today's $2.36B), nothing dated Nov 2026. Without a verified catalyst, this is a drift on modest volume, so FAIL. Not loosened. No order.
+- Day minimum unmet; gates not loosened. Entries stop 15:30 ET. No order placed.
