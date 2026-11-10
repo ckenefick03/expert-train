@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-09 15:49 ET",
+  "as_of": "2026-11-10 08:33 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,12 +41,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash at the close. Nothing rolls overnight. Day: 1 trade, FRVO momentum -2.91 (-0.91R).",
+  "status_note": "Flat, all cash. Pre-open Nov 10: futures-proxy ETFs soft (SMH -2.0% pre-market). Prior day: FRVO momentum -2.91.",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-11-09",
-    "start_equity": 405.36,
-    "trades": 1,
+    "date": "2026-11-10",
+    "start_equity": 402.45,
+    "trades": 0,
     "forced": 0
   },
   "equity_history": [
@@ -3733,6 +3733,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-09 15:49 ET",
       "equity": 402.45
+    },
+    {
+      "t": "2026-11-10 08:33 ET",
+      "equity": 402.45
     }
   ],
   "positions": [],
@@ -3919,12 +3923,13 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Stable/rising: SPY +2.4%, QQQ +3.3%, SMH +4.7%, AI-power complex +6-14% on CEG/NRG earnings beats. MR off; momentum on, FRVO armed (needs continuation).",
+    "read": "Pre-open: index ETFs soft after a +2.6% Monday; semis weakest. No session data yet, so the regime label waits for SPY 5-minute bars after the open.",
     "chips": [
-      "SPY +2.4%",
-      "SMH +4.7%",
-      "AI-power +10%",
-      "FRVO armed"
+      "SPY -0.3% pre",
+      "QQQ -0.8% pre",
+      "SMH -2.0% pre",
+      "IWM -0.7% pre",
+      "XLE -0.8% pre"
     ]
   }
 }
@@ -10876,3 +10881,14 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Skips, with reasons: SGRY (take-private deal peg, capped upside), TTD (earnings tonight), VIR/TIC/WRBY/QXO/SKYD/AMC/ASO (no verified catalyst or too little separation from its peer group; WRBY and QXO kept running, so skipping them was a missed run, noted again for the gate review), LFST (no verified catalyst; the earlier cycles' "below the 2-pt floor" wording was wrong and was corrected in Cycle 889), JHX (foreign ADR), AXON/NVDA/ARWR/IONS/AKAM/PEGA (company-specific drops against rising sectors), MUR/SM/MGY (energy names down against a flat XLE with no sourced cause). No other order was placed.
 - Disclosures: web searches (market news, ASO, others) returned stale or undated results all day, so none was cited as a gate source. Triggers often arrived 1-7 minutes after their slots. After the 15:30 ET cutoff (Cycles 893 and 894) I deliberately skipped the preview_scan passes since no entry was possible. I know of no missed cycle; I did not independently audit the trigger history for gaps.
 - Open items for the user (nothing changed without approval): profit-protection rule (breakeven stop or take half at +1R), the $105 size, and whether invalidation exits vs stop-only should change. Planned review after 5 momentum trades under the loosened Gate 1; FRVO was trade 2 of those. A follow-up on FRVO: it recovered to about 11.1-11.2 after my 10.88 exit, which is relevant to the invalidation-vs-stop question.
+
+### Pre-open brief - ~8:31 ET (Tue Nov 10) - read-only, no orders
+- Trigger fired 13:29:53Z (scheduled 13:27Z, about 3 minutes late). Reconciled: portfolio $402.45 all cash, BP $402.45, no positions, so no stop checks. Start-of-day equity $402.45; Monday closed -$2.91 (FRVO).
+- Tape first (pre-market last trades vs Monday's close, from extended-hours quotes at ~13:30Z; spreads are wide, treat as indicative): SPY 750.55 (-0.28%), QQQ 673.90 (-0.80%), SMH 477.75 (-2.0%), IWM 280.53 (-0.7%), XLE 61.43 (-0.8%), XLU 43.83 (flat), XBI 156.85 (flat), XRT 93.02 (+0.3%). Semis lead the weakness after Monday's +5.4% SMH run; NVDA 176.52 (-1.2%).
+- News/politics: both searches (futures/premarket for Nov 10, and TTD results) returned undated or older material only: Benzinga 2017-2020 pre-open pieces and a Nov 2025 item; the TTD query returned aggregator pages, one saying TTD reports Nov 9 after the close but with no actual results. I have NO verified source for why the tape is soft and I am not citing any macro, Fed, tariff or geopolitical driver. Economic-data and Fed calendars were not found this cycle, so I cannot say what data releases are due today. Per framework §2.1 an unverifiable driver means the mean-reversion sector gate is a FAIL until a dated source is found.
+- Earnings (get_earnings_calendar, high-market-cap, verified dates): today Nov 10 before the open (already reported): WIX, ONON, SE, TDG, SBH, QBTS, BTDR and others. After the close today: CRWV, RGTI, AMPX, REZI, PBR and others. Within 2 trading days (avoid): Nov 12 after the close: QXO, ARWR, AMAT, CSCO, NU; Nov 12 before the open: NBIS, YETI, LUNR, BN. TTD reported Monday after the close per the aggregator, no verified numbers; TTD pre-market 13.95 vs 14.93 close (-6.6%).
+- Held-name risks: none, the account is flat.
+- Regime: no session data. Label after the open from SPY 5-minute bars; the first 30-60 minutes are off-limits, MR window starts 10:00 ET, momentum 10:30 ET.
+- Watch list, mean reversion (nothing qualifies in advance; each needs all 4 gates at the time): (1) SMH-complex names, e.g. NVDA, if SMH is down >=2% on the session and a dated sector-wide cause is sourced; (2) TTD only if the post-earnings drop becomes a sector-wide ad-tech move (a single-company earnings reaction is a company-specific automatic FAIL); (3) energy E&Ps (MUR, MGY, SM) if XLE is down >=2% with a sourced cause (XLE is -0.8% pre-market now); (4) IONS and (5) ARWR: ARWR reports Nov 12, within 2 sessions, so AVOID.
+- Watch list, momentum (needs separation from SPY and peers, verified catalyst, held pullback after 10:30 ET): (1) FRVO 11.24 pre-market vs 11.38 close; I exited at 10.88 yesterday, a re-entry would need a new higher low and a catalyst I can source; (2) WRBY 29.91 (-1.0%) and (3) QXO 13.74 (-0.3%) fade: no catalyst, and QXO reports Nov 12, so AVOID; (4) any fresh gap-up names with an earnings or news catalyst from today's morning reporters (e.g. WIX, ONON, TDG beat their estimates per the calendar, but I did not check price reaction) once they show a held pullback; (5) names from the morning scan. I did not run a pre-market preview_scan: scan fields reflect the regular session and would mostly show Monday's data, so a pre-market scan would not be informative. Disclosed as a scope limit.
+- No order placed (pre-open is read-only).
