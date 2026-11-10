@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-10 12:26 ET",
+  "as_of": "2026-11-10 12:36 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. SPY bouncing off 745.87 (two higher lows); MR still gated/off, no candidate passes.",
+  "status_note": "Flat, all cash. Range-bound near the lows; same 11 MR names, AAON/CSQR momentum names unchanged and failing.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-10",
@@ -3820,6 +3820,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-10 12:26 ET",
+      "equity": 402.45
+    },
+    {
+      "t": "2026-11-10 12:36 ET",
       "equity": 402.45
     }
   ],
@@ -11146,3 +11150,11 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - MR (cap >=$5B, down >=5%, RSI <40): 11 rows, same names as 12:14 ET (SNDK, DELL, NVDA -6.1%, NBIS, ASTS, IONS, FPS, IREN, HIMS, FIG, BMNR). Gate 1 FAIL for each: no dated, sourced sector-wide cause for today (the only dated source, Nov 5, is for a different session). NVDA and the AI cluster still read as continuation (second leg lower after Nov 5). No order.
 - Momentum (cap >=$2B, avg vol >=1M, up >=5%, RVOL >=1.3): AAON 75.34 (+19.8%, RVOL 1.51), CSQR 17.41 (+14.0%, RVOL 1.52). AAON is drifting toward the 75.30 retest low (a lower high at each rally since 11:35 ET), the opposite of a held pullback; CSQR unchanged (EPS miss, no verified catalyst). FAIL both. If AAON closes a 5-minute bar below 75.30 the setup is dead for today.
 - No news search this cycle (done at 12:14 ET). No order placed.
+
+### Cycle 917 - ~12:33 ET (Tue Nov 10) - flat, no entries; no change
+- Trigger fired 17:33:09Z (scheduled 17:32Z; previous commit 17:22:50Z). Portfolio $402.45 all cash, BP $402.45, no positions, no stop checks apply.
+- Tape: SPY 746.93 (-0.76%), QQQ 670.13 (-1.4%), SMH 477.44 (-2.0%), XLE 62.19 (+0.4%), XLU 43.71 (-0.2%), IWM 279.50 (-1.1%), XBI 154.94 (-1.2%), XRT 92.32 (-0.5%). Range-bound just above the lows.
+- Regime (SPY 5-minute): the 17:20Z and 17:25Z bars show only 1.7k and 1.5k shares of volume (versus 85-180k in earlier bars), i.e. incomplete or partial prints in the feed, so I give them no weight as lows/highs (746.50 and 746.76). Using the complete bars through 17:15Z: lows 745.87, 746.29, 747.09, 746.91. Range-bound above the 745.87 low; MR remains blocked by gate 1 and the regime label is not Stabilizing. Disclosure: this data quirk is why I cannot count a third higher low.
+- MR (cap >=$5B, down >=5%, RSI <40): the same 11 names (NVDA -6.3%, DELL -6.0%, SNDK -5.5%, NBIS -5.9%, ASTS -10.4%, IONS -7.4%, FPS -6.5%, IREN -9.6%, HIMS -18.7%, FIG -5.7%, BMNR -6.0%). No dated, sourced sector cause for today; gate 1 FAIL for all. No order.
+- Momentum: AAON 75.41 (+19.9%, RVOL 1.54) sits on the 75.30 retest low without breaking it; CSQR 17.50 (+14.6%, RVOL 1.55), unchanged EPS-miss/VWAP failure. Both FAIL. No order.
+- No news search this cycle. No order placed.
