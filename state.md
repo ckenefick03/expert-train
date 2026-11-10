@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-10 15:05 ET",
+  "as_of": "2026-11-10 15:18 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $402.45. 15:03 ET Tier C: SPY 748.31, range 748.2-749.8, no new low. No candidate passes gates.",
+  "status_note": "Flat, all cash $402.45. 15:13 ET hourly: SPY 748.85, range; news search found no dated Nov 10 cause. No candidate passes gates.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-10",
@@ -3836,6 +3836,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-10 13:18 ET",
+      "equity": 402.45
+    },
+    {
+      "t": "2026-11-10 13:26 ET",
       "equity": 402.45
     },
     {
@@ -11317,3 +11321,12 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - MR (cap >=$5B, down >=5%, RSI <40): 13 names (HUBS, NVDA -6.9% RSI 27.4, TEAM, NBIS, CBRS, CRCL, ASTS -10.8%, IONS -8.1% RSI 20.0, FPS, IREN -10.1%, HIMS -18.2%, FIG, IBRX). Same set as before plus CRCL and FIG returning on small moves. Gate 1 FAIL for all (no dated sourced sector cause; hourly search due next cycle at 15:12 ET). No order.
 - Momentum: EMBJ 82.91 (foreign ADR) FAIL; AAON 75.58 (+20.2%, RVOL 1.98) unchanged FAIL (about 1.9R); CSQR 17.91 FAIL (EPS miss, no verified catalyst; fading from 18.05); PRCH 21.95 (+6.3%, RVOL 2.02) FAIL (no verified catalyst per the 14:33 ET check; off its 22.22 high). No order.
 - Day minimum unmet; gates not loosened. Entries stop 15:30 ET (27 minutes). No order placed.
+
+### Cycle 931 - ~15:13 ET (Tue Nov 10) - hourly full cycle; flat, no entries (Tier C)
+- Trigger "Trading cycle (hourly)" fired 20:12:57Z (scheduled 20:12Z; previous commit 20:03:11Z). Portfolio $402.45 all cash, BP $402.45, no positions, no open orders today. No stop checks apply.
+- Tape: SPY 748.85 (-0.5%), QQQ 673.02 (-0.9%), SMH 482.63 (-1.0%), XLE 62.34 (+0.6%), XLU 43.63 (-0.4%), IWM 280.06 (-0.9%), XBI 154.26 (-1.7%), XRT 92.23 (-0.6%).
+- Regime (SPY 5-minute): lows 748.52, 748.93, 748.73, 748.01, 747.98; closes 749.48, 748.97, 748.91, 748.13, 748.45. A mild fade from the 749.79 high to the 748.0 area, but lows remain above the 747.04 low from 18:50Z and far above the 744.87 session low. No new session low: range; not Falling. MR permitted subject to all four gates.
+- News (hourly search, two standard queries): (1) Nov 10 2026 close / tech selloff: no report of today's session found. Dated 2026 items are earlier: Nov 5 NVDA -9.26% (AI/chip selloff), a Nov 1 item about AI cash burn fears, and NVDA reports fiscal Q3 on Nov 17 at 2pm PT (upcoming, not a cause for today). Several hits were 2025 articles (excluded). (2) Fed/Treasury yields Nov 2026: nothing from Nov 2026; one undated item about the Fed holding rates with yields rising. Nothing is citable as a dated, sourced cause for today's moves. Politics/rates search returned no actionable item.
+- MR (cap >=$5B, down >=5%, RSI <40): 10 names (HUBS -5.3%, NVDA -5.9% RSI 27.4, NBIS, CBRS -5.0%, ASTS -8.6%, IONS -8.5% RSI 20.0, FPS, IREN -9.1%, HIMS -17.7%, IBRX -6.4%). Many have eased from their lows (ASTS -13.1% to -8.6%) but gate 1 FAILS for all: no dated, sourced sector cause. NVDA/IONS also gate 4 (RSI in the 20s). No order.
+- Momentum: EMBJ 82.96 (foreign ADR) FAIL; AAON 75.27 (+19.7%, RVOL 2.01) unchanged FAIL (about 1.9R); CSQR 17.83 FAIL (EPS miss, no verified catalyst); PRCH 21.74 (+5.3%, RVOL 2.11) FAIL (no verified catalyst; fading from 22.22). No order.
+- Day minimum (1 trade) unmet; gates are not loosened for it. Entries stop 15:30 ET (17 minutes); the 15:22 and 15:32 ET cycles remain, the 15:32 ET one is after the cutoff. No order placed.
