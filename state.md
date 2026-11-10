@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-10 10:35 ET",
+  "as_of": "2026-11-10 10:45 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. MR Tier A: IONS only (fails gate 1); momentum scan empty at 10:32 ET.",
+  "status_note": "Flat, all cash. IONS only MR hit (fails gate 1); momentum scan empty. Tape fading, SPY -0.55%.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-10",
@@ -3777,6 +3777,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-10 10:35 ET",
       "equity": 402.45
+    },
+    {
+      "t": "2026-11-10 10:45 ET",
+      "equity": 402.45
     }
   ],
   "positions": [],
@@ -3963,15 +3967,15 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "SPY drifted back from 751.8 to 749.0 (lows 750.17, 749.27, 749.01 = three lower lows after 10:15 ET), still above the 747.05 session low. Mild fade, not Falling; no sector ETF down >=2%.",
+    "read": "SPY slipping: 749.0 at 10:40 ET, below the 750-751 range of the last hour; lows 749.41, 749.01, 749.41, 748.95, still above the 747.05 session low. Soft fade, not Falling; no sector ETF down >=2%.",
     "chips": [
-      "SPY -0.3%",
-      "QQQ -0.2%",
-      "SMH +0.3%",
-      "XLU -0.8%",
-      "IWM -0.9%",
-      "XBI -0.9%",
-      "XRT -1.2%"
+      "SPY -0.6%",
+      "QQQ -0.6%",
+      "SMH -0.7%",
+      "IWM -1.2%",
+      "XBI -1.3%",
+      "XRT -1.3%",
+      "XLU -0.9%"
     ]
   }
 }
@@ -10999,3 +11003,11 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - MR Tier A (cap >=$5B, down >=5%, RSI <35): 1 row, IONS 29.04 (-6.3%, RSI 20.0, volume 1.17M so far, cap $5.15B). Gate 1 (external dated sourced sector-wide cause): FAIL. It is a single biotech name: it fell about 22% yesterday (Cycles 886-893 logged -22%) and has gone down again today, with XBI only -0.9% and no sourced sector cause. A name still falling after a -22% day is also a continuation risk, which fails gate 4 (not in a multi-week downtrend / clean 5-minute higher lows). No search run for it (a fail on gate 1 with no sector move does not justify one). No order.
 - Momentum (cap >=$2B, avg vol >=1M, up >=5%, RVOL >=1.3): 0 rows at 10:32 ET, so no candidate. Follow-ups on yesterday's skips are moot: none of QXO, WRBY, ASO, SKYD, AMC or FRVO is on today's scan.
 - No news search this cycle (last done 10:17). No order placed.
+
+### Cycle 906 - ~10:43 ET (Tue Nov 10) - flat, no entries
+- Trigger fired 15:43:01Z (scheduled 15:42Z; previous commit 15:33:00Z). Portfolio $402.45 all cash, BP $402.45, no positions, no stop checks apply.
+- Tape: SPY 748.53 (-0.55%), QQQ 674.99 (-0.6%), SMH 484.16 (-0.7%), XLE 61.81 (-0.2%), XLU 43.42 (-0.9%), IWM 279.02 (-1.2%), XBI 154.92 (-1.3%), XRT 91.62 (-1.3%). Broad soft drift, no sector down >=2%.
+- Regime (SPY 5-minute): 15:20Z L 749.27; 15:25Z L 749.01; 15:30Z L 749.41 C 750.20; 15:35Z L 748.95 C 749.08. Rolling over slowly from the 752 high but still above the 747.05 session low: soft fade, not Falling. MR is gated by its own four gates.
+- MR Tier A: 1 row, IONS 28.76 (-7.2%, RSI 20.0, volume 1.38M, cap $5.15B), the same name as the 10:33 cycle. Gate 1 (sourced sector-wide cause): FAIL, no sector move (XBI -1.3%) and no cited source; gate 4 (not a continuing multi-week/multi-day downtrend with clean higher lows): FAIL since it is still making lower prices after a -22% day yesterday. No order.
+- Momentum: 0 rows again (up >=5%, RVOL >=1.3). No candidate.
+- No news search this cycle (hourly is due 11:12 ET). No order placed.
