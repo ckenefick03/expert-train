@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-10 10:05 ET",
+  "as_of": "2026-11-10 10:20 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. First scanning cycle: MR Tier A scan empty; momentum opens 10:30 ET.",
+  "status_note": "Flat, all cash. MR Tier A scan empty again; momentum opens 10:30 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-10",
@@ -3769,6 +3769,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-10 10:05 ET",
       "equity": 402.45
+    },
+    {
+      "t": "2026-11-10 10:20 ET",
+      "equity": 402.45
     }
   ],
   "positions": [],
@@ -3955,14 +3959,14 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "SPY recovered from the 747.05 first-bar low; last bar (14:55Z) closed 750.74 on a higher low (748.22). Not falling; edging toward Stabilizing but lows are uneven, so MR stays gated by the 4-gate test. Semis fully recovered (SMH +0.4%).",
+    "read": "SPY made higher lows through 10:15 ET (750.62, 751.24, 750.93 after the 747-748 morning range) and is holding near 751. Stabilizing / stable; semis above Monday's close. MR still needs a Tier A candidate with a sector-wide cause.",
     "chips": [
       "SPY -0.3%",
-      "QQQ -0.1%",
+      "QQQ -0.2%",
       "SMH +0.4%",
-      "XLU -0.9%",
-      "IWM -0.7%",
-      "XBI +0.1%"
+      "XLU -0.7%",
+      "IWM -0.8%",
+      "XBI -0.4%"
     ]
   }
 }
@@ -10973,3 +10977,12 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - MR Tier A window (10:00-11:30; cap >=$5B, avg vol >=1M, down >=5% on the day, RSI(14) <35): the scan returned 0 rows, so there is no candidate. I did not run the weaker Tier B screen (not yet open; Tier B starts 11:30 ET).
 - Momentum: not scanned; earliest entry is 10:30 ET. Disclosed as a deliberate skip, not an error.
 - No news search this cycle (the hourly one fires at 10:12 ET). No order placed.
+
+### Cycle 904 - ~10:17 ET (Tue Nov 10) - hourly full cycle; flat, no entries
+- Hourly trigger scheduled 15:12Z, fired 15:16:52Z (about 5 minutes late; previous commit 15:03:49Z). Portfolio $402.45 all cash, BP $402.45, no positions, no open orders; no stop checks apply.
+- Tape: SPY 750.71 (-0.3%), QQQ 678.30 (-0.2%), SMH 489.41 (+0.4%), XLE 61.96 (0.0%), XLU 43.50 (-0.7%), IWM 280.37 (-0.8%), XBI 156.29 (-0.4%). No sector ETF down >=2%.
+- Regime (SPY 5-minute bars 15:00-15:10Z): lows 750.62, 751.24, 750.93 on closes 751.72, 751.79, 751.18, i.e. holding above the 747-748 morning range with no new low since the first bar. Stable, not Falling.
+- News (hourly search, one query): returned 2025 recaps plus one aggregator page (investrade.com, dated 2026-11-06) saying the prior session was the sharpest one-day drop since April 2025 (S&P -4.4%, Nasdaq -5.5%), which it ties to a Democratic election sweep and AI-regulation fears. That is a single aggregator, a few days old, and I could not confirm it against another source or against our own data (SPY closed Fri Nov 6 at 735.29, Mon Nov 9 at 752.69). Context only; not cited in any gate. Nothing dated 2026-11-10 was found, so today's moves have no verified driver.
+- MR Tier A (10:00-11:30; cap >=$5B, down >=5%, RSI <35): scan returned 0 rows again. No candidate, nothing to gate-check.
+- Momentum: not scanned; earliest entry 10:30 ET (this cycle ran at 10:17). Deliberate skip. Follow-ups on yesterday's skips (QXO, WRBY, ASO, SKYD, AMC, TTD): not rechecked this cycle; QXO reports Nov 12 PM, so AVOID through then.
+- No order placed.
