@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-10 09:06 ET",
+  "as_of": "2026-11-10 09:22 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -3749,6 +3749,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-10 09:06 ET",
       "equity": 402.45
+    },
+    {
+      "t": "2026-11-10 09:22 ET",
+      "equity": 402.45
     }
   ],
   "positions": [],
@@ -3935,13 +3939,13 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Pre-open: index ETFs soft after a +2.6% Monday; semis weakest. No session data yet, so the regime label waits for SPY 5-minute bars after the open.",
+    "read": "Pre-open: soft (SPY -0.6%, SMH -2.2%). Session regime label waits for SPY 5-minute bars after the open; MR window opens 10:00 ET.",
     "chips": [
-      "SPY -0.3% pre",
-      "QQQ -0.8% pre",
-      "SMH -2.0% pre",
-      "IWM -0.7% pre",
-      "XLE -0.8% pre"
+      "SPY -0.6% pre",
+      "QQQ -1.1% pre",
+      "SMH -2.2% pre",
+      "IWM -0.9% pre",
+      "XLE -1.3% pre"
     ]
   }
 }
@@ -10920,3 +10924,10 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Trigger fired 14:04:13Z (scheduled 14:02Z; previous commit 13:54:23Z). Portfolio $402.45 all cash, BP $402.45, no positions, no stop checks apply.
 - Disclosure: no preview_scan run; no entry is allowed before 10:00 ET (momentum 10:30 ET). Deliberate skip.
 - Pre-market (indicative): SPY 748.34 (-0.6%), QQQ 671.87 (-1.1%), SMH 477.42 (-2.0%). Slightly off the 8:54 lows, still soft. No verified news driver.
+
+### Cycle 899 - ~9:19 ET (Tue Nov 10) - hourly cycle; flat, before the entry window, scans skipped
+- The hourly trigger was scheduled for 14:12Z (9:12 ET) and arrived 14:19:18Z, about 7 minutes late (previous commit 14:04:37Z). Portfolio $402.45 all cash, BP $402.45, no positions, no stop checks apply.
+- Tape (pre-market, indicative, wide spreads): SPY 748.50 (-0.6%), QQQ 672.07 (-1.1%), SMH 476.50 (-2.2%), IWM 279.86 (-0.9%), XLE 61.15 (-1.3%), NVDA 174.94 (-2.1%), TTD 13.93 (-6.7%).
+- News (hourly search): one query on the chip/Nvidia selloff for Nov 10. It returned only 2024-2025 items plus two dated 2026 pieces from Aug 28 and Feb 27, neither about today. Nothing dated 2026-11-10, so no driver for the soft tape or the semis weakness is verified, and none is cited. Standing policy: an unverifiable cause means the MR sector gate is FAIL.
+- Disclosure: no preview_scan run; no entry is allowed before 10:00 ET (momentum 10:30 ET). Deliberate skip.
+- Next: 9:32 and 9:42 cycles are also pre-window; the first scanning cycle is 10:02 ET.
