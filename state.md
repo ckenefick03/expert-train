@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-10 09:35 ET",
+  "as_of": "2026-11-10 09:45 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. Session open: SPY -0.7%, SMH -2.1%. Entries not open until 10:00 ET.",
+  "status_note": "Flat, all cash. SPY -0.5% and recovering off the open low. Entries open at 10:00 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-10",
@@ -3757,6 +3757,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-10 09:35 ET",
       "equity": 402.45
+    },
+    {
+      "t": "2026-11-10 09:45 ET",
+      "equity": 402.45
     }
   ],
   "positions": [],
@@ -3943,13 +3947,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Pre-open: soft (SPY -0.6%, SMH -2.2%). Session regime label waits for SPY 5-minute bars after the open; MR window opens 10:00 ET.",
+    "read": "Early session: SPY printed its low in the first 5-minute bar (747.05) and is edging up (749.0 / 749.1 closes). Too few bars to call Stabilizing (needs about 3 higher lows); label at the 10:02 cycle.",
     "chips": [
-      "SPY -0.6% pre",
-      "QQQ -1.1% pre",
-      "SMH -2.2% pre",
-      "IWM -0.9% pre",
-      "XLE -1.3% pre"
+      "SPY -0.5%",
+      "QQQ -0.8%",
+      "SMH -1.4%",
+      "first-bar low 747.05"
     ]
   }
 }
@@ -10940,3 +10943,9 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Trigger fired 14:33:05Z (scheduled 14:32Z; previous commit 14:19:45Z). Portfolio $402.45 all cash, BP $402.45, no positions, no stop checks apply.
 - Disclosure: no preview_scan run; no entry is allowed before 10:00 ET (momentum 10:30 ET). Deliberate skip.
 - Regular-session quotes (3 minutes after the open): SPY 747.51 (-0.7%), QQQ 670.91 (-1.2%), SMH 477.10 (-2.1%). I did not pull 5-minute bars this cycle, so the §4.1 regime label is not set yet; SPY is below Monday's close and I will label it from 5-minute bars at the 10:02 cycle. No verified news driver.
+
+### Cycle 901 - ~9:43 ET (Tue Nov 10) - flat; before the entry window, scans skipped
+- Trigger fired 14:43:01Z (scheduled 14:42Z; previous commit 14:33:29Z). Portfolio $402.45 all cash, BP $402.45, no positions, no stop checks apply.
+- Tape (regular session): SPY 748.80 (-0.5%), QQQ 674.11 (-0.8%), SMH 480.78 (-1.4%). All three have recovered some of the open's weakness (SMH was -2.1% at 9:33).
+- Regime (SPY 5-minute bars, only 2 completed so far): bar 14:30Z O 747.94 H 749.15 L 747.05 C 749.01; bar 14:35Z O 749.02 H 749.28 L 747.94 C 749.07. Low of the day so far 747.05 was the first bar, the second bar's low was higher (747.94). That is one higher low, far short of the 3 needed, so I am not calling Stabilizing yet; the label is set at the 10:02 cycle. No verified news driver.
+- Disclosure: no preview_scan run; no entry is allowed before 10:00 ET (momentum 10:30 ET). Deliberate skip.
