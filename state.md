@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-10 10:45 ET",
+  "as_of": "2026-11-10 10:55 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. IONS only MR hit (fails gate 1); momentum scan empty. Tape fading, SPY -0.55%.",
+  "status_note": "Flat, all cash. SPY made a new session low (746.39): regime Falling, MR OFF. Momentum scan empty.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-10",
@@ -3781,6 +3781,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-10 10:45 ET",
       "equity": 402.45
+    },
+    {
+      "t": "2026-11-10 10:55 ET",
+      "equity": 402.45
     }
   ],
   "positions": [],
@@ -3967,15 +3971,15 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "SPY slipping: 749.0 at 10:40 ET, below the 750-751 range of the last hour; lows 749.41, 749.01, 749.41, 748.95, still above the 747.05 session low. Soft fade, not Falling; no sector ETF down >=2%.",
+    "read": "FALLING: SPY broke below the 747.05 morning low (746.39 at 10:53 ET) after lower highs and lows since 10:25 ET. Per framework 4.1 mean reversion is OFF; momentum only for fresh non-fading catalyst gaps. Semis weakest again (SMH -1.5%).",
     "chips": [
-      "SPY -0.6%",
-      "QQQ -0.6%",
-      "SMH -0.7%",
-      "IWM -1.2%",
-      "XBI -1.3%",
-      "XRT -1.3%",
-      "XLU -0.9%"
+      "SPY -0.8%",
+      "QQQ -1.0%",
+      "SMH -1.5%",
+      "IWM -1.5%",
+      "XBI -1.4%",
+      "XRT -1.4%",
+      "new session low"
     ]
   }
 }
@@ -11011,3 +11015,11 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - MR Tier A: 1 row, IONS 28.76 (-7.2%, RSI 20.0, volume 1.38M, cap $5.15B), the same name as the 10:33 cycle. Gate 1 (sourced sector-wide cause): FAIL, no sector move (XBI -1.3%) and no cited source; gate 4 (not a continuing multi-week/multi-day downtrend with clean higher lows): FAIL since it is still making lower prices after a -22% day yesterday. No order.
 - Momentum: 0 rows again (up >=5%, RVOL >=1.3). No candidate.
 - No news search this cycle (hourly is due 11:12 ET). No order placed.
+
+### Cycle 907 - ~10:53 ET (Tue Nov 10) - flat, no entries; regime Falling, MR off
+- Trigger fired 15:53:04Z (scheduled 15:52Z; previous commit 15:43:28Z). Portfolio $402.45 all cash, BP $402.45, no positions, no stop checks apply.
+- Tape: SPY 746.39 (-0.84%), QQQ 672.24 (-1.0%), SMH 480.06 (-1.5%), XLE 61.73 (-0.3%), XLU 43.42 (-0.8%), IWM 278.30 (-1.5%), XBI 154.76 (-1.4%), XRT 91.47 (-1.4%). Weakness is broad but no sector ETF is down >=2%.
+- Regime (SPY 5-minute): 15:40Z O 749.05 L 747.81 C 747.86; 15:45Z L 747.19 C 747.30; last trade 746.39 at 15:53Z, below the 747.05 session low set in the first bar at 9:30 ET. A new session low with falling closes, so per framework 4.1 the tape is Falling: mean reversion OFF, momentum only for a fresh non-fading catalyst gap.
+- MR Tier A scan (>=5% down, RSI <35, cap >=$5B): 2 rows, NVDA 168.23 (-5.8%, RSI 27.4, volume 157M vs avg 127M) and IONS 28.67 (-7.5%, RSI 20.0). Both are blocked by the regime switch (MR off while SPY is making new lows) before any gate is looked at. For the record: NVDA's drop is not a verified sector-wide cause either (SMH -1.5%, below the 2% bar, and no dated source found); IONS fails gate 1 as logged in Cycles 905-906. No order.
+- Momentum (cap >=$2B, avg vol >=1M, up >=5%, RVOL >=1.3): 0 rows. No candidate.
+- No news search this cycle (hourly at 11:12 ET). No order placed.
