@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-10 10:20 ET",
+  "as_of": "2026-11-10 10:35 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. MR Tier A scan empty again; momentum opens 10:30 ET.",
+  "status_note": "Flat, all cash. MR Tier A: IONS only (fails gate 1); momentum scan empty at 10:32 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-10",
@@ -3773,6 +3773,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-10 10:20 ET",
       "equity": 402.45
+    },
+    {
+      "t": "2026-11-10 10:35 ET",
+      "equity": 402.45
     }
   ],
   "positions": [],
@@ -3959,14 +3963,15 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "SPY made higher lows through 10:15 ET (750.62, 751.24, 750.93 after the 747-748 morning range) and is holding near 751. Stabilizing / stable; semis above Monday's close. MR still needs a Tier A candidate with a sector-wide cause.",
+    "read": "SPY drifted back from 751.8 to 749.0 (lows 750.17, 749.27, 749.01 = three lower lows after 10:15 ET), still above the 747.05 session low. Mild fade, not Falling; no sector ETF down >=2%.",
     "chips": [
       "SPY -0.3%",
       "QQQ -0.2%",
-      "SMH +0.4%",
-      "XLU -0.7%",
-      "IWM -0.8%",
-      "XBI -0.4%"
+      "SMH +0.3%",
+      "XLU -0.8%",
+      "IWM -0.9%",
+      "XBI -0.9%",
+      "XRT -1.2%"
     ]
   }
 }
@@ -10986,3 +10991,11 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - MR Tier A (10:00-11:30; cap >=$5B, down >=5%, RSI <35): scan returned 0 rows again. No candidate, nothing to gate-check.
 - Momentum: not scanned; earliest entry 10:30 ET (this cycle ran at 10:17). Deliberate skip. Follow-ups on yesterday's skips (QXO, WRBY, ASO, SKYD, AMC, TTD): not rechecked this cycle; QXO reports Nov 12 PM, so AVOID through then.
 - No order placed.
+
+### Cycle 905 - ~10:33 ET (Tue Nov 10) - flat, no entries; first momentum scan empty
+- Trigger fired 15:32:30Z (scheduled 15:32Z; previous commit 15:17:25Z; the 10:22 cycle was skipped by the dedupe rule). Portfolio $402.45 all cash, BP $402.45, no positions, no stop checks apply.
+- Tape: SPY 750.44 (-0.3%), QQQ 678.11 (-0.2%), SMH 488.95 (+0.3%), XLE 61.87 (-0.1%), XLU 43.45 (-0.8%), IWM 279.99 (-0.9%), XBI 155.48 (-0.9%), XRT 91.71 (-1.2%). No sector ETF down >=2%.
+- Regime (SPY 5-minute bars): 15:10Z L 750.93; 15:15Z L 750.17; 15:20Z L 749.27 C 749.41; 15:25Z L 749.01 C 749.47. Lower lows since 10:10 ET after the push to 752.14, but still above the 747.05 session low. A mild fade inside the morning range, not Falling; Stabilizing no longer cleanly true. MR therefore rests on its four gates alone.
+- MR Tier A (cap >=$5B, down >=5%, RSI <35): 1 row, IONS 29.04 (-6.3%, RSI 20.0, volume 1.17M so far, cap $5.15B). Gate 1 (external dated sourced sector-wide cause): FAIL. It is a single biotech name: it fell about 22% yesterday (Cycles 886-893 logged -22%) and has gone down again today, with XBI only -0.9% and no sourced sector cause. A name still falling after a -22% day is also a continuation risk, which fails gate 4 (not in a multi-week downtrend / clean 5-minute higher lows). No search run for it (a fail on gate 1 with no sector move does not justify one). No order.
+- Momentum (cap >=$2B, avg vol >=1M, up >=5%, RVOL >=1.3): 0 rows at 10:32 ET, so no candidate. Follow-ups on yesterday's skips are moot: none of QXO, WRBY, ASO, SKYD, AMC or FRVO is on today's scan.
+- No news search this cycle (last done 10:17). No order placed.
