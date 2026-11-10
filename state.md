@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-10 11:05 ET",
+  "as_of": "2026-11-10 11:19 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash. Regime still Falling/unconfirmed (new low 746.00 at 10:50 ET, small bounce). MR off; momentum scan empty.",
+  "status_note": "Flat, all cash. Regime now Stabilizing (3 higher lows), but the only MR hit (IONS) fails gates; momentum scan empty.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-10",
@@ -3789,6 +3789,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-10 11:05 ET",
       "equity": 402.45
+    },
+    {
+      "t": "2026-11-10 11:19 ET",
+      "equity": 402.45
     }
   ],
   "positions": [],
@@ -3975,15 +3979,15 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "SPY set a new session low of 746.00 at 10:50 ET, then bounced to 747.8; only one higher low since (746.13), far from 3 higher lows, so Stabilizing is not confirmed. Treated as Falling: MR OFF.",
+    "read": "STABILIZING: after the 746.00 low at 10:50 ET SPY printed higher 5-minute lows (746.13, 746.78, 747.28, 747.45) and no new low. MR is allowed by the regime switch; each name still needs all four gates. Tape remains below Monday's close (-0.6%).",
     "chips": [
-      "SPY -0.65%",
-      "QQQ -0.8%",
-      "SMH -0.8%",
-      "IWM -1.2%",
-      "XBI -1.4%",
-      "XRT -1.1%",
-      "low 746.00"
+      "SPY -0.6%",
+      "QQQ -0.7%",
+      "SMH -0.6%",
+      "IWM -1.3%",
+      "XBI -1.9%",
+      "XRT -0.9%",
+      "higher lows"
     ]
   }
 }
@@ -11035,3 +11039,12 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - MR Tier A scan: 1 row, IONS 28.65 (-7.6%, RSI 20.0). Blocked by the regime switch, and independently fails gate 1 and gate 4 (Cycles 905-907). NVDA from the 10:53 scan is no longer on it (it bounced). No order.
 - Momentum: 0 rows. No candidate.
 - No news search this cycle (hourly at 11:12 ET). No order placed.
+
+### Cycle 909 - ~11:16 ET (Tue Nov 10) - hourly full cycle; flat, no entries
+- Hourly trigger scheduled 16:12Z, fired 16:15:29Z (about 3 minutes late; previous commit 16:03:47Z). Portfolio $402.45 all cash, BP $402.45, no positions, no open orders; no stop checks apply.
+- Tape: SPY 748.27 (-0.59%), QQQ 674.82 (-0.7%), SMH 484.43 (-0.6%), XLE 61.67 (-0.4%), XLU 43.53 (-0.6%), IWM 278.90 (-1.3%), XBI 153.96 (-1.9%), XRT 91.93 (-0.9%). No sector ETF down >=2% (XBI is -1.9%, just short).
+- Regime (SPY 5-minute): lows 746.00 (15:50Z, new session low), 746.13, 746.78 (16:00Z), 747.28 (16:05Z), 747.45 (16:10Z); closes 746.93, 746.84, 748.03, 748.24, 747.57. No new low since 746.00 and three consecutive higher lows (746.78 -> 747.28 -> 747.45) after the 746.13 base. Per framework 4.1 this is Stabilizing, so MR is ON (all four gates still apply). It flipped from Falling at 11:03 ET to Stabilizing now.
+- News (hourly search, one query): results were 2025 articles (Nvidia/AI-valuation worries, a 2025 jobs report) plus one undated tariff headline about Greenland and NATO members. Nothing is dated 2026-11-10, so I have no verified driver for today's weakness and I cite none in any gate. The undated tariff piece is not usable as a source.
+- MR Tier A (cap >=$5B, down >=5%, RSI <35): 1 row, IONS 28.26 (-8.8%, RSI 20.0, volume 1.87M vs avg 3.36M, cap $5.15B). Gate 1 (external dated sourced SECTOR-wide cause): FAIL; XBI is -1.9%, below the 2% bar, and no source was found; IONS's own -22% on Monday and further fall today read as company-specific. Gate 4 (not a multi-day downtrend, clean 5-minute higher lows): FAIL while it is still making new lows after a -22% day. No order.
+- Momentum (cap >=$2B, avg vol >=1M, up >=5%, RVOL >=1.3): 0 rows. No candidate. Follow-ups on skipped candidates from yesterday: none on today's scans.
+- No order placed. Tier A closes 11:30 ET; Tier B (>=3.5% intraday or >=7% over 3 days) opens then.
