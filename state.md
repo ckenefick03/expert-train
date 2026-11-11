@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-11 12:14 ET",
+  "as_of": "2026-11-11 12:24 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $402.45. 12:14 ET hourly news: CRWV (Q3 beat) and REZI (Q3 beat) catalysts verified but both fail Gate 1 volume (CRWV RVOL 1.17<1.3; REZI single-print RVOL). MR scan empty. No entry.",
+  "status_note": "Flat, all cash $402.45. 12:24 ET: new momentum name AMKR (+14%, sector sympathy, RVOL 1.0) fails; CRWV RVOL 1.19, REZI print-driven; MR scan empty. No entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-11",
@@ -3908,6 +3908,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-11 12:14 ET",
+      "equity": 402.45
+    },
+    {
+      "t": "2026-11-11 12:24 ET",
       "equity": 402.45
     }
   ],
@@ -11560,4 +11564,14 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
   - CRWV 60.82 (+24.8%): catalyst verified (post-report, which is allowed), above peers/SPY, but scanner RVOL 1.17 vs 1.3 = Gate 1 FAIL as read literally (open governance question). Price has also drifted off the 61.35 high, no fresh break. No order.
   - REZI 22.62 (+16.3%): catalyst now verified (Q3 beat; post-report thesis allowed). Gate 1 volume still not met on real volume: scanner RVOL 3.08 is the single 3.05M-share 16:30Z print; ex-print regular-session volume is about 0.5x average. Also needs entry trigger/spread re-check (0.40% bid/ask 22.60/22.69 now, above 0.3%). FAIL.
   - NBIS (earnings Nov 12), IBKR (no dated catalyst), ERAS (no dated catalyst), RUM (earnings conflict): unchanged FAIL.
+- Day minimum (1 trade) unmet; gates not loosened. No order placed.
+
+### Cycle 956 - ~12:24 ET (Wed Nov 11; trigger fired 12:22 ET)
+- Reconciliation: equity $402.45, cash/BP $402.45, no positions. Daily P&L $0.
+- Tape: SPY 760.93 (+1.47%, near highs), QQQ 694.33 (+2.9%), SMH 515.60 (+6.6%). Stable/rising; momentum on, MR on (Tier B).
+- Scan - mean-reversion: 0 names. Scan - momentum (+5%, RVOL >=1.0): 7 names.
+  - New: AMKR 39.34 (+14.1%, RVOL 1.006): semiconductor packaging, moving with the AI-hardware sympathy rally (SMH +6.6%); no own dated catalyst found, not 2+ pts above its peer complex, RVOL under 1.3. Gate 1/2 FAIL.
+  - CRWV 60.71 (+24.6%, RVOL 1.19 vs 1.3): Gate 1 FAIL as read literally; drifting sideways 60.7-61.4, no fresh break. No order.
+  - REZI 22.68 (+16.6%): RVOL 3.12 is still the single 3.05M-share print; real volume thin; spread now 22.67/22.69 (0.09%). Gate 1 volume not demonstrated: FAIL (a note for the record: the spread blocker is gone, the volume blocker is not).
+  - IBKR 83.63 (+7.8%, RVOL 1.27): still no dated catalyst, Gate 2 FAIL (RVOL also just under 1.3). NBIS (earnings Nov 12), ERAS (no catalyst), RUM (earnings conflict): unchanged FAIL.
 - Day minimum (1 trade) unmet; gates not loosened. No order placed.
