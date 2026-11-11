@@ -11383,3 +11383,6 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 ### Cycle 935 - ~8:43 ET (Wed Nov 11) - pre-market; no entries possible, scans not run
 - Trigger fired 13:42:53Z (scheduled 13:42Z; previous commit 13:28:43Z, the pre-open brief). The regular session has not opened (9:30 ET) and no entry is permitted before 10:00 ET, so the live account reconcile and the MR/momentum preview scans were intentionally skipped (disclosed). The pre-open brief at 13:28Z holds the state: account all cash $402.45, no positions, no orders; pre-market gap up led by semis. No order placed.
 
+### Cycle 936 - ~8:53 ET (Wed Nov 11) - pre-market; no entries possible, scans not run
+- Trigger fired 13:53:16Z (scheduled 13:52Z; previous commit 13:43Z). The regular session opens at 9:30 ET and no entry is allowed before 10:00 ET, so the live reconcile, tape read and MR/momentum preview scans were intentionally skipped (disclosed). State per the 13:28Z pre-open brief: all cash $402.45, no positions, no orders. No order placed. The next cycle (9:02 ET) is also pre-open; the first scan cycles that matter are 10:02 ET (MR) and 10:32 ET (momentum).
+
