@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-11 14:05 ET",
+  "as_of": "2026-11-11 14:20 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -40,8 +40,8 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "min_trades": 1,
     "max_trades": 10
   },
-  "status": "amber",
-  "status_note": "CRWV long open: 1.705 sh @ 61.58, now 61.15 (-$0.73, -0.31R). Retest low 61.37 broke, price under falling 5-min EMA; 60.96 higher low and 60.20 stop intact. Holding per logged rule; exit trigger = 5-min close under 60.96. No new entries.",
+  "status": "green",
+  "status_note": "Flat, all cash $400.54. 14:13 ET: EXIT CRWV on invalidation, 1.705 sh @ 60.46 (entry 61.58): -$1.91, -0.81R. Day P&L -$1.91, 1 trade. No other entries pass.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-11",
@@ -3949,20 +3949,13 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-11 14:05 ET",
       "equity": 401.72
-    }
-  ],
-  "positions": [
+    },
     {
-      "symbol": "CRWV",
-      "strategy": "momentum",
-      "tier": "-",
-      "qty": 1.705101,
-      "entry": 61.5799,
-      "price": 61.15,
-      "stop": 60.2,
-      "target": 64.4
+      "t": "2026-11-11 14:20 ET",
+      "equity": 400.54
     }
   ],
+  "positions": [],
   "trades": [
     {
       "symbol": "TER",
@@ -4143,15 +4136,27 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "score": 48,
       "tag": "organic",
       "date": "2026-11-09"
+    },
+    {
+      "symbol": "CRWV",
+      "strategy": "momentum",
+      "tier": "-",
+      "entry": 61.5799,
+      "exit": 60.4601,
+      "pnl": -1.91,
+      "r": -0.81,
+      "score": 58,
+      "tag": "organic",
+      "date": "2026-11-11"
     }
   ],
   "regime": {
-    "read": "Stable index (SPY +1.6%) but CRWV breakout failing: back under 61.78, retest low gone. MR: SE only (no sector cause).",
+    "read": "Index steady-to-softer (SPY +1.4%, SMH +5.9%, off the 13:30 highs). MR: SE and TWST only, no sector cause. Flat; momentum on.",
     "chips": [
-      "SPY +1.6%",
-      "SMH +6.4%",
-      "CRWV -0.7%",
-      "MR: SE only"
+      "SPY +1.4%",
+      "SMH +5.9%",
+      "flat",
+      "CRWV closed -0.81R"
     ]
   }
 }
@@ -11708,3 +11713,15 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Scan - mean-reversion: SE 73.82 (-3.9%, RSI 37), same as before; Singapore filer, no sector cause, Gate 1 FAIL (not researched this cycle; hourly news search due 14:12 ET next cycle).
 - Scan - momentum (+5%, RVOL >=1.0): 17 names, mostly AI-hardware/infrastructure sympathy (LITE +14%, MXL +14.6%, CRDO, BE, CLS, AMKR, AXTI, CIFR, CORZ) at RVOL 1.0-1.3 with no own catalyst. CORZ (RVOL 1.32) moves in the CRWV complex and would double my exposure to the same driver; no own dated catalyst: FAIL. IBKR (RVOL 1.57) and ERAS (RVOL 1.65): volume passes, still no dated catalyst, Gate 2 FAIL (IBKR to be re-searched in the 14:12 news search). REZI RVOL 3.5 is the block print: FAIL. RUM earnings conflict: FAIL. NBIS earnings Nov 12: FAIL.
 - No new entry. Day: 1 trade, open P&L -$0.73.
+
+### Cycle 966 - ~14:20 ET (Wed Nov 11; hourly trigger fired 14:12 ET, includes news search): EXIT CRWV
+- Stop check (first): CRWV long 1.705101 sh, avg cost 61.58. Price 60.45 (bid 60.44 / ask 60.47): -$1.13/sh, -$1.93 (-0.82R). 5-minute bars: 19:00Z close 61.065 (low 60.97, 737k shares); 19:05Z close 60.54 (low 60.48, 949k shares: the heaviest bar since the morning). 9-period EMA 61.25 and falling for six bars. The 60.96 higher low broke on a 5-minute CLOSE (60.54) on rising volume, and the close is under the falling EMA: both parts of the invalidation I logged at 13:36 and 13:57 ET were met. The hard stop 60.20 was 0.4% away and not touched.
+- Decision: EXIT, per the written rule and not at the stop. review_equity_order clean (order_checks empty, customer_approval_required false, spread $60.45 / $60.48, disclosure: Bid $60.45 x 200 Q, Ask $60.48 x 100 K, Last $60.46 x 100 P, 2:13 PM ET). Per framework §0 I did not seek per-trade confirmation. place_equity_order market, 1.705101 sh, regular hours, GFD: filled 19:13:30Z at 60.4601 avg (order 6af4be5a-ad34-470d-83ac-f8cc2a25c42c).
+- Result: entry 61.5799, exit 60.4601, P&L -$1.91 (-1.8% on $105), -0.81R against the planned 2.2% / $2.35 risk. Hold time about 99 minutes. Closing it cost about $0.44 less than waiting for the 60.20 stop would have if it had gotten there; it was not an emergency exit, it was the rule.
+- Score 58/100 (setup 30/40: all four gates passed on paper, but the volume gate cleared by 0.002-0.04 and the name was already +26%, an extended chase of an earnings gap; execution 24/35: entry rules followed, one judgment call to buy a retest 0.2% under the break level, the exit followed the written rule, no averaging down; outcome 4/25: -0.81R, closed on invalidation before the stop). What worked: waiting for the volume gate and the break, the written invalidation rule, a clean exit. What didn't: buying an extended post-earnings gap after the first spike, with the volume ratio hovering at the threshold and the five-minute volume fading from 1-5M to 0.3-0.6M per bar before entry. Lesson for the strategy review: a Gate 1 volume pass that is marginal and ex-morning-driven should be treated as a fail for late-day entries. This is a note for the user's review, not a rule change I made.
+- Reconciliation: equity $400.54, cash/BP $400.54, no positions, no open orders. Day P&L -$1.91 vs start $402.45 (limit $60; breaker level $394.19). Trades today: 1 of 10 (minimum met).
+- News (hourly, extended-mode WebSearch): dated Nov 10-11 coverage still explains CRWV's gap (Q3 beat, raised outlook, +20-26% in sessions' reports) and an AI-hardware rebound; no source I found explains the 14:00 ET fade. A CNN quote page carried an undated headline reading "Stock Market Falls as Inflation Fuels December Rate Hike Bets", which fits SPY easing from 762.4 to 760.5 and SMH from 516 to 512 since 13:45 ET, but I cannot date or confirm it, so I did not rely on it. One older TradingView article about an AI-stock free fall was about 26 days old and not relevant.
+- Tape: SPY 760.52 (+1.4%), QQQ 692.68 (+2.65%), SMH 511.98 (+5.9%), IWM 283.11 (+0.9%). Off the 13:30 highs but orderly. Regime: stable; momentum on, MR on (Tier B until 14:30, then Tier C only if the day's minimum is unmet; it is met, so MR stops at 14:30).
+- Scan - mean-reversion (cap >=$5B, <=-3.5%, RSI<45): SE 73.84 (-3.9%, RSI 37; Singapore filer, no sector cause) and new TWST 127.50 (-3.5%, RSI 44.6, cap $8.8B; company-specific biotech-tools name, no sector-wide dated cause found, RSI near 45, not researched). Gate 1 FAIL for both.
+- Scan - momentum (+5%, RVOL >=1.3): NBIS (earnings Nov 12), IBKR (RVOL 1.61, no dated catalyst), CRWV (just sold), AMKR (RVOL 1.31, sector sympathy only), REZI (RVOL 3.5 = block print), ERAS (RVOL 1.69, no catalyst), CORZ (RVOL 1.35, CRWV-complex sympathy with no own catalyst; after a failed CRWV breakout I would not chase it), RUM (earnings conflict). No name passes Gate 2 with a cited catalyst and a clean base. No new entry.
+- Day minimum met. No further entries are required today; the rest of the session is for clean setups only. Account is flat and nothing rolls overnight.
