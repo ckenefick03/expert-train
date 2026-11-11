@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-11 12:04 ET",
+  "as_of": "2026-11-11 12:14 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $402.45. 12:04 ET: SPY +1.4% new highs. CRWV RVOL 1.14 (<1.3), REZI print-driven RVOL, NBIS earnings Nov 12; MR scan empty. No entry. News search due 12:12.",
+  "status_note": "Flat, all cash $402.45. 12:14 ET hourly news: CRWV (Q3 beat) and REZI (Q3 beat) catalysts verified but both fail Gate 1 volume (CRWV RVOL 1.17<1.3; REZI single-print RVOL). MR scan empty. No entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-11",
@@ -3904,6 +3904,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-11 12:04 ET",
+      "equity": 402.45
+    },
+    {
+      "t": "2026-11-11 12:14 ET",
       "equity": 402.45
     }
   ],
@@ -11547,3 +11551,13 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
   - REZI 22.48 (+15.6%): RVOL 3.0 still from the single 3.05M-share print; bid/ask 22.44/22.50 = 0.27%, spread now within 0.3% but the volume signal is the artifact, not genuine accumulation (the other 5-min bars carried tens of thousands of shares). Not entered; a catalyst is also not yet documented in this log beyond the gap. Gate 1/2 not demonstrated.
   - ERAS 16.93 (+9.4%): no dated catalyst, Gate 2 FAIL. RUM 5.97: earnings conflict/under-$6, avoid.
 - Day minimum (1 trade) unmet; gates not loosened. News search due 12:12 ET (next cycle). No order placed.
+
+### Cycle 955 - ~12:14 ET (Wed Nov 11; hourly trigger fired 12:13 ET, includes news search; last cycle was 9 min earlier so not deduped)
+- Reconciliation: equity $402.45, cash/BP $402.45, no positions. Daily P&L $0.
+- Tape: SPY 760.14 (+1.36%), QQQ 692.95 (+2.7%), SMH 513.55 (+6.2%), IWM 282.85 (+0.8%). Slightly off the 12:03 highs but stable; momentum on, MR on (Tier B).
+- News (extended-mode WebSearch, dated Nov 11, 2026 coverage): market rally is an AI rebound after CoreWeave Q3 results (revenue $3.66B vs ~$3.55B est., raised outlook), with Nvidia, Micron, Bloom Energy, Nebius up in sympathy; Nasdaq +1.9%, S&P +1.3% in one live report. Resideo: Q3 adjusted EPS $0.52, revenue $727M, both above forecasts, 2026 outlook updated, Q4 revenue guide slightly below consensus (Seeking Alpha, GuruFocus, TIKR; one Robinhood/CNBC snapshot showed an unrelated stale ~$18.80-18.97 price, disregarded as stale).
+- Scan - mean-reversion: 0 names. Scan - momentum: NBIS, IBKR, CRWV, REZI, ERAS, RUM.
+  - CRWV 60.82 (+24.8%): catalyst verified (post-report, which is allowed), above peers/SPY, but scanner RVOL 1.17 vs 1.3 = Gate 1 FAIL as read literally (open governance question). Price has also drifted off the 61.35 high, no fresh break. No order.
+  - REZI 22.62 (+16.3%): catalyst now verified (Q3 beat; post-report thesis allowed). Gate 1 volume still not met on real volume: scanner RVOL 3.08 is the single 3.05M-share 16:30Z print; ex-print regular-session volume is about 0.5x average. Also needs entry trigger/spread re-check (0.40% bid/ask 22.60/22.69 now, above 0.3%). FAIL.
+  - NBIS (earnings Nov 12), IBKR (no dated catalyst), ERAS (no dated catalyst), RUM (earnings conflict): unchanged FAIL.
+- Day minimum (1 trade) unmet; gates not loosened. No order placed.
