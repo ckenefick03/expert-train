@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-11 11:27 ET",
+  "as_of": "2026-11-11 11:38 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $402.45. 11:22 ET: SPY 758.72 (+1.2%). CRWV +23.3% consolidating 59.4-60.5, scanner RVOL 1.01 (<1.3), no break of 60.52: no entry.",
+  "status_note": "Flat, all cash $402.45. 11:33 ET: REZI near-entry reviewed and declined (RVOL spike = one 3.05M-share print; spread 0.36%>0.3%). CRWV +23.7% still coiling. Tier B MR: nothing oversold.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-11",
@@ -11489,3 +11489,17 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - CRWV re-check: 60.10 (+23.3%), unchanged from 11:15 ET. 5-minute bars: 16:00Z H 60.42 L 59.99 C 60.40; 16:05Z H 60.41 L 59.43 C 59.65; 16:10Z H 60.41 L 59.60 C 60.15; 16:15Z H 60.21 L 59.81 C 60.17. It is coiling in a 59.4-60.5 range under the 60.52 day high, with volume falling (1.05M, 1.38M, 1.24M, 0.80M per 5 minutes versus 3-5M in the first half hour). No break of 60.52 yet, so the entry trigger is still missing. Relative volume (scanner) now reads 1.008 (it was 0.98 at 11:15 ET and 0.88 at 10:53 ET): still below 1.3 and rising slowly. Reading of the numbers (for the open question I flagged): the scanner's Volume column (89.2M) includes pre-market trading, while the relative-volume field implies a regular-session volume of about 57.5M (1.008 x 57.1M), which matches the sum of the day's regular-session bars; so the 1.0 is a regular-session-versus-average-day measure, and 1.3 would need roughly 74M regular-session shares. At the current pace (about 1.0-1.3M per 5 minutes) that is more than an hour away. Gate 1 therefore still FAILS on a literal reading; the setup also lacks the break/reclaim entry trigger. No order. Peers (11:22 ET): NBIS +16.8%, DELL +13.1%, SMCI +10.7%, ORCL +9.1%, CIFR +9.6%, APLD +8.2%, IREN +8.5%, MU +12.9%.
 - Momentum scan at RVOL >=1.0 (>=5%, cap >=$2B, avg vol >=1M): 2 rows: CRWV (above) and ERAS +8.7% (RVOL 1.02; still no dated catalyst: Gate 2 FAIL). No other name.
 - MR: Tier A ends 11:30 ET; the 11:15 ET scan (5 names, none oversold, RSI above 50) is unchanged in character; not re-run. No news search. No order placed.
+
+### Cycle 951 - ~11:33 ET (Wed Nov 11) - flat, no entries (REZI reviewed and declined)
+- Trigger fired 16:33:09Z (scheduled 16:32Z; previous commit 16:22:49Z). Portfolio $402.45 all cash, BP $402.45, no positions, no orders. Tier A ended at 11:30 ET; Tier B (MR) is now open.
+- Tape: SPY 758.72-759.29 (+1.2%, new highs; 16:25Z bar L 759.02 C 759.29), QQQ 691.51 (+2.5%), SMH 511.69 (+5.8%), IWM 282.83 (+0.8%), XLE 63.14 (+1.5%), XBI 156.16 (+0.7%), XLU 43.66 (-0.2%), XRT 91.61 (-0.9%). Rising: momentum on; MR has nothing to buy.
+- MR (Tier B; cap >=$5B, avg vol >=1M, down >=3.5%, no RSI cap): 10 rows: RVMD -4.4% (RSI 50.4), ABNB -4.0% (62.6), LULU -3.7% (59.3), ALC -3.5% (61.6), CNM -3.8% (64.9), BIRK -4.1% (61.6), AS -3.6% (62.9), COGT -5.3% (51.0), CPB -4.0% (62.1), SMMT -4.9% (58.7). None oversold (all RSI above 50); no shared sector driver; a few consumer names (ABNB, LULU, AS, BIRK, CPB, XRT -0.9%) are soft but there is no sourced cause: gate 1 FAIL for all. No order.
+- Momentum scan (>=5%, cap >=$2B, avg vol >=1M, RVOL >=1.0): 3 rows: CRWV +23.7% (RVOL 1.04), REZI +13.6% (RVOL 2.88), ERAS +8.4% (RVOL 1.02).
+- **CRWV:** 60.26-60.42 (+23.7%). The 16:25Z bar made a marginal new high (60.578 vs the 60.52 prior high) on 0.90M shares and closed 60.37; bars 16:15-16:25Z: volume 0.80M, 0.78M, 0.90M (thin versus 3-5M earlier). Scanner RVOL 1.04, still below 1.3: Gate 1 (relative volume) still FAILS on the literal sweep reading, as at 11:15 and 11:22 ET. No order.
+- **REZI (Resideo, cap $2.95B) full gate-check, reviewed to the order stage and DECLINED:**
+  - Move: 22.08-22.10 vs prior close 19.45 (+13.6%); peers: HON -0.5%, ADT +0.1%, ALLE -0.1%, LII +0.2%, CARR +1.9%, TT +1.5%, JCI +2.6% (peer average about +0.8%), SPY +1.2%: separation of roughly 12 pts. Above gap-day VWAP 21.05 and the prior close, at the day high (nothing given back). Earnings window: Q3 2026 was reported Nov 10 (the report is the thesis, allowed). Liquidity: cap, avg volume (1.73M) and dollar volume pass.
+  - Catalyst: an extended-mode search found that Resideo reported Q3 on Nov 10 (Investing.com: "Q3'26 slides: core growth accelerates despite stock decline"; Motley Fool Nov 11: "3 key takeaways"); the stock fell about 4.7% after hours Nov 10 to about 18.53, then reversed up today. So a real, dated earnings catalyst exists, but nothing I found explains the intraday run from 19.5 to 22.1 itself.
+  - Structure: higher lows (20.97 -> 21.03 -> 21.11 -> 21.26 -> 21.44 -> 21.60 -> 21.65), price above a rising short-term average, price just above the 22.01 pullback high. A trade plan was drafted: 4 whole shares (about $89) limit 22.20, stop 21.50 (about 2.8% below entry, under the 21.54-21.65 higher lows), target 23.4-24.0 (2R to 3R, prior high plus the morning measured move), end-of-day horizon.
+  - Why it was declined (two independent failures found during order review): (a) the relative-volume reading of 2.88 (up from 0.78 at 10:53 ET) comes from ONE 1-minute bar at 16:32Z that printed 3,046,653 shares with a low of 21.00 (versus a 21.8-22.0 market): a single block/cross, not broad participation; the preceding minute bars trade 1-22k shares, so the relative-volume pass is an artifact of one print, and regular-session volume ex that print is only about 0.8M (about 0.5x average); (b) the live quote at order review was bid 22.09 x 300, ask 22.17 x 100 = a 0.36% spread, above the 0.3% liquidity-universe limit, with only 100 shares offered. The order was NOT placed. The review call (review_equity_order) is read-only. Follow-up for REZI: track whether it holds 21.5-22 and whether genuine volume (not a single print) builds; a re-check is warranted next cycle.
+- ERAS +8.4% (16.78): no dated catalyst, Gate 2 FAIL (unchanged). IBKR 82.97 (+6.9%): no dated catalyst, FAIL (unchanged).
+- Day minimum (1 trade) unmet; gates not loosened. No news search (the hourly one ran at 11:15 ET). No order placed.
