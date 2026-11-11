@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-11 15:04 ET",
+  "as_of": "2026-11-11 15:17 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $400.54. Day P&L -$1.91 (1 closed trade). 15:04 ET: unchanged, no candidate passes Gate 2. Entries close 15:30; recap 15:47.",
+  "status_note": "Flat, all cash $400.54. Day P&L -$1.91 (1 closed trade). 15:17 ET hourly: ERAS got a dated catalyst (Stifel conference) but fails Gate 3 (fading from 17.34, no reclaim, thin tape, overhead at the $17.50 offering price). No entry. Recap 15:47.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-11",
@@ -3973,6 +3973,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-11 15:04 ET",
       "equity": 400.54
+    },
+    {
+      "t": "2026-11-11 15:17 ET",
+      "equity": 400.54
     }
   ],
   "positions": [],
@@ -4171,10 +4175,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Index steady (SPY +1.4%, SMH +5.7%). MR: SE and TWST only, no sector cause. Flat; no setups.",
+    "read": "Index flat-to-softer (SPY +1.4%, QQQ +2.5%, SMH +5.2%). Hot CPI keeps a December hike priced in. Flat; no setups.",
     "chips": [
       "SPY +1.4%",
-      "SMH +5.7%",
+      "SMH +5.2%",
       "flat",
       "no setups"
     ]
@@ -11778,3 +11782,17 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Tape: SPY 760.53 (+1.4%), QQQ 692.19 (+2.6%), SMH 510.65 (+5.6%), IWM 283.02 (+0.9%): unchanged for over an hour. Stable; momentum on; MR off for the day.
 - Scan - momentum (+5%, RVOL >=1.3): the same 10 names. IBKR (RVOL 1.77), ERAS (1.83), AXGN (1.59): volume fine, still no dated catalyst, Gate 2 FAIL. CLS/AMKR/CORZ: AI-hardware or CRWV-complex sympathy only. NBIS earnings Nov 12. REZI RVOL 3.7 is the block print. RUM earnings conflict. CRWV 60.43 is flat since my exit; no base.
 - No order placed. 26 minutes until the 15:30 ET entry cutoff; recap at 15:47 ET.
+
+### Cycle 972 - ~15:17 ET (Wed Nov 11; hourly trigger fired 15:12 ET, includes news search)
+- Reconciliation: equity $400.54, cash/BP $400.54, no positions, no open orders. Day P&L -$1.91.
+- Tape: SPY 760.26 (+1.4%), QQQ 691.36 (+2.5%), SMH 508.93 (+5.2%), IWM 282.95 (+0.85%): slightly softer than the 14:00 hour (SMH off about 0.4% since 14:55). Stable; momentum on; MR off for the day.
+- News (extended-mode WebSearch, dated Nov 11, 2026): the rally is CoreWeave-led AI strength; Reuters-style snapshot has the S&P 500 +1.1% and Nasdaq +1.7%. Tuesday's hot CPI left a December Fed rate hike priced as near-certain (CME FedWatch), which explains why the index cannot extend. No fresh macro shock found for the afternoon drift.
+- Scan - momentum (+5%, RVOL >=1.3): 12 names (new: LGN 36.54, +14.0%, cap $2.46B, RVOL 1.32; unresearched: with 15 minutes left to the cutoff there is not time to verify a catalyst and a base, so it is a FAIL by default, not a reasoned rejection).
+- ERAS written gate check (16.93, +9.4%, RVOL 1.85): the one name with a new dated catalyst today. Catalyst: Stifel healthcare conference, Nov 11: ERAS-0015 (pan-RAS glue) enrolling faster than guided, data sooner than guided, oral plenary slot (Investing.com). StockTwits notes a law-firm "investigation" solicitation, which is noise but a flag. Earnings Nov 24 (outside window).
+  - Gate 1: +9.4% vs XBI +0.7%, SPY +1.4%; above VWAP (16.64) and prior close (15.48); high 17.34 so it has given back 0.41 of a 1.86 gain (22%, under half); RVOL 1.85. Not a foreign ADR. PASS, but the tape is thin: many 10-minute bars carried 4k-60k shares between a few 400-570k spikes.
+  - Gate 2: dated, cited, but soft (management conference remarks, no new data). PASS marginally.
+  - Gate 3: FAIL. The last hour is a sequence of lower highs (17.34 -> 17.23 -> 17.14 -> 17.18 -> 17.02) and lower closes (17.27, 17.12, 17.06, 17.09, 17.05, 17.02, 16.93) with no reclaim of 17.34; price is leaving the day's range, not holding a base. I do not buy a fade.
+  - Skew: the earlier offering price at $17.50 sits 3.4% above, right on top of the 17.34 high; a structural stop under the 16.43 higher low is 3% below, so a 2R target (about 18.0) is above two supply levels. Also, only 43 minutes would remain to the close for an EOD horizon.
+  - Decision: no entry.
+- AXGN 55.15 (+8.4%, RVOL 1.72): extended-mode search found no Nov 11 catalyst (the move is a drift to 52-week highs after the late-October Q3 beat and raised outlook; BioCircuit acquisition mention is undated). Gate 2 FAIL. IBKR 82.85 (RVOL 1.82): still no dated catalyst. CLS/AMKR/CORZ/CIFR: sympathy. NBIS earnings Nov 12. REZI: block print. RUM: earnings conflict. CRWV 60.21: no base.
+- No order placed. The entry window closes at 15:30 ET. Close recap at 15:47 ET.
