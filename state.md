@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-11 13:57 ET",
+  "as_of": "2026-11-11 14:05 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "amber",
-  "status_note": "CRWV long open: 1.705 sh @ 61.58, now 61.41 (-$0.29, -0.12R). Stop 60.20, target 64.4. Price just under the 5-min EMA (61.57, now sloping down); higher low 60.96 and stop intact. Holding; 30-min rule ends 14:04 ET.",
+  "status_note": "CRWV long open: 1.705 sh @ 61.58, now 61.15 (-$0.73, -0.31R). Retest low 61.37 broke, price under falling 5-min EMA; 60.96 higher low and 60.20 stop intact. Holding per logged rule; exit trigger = 5-min close under 60.96. No new entries.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-11",
@@ -3945,6 +3945,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-11 13:57 ET",
       "equity": 402.17
+    },
+    {
+      "t": "2026-11-11 14:05 ET",
+      "equity": 401.72
     }
   ],
   "positions": [
@@ -3954,7 +3958,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "tier": "-",
       "qty": 1.705101,
       "entry": 61.5799,
-      "price": 61.41,
+      "price": 61.15,
       "stop": 60.2,
       "target": 64.4
     }
@@ -4142,11 +4146,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Stable: SPY +1.6%, QQQ +3.0%, SMH +6.5%, flat for ~1h. MR: only SE (no sector cause). CRWV long open, dipping under its 5-min EMA.",
+    "read": "Stable index (SPY +1.6%) but CRWV breakout failing: back under 61.78, retest low gone. MR: SE only (no sector cause).",
     "chips": [
       "SPY +1.6%",
-      "SMH +6.5%",
-      "CRWV -0.3%",
+      "SMH +6.4%",
+      "CRWV -0.7%",
       "MR: SE only"
     ]
   }
@@ -11695,3 +11699,12 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Scan - mean-reversion (cap >=$5B, <=-3.5%, RSI<45): 1 name, SE 73.77 (-3.9%, RSI 37, cap $47B), the same name seen at 11:42 ET. Foreign (Singapore) filer, no dated sector-wide cause found, not researched this cycle; Gate 1 FAIL (the 13:12 ET news search did not cover it; next hourly 14:12 ET).
 - Scan - momentum (+5%, RVOL >=1.3): IBKR (RVOL 1.54, no dated catalyst: Gate 2 FAIL), ERAS (RVOL 1.64, no catalyst: FAIL), REZI (RVOL 3.4 = block print, FAIL), CRWV (held, RVOL 1.38). No new entry.
 - Day: 1 trade, open P&L -$0.29. No news search this cycle.
+
+### Cycle 965 - ~14:05 ET (Wed Nov 11; trigger fired 14:03 ET)
+- Stop check (first): CRWV long 1.705101 sh, avg cost 61.58. Price 61.15 (bid 61.14 / ask 61.16): -$0.43/sh, -$0.73 (-0.7%, -0.31R). Stop 60.20 is 1.55% / $0.95 per share below; cushion intact. 5-minute bars: 18:50Z 61.435 (low 61.37), 18:55Z open 61.22 / close 61.315 (low 61.22; the bar printed only 92k shares). 9-period EMA 61.52 and falling for four bars (61.62 -> 61.61 -> 61.57 -> 61.52).
+- Status vs my own written conditions: (a) the watch point set last cycle, a 5-minute close under the 61.37 retest low, has now happened (61.315), so the entry's retest-hold premise is gone and CRWV is back below the 61.78 breakout level, about 0.6% under it: the breakout is failing. (b) My logged invalidation needs a 5-minute close under the EMA AND under the 60.96 higher low; the first holds, the second does not (lowest print since entry was 61.22). (c) The hard stop 60.20 is untouched. (d) The 30-minute hold rule expired at 14:04 ET. Judgment: I am not exiting yet. Selling at 61.15 to avoid a further $0.95/share of risk would be a discretionary exit on thin evidence (the last bar had 92k shares) in the middle of the range, and I wrote the two-condition rule precisely to avoid hair-trigger exits on a name with 0.5-1% five-minute ranges. Updated trigger: exit on the first 5-minute close under 60.96, or at 60.20 on a touch, or immediately if SPY/SMH break down sharply. I also note the cost of this choice honestly: if the breakout is simply failing, I will be paying more than if I had exited here.
+- Reconciliation: equity $401.72, cash/BP $297.45, 1 position of 5, no open orders. Daily P&L -$0.73 vs start equity $402.45. Within all limits ($60 loss limit, $394.19 breaker).
+- Tape: SPY 762.11 (+1.6%), QQQ 694.59 (+2.9%), SMH 514.33 (+6.4%): steady for an hour. Stable; momentum on, MR on (Tier B, closing 14:30).
+- Scan - mean-reversion: SE 73.82 (-3.9%, RSI 37), same as before; Singapore filer, no sector cause, Gate 1 FAIL (not researched this cycle; hourly news search due 14:12 ET next cycle).
+- Scan - momentum (+5%, RVOL >=1.0): 17 names, mostly AI-hardware/infrastructure sympathy (LITE +14%, MXL +14.6%, CRDO, BE, CLS, AMKR, AXTI, CIFR, CORZ) at RVOL 1.0-1.3 with no own catalyst. CORZ (RVOL 1.32) moves in the CRWV complex and would double my exposure to the same driver; no own dated catalyst: FAIL. IBKR (RVOL 1.57) and ERAS (RVOL 1.65): volume passes, still no dated catalyst, Gate 2 FAIL (IBKR to be re-searched in the 14:12 news search). REZI RVOL 3.5 is the block print: FAIL. RUM earnings conflict: FAIL. NBIS earnings Nov 12: FAIL.
+- No new entry. Day: 1 trade, open P&L -$0.73.
