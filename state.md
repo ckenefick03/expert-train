@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-11 10:47 ET",
+  "as_of": "2026-11-11 10:58 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $402.45. 10:43 ET: SPY 757.41 (+1.0%), Stabilizing/rising. IBKR and ERAS fail Gate 2 (no sourced catalyst); AI-hardware gap is sector-wide. No entry.",
+  "status_note": "Flat, all cash $402.45. 10:53 ET: SPY 758.02 (+1.1%) rising; REZI/RUM/IBKR/ERAS fail Gate 2 (no sourced catalyst; search index lacks Nov 10-11 coverage). MR: nothing oversold. No entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-11",
@@ -11455,3 +11455,14 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - ERAS (Erasca, US biotech, cap $5.4B): +7.9%, 16.70 vs 15.48 prior close, rising through the morning (opened 15.75, last 16.70), XBI only +0.2% so it is company-specific; volume spikes of 240-510k per bar in a few bars. One search: all results are earlier-2026 items (Jan ERAS-0015 data, Mar PT hikes, a July upsized offering at $17.50); nothing dated Nov 2026. Gate 2 (verified catalyst) FAIL; it is also trading below the $17.50 offering price. Not an entry. No order.
 - AI-hardware group (SNDK, MU, DELL, etc.): sector-wide, Gate 1 cannot be passed and no sourced catalyst. No order.
 - Day minimum (1 trade) unmet so far; gates are not loosened for it. No news search this cycle (next hourly 11:12 ET). No order placed.
+
+### Cycle 947 - ~10:53 ET (Wed Nov 11) - flat, no entries
+- Trigger fired 15:53:26Z (scheduled 15:52Z; previous commit 15:43:48Z). Portfolio $402.45 all cash, BP $402.45, no positions.
+- Tape: SPY 758.02 (+1.1%), QQQ 690.96 (+2.4%), SMH 509.36 (+5.3%), IWM 282.47 (+0.7%), XLE 63.03 (+1.3%), XBI 155.72 (+0.4%), XLU 43.70 (-0.1%), XRT 91.42 (-1.1%). SPY 5-minute: lows 756.07, 756.57, 756.86, 757.02; closes 756.56, 756.96, 757.46, 757.55: rising lows and highs for the fifth straight bar, a new session high (757.64). Rising: momentum on; the gap is extending, not fading.
+- MR (Tier A; cap >=$5B, avg vol >=1M, down >=4%, no RSI cap): 4 rows: RVMD -4.5% (RSI 50.4), CNM -4.1% (RSI 64.9), COGT -5.4% (RSI 51.0), SMMT -5.4% (RSI 58.7). None oversold (RSI above 50), no common sector cause: gate 1 FAIL for all. No order.
+- Momentum scan (>=5%, cap >=$2B, avg vol >=1M, RVOL >=0.7 for this early-session scan only; strict >=1.3 applied in the gate-check): 7 rows: NBIS +17.3% (earnings Nov 12: excluded), IBKR +6.7%, CRWV +22.9% and AXTI +22.2% (AI-hardware group, sector-wide), REZI +11.3% (new), ERAS +9.8% (carried from 10:43 ET), RUM +14.9% (new). Raw RVOL is 0.70-0.89 for all, below 1.3.
+- REZI (Resideo, US, cap $2.95B): 21.65 vs 19.45 prior close (+11.3%); opened 19.51, gapped to 20.70 in the first 10 minutes, then held 21.0-21.4 on fading volume (322k then 106k, 48k, 76k, 30k, 17k, 37k, 16k per 10 minutes); HON -0.5%, ADT flat, ALLE +0.1%, JCI +2.7%: it leads building-tech peers by roughly 9 pts. Not fading, but raw RVOL 0.78 and no dated catalyst: one search returned only Feb 2026 (Q4 results), July 13 2026 (standalone strategy ahead of the ADI spin-off) and 2025 items; nothing dated Nov 2026 explains today. Gate 2 FAIL. No order.
+- RUM (RUM Group, cap $2.04B, +15.0%, 5.88 vs 5.11): conflicting sources: the earnings-calendar tool listed RUM as reported this morning (EPS -0.19 vs -0.13 est, a miss), while a web search put Q3 2026 results on Nov 12 after the close. Either way it is within the earnings window or a post-report move on a MISS with no verified thesis, and the cap barely clears $2B: FAIL, avoided. No order.
+- IBKR (watch list): 82.81-82.83 (+6.7%), HOOD +3.9%; still no dated catalyst, raw RVOL 0.83: Gate 2 FAIL. ERAS: 17.00 (+9.8%), still no dated catalyst: FAIL.
+- Observation (disclosed, not a reason to loosen): the web-search index has returned nothing dated Nov 10-11, 2026 for any query this session (market wraps, CPI result, company news), so Gate 2 ("verified catalyst") cannot currently be satisfied for any name by search. This is a data-source limitation, and the gate stays as written. The day minimum (1 trade) remains unmet by design; no gate was loosened for it.
+- No news search this cycle (next hourly 11:12 ET). No order placed.
