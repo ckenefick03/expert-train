@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-11 11:54 ET",
+  "as_of": "2026-11-11 12:04 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $402.45. 11:54 ET: CRWV +25.9% still RVOL 1.11 (<1.3, Gate 1 fail); REZI RVOL print-driven, spread 0.31%; MR scan empty. No entry.",
+  "status_note": "Flat, all cash $402.45. 12:04 ET: SPY +1.4% new highs. CRWV RVOL 1.14 (<1.3), REZI print-driven RVOL, NBIS earnings Nov 12; MR scan empty. No entry. News search due 12:12.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-11",
@@ -3900,6 +3900,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-11 11:54 ET",
+      "equity": 402.45
+    },
+    {
+      "t": "2026-11-11 12:04 ET",
       "equity": 402.45
     }
   ],
@@ -11531,3 +11535,15 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
   - REZI 22.43 (+15.3%): RVOL 2.96 still carried by the single 3.05M-share print; bid/ask 22.40/22.47 = 0.31% spread, above 0.3%. Gate 1 FAIL. No order.
   - ERAS 16.66 (+7.6%): no dated catalyst, Gate 2 FAIL. RUM 5.96 (+16.6%): earnings-date conflict, cap ~$2.04B, price under $6 with likely wide spread; avoid (unchanged).
 - Day minimum (1 trade) unmet; gates not loosened. Hourly news search due 12:12 ET. No order placed.
+
+### Cycle 954 - ~12:04 ET (Wed Nov 11; trigger fired 12:03 ET)
+- Reconciliation: equity $402.45, cash/BP $402.45, no positions. Daily P&L $0.
+- Tape: SPY 760.47 (+1.40%, new highs), QQQ 693.65 (+2.8%), SMH 514.33 (+6.3%). Stable/rising; momentum on, MR on (Tier B).
+- Scan - mean-reversion (cap >=$5B, <=-3.5%, RSI<45): 0 names.
+- Scan - momentum (cap >=$2B, +5%, RVOL >=1.0): NBIS, IBKR, CRWV, REZI, ERAS, RUM (6).
+  - NBIS 158.19 (+18.1%, RVOL 1.02): earnings Nov 12 (within window, thesis not a post-report one); RVOL also under 1.3. FAIL.
+  - IBKR 83.54 (+7.7%, RVOL 1.08): no dated catalyst found earlier; Gate 2 FAIL, RVOL under 1.3.
+  - CRWV 61.30 (+25.8%, RVOL 1.14 vs 1.3): Gate 1 FAIL as read literally (open governance question). No order.
+  - REZI 22.48 (+15.6%): RVOL 3.0 still from the single 3.05M-share print; bid/ask 22.44/22.50 = 0.27%, spread now within 0.3% but the volume signal is the artifact, not genuine accumulation (the other 5-min bars carried tens of thousands of shares). Not entered; a catalyst is also not yet documented in this log beyond the gap. Gate 1/2 not demonstrated.
+  - ERAS 16.93 (+9.4%): no dated catalyst, Gate 2 FAIL. RUM 5.97: earnings conflict/under-$6, avoid.
+- Day minimum (1 trade) unmet; gates not loosened. News search due 12:12 ET (next cycle). No order placed.
