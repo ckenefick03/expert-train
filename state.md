@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-11 15:24 ET",
+  "as_of": "2026-11-11 15:34 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $400.54. Day P&L -$1.91 (1 closed trade). 15:24 ET: ERAS fading further, no setup. Entry cutoff 15:30; recap 15:47.",
+  "status_note": "Flat, all cash $400.54. Day P&L -$1.91 (1 closed trade, CRWV -0.81R). 15:34 ET: entry window closed 15:30. Recap 15:47.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-11",
@@ -3981,6 +3981,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-11 15:24 ET",
       "equity": 400.54
+    },
+    {
+      "t": "2026-11-11 15:34 ET",
+      "equity": 400.54
     }
   ],
   "positions": [],
@@ -4179,12 +4183,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Index flat-to-softer (SPY +1.4%, QQQ +2.5%, SMH +5.2%). Hot CPI keeps a December hike priced in. Flat; no setups.",
+    "read": "Index soft but orderly (SPY +1.4%, QQQ +2.4%, SMH +5.0%). Entries closed; flat into the bell.",
     "chips": [
       "SPY +1.4%",
-      "SMH +5.2%",
+      "SMH +5.0%",
       "flat",
-      "no setups"
+      "entries closed"
     ]
   }
 }
@@ -11806,3 +11810,9 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Tape: SPY 760.03 (+1.35%), QQQ 690.93 (+2.4%), SMH 508.24 (+5.1%), IWM 282.84 (+0.8%): a slow slide of about 0.1-0.3% over the last 10 minutes; no new lows. Stable-to-softening; MR off for the day.
 - Scan - momentum (+5%, RVOL >=1.3): the same 12 names. ERAS 16.83 (bid 16.81 / ask 16.84, +8.7%): lower again after the 15:17 ET check, now 0.5 below the 17.34 high; the Gate 3 fail stands. AXGN 56.02 (+10.1%, RVOL 1.87): still no Nov 11 catalyst, Gate 2 FAIL. IBKR (RVOL 1.88): no catalyst. LGN: unresearched. CLS/AMKR/CORZ/CIFR: sympathy only. NBIS earnings Nov 12. REZI block print. RUM earnings conflict. CRWV 59.72 (-3% below my exit).
 - No order placed. The entry window closes in 6 minutes (15:30 ET) and with an EOD default horizon nothing new can be sized and managed properly. Close recap at 15:47 ET.
+
+### Cycle 974 - ~15:34 ET (Wed Nov 11; trigger fired 15:33 ET): entries closed
+- Reconciliation: equity $400.54, cash/BP $400.54, no positions. The day's order list from the broker shows exactly two filled orders (CRWV buy 18:34:16Z at 61.5799 and CRWV sell 19:13:30Z at 60.4601) and nothing open. Day P&L -$1.91.
+- Tape: SPY 760.24 (+1.4%), QQQ 691.10 (+2.4%), SMH 507.98 (+5.0%), IWM 283.08 (+0.9%). Soft but orderly.
+- Scans skipped this cycle, by choice: the 15:30 ET entry cutoff passed at the start of this cycle (it ran at 15:33 ET), so a scan could not lead to an order. Disclosed as a skipped scan, not an oversight. The last scan (15:24 ET) found no passing candidate.
+- No order placed. Account flat; no overnight exposure. Close recap at 15:47 ET.
