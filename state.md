@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-11 12:48 ET",
+  "as_of": "2026-11-11 13:04 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $402.45. 12:48 ET: CRWV RVOL 1.26 (<1.3); IBKR/ERAS RVOL ok but no catalyst; new AXTI sympathy name RVOL 1.0. MR scan empty. No entry.",
+  "status_note": "Flat, all cash $402.45. 13:04 ET: CRWV RVOL 1.28 (<1.3, just short); IBKR/ERAS RVOL ok but no catalyst; STLA only MR name, no sector cause. No entry. 12:52 ET cycle skipped by dedupe.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-11",
@@ -3920,6 +3920,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-11 12:48 ET",
+      "equity": 402.45
+    },
+    {
+      "t": "2026-11-11 13:04 ET",
       "equity": 402.45
     }
   ],
@@ -11601,4 +11605,15 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
   - IBKR 83.59 (RVOL 1.33) and ERAS 16.85 (RVOL 1.32): volume passes, still no dated catalyst (IBKR searched last cycle), Gate 2 FAIL.
   - New: AXTI 48.94 (+24.5%, RVOL 1.01, cap $2.6B): semiconductor-materials name rising with the AI-hardware sympathy rally, no own catalyst found, RVOL under 1.3: FAIL (not researched further).
   - AMKR, CORZ (CoreWeave-complex sympathy), REZI (RVOL 3.3 = single block print), NBIS (earnings Nov 12), RUM (earnings conflict): unchanged FAIL.
+- Day minimum (1 trade) unmet; gates not loosened. No order placed.
+
+### Cycle 959 - ~13:04 ET (Wed Nov 11; trigger fired 13:03 ET)
+- Disclosure: the :52 trigger (12:52 ET) fired when the last commit was 5 min 54 s old, so I skipped it under the 6-minute dedupe rule and logged nothing; that left a ~15 min gap in the log (12:48 to 13:04 ET).
+- Reconciliation: equity $402.45, cash/BP $402.45, no positions. Daily P&L $0.
+- Tape: SPY 760.82 (+1.45%, flat for ~30 min), QQQ 693.62 (+2.8%), SMH 514.41 (+6.4%). Stable; momentum on, MR on (Tier B).
+- Scan - mean-reversion (cap >=$5B, <=-3.5%, RSI<45): 1 name, STLA 4.11 (-3.6%, RSI 42.5, cap $16B). Foreign (Netherlands) filer; no dated sector-wide cause found yet, no upside anchor, not researched this cycle (hourly news search is due 13:12 ET). Gate 1 FAIL for now.
+- Scan - momentum (+5%, RVOL >=1.0): 10 names.
+  - CRWV 61.37 (+25.9%): RVOL 1.28 vs 1.3 required, short by 0.02; Gate 1 FAIL as read literally. Price round-tripped 61.76 -> 61.33 over 15 min, no fresh break. Catalyst verified. No order.
+  - IBKR 83.32 (RVOL 1.37) and ERAS 16.84 (RVOL 1.38): volume passes, no dated catalyst, Gate 2 FAIL (unchanged).
+  - New: ORCL 129.92 (+10.1%, RVOL 1.01, cap $368B): part of the AI-infrastructure rebound; no own catalyst checked, RVOL under 1.3: FAIL. AXTI, AMKR, CORZ (sympathy names, RVOL 1.0-1.2), REZI (RVOL 3.3 = single block print), NBIS (earnings Nov 12), RUM (earnings conflict): unchanged FAIL.
 - Day minimum (1 trade) unmet; gates not loosened. No order placed.
