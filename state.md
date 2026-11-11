@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-11 11:44 ET",
+  "as_of": "2026-11-11 11:54 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $402.45. 11:44 ET: CRWV +24.7% fails Gate 1 RVOL (1.07 vs 1.3); REZI RVOL again a single 3.05M print, spread 0.45%; MR: only SE (foreign ADR, no sector cause). No entry.",
+  "status_note": "Flat, all cash $402.45. 11:54 ET: CRWV +25.9% still RVOL 1.11 (<1.3, Gate 1 fail); REZI RVOL print-driven, spread 0.31%; MR scan empty. No entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-11",
@@ -3896,6 +3896,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-11 11:44 ET",
+      "equity": 402.45
+    },
+    {
+      "t": "2026-11-11 11:54 ET",
       "equity": 402.45
     }
   ],
@@ -11517,3 +11521,13 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
   - REZI 22.15 (+13.9%): RVOL 2.93 is again driven by the single 3.05M-share 16:30 bar (low 21.00, close 22.08); the neighboring bars carry 58k and 33k shares. Bid/ask 22.12/22.22 = 0.45% spread, above 0.3%. Gate 1 FAIL. No order.
   - ERAS 16.76 (+8.3%): no dated catalyst, Gate 2 FAIL (unchanged).
 - Day minimum (1 trade) unmet; gates not loosened. No news search this cycle. No order placed.
+
+### Cycle 953 - ~11:54 ET (Wed Nov 11; trigger fired 11:52 ET)
+- Reconciliation: equity $402.45, cash/BP $402.45, no positions. Daily P&L $0.
+- Tape: SPY 759.58 (+1.29%), QQQ 692.84 (+2.7%), SMH 513.44 (+6.2%). Stable/rising, momentum on, MR on (Tier B).
+- Scan - mean-reversion (cap >=$5B, <=-3.5%, RSI<45): 0 names. Nothing to gate.
+- Scan - momentum (cap >=$2B, +5%, RVOL >=1.0): CRWV, REZI, ERAS, RUM.
+  - CRWV 61.35 (+25.9%): scanner RVOL 1.11 vs 1.3 required, Gate 1 FAIL as read literally (same open governance question). No order.
+  - REZI 22.43 (+15.3%): RVOL 2.96 still carried by the single 3.05M-share print; bid/ask 22.40/22.47 = 0.31% spread, above 0.3%. Gate 1 FAIL. No order.
+  - ERAS 16.66 (+7.6%): no dated catalyst, Gate 2 FAIL. RUM 5.96 (+16.6%): earnings-date conflict, cap ~$2.04B, price under $6 with likely wide spread; avoid (unchanged).
+- Day minimum (1 trade) unmet; gates not loosened. Hourly news search due 12:12 ET. No order placed.
