@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-11 09:46 ET",
+  "as_of": "2026-11-11 09:56 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $402.45. 9:43 ET: gap up holding, mild fade off the open highs (SPY +0.8%, SMH +3.5%). No entries before 10:00 ET.",
+  "status_note": "Flat, all cash $402.45. 9:53 ET: gap fading (SPY lower lows 4 bars, +0.8%). No entries before 10:00 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-11",
@@ -11407,3 +11407,9 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Tape: SPY 756.06 (+0.82%), QQQ 685.68 (+1.6%), SMH 500.33 (+3.5%), IWM 281.75 (+0.4%), XLE 62.52 (+0.5%), XBI 155.46 (+0.3%). MU 775.00 (+6.9%), SNDK 946.37 (+10.0%), DELL 361.80 (+8.2%), NVDA 173.10 (+2.5%), AAON 76.48 (+2.0%, off the 78.17 print at 9:33 ET).
 - Opening range (5-minute): SPY 14:30Z O 756.74 H 757.93 L 756.55 C 756.71 (450k); 14:35Z O 756.71 H 757.05 L 755.71 C 756.80 (244k). SMH 14:30Z O 504.55 H 505.49 L 501.70 C 501.74; 14:35Z H 503.58 L 500.33 C 502.29. The pre-market and first-minute highs (SPY 757.9, SMH 505.5) have faded about 0.2% and 1% respectively; the gap is holding but not extending. Two bars are too few for a regime read (framework §4.1 needs ~3 consecutive higher lows); SPY's second bar made a lower low (755.71 vs 756.55).
 - No entry is allowed before 10:00 ET, so the preview scans were intentionally skipped (disclosed). No news search (next hourly 10:12 ET). No order placed.
+
+### Cycle 941 - ~9:53 ET (Wed Nov 11) - opening range; flat, no entries possible
+- Trigger fired 14:53:00Z (scheduled 14:52Z; previous commit 14:43:03Z). Portfolio $402.45 all cash, BP $402.45, no positions.
+- Tape: SPY 756.01 (+0.81%), QQQ 684.96 (+1.5%), SMH 499.82 (+3.3%), IWM 282.63 (+0.7%), XLE 62.76 (+0.9%), XBI 155.99 (+0.6%). MU 783.70 (+8.1%), SNDK 957.00 (+11.3%), DELL 362.59 (+8.4%), NVDA 173.04 (+2.5%), AAON 77.55 (+3.4%).
+- Regime (SPY 5-minute, first four bars of the session): lows 756.55, 755.71, 755.67, 754.91 (each lower than the last); closes 756.71, 756.80, 756.11, 755.71; the high is 757.93 (first bar). SMH: lows 501.70, 500.33, 498.39, 496.01; closes 501.74, 502.29, 498.76, 498.36. A steady fade off the open: new intraday lows on every bar, still a +0.8% gap above Tuesday's close. By the framework §4.1 test this is gap-and-fade (Falling intraday), not Stabilizing; momentum would need fresh non-fading catalyst gaps only, and MR stays off until SPY stops making new lows.
+- No entry is allowed before 10:00 ET, so the preview scans were intentionally skipped (disclosed). No news search (the 9:16 ET hourly found no dated cause; next due 10:12 ET). No order placed.
