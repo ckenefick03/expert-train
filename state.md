@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-11 15:43 ET",
+  "as_of": "2026-11-11 15:49 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $400.54. Day P&L -$1.91 (1 closed trade, CRWV -0.81R). 15:34 ET: entry window closed 15:30. Recap 15:47.",
+  "status_note": "Day closed flat: 1 trade (CRWV momentum, -$1.91, -0.81R). Equity $400.54, all cash. Nothing rolls overnight. Drawdown from the $437.99 peak is 8.6%; the 10% breaker (394.19) is $6.35 away.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-11",
@@ -3989,6 +3989,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-11 15:43 ET",
       "equity": 400.54
+    },
+    {
+      "t": "2026-11-11 15:49 ET",
+      "equity": 400.54
     }
   ],
   "positions": [],
@@ -4187,12 +4191,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Index soft but orderly (SPY +1.4%, QQQ +2.4%, SMH +5.0%). Entries closed; flat into the bell.",
+    "read": "Nov 11 close: SPY +1.4%, QQQ +2.4%, SMH +5.2%, AI-hardware rally on CoreWeave earnings, hot CPI keeps a December hike priced. Flat overnight.",
     "chips": [
       "SPY +1.4%",
-      "SMH +5.0%",
-      "flat",
-      "entries closed"
+      "SMH +5.2%",
+      "flat overnight",
+      "breaker 6.35 away"
     ]
   }
 }
@@ -11824,3 +11828,19 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 ### Cycle 975 - ~15:43 ET (Wed Nov 11; trigger fired 15:42 ET): entries closed
 - Reconciliation: equity $400.54, cash/BP $400.54, no positions, no open orders. Day P&L -$1.91.
 - Tape: SPY 760.02 (+1.35%), QQQ 690.89 (+2.4%), SMH 507.92 (+5.0%): unchanged. Scans skipped by choice (past the 15:30 ET entry cutoff; nothing can be ordered). No order placed. Close recap follows at 15:47 ET.
+
+### Cycle 976 - ~15:49 ET (Wed Nov 11; close-recap trigger fired 15:48 ET): LAST CYCLE + DAY RECAP
+- Stop check (first): no open positions, so no stops. Broker open-order query (state new): none. Positions: none.
+- Reconciliation: equity $400.54, cash/BP $400.54, buying power equals cash. Day P&L -$1.91 (start $402.45). Tape at 15:48 ET: SPY 760.48 (+1.4%), QQQ 691.37 (+2.5%), SMH 508.76 (+5.2%), IWM 282.95 (+0.85%). No new entries after 15:30 ET.
+- OVERNIGHT STATUS: nothing rolls. The account is flat, all cash, so no thesis needs defending overnight and no hold decision is required.
+
+#### Nov 11 day recap
+- What ran: pre-open brief; opening cycles from 9:33 ET; scheduled :02/:22/:32/:42/:52 cycles all day (log cycles 939-976) with hourly news searches at 11:15, 12:14, 13:15 (14:12 was an hourly cycle at 14:13-14:20 ET), 14:20 and 15:17 ET; mean reversion Tier A/B (10:00-14:30) all day, Tier C unused because the day's minimum was met; momentum from 10:30 ET.
+- Trades: 1. CRWV momentum long, bought 13:34 ET 1.705101 sh @ 61.5799 ($105), sold 14:13 ET @ 60.4601 on the logged invalidation (5-minute close under the 60.96 higher low with a falling EMA, heavy volume); P&L -$1.91 (-1.8%), -0.81R, score 58. The 60.20 stop was never touched.
+- Skips (with reasons, all logged): early session IBKR, ERAS, CRWV (volume gate), REZI (single 3.05M-share block print inflated RVOL; spread 0.36% at the 11:33 review), RUM (earnings-date conflict), NBIS/CSCO/AMAT/FPS/CBRS (earnings Nov 12), the AI-hardware sympathy names, MR names (RSI 50-65 early, then STLA/SE/TWST with no sector-wide cause), ERAS at 15:17 ET (dated Stifel catalyst, failed the structure gate), AXGN (no Nov 11 catalyst), LGN (unresearched).
+- Missed, late or skipped cycles: the 12:52 ET trigger was skipped by the 6-minute dedupe rule with nothing logged (disclosed in Cycle 959; it left a ~15-minute gap, 12:48-13:04 ET). Several triggers fired 1-7 minutes late (12:32 fired ~12:38, 12:42 fired ~12:46, 13:52 fired ~13:56, others). The 15:33 and 15:42 ET cycles skipped their scans on purpose (past the 15:30 cutoff). The :32 and :42 cycles around 12:20 ET also lost a few minutes to MCP reconnects; nothing was lost.
+- Corrections to this log (append-only, so corrected here): Cycle 969's CRWV parenthetical was garbled (corrected in Cycle 970). Cycle 973 said CRWV 59.72 was "3% below my exit"; the correct figure is about 1.2% below the 60.46 exit. The Cycle 962 entry stated daily_loss_limit read 100 in the dashboard JSON and that I changed it to 60 (it matches your standing $60).
+- Risk position for tomorrow: equity $400.54 vs the $437.99 peak is an 8.6% drawdown. The 10% circuit breaker level is $394.19, only $6.35 away. At the $105 size and the roughly 2.2% stop used today ($2.35 of risk), about three stop-outs in a row would trip it. The $60 daily loss limit is therefore not the binding constraint; the breaker is. Flagged for you, no change made.
+- What worked / didn't: the written invalidation rule and discipline on the volume gate held up (I refused a dozen sympathy and no-catalyst chases). What lost money: buying an already-extended +26% post-earnings gap after the first spike, with the volume ratio hovering at the threshold and five-minute volume fading before entry.
+- Open items for you (no decisions are blocking trading): (1) scanner relative-volume field vs raw volume against the 30-day average after 11:00 ET (CRWV passed the sweep by 0.002 at 13:15 ET; I treated it as a pass only because other gates held, and it was the losing trade); I suggest treating a pass by less than 0.1 as a fail late in the day. (2) The invalidation-vs-stop-only review is now due after one more momentum trade under the loosened Gate 1. (3) Whether to cut the $105 size or add a drawdown-aware size reduction given the breaker is $6.35 away. (4) The profit-protection rule is still unset.
+- Next: pre-open brief Nov 12 at 13:27Z (8:27 ET). NBIS, CSCO, AMAT and others report Nov 12; tomorrow's momentum list will have fresh post-earnings candidates.
