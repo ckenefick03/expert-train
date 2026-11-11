@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-11 08:35 ET",
+  "as_of": "2026-11-11 09:20 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Pre-open Wed Nov 11: flat, all cash $402.45. Large risk-on gap (SPY +1.0%, QQQ +2.0%, SMH +4.8% pre-market); cause not verified. No orders pre-open.",
+  "status_note": "Flat, all cash $402.45. 9:16 ET hourly (pre-market): SPY +1.0%, QQQ +2.1%, SMH +4.4% gap up; cause still unverified. No entries before 10:00 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-11",
@@ -11389,3 +11389,9 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 ### Cycle 937 - ~9:03 ET (Wed Nov 11) - pre-market; no entries possible, scans not run
 - Trigger fired 14:03:49Z (scheduled 14:02Z; previous commit 13:53Z). The regular session opens at 9:30 ET and no entry is allowed before 10:00 ET, so the live reconcile, tape read and preview scans were intentionally skipped (disclosed). State per the 13:28Z pre-open brief: all cash $402.45, no positions, no orders. No order placed. The 9:12 ET hourly cycle is also pre-open-adjacent; the first scan cycles that matter are 10:02 ET (MR) and 10:32 ET (momentum).
 
+### Cycle 938 - ~9:16 ET (Wed Nov 11) - hourly cycle, pre-market; flat, no entries possible
+- Trigger "Trading cycle (hourly)" fired 14:16:23Z (scheduled 14:12Z, about 4 minutes late; previous commit 14:04Z). Portfolio $402.45 all cash, BP $402.45, no positions. No stop checks apply.
+- Pre-market tape (extended-hours quotes vs Tue close): SPY 757.31 vs 749.92 (+1.0%); QQQ 687.98 vs 674.82 (+1.9%); SMH 505.14 vs 483.63 (+4.4%); IWM 283.03 (+0.9%); XLE 62.85 (+1.0%); XBI 156.18 (+0.7%). Semis/AI: MU 774.00 (+6.8%), SNDK 933.70 (+8.6%), DELL 358.92 (+7.3%), AMD 545.09 (+5.8%), NVDA 174.50 (+3.3%), IREN 21.03 (+6.6%), ASTS 34.73 (+3.1%), AAON 77.50 (+3.3%, wide quote). Slightly off the 8:28 ET highs (SMH 507.01, MU 779.87, DELL 361.75): the gap is holding but not extending.
+- News (hourly search, two standard queries): (1) chip rally: results are undated. The closest match describes a Micron/Qualcomm guidance-driven chip rally "Wednesday evening" with Nasdaq 100 futures +2.2%, ES +0.8% at 04:30 ET, but the page gives no date and similar chip rallies exist from Oct 2025, Jan 2026 and Aug 2026, so it is NOT verified for today. (2) CPI: the BLS site shows October 2026 CPI was scheduled for Tue Nov 10 at 8:30 ET; no article or BLS page with those numbers was found (latest found: September CPI, +3.7% y/y, +0.6% m/m, energy-led). Result: still no dated, sourced cause for the Nov 11 gap; not citable for any gate.
+- The session has not opened (9:30 ET) and no entry is allowed before 10:00 ET, so the MR/momentum preview scans were intentionally skipped (disclosed). No order placed.
+- Plan for 10:02+ ET: if SPY holds the gap above its VWAP (regime Stable/rising), momentum on from 10:32 ET on names that clear Gate 1 relative to SMH, with a verified catalyst; skip NBIS, FPS, CBRS, AMAT, CSCO (earnings Nov 12). If the gap fades to new session lows, MR needs a dated sector cause.
