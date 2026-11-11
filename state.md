@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-11 13:04 ET",
+  "as_of": "2026-11-11 13:15 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $402.45. 13:04 ET: CRWV RVOL 1.28 (<1.3, just short); IBKR/ERAS RVOL ok but no catalyst; STLA only MR name, no sector cause. No entry. 12:52 ET cycle skipped by dedupe.",
+  "status_note": "Flat, all cash $402.45. 13:15 ET: CRWV RVOL now 1.302 (Gate 1 volume just passes) but no break of 61.78 high and 5-min EMA flat, so no entry trigger; watching. MR scan empty (STLA was company-specific, -58% YTD). No entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-11",
@@ -3924,6 +3924,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-11 13:04 ET",
+      "equity": 402.45
+    },
+    {
+      "t": "2026-11-11 13:15 ET",
       "equity": 402.45
     }
   ],
@@ -11616,4 +11620,17 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
   - CRWV 61.37 (+25.9%): RVOL 1.28 vs 1.3 required, short by 0.02; Gate 1 FAIL as read literally. Price round-tripped 61.76 -> 61.33 over 15 min, no fresh break. Catalyst verified. No order.
   - IBKR 83.32 (RVOL 1.37) and ERAS 16.84 (RVOL 1.38): volume passes, no dated catalyst, Gate 2 FAIL (unchanged).
   - New: ORCL 129.92 (+10.1%, RVOL 1.01, cap $368B): part of the AI-infrastructure rebound; no own catalyst checked, RVOL under 1.3: FAIL. AXTI, AMKR, CORZ (sympathy names, RVOL 1.0-1.2), REZI (RVOL 3.3 = single block print), NBIS (earnings Nov 12), RUM (earnings conflict): unchanged FAIL.
+- Day minimum (1 trade) unmet; gates not loosened. No order placed.
+
+### Cycle 960 - ~13:15 ET (Wed Nov 11; hourly trigger fired 13:12 ET, includes news search; last cycle 9 min earlier)
+- Reconciliation: equity $402.45, cash/BP $402.45, no positions. Daily P&L $0.
+- Tape: SPY 761.36 (+1.5%, new session high), QQQ 694.24 (+2.9%), SMH 515.23 (+6.5%). Stable/rising; momentum on, MR on (Tier B).
+- News (extended-mode WebSearch): STLA (the one MR name last cycle) is not a sector-wide dislocation. Coverage through Nov 10 shows company-specific problems: Turin Mirafiori plant idle through Nov 13, Italian chip shortage, stock down about 58% YTD after $25.4B EV charges and a suspended dividend. Multi-week downtrend plus company-specific cause = MR Gates 1 and 4 FAIL. STLA also dropped off the scan this cycle (no -3.5% name left: MR scan 0).
+- Scan - momentum (+5%, RVOL >=1.0): 11 names (new: CLS 245.88 +9.8% RVOL 1.04, AI-hardware sympathy, no own catalyst, fails). ORCL, AXTI, AMKR, CORZ sympathy names RVOL 1.0-1.2: fail. NBIS earnings Nov 12: fail. REZI RVOL 3.35 is the single block print: fail. RUM earnings conflict: fail. IBKR (RVOL 1.38) and ERAS (RVOL 1.41): no dated catalyst, Gate 2 FAIL.
+- CRWV written gate check (61.55, +26.5%, RVOL 1.302 on the scanner sweep):
+  - Gate 1 (relative strength/volume): +26.5% vs SPY +1.5%, SMH +6.5%, NBIS +19%, ORCL +10%: well over 2 pts above peers and SPY. Above gap-day VWAP (58.57) and prior close (48.73); high 61.78, now 0.4% below it, so nothing given back. Relative volume 1.302 vs 1.3 required: this is the first cycle it passes, by 0.002; it is a razor-thin pass. Honest caveat: 5-minute volume has faded to 0.3-0.8M per bar from 1-5M early, so the ratio is being held up by the morning. Not a foreign ADR; earnings already reported (post-report thesis allowed). PASS (marginal).
+  - Gate 2 (catalyst): Q3 beat, revenue $3.66B vs ~$3.55B, raised outlook (dated Nov 10-11 coverage). PASS.
+  - Gate 3 (structure/trigger): higher lows since 17:05Z (60.27 -> 60.44 -> 60.60 -> 60.83 -> 61.16 -> 61.41) but the last two bars printed 61.16 and 60.96, a small lower-low pullback; 9-period 5-min EMA is flat (61.33 -> 61.31 -> 61.32), not rising. Price is above it but no break of the 61.78 high or reclaim has happened. Entry trigger NOT met. FAIL for this cycle.
+  - Gate 4 timing 13:15 ET: OK. If it triggered: stop under the 60.25 base low (about 2.1% risk), target >=2R (about 64.3), EOD horizon, $105 size.
+  - Decision: no order. Follow-up for next cycle: re-check for a clean break of 61.78 on rising bar volume with RVOL still >=1.3 and EMA turning up; do not chase a fade.
 - Day minimum (1 trade) unmet; gates not loosened. No order placed.
