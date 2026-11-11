@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-11 10:42 ET",
+  "as_of": "2026-11-11 10:47 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $402.45. 10:33 ET momentum open: IBKR +6.3% (leads brokers, above VWAP) fails Gate 2 (no verified catalyst); AI-hardware gap names are sector-wide. No entry.",
+  "status_note": "Flat, all cash $402.45. 10:43 ET: SPY 757.41 (+1.0%), Stabilizing/rising. IBKR and ERAS fail Gate 2 (no sourced catalyst); AI-hardware gap is sector-wide. No entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-11",
@@ -11445,3 +11445,13 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - IBKR gate-check (the only name that is not part of the AI-hardware group): price 82.47 vs prior close 77.59 (+6.3%); SPY +0.8%, so about 5.5 pts above SPY. Brokerage/exchange peers: HOOD +2.8%, COIN +1.9%, GS +1.2%, ICE +0.9%, CME +0.8%, MS +0.6%, LPLA +0.2%, SCHW -1.0%: IBKR leads the nearest peer (HOOD) by 3.5 pts. Not fading: opened 79.69, rising lows every bar, last 5-minute close 82.60 vs the 82.68 high, above VWAP 81.38 and above the prior close, no give-back. Volume: 76% of a normal full day already traded, so the pace is far above the 1.3 requirement on a time-adjusted basis (I do NOT treat the raw 0.76 as a pass; strict RVOL >=1.3 on the raw measure is not met yet). Foreign ADR: no (US-listed, Greenwich CT). Earnings: none within 2 sessions (Q2 reported July 21; Q3 expected mid-Oct, already out). Stop room: base low 79.68 is 3.4% below the 82.47 entry (within the ~6% limit). **FAIL on Gate 2 (verified catalyst):** two WebSearches (IBKR news Nov 11 2026; brokerage rise/record volumes) returned only older items (Aug-Sept 2026 press releases, Q2 2026 results of Jul 21, Jan 2026 highs, undated Traders Union moves). Nothing dated Nov 2026 explains today's +6.3%, so a catalyst cannot be named or sourced. No order. IBKR is the best-structured name on the board and is on the watch list: re-check each cycle for (a) a dated catalyst (October brokerage metrics were due Nov 2; a Nasdaq-100/S&P index or product announcement would count if sourced), (b) raw RVOL >=1.3, (c) a held pullback with a higher low. Not loosened.
 - AI-hardware group (SNDK, MU, DELL, LITE, STX, etc., 6-13% up, SMH +4.2%): Gate 1 cannot be passed by sector-wide moves and no catalyst is sourced. No order.
 - MR: Tier A runs to 11:30 ET; the 10:22 ET scan had no oversold names; not re-run. No news search (the 10:15 ET hourly found no dated cause). No order placed.
+
+### Cycle 946 - ~10:43 ET (Wed Nov 11) - flat, no entries
+- Trigger fired 15:42:37Z (scheduled 15:42Z; previous commit 15:34:06Z). Portfolio $402.45 all cash, BP $402.45, no positions.
+- Tape: SPY 757.41 (+1.0%), QQQ 688.88 (+2.1%), SMH 505.71 (+4.6%), IWM 282.16 (+0.6%), XLE 63.19 (+1.6%), XBI 155.38 (+0.2%), XLU 43.66 (-0.2%), XRT 91.34 (-1.2%).
+- Regime (SPY 5-minute): lows 755.40, 755.86, 756.07, 756.57; closes 755.83, 756.75, 756.56, 756.96. Rising lows for five bars, a new post-open high (757.10). Stable/rising: momentum on, MR has nothing oversold.
+- Momentum scan (>=5%, cap >=$2B, avg vol >=1M, RVOL >=0.7 for this early-session scan only): NBIS +16.5% (earnings Nov 12: excluded), IBKR +6.8%, CRWV +21.2% (AI-neocloud, with the group), ERAS +7.9% (new).
+- IBKR re-check (watch-list item): 82.74-82.83, higher highs (82.89), 5-minute lows rising, above VWAP; HOOD +3.7% (lead over HOOD now about 3 pts), SCHW -0.7%. Raw RVOL 0.79 (barely changed in 10 minutes: the last four 5-minute bars carry only 17-27k shares versus 50-200k earlier, so the volume impulse has faded). Still no dated, sourced catalyst (Gate 2) -> FAIL, and raw RVOL >=1.3 is not met either. No order.
+- ERAS (Erasca, US biotech, cap $5.4B): +7.9%, 16.70 vs 15.48 prior close, rising through the morning (opened 15.75, last 16.70), XBI only +0.2% so it is company-specific; volume spikes of 240-510k per bar in a few bars. One search: all results are earlier-2026 items (Jan ERAS-0015 data, Mar PT hikes, a July upsized offering at $17.50); nothing dated Nov 2026. Gate 2 (verified catalyst) FAIL; it is also trading below the $17.50 offering price. Not an entry. No order.
+- AI-hardware group (SNDK, MU, DELL, etc.): sector-wide, Gate 1 cannot be passed and no sourced catalyst. No order.
+- Day minimum (1 trade) unmet so far; gates are not loosened for it. No news search this cycle (next hourly 11:12 ET). No order placed.
