@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-11 13:25 ET",
+  "as_of": "2026-11-11 13:36 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -35,18 +35,18 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "risk": {
     "position_size": 105,
     "max_positions": 5,
-    "daily_loss_limit": 100,
+    "daily_loss_limit": 60,
     "breaker_pct": 10,
     "min_trades": 1,
     "max_trades": 10
   },
-  "status": "green",
-  "status_note": "Flat, all cash $402.45. 13:25 ET: CRWV RVOL 1.32 and sitting 0.05% under its 61.78 high, break not yet confirmed on light volume; watching. IBKR/ERAS no catalyst. MR scan empty. No entry.",
+  "status": "amber",
+  "status_note": "ENTRY 13:34 ET: CRWV momentum long 1.705101 sh @ 61.58 ($105). Stop 60.20, target 64.4, EOD horizon. Post-earnings breakout above 61.78 held on a shallow retest; RVOL 1.34.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-11",
     "start_equity": 402.45,
-    "trades": 0,
+    "trades": 1,
     "forced": 0
   },
   "equity_history": [
@@ -3933,9 +3933,24 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-11 13:25 ET",
       "equity": 402.45
+    },
+    {
+      "t": "2026-11-11 13:36 ET",
+      "equity": 402.42
     }
   ],
-  "positions": [],
+  "positions": [
+    {
+      "symbol": "CRWV",
+      "strategy": "momentum",
+      "tier": "-",
+      "qty": 1.705101,
+      "entry": 61.5799,
+      "price": 61.66,
+      "stop": 60.2,
+      "target": 64.4
+    }
+  ],
   "trades": [
     {
       "symbol": "TER",
@@ -4119,15 +4134,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Range above the 744.87 low: SPY lows 745.07, 745.51, 746.13, then 745.72 (18:00Z bar), so the 3-higher-lows sequence broke by a few cents; SPY -0.9%, closes near 746. Range / weakly Stabilizing; MR needs a sourced sector cause, none exists.",
+    "read": "Stable/rising: SPY +1.6%, QQQ +3.0%, SMH +6.6%. MR empty (no oversold names); momentum on. CRWV long open.",
     "chips": [
-      "SPY -0.9%",
-      "QQQ -1.5%",
-      "SMH -2.0%",
-      "IWM -1.1%",
-      "XBI -1.4%",
-      "XRT -0.6%",
-      "XLE +0.4%"
+      "SPY +1.6%",
+      "SMH +6.6%",
+      "CRWV long",
+      "MR empty"
     ]
   }
 }
@@ -11646,3 +11658,17 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - CRWV follow-up (61.75-61.77, +26.8%, scanner RVOL 1.32): relative volume passes for a second cycle, strength and catalyst unchanged. Entry trigger still NOT met: session high is 61.78 and the last three 5-minute bars (18:05-18:15Z) peaked at 61.65, 61.74 on 530k, 392k shares, so price is pressing the high on thinning volume, not breaking it on rising volume; 9-period EMA is flat around 61.3. A break needs to print above 61.78 on a bar with volume above the recent 0.4-0.6M average. No order; no chase of a level that has not broken.
 - IBKR (RVOL 1.41) and ERAS (RVOL 1.47): volume passes, no dated catalyst, Gate 2 FAIL (unchanged). CLS, ORCL, AXTI, AMKR, CORZ (sympathy, RVOL 1.05-1.2), NBIS (earnings Nov 12), REZI (RVOL 3.37 is the block print), RUM (earnings conflict): unchanged FAIL.
 - Day minimum (1 trade) unmet; gates not loosened. No order placed.
+
+### Cycle 962 - ~13:36 ET (Wed Nov 11; trigger fired 13:32 ET, ran ~13:33-13:36): ENTRY CRWV
+- Reconciliation before the order: equity $402.45, cash/BP $402.45, no positions, no open orders. Daily P&L $0, loss limit and breaker untouched.
+- Tape: SPY 762.08 (+1.6%, session high), QQQ 695.02 (+3.0%), SMH 515.48 (+6.6%). Stable/rising; momentum on. MR scan 0 names. Momentum scan 15 names (new: BE, CRDO, CIFR, all AI-infrastructure sympathy at RVOL ~1.0, no own catalyst: fail).
+- CRWV gate check (written, all four pass):
+  - Gate 1: +26.6% vs SPY +1.6%, SMH +6.6%, NBIS +19%, ORCL +10%, CORZ +8.8%: far over 2 pts above the peer complex and SPY. Above gap-day VWAP (58.57 at 13:05 ET, higher since) and prior close 48.73; nothing given back (high 62.025, price 61.66). Scanner relative volume 1.342 vs 1.3 (the first cycles it passed were 1.302 at 13:15 and 1.319 at 13:25; I waited because there was no entry trigger). Not a foreign ADR; earnings already reported and are the thesis. PASS.
+  - Gate 2: Q3 results Nov 10 after close, revenue $3.66B vs ~$3.55B estimate, raised outlook (dated Nov 10-11 coverage, searched at 12:14 ET). PASS.
+  - Gate 3: higher lows 60.25 -> 60.96 (the 18:05Z pullback low); the 61.78 prior high broke at 18:22Z (5-min closes 61.815 and 61.905, bar volume rose 510k -> 679k, high 62.025 at 18:29Z); then a shallow retest to 61.60-61.69 on lighter volume (85-110k per minute) with price above the now-rising 9-period 5-min EMA (61.31 -> 61.41 -> 61.49 -> 61.57). Entry taken on the retest-hold, not on the extension high. PASS, with a judgment call on my part: price was 0.2% below the break level at entry, not above it.
+  - Gate 4 timing 13:34 ET inside 10:30-15:30. PASS.
+- Order: review_equity_order clean (order_checks empty, customer_approval_required false, spread $61.65 x $61.67). Per framework §0 standing authorization I did not seek per-trade confirmation. place_equity_order market, $105.00 notional, regular hours, GFD. Filled 18:34:16Z: 1.705101 sh @ 61.5799 avg (order 6af4b528-9e8f-47a4-a4b4-0c698e3ca54f).
+- Position: CRWV momentum long, cost $105.00, entry 61.5799. Stop 60.20 (below the 60.25 base low, 2.2% / about $2.35 risk); target 64.4 (about 2R, +4.6%); EOD horizon by default (flat before the bell unless an explicit hold decision is logged); 30-minute hold rule applies (no discretionary exit before 14:04 ET except the stop). Fractional shares cannot carry a resting stop, so the stop is managed by cycle checks and the invalidation rule (a 5-minute close back under the rising EMA and the 60.96 higher low is invalidation).
+- Portfolio after: equity $402.42, cash $297.45, positions 1 of 5, trades today 1 of 10 (minimum met).
+- Housekeeping: DASHBOARD_DATA risk.daily_loss_limit read 100 (stale); set to 60 to match the standing $60 limit. No other rule changed.
+- Other names: IBKR (RVOL 1.46) and ERAS (RVOL 1.48) still have no dated catalyst, Gate 2 FAIL; NBIS earnings Nov 12; REZI RVOL is a block print; RUM earnings conflict.
