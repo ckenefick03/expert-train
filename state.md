@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-11 13:36 ET",
+  "as_of": "2026-11-11 13:44 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "amber",
-  "status_note": "ENTRY 13:34 ET: CRWV momentum long 1.705101 sh @ 61.58 ($105). Stop 60.20, target 64.4, EOD horizon. Post-earnings breakout above 61.78 held on a shallow retest; RVOL 1.34.",
+  "status_note": "CRWV long open: 1.705 sh @ 61.58, now 61.88 (+$0.51, +0.22R). Stop 60.20, target 64.4, EOD horizon. Above rising 5-min EMA 61.58. No other entries pass.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-11",
@@ -3937,6 +3937,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-11 13:36 ET",
       "equity": 402.42
+    },
+    {
+      "t": "2026-11-11 13:44 ET",
+      "equity": 402.91
     }
   ],
   "positions": [
@@ -3946,7 +3950,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "tier": "-",
       "qty": 1.705101,
       "entry": 61.5799,
-      "price": 61.66,
+      "price": 61.88,
       "stop": 60.2,
       "target": 64.4
     }
@@ -4134,11 +4138,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Stable/rising: SPY +1.6%, QQQ +3.0%, SMH +6.6%. MR empty (no oversold names); momentum on. CRWV long open.",
+    "read": "Stable/rising: SPY +1.7%, QQQ +3.1%, SMH +6.7%. MR empty; momentum on. CRWV long open, holding above its 5-min EMA.",
     "chips": [
-      "SPY +1.6%",
-      "SMH +6.6%",
-      "CRWV long",
+      "SPY +1.7%",
+      "SMH +6.7%",
+      "CRWV +0.5%",
       "MR empty"
     ]
   }
@@ -11672,3 +11676,10 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Portfolio after: equity $402.42, cash $297.45, positions 1 of 5, trades today 1 of 10 (minimum met).
 - Housekeeping: DASHBOARD_DATA risk.daily_loss_limit read 100 (stale); set to 60 to match the standing $60 limit. No other rule changed.
 - Other names: IBKR (RVOL 1.46) and ERAS (RVOL 1.48) still have no dated catalyst, Gate 2 FAIL; NBIS earnings Nov 12; REZI RVOL is a block print; RUM earnings conflict.
+
+### Cycle 963 - ~13:44 ET (Wed Nov 11; trigger fired 13:42 ET)
+- Stop check (first): CRWV long 1.705101 sh, avg cost 61.58. Price 61.88 (bid 61.86 / ask 61.88). Stop 60.20 = 2.7% / $1.68 per share below; cushion intact. Unrealized +$0.51 (+0.5%, +0.22R). Last 5-min bars: 18:30Z 61.91 -> 61.53 close (low 61.42, 533k) then 18:35Z close 61.635 (329k). 9-period 5-min EMA 61.58 and flat-to-rising. The retest low 61.42 held above the 60.96 higher low. No invalidation. Hold; 30-minute hold rule runs to 14:04 ET.
+- Reconciliation: equity $402.91, cash/BP $297.45, 1 position of 5, no open orders. Daily P&L +$0.46 vs start equity $402.45. Within all limits.
+- Tape: SPY 762.40 (+1.7%, session highs), QQQ 695.46 (+3.1%), SMH 516.03 (+6.7%), NBIS 159.44 (+19%), CORZ 14.32 (+9%). Stable/rising; momentum on, MR on (Tier B).
+- Scan - mean-reversion: 0 names. Scan - momentum (+5%, RVOL >=1.3 this time): IBKR (1.48), CRWV (1.36, held), REZI (3.42), ERAS (1.53). IBKR and ERAS: no dated catalyst, Gate 2 FAIL (unchanged). REZI: RVOL is the 3.05M block print; ex-print volume thin, FAIL (unchanged).
+- No new entry. Day: 1 trade (minimum met). No news search this cycle (hourly is at :12).
