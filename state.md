@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-11 11:22 ET",
+  "as_of": "2026-11-11 11:27 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $402.45. 11:15 ET hourly: extended search found the cause (CoreWeave earnings chip rally; hot CPI Nov 10). CRWV +23% is the one standout: passes gates 1-3 except raw-vs-sweep RVOL (0.98 vs 1.3); no entry. Re-check 11:22.",
+  "status_note": "Flat, all cash $402.45. 11:22 ET: SPY 758.72 (+1.2%). CRWV +23.3% consolidating 59.4-60.5, scanner RVOL 1.01 (<1.3), no break of 60.52: no entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-11",
@@ -11482,3 +11482,10 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - **CRWV (CoreWeave, cap $26.9B) full momentum gate-check (the only genuine candidate):** 60.15 vs prior close 48.73 = +23.4% on the day. (1) Relative strength: peer complex (AI-neocloud/hardware): NBIS +16.5%, DELL +12.8%, SMCI +10.6%, ORCL +8.6%, CIFR +8.9%, APLD +8.2%, IREN +7.7%, AMD +6.8%, NVDA +3.7%, SMH +5.5%; SPY +1.1%. CRWV is about 7 pts above the best peer (NBIS) and 12+ pts above the neocloud average, clear of the 2-pt requirement: PASS. Not fading: above gap-day VWAP 57.65 and the prior close 48.73; day high 60.52, last 60.15, only 0.37 (about 3% of the 11.79 gain) given back, far less than half: PASS. Earnings window: the report already happened (Nov 10 pm) and is the thesis: PASS. US-listed, not an ADR: PASS. **Relative volume: UNRESOLVED/FAIL as written.** The scanner's relative-volume sweep reads 0.98 (it was 0.88 at 10:53 and 0.79 at 10:43), below 1.3; the raw count is 87.1M shares versus a 30-day average of 57.1M (about 1.5x). The strategy file says to use raw volume only before about 11:00 ET, when the sweep is blind, and the sweep after that; it is 11:15 ET, so the sweep (0.98) governs and the gate FAILS on a literal reading. The two numbers disagree because the sweep's day-volume basis is not the same as the scanner volume column (the sweep's implied day volume is about 56M); I cannot tell which is right and I will not pick the one that lets a trade through. (2) Catalyst: PASS (CoreWeave Q3 results Nov 10 pm, EPS beat -0.946 vs -1.53, plus the Yahoo/mlq coverage above). (3) Held pullback with a higher low: PASS in structure (price 60.15 above a rising 9-EMA at 59.64; swing lows rose 57.63 -> 58.34 -> 58.92 -> 59.02 -> 59.43/59.60), but the entry trigger (a break above the pullback high 60.52, or a reclaim of the short-term average) has not happened: price is inside a 59.4-60.5 range. (4) Timing: PASS (after 10:30 ET). Stop would be below the 59.43 higher low, near 58.9 (about 2.5% under a 60.5 entry); 2R target about 63.5 (+5%); size 1.7 shares at $105. **Result: NO ENTRY this cycle** (RVOL gate unresolved, entry trigger not hit). Re-check at 11:22 and 11:32 ET for a clean break of 60.52 on rising volume; the RVOL question stays open and the gate is not loosened to take the trade.
 - Other AI-hardware names: now have the CoreWeave sector driver, but no name besides CRWV separates from its own complex by 2+ pts with its own catalyst (DELL +12.8% vs SMCI +10.6% is 2.2 pts with no own catalyst; MU +12.5% is in line with SNDK/WDC/STX). NBIS, FPS, CBRS, AMAT, CSCO: earnings Nov 12, excluded. No order.
 - Day minimum (1 trade) unmet; gates not loosened. No order placed.
+
+### Cycle 950 - ~11:22 ET (Wed Nov 11) - flat, no entries (CRWV re-check)
+- Trigger fired 16:22:13Z (scheduled 16:22Z; previous commit 16:16:09Z, dedupe passed at 6.2 minutes). Portfolio $402.45 all cash, BP $402.45, no positions.
+- Tape: SPY 758.72 (+1.2%, at the session high), QQQ 691.42 (+2.5%), SMH 510.89 (+5.6%). SPY 5-minute (16:00-16:15Z): lows 758.21, 757.68, 757.66, 758.17: higher low last bar; closes 758.50, 757.73, 758.44, 758.42. Rising/holding.
+- CRWV re-check: 60.10 (+23.3%), unchanged from 11:15 ET. 5-minute bars: 16:00Z H 60.42 L 59.99 C 60.40; 16:05Z H 60.41 L 59.43 C 59.65; 16:10Z H 60.41 L 59.60 C 60.15; 16:15Z H 60.21 L 59.81 C 60.17. It is coiling in a 59.4-60.5 range under the 60.52 day high, with volume falling (1.05M, 1.38M, 1.24M, 0.80M per 5 minutes versus 3-5M in the first half hour). No break of 60.52 yet, so the entry trigger is still missing. Relative volume (scanner) now reads 1.008 (it was 0.98 at 11:15 ET and 0.88 at 10:53 ET): still below 1.3 and rising slowly. Reading of the numbers (for the open question I flagged): the scanner's Volume column (89.2M) includes pre-market trading, while the relative-volume field implies a regular-session volume of about 57.5M (1.008 x 57.1M), which matches the sum of the day's regular-session bars; so the 1.0 is a regular-session-versus-average-day measure, and 1.3 would need roughly 74M regular-session shares. At the current pace (about 1.0-1.3M per 5 minutes) that is more than an hour away. Gate 1 therefore still FAILS on a literal reading; the setup also lacks the break/reclaim entry trigger. No order. Peers (11:22 ET): NBIS +16.8%, DELL +13.1%, SMCI +10.7%, ORCL +9.1%, CIFR +9.6%, APLD +8.2%, IREN +8.5%, MU +12.9%.
+- Momentum scan at RVOL >=1.0 (>=5%, cap >=$2B, avg vol >=1M): 2 rows: CRWV (above) and ERAS +8.7% (RVOL 1.02; still no dated catalyst: Gate 2 FAIL). No other name.
+- MR: Tier A ends 11:30 ET; the 11:15 ET scan (5 names, none oversold, RSI above 50) is unchanged in character; not re-run. No news search. No order placed.
