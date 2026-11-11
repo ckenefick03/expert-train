@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-11 15:34 ET",
+  "as_of": "2026-11-11 15:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -3984,6 +3984,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-11 15:34 ET",
+      "equity": 400.54
+    },
+    {
+      "t": "2026-11-11 15:43 ET",
       "equity": 400.54
     }
   ],
@@ -11816,3 +11820,7 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Tape: SPY 760.24 (+1.4%), QQQ 691.10 (+2.4%), SMH 507.98 (+5.0%), IWM 283.08 (+0.9%). Soft but orderly.
 - Scans skipped this cycle, by choice: the 15:30 ET entry cutoff passed at the start of this cycle (it ran at 15:33 ET), so a scan could not lead to an order. Disclosed as a skipped scan, not an oversight. The last scan (15:24 ET) found no passing candidate.
 - No order placed. Account flat; no overnight exposure. Close recap at 15:47 ET.
+
+### Cycle 975 - ~15:43 ET (Wed Nov 11; trigger fired 15:42 ET): entries closed
+- Reconciliation: equity $400.54, cash/BP $400.54, no positions, no open orders. Day P&L -$1.91.
+- Tape: SPY 760.02 (+1.35%), QQQ 690.89 (+2.4%), SMH 507.92 (+5.0%): unchanged. Scans skipped by choice (past the 15:30 ET entry cutoff; nothing can be ordered). No order placed. Close recap follows at 15:47 ET.
