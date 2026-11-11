@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-11 13:44 ET",
+  "as_of": "2026-11-11 13:57 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "amber",
-  "status_note": "CRWV long open: 1.705 sh @ 61.58, now 61.88 (+$0.51, +0.22R). Stop 60.20, target 64.4, EOD horizon. Above rising 5-min EMA 61.58. No other entries pass.",
+  "status_note": "CRWV long open: 1.705 sh @ 61.58, now 61.41 (-$0.29, -0.12R). Stop 60.20, target 64.4. Price just under the 5-min EMA (61.57, now sloping down); higher low 60.96 and stop intact. Holding; 30-min rule ends 14:04 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-11",
@@ -3941,6 +3941,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-11 13:44 ET",
       "equity": 402.91
+    },
+    {
+      "t": "2026-11-11 13:57 ET",
+      "equity": 402.17
     }
   ],
   "positions": [
@@ -3950,7 +3954,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "tier": "-",
       "qty": 1.705101,
       "entry": 61.5799,
-      "price": 61.88,
+      "price": 61.41,
       "stop": 60.2,
       "target": 64.4
     }
@@ -4138,12 +4142,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Stable/rising: SPY +1.7%, QQQ +3.1%, SMH +6.7%. MR empty; momentum on. CRWV long open, holding above its 5-min EMA.",
+    "read": "Stable: SPY +1.6%, QQQ +3.0%, SMH +6.5%, flat for ~1h. MR: only SE (no sector cause). CRWV long open, dipping under its 5-min EMA.",
     "chips": [
-      "SPY +1.7%",
-      "SMH +6.7%",
-      "CRWV +0.5%",
-      "MR empty"
+      "SPY +1.6%",
+      "SMH +6.5%",
+      "CRWV -0.3%",
+      "MR: SE only"
     ]
   }
 }
@@ -11683,3 +11687,11 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Tape: SPY 762.40 (+1.7%, session highs), QQQ 695.46 (+3.1%), SMH 516.03 (+6.7%), NBIS 159.44 (+19%), CORZ 14.32 (+9%). Stable/rising; momentum on, MR on (Tier B).
 - Scan - mean-reversion: 0 names. Scan - momentum (+5%, RVOL >=1.3 this time): IBKR (1.48), CRWV (1.36, held), REZI (3.42), ERAS (1.53). IBKR and ERAS: no dated catalyst, Gate 2 FAIL (unchanged). REZI: RVOL is the 3.05M block print; ex-print volume thin, FAIL (unchanged).
 - No new entry. Day: 1 trade (minimum met). No news search this cycle (hourly is at :12).
+
+### Cycle 964 - ~13:57 ET (Wed Nov 11; trigger scheduled 13:52 ET, fired ~13:56 ET, ~4 min late)
+- Stop check (first): CRWV long 1.705101 sh, avg cost 61.58. Price 61.41 (bid 61.40 / ask 61.42): -$0.17/sh, -$0.29 (-0.28%, -0.12R). Stop 60.20 is 2.0% / $1.21 below; cushion intact. 5-minute bars since entry: 18:40Z 61.805 (high 61.94), 18:45Z 61.53, 18:50Z 61.435 (low 61.37) on 343-521k. The 9-period EMA is now sloping down (61.62 -> 61.61 -> 61.57) and the last close (61.435) is under it. My logged invalidation was two conditions together: a 5-minute close under the EMA AND under the 60.96 higher low. Only the first holds; the higher low (60.96) and the retest low (61.37) are intact. No invalidation. Hold. The 30-minute hold rule runs to 14:04 ET (~8 min left), so no discretionary exit is available anyway except a stop. Watch point for next cycle: another 5-min close under 61.37 would break the retest low and I will weigh an early exit then.
+- Reconciliation: equity $402.17, cash/BP $297.45, 1 position of 5, no open orders. Daily P&L -$0.28 vs start equity $402.45. Within all limits.
+- Tape: SPY 762.01 (+1.6%), QQQ 694.83 (+3.0%), SMH 515.10 (+6.5%): flat to slightly lower versus 13:43. Stable; momentum on, MR on (Tier B).
+- Scan - mean-reversion (cap >=$5B, <=-3.5%, RSI<45): 1 name, SE 73.77 (-3.9%, RSI 37, cap $47B), the same name seen at 11:42 ET. Foreign (Singapore) filer, no dated sector-wide cause found, not researched this cycle; Gate 1 FAIL (the 13:12 ET news search did not cover it; next hourly 14:12 ET).
+- Scan - momentum (+5%, RVOL >=1.3): IBKR (RVOL 1.54, no dated catalyst: Gate 2 FAIL), ERAS (RVOL 1.64, no catalyst: FAIL), REZI (RVOL 3.4 = block print, FAIL), CRWV (held, RVOL 1.38). No new entry.
+- Day: 1 trade, open P&L -$0.29. No news search this cycle.
