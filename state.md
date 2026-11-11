@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-11 10:26 ET",
+  "as_of": "2026-11-11 10:42 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $402.45. 10:22 ET: SPY 755.74 (+0.8%) range; no MR candidates (none oversold). Momentum opens 10:30 ET; gap is a single-theme AI-hardware rally.",
+  "status_note": "Flat, all cash $402.45. 10:33 ET momentum open: IBKR +6.3% (leads brokers, above VWAP) fails Gate 2 (no verified catalyst); AI-hardware gap names are sector-wide. No entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-11",
@@ -11436,3 +11436,12 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Regime (SPY 5-minute): lows 755.93, 755.81, 755.26, 755.32; closes 756.38, 755.90, 755.43, 756.11. Flat 755.3-756.8 range for 30 minutes; no new session low (754.91) or high. Range/stabilizing; MR permitted but has nothing to buy.
 - MR (cap >=$5B, avg vol >=1M, down >=4%, no RSI cap): 4 rows: ALC -4.4% (RSI 61.6), CNM -4.3% (RSI 64.9), COGT -6.7% (RSI 51.0, biotech), SMMT -5.1% (RSI 58.7, biotech); BIRK dropped off. None oversold (RSI above 50 for all), no common sector except two unrelated biotechs, no dated sourced sector cause (the 10:15 ET hourly search found none): gate 1 FAIL for all. No order.
 - Momentum: opens at 10:30 ET (8 minutes); not scanned this cycle. No news search (next hourly 11:12 ET). No order placed.
+
+### Cycle 945 - ~10:33 ET (Wed Nov 11) - momentum window opens; flat, no entries
+- Trigger fired 15:33:00Z (scheduled 15:32Z; previous commit 15:23:17Z). Portfolio $402.45 all cash, BP $402.45, no positions.
+- Tape: SPY 756.13 (+0.82%), QQQ 687.03 (+1.8%), SMH 504.07 (+4.2%), IWM 281.82 (+0.4%), XLE 63.26 (+1.7%), XBI 155.06 (0.0%), XLU 43.68 (-0.1%), XRT 91.28 (-1.3%).
+- Regime (SPY 5-minute): lows 755.26, 755.32, 755.40, 755.86; closes 755.43, 756.11, 755.83, 756.75. Rising lows for four bars, no new low since 14:45Z; Stabilizing/rising. Momentum permitted on names that pass the gates.
+- Momentum scan (>=5%, cap >=$2B, avg vol >=1M; RVOL threshold lowered to 0.7 for this scan only because relative volume is measured against a FULL-day average and the session is 63 minutes old; the strict >=1.3 requirement is applied below): 3 rows: NBIS +15.4% (earnings Nov 12: excluded), CRWV +21.1% (RVOL 0.79; AI-neocloud, moving with the AI-hardware group, no sourced catalyst), IBKR +6.2% (RVOL 0.76).
+- IBKR gate-check (the only name that is not part of the AI-hardware group): price 82.47 vs prior close 77.59 (+6.3%); SPY +0.8%, so about 5.5 pts above SPY. Brokerage/exchange peers: HOOD +2.8%, COIN +1.9%, GS +1.2%, ICE +0.9%, CME +0.8%, MS +0.6%, LPLA +0.2%, SCHW -1.0%: IBKR leads the nearest peer (HOOD) by 3.5 pts. Not fading: opened 79.69, rising lows every bar, last 5-minute close 82.60 vs the 82.68 high, above VWAP 81.38 and above the prior close, no give-back. Volume: 76% of a normal full day already traded, so the pace is far above the 1.3 requirement on a time-adjusted basis (I do NOT treat the raw 0.76 as a pass; strict RVOL >=1.3 on the raw measure is not met yet). Foreign ADR: no (US-listed, Greenwich CT). Earnings: none within 2 sessions (Q2 reported July 21; Q3 expected mid-Oct, already out). Stop room: base low 79.68 is 3.4% below the 82.47 entry (within the ~6% limit). **FAIL on Gate 2 (verified catalyst):** two WebSearches (IBKR news Nov 11 2026; brokerage rise/record volumes) returned only older items (Aug-Sept 2026 press releases, Q2 2026 results of Jul 21, Jan 2026 highs, undated Traders Union moves). Nothing dated Nov 2026 explains today's +6.3%, so a catalyst cannot be named or sourced. No order. IBKR is the best-structured name on the board and is on the watch list: re-check each cycle for (a) a dated catalyst (October brokerage metrics were due Nov 2; a Nasdaq-100/S&P index or product announcement would count if sourced), (b) raw RVOL >=1.3, (c) a held pullback with a higher low. Not loosened.
+- AI-hardware group (SNDK, MU, DELL, LITE, STX, etc., 6-13% up, SMH +4.2%): Gate 1 cannot be passed by sector-wide moves and no catalyst is sourced. No order.
+- MR: Tier A runs to 11:30 ET; the 10:22 ET scan had no oversold names; not re-run. No news search (the 10:15 ET hourly found no dated cause). No order placed.
