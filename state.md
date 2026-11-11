@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-11 09:36 ET",
+  "as_of": "2026-11-11 09:46 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $402.45. 9:33 ET, 3 min into the session: gap up holding (SPY +1.0%, SMH +4.2%). No entries before 10:00 ET.",
+  "status_note": "Flat, all cash $402.45. 9:43 ET: gap up holding, mild fade off the open highs (SPY +0.8%, SMH +3.5%). No entries before 10:00 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-11",
@@ -11401,3 +11401,9 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Tape (regular session, 3 minutes old): SPY 757.71 (+1.04%), QQQ 688.12 (+2.0%), SMH 504.20 (+4.2%), IWM 282.46 (+0.7%), XLE 62.56 (+0.6%), XBI 155.67 (+0.4%). MU 776.61 (+7.1%), SNDK 944.63 (+9.8%), DELL 365.33 (+9.3%), AMD 534.47 (+3.7%), NVDA 173.98 (+3.0%), IREN 21.19 (+7.4%), ASTS 35.62 (+5.7%), AAON 78.17 (+4.2%, above the ~77.8 re-check level; not yet a candidate: 9:33 ET is before the momentum window, no volume/VWAP read, no verified catalyst). The gap is holding; the open did not fade it.
 - No completed 5-minute bar exists yet (the historicals call returned an error, "end must be after start", because the session opened at 14:30Z), so no regime/VWAP read is possible this cycle. Disclosed.
 - No entry is allowed before 10:00 ET (MR) / 10:30 ET (momentum), so the preview scans were intentionally skipped. No news search (the 9:16 ET hourly one found no dated cause; next due 10:12 ET). No order placed.
+
+### Cycle 940 - ~9:43 ET (Wed Nov 11) - opening range; flat, no entries possible
+- Trigger fired 14:42:39Z (scheduled 14:42Z; previous commit 14:33:22Z). Portfolio $402.45 all cash, BP $402.45, no positions.
+- Tape: SPY 756.06 (+0.82%), QQQ 685.68 (+1.6%), SMH 500.33 (+3.5%), IWM 281.75 (+0.4%), XLE 62.52 (+0.5%), XBI 155.46 (+0.3%). MU 775.00 (+6.9%), SNDK 946.37 (+10.0%), DELL 361.80 (+8.2%), NVDA 173.10 (+2.5%), AAON 76.48 (+2.0%, off the 78.17 print at 9:33 ET).
+- Opening range (5-minute): SPY 14:30Z O 756.74 H 757.93 L 756.55 C 756.71 (450k); 14:35Z O 756.71 H 757.05 L 755.71 C 756.80 (244k). SMH 14:30Z O 504.55 H 505.49 L 501.70 C 501.74; 14:35Z H 503.58 L 500.33 C 502.29. The pre-market and first-minute highs (SPY 757.9, SMH 505.5) have faded about 0.2% and 1% respectively; the gap is holding but not extending. Two bars are too few for a regime read (framework §4.1 needs ~3 consecutive higher lows); SPY's second bar made a lower low (755.71 vs 756.55).
+- No entry is allowed before 10:00 ET, so the preview scans were intentionally skipped (disclosed). No news search (next hourly 10:12 ET). No order placed.
