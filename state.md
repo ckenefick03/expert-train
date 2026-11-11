@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-11 11:38 ET",
+  "as_of": "2026-11-11 11:44 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $402.45. 11:33 ET: REZI near-entry reviewed and declined (RVOL spike = one 3.05M-share print; spread 0.36%>0.3%). CRWV +23.7% still coiling. Tier B MR: nothing oversold.",
+  "status_note": "Flat, all cash $402.45. 11:44 ET: CRWV +24.7% fails Gate 1 RVOL (1.07 vs 1.3); REZI RVOL again a single 3.05M print, spread 0.45%; MR: only SE (foreign ADR, no sector cause). No entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-11",
@@ -3892,6 +3892,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-10 13:26 ET",
+      "equity": 402.45
+    },
+    {
+      "t": "2026-11-11 11:44 ET",
       "equity": 402.45
     }
   ],
@@ -11503,3 +11507,13 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
   - Why it was declined (two independent failures found during order review): (a) the relative-volume reading of 2.88 (up from 0.78 at 10:53 ET) comes from ONE 1-minute bar at 16:32Z that printed 3,046,653 shares with a low of 21.00 (versus a 21.8-22.0 market): a single block/cross, not broad participation; the preceding minute bars trade 1-22k shares, so the relative-volume pass is an artifact of one print, and regular-session volume ex that print is only about 0.8M (about 0.5x average); (b) the live quote at order review was bid 22.09 x 300, ask 22.17 x 100 = a 0.36% spread, above the 0.3% liquidity-universe limit, with only 100 shares offered. The order was NOT placed. The review call (review_equity_order) is read-only. Follow-up for REZI: track whether it holds 21.5-22 and whether genuine volume (not a single print) builds; a re-check is warranted next cycle.
 - ERAS +8.4% (16.78): no dated catalyst, Gate 2 FAIL (unchanged). IBKR 82.97 (+6.9%): no dated catalyst, FAIL (unchanged).
 - Day minimum (1 trade) unmet; gates not loosened. No news search (the hourly one ran at 11:15 ET). No order placed.
+
+### Cycle 952 - ~11:44 ET (Wed Nov 11; trigger fired 11:42 ET)
+- Reconciliation: equity $402.45, cash/BP $402.45, no positions, no open orders. Daily P&L $0, far inside the $60 limit; above the $394.19 breaker.
+- Tape: SPY 759.37 (+1.26%, new highs, 5-min bars flat-to-up ~758.8-759.3), QQQ +2.6%, SMH +6.0%, IWM +0.8%, XLE +1.4%, XBI +0.6%, XLU -0.1%, XRT -0.9%. Regime: stable/rising, momentum on, MR on (Tier B).
+- Scan - mean-reversion (cap >=$5B, <=-3.5%, RSI<45): 1 name, SE (74.10, -3.5%, RSI 37). Foreign ADR with no dated sector-wide cause found; Gate 1 FAIL, not pursued (hourly news search due 12:12 ET).
+- Scan - momentum (cap >=$2B, +5%, RVOL >=1.0): CRWV, REZI, ERAS (3 names).
+  - CRWV 60.75 (+24.7%): holding above 60.2-60.5 range, last 5-min bar 16:35 high 60.80/close 60.60, now at the high of the session range; scanner RVOL 1.07 vs 1.3 required. Gate 1 FAIL as read literally (unchanged from Cycle 951; the RVOL-vs-raw-volume governance question remains open for the user, not resolved by me in my own favor). No order.
+  - REZI 22.15 (+13.9%): RVOL 2.93 is again driven by the single 3.05M-share 16:30 bar (low 21.00, close 22.08); the neighboring bars carry 58k and 33k shares. Bid/ask 22.12/22.22 = 0.45% spread, above 0.3%. Gate 1 FAIL. No order.
+  - ERAS 16.76 (+8.3%): no dated catalyst, Gate 2 FAIL (unchanged).
+- Day minimum (1 trade) unmet; gates not loosened. No news search this cycle. No order placed.
