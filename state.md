@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-11 13:15 ET",
+  "as_of": "2026-11-11 13:25 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $402.45. 13:15 ET: CRWV RVOL now 1.302 (Gate 1 volume just passes) but no break of 61.78 high and 5-min EMA flat, so no entry trigger; watching. MR scan empty (STLA was company-specific, -58% YTD). No entry.",
+  "status_note": "Flat, all cash $402.45. 13:25 ET: CRWV RVOL 1.32 and sitting 0.05% under its 61.78 high, break not yet confirmed on light volume; watching. IBKR/ERAS no catalyst. MR scan empty. No entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-11",
@@ -3928,6 +3928,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-11 13:15 ET",
+      "equity": 402.45
+    },
+    {
+      "t": "2026-11-11 13:25 ET",
       "equity": 402.45
     }
   ],
@@ -11633,4 +11637,12 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
   - Gate 3 (structure/trigger): higher lows since 17:05Z (60.27 -> 60.44 -> 60.60 -> 60.83 -> 61.16 -> 61.41) but the last two bars printed 61.16 and 60.96, a small lower-low pullback; 9-period 5-min EMA is flat (61.33 -> 61.31 -> 61.32), not rising. Price is above it but no break of the 61.78 high or reclaim has happened. Entry trigger NOT met. FAIL for this cycle.
   - Gate 4 timing 13:15 ET: OK. If it triggered: stop under the 60.25 base low (about 2.1% risk), target >=2R (about 64.3), EOD horizon, $105 size.
   - Decision: no order. Follow-up for next cycle: re-check for a clean break of 61.78 on rising bar volume with RVOL still >=1.3 and EMA turning up; do not chase a fade.
+- Day minimum (1 trade) unmet; gates not loosened. No order placed.
+
+### Cycle 961 - ~13:25 ET (Wed Nov 11; trigger fired 13:22 ET)
+- Reconciliation: equity $402.45, cash/BP $402.45, no positions, no orders. Daily P&L $0.
+- Tape: SPY 761.99 (+1.6%, new session high), QQQ 695.10 (+3.0%), SMH 515.60 (+6.6%). Stable/rising; momentum on, MR on (Tier B).
+- Scan - mean-reversion: 0 names. Scan - momentum (+5%, RVOL >=1.0): 12 names (new: AXGN 54.22, +6.5%, RVOL 1.07, cap $3.0B, healthcare, no catalyst checked, RVOL under 1.3: fail).
+- CRWV follow-up (61.75-61.77, +26.8%, scanner RVOL 1.32): relative volume passes for a second cycle, strength and catalyst unchanged. Entry trigger still NOT met: session high is 61.78 and the last three 5-minute bars (18:05-18:15Z) peaked at 61.65, 61.74 on 530k, 392k shares, so price is pressing the high on thinning volume, not breaking it on rising volume; 9-period EMA is flat around 61.3. A break needs to print above 61.78 on a bar with volume above the recent 0.4-0.6M average. No order; no chase of a level that has not broken.
+- IBKR (RVOL 1.41) and ERAS (RVOL 1.47): volume passes, no dated catalyst, Gate 2 FAIL (unchanged). CLS, ORCL, AXTI, AMKR, CORZ (sympathy, RVOL 1.05-1.2), NBIS (earnings Nov 12), REZI (RVOL 3.37 is the block print), RUM (earnings conflict): unchanged FAIL.
 - Day minimum (1 trade) unmet; gates not loosened. No order placed.
