@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-11 09:56 ET",
+  "as_of": "2026-11-11 10:07 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $402.45. 9:53 ET: gap fading (SPY lower lows 4 bars, +0.8%). No entries before 10:00 ET.",
+  "status_note": "Flat, all cash $402.45. 10:04 ET: MR window open but zero MR candidates (no stock down >=4% with RSI<40); broad AI/semis gap (47 names +6%); momentum not before 10:30.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-11",
@@ -11413,3 +11413,11 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Tape: SPY 756.01 (+0.81%), QQQ 684.96 (+1.5%), SMH 499.82 (+3.3%), IWM 282.63 (+0.7%), XLE 62.76 (+0.9%), XBI 155.99 (+0.6%). MU 783.70 (+8.1%), SNDK 957.00 (+11.3%), DELL 362.59 (+8.4%), NVDA 173.04 (+2.5%), AAON 77.55 (+3.4%).
 - Regime (SPY 5-minute, first four bars of the session): lows 756.55, 755.71, 755.67, 754.91 (each lower than the last); closes 756.71, 756.80, 756.11, 755.71; the high is 757.93 (first bar). SMH: lows 501.70, 500.33, 498.39, 496.01; closes 501.74, 502.29, 498.76, 498.36. A steady fade off the open: new intraday lows on every bar, still a +0.8% gap above Tuesday's close. By the framework §4.1 test this is gap-and-fade (Falling intraday), not Stabilizing; momentum would need fresh non-fading catalyst gaps only, and MR stays off until SPY stops making new lows.
 - No entry is allowed before 10:00 ET, so the preview scans were intentionally skipped (disclosed). No news search (the 9:16 ET hourly found no dated cause; next due 10:12 ET). No order placed.
+
+### Cycle 942 - ~10:04 ET (Wed Nov 11) - MR window open; flat, no entries
+- Trigger fired 15:03:33Z (scheduled 15:02Z; previous commit 14:53:29Z). Portfolio $402.45 all cash, BP $402.45, no positions.
+- Tape: SPY 756.23 (+0.84%), QQQ 685.91 (+1.7%), SMH 501.64 (+3.7%), IWM 282.06 (+0.5%), XLE 62.88 (+1.1%), XBI 155.37 (+0.2%), XLU 43.72 (flat), XRT 91.42 (-1.1%, the only laggard).
+- Regime (SPY 5-minute): lows 756.55, 755.71, 755.67, 754.91, 755.17, 755.78; closes 756.71, 756.80, 756.11, 755.71, 755.89, 756.35. The fade stopped at 754.91 (14:45Z); the last two bars made higher lows and higher closes. Stabilizing off a +0.8% gap; no new low since 14:45Z.
+- MR (Tier A window; cap >=$5B, avg vol >=1M, down >=4%, RSI <40): 0 rows. Nothing is oversold; the market is broadly up. Nothing to gate-check.
+- Momentum (not allowed before 10:30 ET; scan run for the log only): the standard filter (>=8%, RVOL >=1.3) returned 0 because RVOL is mechanically low this early in the session (all rows 0.1-0.6). Re-run without the RVOL filter at >=6%: 47 names, almost all AI-hardware / semis / optical / memory / neocloud: SNDK +12.5%, MU +9.4%, DELL +9.8%, STX +8.8%, LITE +10.5%, BE +11.7%, CRWV +19.7%, NBIS +15.5% (earnings Nov 12, excluded), FPS +9.1% (earnings Nov 12, excluded), AVGO +6.3%, MRVL +7.3%, ORCL +6.3%, INTC +7.4%, CIEN +7.2%, COHR +7.8%, SMCI +6.8%, AAOI +10.3%, AXTI +15.2%, plus miners/crypto (CORZ, CIFR, GLXY). A single-theme, sector-wide gap: Gate 1 ("at least 2 pts above peers AND SPY") cannot be passed by a name that is simply moving with its sector, and no sourced catalyst exists (Gate 2). SKHY (SK hynix ADR) and INIO are foreign: excluded outright.
+- Candidates only if they separate from the group after 10:30 ET with held pullbacks, rising volume (RVOL >=1.3) and a verified catalyst; none do yet. No news search this cycle (the hourly one is due at 10:12 ET, next cycle). No order placed.
