@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-11 14:33 ET",
+  "as_of": "2026-11-11 14:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $400.54. Day P&L -$1.91 (1 closed trade). 14:33 ET: no change; no candidate passes Gate 2. MR Tier C is off (daily minimum met).",
+  "status_note": "Flat, all cash $400.54. Day P&L -$1.91 (1 closed trade). 14:43 ET: same picture, no candidate passes Gate 2.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-11",
@@ -3960,6 +3960,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-11 14:33 ET",
+      "equity": 400.54
+    },
+    {
+      "t": "2026-11-11 14:43 ET",
       "equity": 400.54
     }
   ],
@@ -11747,3 +11751,9 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Scan - mean-reversion (informational): SE 73.66 (-4.1%, RSI 37), TWST 127.13 (-3.8%, RSI 44.6): no sector-wide dated cause; not tradable.
 - Scan - momentum (+5%, RVOL >=1.3): CLS, NBIS, IBKR, CRWV, AXGN, AMKR, REZI, ERAS, CORZ, RUM. CRWV 60.46 (just exited at 60.46, trades flat since). IBKR/ERAS/AXGN: no dated catalyst. CLS/AMKR/CORZ: AI-hardware or CRWV-complex sympathy only. NBIS earnings Nov 12. REZI RVOL 3.6 is the block print. RUM earnings conflict. Gate 2 FAIL for all; no entry.
 - No order placed. No news search this cycle.
+
+### Cycle 969 - ~14:43 ET (Wed Nov 11; trigger fired 14:42 ET)
+- Reconciliation: equity $400.54, cash/BP $400.54, no positions, no open orders. Day P&L -$1.91.
+- Tape: SPY 760.54 (+1.4%), QQQ 692.29 (+2.6%), SMH 510.40 (+5.5%), IWM 282.99 (+0.9%): flat, SMH a touch softer. Stable; momentum on; MR off for the day (minimum met, Tier C not needed).
+- Scan - momentum (+5%, RVOL >=1.3): 10 names, same as 14:33 ET (CLS, NBIS, IBKR, CRWV, AXGN, AMKR, REZI, ERAS, CORZ, RUM). Nothing new. IBKR (RVOL 1.71), ERAS (1.77), AXGN (1.40): volume fine, no dated catalyst, Gate 2 FAIL. CLS/AMKR/CORZ: sympathy only. NBIS earnings Nov 12. REZI block print. RUM earnings conflict. CRWV 60.13 (-1.8% from my exit price... actually below my 60.46 exit by 0.5%).
+- No order placed. No news search (next hourly 15:12 ET).
