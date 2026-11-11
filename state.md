@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-11 14:20 ET",
+  "as_of": "2026-11-11 14:23 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $400.54. 14:13 ET: EXIT CRWV on invalidation, 1.705 sh @ 60.46 (entry 61.58): -$1.91, -0.81R. Day P&L -$1.91, 1 trade. No other entries pass.",
+  "status_note": "Flat, all cash $400.54. Day P&L -$1.91 (1 closed trade, CRWV -0.81R). 14:23 ET: no candidate passes; index and chips drifting lower.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-11",
@@ -3953,6 +3953,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-11 14:20 ET",
       "equity": 400.54
+    },
+    {
+      "t": "2026-11-11 14:23 ET",
+      "equity": 400.54
     }
   ],
   "positions": [],
@@ -4151,12 +4155,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Index steady-to-softer (SPY +1.4%, SMH +5.9%, off the 13:30 highs). MR: SE and TWST only, no sector cause. Flat; momentum on.",
+    "read": "Index easing (SPY +1.4%, SMH +5.7%) off the 13:30 highs; MR: SE and TWST only, no sector cause. Flat.",
     "chips": [
       "SPY +1.4%",
-      "SMH +5.9%",
+      "SMH +5.7%",
       "flat",
-      "CRWV closed -0.81R"
+      "no setups"
     ]
   }
 }
@@ -11725,3 +11729,10 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Scan - mean-reversion (cap >=$5B, <=-3.5%, RSI<45): SE 73.84 (-3.9%, RSI 37; Singapore filer, no sector cause) and new TWST 127.50 (-3.5%, RSI 44.6, cap $8.8B; company-specific biotech-tools name, no sector-wide dated cause found, RSI near 45, not researched). Gate 1 FAIL for both.
 - Scan - momentum (+5%, RVOL >=1.3): NBIS (earnings Nov 12), IBKR (RVOL 1.61, no dated catalyst), CRWV (just sold), AMKR (RVOL 1.31, sector sympathy only), REZI (RVOL 3.5 = block print), ERAS (RVOL 1.69, no catalyst), CORZ (RVOL 1.35, CRWV-complex sympathy with no own catalyst; after a failed CRWV breakout I would not chase it), RUM (earnings conflict). No name passes Gate 2 with a cited catalyst and a clean base. No new entry.
 - Day minimum met. No further entries are required today; the rest of the session is for clean setups only. Account is flat and nothing rolls overnight.
+
+### Cycle 967 - ~14:23 ET (Wed Nov 11; trigger fired 14:22 ET)
+- Reconciliation: equity $400.54, cash/BP $400.54, no positions, no open orders. Day P&L -$1.91 (limit $60; breaker $394.19).
+- Tape: SPY 760.21 (+1.4%), QQQ 692.29 (+2.6%), SMH 510.99 (+5.7%), IWM 282.95 (+0.8%), XLE +1.4%, XRT -0.4%, XBI +0.7%, XLU flat. Drifting a little lower since 13:45 ET but orderly; no new session lows on SPY. Regime: stable. Momentum on, MR on (Tier B to 14:30; Tier C is off because the day's minimum is met).
+- Scan - mean-reversion (cap >=$5B, <=-3.5%, RSI<45): SE 73.53 (-4.3%, RSI 37) and TWST 126.91 (-4.0%, RSI 44.6). Neither has an external dated sector-wide cause (SE is a Singapore filer, TWST a company-specific biotech-tools name), neither passes Gate 1; no upside anchor assessed. FAIL.
+- Scan - momentum (+5%, RVOL >=1.3): CLS, NBIS, IBKR, CRWV, AMKR, REZI, ERAS, CORZ, RUM. CRWV 60.28 (+23.7%) just sold. CLS/AMKR/CORZ: AI-hardware or CRWV-complex sympathy only, no own dated catalyst. IBKR/ERAS: no dated catalyst. NBIS earnings Nov 12. REZI RVOL 3.5 = block print. RUM earnings conflict. Gate 2 FAIL across the board; no entry. Not hunting for the daily minimum (already met).
+- No order placed. No news search this cycle (hourly done at 14:12 ET).
