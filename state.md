@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-11 12:41 ET",
+  "as_of": "2026-11-11 12:48 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $402.45. 12:41 ET: IBKR/ERAS RVOL now 1.31 but no dated catalyst (searched IBKR); CRWV RVOL 1.23; CORZ is CRWV-complex sympathy. MR scan empty. No entry.",
+  "status_note": "Flat, all cash $402.45. 12:48 ET: CRWV RVOL 1.26 (<1.3); IBKR/ERAS RVOL ok but no catalyst; new AXTI sympathy name RVOL 1.0. MR scan empty. No entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-11",
@@ -3916,6 +3916,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-11 12:41 ET",
+      "equity": 402.45
+    },
+    {
+      "t": "2026-11-11 12:48 ET",
       "equity": 402.45
     }
   ],
@@ -11587,4 +11591,14 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
   - IBKR 83.64 (+7.8%) RVOL 1.31 and ERAS 16.92 (+9.3%) RVOL 1.31 now clear the volume threshold, so I looked at their catalysts. IBKR: extended-mode search found no dated Nov 11 company announcement, earnings or upgrade explaining the move (only an earlier price-target change and an old prediction-market launch). ERAS: no dated catalyst on prior cycles either. Gate 2 FAIL for both (a move with no cited catalyst does not qualify). No order.
   - CRWV 61.44 (+26.1%) RVOL 1.23 vs 1.3: Gate 1 FAIL as read literally (volume ratio creeping up; same open governance question). Catalyst verified. Price back near the session high 61.4. No order.
   - CORZ 14.37 (+9.4%, RVOL 1.02, new): AI/hosting name moving with the CoreWeave complex, no own dated catalyst, RVOL under 1.3. FAIL. AMKR (+14.4%, sector sympathy), REZI (RVOL 3.2 is the single block print), NBIS (earnings Nov 12), RUM (earnings conflict): unchanged FAIL.
+- Day minimum (1 trade) unmet; gates not loosened. No order placed.
+
+### Cycle 958 - ~12:48 ET (Wed Nov 11; trigger scheduled 12:42 ET, fired ~12:46 ET, ~4 min late)
+- Reconciliation: equity $402.45, cash/BP $402.45, no positions. Daily P&L $0.
+- Tape: SPY 761.16 (+1.5%, flat over the last 15 min), QQQ 694.36 (+2.9%), SMH 515.13 (+6.5%). Stable/rising; momentum on, MR on (Tier B).
+- Scan - mean-reversion: 0 names. Scan - momentum (+5%, RVOL >=1.0): 9 names.
+  - CRWV 61.76 (+26.8%): RVOL 1.26 vs 1.3 required, Gate 1 FAIL as read literally (gap narrowing: 1.07 -> 1.26 over the last hour). Catalyst verified, above the 61.4 prior range. No order this cycle; flagged for next cycle if RVOL crosses 1.3 and it holds above 61.4.
+  - IBKR 83.59 (RVOL 1.33) and ERAS 16.85 (RVOL 1.32): volume passes, still no dated catalyst (IBKR searched last cycle), Gate 2 FAIL.
+  - New: AXTI 48.94 (+24.5%, RVOL 1.01, cap $2.6B): semiconductor-materials name rising with the AI-hardware sympathy rally, no own catalyst found, RVOL under 1.3: FAIL (not researched further).
+  - AMKR, CORZ (CoreWeave-complex sympathy), REZI (RVOL 3.3 = single block print), NBIS (earnings Nov 12), RUM (earnings conflict): unchanged FAIL.
 - Day minimum (1 trade) unmet; gates not loosened. No order placed.
