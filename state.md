@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-10 15:49 ET",
+  "as_of": "2026-11-11 08:35 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,10 +41,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Closed flat. Tue Nov 10: 0 trades, $0 P&L, equity $402.45. Nothing rolls overnight.",
+  "status_note": "Pre-open Wed Nov 11: flat, all cash $402.45. Large risk-on gap (SPY +1.0%, QQQ +2.0%, SMH +4.8% pre-market); cause not verified. No orders pre-open.",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-11-10",
+    "date": "2026-11-11",
     "start_equity": 402.45,
     "trades": 0,
     "forced": 0
@@ -11367,3 +11367,15 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
   - Skipped/late cycles: several triggers arrived 1-7 minutes late (each logged); the 18:42Z and 20:42Z triggers were skipped by the 6-minute dedupe rule (no cycle logged for them); Cycle 933 (15:37 ET) skipped the preview scans because the entry window had closed.
   - Wording note: the Cycle 917 commit message was mislabelled "Cycle 918"; the state.md entry is correct.
 - Open items for the user (no decision pending): profit-protection rule, the $105 size, and the invalidation-vs-stop-only review (planned after 5 momentum trades under the loosened Gate 1).
+
+### Pre-open brief - Wed Nov 11, ~8:35 ET (read-only, NO orders)
+- Trigger "Trading pre-open brief" fired 13:27:28Z (reached this session 16s later). Reconcile: account 4490 all cash $402.45, BP $402.45, no positions, no orders. Stop-check: nothing held. Breaker level $394.19; daily loss limit $60 (unused). Prior session (Tue Nov 10) closed flat with 0 trades; nothing rolled.
+- **Tape (pre-market vs Tue close, extended-hours quotes; thin liquidity, wide spreads on small names):** SPY 757.32 vs 749.92 (+1.0%); QQQ 688.00 vs 674.82 (+2.0%); SMH 507.01 vs 483.63 (+4.8%); IWM 283.25 vs 280.58 (+1.0%); XLE 62.93 vs 62.21 (+1.2%); XBI ~156.00 vs 155.06 (+0.6%, wide spread); XLU 43.68 vs 43.73 (flat); XRT quote stale (no pre-market print, ignore). A broad risk-on gap led by semiconductors and AI hardware.
+- **Semis/AI hardware pre-market moves (vs Tue close):** MU 779.87 (+7.6%), SNDK 937.48 (+9.0%), DELL 361.75 (+8.2%), AMD 544.00 (+5.6%), AMAT 393.00 (+5.5%), AVGO 347.10 (+4.5%), NVDA 175.15 (+3.7%), NBIS 152.30 (+13.7%), IREN 21.29 (+7.9%), CBRS 98.52 (+5.2%), FPS 23.46 (+9.2%), ASTS 34.87 (+3.5%). These were exactly the names that fell on Nov 5 and Nov 10; the gap is a rebound of the same group.
+- **Why (news, sources found this cycle):** UNVERIFIED. Four WebSearch queries (futures/premarket Nov 11; Nov 10 close; CPI Nov 10 with chip rally; NVDA/chip rebound Nov 11) returned no article dated Nov 10-11, 2026. The only 2026 items were earlier (Nov 4 Zacks close; a Nov 6 recap listing a CPI release on Tue Nov 10 as a high-impact event, so CPI was scheduled but no result was found; Oct 14 and Aug 2026 futures pieces; an undated Finimize piece on a chip bounce after Thursday's selloff). Per framework §2.1 rule 5, nothing here is a citable cause. NVDA reports fiscal Q3 on Nov 17 (outside the 2-day window). A tape that moves this much with no sourced reason is a reason to look harder, not to chase.
+- **Earnings window (get_earnings_calendar, high-cap, Nov 11 to Nov 14): AVOID these names today (reporting within 2 trading days):** Nov 12: NBIS (am), FPS (am), CBRS (pm), AMAT (pm), CSCO (pm), NU, ARWR, FIGR, STNE, LUNR, ONDS; Nov 11: CTVA, FNV, ENS, UGP, TTEK (pm), RUM (am). So NBIS, FPS, CBRS, AMAT and CSCO are off-limits for any entry despite their gaps.
+- **Regime read:** pre-market is a strong gap UP, so the Falling regime from Tue morning is over; at the open, expect Stable/rising (momentum on) unless SPY fades the gap and makes new session lows, in which case wait for the 10:00 ET read. Gap-and-fade is the main risk after Tuesday's low-volume chop. MR is likely to have few candidates (a broad up-gap leaves few names down 5%).
+- **Candidates to watch (no orders; all must pass full gates live, after 10:30 ET for momentum, 10:00 ET for MR):**
+  - Momentum (needs a verified catalyst, 2+ pts above peers AND SPY, above gap VWAP, not fading, RVOL >=1.3, ADRs excluded): 1) MU +7.6% and 2) SNDK +9.0%: semis memory leaders, but a whole-sector gap means a relative-strength test against SMH (+4.8%) and no sourced catalyst yet; 3) DELL +8.2%: AI servers, same issue; 4) IREN +7.9% / ASTS +3.5%: unsourced rebound, thin; 5) AAON 77.00 (+2.7% vs 75.01) re-check only if it closes above ~77.8 on 60-100k volume with VWAP holding (the carried-over condition). Excluded outright: NBIS, FPS, CBRS, AMAT, CSCO (earnings Nov 12), EMBJ (foreign ADR), CSQR (EPS miss, no catalyst).
+  - Mean-reversion (needs down >=5% intraday AND a dated sourced sector cause): none exist pre-market. Laggards to monitor for a fade into 10:00-11:30 ET: IONS 28.44 (+0.9%, RSI 20, company-specific, gate 1 fail unless a sector cause appears), HIMS 19.47 (+1.8%, company-specific, fail), TEAM 150.00 and HUBS 198.29 (software lagging the semis rally by ~1%; software selloff cause never sourced). Realistically MR is off today unless the gap reverses hard.
+- Day minimum (1 trade) stays a goal, never a reason to loosen a gate. No order placed; first entry window opens 10:00 ET (MR) / 10:30 ET (momentum). Cycles: 13:42Z onward.
