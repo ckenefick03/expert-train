@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-12 15:14 ET",
+  "as_of": "2026-11-12 15:24 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -12170,4 +12170,11 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Mean reversion (Tier C): 32 names, the same AI/semis/crypto/growth selloff (new: DKNG). No dated external cause cited for any; no pass identified. Not every name got a full written check.
 - Hourly news search (standard mode): found no same-day coverage of Nov 12, 2026; only older context (Nasdaq 100 +3.3% on ~Nov 9 as chips rebounded; Nvidia reports Nov 17). Nothing that changes a gate. Treat the news pass as inconclusive, not as a clean bill.
 - Decision: NO TRADE. Gates not loosened; no 'forced' trade.
+
+### Cycle 1015 - 15:24 ET (trigger :22, fired 20:22:28Z, dedupe passed: last commit 20:13Z)
+- Reconcile: cash/equity $400.54, no positions. Tape: SPY 757.89 (-0.25%), QQQ -0.35%, SMH -1.25%, IWM -1.44%. Tier C; 6 minutes left for entries.
+- AMD: 20:10Z bar closed 584.87, 20:15Z bar closed 584.10 (low 581.90); both below the 586.61 reclaim level, now drifting down from the 587.78 high. RVOL 1.78. Gate 3 (break/reclaim) not met; no entry.
+- Other momentum: AVGO RVOL 1.38 range-bound/no verified catalyst (fail); TTEK gap faded (fail); FIGR spread fail; MBGL no verified catalyst; HUBS 1.27 / CLS 1.15 / DPC 1.18 under 1.3.
+- Mean reversion (Tier C): 31 names, same AI/semis/crypto/growth selloff; no cited external cause, NVDA is company-specific; no pass identified (not every name written up individually).
+- Decision: NO TRADE. Entry window closes 15:30 ET; the next cycle (:32 = 15:34 ET) is past it. Day is on track to end with 0 trades against the 1/day minimum; gates were not loosened and no 'forced' trade was taken.
 
