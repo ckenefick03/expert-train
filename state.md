@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-12 09:55 ET",
+  "as_of": "2026-11-12 10:08 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $400.54. 9:55 ET: Stabilizing (4 higher 5-min lows on SPY, SPY -0.14%). MR window opens 10:00 ET; clusters to research: crypto, gold miners, AI-infra. No orders.",
+  "status_note": "Flat, all cash $400.54. 10:08 ET: first MR cycle (Tier A). Nothing meets Tier A (no -5% name with RSI<35 and a sector cause; AI-infra cause is Nvidia-specific). Gold/miners have a sourced macro cause (dollar, hike bets) but are only -3.5% to -4%: Tier B watch for 11:30. Tape softening (IWM -1.4%, XBI -3.2%, SMH -2.4%).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-12",
@@ -4009,6 +4009,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-12 09:55 ET",
       "equity": 400.54
+    },
+    {
+      "t": "2026-11-12 10:08 ET",
+      "equity": 400.54
     }
   ],
   "positions": [],
@@ -4207,12 +4211,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Stabilizing: SPY 5-min lows 753.67 < 755.06 < 756.67 < 756.95, SPY -0.14%, SMH -1.7%. MR on from 10:00 ET; momentum from 10:30.",
+    "read": "Choppy/softening after the opening rebound: SPY -0.5% (session low 753.67 intact, flat 5-min lows 756.95), SMH -2.4%, IWM -1.4%, XBI -3.2%, GLD -3.0%, COIN -4%, MSTR -7%. Not yet Falling (no new SPY session low). MR is on only if all gates and tier depth pass.",
     "chips": [
-      "SPY -0.1%",
-      "SMH -1.7%",
-      "Stabilizing",
-      "MR opens 10:00"
+      "SPY -0.5%",
+      "SMH -2.4%",
+      "GLD -3.0%",
+      "no Tier A"
     ]
   }
 }
@@ -11909,3 +11913,14 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Informational MR scan (cap >=$5B, <=-3.5% on the day, no RSI cap; entries not yet allowed, so this is the shortlist for the 10:02 ET cycle): 45 names. Clusters rather than isolated names, which is what Gate 1 wants: (1) AI hardware/infra: SNDK -4.7% (RSI 37), NVDA -6.2% (RSI 29), NBIS -14.6% (earnings, own cause), CRWV -6.2% (RSI 50), IREN -6.9% (RSI 37), SMCI -8.0%, AAOI -4.2% (RSI 37), ASX -5.6%; (2) crypto equities: COIN -3.7% (RSI 36), MSTR -7.1% (RSI 38), BMNR -5.5%, CRCL -4.2% (RSI 36); (3) gold/silver miners: EGO -3.7%, AGI -3.5%, SSRM -3.6%, EQX -3.8%, BTG -4.0%, NXE -3.7% (an FX Leaders item dated Nov 12 notes the dollar climbing as gold tests 3,969; unverified link); (4) software/other: PANW -4.1% (RSI 42), RDDT -4.5% (RSI 37), S -4.6%; (5) autos: STLA -4.7% (RSI 39, known company-specific problems). Single-name earnings/own-cause movers to ignore: TWST -13.1%, FPS -10.4% (reported), CTVA -21.5%, BZ -20.8%, NBIS. Not researched yet.
 - What the 10:02 ET cycle must do before any MR entry: (a) find a dated, sourced sector-wide cause for a whole cluster (crypto, gold miners, or AI-infra); the Nvidia story is company-specific and AMD/AVGO were up, so it only counts for the AI-infra complex if the move is shared by names that do not depend on Nvidia's leadership; (b) check fundamentals neutral-or-better; (c) a named upside anchor of at least 2R (prior close or VWAP); (d) not a multi-week downtrend (NVDA is down over 20% in a month: fails), clean 5-minute higher lows and a stop room of about 1%+. Given the bounce already under way in the AI names, prefer a base to chasing.
 - No order placed (entries open at 10:00 ET).
+
+### Cycle 985 - ~10:08 ET (Thu Nov 12; trigger fired 15:03:32Z, scheduled 15:02Z) - first MR window cycle (Tier A), flat, no entry
+- Reconciliation: equity $400.54, cash/BP $400.54, no positions, no open orders. Day P&L $0.
+- Tape (10:03 ET vs Wed's close): SPY 756.02 (-0.50%), QQQ 684.96 (-0.78%), SMH 495.04 (-2.35%), IWM 279.11 (-1.40%), XBI 151.37 (-3.16%), XLE 63.67 (+0.5%), GLD 354.28 (-2.97%), GDX 82.36 (-3.34%), NVDA 160.79 (-7.4%), CRWV 54.81 (-9.8%), COIN 130.66 (-4.1%), MSTR 113.35 (-7.4%). The opening rebound faded: SPY gave back from 758.73 (9:53) to 756.02; IWM is making lower lows (279.82 in the 14:55Z bar). SPY's 5-minute lows are flat-ish (756.95, 757.12, 756.95), session low 753.67 intact, so not Falling by the "new session lows" test but the Stabilizing evidence is thin. Regime: choppy, risk-off creeping in.
+- Scan - mean-reversion (cap >=$5B, <=-3.5% on the day, RSI(14, daily) <40): 11 names: SNDK -5.8% (RSI 37), DELL -3.7% (40), NVDA -7.4% (29), COIN -4.0% (36), MSTR -7.3% (38), RDDT -5.7% (37), CRCL -4.5% (36), AAOI -5.8% (37), IREN -9.2% (37), IBRX -5.5% (36), STLA -4.7% (39). Tier A needs: >=5% intraday on sector/macro weakness with the sector ETF down >=2%, RSI(14) <35 or an intraday equivalent, down more than its sector, and a higher 5-minute low. Result: NO NAME PASSES TIER A.
+  - NVDA (RSI 29): the only RSI<35 name, but its cause is company-specific (board/CEO reports, CNBC/Benzinga/Yahoo, Nov 12), AMD/AVGO are up, and it is down over 20% in a month = a real downtrend. Gate 1 and Gate 4 FAIL.
+  - AI-infra cluster (SNDK, IREN, AAOI, DELL; SMH -2.35% satisfies the ETF-down-2% condition): RSI 37-40, not under 35; the cause is sympathy with the Nvidia headline, not shown to be a shared sector cause (Gate 1 unproven); no stabilization yet (SMH 5-minute lows 494.73 -> 493.78 -> 494.20). FAIL.
+  - Crypto cluster (COIN, MSTR, CRCL): extended-mode search returned no source dated Nov 12; the newest items are Nov 10 and earlier (Nov 5-6 chip-driven slide, Oct 30 Binance hack). No dated cause = Gate 1 FAIL for now. (The crypto drop may track equity risk-off, but I will not infer a cause.)
+  - Others: RDDT (company/ad-tech, no cause found), IBRX (biotech, company-specific), STLA (company-specific, multi-week downtrend): FAIL.
+- Gold/miners: a real macro cause found. Dated Nov 12 sources (FXStreet "Gold falls below $4,000 as traders weigh a half-point Fed rate hike", Business Recorder, Yahoo Finance "Gold drops below $4,000 again", 247WallSt) say gold is falling on a dollar at a 19-month high, hot CPI and a fully priced December Fed hike (Waller: a half-point hike if core CPI is 0.3% or higher; it was); one source puts the drop at 2.5% below $3,900, the wire reports are smaller (about -0.2% to $3,978), so the size of the move is not agreed. GLD -3.0%, GDX -3.3%. Miners: EGO -3.7%, AGI -3.5%, SSRM -3.6%, EQX -3.8%, BTG -4.0%, NXE -3.7% (uranium, not gold). That is Gate 1 PASS in principle, but the miners are down 3.5-4.0%, below Tier A's 5%. Tier B (11:30-14:30 ET, "only if no Tier A qualified today": none has) needs >=3.5% intraday and visible stabilization, with all four gates. Still to verify for the 11:30 ET cycle: each miner's last fundamental datapoint (Q3 results), a named upside anchor, whether the trend is a multi-week downtrend, and that nothing reports within 2 trading days. PPI (Friday 8:30) is a macro risk to any gold position held past tomorrow's open.
+- Momentum: earliest 10:30 ET; no momentum scan this cycle (disclosed). No order placed.
