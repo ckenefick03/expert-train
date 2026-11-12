@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-12 15:43 ET",
+  "as_of": "2026-11-12 15:48 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $400.54. 10:23 ET hourly: still no Tier A (IREN, the best-fit name, fails Gates 2 and 4: Nov 5 EPS miss, -49% in six weeks). Tape choppy-soft (SPY -0.4%, SMH -2.1%, GLD -3.3%). Gold miners = Tier B watch at 11:30. Momentum scan opens 10:30.",
+  "status_note": "Flat, all cash $400.54, nothing rolls overnight. Nov 12: 0 trades (min is 1), no gate loosened, no forced trade. AMD fired once on one bar and failed to hold; every other candidate failed a gate.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-12",
@@ -4017,6 +4017,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-12 10:23 ET",
       "equity": 400.54
+    },
+    {
+      "t": "2026-11-12 15:48 ET",
+      "equity": 400.54
     }
   ],
   "positions": [],
@@ -4215,12 +4219,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Choppy and soft: SPY -0.4% (5-min lows flat 755.9, session low 753.67 intact), SMH -2.1%, IWM -1.4%, XBI -3.5%, GLD -3.3%. Not Falling by the new-session-low test.",
+    "read": "Choppy and soft into the close: SPY -0.25%, QQQ -0.35%, SMH -1.25%, IWM -1.4%. Not Falling by the new-session-low test; broad AI/semis/crypto selloff with no cited external cause.",
     "chips": [
-      "SPY -0.4%",
-      "SMH -2.1%",
-      "GLD -3.3%",
-      "no Tier A"
+      "SPY -0.25%",
+      "SMH -1.25%",
+      "flat overnight",
+      "0 trades"
     ]
   }
 }
@@ -12186,4 +12190,18 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 
 ### Cycle 1017 - 15:43 ET (trigger :42, fired 20:42:34Z)
 - Entry window closed (after 15:30 ET); reconcile-only again, scans and quotes deliberately skipped (disclosed). Cash/equity $400.54, no positions, nothing to exit. The 15:47 ET close recap follows.
+
+### Cycle 1018 - 15:48 ET (LAST cycle of the day, trigger 'Trading close recap', fired 20:47:45Z)
+- Stop checks: nothing to check, no positions and no open or filled orders today (get_equity_orders for 2026-11-12 returned none). Reconcile: cash/equity $400.54, buying power $400.54.
+- No new entries (cutoff was 15:30 ET). Overnight: NOTHING rolls. The account is all cash, so there is no thesis to defend and no overnight hold decision to log.
+
+#### Day recap - Thu 2026-11-12
+- Result: 0 trades, P&L $0.00, equity $400.54 start to finish. The 1-trade/day minimum was NOT met. Peak $437.99 and the $394.19 breaker level are unchanged; the $60 daily loss limit was never in play.
+- What ran: cycles 987-1018 across the day, with the hourly :12 news passes. Gates were never loosened to chase the minimum, and the Tier C 'forced' tag was never used.
+- Main candidates and why they were skipped:
+  - AMD (+5-7%): momentum candidate from Cycle 996. It spent hours under its 594.00 high, then briefly closed above the 586.61 reclaim level (19:45Z and 20:00Z bars) but failed to hold on the next bar each time. I called the one-bar pokes unconfirmed. That is a JUDGMENT CALL, not a mechanical gate fail; with hindsight the stock ended near 584, so skipping saved nothing and cost nothing.
+  - AVGO, TTEK, FIGR, MBGL, HUBS, CLS, DPC: failed on volume (<1.3), fading gap (TTEK), spread (FIGR), or no verified catalyst.
+  - Mean reversion: gold/silver miners failed Gates 2/4 (EGO EPS miss; HL/SSRM/PAAS/AG multi-week downtrends); the late AI/semis/crypto selloff names had no dated external cause (NVDA's drop is its own CEO news).
+- Errors and misses to own: Cycles 987-991 reported 'no candidates' because I passed percent-style numbers to the scanner's ratio filter (found and fixed in Cycle 992, disclosed then). Several triggers fired 7-16 minutes late and two were skipped by the 6-minute dedupe. Cycle 1011 skipped the mean-reversion scan (disclosed). Cycle 1016/1017 skipped scans because entries were closed. Many mean-reversion names in late cycles were not individually written up.
+- Open questions for the user (not blocking, never answered): whether marginal RVOL passes (1.30-1.34) should count as fails; a one-bar reclaim versus a confirmed-hold rule for entries; whether to cut the $105 size with the breaker 6.35 away; whether to add a profit-protection rule.
 
