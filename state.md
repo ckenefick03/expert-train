@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-12 11:22 ET",
+  "as_of": "2026-11-12 11:24 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -11990,5 +11990,12 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Momentum sweep (cap>=$2B, avg vol>=1M, >=+4%): 21 names. Largest: MBGL +15.1%, FIGR +12.1%, DPC +9.6%, CLS +9.3%, HUBS +7.6%, AAON +6.4%, PTRN +6.4%, XE +6.3%, AMD +6.1%, AVGO +5.9%, SWKS +5.4%, INGM +5.3%, LQDA +5.1%, DOCN +5.0%. Scanner relative volume for every name is below 1.0 (AMD 0.65, AVGO 0.62, CLS 0.43, HUBS 0.95, FIGR 0.97, DPC 0.56, ANET 0.33). Gate 1 needs >=1.3, so all fail on volume. Gate 2 (a verified, cited catalyst) is also unverified for the semis group. FIGR and DPC also fail the 0.3% spread limit as checked earlier. No entry; I did not loosen the volume gate.
 - MR sweep (cap>=$5B, <=-3.5%): 34 names. Only RSI(14)<35 name is NVDA (28.7; -4.5% on its own CEO news, so Gate 1 is an automatic company-specific FAIL). Others near the line: IBRX -6.5% RSI 36.1 (company-specific biotech, not sector; fails), STLA -4.3% RSI 38.7 (not Tier A). Many of the -5% to -23% names are earnings or foreign ADR reactions (BZ, CTVA, JBS, BABA). No Tier A name; Tier A closes at 11:30 ET.
 - Tier B (from 11:30 ET): GLD -2.7% and GDX -2.0% are still the macro-cause watch, but no individual miner appears in the -3.5% sweep, so the intraday dislocation threshold is not met by any single name.
+- No order placed. Gates not loosened.
+
+### Cycle 993 - ~11:24 ET (Thu Nov 12; trigger "Trading cycle :22" fired 16:22:23Z, run 16:22Z; 7m after last commit so dedupe passed)
+- Reconcile: cash/equity $400.54, buying power $400.54, no positions. Day: 0 trades.
+- Tape: SPY 762.62 (+0.37%), QQQ +0.55%, SMH +0.44%, IWM -0.63%, GLD -2.79%, GDX -2.47%, XBI -1.7%. Stable/rising; momentum on.
+- Momentum sweep (cap>=$2B, avg vol>=1M, >=+4% on the day, ratio filter 0.04, plus RVOL>=1.0 expression): 3 names: AMD +7.0% RVOL 1.15, TTEK +4.5% RVOL 1.23, FIGR +11.8% RVOL 1.14. None reaches the 1.3 Gate 1 volume threshold, so all fail. FIGR also fails the 0.3% spread check from earlier, and AMD has no verified catalyst. No entry.
+- MR sweep (cap>=$5B, <=-3.5%, RSI<40, ratio filter): NVDA -4.0% RSI 28.7 (company-specific CEO news, automatic Gate 1 FAIL), IBRX -6.7% RSI 36.1 (company-specific biotech; also RSI above 35), STLA -4.6% RSI 38.7 (no sector cause identified, RSI above 35). No Tier A name; Tier A ends 11:30 ET.
 - No order placed. Gates not loosened.
 
