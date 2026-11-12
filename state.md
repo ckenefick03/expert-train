@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-12 14:35 ET",
+  "as_of": "2026-11-12 14:45 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -12136,4 +12136,14 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
   - CLS/HUBS/FIGR/MBGL: not re-checked in depth; RVOL/spread/catalyst issues as in prior cycles (FIGR spread fail; MBGL +15% single-name, no verified catalyst) - judgment call, not a full re-verification.
 - Mean reversion (Tier C): 25 names. NVDA -5.7% (RSI 28.7) down far more than SMH -1.24% and AMD/AVGO green -> company/rotation-specific, Gate 1 fail. SNDK, MSTR, RDDT, BABA, SMCI, IREN etc.: no dated external sector/macro cause identified; no gate-passing candidate. Gold/silver miners (HL, AG, EGO) same prior fails (Gates 2/4). Not every name got a full written check; none showed a plausible Gate 1 cause.
 - Decision: NO TRADE. Gates not loosened; Tier C 'forced' tag not used.
+
+### Cycle 1011 - 14:45 ET (trigger :42, fired 19:42:40Z, dedupe passed: last commit 19:34Z)
+- Reconcile: cash/equity $400.54, no positions. Tape: SPY 757.92 (-0.25%), QQQ -0.38%, SMH -1.35%, IWM -1.40%. Tier C window.
+- Momentum sweep (+4%, RVOL>=1.0): AMD +5.6% RVOL 1.68, AVGO +5.4% RVOL 1.33, CLS, HUBS, TTEK +4.5% RVOL 1.90 (new), DPC, FIGR, MBGL.
+  - AMD: completed 19:35Z bar high 585.15, close 583.32; reclaim level 586.61 not cleared. Gate 3 fail.
+  - AVGO: still range-bound ~363-365 below 369.82 high; no verified catalyst. Fail Gates 2/3.
+  - TTEK: gapped to 41.75 at the open, faded to 38.2, now ~39.3, i.e. gave back well over half the gain from the high -> 'fading' fail on Gate 1. Catalyst not researched (not needed given fail). No entry.
+  - DPC (RVOL 1.03 < 1.3), CLS (1.07), HUBS (1.13): RVOL below 1.3 gate. FIGR spread fail; MBGL no verified catalyst.
+- Mean reversion: MR sweep not re-run this cycle (run in Cycle 1010 11 min earlier, no passes) - skipped scan disclosed, judgment call to avoid redundant calls; will rerun next cycle.
+- Decision: NO TRADE. Gates not loosened.
 
