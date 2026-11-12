@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-12 10:08 ET",
+  "as_of": "2026-11-12 10:23 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $400.54. 10:08 ET: first MR cycle (Tier A). Nothing meets Tier A (no -5% name with RSI<35 and a sector cause; AI-infra cause is Nvidia-specific). Gold/miners have a sourced macro cause (dollar, hike bets) but are only -3.5% to -4%: Tier B watch for 11:30. Tape softening (IWM -1.4%, XBI -3.2%, SMH -2.4%).",
+  "status_note": "Flat, all cash $400.54. 10:23 ET hourly: still no Tier A (IREN, the best-fit name, fails Gates 2 and 4: Nov 5 EPS miss, -49% in six weeks). Tape choppy-soft (SPY -0.4%, SMH -2.1%, GLD -3.3%). Gold miners = Tier B watch at 11:30. Momentum scan opens 10:30.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-12",
@@ -4013,6 +4013,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-12 10:08 ET",
       "equity": 400.54
+    },
+    {
+      "t": "2026-11-12 10:23 ET",
+      "equity": 400.54
     }
   ],
   "positions": [],
@@ -4211,11 +4215,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Choppy/softening after the opening rebound: SPY -0.5% (session low 753.67 intact, flat 5-min lows 756.95), SMH -2.4%, IWM -1.4%, XBI -3.2%, GLD -3.0%, COIN -4%, MSTR -7%. Not yet Falling (no new SPY session low). MR is on only if all gates and tier depth pass.",
+    "read": "Choppy and soft: SPY -0.4% (5-min lows flat 755.9, session low 753.67 intact), SMH -2.1%, IWM -1.4%, XBI -3.5%, GLD -3.3%. Not Falling by the new-session-low test.",
     "chips": [
-      "SPY -0.5%",
-      "SMH -2.4%",
-      "GLD -3.0%",
+      "SPY -0.4%",
+      "SMH -2.1%",
+      "GLD -3.3%",
       "no Tier A"
     ]
   }
@@ -11924,3 +11928,19 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
   - Others: RDDT (company/ad-tech, no cause found), IBRX (biotech, company-specific), STLA (company-specific, multi-week downtrend): FAIL.
 - Gold/miners: a real macro cause found. Dated Nov 12 sources (FXStreet "Gold falls below $4,000 as traders weigh a half-point Fed rate hike", Business Recorder, Yahoo Finance "Gold drops below $4,000 again", 247WallSt) say gold is falling on a dollar at a 19-month high, hot CPI and a fully priced December Fed hike (Waller: a half-point hike if core CPI is 0.3% or higher; it was); one source puts the drop at 2.5% below $3,900, the wire reports are smaller (about -0.2% to $3,978), so the size of the move is not agreed. GLD -3.0%, GDX -3.3%. Miners: EGO -3.7%, AGI -3.5%, SSRM -3.6%, EQX -3.8%, BTG -4.0%, NXE -3.7% (uranium, not gold). That is Gate 1 PASS in principle, but the miners are down 3.5-4.0%, below Tier A's 5%. Tier B (11:30-14:30 ET, "only if no Tier A qualified today": none has) needs >=3.5% intraday and visible stabilization, with all four gates. Still to verify for the 11:30 ET cycle: each miner's last fundamental datapoint (Q3 results), a named upside anchor, whether the trend is a multi-week downtrend, and that nothing reports within 2 trading days. PPI (Friday 8:30) is a macro risk to any gold position held past tomorrow's open.
 - Momentum: earliest 10:30 ET; no momentum scan this cycle (disclosed). No order placed.
+
+### Cycle 986 - ~10:23 ET (Thu Nov 12; hourly trigger fired 15:15:18Z, scheduled 15:12Z, 3 minutes late; includes news) - MR Tier A, no entry
+- Reconciliation: equity $400.54, cash/BP $400.54, no positions, no open orders. Day P&L $0.
+- Tape (10:15 ET vs Wed's close): SPY 756.82 (-0.39%), QQQ 685.74 (-0.67%), SMH 496.57 (-2.05%), IWM 279.19 (-1.38%), XBI 150.78 (-3.54%), GLD 353.16 (-3.30%), GDX 82.12 (-3.63%), XLE 63.88 (+0.8%), NVDA 162.76 (-6.3%), CRWV 55.32 (-9.0%), SNDK 914.93 (-6.4%), IREN 18.83 (-9.6%). SPY 5-minute lows 756.95, 755.95, 755.91, 755.94 (flat; session low 753.67 not broken); SMH lows 494.20, 494.90, 492.52, 492.51 (flat). Chop, not a new-low breakdown; not Falling, not cleanly Stabilizing.
+- News (extended-mode WebSearch, dated Nov 12): (1) Nvidia: the story moved overnight. Proactive Investors' live blog says the Nasdaq opened down 1.47% (25,092) "after Nvidia said CEO Jensen Huang was stepping down" and another snippet says the board announced his resignation effective immediately; Bernstein downgraded NVDA to Market Perform (24/7 Wall St.); NVDA hit a new 52-week low and fell back below $4T market cap (24/7 Wall St.). That conflicts with the CNBC/Benzinga wording I logged at 8:35 ET ("weighing removal, no decision"); I have only one source for the resignation announcement in these search summaries, so I treat it as likely but not confirmed. Either way, it is a company-specific governance event. Small caps: only slightly weaker in the early futures (-0.1%) but IWM is now -1.4%. (2) Gold: dated Nov 12 coverage (FXStreet, Business Recorder, Yahoo Finance, 247WallSt) attributes the slide to a dollar at a 19-month high, hot CPI and a fully priced December Fed hike (Waller's half-point-hike condition met); PPI is Friday 8:30 ET. (3) Crypto: still no source dated Nov 12 (newest is Nov 10).
+- Scan - mean-reversion (cap >=$5B, <=-5.0%, RSI(14) <40): 8 names: SNDK -6.3% (RSI 37), NVDA -6.3% (29), MSTR -6.9% (38), RDDT -5.8% (37), CRCL -5.2% (36), AAOI -6.1% (37), IREN -9.6% (37), IBRX -5.8% (36). Tier A needs RSI <35 or an intraday equivalent: only NVDA qualifies on RSI and it fails the gates (company-specific cause, down >20% in a month).
+- Best-fit written gate check, IREN (18.83, -9.6%; the only name with a clear 'down more than its sector' dislocation; SMH -2.05%):
+  - Gate 1 cause: AI-infrastructure sympathy with the Nvidia leadership news. External to IREN, but the same shock is company-specific to NVDA; AMD/AVGO were up premarket. Unproven.
+  - Gate 2 fundamentals: its last report (Nov 5, after close, FQ1 2027) was a miss: EPS -$0.66 vs -$0.63 est. Miss = automatic FAIL.
+  - Gate 3 anchor: Wed's close 20.84 (+10.7%) would be the target reference, stop 3-4% below would be about 18.1; skew exists on paper but the gate does not rest on it.
+  - Gate 4 trend: from 40.65 on Oct 1 to 20.84 on Nov 11, about -49% in six weeks, lower highs and lower lows on the daily bars (Nov 5 low 17.16 on 130M shares, then 21.64/21.41/19.73/20.84): a real multi-week downtrend. FAIL.
+  - Stabilization: 5-minute lows today 18.43, 19.17, 19.26, 19.30, 19.05, 18.84, 18.87, 18.62, 18.57: lower lows, no base. FAIL.
+  - Result: IREN fails Gates 2 and 4 and has no base. No order.
+  - SNDK, AAOI (AI hardware), MSTR, CRCL (crypto), RDDT, IBRX: RSI 36-38 (not <35), no sourced Nov 12 sector cause for crypto/RDDT/IBRX, AI hardware cause as above; none has a base. All FAIL Tier A.
+- Gold/miners (Tier B watch): GLD -3.3%, GDX -3.6%, with a sourced macro cause; the miners themselves were -3.5% to -4.0% at 10:03 ET (below Tier A's 5%). Tier B opens 11:30 ET and requires >=3.5%, all four gates and a visible higher low; fundamentals and trend still to be checked for the candidates, plus the PPI-Friday overnight risk.
+- Momentum: earliest 10:30 ET, not run this cycle (disclosed). No order placed.
