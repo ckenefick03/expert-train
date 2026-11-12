@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-12 11:45 ET",
+  "as_of": "2026-11-12 11:57 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -12012,4 +12012,14 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Momentum sweep (cap>=$2B, avg vol>=1M, >=+4%, RVOL>=1.0): AMD +5.8% RVOL 1.25 and FIGR +10.8% RVOL 1.25. Both are below the 1.3 volume gate and both are fading from their highs (AMD was +7.0% at 11:24). FIGR still fails the spread limit; AMD has no verified catalyst. No entry.
 - MR Tier B sweep (cap>=$5B, <=-3.5%, RSI<45): 20 names. New since Cycle 994: SSRM -3.6% (gold/silver miner, RSI 41.9), LITE, CRCL, OKLO, ARWR. Written screen of the one name tied to a sourced macro cause (SSRM, gold selling on dollar strength and Fed-hike pricing): Gate 1 passes (external dated cause), but Gate 4 fails. Daily bars show SSRM went from 35.44 (Oct 12) to 28.07 (Nov 11), about -21% in four weeks with lower highs, so this is a multi-week downtrend, not a one-day dislocation. Its drop today is only just over the 3.5% Tier B floor and it has no base yet (5-min lows 26.55-26.60, now 27.05). I did not check its latest fundamentals or earnings window because Gate 4 already fails. Others: NVDA (company-specific), IREN (G2/G4 fail), MSTR/CRCL (crypto, no dated Nov 12 cause), SNDK/LITE (not sector-driven, SMH only -0.9%), biotech/earnings-day drops (company-specific), STLA/NIO/BABA (foreign ADRs). No Tier B name passes.
 - No order placed. Gates not loosened.
+
+### Cycle 996 - ~11:57 ET (Thu Nov 12; trigger "Trading cycle :52" fired 16:53:04Z, run 16:53Z; 9m50s after last commit so dedupe passed)
+- Reconcile: cash/equity $400.54, buying power $400.54, no positions. Day: 0 trades.
+- Tape: SPY 761.02 (+0.16%), QQQ +0.19%, SMH -0.43%, IWM -0.69%, GLD -2.6%, GDX -2.3%, XBI -1.7%. Stable/choppy; no new SPY low.
+- Momentum sweep (cap>=$2B, avg vol>=1M, >=+4%, RVOL>=1.0): AMD +6.3% RVOL 1.303, AVGO +5.7% RVOL 1.009, TTEK +4.4% RVOL 1.333, FIGR +12.4% RVOL 1.284. First time any name clears 1.3 (AMD only by 0.003, TTEK by 0.03). Written four-gate check on the two that clear:
+  - **AMD** (587.50, spread 587.13/587.91): Gate 1 passes on strength and trend: +6.3% vs SMH -0.4% and SPY +0.2%; above 5-min VWAP (572.9) and the prior close; gave back only about 16% of its gap-day gain (high 594.00 at 12:20 UTC bar, i.e. 16:20Z; $41.1 gain, $6.5 given back). Volume is a marginal pass (1.303, same pattern as the CRWV entry that lost on 11/11, where volume cleared by 0.00-0.04). Gate 2: sources attribute the move to a William Blair upgrade to Outperform, the MI450X GPU launch and a PsiQuantum partnership, plus rotation out of NVDA after its CEO news; the rotation reading is unconfirmed (one outlet says the divergence does not show Nvidia customers switching) and tradingkey says AMD is already +24% in five days, so this is an extended run. Gate 3 FAILS as of now: price 587.50 sits mid-range under the 594.00 high; the last two 5-min lows (583.03, 580.59) are lower, not higher, and there is no break or reclaim trigger. Gate 4 timing fine. Verdict: no entry. Trigger to reconsider next cycle: a 5-min close above 594.00 with RVOL still >=1.3 and a defined base low as the stop (the 16:00-16:15Z base lows are 577.95-585.10).
+  - **TTEK** (39.27): the report (fiscal Q4, Nov 11 after close; adjusted EPS $0.49 vs $0.47 est., backlog $4.67B +13%) is a valid post-report thesis, but it gapped to a 41.75 high and has given back about 60% of that gap gain (now 39.27 vs prior close 37.61, VWAP 39.27, i.e. sitting on VWAP). Gate 1 'not fading' FAILS (more than half the gap given back). No entry.
+  - AVGO (RVOL 1.009) and FIGR (RVOL 1.284, spread over 0.3%) fail Gate 1 volume or spread.
+- MR sweep (cap>=$5B, <=-3.5%, RSI<45): 14 names, all already screened in Cycles 994-995 (NVDA, MSTR, RDDT, TWST, TXG, ARWR, KTOS, SMCI, FPS, IREN, IBRX plus foreign ADRs BABA/STLA/NIO). None has an external dated sector/macro cause with neutral fundamentals; no Tier B entry.
+- No order placed. Gates not loosened. Open question on the user's list, still unanswered: whether marginal RVOL passes (1.30-1.34) should be treated as fails; I am holding AMD on Gate 3, not on that.
 
