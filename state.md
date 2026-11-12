@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-12 11:04 ET",
+  "as_of": "2026-11-12 11:22 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -11980,5 +11980,15 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Momentum: scan (cap>=$2B, avg vol>=1M, >=+4%) returned 0 rows, so no candidate.
 - MR: scan (cap>=$5B, <=-5%, RSI<40) returned 0 rows, so no Tier A name. Tier A closes at 11:30 ET. Gold/miners are still down about 2.5-2.9% and remain the Tier B watch from 11:30 ET.
 - Both scans have returned 0 rows in every cycle since 10:25 ET. I cannot tell from here whether the scanner is quiet or filtering too tightly; I checked LUNR/FIGR by quote instead, and the only symbols I looked at by hand were those, so a name that qualifies but is not on my watch list could be missed. I will test a looser threshold next cycle.
+- No order placed. Gates not loosened.
+
+### Cycle 992 - ~11:22 ET (Thu Nov 12; hourly trigger fired 16:14:21Z, scheduled 16:12Z; run 16:14Z)
+- **Correction (my error, found this cycle): the scanner's "% Change" filter takes a ratio (0.05 = 5%), not a percent.** In Cycles 987-991 I passed whole numbers (4, -5, 2.5, 3), which asked for moves of 400% and more. Those "0 rows" results were invalid, and I wrongly reported them as "scans empty / no candidate". I only caught it by running a cap-only scan whose rows showed % Change as 0.038 for GEV. Cycles 987-991 therefore had no real momentum or MR sweep; the only candidates I checked in those cycles were the handful I looked at by quote. No order was missed through a gate pass that I can identify, because I have now re-checked the current names below, but I cannot reconstruct 10:30-11:15 sweeps. From now on I use ratios (0.04, -0.035).
+- Reconcile: cash/equity $400.54, buying power $400.54, no positions, no orders. Day: 0 trades.
+- Tape: SPY 762.24 (+0.32%), QQQ +0.39%, SMH +0.06%, IWM -0.53%, GLD -2.74%, GDX -2.00%, XLE +1.3%, XBI -1.7%. Stable/rising regime, momentum on.
+- News (extended search, dated Nov 12): Nvidia CEO Jensen Huang has resigned/been ousted (sources differ on wording), CFO Colette Kress interim CEO; NVDA about -4% to -10% intraday, four analyst downgrades this week, next earnings Nov 17. Gold down on dollar strength and Fed-hike pricing. The search did not give a dated, cited reason for the AMD/AVGO rally; I would be guessing at rotation out of NVDA.
+- Momentum sweep (cap>=$2B, avg vol>=1M, >=+4%): 21 names. Largest: MBGL +15.1%, FIGR +12.1%, DPC +9.6%, CLS +9.3%, HUBS +7.6%, AAON +6.4%, PTRN +6.4%, XE +6.3%, AMD +6.1%, AVGO +5.9%, SWKS +5.4%, INGM +5.3%, LQDA +5.1%, DOCN +5.0%. Scanner relative volume for every name is below 1.0 (AMD 0.65, AVGO 0.62, CLS 0.43, HUBS 0.95, FIGR 0.97, DPC 0.56, ANET 0.33). Gate 1 needs >=1.3, so all fail on volume. Gate 2 (a verified, cited catalyst) is also unverified for the semis group. FIGR and DPC also fail the 0.3% spread limit as checked earlier. No entry; I did not loosen the volume gate.
+- MR sweep (cap>=$5B, <=-3.5%): 34 names. Only RSI(14)<35 name is NVDA (28.7; -4.5% on its own CEO news, so Gate 1 is an automatic company-specific FAIL). Others near the line: IBRX -6.5% RSI 36.1 (company-specific biotech, not sector; fails), STLA -4.3% RSI 38.7 (not Tier A). Many of the -5% to -23% names are earnings or foreign ADR reactions (BZ, CTVA, JBS, BABA). No Tier A name; Tier A closes at 11:30 ET.
+- Tier B (from 11:30 ET): GLD -2.7% and GDX -2.0% are still the macro-cause watch, but no individual miner appears in the -3.5% sweep, so the intraday dislocation threshold is not met by any single name.
 - No order placed. Gates not loosened.
 
