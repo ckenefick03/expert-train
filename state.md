@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-12 13:35 ET",
+  "as_of": "2026-11-12 13:45 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -12088,5 +12088,12 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Tape: SPY 760.58 (+0.10%), QQQ +0.07%, SMH -0.51%, IWM -0.96%, GLD -2.6%, GDX -2.6%. Flat; no new SPY low.
 - Momentum sweep (RVOL>=1.0, >=+4%): AMD +5.3% RVOL 1.547, AVGO +5.7% RVOL 1.207, INGM +4.25% RVOL 1.064, FIGR +8.8% RVOL 1.493 (TTEK dropped out of the list, i.e. below +4%). This time I pulled AMD's 5-min bars to close the Cycle 1004 gap: since 17:55Z the bar highs are 583.72, 582.35, 580.30, 579.86, 583.12, 583.04, 582.83, none above 586.61, and all closes are between 578.66 and 582.43. So the break/reclaim trigger has not fired at any point since 17:50Z (the 17:50Z bar high of 585.50 is also below it). AMD is chopping in a 577.8-583.1 range on lower volume (100-208K per bar vs 300-800K earlier), above the 575.60 base low. Gate 3 still not met; no entry. AVGO (1.207) and INGM (1.064) are under the 1.3 volume gate; FIGR still fails the spread limit. No entry.
 - MR Tier B sweep (cap>=$5B, <=-3.5%, RSI<45): 17 names, all already screened; none has a dated sector/macro cause with neutral fundamentals. HL (-3.75%) still fails Gate 4. No Tier B entry.
+- No order placed. Gates not loosened.
+
+### Cycle 1006 - ~13:45 ET (Thu Nov 12; trigger "Trading cycle :42" fired 18:42:43Z, run 18:42Z; 9m39s after last commit so dedupe passed)
+- Reconcile: cash/equity $400.54, buying power $400.54, no positions. Day: 0 trades.
+- Tape: SPY 760.34 (+0.07%), QQQ +0.03%, SMH -0.72%, IWM -1.04%, GLD -2.5%, GDX -2.65%. Flat; no new SPY low.
+- Momentum sweep (RVOL>=1.0, >=+4%): AMD +5.3% RVOL 1.562, AVGO +5.7% RVOL 1.222, HUBS +7.5% RVOL 1.025, INGM +4.3% RVOL 1.094, FIGR +8.8% RVOL 1.518, MBGL +16.4% RVOL 1.022. AMD 5-min bars since 18:20Z: highs 583.04, 582.83, 583.72, 583.25; closes 581.01, 581.73, 582.48, 581.43; still inside 580-584 and below 586.61, so Gate 3 trigger not met; no entry. FIGR still fails the spread limit. AVGO, HUBS, INGM, MBGL are under the 1.3 volume gate. No entry.
+- MR Tier B sweep (cap>=$5B, <=-3.5%, RSI<45): 20 names, all screened before; none has a dated sector/macro cause with neutral fundamentals. HL -3.75% fails Gate 4. No Tier B entry.
 - No order placed. Gates not loosened.
 
