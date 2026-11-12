@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-12 12:15 ET",
+  "as_of": "2026-11-12 12:25 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -12037,5 +12037,12 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - News (extended search, dated Nov 12; the snippets disagree on index levels and times, so I only rely on the direction): Nvidia is the main drag after the CEO exit, trading about -5% around midday; gold is down about 3% on dollar strength and Fed-hike pricing after the hot CPI (December hike odds near 100%); the search found no PPI result yet (PPI is Friday 8:30 ET). Nothing new that changes the gates.
 - Momentum sweep (RVOL>=1.0, >=+4%): AMD +5.1% RVOL 1.355, AVGO +5.4% RVOL 1.052, TTEK +4.6% RVOL 1.359, FIGR +11.7% RVOL 1.318. AMD (follow-up on the Cycle 996-997 trigger): 581.35, still inside its 580-594 range with a lower high than the 594.00 peak; no 5-min close above 594.00, so Gate 3 (break/reclaim) has still not fired, and it has now faded from +6.3% to +5.1%. TTEK (39.35) is still near VWAP with more than half the gap given back (Gate 1 not-fading fails). FIGR fails the spread limit. AVGO under 1.3. No entry.
 - MR Tier B sweep (cap>=$5B, <=-3.5%, RSI<45): 19 names. New: HL (Hecla Mining, -3.5%, RSI 42.7), CRCL, FIS, RDDT, OKLO. Written screen of HL, the only name tied to a sourced macro cause (gold selling on dollar strength and Fed-hike pricing): Gate 1 passes (external, dated Nov 12 cause). Gate 4 FAILS: daily bars show HL falling from 17.00 on Oct 1 to 14.12 on Nov 11 (about -17% in six weeks) with lower highs (peaks 17.43, 15.90, 15.72); today's -3.5% is only at the floor of the Tier B range, and its 5-min low (13.41) is only slightly under the current 13.615, so it is a continuation of a downtrend rather than a one-day dislocation. I did not review its latest earnings once Gate 4 failed. Others (NVDA, SNDK, MSTR, TWST, BABA, TXG, ARWR, KTOS, SMCI, FPS, IREN, IBRX, STLA, NIO, CRCL, FIS, RDDT, OKLO): no sector or macro dated cause with neutral fundamentals; several are earnings-day reactions, foreign ADRs or crypto names. No Tier B entry.
+- No order placed. Gates not loosened.
+
+### Cycle 999 - ~12:25 ET (Thu Nov 12; trigger "Trading cycle :22" fired 17:22:29Z, run 17:22Z; 9m08s after last commit so dedupe passed)
+- Reconcile: cash/equity $400.54, buying power $400.54, no positions. Day: 0 trades.
+- Tape: SPY 760.10 (+0.04%), QQQ -0.15%, SMH -1.45%, IWM -0.85%, GLD -2.9%, GDX -2.85%. Softening in tech; SPY has not made a new low (session low 753.67).
+- Momentum sweep (RVOL>=1.0, >=+4%): AMD +4.4% RVOL 1.384, AVGO +4.9% RVOL 1.072, TTEK +4.4% RVOL 1.375, FIGR +12.1% RVOL 1.349. AMD follow-up: 577.24 and sliding. The last five 5-min bars have lower highs (586.6, 586.0, 583.2, 582.3) and lower lows (583.4, 581.2, 580.6, 580.0), the opposite of a held pullback with a higher low; it is back at +4.4% from +7.0% at its 11:24 high. Gate 1 (not fading) and Gate 3 both fail now. TTEK (39.28) is unchanged, near VWAP with more than half its gap given back. FIGR fails the spread limit. No entry.
+- MR Tier B sweep (cap>=$5B, <=-3.5%, RSI<45): 23 names. New this cycle: LITE, AAOI, ASTS, EGO (Eldorado Gold, -3.5%, RSI 44.9). Gold names tied to the sourced macro cause (HL -4.1%, EGO -3.5%): both are at or just past the Tier B floor, and HL already failed Gate 4 in Cycle 998 (about -17% in six weeks). I did not run a new daily-trend check on EGO because the same gold-selling cause and the same weak-trend gold complex make it unlikely to pass; this is a judgment call, not a completed check, and I will check it properly if it deepens past -5%. NVDA, SNDK, MSTR, TWST, BABA, TXG, ARWR, KTOS, SMCI, FPS, IREN, IBRX, STLA, NIO, CRCL, FIS, RDDT, OKLO, LITE, AAOI, ASTS: no dated sector or macro cause with neutral fundamentals. No Tier B entry.
 - No order placed. Gates not loosened.
 
