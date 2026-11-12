@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-12 13:45 ET",
+  "as_of": "2026-11-12 14:00 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -12095,5 +12095,13 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Tape: SPY 760.34 (+0.07%), QQQ +0.03%, SMH -0.72%, IWM -1.04%, GLD -2.5%, GDX -2.65%. Flat; no new SPY low.
 - Momentum sweep (RVOL>=1.0, >=+4%): AMD +5.3% RVOL 1.562, AVGO +5.7% RVOL 1.222, HUBS +7.5% RVOL 1.025, INGM +4.3% RVOL 1.094, FIGR +8.8% RVOL 1.518, MBGL +16.4% RVOL 1.022. AMD 5-min bars since 18:20Z: highs 583.04, 582.83, 583.72, 583.25; closes 581.01, 581.73, 582.48, 581.43; still inside 580-584 and below 586.61, so Gate 3 trigger not met; no entry. FIGR still fails the spread limit. AVGO, HUBS, INGM, MBGL are under the 1.3 volume gate. No entry.
 - MR Tier B sweep (cap>=$5B, <=-3.5%, RSI<45): 20 names, all screened before; none has a dated sector/macro cause with neutral fundamentals. HL -3.75% fails Gate 4. No Tier B entry.
+- No order placed. Gates not loosened.
+
+### Cycle 1007 - ~14:00 ET (Thu Nov 12; trigger "Trading cycle :52" scheduled 18:52Z, fired 18:59:04Z, about 7 minutes late; 16m00s after the previous commit, so there was a gap of about 16 minutes between logged cycles; I did not see why it fired late)
+- Reconcile: cash/equity $400.54, buying power $400.54, no positions. Day: 0 trades.
+- Tape: SPY 758.97 (-0.11%, now below yesterday's close), QQQ -0.18%, SMH -1.02%, IWM -1.18%, GLD -2.6%, GDX -3.1%. Softer drift; SPY session low 753.67 still intact, so the regime stays Stable, leaning weaker.
+- Momentum sweep (RVOL>=1.0, >=+4%): AMD +4.7% RVOL 1.596, AVGO +5.7% RVOL 1.252, CLS +4.8% RVOL 1.020, HUBS +7.3% RVOL 1.054, INGM +4.1% RVOL 1.121, FIGR +7.8% RVOL 1.557, MBGL +16.5% RVOL 1.071. AMD (follow-up): 578.98, last 5-min bars at 18:45Z and 18:50Z closed 578.59 and 578.29 with lows 578.29 and 576.51, so the lows are now lower than the 580.64-581.7 range of the prior hour and within 0.15% of the 575.60 base low; no reclaim of 586.61 and a fading structure. Gate 3 fails; no entry. FIGR is fading (+7.8%) and fails the spread limit. All others under the 1.3 volume gate. No entry.
+- MR Tier B sweep (cap>=$5B, <=-3.5%, RSI<45): 23 names, now also AFRM (-3.6%), EGO (-3.9%, gold), SSRM (-3.7%, gold) and AUR. HL is at -4.2% and EGO and SSRM are gold miners with the Gate 1 cause (gold -2.6%, dollar strength and Fed-hike pricing). Gate 4 was already checked for HL (about -17% in six weeks, fails) and SSRM (about -21% in four weeks, fails). EGO: not checked for trend; the same weak gold complex makes a pass unlikely, but this is a judgment call, not a checked fact. I will run its daily trend and earnings check next cycle if it is still down at least 3.5%. AFRM: no dated sector cause identified. Others unchanged. No Tier B entry.
+- Tier B closes at 14:30 ET; Tier C (14:30-15:30) only applies if the day's minimum is unmet, and it is (0 trades). Per the standing rule, I will not loosen any gate to meet the minimum.
 - No order placed. Gates not loosened.
 
