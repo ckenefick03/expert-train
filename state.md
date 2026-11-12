@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-12 09:24 ET",
+  "as_of": "2026-11-12 09:35 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $400.54. Pre-open Nov 12: AI complex gapping down on reports Nvidia's board is weighing removing its CEO (NVDA -8.7%, SMH -3.4%, SPY -0.8% pre-market). Breaker headroom only $6.35 (level 394.19). Read-only brief, no orders.",
+  "status_note": "Flat, all cash $400.54. 9:35 ET: open is a gap down led by AI/semis (SPY -0.6%, SMH -3.2%, NVDA -10.5%, CRWV -13%). Off-limits until 10:00 ET; no orders.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-12",
@@ -3996,6 +3996,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-12 08:35 ET",
+      "equity": 400.54
+    },
+    {
+      "t": "2026-11-12 09:35 ET",
       "equity": 400.54
     }
   ],
@@ -11878,3 +11882,8 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 
 ### Cycle 981 - ~9:24 ET (Thu Nov 12) - pre-market; no entries possible, scans not run
 - Trigger fired 14:23:15Z (scheduled 14:22Z; previous commit about 14:16Z). The regular session opens at 9:30 ET and no entry is allowed before 10:00 ET, so the live reconcile, tape read and MR/momentum preview scans were intentionally skipped (disclosed). State per the pre-open brief: all cash $400.54, no positions, no orders. No order placed. Next cycle 9:34 ET (session just open, still inside the off-limits first 30 minutes); first scans that matter: 10:02 ET (MR) and 10:32 ET (momentum).
+
+### Cycle 982 - ~9:35 ET (Thu Nov 12) - first minutes of the session; no entries possible, scans not run
+- Trigger fired 14:32:59Z (scheduled 14:32Z; previous commit about 14:24Z). Reconcile: account 4490 all cash $400.54, BP $400.54, no positions, so no stop checks. Day P&L $0.
+- Tape (regular-session quotes at 9:33 ET vs Wed's close; the first 5-minute bar has not closed, so no regime read from bars yet): SPY 755.03 (-0.63%), QQQ 682.27 (-1.18%), SMH 490.54 (-3.24%), IWM 281.09 (-0.71%), XLE 63.59 (+0.35%). Worse than the pre-market only for the AI complex: NVDA 155.49 (-10.5%), CRWV 52.88 (-13.0%), MU 780.58 (-3.8%). Watch-list names: LGN 34.67 (-6.5%; it was +5% pre-market, so the post-report gap has already reversed: it fails my watch idea), LUNR 14.01 (+15.0%), FIGR 25.20 (+4.2%).
+- Entries are off-limits until 10:00 ET (MR) and 10:30 ET (momentum), so no MR or momentum preview scans were run (disclosed). Regime: likely Falling; read from SPY 5-minute bars at 10:00 ET. No order placed.
