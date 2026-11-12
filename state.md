@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-12 08:35 ET",
+  "as_of": "2026-11-12 08:44 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -11863,3 +11863,6 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
   - Mean reversion (needs all 4 gates, MR only if not Falling): the dated Nov 12 AI-infrastructure drop has a sourced cause (Nvidia leadership headlines) but it is a single-company story and AMD/AVGO are up, so Gate 1 (sector-wide cause) is arguable and I treat it as UNPROVEN until I can show the move spans the group; Gate 4 (not a multi-week downtrend) fails for NVDA itself (down over 20% in a month). Names to monitor if the regime flips to Stabilizing: 1) CRWV (gap down 10.6% from a fresh beat, anchor: Wed's 60.77 close), 2) MU, 3) DELL, 4) ORCL, 5) CLS. Each needs: neutral-or-better fundamentals (yes for CRWV/MU/DELL on Wed's news), a named upside anchor of at least 2R, and clean 5-minute higher lows with room for a stop of about 1% or more. Energy: XLE +1.2% on oil >$87 is a bid, not a dislocation; no MR there.
   - Yesterday's lesson applies: do not buy an extended gap on a marginal volume pass, and treat a volume ratio that clears by less than about 0.1 as a fail late in the day (pending your decision on the RVOL question).
 - Day minimum (1 trade) stays a goal, never a reason to loosen a gate. No order placed. First live cycle after the open: 13:42Z onward.
+
+### Cycle 977 - ~8:44 ET (Thu Nov 12) - pre-market; no entries possible, scans not run
+- Trigger fired 13:43:13Z (scheduled 13:42Z; previous commit about 13:36Z, the pre-open brief). The regular session opens at 9:30 ET and no entry is permitted before 10:00 ET, so the live reconcile, tape read and MR/momentum preview scans were intentionally skipped (disclosed). State per the pre-open brief: all cash $400.54, no positions, no orders; breaker level $394.19 (headroom $6.35); daily loss limit $60. No order placed. The first scan cycles that matter are 10:02 ET (MR) and 10:32 ET (momentum).
