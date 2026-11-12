@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-12 15:34 ET",
+  "as_of": "2026-11-12 15:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -12183,4 +12183,7 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Reconcile: cash/equity $400.54, buying power $400.54, no positions. Nothing to stop-check or exit.
 - Day status: 0 trades for Nov 12 against the 1/day minimum. Every candidate (AMD, AVGO, TTEK, FIGR, MBGL, mean-reversion names) failed a gate when checked; gates were not loosened and no 'forced' trade was taken. The AMD setup fired once on a single bar close and did not hold, which I judged unconfirmed (Cycles 1012-1015).
 - Next: close recap at 15:47 ET; overnight status flat.
+
+### Cycle 1017 - 15:43 ET (trigger :42, fired 20:42:34Z)
+- Entry window closed (after 15:30 ET); reconcile-only again, scans and quotes deliberately skipped (disclosed). Cash/equity $400.54, no positions, nothing to exit. The 15:47 ET close recap follows.
 
