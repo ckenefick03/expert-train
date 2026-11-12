@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-12 13:04 ET",
+  "as_of": "2026-11-12 13:15 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -12066,5 +12066,13 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Tape: SPY 760.75 (+0.12%), QQQ +0.06%, SMH -0.84%, IWM -0.85%, GLD -2.8%, GDX -2.7%. Flat, range-bound; no new SPY low.
 - Momentum sweep (RVOL>=1.0, >=+4%): AMD +5.0% RVOL 1.485, AVGO +5.3% RVOL 1.145, TTEK +4.2% RVOL 1.425, FIGR +10.7% RVOL 1.412. AMD (follow-up on the Cycle 1001 trigger): 580.30, bid/ask 580.02/580.46. The 5-min close above 586.61 did not happen; the last two completed bars closed 584.21 and 582.24 (highs 585.50, 583.72), i.e. it turned down again under the 586.61 pullback high. Base low 575.60 is intact. Gate 3 trigger not met; no entry. TTEK (39.18) has given back about 62% of its gap-day gain from the 41.75 high, so it still fails the not-fading test despite RVOL 1.425. FIGR still fails the spread limit. AVGO under 1.3. No entry.
 - MR Tier B sweep (cap>=$5B, <=-3.5%, RSI<45): 19 names, all screened in earlier cycles; none has a dated sector/macro cause with neutral fundamentals. HL is back at -3.6%, still failing Gate 4. No Tier B entry.
+- No order placed. Gates not loosened.
+
+### Cycle 1003 - ~13:15 ET (Thu Nov 12; hourly trigger fired 18:12:30Z, scheduled 18:12Z; run 18:12Z; 9m17s after last commit so dedupe passed)
+- Reconcile: cash/equity $400.54, buying power $400.54, no positions, no orders. Day: 0 trades.
+- Tape: SPY 760.40 (+0.08%), QQQ 0.01%, SMH -0.85%, IWM -0.99%, GLD -2.6%, GDX -2.65%, XLE +2.0%. Flat to slightly weaker; no new SPY low (753.67 holds). Stable regime.
+- News (extended search; mostly morning and pre-market sources, so I could not confirm any afternoon event): Nvidia says Jensen Huang resigned as CEO, president and director effective immediately (the earlier 'board weighing' reports are superseded); NVDA down about 7-8% mid-morning. Jobless claims came in at 200,000 vs about 195,000 expected (my earlier note of 187K/189K was from a pre-open source and is superseded). A hot CPI keeps a December hike near-certain; the 10-year is near 4.99%. The 1:00 PM ET 30-year auction result was not found. Nothing here changes any gate.
+- Momentum sweep (RVOL>=1.0, >=+4%): AMD +4.75% RVOL 1.504, AVGO +5.4% RVOL 1.158, TTEK +4.2% RVOL 1.482, FIGR +9.2% RVOL 1.441. AMD at 578.90 keeps sliding: the last two 5-min bars have lower highs and lower lows (582.35/579.13, then 580.30/577.77) after the 585.50 high, so no reclaim of 586.61; base low 575.60 is only 0.6% below. Gate 3 fails and it is fading. TTEK still has more than half its gap given back. FIGR is fading too (+9.2% from +12.4%) and fails the spread limit. No entry.
+- MR Tier B sweep (cap>=$5B, <=-3.5%, RSI<45): 22 names, all but SNDK/CRCL/AAOI/ASTS/HL already screened with the same result. HL -3.7% still fails Gate 4. SNDK, CRCL, AAOI and ASTS are not tied to a sector or macro cause (semis/AI names were rotating on NVDA news; crypto has no dated cause). No Tier B entry.
 - No order placed. Gates not loosened.
 
