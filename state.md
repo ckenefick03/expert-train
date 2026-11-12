@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-12 12:05 ET",
+  "as_of": "2026-11-12 12:15 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -12029,5 +12029,13 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Tape: SPY 760.87 (+0.14%), QQQ +0.10%, SMH -0.78%, IWM -0.78%, GLD -2.8%, GDX -2.4%. Flat and range-bound; no new SPY low.
 - Momentum sweep (RVOL>=1.0, >=+4%): AMD +5.6% RVOL 1.327, AVGO +5.5% RVOL 1.033, TTEK +4.4% RVOL 1.348, FIGR +11.3% RVOL 1.307. AMD follow-up on the Cycle 996 trigger: price 583.60 (bid/ask 583.30/583.69), inside the 583.03-594.00 range of the last 45 minutes, below the 594.00 high. No 5-min close above 594.00, so the break/reclaim trigger has not fired; Gate 3 still fails. It is also fading modestly (was +6.3%, now +5.6%) on falling 5-min volume (172K in the last bar vs 400-800K earlier). TTEK is flat at 39.27 on VWAP and has given back more than half the gap, so Gate 1 still fails. FIGR fails the spread limit (checked in earlier cycles). No entry.
 - MR sweep (cap>=$5B, <=-3.5%, RSI<45): the same 14 names as Cycle 996 with no change (NVDA, SNDK, MSTR, TWST, BABA, TXG, ARWR, KTOS, SMCI, FPS, IREN, IBRX, STLA, NIO). None has an external dated sector/macro cause with neutral fundamentals, so no entry.
+- No order placed. Gates not loosened.
+
+### Cycle 998 - ~12:15 ET (Thu Nov 12; hourly trigger fired 17:12:43Z, scheduled 17:12Z; run 17:13Z; 9m23s after last commit so dedupe passed)
+- Reconcile: cash/equity $400.54, buying power $400.54, no positions, no orders. Day: 0 trades.
+- Tape: SPY 760.93 (+0.15%), QQQ +0.02%, SMH -1.10%, IWM -0.79%, GLD -2.8%, GDX -2.65%, XLE +1.8%. Range-bound. Stable regime, not strongly rising; tech/semis are the weak spot.
+- News (extended search, dated Nov 12; the snippets disagree on index levels and times, so I only rely on the direction): Nvidia is the main drag after the CEO exit, trading about -5% around midday; gold is down about 3% on dollar strength and Fed-hike pricing after the hot CPI (December hike odds near 100%); the search found no PPI result yet (PPI is Friday 8:30 ET). Nothing new that changes the gates.
+- Momentum sweep (RVOL>=1.0, >=+4%): AMD +5.1% RVOL 1.355, AVGO +5.4% RVOL 1.052, TTEK +4.6% RVOL 1.359, FIGR +11.7% RVOL 1.318. AMD (follow-up on the Cycle 996-997 trigger): 581.35, still inside its 580-594 range with a lower high than the 594.00 peak; no 5-min close above 594.00, so Gate 3 (break/reclaim) has still not fired, and it has now faded from +6.3% to +5.1%. TTEK (39.35) is still near VWAP with more than half the gap given back (Gate 1 not-fading fails). FIGR fails the spread limit. AVGO under 1.3. No entry.
+- MR Tier B sweep (cap>=$5B, <=-3.5%, RSI<45): 19 names. New: HL (Hecla Mining, -3.5%, RSI 42.7), CRCL, FIS, RDDT, OKLO. Written screen of HL, the only name tied to a sourced macro cause (gold selling on dollar strength and Fed-hike pricing): Gate 1 passes (external, dated Nov 12 cause). Gate 4 FAILS: daily bars show HL falling from 17.00 on Oct 1 to 14.12 on Nov 11 (about -17% in six weeks) with lower highs (peaks 17.43, 15.90, 15.72); today's -3.5% is only at the floor of the Tier B range, and its 5-min low (13.41) is only slightly under the current 13.615, so it is a continuation of a downtrend rather than a one-day dislocation. I did not review its latest earnings once Gate 4 failed. Others (NVDA, SNDK, MSTR, TWST, BABA, TXG, ARWR, KTOS, SMCI, FPS, IREN, IBRX, STLA, NIO, CRCL, FIS, RDDT, OKLO): no sector or macro dated cause with neutral fundamentals; several are earnings-day reactions, foreign ADRs or crypto names. No Tier B entry.
 - No order placed. Gates not loosened.
 
