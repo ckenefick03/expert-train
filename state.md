@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-11 15:49 ET",
+  "as_of": "2026-11-12 08:35 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,12 +41,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Day closed flat: 1 trade (CRWV momentum, -$1.91, -0.81R). Equity $400.54, all cash. Nothing rolls overnight. Drawdown from the $437.99 peak is 8.6%; the 10% breaker (394.19) is $6.35 away.",
+  "status_note": "Flat, all cash $400.54. Pre-open Nov 12: AI complex gapping down on reports Nvidia's board is weighing removing its CEO (NVDA -8.7%, SMH -3.4%, SPY -0.8% pre-market). Breaker headroom only $6.35 (level 394.19). Read-only brief, no orders.",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-11-11",
-    "start_equity": 402.45,
-    "trades": 1,
+    "date": "2026-11-12",
+    "start_equity": 400.54,
+    "trades": 0,
     "forced": 0
   },
   "equity_history": [
@@ -3993,6 +3993,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-11 15:49 ET",
       "equity": 400.54
+    },
+    {
+      "t": "2026-11-12 08:35 ET",
+      "equity": 400.54
     }
   ],
   "positions": [],
@@ -4191,12 +4195,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Nov 11 close: SPY +1.4%, QQQ +2.4%, SMH +5.2%, AI-hardware rally on CoreWeave earnings, hot CPI keeps a December hike priced. Flat overnight.",
+    "read": "Pre-market gap DOWN led by AI/semis on Nvidia CEO headlines (SPY -0.8%, QQQ -1.4%, SMH -3.4%); energy bid (oil >$87). Likely Falling at the open: MR off unless SPY stabilizes (3 higher 5-min lows); momentum only on fresh post-earnings gaps.",
     "chips": [
-      "SPY +1.4%",
-      "SMH +5.2%",
-      "flat overnight",
-      "breaker 6.35 away"
+      "SPY -0.8%",
+      "SMH -3.4%",
+      "NVDA -8.7%",
+      "breaker $6.35 away"
     ]
   }
 }
@@ -11846,3 +11850,16 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Next: pre-open brief Nov 12 at 13:27Z (8:27 ET). NBIS, CSCO, AMAT and others report Nov 12; tomorrow's momentum list will have fresh post-earnings candidates.
 
 - Correction to the Cycle 976 recap above (appended, not edited): (a) the hourly news searches ran in the cycles logged at about 11:15, 12:14, 13:15, 14:20 and 15:17 ET (not the garbled list I wrote). (b) I wrote that the :32 and :42 cycles near 12:20 ET "lost a few minutes to MCP reconnects"; I have no evidence for that and it should be disregarded. The only dated lateness I can substantiate is the trigger-fire delays logged in Cycles 957, 958 and 964, plus the 12:52 ET dedupe skip. (c) Total day cycles: Nov 11 log entries run from Cycle 939 (the first live cycle after the pre-open brief) to Cycle 976.
+
+### Pre-open brief - Thu Nov 12, ~8:35 ET (read-only, NO orders)
+- Trigger "Trading pre-open brief" fired 13:27:31Z (reached this session 19s later). Reconcile: account 4490 all cash $400.54, BP $400.54, no positions, no open orders (broker query state=new empty). Stop-check: nothing held, nothing rolled overnight. Start-of-day equity $400.54. Risk limits: $60 daily loss limit; 10% breaker level $394.19 from the $437.99 peak, so only $6.35 of headroom (equity is 8.6% below the peak). A $105 position stopped out at 2-2.5% costs about $2.1-2.6, so about three stop-outs (not four) would trip the breaker. Flagged to you; I have not changed the size.
+- **Tape first (extended-hours last trades at ~13:28Z vs Wed's official close; thin liquidity, wide spreads on small names, indicative only):** SPY 753.87 vs 759.81 (-0.78%); QQQ 680.72 vs 690.38 (-1.40%); SMH 489.62 vs 506.96 (-3.42%); IWM 281.40 vs 283.09 (-0.60%); XLE 64.15 vs 63.37 (+1.2%); XLU 43.85 vs 43.82 (flat); XBI 154.87 vs 156.31 (-0.9%, wide spread); XRT quote unusable (no pre-market print, bid/ask 90.76 / 93.63). A tech-led gap down; energy bid; the rest of the market is only moderately lower.
+- **AI/semis/AI-infrastructure pre-market (vs Wed close):** NVDA 158.64 vs 173.73 (-8.7%); CRWV 54.33 vs 60.77 (-10.6%); NBIS 130.59 vs 154.69 (-15.6%, also earnings, below); IREN 19.38 vs 20.84 (-7.0%); SNDK 912.53 vs 977.69 (-6.7%); DELL 351.95 vs 373.68 (-5.8%); CORZ 13.75 vs 14.57 (-5.6%); MU 771.72 vs 811.30 (-4.9%); AMKR 36.42 vs 38.10 (-4.4%); ORCL 123.40 vs 128.38 (-3.9%); CLS 233.50 vs 242.92 (-3.9%). Not down with it: AMD 559.41 vs 552.90 (+1.2%), AVGO 347.00 vs 345.22 (+0.5%) (consistent with a Nvidia-specific story, not a chip-wide one).
+- **News/politics (sources found this cycle, all dated Nov 12 unless noted):** (1) Nvidia: CNBC, Benzinga, Yahoo Finance live blog, Investing.com and others report that Nvidia's board met Wednesday and is weighing whether to remove CEO Jensen Huang, with Bloomberg reporting a successor search; shares -6% to -8% pre-market. CNBC confirms the board met; nobody reports a decision or an official statement. Analyst Dan Ives is quoted saying an immediate exit would first send the stock down 25-30%. I am not repeating the personal allegations behind the reports. This is a company-specific governance event with sympathy selling in the AI-infrastructure group. (2) Nebius (NBIS): Q3 revenue $980.8M vs ~$908M est., adj. EBITDA $465.8M, but FY26 outlook cut to the low end and a 2027 capex plan of $40-45B; shares -12% to -16% pre-market (financefeeds, GuruFocus, Wall St Engine). It already reported, so it is no longer an earnings-window name, but it is a gap down, not a long. (3) CoreWeave: Benzinga "CoreWeave stock is falling Thursday" (pre-market -7% to -10%), in sympathy with the Nvidia headline after yesterday's +20%+ earnings pop. (4) Futures: CNBC has Nasdaq-100 futures -1.3% and S&P -0.7%; Globe and Mail at 4:11 ET had -0.8% and -0.4%; the Dow is flat to slightly lower. (5) Energy: CNBC has WTI above $87, +1%+, with a Nov 11 CNBC headline that Trump says no deal needed with Iran. I did not open the articles, only the search summaries. (6) Macro: Tuesday's hot CPI left a December Fed hike near-certain (CME FedWatch per earlier searches). Today: initial jobless claims 8:30 ET (consensus about 187K vs 189K prior), 30-year Treasury auction 1:00 PM ET; PPI is Friday Nov 13 8:30 ET (search results). No Fed-speaker schedule found.
+- **Earnings window (get_earnings_calendar, high-cap, verified dates): AVOID for entries today (report Nov 12 after the close):** AMAT, CSCO, CBRS, QXO, ARWR, NU, STNE, DDS, ANDG, HAWK, STN, NKTR. Nov 13 reporters (within 2 trading days, avoid): MUFG, SMFG, MFG (mostly foreign), RAMP (tentative). NVDA reports Nov 17 (outside the 2-day window; note it for the week). ALREADY REPORTED this morning (post-report momentum thesis allowed): NBIS, FPS, LGN, FIGR, YETI, WWW, DPC, SPB, ASND, HBM, LUNR, EYE, NIQ, TWST, ARCO and others.
+- **Regime read (no session data yet):** pre-market is a gap down led by AI/semis, so the likely read at the open is Falling (SPY making new session lows) until proven otherwise; framework §4.1: in Falling, mean reversion is OFF and momentum is allowed only on fresh, non-fading catalyst gaps. If SPY stabilizes (about 3 consecutive higher 5-minute lows), MR comes on. First 30-60 minutes are off-limits regardless; MR window opens 10:00 ET, momentum 10:30 ET.
+- **Candidates to watch (all must pass the full gates live; I did NOT run a pre-market preview_scan, since scan fields reflect the regular session; disclosed scope limit):**
+  - Momentum (needs a verified catalyst, 2+ pts above peers AND SPY, held pullback, RVOL, universe check: cap >=$2B, avg vol >=1M, >=$20M dollar volume, spread <=0.3%, fractional-tradable; these pre-market quotes are wide, so every name needs a post-open spread check): 1) LGN 39.00 vs 37.09 (+5.1%): Q3 EPS 1.15 vs 0.57 est. (calendar), post-report, spread currently 38.60/39.70; 2) LUNR 13.82 vs 12.18 (+13.5%): EPS -0.02 vs -0.11 est.; need to check cap/avg volume and that I am not chasing a thin spike; 3) DPC 35.20 vs 31.68 (+11.1%): EPS 0.49 vs 0.22 est.; identity/universe/spread unverified (bid 34.02 / ask 37.00 pre-market); 4) FIGR 26.25 vs 24.19 (+8.5%): EPS 0.36 vs 0.33 est.; 5) ASND 263.99 vs 259.28 (+1.8%, EPS 1.97 vs 1.13): foreign filer risk, likely an ADR, so likely excluded. Excluded or poor: FPS 23.00 (-6.4%), YETI 39.02 (-8.8%), EYE 15.70 (-13.2%), NIQ 18.48 (-12.3%) all fell despite EPS beats (the reaction is the signal, not the beat); NBIS, CRWV gap down; AMAT, CSCO, CBRS, QXO, ARWR earnings today.
+  - Mean reversion (needs all 4 gates, MR only if not Falling): the dated Nov 12 AI-infrastructure drop has a sourced cause (Nvidia leadership headlines) but it is a single-company story and AMD/AVGO are up, so Gate 1 (sector-wide cause) is arguable and I treat it as UNPROVEN until I can show the move spans the group; Gate 4 (not a multi-week downtrend) fails for NVDA itself (down over 20% in a month). Names to monitor if the regime flips to Stabilizing: 1) CRWV (gap down 10.6% from a fresh beat, anchor: Wed's 60.77 close), 2) MU, 3) DELL, 4) ORCL, 5) CLS. Each needs: neutral-or-better fundamentals (yes for CRWV/MU/DELL on Wed's news), a named upside anchor of at least 2R, and clean 5-minute higher lows with room for a stop of about 1% or more. Energy: XLE +1.2% on oil >$87 is a bid, not a dislocation; no MR there.
+  - Yesterday's lesson applies: do not buy an extended gap on a marginal volume pass, and treat a volume ratio that clears by less than about 0.1 as a fail late in the day (pending your decision on the RVOL question).
+- Day minimum (1 trade) stays a goal, never a reason to loosen a gate. No order placed. First live cycle after the open: 13:42Z onward.
