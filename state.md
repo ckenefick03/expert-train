@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-12 11:57 ET",
+  "as_of": "2026-11-12 12:05 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -12022,4 +12022,12 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
   - AVGO (RVOL 1.009) and FIGR (RVOL 1.284, spread over 0.3%) fail Gate 1 volume or spread.
 - MR sweep (cap>=$5B, <=-3.5%, RSI<45): 14 names, all already screened in Cycles 994-995 (NVDA, MSTR, RDDT, TWST, TXG, ARWR, KTOS, SMCI, FPS, IREN, IBRX plus foreign ADRs BABA/STLA/NIO). None has an external dated sector/macro cause with neutral fundamentals; no Tier B entry.
 - No order placed. Gates not loosened. Open question on the user's list, still unanswered: whether marginal RVOL passes (1.30-1.34) should be treated as fails; I am holding AMD on Gate 3, not on that.
+
+### Cycle 997 - ~12:05 ET (Thu Nov 12; trigger "Trading cycle :02" fired 17:02:54Z, run 17:03Z; 8m52s after last commit so dedupe passed)
+- Correction to Cycle 996: I wrote that AMD's high of 594.00 came from the "12:20 UTC bar". It was the 16:20Z bar (11:20 ET). The numbers around it are unchanged.
+- Reconcile: cash/equity $400.54, buying power $400.54, no positions. Day: 0 trades.
+- Tape: SPY 760.87 (+0.14%), QQQ +0.10%, SMH -0.78%, IWM -0.78%, GLD -2.8%, GDX -2.4%. Flat and range-bound; no new SPY low.
+- Momentum sweep (RVOL>=1.0, >=+4%): AMD +5.6% RVOL 1.327, AVGO +5.5% RVOL 1.033, TTEK +4.4% RVOL 1.348, FIGR +11.3% RVOL 1.307. AMD follow-up on the Cycle 996 trigger: price 583.60 (bid/ask 583.30/583.69), inside the 583.03-594.00 range of the last 45 minutes, below the 594.00 high. No 5-min close above 594.00, so the break/reclaim trigger has not fired; Gate 3 still fails. It is also fading modestly (was +6.3%, now +5.6%) on falling 5-min volume (172K in the last bar vs 400-800K earlier). TTEK is flat at 39.27 on VWAP and has given back more than half the gap, so Gate 1 still fails. FIGR fails the spread limit (checked in earlier cycles). No entry.
+- MR sweep (cap>=$5B, <=-3.5%, RSI<45): the same 14 names as Cycle 996 with no change (NVDA, SNDK, MSTR, TWST, BABA, TXG, ARWR, KTOS, SMCI, FPS, IREN, IBRX, STLA, NIO). None has an external dated sector/macro cause with neutral fundamentals, so no entry.
+- No order placed. Gates not loosened.
 
