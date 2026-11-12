@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-12 11:24 ET",
+  "as_of": "2026-11-12 11:34 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -11997,5 +11997,12 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Tape: SPY 762.62 (+0.37%), QQQ +0.55%, SMH +0.44%, IWM -0.63%, GLD -2.79%, GDX -2.47%, XBI -1.7%. Stable/rising; momentum on.
 - Momentum sweep (cap>=$2B, avg vol>=1M, >=+4% on the day, ratio filter 0.04, plus RVOL>=1.0 expression): 3 names: AMD +7.0% RVOL 1.15, TTEK +4.5% RVOL 1.23, FIGR +11.8% RVOL 1.14. None reaches the 1.3 Gate 1 volume threshold, so all fail. FIGR also fails the 0.3% spread check from earlier, and AMD has no verified catalyst. No entry.
 - MR sweep (cap>=$5B, <=-3.5%, RSI<40, ratio filter): NVDA -4.0% RSI 28.7 (company-specific CEO news, automatic Gate 1 FAIL), IBRX -6.7% RSI 36.1 (company-specific biotech; also RSI above 35), STLA -4.6% RSI 38.7 (no sector cause identified, RSI above 35). No Tier A name; Tier A ends 11:30 ET.
+- No order placed. Gates not loosened.
+
+### Cycle 994 - ~11:34 ET (Thu Nov 12; trigger "Trading cycle :32" fired 16:32:35Z, run 16:32Z; 9m52s after last commit so dedupe passed)
+- Reconcile: cash/equity $400.54, buying power $400.54, no positions. Day: 0 trades.
+- Tape: SPY 760.70 (+0.12%, off the 762.6 high of the 11:22 cycle), QQQ +0.12%, SMH -0.42%, IWM -0.78%, GLD -2.95%, GDX -2.88%, XBI -1.9%. Gently fading from the highs; still Stable, neither Falling nor strongly rising.
+- Momentum sweep (cap>=$2B, avg vol>=1M, >=+4%, RVOL>=1.0): AMD +6.3% RVOL 1.21, TTEK +4.4% RVOL 1.26, FIGR +12.3% RVOL 1.18. None reaches the 1.3 volume gate; FIGR also fails the spread limit and AMD has no verified catalyst. No entry.
+- MR Tier B window (opens 11:30 ET; Tier A found nothing). Sweep (cap>=$5B, <=-3.5%, RSI<45): 15 names. Written gate screen: NVDA -5.0% (company-specific CEO news, Gate 1 FAIL); IREN -5.1% (Gate 2 and Gate 4 fail, as in Cycle 986); MSTR -3.8% and RDDT -4.5% (no dated external cause found); SNDK -3.6% (SMH only -0.4%, so it is not a sector dislocation); IBRX -6.6%, TWST -10.6%, TXG -4.6% (company-specific biotech/genomics names); SMCI -10.1%, FPS -6.7% (earnings-day reactions, company-specific); STLA, NIO, BABA are foreign ADRs. Gold/miners: GLD -3.0% and GDX -2.9% have a sourced macro cause (dollar strength and Fed-hike pricing), but no single US-listed miner clears the cap/volume sweep at -3.5%, so the individual-name Tier B setup is not there. No Tier B name passes.
 - No order placed. Gates not loosened.
 
