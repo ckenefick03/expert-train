@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-12 10:23 ET",
+  "as_of": "2026-11-12 10:25 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -11944,3 +11944,12 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
   - SNDK, AAOI (AI hardware), MSTR, CRCL (crypto), RDDT, IBRX: RSI 36-38 (not <35), no sourced Nov 12 sector cause for crypto/RDDT/IBRX, AI hardware cause as above; none has a base. All FAIL Tier A.
 - Gold/miners (Tier B watch): GLD -3.3%, GDX -3.6%, with a sourced macro cause; the miners themselves were -3.5% to -4.0% at 10:03 ET (below Tier A's 5%). Tier B opens 11:30 ET and requires >=3.5%, all four gates and a visible higher low; fundamentals and trend still to be checked for the candidates, plus the PPI-Friday overnight risk.
 - Momentum: earliest 10:30 ET, not run this cycle (disclosed). No order placed.
+
+### Cycle 987 - ~10:25 ET (Thu Nov 12; trigger "Trading cycle :22" fired 15:22:27Z, run 15:23Z; 6m55s after last commit so dedupe passed)
+- Reconcile: cash/equity $400.54, buying power $400.54, no positions, no orders today. Day: 0 trades.
+- Tape: SPY 756.89 (-0.38%), QQQ -0.61%, SMH -1.75%, IWM -1.47%, GLD -3.30%, GDX -3.98%. Unchanged from Cycle 986; regime neither Falling nor cleanly Stabilizing.
+- Momentum: not open until 10:30 ET, so no entry considered. Pre-looked at post-report names for the next cycle: LUNR 13.85 (+13.7%) is below its 5-min VWAP (14.00) and has made lower highs since the open, so it fails Gate 1 as of now. FIGR 26.29 (+8.7%) is above VWAP (25.48) with rising 5-min lows, but its bid/ask is 26.25/26.40 (about 0.57% spread), which fails the 0.3% universe limit. DPC +3.6% (too small), LGN -7.8% (reversed). No candidate qualifies.
+- Scanner: preview_scan for cap>=$2B, avg vol>=1M, >=+5% returned 0 rows. I could not verify it against LUNR and FIGR (which are likely outside the filters), so I am not treating it as a full sweep.
+- MR: no new Tier A name vs Cycle 986. Gold/miners remain the Tier B watch for 11:30 ET.
+- No order placed. Gates not loosened.
+
