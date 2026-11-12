@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-12 09:35 ET",
+  "as_of": "2026-11-12 09:45 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $400.54. 9:35 ET: open is a gap down led by AI/semis (SPY -0.6%, SMH -3.2%, NVDA -10.5%, CRWV -13%). Off-limits until 10:00 ET; no orders.",
+  "status_note": "Flat, all cash $400.54. 9:45 ET: sharp rebound off the open (SPY -0.3% from -0.6%, SMH -1.5% from -3.3%, CRWV -6.9% from -13%); higher 5-min lows so far. Off-limits until 10:00 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-12",
@@ -4001,6 +4001,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-12 09:35 ET",
       "equity": 400.54
+    },
+    {
+      "t": "2026-11-12 09:45 ET",
+      "equity": 400.54
     }
   ],
   "positions": [],
@@ -4199,12 +4203,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Pre-market gap DOWN led by AI/semis on Nvidia CEO headlines (SPY -0.8%, QQQ -1.4%, SMH -3.4%); energy bid (oil >$87). Likely Falling at the open: MR off unless SPY stabilizes (3 higher 5-min lows); momentum only on fresh post-earnings gaps.",
+    "read": "Opening gap down (AI/semis on Nvidia CEO headlines) is being bought: SPY 5-min lows 753.67 then 755.06, SMH 484.5 then 492.7. Early read Stabilizing; confirm at 10:00-10:15 ET. MR window opens 10:00; momentum 10:30.",
     "chips": [
-      "SPY -0.8%",
-      "SMH -3.4%",
-      "NVDA -8.7%",
-      "breaker $6.35 away"
+      "SPY -0.3%",
+      "SMH -1.5%",
+      "rebound",
+      "flat"
     ]
   }
 }
@@ -11887,3 +11891,9 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Trigger fired 14:32:59Z (scheduled 14:32Z; previous commit about 14:24Z). Reconcile: account 4490 all cash $400.54, BP $400.54, no positions, so no stop checks. Day P&L $0.
 - Tape (regular-session quotes at 9:33 ET vs Wed's close; the first 5-minute bar has not closed, so no regime read from bars yet): SPY 755.03 (-0.63%), QQQ 682.27 (-1.18%), SMH 490.54 (-3.24%), IWM 281.09 (-0.71%), XLE 63.59 (+0.35%). Worse than the pre-market only for the AI complex: NVDA 155.49 (-10.5%), CRWV 52.88 (-13.0%), MU 780.58 (-3.8%). Watch-list names: LGN 34.67 (-6.5%; it was +5% pre-market, so the post-report gap has already reversed: it fails my watch idea), LUNR 14.01 (+15.0%), FIGR 25.20 (+4.2%).
 - Entries are off-limits until 10:00 ET (MR) and 10:30 ET (momentum), so no MR or momentum preview scans were run (disclosed). Regime: likely Falling; read from SPY 5-minute bars at 10:00 ET. No order placed.
+
+### Cycle 983 - ~9:45 ET (Thu Nov 12) - tape read; no entries possible, scans not run
+- Trigger fired 14:42:51Z (scheduled 14:42Z; previous commit about 14:34Z). Account state from 9:35 ET: all cash $400.54, no positions (not re-queried; nothing could have changed with no orders placed).
+- Tape (9:43 ET quotes vs Wed's close): SPY 757.50 (-0.30%), QQQ 687.43 (-0.43%), SMH 499.37 (-1.49%), NVDA 160.53 (-7.6%), CRWV 56.56 (-6.9%), MU 794.75 (-2.0%). The gap-down is being bought fast: since the 9:33 print SPY +0.3%, SMH +1.8%, CRWV +7.0%, NVDA +3.2%.
+- Regime read from 5-minute bars (two completed): SPY 9:30 bar low 753.67, 9:35 bar low 755.06 (close 757.28, higher); SMH 484.50 then 492.68; QQQ 679.84 then 683.49. Higher lows, rising closes: early read Stabilizing rather than Falling, but two bars are not three; confirm at the 10:02 ET cycle. If confirmed, MR (Tier A) is on from 10:00 ET.
+- For the 10:02 ET look: the AI-infrastructure names have already bounced 3-7% off the open lows, so a mean-reversion entry would be buying after the easy part of the bounce; any entry needs a base (higher lows on 5-minute bars), a sourced dated sector cause (Nvidia leadership headlines are company-specific, with AMD/AVGO up) and a named 2R upside anchor (prior close). Disclosed: no scans yet (entries off-limits before 10:00 ET). No order placed.
