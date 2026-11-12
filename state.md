@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-12 12:41 ET",
+  "as_of": "2026-11-12 12:54 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -12051,5 +12051,13 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Tape: SPY 761.17 (+0.18%), QQQ +0.14%, SMH -0.75%, IWM -0.80%, GLD -2.8%, GDX -2.6%. Range-bound, no new SPY low. Stable.
 - Momentum sweep (RVOL>=1.0, >=+4%): AMD +4.9% RVOL 1.425, AVGO +5.7% RVOL 1.106, FIGR +11.3% RVOL 1.376; TTEK dropped out of the list (below +4%). AMD follow-up: 580.26, a bounce off the 577.24 low but still inside the 577-594 range and below the 594.00 high, so no break/reclaim trigger; it still shows a lower high on the day (594.00 at 11:20 ET vs 586.6 at 11:55 ET). Gate 3 still fails. FIGR fails the spread limit. No entry.
 - MR Tier B sweep (cap>=$5B, <=-3.5%, RSI<45): 21 names, the same set as Cycle 999 minus LITE, ASTS and EGO, plus CYTK (-3.8%, biotech). HL is now only -3.6% and has already failed Gate 4. No name has a dated sector/macro cause with neutral fundamentals. No Tier B entry.
+- No order placed. Gates not loosened.
+
+### Cycle 1001 - ~12:54 ET (Thu Nov 12; trigger "Trading cycle :52" fired 17:53:19Z, run 17:53Z; 13m32s after the last commit so dedupe passed. The :42 trigger at 17:43:11Z was skipped silently by dedupe, 3m20s after Cycle 1000, and not logged.)
+- Reconcile: cash/equity $400.54, buying power $400.54, no positions. Day: 0 trades.
+- Tape: SPY 761.42 (+0.21%), QQQ +0.23%, SMH -0.53%, IWM -0.76%, GLD -2.8%, GDX -2.6%. Slow grind up; no new SPY low. Stable/rising for the index, with small caps and semis lagging.
+- Momentum sweep (RVOL>=1.0, >=+4%): AMD +5.65% RVOL 1.465, AVGO +5.6% RVOL 1.133, FIGR +11.4% RVOL 1.397. Written check of AMD (584.02, bid/ask 584.01/584.34, tight), the only name that is not failing on spread or volume: Gate 1 passes (+5.7% vs SMH -0.5% and SPY +0.2%; above VWAP and prior close; gave back about 20% of its gap-day gain from the 594.00 high; RVOL 1.465 is a comfortable pass, not marginal). Gate 2: catalyst is the William Blair upgrade, MI450X launch, PsiQuantum deal and rotation out of NVDA, with the rotation part unconfirmed; the stock is also up about 24% in five days. Gate 3 is forming but not met: since 17:20Z the 5-min lows have risen (575.60, 575.60, 576.07, 577.50, 580.00, 581.28) so there is a higher-low base, but price has not reclaimed the pullback highs (586.61 at 17:00Z; 594.00 at 16:20Z). Entry rule is a break/reclaim, so there is no entry yet. Risk sizing if it reclaimed 586.6: stop under the 575.60 base low is about 1.9% below, so a 2R target would be about 598, above the 594.00 prior high; I would still need to check that headroom is real, not one candle. FIGR fails the spread limit; AVGO is under 1.3. No entry.
+- Trigger to reconsider next cycle: a completed 5-min close above 586.61 with RVOL >=1.3, the 575.60 base low intact, and no fresh SPY low.
+- MR Tier B sweep (cap>=$5B, <=-3.5%, RSI<45): 16 names (NVDA, MSTR, TWST, RDDT, BABA, TXG, CYTK, ARWR, KTOS, FIS, SMCI, FPS, IREN, IBRX, STLA, NIO), all already screened; none has a dated sector/macro cause with neutral fundamentals. Gold names are no longer in the sweep (below -3.5%). No Tier B entry.
 - No order placed. Gates not loosened.
 
