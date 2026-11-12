@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-12 15:05 ET",
+  "as_of": "2026-11-12 15:14 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -12162,4 +12162,12 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Other momentum names unchanged: AVGO RVOL 1.35 but range-bound under 369.82 with no verified catalyst (Gates 2/3 fail); TTEK faded gap (Gate 1 fail); FIGR spread fail; MBGL no verified catalyst; DPC/CLS/HUBS RVOL <1.3; UGP (+4.1%, RVOL 1.02, foreign ADR, volume gate) fail.
 - Mean reversion (Tier C): 32 names, broad AI/semis/crypto/growth weakness (NVDA, SNDK, LITE, AAOI, SMCI, IREN, MSTR, COIN, RDDT...). No name has a dated external sector/macro cause I can cite (NVDA's drop is its own CEO news), and I did not research the new ones (LITE, COIN, ASTS, NLY); no pass identified. Miners keep their earlier Gate 2/4 fails.
 - Decision: NO TRADE. Gates not loosened. Next trigger for AMD: a completed 5-min close >=586.61 on volume >=RVOL 1.3 that is followed by the next bar also holding it, or entries stop at 15:30 ET.
+
+### Cycle 1014 - 15:14 ET (hourly :12 cycle, fired 20:12:23Z, dedupe passed: last commit 20:03Z)
+- Reconcile: cash/equity $400.54, no positions, buying power $400.54. Tape: SPY 757.21 (-0.34%), QQQ -0.47%, SMH -1.38%, IWM -1.56%. Tier C; 16 minutes left for entries.
+- AMD (the only live candidate): the 20:00Z bar closed 586.92, above 586.61, but the 20:05Z bar closed 584.46 (high 587.78, rejected), so the reclaim did NOT hold, which is the confirmation my Cycle 1013 note required. Price 584.25, RVOL 1.76. Third failed poke at the 586.6-587.8 band in 25 minutes. No entry.
+- Other momentum: AVGO RVOL 1.37 but range-bound, no verified catalyst (fail Gates 2/3); TTEK gap faded (Gate 1); FIGR spread; MBGL no catalyst; HUBS 1.24 / CLS 1.13 / DPC 1.15 under 1.3.
+- Mean reversion (Tier C): 32 names, the same AI/semis/crypto/growth selloff (new: DKNG). No dated external cause cited for any; no pass identified. Not every name got a full written check.
+- Hourly news search (standard mode): found no same-day coverage of Nov 12, 2026; only older context (Nasdaq 100 +3.3% on ~Nov 9 as chips rebounded; Nvidia reports Nov 17). Nothing that changes a gate. Treat the news pass as inconclusive, not as a clean bill.
+- Decision: NO TRADE. Gates not loosened; no 'forced' trade.
 
