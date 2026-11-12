@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-12 12:25 ET",
+  "as_of": "2026-11-12 12:41 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -12044,5 +12044,12 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Tape: SPY 760.10 (+0.04%), QQQ -0.15%, SMH -1.45%, IWM -0.85%, GLD -2.9%, GDX -2.85%. Softening in tech; SPY has not made a new low (session low 753.67).
 - Momentum sweep (RVOL>=1.0, >=+4%): AMD +4.4% RVOL 1.384, AVGO +4.9% RVOL 1.072, TTEK +4.4% RVOL 1.375, FIGR +12.1% RVOL 1.349. AMD follow-up: 577.24 and sliding. The last five 5-min bars have lower highs (586.6, 586.0, 583.2, 582.3) and lower lows (583.4, 581.2, 580.6, 580.0), the opposite of a held pullback with a higher low; it is back at +4.4% from +7.0% at its 11:24 high. Gate 1 (not fading) and Gate 3 both fail now. TTEK (39.28) is unchanged, near VWAP with more than half its gap given back. FIGR fails the spread limit. No entry.
 - MR Tier B sweep (cap>=$5B, <=-3.5%, RSI<45): 23 names. New this cycle: LITE, AAOI, ASTS, EGO (Eldorado Gold, -3.5%, RSI 44.9). Gold names tied to the sourced macro cause (HL -4.1%, EGO -3.5%): both are at or just past the Tier B floor, and HL already failed Gate 4 in Cycle 998 (about -17% in six weeks). I did not run a new daily-trend check on EGO because the same gold-selling cause and the same weak-trend gold complex make it unlikely to pass; this is a judgment call, not a completed check, and I will check it properly if it deepens past -5%. NVDA, SNDK, MSTR, TWST, BABA, TXG, ARWR, KTOS, SMCI, FPS, IREN, IBRX, STLA, NIO, CRCL, FIS, RDDT, OKLO, LITE, AAOI, ASTS: no dated sector or macro cause with neutral fundamentals. No Tier B entry.
+- No order placed. Gates not loosened.
+
+### Cycle 1000 - ~12:41 ET (Thu Nov 12; trigger "Trading cycle :32" scheduled 17:32Z, fired 17:39:19Z, so it ran about 7 minutes late; 16m26s after the previous commit, so there was a gap of about 16 minutes between logged cycles; I did not see why the trigger fired late)
+- Reconcile: cash/equity $400.54, buying power $400.54, no positions. Day: 0 trades.
+- Tape: SPY 761.17 (+0.18%), QQQ +0.14%, SMH -0.75%, IWM -0.80%, GLD -2.8%, GDX -2.6%. Range-bound, no new SPY low. Stable.
+- Momentum sweep (RVOL>=1.0, >=+4%): AMD +4.9% RVOL 1.425, AVGO +5.7% RVOL 1.106, FIGR +11.3% RVOL 1.376; TTEK dropped out of the list (below +4%). AMD follow-up: 580.26, a bounce off the 577.24 low but still inside the 577-594 range and below the 594.00 high, so no break/reclaim trigger; it still shows a lower high on the day (594.00 at 11:20 ET vs 586.6 at 11:55 ET). Gate 3 still fails. FIGR fails the spread limit. No entry.
+- MR Tier B sweep (cap>=$5B, <=-3.5%, RSI<45): 21 names, the same set as Cycle 999 minus LITE, ASTS and EGO, plus CYTK (-3.8%, biotech). HL is now only -3.6% and has already failed Gate 4. No name has a dated sector/macro cause with neutral fundamentals. No Tier B entry.
 - No order placed. Gates not loosened.
 
