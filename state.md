@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-12 10:54 ET",
+  "as_of": "2026-11-12 11:04 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -11972,5 +11972,13 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Tape: SPY 758.82 (-0.13%), QQQ -0.24%, SMH -0.68%, IWM -0.93%, GLD -2.95%, GDX -2.60%. SPY's 5-minute lows since the 14:55 bar: 756.95, 755.95, 755.91, 755.94, 756.33, 756.13, 756.66, 756.71, 757.09, 757.76, 758.10. The session low of 753.67 (the 14:30 bar) has held, and lows have been rising since 15:05, so this is a Stabilizing regime (MR on). SMH has recovered from -2.1% to -0.7%.
 - Momentum: scan (cap>=$2B, avg vol>=1M, >=+4%) returned 0 rows, so no candidate.
 - MR: scan (cap>=$5B, <=-5%, RSI<40) returned 0 rows, so no Tier A name. The semis dislocation has largely recovered. Gold/miners are still down about 2.6-3.0%, which is the Tier B watch from 11:30 ET (verify fundamentals, anchor, trend, earnings and PPI risk then).
+- No order placed. Gates not loosened.
+
+### Cycle 991 - ~11:04 ET (Thu Nov 12; trigger "Trading cycle :02" fired 16:03:13Z, run 16:03Z; 9m35s after last commit so dedupe passed)
+- Reconcile: cash/equity $400.54, buying power $400.54, no positions. Day: 0 trades.
+- Tape: SPY 760.50 (+0.09%, back above yesterday's close), QQQ +0.04%, SMH -0.46%, IWM -0.83%, GLD -2.92%, GDX -2.54%. The market has recovered the morning drop; regime Stable/rising (momentum on).
+- Momentum: scan (cap>=$2B, avg vol>=1M, >=+4%) returned 0 rows, so no candidate.
+- MR: scan (cap>=$5B, <=-5%, RSI<40) returned 0 rows, so no Tier A name. Tier A closes at 11:30 ET. Gold/miners are still down about 2.5-2.9% and remain the Tier B watch from 11:30 ET.
+- Both scans have returned 0 rows in every cycle since 10:25 ET. I cannot tell from here whether the scanner is quiet or filtering too tightly; I checked LUNR/FIGR by quote instead, and the only symbols I looked at by hand were those, so a name that qualifies but is not on my watch list could be missed. I will test a looser threshold next cycle.
 - No order placed. Gates not loosened.
 
