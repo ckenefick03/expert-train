@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-12 14:45 ET",
+  "as_of": "2026-11-12 14:55 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -12146,4 +12146,13 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
   - DPC (RVOL 1.03 < 1.3), CLS (1.07), HUBS (1.13): RVOL below 1.3 gate. FIGR spread fail; MBGL no verified catalyst.
 - Mean reversion: MR sweep not re-run this cycle (run in Cycle 1010 11 min earlier, no passes) - skipped scan disclosed, judgment call to avoid redundant calls; will rerun next cycle.
 - Decision: NO TRADE. Gates not loosened.
+
+### Cycle 1012 - 14:55 ET (trigger :52, fired 19:53:36Z, dedupe passed: last commit 19:43Z)
+- Reconcile: cash/equity $400.54, no positions. Tape: SPY 757.85 (-0.26%), QQQ -0.34%, SMH -1.07%, IWM -1.41%. Tier C window; day minimum still unmet.
+- Momentum sweep: AMD +6.0% RVOL 1.71, AVGO +5.5% RVOL 1.34, CLS 1.09, HUBS 1.16, TTEK 1.95, DPC 1.10, FIGR 1.68, MBGL 1.32.
+- AMD (the one live candidate): the completed 19:45Z bar closed 586.91 (high 587.00, volume 304K, the heaviest of the last five bars), which is the first completed 5-min close above the 586.61 reclaim level. RVOL 1.71 passes, base low 575.60 intact, SPY has no fresh low (757.7 vs 753.67), above gap-day VWAP and prior close, gave back ~20% of the gap gain from the 594.00 high. Stop would be under 575.60 (~1.9% risk); a 2R target would be about 608, i.e. above the 594.00 day high, so the trade needs a new high of day, not just a retest. Catalyst is the same partly-unconfirmed set as before (William Blair upgrade, MI450X launch, PsiQuantum deal, NVDA rotation), and the stock is up ~24% in five days.
+  - Why no entry: the break is one bar that cleared the level by 0.30 and the live quote is already back under it (585.83 at 19:54Z); the 19:50Z bar was not complete when I checked, so there is no confirmation that the reclaim holds. JUDGMENT CALL, not a mechanical fail: I read a one-bar poke that has already slipped back as unconfirmed. The day minimum was not weighed against the gate. Next cycle: if the 19:50Z and 19:55Z bars close at or above 586.61 with RVOL still >=1.3, treat the reclaim as held and enter ($105, stop under 575.60, EOD exit by 15:50 ET); I did not pull VWAP this cycle (tool call errored on a bad parameter), the above-VWAP statement rests on the prior cycles' reading.
+  - AVGO (RVOL 1.34): still range-bound 363-365 below 369.82, no verified catalyst; fail Gates 2/3. TTEK: gap faded, fail. FIGR: spread fail. MBGL: no verified catalyst. DPC/CLS/HUBS: RVOL under 1.3.
+- Mean reversion (Tier C): 28 names; NVDA -5.5% (CEO news, company-specific -> Gate 1 fail), SNDK/MSTR/RDDT/BABA/SMCI/IREN/FPS etc. have no dated external sector cause; gold/silver miners keep their Gate 2/4 fails; PANW -3.6% and NU -3.7% newly appear but I did not research a cause; no pass identified. Not every name got a full written check.
+- Decision: NO TRADE this cycle.
 
