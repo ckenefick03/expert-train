@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-12 09:45 ET",
+  "as_of": "2026-11-12 09:55 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, all cash $400.54. 9:45 ET: sharp rebound off the open (SPY -0.3% from -0.6%, SMH -1.5% from -3.3%, CRWV -6.9% from -13%); higher 5-min lows so far. Off-limits until 10:00 ET.",
+  "status_note": "Flat, all cash $400.54. 9:55 ET: Stabilizing (4 higher 5-min lows on SPY, SPY -0.14%). MR window opens 10:00 ET; clusters to research: crypto, gold miners, AI-infra. No orders.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-12",
@@ -4005,6 +4005,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-12 09:45 ET",
       "equity": 400.54
+    },
+    {
+      "t": "2026-11-12 09:55 ET",
+      "equity": 400.54
     }
   ],
   "positions": [],
@@ -4203,12 +4207,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Opening gap down (AI/semis on Nvidia CEO headlines) is being bought: SPY 5-min lows 753.67 then 755.06, SMH 484.5 then 492.7. Early read Stabilizing; confirm at 10:00-10:15 ET. MR window opens 10:00; momentum 10:30.",
+    "read": "Stabilizing: SPY 5-min lows 753.67 < 755.06 < 756.67 < 756.95, SPY -0.14%, SMH -1.7%. MR on from 10:00 ET; momentum from 10:30.",
     "chips": [
-      "SPY -0.3%",
-      "SMH -1.5%",
-      "rebound",
-      "flat"
+      "SPY -0.1%",
+      "SMH -1.7%",
+      "Stabilizing",
+      "MR opens 10:00"
     ]
   }
 }
@@ -11897,3 +11901,11 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Tape (9:43 ET quotes vs Wed's close): SPY 757.50 (-0.30%), QQQ 687.43 (-0.43%), SMH 499.37 (-1.49%), NVDA 160.53 (-7.6%), CRWV 56.56 (-6.9%), MU 794.75 (-2.0%). The gap-down is being bought fast: since the 9:33 print SPY +0.3%, SMH +1.8%, CRWV +7.0%, NVDA +3.2%.
 - Regime read from 5-minute bars (two completed): SPY 9:30 bar low 753.67, 9:35 bar low 755.06 (close 757.28, higher); SMH 484.50 then 492.68; QQQ 679.84 then 683.49. Higher lows, rising closes: early read Stabilizing rather than Falling, but two bars are not three; confirm at the 10:02 ET cycle. If confirmed, MR (Tier A) is on from 10:00 ET.
 - For the 10:02 ET look: the AI-infrastructure names have already bounced 3-7% off the open lows, so a mean-reversion entry would be buying after the easy part of the bounce; any entry needs a base (higher lows on 5-minute bars), a sourced dated sector cause (Nvidia leadership headlines are company-specific, with AMD/AVGO up) and a named 2R upside anchor (prior close). Disclosed: no scans yet (entries off-limits before 10:00 ET). No order placed.
+
+### Cycle 984 - ~9:55 ET (Thu Nov 12) - tape and informational MR scan; entries open at 10:00 ET
+- Trigger fired 14:53:14Z (scheduled 14:52Z; previous commit about 14:44Z). Account state unchanged since 9:35 ET: all cash $400.54, no positions, no orders (no order placed this morning). Day P&L $0.
+- Tape (9:53 ET vs Wed's close): SPY 758.73 (-0.14%), QQQ 687.96 (-0.35%), SMH 498.48 (-1.67%), IWM 280.85 (-0.79%), XLE 63.70 (+0.5%), NVDA 162.87 (-6.2%), CRWV 57.06 (-6.1%), MU 783.70 (-3.4%), LUNR 14.14 (+16.1%), FIGR 26.06 (+7.7%).
+- Regime (framework §4.1): four completed SPY 5-minute bars, lows 753.67 -> 755.06 -> 756.67 -> 756.95 (each higher) and closes 755.35, 757.28, 757.45, 757.33. That meets the "about three consecutive higher 5-minute lows" Stabilizing test: MR is ON from 10:00 ET; SMH made the same higher lows through 14:40Z, then a lower low 494.73 in the 14:45Z bar (watch). Momentum from 10:30 ET.
+- Informational MR scan (cap >=$5B, <=-3.5% on the day, no RSI cap; entries not yet allowed, so this is the shortlist for the 10:02 ET cycle): 45 names. Clusters rather than isolated names, which is what Gate 1 wants: (1) AI hardware/infra: SNDK -4.7% (RSI 37), NVDA -6.2% (RSI 29), NBIS -14.6% (earnings, own cause), CRWV -6.2% (RSI 50), IREN -6.9% (RSI 37), SMCI -8.0%, AAOI -4.2% (RSI 37), ASX -5.6%; (2) crypto equities: COIN -3.7% (RSI 36), MSTR -7.1% (RSI 38), BMNR -5.5%, CRCL -4.2% (RSI 36); (3) gold/silver miners: EGO -3.7%, AGI -3.5%, SSRM -3.6%, EQX -3.8%, BTG -4.0%, NXE -3.7% (an FX Leaders item dated Nov 12 notes the dollar climbing as gold tests 3,969; unverified link); (4) software/other: PANW -4.1% (RSI 42), RDDT -4.5% (RSI 37), S -4.6%; (5) autos: STLA -4.7% (RSI 39, known company-specific problems). Single-name earnings/own-cause movers to ignore: TWST -13.1%, FPS -10.4% (reported), CTVA -21.5%, BZ -20.8%, NBIS. Not researched yet.
+- What the 10:02 ET cycle must do before any MR entry: (a) find a dated, sourced sector-wide cause for a whole cluster (crypto, gold miners, or AI-infra); the Nvidia story is company-specific and AMD/AVGO were up, so it only counts for the AI-infra complex if the move is shared by names that do not depend on Nvidia's leadership; (b) check fundamentals neutral-or-better; (c) a named upside anchor of at least 2R (prior close or VWAP); (d) not a multi-week downtrend (NVDA is down over 20% in a month: fails), clean 5-minute higher lows and a stop room of about 1%+. Given the bounce already under way in the AI names, prefer a base to chasing.
+- No order placed (entries open at 10:00 ET).
