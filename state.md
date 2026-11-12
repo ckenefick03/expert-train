@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-12 14:17 ET",
+  "as_of": "2026-11-12 14:25 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -12117,5 +12117,13 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
   - HL (-4.6%) and SSRM (-4.0%) already failed Gate 4 earlier today.
   The whole precious-metals miner group is in a six-week downtrend, so none of them is a one-day dislocation. The other names (NVDA, SNDK, MSTR, TWST, RDDT, BABA, AFRM, CRCL, TXG, CYTK, KTOS, FIS, SMCI, OKLO, FPS, IREN, IBRX, AUR, STLA, NIO) were screened earlier with no dated sector/macro cause with neutral fundamentals; AFRM and CRCL got no new cause either. No Tier B entry.
 - Tier B closes at 14:30 ET. Tier C (14:30-15:30) is available because the day's minimum is unmet; it needs the same gates as MR plus the forced tag only if no organic setup exists. I am not loosening any gate to meet the minimum.
+- No order placed. Gates not loosened.
+
+### Cycle 1009 - ~14:25 ET (Thu Nov 12; trigger "Trading cycle :22" fired 19:22:31Z, run 19:22Z; 6m34s after the previous commit, just over the 6-minute dedupe limit, so it ran)
+- Reconcile: cash/equity $400.54, buying power $400.54, no positions. Day: 0 trades.
+- Tape: SPY 759.05 (-0.10%), QQQ -0.18%, SMH -1.11%, IWM -1.23%, GLD -2.65%, GDX -3.3%. SPY 5-min bars 18:40Z-19:15Z are flat in 758.30-760.46 with no new low; session low 753.67 intact. Stable, flat.
+- Momentum sweep (RVOL>=1.0, >=+4%): AMD +5.2% RVOL 1.641, AVGO +5.75% RVOL 1.296 (0.004 under the 1.3 gate), CLS +5.1% RVOL 1.042, HUBS +7.3% RVOL 1.093, INGM +4.8% RVOL 1.266, FIGR +7.4% RVOL 1.603, MBGL +15.1% RVOL 1.225. AMD (follow-up, 5-min bars pulled this time): 581.55; bar highs since 18:40Z are 582.60, 581.21, 579.19, 579.61, 579.59, 581.00, 582.78, 582.34, all below the 586.61 reclaim level; lows 576.51-580.14. A flat 577-583 range, so no break/reclaim: Gate 3 not met; no entry. AVGO's volume is below the gate by 0.004, which I treat as a fail, not a pass; I have no verified catalyst for AVGO beyond the same AMD/NVDA rotation. FIGR fails the spread limit. No entry.
+- MR sweep (cap>=$5B, <=-3.5%, RSI<45): 24 names, the same set already screened, including gold/silver miners EGO (Gate 2 fail), PAAS, AG, HL and SSRM (Gate 4 fail). No entry.
+- Tier B closed at 14:30 ET boundary in the next cycle; Tier C applies from 14:30 and needs all the same gates (the 'forced' tag only applies when no organic A/B setup exists, and it does not relax any gate). The day's minimum is still unmet and I am still not loosening gates.
 - No order placed. Gates not loosened.
 
