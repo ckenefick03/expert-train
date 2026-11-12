@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-12 11:34 ET",
+  "as_of": "2026-11-12 11:45 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -12004,5 +12004,12 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Tape: SPY 760.70 (+0.12%, off the 762.6 high of the 11:22 cycle), QQQ +0.12%, SMH -0.42%, IWM -0.78%, GLD -2.95%, GDX -2.88%, XBI -1.9%. Gently fading from the highs; still Stable, neither Falling nor strongly rising.
 - Momentum sweep (cap>=$2B, avg vol>=1M, >=+4%, RVOL>=1.0): AMD +6.3% RVOL 1.21, TTEK +4.4% RVOL 1.26, FIGR +12.3% RVOL 1.18. None reaches the 1.3 volume gate; FIGR also fails the spread limit and AMD has no verified catalyst. No entry.
 - MR Tier B window (opens 11:30 ET; Tier A found nothing). Sweep (cap>=$5B, <=-3.5%, RSI<45): 15 names. Written gate screen: NVDA -5.0% (company-specific CEO news, Gate 1 FAIL); IREN -5.1% (Gate 2 and Gate 4 fail, as in Cycle 986); MSTR -3.8% and RDDT -4.5% (no dated external cause found); SNDK -3.6% (SMH only -0.4%, so it is not a sector dislocation); IBRX -6.6%, TWST -10.6%, TXG -4.6% (company-specific biotech/genomics names); SMCI -10.1%, FPS -6.7% (earnings-day reactions, company-specific); STLA, NIO, BABA are foreign ADRs. Gold/miners: GLD -3.0% and GDX -2.9% have a sourced macro cause (dollar strength and Fed-hike pricing), but no single US-listed miner clears the cap/volume sweep at -3.5%, so the individual-name Tier B setup is not there. No Tier B name passes.
+- No order placed. Gates not loosened.
+
+### Cycle 995 - ~11:45 ET (Thu Nov 12; trigger "Trading cycle :42" fired 16:42:46Z, run 16:43Z; 9m45s after last commit so dedupe passed)
+- Reconcile: cash/equity $400.54, buying power $400.54, no positions. Day: 0 trades.
+- Tape: SPY 760.16 (+0.05%), QQQ -0.01%, SMH -0.90%, IWM -0.80%, GLD -3.0%, GDX -2.8%, XBI -2.0%. Drifting lower from the 11:22 high; still no new session low (SPY low 753.67 intact), so the regime stays Stable/choppy.
+- Momentum sweep (cap>=$2B, avg vol>=1M, >=+4%, RVOL>=1.0): AMD +5.8% RVOL 1.25 and FIGR +10.8% RVOL 1.25. Both are below the 1.3 volume gate and both are fading from their highs (AMD was +7.0% at 11:24). FIGR still fails the spread limit; AMD has no verified catalyst. No entry.
+- MR Tier B sweep (cap>=$5B, <=-3.5%, RSI<45): 20 names. New since Cycle 994: SSRM -3.6% (gold/silver miner, RSI 41.9), LITE, CRCL, OKLO, ARWR. Written screen of the one name tied to a sourced macro cause (SSRM, gold selling on dollar strength and Fed-hike pricing): Gate 1 passes (external dated cause), but Gate 4 fails. Daily bars show SSRM went from 35.44 (Oct 12) to 28.07 (Nov 11), about -21% in four weeks with lower highs, so this is a multi-week downtrend, not a one-day dislocation. Its drop today is only just over the 3.5% Tier B floor and it has no base yet (5-min lows 26.55-26.60, now 27.05). I did not check its latest fundamentals or earnings window because Gate 4 already fails. Others: NVDA (company-specific), IREN (G2/G4 fail), MSTR/CRCL (crypto, no dated Nov 12 cause), SNDK/LITE (not sector-driven, SMH only -0.9%), biotech/earnings-day drops (company-specific), STLA/NIO/BABA (foreign ADRs). No Tier B name passes.
 - No order placed. Gates not loosened.
 
