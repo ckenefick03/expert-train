@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-12 14:00 ET",
+  "as_of": "2026-11-12 14:17 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -12103,5 +12103,19 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Momentum sweep (RVOL>=1.0, >=+4%): AMD +4.7% RVOL 1.596, AVGO +5.7% RVOL 1.252, CLS +4.8% RVOL 1.020, HUBS +7.3% RVOL 1.054, INGM +4.1% RVOL 1.121, FIGR +7.8% RVOL 1.557, MBGL +16.5% RVOL 1.071. AMD (follow-up): 578.98, last 5-min bars at 18:45Z and 18:50Z closed 578.59 and 578.29 with lows 578.29 and 576.51, so the lows are now lower than the 580.64-581.7 range of the prior hour and within 0.15% of the 575.60 base low; no reclaim of 586.61 and a fading structure. Gate 3 fails; no entry. FIGR is fading (+7.8%) and fails the spread limit. All others under the 1.3 volume gate. No entry.
 - MR Tier B sweep (cap>=$5B, <=-3.5%, RSI<45): 23 names, now also AFRM (-3.6%), EGO (-3.9%, gold), SSRM (-3.7%, gold) and AUR. HL is at -4.2% and EGO and SSRM are gold miners with the Gate 1 cause (gold -2.6%, dollar strength and Fed-hike pricing). Gate 4 was already checked for HL (about -17% in six weeks, fails) and SSRM (about -21% in four weeks, fails). EGO: not checked for trend; the same weak gold complex makes a pass unlikely, but this is a judgment call, not a checked fact. I will run its daily trend and earnings check next cycle if it is still down at least 3.5%. AFRM: no dated sector cause identified. Others unchanged. No Tier B entry.
 - Tier B closes at 14:30 ET; Tier C (14:30-15:30) only applies if the day's minimum is unmet, and it is (0 trades). Per the standing rule, I will not loosen any gate to meet the minimum.
+- No order placed. Gates not loosened.
+
+### Cycle 1008 - ~14:17 ET (Thu Nov 12; hourly trigger scheduled 19:12Z, fired 19:14:50Z; 15m35s after the previous commit, so another gap of about 15 minutes between logged cycles. The :02 trigger at 19:03:08Z was skipped silently by dedupe, 3m36s after Cycle 1007, and not logged.)
+- Reconcile: cash/equity $400.54, buying power $400.54, no positions, no orders. Day: 0 trades.
+- Tape: SPY 759.09 (-0.09%), QQQ -0.14%, SMH -1.07%, IWM -1.26%, GLD -2.7%, GDX -3.3%. Drifting lower, SPY session low 753.67 intact; Stable, weak-leaning.
+- News (extended search; snippets disagree on index levels, so I rely only on direction): Yahoo's live headline now reads 'S&P 500, Nasdaq fall as Nvidia CEO exit, rising bond yields roil markets'; the 10-year is about 4.98-5.11% and gold is down about 3% (roughly $3,871-3,987/oz depending on the source). AMD is described as surging on the Nvidia exit and an upgrade. I could not find the result of the 1:00 PM ET 30-year auction. Nothing changes any gate.
+- Momentum sweep (RVOL>=1.0, >=+4%): AMD +5.2% RVOL 1.629, AVGO +5.65% RVOL 1.279, CLS +5.1% RVOL 1.036, HUBS +7.4% RVOL 1.084, INGM +4.9% RVOL 1.198, FIGR +8.0% RVOL 1.585, MBGL +15.9% RVOL 1.182. AMD (follow-up) at 581.92 is flat in its 577-584 range; I did not pull its 5-min bars this cycle, so I cannot confirm bar closes. I only know the price is 4.6 below the 586.61 reclaim level, so Gate 3 is not met at this moment. FIGR fails the spread limit. All others are under the 1.3 volume gate (AVGO at 1.279 is the closest). No entry.
+- MR Tier B sweep (cap>=$5B, <=-3.5%, RSI<45): 25 names. I ran the gold/silver miners properly, since they are the only names with a sourced macro cause (gold -2.7% to -3.3% on dollar strength and Fed-hike pricing; Gate 1 passes for all):
+  - EGO (-4.4%, RSI 44.9): Gate 2 FAILS. The latest report (Q3, Oct 28) was a miss, EPS $0.49 vs $0.56 estimated. Daily bars also show a rebound off the Oct 30 low (30.22) to 37.87 on Nov 9 and a pullback since, so the trend gate is arguable, but Gate 2 already fails.
+  - PAAS (-3.6%, 37.94): Gate 2 passes (Q3, Nov 4, EPS $0.69 vs $0.66, a beat). Gate 4 FAILS: 44.98 on Oct 1 to 37.94, about -16%, with lower highs (46.21, 45.78, 44.65, 41.98, 43.11, 42.86) over six weeks. The 37.33 low of Oct 30 is just under today's price, so the dislocation is also testing support, not stabilizing above it. No entry.
+  - AG (-4.0%, 14.18): Gate 2 passes (Q3, Nov 5, EPS $0.19 vs $0.17, a beat). Gate 4 FAILS: 17.66 on Oct 1 to 14.18, about -20%, lows 13.93 (Oct 30) and 14.01 (Nov 3) a few cents below today's price, lower highs. No entry.
+  - HL (-4.6%) and SSRM (-4.0%) already failed Gate 4 earlier today.
+  The whole precious-metals miner group is in a six-week downtrend, so none of them is a one-day dislocation. The other names (NVDA, SNDK, MSTR, TWST, RDDT, BABA, AFRM, CRCL, TXG, CYTK, KTOS, FIS, SMCI, OKLO, FPS, IREN, IBRX, AUR, STLA, NIO) were screened earlier with no dated sector/macro cause with neutral fundamentals; AFRM and CRCL got no new cause either. No Tier B entry.
+- Tier B closes at 14:30 ET. Tier C (14:30-15:30) is available because the day's minimum is unmet; it needs the same gates as MR plus the forced tag only if no organic setup exists. I am not loosening any gate to meet the minimum.
 - No order placed. Gates not loosened.
 
