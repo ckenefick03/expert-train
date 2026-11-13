@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-13 15:41 ET",
+  "as_of": "2026-11-13 15:50 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 13 15:41 ET: FLAT, cash/equity $399.19 ($5.00 above the $394.19 breaker). Entry window closed 15:30 ET. 1 trade today (MOD, -$1.34). Expect to finish flat.",
+  "status_note": "Nov 13 close: FLAT overnight, nothing held. Cash/equity $399.19 ($5.00 above the $394.19 breaker; 8.9% below the $437.99 peak). Day P&L -$1.35 (one trade: MOD momentum, -$1.34). Morning outage 09:30-~10:50 ET logged.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-13",
@@ -4133,6 +4133,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-13 15:41 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-13 15:50 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4343,10 +4347,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Stable: SPY 752.58 (-0.6%), SMH -3.3%, IWM -0.5%. Entry window closed; account flat.",
+    "read": "Close: SPY 752.99 (-0.5%), QQQ -1.3%, SMH -3.2%, IWM -0.4%. Semis/AI hardware sold off on Nvidia CEO exit and downgrades; broad tape stabilized after 11:35 ET. No overnight exposure.",
     "chips": [
-      "SPY -0.6%",
-      "Flat",
+      "SPY -0.5%",
+      "Flat overnight",
       "1 trade, -$1.34"
     ]
   }
@@ -12618,4 +12622,18 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Tape: SPY 752.58 (-0.6%), QQQ 678.55 (-1.4%), SMH 485.03 (-3.4%), IWM 277.09 (-0.5%).
 - Follow-ups at 15:39 ET: MOD 137.30 (+$0.10/sh vs my 137.40 exit, i.e. exit price ~ flat vs now); CLBT 11.675 (never broke 11.85; skipped candidate would have been about -0.7% from the 11.755 level at the 15:22 check).
 - Decision: no action. Close recap due ~15:47 ET.
+
+### Cycle 1051 (LAST CYCLE OF THE DAY) - 2026-11-13 15:50 ET (close-recap trigger fired 15:47 ET)
+- Stop checks: no open positions, so no stops to check. Reconcile: positions empty, no open orders; today's orders: MOD buy (filled 12:33 ET, $105, 0.754397 sh @ 139.184) and MOD sell (filled 14:18 ET, @ 137.4001). Cash/equity $399.19 (breaker level $394.19, $5.00 room; drawdown 8.86% from the $437.99 peak).
+- Tape at 15:47 ET: SPY 752.99 (-0.5%), QQQ 679.21 (-1.3%), SMH 485.87 (-3.2%), IWM 277.33 (-0.4%). Follow-ups: MOD 137.11 (still ~$0.29/sh below my exit; exit ~ breakeven vs the afternoon range); CLBT 11.54 (never broke 11.85; skipped, -1.8% from the 15:22 ET level).
+- No new entries (cutoff 15:30 ET passed).
+- OVERNIGHT: NOTHING ROLLS. The account is 100% cash ($399.19), no positions, so no thesis needs to be intact.
+
+#### Day recap - Friday 2026-11-13
+- Result: 1 trade (momentum, MOD long, organic, not forced). Entry 139.184 at 12:33 ET, exit 137.4001 at 14:18 ET (invalidation: 5-min close 137.84 below 138.07 while SPY/SMH rose), P&L -$1.34 (-0.66R). Day P&L vs start equity $400.54: -$1.35 (-0.34%). Minimum trades met (1); maximum not approached; daily loss limit ($60) and breaker not touched, but the breaker is $5.00 away.
+- What ran: market-open outage (RobinhoodMCP 502s) meant cycles 1019-1022 and the pre-open brief had no data and no trades (disclosed in those entries; account verified flat ~10:50 ET); then regular cycles through the close. Regime: falling/semis crash in the morning (Nvidia CEO exit, HSBC downgrade), SPY low 745.20 at 11:35 ET, stabilizing afterward, stable/rising from ~13:00 ET.
+- Skips: AI/hardware oversold names failed MR Gate 4 or were never verified (no per-name research in the Tier B afternoon cycles; disclosed); momentum names failed on relative volume <1.3, no catalyst, foreign ADRs, or uniform sector moves (fintech cluster NU/KLAR/WSE); CLBT came closest (Gates 1-2 weak pass, Gate 3 not triggered).
+- Missed/late/skipped: several triggers fired 5-98 minutes late; four cycle triggers were deduped as <6 min after a prior cycle (14:22, 14:42 ET and similar); MR scan not run after 14:30 ET (Tier C only when the day minimum is unmet). Hourly market-wrap news searches returned only older pages on three occasions; the Samsung-Modine takeover report (MOD thesis) was never independently confirmed.
+- Lessons: (1) the MOD thesis relied on one unconfirmed rumor and a thin base; the invalidation exit limited loss to -0.66R and price was still within ~$0.30 of the exit at the close, so the rule was reasonable but not clearly profitable; (2) the 30-min hold rule meant the position was not exited during its early dip; (3) the equity is only $5.00 above the 10% breaker, so tomorrow a full $105 position hitting its stop could cost ~$3-4, leaving a very thin margin; the user's open questions on size and the breaker margin (reduce the $105 size, marginal RVOL/spread passes, profit protection) remain unanswered.
+- Next session: Monday 2026-11-16 (market closed Saturday/Sunday).
 
