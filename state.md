@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-13 09:53 ET",
+  "as_of": "2026-11-13 10:07 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -12221,4 +12221,10 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - RobinhoodMCP is STILL unavailable (same 502 failure; ToolSearch found no portfolio/positions tools). No reconcile, quotes, scans or orders. Account state unverified since Nov 12 15:48 ET (last known flat, $400.54).
 - 09:53 ET, so entries are still closed until 10:00 ET. Nothing lost yet.
 - Next: retry on the next trigger; full reconcile first when tools return.
+
+### Pre-open brief - Fri 2026-11-13 (trigger scheduled 13:27Z = 08:27 ET, fired 15:05:59Z = 10:06 ET, ~98 minutes late)
+- NOT PERFORMED. RobinhoodMCP is still unavailable (502), so I had no quotes, scanner, earnings calendar or account data, and by the time this trigger fired the market had already been open for 36 minutes, so a pre-open brief no longer applies anyway. I am not writing candidate lists from memory: any names I listed would be guesses with no live data behind them.
+- No held-names stop check was possible. Account state is UNVERIFIED since Nov 12 15:48 ET (last known flat, $400.54). No orders were placed.
+- Context: this is the fourth consecutive trigger with no data (cycles 1019-1021 plus this one). Entries opened at 10:00 ET and I cannot take any while the connection is down, so the 1-trade/day minimum is at risk for Nov 13 because of the outage, not because of a gate decision.
+- Next: retry tools on the next trigger; full reconcile first when they return.
 
