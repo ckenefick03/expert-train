@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-13 12:36 ET",
+  "as_of": "2026-11-13 12:46 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 13 12:36 ET: OPEN POSITION MOD (momentum, organic), 0.754 sh @ 139.18, stop 136.50, target 144.60, EOD exit. Day minimum met (1 trade). Cash $295.54. Rumor-driven gap: a Samsung denial would gap it toward 106.",
+  "status_note": "Nov 13 12:46 ET: holding MOD 0.754 sh @ 139.18 (now 138.70, -$0.36), stop 136.50, target 144.60; stop is 1.6% away. Cash $295.54, equity $400.17. No new entries (no gate-passing candidates).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-13",
@@ -4065,6 +4065,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-13 12:36 ET",
       "equity": 400.58
+    },
+    {
+      "t": "2026-11-13 12:44 ET",
+      "equity": 400.17
     }
   ],
   "positions": [
@@ -4074,7 +4078,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "tier": "-",
       "qty": 0.754397,
       "entry": 139.18,
-      "price": 139.12,
+      "price": 138.7,
       "stop": 136.5,
       "target": 144.6
     }
@@ -4274,11 +4278,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Recovering: SPY 751.3 (-0.8%), no new low since 745.20 (16:35Z); SMH -4.0%. MR off; momentum gap name entered.",
+    "read": "Recovering: SPY 751.8 (-0.7%), no new low since 745.20; SMH -4.0%. MR off; momentum position open.",
     "chips": [
-      "SPY -0.8%",
-      "SMH -4.0%",
-      "MOD long",
+      "SPY -0.7%",
+      "MOD long -0.5%",
       "1 trade"
     ]
   }
@@ -12404,4 +12407,12 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Other momentum: CBRS +9.4% under its open (fail), KLAR +6.5% RVOL 1.14 (fail), NU +11% RVOL 1.0 (fail), BZ/WSE foreign (fail), CLBT RVOL 1.06 (fail).
 - MR: IREN only (fails Gates 2/4). 
 - Next: stop checks first on every cycle; exit proactively near 136.50; reassess at 13:03 ET.
+
+### Cycle 1034 - Fri 2026-11-13 12:46 ET (trigger :42, fired 17:42:46Z; dedupe passed, last commit 17:33Z)
+- STOP CHECK (first): MOD long 0.754397 sh, average $139.18 (order 6af749e4 filled 17:33:25Z, state filled). Quote 138.70 (bid 138.59 / ask 138.96): unrealized about -$0.36 (-0.35%). Stop 136.50 is $2.20 (1.6%) below: not near. Target 144.60. The 17:30Z bar ran to 139.78 and the 17:35Z bar closed 138.78; higher lows hold (138.03, 138.41, 138.78 closes above the 136.70 base). Thesis intact. 30-minute hold rule active until 13:03 ET (only the stop trading would force an exit).
+- Reconcile: cash $295.54, equity $400.17, buying power $295.54, one position; no other orders today.
+- Tape: SPY 751.76 (-0.7%), QQQ -1.6%, SMH -3.9%, IWM -0.6%. SPY's 17:35Z bar held 751.3-752.25; no new low since 745.20.
+- Momentum sweep: MOD (held), CBRS +10.1% RVOL 2.3 (107.66, still below its 108.33 open: fail), BZ (Kanzhun, foreign ADR: fail), KLAR (RVOL 1.15 <1.3), NU (+11%, RVOL 1.03), CLBT (RVOL 1.09), WSE (foreign): no second entry. MR scan: IREN only (Gates 2/4 fail).
+- Risk reminder: the one tail risk remains a Samsung denial gapping MOD toward 106.10 (not protected by the stop).
+- Decision: HOLD MOD; no new entry. Next: stop check at 13:03 ET onward; target 144.60; exit by about 15:50 ET.
 
