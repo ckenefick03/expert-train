@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-13 15:06 ET",
+  "as_of": "2026-11-13 15:19 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 13 15:06 ET: FLAT, cash/equity $399.19 ($5.00 above the $394.19 breaker). 1 trade today (MOD, -$1.34). No qualifying setup.",
+  "status_note": "Nov 13 15:19 ET: FLAT, cash/equity $399.19 ($5.00 above the $394.19 breaker). 1 trade today (MOD, -$1.34). Watching CLBT for a break of 11.85 before 15:30 ET; no entry yet.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-13",
@@ -4121,6 +4121,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-13 15:06 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-13 15:19 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4331,7 +4335,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Stable: SPY 753.19 (-0.5%), SMH -3.2%, IWM -0.4%. Momentum: no qualifying setup. Account flat.",
+    "read": "Stable/rising: SPY 753.55 (-0.5%), SMH -3.0%, IWM -0.4%. Momentum: CLBT is the only partial setup (not triggered). MR off (Tier C not needed). Account flat.",
     "chips": [
       "SPY -0.5%",
       "Flat",
@@ -12578,4 +12582,17 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum scan (8): MOD (not re-entering), CBRS +12.3% (no catalyst), VKTX +6.7% RVOL 1.40 and CLBT +7.2% RVOL 1.73 (no catalyst cited, base unverified; Gate 2/3 fail), KLAR/NU/WSE fintech cluster (no standout; foreign names), FLYW +4.4% RVOL 1.06 (<1.3 fail). No entry.
 - MR not run (Tier C only when the day minimum is unmet; it is met). No news search (no candidate would otherwise pass).
 - Decision: no entry; flat. Trades today: 1 (closed, -$1.34). Entry window closes 15:30 ET; close recap ~15:47 ET.
+
+### Cycle 1048 - 2026-11-13 15:19 ET (hourly trigger fired 15:13 ET, scheduled 15:12; last commit 15:07 ET, dedupe passed)
+- Reconcile: positions empty, no open orders, cash/equity $399.19 (breaker level $394.19, $5.00 room). Flat.
+- Tape: SPY 753.55 (-0.5%), QQQ 679.67 (-1.2%), SMH 486.81 (-3.0%), IWM 277.45 (-0.4%). Regime: Stable/rising.
+- Momentum scan (9): MOD (not re-entering), ELF +5.2% RVOL 1.03 (<1.3 fail), CBRS (no catalyst), VKTX +7.0% RVOL 1.43 (no catalyst cited), FLYW +4.4% RVOL 1.08 (<1.3 fail), KLAR/NU/WSE fintech cluster (no standout; foreign names), CLBT +7.7% RVOL 1.81 (examined below).
+- CLBT written gate check (the only candidate worth the lookup):
+  - Gate 1 (relative strength): +7.7% vs SPY -0.5% (>2 pts); price 11.72 above gap-day VWAP 11.62 and above prior close (~10.84); high 11.85 so it has given back ~0.13 of ~1.0 gain (<half), so NOT fading; RVOL 1.81; cap $2.7B; ADV ~1.9M sh (~$22M, barely over the $20M floor). Israel-domiciled ADR, but the move is earnings-related, not a home-session artifact. Peer complex not defined for CLBT beyond SPY (cyber/forensics peers not checked). PASS with caveats.
+  - Gate 2 (catalyst): get_earnings_results shows Q3 2026 reported 2026-11-12 am, EPS 0.17 vs 0.15 est (beat). That is the cited catalyst (report already happened, allowed as thesis). Caveat: it was reported yesterday, and I could not explain why today's open was only +1.7% followed by a +7% run in the first 25 minutes; a WebSearch (standard) returned only general Cellebrite pages and no same-day headline. WEAK PASS.
+  - Gate 3 (held pullback, entry on break/reclaim of pullback high): the base after the 9:55 ET high (11.85) has lows of 11.505 (12:35 ET) rising to 11.745 by 14:30 ET, but the latest bar (15:00 ET) dipped to 11.65 (a lower low vs 11.755) and price is 11.72, BELOW the 11.85 pullback high that the continuation entry requires. Not triggered. FAIL for now.
+  - Gate 4 (timing): inside 10:30-15:30 ET window, but only ~10 minutes of it remain, with an EOD exit by ~15:50 ET: a 2R target (~12.3) is unrealistic in that time. Even a trigger now would leave a stop (~11.60-11.65) / target mismatch inside a 30-minute hold window. Not met.
+  - Decision: NO ENTRY. If CLBT breaks 11.85 on volume before 15:30 ET, the next cycle will re-check; otherwise it is skipped. Follow-up due at recap.
+- MR not run (Tier C only when the day minimum is unmet; it is met). Hourly news search: WebSearch "Cellebrite stock news today" (see above); no general market-wrap search was run this hour (the last three were unusable); disclosed.
+- Decision: no entry; flat. Trades today: 1 (closed, -$1.34). Close recap ~15:47 ET.
 
