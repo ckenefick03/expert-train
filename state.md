@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-13 11:03 ET",
+  "as_of": "2026-11-13 11:12 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 13 11:03 ET: flat, all cash $400.54, 0 trades. Tape: SMH -4.7%, SPY -0.85% but stabilizing (no new low since 10:20 ET), so mean reversion is ON again; the only Tier A fit (INTC) fails Gates 2 and 4 (Oct 30 guidance-cut gap, -55% from 127 in 7 weeks). MOD takeover-rumor gap still below VWAP.",
+  "status_note": "Nov 13 11:12 ET: flat, all cash $400.54, 0 trades. Tape heavy in semis (SMH -5.0%); SPY holding above its 747.89 low but the last two 5-min lows slipped (749.78, 749.24). INTC/IREN fail MR Gates 2/4, CAI fails Gate 1 (company-specific vs XBI -1.6%); MOD still below VWAP.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-13",
@@ -4029,6 +4029,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-13 10:58 ET",
       "equity": 400.54
+    },
+    {
+      "t": "2026-11-13 11:08 ET",
+      "equity": 400.54
     }
   ],
   "positions": [],
@@ -4227,10 +4231,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Stabilizing: SPY has made no new low since the 15:20Z bar (747.89); the last four 5-min lows rose (749.27, 749.55, 749.86, 750.11). SMH -4.7%, QQQ -1.9%, AMD -9.2%. Mean reversion ON (all four gates apply); momentum not eligible without a non-fading catalyst.",
+    "read": "Stabilizing but wobbling: no new session low (747.89) since 15:20Z, but the last two 5-min lows (749.78, 749.24) are lower than the one before (750.11). SMH -5.0%, QQQ -2.0%, AMD -9.7%. MR technically ON; no gate-passing name.",
     "chips": [
-      "SPY -0.85%",
-      "SMH -4.7%",
+      "SPY -0.9%",
+      "SMH -5.0%",
       "MR on",
       "0 trades"
     ]
@@ -12262,4 +12266,12 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
   - Tier A names with RSI 35-45 (SNDK, MRVL, NBIS, LITE, etc.) do not meet the RSI<35 Tier A rule; Tier B (11:30+) and C apply to them later with all gates. Not individually gate-checked this cycle.
 - News: hourly extended search already run in Cycle 1023; Intel-specific search this cycle found no same-day Intel news (articles mostly describe Nov 12 or the Oct 30 guidance event).
 - Decision: NO TRADE. Gates not loosened. 1-trade/day minimum still unmet; Tier B opens 11:30 ET.
+
+### Cycle 1025 - Fri 2026-11-13 11:12 ET (trigger :42, scheduled 15:42Z, fired 16:08:32Z = ~27 minutes late; dedupe passed, last commit 15:59Z)
+- Reconcile: cash/equity $400.54, no positions. Tape: SPY 750.53 (-0.87%), QQQ -2.0%, SMH -5.0%, IWM -0.9%, AMD 528.25 (-9.7%).
+- Regime: Stabilizing but weakening. SPY's session low is still 747.89 (15:20Z), not broken, but the last two 5-min lows (15:55Z 749.78, 16:00Z 749.24) are lower than the 15:50Z low (750.11), so the 'higher lows' streak ended. I keep MR formally ON (no new session low), with that caveat.
+- Momentum sweep: MOD +25.3% RVOL 2.30 (price 132.91, 16:00Z bar closed 132.43, lower highs and lower lows since 15:40Z, below VWAP ~138.8: Gate 1 fail); CBRS +6.4% faded under its open (fail); WSE foreign listing (fail). No entry.
+- Mean reversion Tier A scan (<=-5%, RSI<35): INTC -5.9% RSI 33.4, IREN -9.0% RSI 34.6 (both fail Gates 2 and 4 as logged in Cycle 1024), and new CAI (Caris Life Sciences) -5.2% RSI 32.8. CAI: XBI is only -1.6% and IBB -1.0%, so the sector-ETF <= -2% Tier A condition fails and a -5.2% drop vs -1.6% sector is company-specific (Gate 1 fail); volume only 0.8M vs 4.1M average; last earnings Nov 4 was an EPS beat (0.05 vs 0.02) but with no sector cause, that is moot. No entry.
+- Not checked: oversold names with RSI 35-45 (SNDK, MRVL, NBIS, LITE and others); they are Tier B candidates from 11:30 ET and need all four gates.
+- Decision: NO TRADE. Gates not loosened; 1-trade/day minimum still unmet.
 
