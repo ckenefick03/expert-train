@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-13 11:27 ET",
+  "as_of": "2026-11-13 11:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 13 11:27 ET: flat, all cash $400.54, 0 trades. SPY chopping 748.8-751 above its 747.89 low; SMH -4.9%. Same non-passing names: INTC/IREN/CAI (MR gates), MOD below VWAP, BZ/WSE foreign. Tier B opens 11:30.",
+  "status_note": "Nov 13 11:43 ET: flat, all cash $400.54, 0 trades. Tier B open: the 46 oversold names are almost all AI-hardware names in a 5-week crash (MRVL -45%, DELL -42%, AMAT -29%, LRCX -29% from Oct highs), so Gate 4 (not a multi-week downtrend) fails across the group. MOD takeover-rumor gap still below VWAP.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-13",
@@ -4037,6 +4037,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-13 11:25 ET",
       "equity": 400.54
+    },
+    {
+      "t": "2026-11-13 11:36 ET",
+      "equity": 400.54
     }
   ],
   "positions": [],
@@ -4235,11 +4239,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Choppy-stabilizing: SPY has not made a new session low since 15:20Z (747.89) but its 5-min lows are flat-to-lower (749.24, 748.81, 749.52, 748.93), not rising. SMH -4.9%, QQQ -2.1%. MR formally ON; no name passes all four gates.",
+    "read": "Stabilizing-ish: SPY 751.05 (-0.8%) made no new session low since 10:20 ET (747.89), 5-min lows 748.4-749.5 flat. SMH -4.3% off its low, QQQ -1.8%. MR formally ON but the oversold set is a multi-week AI-hardware downtrend.",
     "chips": [
-      "SPY -1.0%",
-      "SMH -4.9%",
-      "MR on",
+      "SPY -0.8%",
+      "SMH -4.3%",
+      "Tier B",
       "0 trades"
     ]
   }
@@ -12285,4 +12289,17 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Momentum sweep: MOD +27.9% RVOL 2.44 (135.71, bounced from 132.43 but still under the ~138 VWAP and the 137.99 bounce high: Gate 1 fail); CBRS +7.2% (still under its open); WSE and BZ (Kanzhun) are foreign listings (fail). No entry.
 - MR Tier A scan (<=-5%, RSI<35): INTC -5.4% (fails Gates 2/4: guidance-cut gap, seven-week downtrend), IREN -8.7% (Gates 2/4), CAI -5.3% (company-specific vs XBI -1.6%, Gate 1). No entry.
 - Decision: NO TRADE. Gates not loosened; Tier A ends 11:30 ET, Tier B (>=3.5% intraday, stabilization visible) opens next cycle. The 1-trade/day minimum is still unmet.
+
+### Cycle 1027 - Fri 2026-11-13 11:43 ET (hourly trigger, scheduled 16:12Z, fired 16:33:41Z = ~22 minutes late; dedupe passed, last commit 16:25Z)
+- Reconcile: cash/equity $400.54, no positions. Tape: SPY 751.05 (-0.8%), QQQ -1.8%, SMH -4.3%, IWM -0.6%, XBI -1.0%, GLD +0.3%, GDX +0.3%. Regime: stabilizing-ish (no new SPY low since 15:20Z 747.89; recent 5-min lows 748.4-749.5 flat, last bars up to 750.9). MR formally ON; Tier B window (11:30-14:30) now open.
+- Momentum sweep: MOD +28.7% RVOL 2.51 (136.60, still under the ~138 VWAP; fail), CBRS +7.7% (faded under its open; fail), WSE (foreign; fail). No entry.
+- Mean reversion Tier B scan (<=-3.5%, RSI<45, cap>=5B): 46 names, nearly all AI-hardware/semis (SNDK, MU, LITE, STX, AMAT, DELL, WDC, MRVL, ARM, CRDO, NBIS, GLW, CLS, TER, LRCX, ...), plus MSTR/HOOD/crypto, IREN/APLD, INTC, CAI.
+  - Cause (Gate 1) for the semis group is a dated sector event: the Nvidia CEO exit (Nov 12), HSBC downgrade, sector valuation/profit-taking. That is external and sector-wide. But...
+  - Gate 4 FAILS for the group. Checked daily bars (Oct 12 to Nov 12): MRVL 266 to 153 (-42%, four lower weekly highs); DELL 577 to 335 (-42%); AMAT 498 to 356 (-29%); LRCX 310 to 222 (-28%); INTC from 127. All are five-week collapses with lower highs, i.e. multi-week downtrends, not one-day dislocations.
+  - Earnings: AMAT reported Nov 12 (EPS beat 4.16 vs 4.06 but the stock still fell; guidance not checked), MRVL next Dec 1 and DELL Nov 24 (outside 2 days), LRCX reported Oct 21 (beat). Not decisive given Gate 4.
+  - 5-min picture for MRVL, DELL, AMAT, LRCX: all chopping in flat ranges (MRVL 149-153, DELL 331-343, AMAT 353-362, LRCX 219-225); no clean higher-low base, so no 'visible stabilization' either.
+  - Other names (SNDK, MU, LITE, STX, WDC, CLS, ARM, CRDO, NBIS, ALAB, TER, etc.) are the same AI-hardware complex and I did not individually gate-check them: they share the same multi-week decline, and I did not pull daily bars for each, so this is a judgment on the group, not 46 written checks.
+  - INTC, IREN, CAI, MSTR: as logged earlier (INTC/IREN Gates 2 and 4; CAI Gate 1; MSTR crypto-linked, no sector cause cited).
+- News (standard search, hourly): no same-day Nov 13 report found, only older context; nothing changes a gate.
+- Decision: NO TRADE. Gates not loosened. The 1-trade/day minimum is unmet; Tier C 'forced' tag is not available until 14:30 ET and would still need all gates.
 
