@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-13 12:28 ET",
+  "as_of": "2026-11-13 12:36 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,12 +41,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 13 12:28 ET: flat, all cash $400.54, 0 trades. MOD (Samsung takeover-talks gap) is holding a tight 136.7-138.8 range right on its VWAP (137.95); order was reviewed but NOT placed because the live price (137.84) was below VWAP. SPY 750-751, recovering.",
+  "status_note": "Nov 13 12:36 ET: OPEN POSITION MOD (momentum, organic), 0.754 sh @ 139.18, stop 136.50, target 144.60, EOD exit. Day minimum met (1 trade). Cash $295.54. Rumor-driven gap: a Samsung denial would gap it toward 106.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-13",
     "start_equity": 400.54,
-    "trades": 0,
+    "trades": 1,
     "forced": 0
   },
   "equity_history": [
@@ -4061,9 +4061,24 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-13 12:25 ET",
       "equity": 400.54
+    },
+    {
+      "t": "2026-11-13 12:36 ET",
+      "equity": 400.58
     }
   ],
-  "positions": [],
+  "positions": [
+    {
+      "symbol": "MOD",
+      "strategy": "momentum",
+      "tier": "-",
+      "qty": 0.754397,
+      "entry": 139.18,
+      "price": 139.12,
+      "stop": 136.5,
+      "target": 144.6
+    }
+  ],
   "trades": [
     {
       "symbol": "TER",
@@ -4259,12 +4274,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Recovering: SPY 750.65 (-0.9%), 17:05Z bar high 752.17; no new low since 745.20 at 16:35Z, last 5-min lows 749.45, 750.02, 750.80, 750.32 (rising, then flat). SMH -4.3%, QQQ -1.8%. Treating as Stabilizing-forming; MR still not gate-checked (all oversold names fail Gate 4 anyway).",
+    "read": "Recovering: SPY 751.3 (-0.8%), no new low since 745.20 (16:35Z); SMH -4.0%. MR off; momentum gap name entered.",
     "chips": [
-      "SPY -0.9%",
-      "SMH -4.3%",
-      "MOD watch",
-      "0 trades"
+      "SPY -0.8%",
+      "SMH -4.0%",
+      "MOD long",
+      "1 trade"
     ]
   }
 }
@@ -12371,4 +12386,22 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Other momentum: CBRS +8.2% (faded under its open), KLAR +6.4% RVOL 1.12, CLBT +6.3% RVOL 1.03 (under 1.3), WSE foreign: no entry.
 - MR Tier A scan: IREN only (fails Gates 2/4). Oversold group still fails Gate 4.
 - Decision: NO TRADE. Gates not loosened. One more honesty note: this is the second near-miss on MOD in two cycles; both turned on a 0.1-0.4 pt margin around VWAP and the 0.3% spread cap, and I am treating those thresholds as hard.
+
+### Cycle 1033 - Fri 2026-11-13 12:36 ET (trigger :32, fired 17:32:38Z; dedupe passed, last commit 17:23Z)
+**TRADE: BUY MOD (Modine), momentum, tag ORGANIC.** Order 6af749e4-c8e1-413e-af61-b937867489c4, $105.00 market, filled 0.754397 sh at average $139.18 (~12:33 ET). Account: cash $295.54, equity $400.58. Standing authorization (framework §0) applied; the order tool's confirmation text was ignored per §0 and this is logged.
+
+Gate check, written (momentum.md), live data at 12:33 ET:
+1. Relative strength / not fading: MOD +31% on the day (139.2 vs 106.10 prior close) vs SPY -0.8% and SMH -4.0%, so >2 pts above peers and SPY. 5-min VWAP 137.95: price 139.1-139.3 is above it (and above the prior close); gain given back from the 146.50 high is about 17% (<50%). RVOL 2.86 (>=1.3). Spread at order time 138.98/139.34 (about 0.26% <= 0.3%). Avg volume 2.0M and $270M/day dollar volume, cap $5.6B, not a foreign ADR, earnings reported Nov 3 (outside the window). PASS.
+2. Catalyst: Bloomberg report (Nov 12) that Samsung is in talks to acquire Modine, carried by Digitimes and others; news counts under momentum.md. No company confirmation, no offer price. PASS by the letter, with the risk noted below.
+3. Held pullback with higher low and rising support: 5-min lows 134.91, 136.31, 136.70, then 137.69 and 138.03 (rising), price above a rising EMA(9), and a break above the 138.83 pullback high live at 139.1-139.3 (entry on the continuation). PASS.
+4. Timing: 12:33 ET, inside 10:30-15:30. PASS.
+- Regime: Falling label from the 745.20 SPY low at 11:35 ET but recovering with no new low; momentum allowed for a fresh non-fading catalyst gap. MR off.
+- JUDGMENT CALL I am disclosing: my Cycle 1031 note said I would wait for a completed 5-min close above 138.83. At 12:33 ET the live price was already above it and every written gate passed, but the 17:30Z bar had not completed; I entered on the live break. I also searched for a Samsung denial or confirmation and found none. Samsung has denied takeover reports before in other deals (search results), which is a real risk here.
+- Thesis: AI-cooling takeover-talks gap holding above VWAP with higher lows and a fresh break of the pullback high.
+- Stop: 136.50 (below the 136.70 base higher low), 1.9% below entry; 1R = about $2.02 on 0.754 sh. Target: 144.60 (about 2R; the day high 146.50 sits above it for headroom). Horizon: end of day (exit by about 15:50 ET) unless the logged thesis is explicitly still intact and no overnight catalyst is expected; with rumor headline risk an overnight hold is NOT planned.
+- 30-minute hold rule: no exit on invalidation until 13:03 ET; only the stop actually trading applies. Daily loss limit ($60) and breaker still override.
+- Risk disclosures: (a) a denial or collapse of talks would likely gap MOD toward the 106.10 prior close, a loss of about $25 on this position, which would be through the stop and could push equity below the 10% breaker level ($394.19); (b) this is the maximum-size entry the standing rules allow, and I did not reduce it.
+- Other momentum: CBRS +9.4% under its open (fail), KLAR +6.5% RVOL 1.14 (fail), NU +11% RVOL 1.0 (fail), BZ/WSE foreign (fail), CLBT RVOL 1.06 (fail).
+- MR: IREN only (fails Gates 2/4). 
+- Next: stop checks first on every cycle; exit proactively near 136.50; reassess at 13:03 ET.
 
