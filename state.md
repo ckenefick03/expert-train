@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-13 13:08 ET",
+  "as_of": "2026-11-13 13:14 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 13 13:08 ET: holding MOD 0.754 sh @ 139.18 (now 138.77, -$0.31), stop 136.50, target 144.60. 30-min hold rule has ended. Cash $295.54, equity $400.23. No new entries.",
+  "status_note": "Nov 13 13:14 ET: holding MOD 0.754 sh @ 139.18 (now 139.82, +$0.48), stop 136.50, target 144.60. Cash $295.54, equity $401.02. No new entries; scans found no qualifying second setup.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-13",
@@ -4077,6 +4077,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-13 13:05 ET",
       "equity": 400.23
+    },
+    {
+      "t": "2026-11-13 13:14 ET",
+      "equity": 401.02
     }
   ],
   "positions": [
@@ -4086,7 +4090,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "tier": "-",
       "qty": 0.754397,
       "entry": 139.18,
-      "price": 138.77,
+      "price": 139.82,
       "stop": 136.5,
       "target": 144.6
     }
@@ -4286,10 +4290,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Stable-ish: SPY 750.9 (-0.8%), range 750.5-752.4 for an hour, no new low since 745.20; SMH -4.3%. MR off; one momentum position.",
+    "read": "Stable-ish: SPY 750.98 (-0.8%), 750.5-752.4 range ~1.5h, no new low since 745.20 (11:35 ET); SMH -4.3% still weak. MR off (no candidate passes gates); one momentum position.",
     "chips": [
       "SPY -0.8%",
-      "MOD long -0.3%",
+      "MOD long +0.3%",
       "1 trade"
     ]
   }
@@ -12438,4 +12442,12 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Tape: SPY 750.89 (-0.8%), QQQ -1.8%, SMH -4.3%, IWM -0.8%; SPY has ranged 750.5-752.4 for an hour.
 - Momentum sweep: MOD (held), CBRS +11.2% (108.72; no verified catalyst, Gate 2 fail), KLAR/NU/CLBT (RVOL under 1.3), BZ and WSE (foreign): no entry. MR scan: IREN only (Gates 2/4 fail).
 - Decision: HOLD MOD; no new entry.
+
+### Cycle 1037 - 2026-11-13 13:14 ET (hourly trigger fired 13:12 ET)
+- Stop check (MOD, first): last 139.82 (bid 139.64/ask 139.98), 3.32 above stop 136.50; last 5-min bar (13:05) closed 140.16, higher lows through the 13:00 bar (138.32 low then 139.23 base). No invalidation. Position unchanged: 0.754397 sh @ 139.18, +$0.48. No open orders checked changed (reconciled positions/portfolio only: cash $295.54, equity $401.02).
+- Tape: SPY 750.98 (-0.8%), QQQ 675.83 (-1.8%), SMH 480.23 (-4.3%), IWM 276.38 (-0.7%). SPY 5-min bars 750.75-752.39, no new session low. Regime: Stable-ish / ranging; semis still weak.
+- Momentum scan (cap>=2B, ADV>=1M, >=+4%, RVOL>=1.0): 7 names. MOD (held; RVOL 3.1, +31.8%), CBRS +10.6% (no catalyst identified earlier; skipped), KLAR +6.5% RVOL 1.19 (<1.3 fail), NU +10.9% RVOL 1.11 (<1.3 fail), BZ and WSE foreign (fail), CLBT +6.2% RVOL 1.20 (<1.3 fail). No second entry.
+- MR scan (cap>=5B, <=-5%, RSI<35): IREN only (-8.8%, RSI 34.6): company-specific/AI-hardware downtrend, fails Gates 2/4 as logged previously. No entry.
+- News: WebSearch for same-day market wrap returned only older (2025) articles; no usable Nov 13, 2026 midday coverage. Disclosed: no fresh headline check on Samsung/Modine denial this cycle (risk stays open).
+- Decision: HOLD MOD; no new entry. Trades today: 1. Plan: exit by ~15:50 ET unless an explicit hold decision is logged.
 
