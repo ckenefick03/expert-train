@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-13 11:12 ET",
+  "as_of": "2026-11-13 11:27 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 13 11:12 ET: flat, all cash $400.54, 0 trades. Tape heavy in semis (SMH -5.0%); SPY holding above its 747.89 low but the last two 5-min lows slipped (749.78, 749.24). INTC/IREN fail MR Gates 2/4, CAI fails Gate 1 (company-specific vs XBI -1.6%); MOD still below VWAP.",
+  "status_note": "Nov 13 11:27 ET: flat, all cash $400.54, 0 trades. SPY chopping 748.8-751 above its 747.89 low; SMH -4.9%. Same non-passing names: INTC/IREN/CAI (MR gates), MOD below VWAP, BZ/WSE foreign. Tier B opens 11:30.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-13",
@@ -4033,6 +4033,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-13 11:08 ET",
       "equity": 400.54
+    },
+    {
+      "t": "2026-11-13 11:25 ET",
+      "equity": 400.54
     }
   ],
   "positions": [],
@@ -4231,10 +4235,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Stabilizing but wobbling: no new session low (747.89) since 15:20Z, but the last two 5-min lows (749.78, 749.24) are lower than the one before (750.11). SMH -5.0%, QQQ -2.0%, AMD -9.7%. MR technically ON; no gate-passing name.",
+    "read": "Choppy-stabilizing: SPY has not made a new session low since 15:20Z (747.89) but its 5-min lows are flat-to-lower (749.24, 748.81, 749.52, 748.93), not rising. SMH -4.9%, QQQ -2.1%. MR formally ON; no name passes all four gates.",
     "chips": [
-      "SPY -0.9%",
-      "SMH -5.0%",
+      "SPY -1.0%",
+      "SMH -4.9%",
       "MR on",
       "0 trades"
     ]
@@ -12274,4 +12278,11 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Mean reversion Tier A scan (<=-5%, RSI<35): INTC -5.9% RSI 33.4, IREN -9.0% RSI 34.6 (both fail Gates 2 and 4 as logged in Cycle 1024), and new CAI (Caris Life Sciences) -5.2% RSI 32.8. CAI: XBI is only -1.6% and IBB -1.0%, so the sector-ETF <= -2% Tier A condition fails and a -5.2% drop vs -1.6% sector is company-specific (Gate 1 fail); volume only 0.8M vs 4.1M average; last earnings Nov 4 was an EPS beat (0.05 vs 0.02) but with no sector cause, that is moot. No entry.
 - Not checked: oversold names with RSI 35-45 (SNDK, MRVL, NBIS, LITE and others); they are Tier B candidates from 11:30 ET and need all four gates.
 - Decision: NO TRADE. Gates not loosened; 1-trade/day minimum still unmet.
+
+### Cycle 1026 - Fri 2026-11-13 11:27 ET (trigger :02, scheduled 16:02Z, fired 16:24:33Z = ~22 minutes late; dedupe passed, last commit 16:09Z; the :52/:32 triggers before it were skipped by dedupe)
+- Reconcile: cash/equity $400.54, no positions. Tape: SPY 749.58 (-1.0%), QQQ -2.1%, SMH -4.9%, IWM -0.9%, AMD 525.84 (-10.2%).
+- Regime: choppy. SPY made no new session low (747.89 stands), but the 5-min lows since 15:55Z (749.78, 749.24, 748.81, 749.52, 748.93) are flat to lower, not rising. I do not call that clean Stabilizing; I treat MR as formally ON only because no new low, and nothing passes anyway.
+- Momentum sweep: MOD +27.9% RVOL 2.44 (135.71, bounced from 132.43 but still under the ~138 VWAP and the 137.99 bounce high: Gate 1 fail); CBRS +7.2% (still under its open); WSE and BZ (Kanzhun) are foreign listings (fail). No entry.
+- MR Tier A scan (<=-5%, RSI<35): INTC -5.4% (fails Gates 2/4: guidance-cut gap, seven-week downtrend), IREN -8.7% (Gates 2/4), CAI -5.3% (company-specific vs XBI -1.6%, Gate 1). No entry.
+- Decision: NO TRADE. Gates not loosened; Tier A ends 11:30 ET, Tier B (>=3.5% intraday, stabilization visible) opens next cycle. The 1-trade/day minimum is still unmet.
 
