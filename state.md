@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-13 10:13 ET",
+  "as_of": "2026-11-13 10:55 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -40,11 +40,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "min_trades": 1,
     "max_trades": 10
   },
-  "status": "amber",
-  "status_note": "Nov 13 09:35 ET: Robinhood connection FAILED this cycle, so live account state is UNVERIFIED. Last verified (Nov 12 15:48 ET): flat, all cash $400.54, no orders. Before 10:00 ET entries are closed anyway. Not trading until the connection is back.",
+  "status": "green",
+  "status_note": "Nov 13 10:55 ET: Robinhood connection is BACK after missing cycles 09:33-10:13 ET. Reconciled live: flat, all cash $400.54, no orders since Nov 12. Falling tape (SMH -4.8%, QQQ -1.9%, SPY -0.8% at lows); MR off, momentum only for fresh non-fading catalyst gaps; MOD (Samsung takeover report) fails Gate 1 (below VWAP). No trade.",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-11-12",
+    "date": "2026-11-13",
     "start_equity": 400.54,
     "trades": 0,
     "forced": 0
@@ -4021,6 +4021,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-12 15:48 ET",
       "equity": 400.54
+    },
+    {
+      "t": "2026-11-13 10:51 ET",
+      "equity": 400.54
     }
   ],
   "positions": [],
@@ -4219,11 +4223,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Choppy and soft into the close: SPY -0.25%, QQQ -0.35%, SMH -1.25%, IWM -1.4%. Not Falling by the new-session-low test; broad AI/semis/crypto selloff with no cited external cause.",
+    "read": "Falling into a late bounce: SPY made new session lows through 15:25Z (747.89) vs prior-day low 753.67, then five bars of no new low but not three clean higher lows (749.64, 749.27, 749.55, 749.86). SMH -4.8%, AMD -9%, QQQ -1.9%. Mean reversion OFF; momentum only for fresh non-fading catalyst gaps.",
     "chips": [
-      "SPY -0.25%",
-      "SMH -1.25%",
-      "flat overnight",
+      "SPY -0.8%",
+      "SMH -4.8%",
+      "MR off",
       "0 trades"
     ]
   }
@@ -12232,4 +12236,15 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - RobinhoodMCP STILL unavailable (same 502; ToolSearch finds no portfolio/quotes/scanner tools). No reconcile, tape, scans or orders. Account state UNVERIFIED since Nov 12 15:48 ET (last known flat, $400.54).
 - Entries have been open since 10:00 ET; none possible without tools. Skipped by dedupe in the meantime: the :42 and :52 triggers (both fired 15:08-15:09Z from a backlog, one run was ~80 minutes behind schedule).
 - The 1-trade/day minimum for Nov 13 is at risk because of the outage, not a gate decision. No trade is being forced from memory or without data.
+
+### Cycle 1023 - Fri 2026-11-13 10:55 ET (hourly trigger, scheduled 15:12Z, fired 15:49:53Z = ~38 minutes late; dedupe passed, last commit 15:12Z)
+- RobinhoodMCP IS BACK. Missed this session: cycles 09:33-10:13 ET (1019-1022 logged as outage; the 15:06Z pre-open brief and two :42/:52 triggers skipped by dedupe). No entries were possible for the first 53 minutes of the entry window because of the outage, not a gate decision.
+- Reconcile (live): cash/equity $400.54, buying power $400.54, no positions, no equity orders since 20:00Z Nov 12. Account was flat throughout the outage; the earlier 'unverified' status is now closed.
+- Tape (10:50 ET): SPY 750.79 (-0.83%), QQQ -1.94%, SMH -4.80%, IWM -0.82%, AMD 531.54 (-9.2%), GLD +0.2%, GDX +0.2%. Regime = FALLING: SPY made new session lows through the 15:25Z bar (747.89, below Nov 12's 753.67), then five bars without a new low but with lows 749.64, 749.27, 749.55, 749.86, which is not yet 3 clean higher lows. Mean reversion OFF per §4.1; momentum only for a fresh, non-fading catalyst gap.
+- News (extended search, hourly): semis selloff is attributed to the Nvidia CEO exit plus an HSBC downgrade, sector valuation/profit-taking and rotation, Micron memory-pricing worries, and mixed readings of inflation/Fed. Reports conflict; there is no single dated external cause I can cite.
+- Momentum sweep (cap>=$2B, vol>=1M, +4%, RVOL>=1.0): only 3 names.
+  - MOD (Modine) +28% RVOL 2.12: catalyst is a Bloomberg report that Samsung is in talks to buy it, no offer price, both companies declined comment (unconfirmed takeover rumor). Gapped to a 146.50 high, now 135.87 (bid/ask 135.47/135.88, spread 0.3%), given back about 26% of the gain. Price is BELOW the 5-min VWAP (138.83), so it is not holding above gap-day VWAP: Gate 1 'not fading' fails. Also a binary rumor with no offer price (Gate 2 weak). EMA(9) 134.94, price slightly above it, but one failed gate is enough. No entry.
+  - CBRS +6% RVOL 1.71: gapped to 120.44, now 103.6 and under its 108.33 open; fading. WSE (Wise Group PLC) +8%: foreign ADR-type listing, fails Gate 1. No entry.
+- Mean reversion: scan returned 54 names (semis/AI/crypto crash). MR is OFF in this regime, so no gate check was done on them. For the record, closest in oversold terms were NVDA (-3.6%, RSI 26, company-specific), INTC (-5.7%, RSI 33.4), MSTR (-3.5%, RSI 33.9), CAI (-4.7%, RSI 32.8); none has a clean external cause and the regime blocks them anyway.
+- Decision: NO TRADE. Gates not loosened; the 1-trade/day minimum is at risk (no organic setup yet; Tier C 'forced' window opens 14:30 ET, still with every gate intact).
 
