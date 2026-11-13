@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-13 09:46 ET",
+  "as_of": "2026-11-13 09:53 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -12216,4 +12216,9 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - It is 09:46 ET so entries are closed until 10:00 ET regardless. Nothing is lost yet; if the outage persists, entries after 10:00 ET cannot happen and the 1-trade minimum goes unmet because of the outage, not a gate decision.
 - Late triggers: this run was ~43 minutes behind its schedule, so the trigger queue is lagging as well.
 - Next: retry tools on the next trigger and reconcile fully first.
+
+### Cycle 1021 - Fri 2026-11-13 09:53 ET (trigger :22, scheduled 14:22Z, fired 14:52:06Z = ~30 minutes late; dedupe passed, last commit 14:45Z)
+- RobinhoodMCP is STILL unavailable (same 502 failure; ToolSearch found no portfolio/positions tools). No reconcile, quotes, scans or orders. Account state unverified since Nov 12 15:48 ET (last known flat, $400.54).
+- 09:53 ET, so entries are still closed until 10:00 ET. Nothing lost yet.
+- Next: retry on the next trigger; full reconcile first when tools return.
 
