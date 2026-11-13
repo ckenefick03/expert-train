@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-13 13:35 ET",
+  "as_of": "2026-11-13 13:44 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 13 13:35 ET: holding MOD 0.754 sh @ 139.18 (now 138.78, -$0.30), stop 136.50, target 144.60. Cash $295.54, equity $400.24. No new entries.",
+  "status_note": "Nov 13 13:44 ET: holding MOD 0.754 sh @ 139.18 (now 138.97, -$0.16), stop 136.50, target 144.60. Cash $295.54, equity $400.38. Exit trigger: 5-min close below 138.32 base low. No new entries.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-13",
@@ -4089,6 +4089,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-13 13:35 ET",
       "equity": 400.24
+    },
+    {
+      "t": "2026-11-13 13:44 ET",
+      "equity": 400.38
     }
   ],
   "positions": [
@@ -4098,7 +4102,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "tier": "-",
       "qty": 0.754397,
       "entry": 139.18,
-      "price": 138.78,
+      "price": 138.97,
       "stop": 136.5,
       "target": 144.6
     }
@@ -4298,10 +4302,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Stable-ish: SPY 752.10 (-0.7%), 750.5-752.5 range ~2h, no new low since 745.20; SMH -3.8%, drifting up. MR candidates unverified; one momentum position.",
+    "read": "Stable/rising-ish: SPY 752.71 (-0.6%), making higher highs in the range; SMH -3.5% recovering. MR candidates (AI complex) unverified; one momentum position drifting sideways.",
     "chips": [
-      "SPY -0.7%",
-      "MOD long -0.2%",
+      "SPY -0.6%",
+      "MOD long -0.1%",
       "1 trade"
     ]
   }
@@ -12475,5 +12479,13 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Tape: SPY 752.10 (-0.7%), QQQ 677.55 (-1.5%), SMH 482.87 (-3.8%), IWM 276.75 (-0.6%). SPY last bar 752.31, no new low. Regime: Stable-ish.
 - Momentum scan (7): MOD (held), CBRS (no catalyst, skip), VKTX RVOL 1.11, KLAR 1.23, NU 1.20, CLBT 1.28 (all <1.3 fail; CLBT is marginal, also no cited catalyst), WSE foreign (fail). No entry.
 - MR scan: not re-run this cycle (the 13:24 ET sweep 9 minutes ago listed 36 names with no verified gate pass; disclosed as a skipped scan to save rate-limit budget). No MR entry.
+- Decision: HOLD MOD; no new entry. Trades today: 1.
+
+### Cycle 1040 - 2026-11-13 13:44 ET (10-min trigger fired 13:42 ET; last commit 13:33 ET, dedupe passed)
+- Reconcile: MOD 0.754397 sh @ 139.18, no open orders, cash $295.54, equity $400.38 (breaker level $394.19, $6.19 room).
+- Stop check (MOD, first): last 138.97 (bid 138.45/ask 139.21, wide on thin volume), $2.47 above stop 136.50. 5-min bars: 13:30 low 138.40, 13:35 closed 138.39 (low 138.37). Lows are no longer rising since the 13:15 bar (139.40 -> 138.56 -> 138.94 -> 138.40 -> 138.37) and price sits ~$0.05 above the 138.32 base low. Judgment: the rising-support condition is eroding but no close below the base low has occurred, so no invalidation yet; relative strength vs SMH (-3.5%) is intact (+31% day). HOLD with an explicit exit trigger: a completed 5-min close below 138.32 = invalidation, exit; price within ~$0.50 of 136.50 = exit.
+- Tape: SPY 752.71 (-0.6%, higher highs in range), QQQ 678.25 (-1.4%), SMH 483.98 (-3.5%), IWM 276.99 (-0.5%). Regime: Stable-ish, mildly improving.
+- Momentum scan (8): MOD (held), CBRS (no catalyst, skip), CGON +8.0% RVOL 1.00 (<1.3 fail), VKTX 1.14, KLAR 1.26, NU 1.23 (<1.3 fail), CLBT 1.31 (marginal pass on RVOL but +6.0% is not >=2 pts above a defined peer complex/SPY with a cited catalyst; no catalyst identified, Gate 2 fail), WSE foreign (fail). No entry.
+- MR scan (cap>=5B, <=-5%, RSI<40): SNDK, DELL, MRVL, NBIS, IREN - all AI/hardware complex, same candidates as 13:24 ET; no verified Gate 1/2/3 pass written, IREN fails Gates 2/4. No entry. (Same limitation as Cycle 1038: not per-name researched; hourly news search due at ~14:15 ET.)
 - Decision: HOLD MOD; no new entry. Trades today: 1.
 
