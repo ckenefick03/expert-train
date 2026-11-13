@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-13 15:26 ET",
+  "as_of": "2026-11-13 15:41 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 13 15:26 ET: FLAT, cash/equity $399.19 ($5.00 above the $394.19 breaker). 1 trade today (MOD, -$1.34). CLBT did not break 11.85; no entry.",
+  "status_note": "Nov 13 15:41 ET: FLAT, cash/equity $399.19 ($5.00 above the $394.19 breaker). Entry window closed 15:30 ET. 1 trade today (MOD, -$1.34). Expect to finish flat.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-13",
@@ -4129,6 +4129,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-13 15:26 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-13 15:41 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4339,9 +4343,9 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Stable/rising: SPY 753.41 (-0.5%), SMH -3.1%, IWM -0.4%. Momentum: no qualifying/triggered setup. MR off (Tier C not needed). Account flat.",
+    "read": "Stable: SPY 752.58 (-0.6%), SMH -3.3%, IWM -0.5%. Entry window closed; account flat.",
     "chips": [
-      "SPY -0.5%",
+      "SPY -0.6%",
       "Flat",
       "1 trade, -$1.34"
     ]
@@ -12607,4 +12611,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum scan (10): MOD (not re-entering), ELF +5.0% RVOL 1.05 and FLYW +4.3% RVOL 1.11 (<1.3 fail), CBRS (no catalyst), CGON +5.5% RVOL 1.43 and VKTX +6.1% RVOL 1.50 (biotech, no catalyst cited; Gate 2 fail), KLAR/NU/WSE fintech cluster (no standout, foreign), CLBT (above). No entry.
 - MR not run (Tier C only when the day minimum is unmet; it is met). No news search (no candidate passes).
 - Decision: no entry; flat. Trades today: 1 (closed, -$1.34). Next: the 15:32 ET cycle will be after the entry cutoff (15:30 ET), then the close recap at ~15:47 ET.
+
+### Cycle 1050 - 2026-11-13 15:41 ET (10-min trigger fired 15:39 ET, scheduled 15:32 - 7 min late; last commit 15:23 ET, dedupe passed)
+- After the 15:30 ET entry cutoff: no scans run, no entries possible by rule. Reconcile only.
+- Reconcile: positions empty, no open orders, cash/equity $399.19 (breaker level $394.19, $5.00 room). Flat.
+- Tape: SPY 752.58 (-0.6%), QQQ 678.55 (-1.4%), SMH 485.03 (-3.4%), IWM 277.09 (-0.5%).
+- Follow-ups at 15:39 ET: MOD 137.30 (+$0.10/sh vs my 137.40 exit, i.e. exit price ~ flat vs now); CLBT 11.675 (never broke 11.85; skipped candidate would have been about -0.7% from the 11.755 level at the 15:22 check).
+- Decision: no action. Close recap due ~15:47 ET.
 
