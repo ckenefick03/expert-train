@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-13 14:22 ET",
+  "as_of": "2026-11-13 14:35 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 13 14:22 ET: FLAT. Exited MOD at 137.40 (-$1.34, -0.66R) on invalidation (5-min close 137.84 below 138.07 while SMH/SPY rose). Cash/equity $399.19, $5.00 above the $394.19 breaker. 1 trade today.",
+  "status_note": "Nov 13 14:35 ET: FLAT, cash/equity $399.19 ($5.00 above the $394.19 breaker). MOD exited 14:18 ET at 137.40 (-$1.34); it later traded 136.82. No qualifying setup this cycle. 1 trade today.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-13",
@@ -4105,6 +4105,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-13 14:22 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-13 14:35 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4315,9 +4319,9 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Stable/rising: SPY 753.77 (-0.4%), SMH -3.0% recovering. MR candidates (AI complex) unverified; momentum has no qualifying setup. Account flat.",
+    "read": "Stable: SPY 752.75 (-0.6%), SMH -3.3%; fintech cluster (NU, KLAR, WSE) green on the day. MR Tier B closed 14:30 ET (Tier C needs day minimum unmet; it is met). Momentum: no qualifying setup. Account flat.",
     "chips": [
-      "SPY -0.4%",
+      "SPY -0.6%",
       "Flat",
       "1 trade, -$1.34"
     ]
@@ -12531,4 +12535,13 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - MR scan (Tier B, 11 names): SNDK, LITE, DELL, CRS, MRVL, NBIS, ASTS, CAI, IREN, BMNR, NIO. Same unverified AI/hardware cluster; no written Gate 1/2/3 pass; no per-name research. No entry. Extra risk factor: equity is $5.00 above the breaker, so an entry whose gap risk could exceed ~$5 needs a clean pass; none exists. Day minimum (1 trade) is met, so Tier C/forced not needed.
 - Decision: no new entry. Account flat. Trades today: 1 (closed, -$1.34).
 - Follow-ups due: skipped candidates CGON, VKTX, KLAR, NU, CLBT, CBRS (momentum), SNDK, DELL, NBIS, IREN, MRVL (MR) - fill at recap with 15:47 ET prices.
+
+### Cycle 1044 - 2026-11-13 14:35 ET (10-min trigger fired 14:32 ET; last commit 14:19 ET, dedupe passed)
+- Correction to Cycle 1043: its trade line said "entry 139.18 (13:03 ET... logged 12:33 ET signal)". Correct facts: MOD entry fill 139.18 at ~12:33 ET (Cycle 1033); the 30-minute hold rule expired 13:03 ET; exit 137.40 at 14:18 ET.
+- Reconcile: positions empty, no open orders, cash/equity $399.19 (breaker level $394.19, $5.00 room). Flat.
+- Follow-up: MOD now 136.825 (bid/ask 136.66/136.99), i.e. $0.575/sh below my 137.40 exit (~$0.43 on the position): exiting on the invalidation trigger avoided further loss; the stop (136.50) had not yet been hit.
+- Tape: SPY 752.75 (-0.6%), QQQ 678.88 (-1.4%), SMH 484.94 (-3.4%), IWM 277.08 (-0.5%). Regime: Stable, no new lows.
+- Momentum scan (8): MOD (not re-entering), CBRS +11.9% RVOL 2.7 (no catalyst identified, skip), CGON +5.0% RVOL 1.27 (<1.3 fail), VKTX +6.3% RVOL 1.30 (borderline, no catalyst cited, Gate 2 fail), KLAR +6.9% RVOL 1.34, NU +9.8% RVOL 1.38 and WSE +5.8% (Wise, UK, foreign) - the three fintech names rose together, so this is a uniform peer-group move with no standout (Gate 1 fail; KLAR/WSE also foreign-listed home-market names), CLBT +8.0% RVOL 1.43 (no catalyst cited, held-pullback base not verified; Gate 2/3 fail as documented, not researched this cycle). No entry.
+- MR: Tier B window closed 14:30 ET. Tier C (14:30-15:30) is only for a day with the minimum unmet; the minimum is met, so the MR sweep was not run this cycle (disclosed skip). No entry.
+- Decision: no new entry; flat. Trades today: 1 (closed, -$1.34). Remaining: no entries after 15:30 ET; close recap ~15:47 ET.
 
