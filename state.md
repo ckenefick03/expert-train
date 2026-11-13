@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-13 11:43 ET",
+  "as_of": "2026-11-13 11:50 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 13 11:43 ET: flat, all cash $400.54, 0 trades. Tier B open: the 46 oversold names are almost all AI-hardware names in a 5-week crash (MRVL -45%, DELL -42%, AMAT -29%, LRCX -29% from Oct highs), so Gate 4 (not a multi-week downtrend) fails across the group. MOD takeover-rumor gap still below VWAP.",
+  "status_note": "Nov 13 11:50 ET: flat, all cash $400.54, 0 trades. SPY printed a new session low (745.20 in the 16:35Z bar), so the regime is FALLING again: mean reversion OFF, momentum only for non-fading catalyst gaps (none).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-13",
@@ -4041,6 +4041,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-13 11:36 ET",
       "equity": 400.54
+    },
+    {
+      "t": "2026-11-13 11:46 ET",
+      "equity": 400.54
     }
   ],
   "positions": [],
@@ -4239,11 +4243,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Stabilizing-ish: SPY 751.05 (-0.8%) made no new session low since 10:20 ET (747.89), 5-min lows 748.4-749.5 flat. SMH -4.3% off its low, QQQ -1.8%. MR formally ON but the oversold set is a multi-week AI-hardware downtrend.",
+    "read": "Falling: SPY made a new session low of 745.20 at 16:35Z (below 747.89), then recovered to 749.65 within the bar; close 749.80. SMH -4.8%, QQQ -2.1%. MR OFF per \u00a74.1.",
     "chips": [
-      "SPY -0.8%",
-      "SMH -4.3%",
-      "Tier B",
+      "SPY -1.0%",
+      "new low 745.20",
+      "MR off",
       "0 trades"
     ]
   }
@@ -12302,4 +12306,11 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
   - INTC, IREN, CAI, MSTR: as logged earlier (INTC/IREN Gates 2 and 4; CAI Gate 1; MSTR crypto-linked, no sector cause cited).
 - News (standard search, hourly): no same-day Nov 13 report found, only older context; nothing changes a gate.
 - Decision: NO TRADE. Gates not loosened. The 1-trade/day minimum is unmet; Tier C 'forced' tag is not available until 14:30 ET and would still need all gates.
+
+### Cycle 1028 - Fri 2026-11-13 11:50 ET (trigger :32, scheduled 16:32Z, fired 16:43:26Z = ~11 minutes late; dedupe passed, last commit 16:34Z)
+- Reconcile: cash/equity $400.54, no positions. Tape: SPY 749.65 (-1.0%), QQQ -2.1%, SMH -4.8%, IWM -0.7%.
+- Regime: FALLING again. The 16:35Z SPY bar printed a low of 745.20, below the prior session low 747.89 (it closed 749.80, a sharp reversal off the low inside the bar). Per §4.1 that is a new session low, so mean reversion is OFF this cycle and momentum is allowed only for a fresh non-fading catalyst gap.
+- Momentum sweep: MOD +27% RVOL 2.58 (135.09; 16:35Z bar 135.46, high 137.29; still under the ~138 VWAP and the 137.99 bounce high, a takeover rumor with no offer price): Gate 1 fail. CBRS +6.8% (still below its open), BZ (Kanzhun) and WSE foreign listings: fail. No entry.
+- Mean reversion: scan returned 55 names (the same AI-hardware/semis/crypto/growth complex plus GEV, STRL, CRS, JBL, SNOW). Not gate-checked: the regime is Falling, and the group already fails Gate 4 (multi-week downtrends; Cycle 1027). No entry.
+- Decision: NO TRADE. Gates not loosened; the 1-trade/day minimum remains unmet.
 
