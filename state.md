@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-13 12:46 ET",
+  "as_of": "2026-11-13 12:58 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 13 12:46 ET: holding MOD 0.754 sh @ 139.18 (now 138.70, -$0.36), stop 136.50, target 144.60; stop is 1.6% away. Cash $295.54, equity $400.17. No new entries (no gate-passing candidates).",
+  "status_note": "Nov 13 12:58 ET: holding MOD 0.754 sh @ 139.18 (now 139.56, +$0.29), stop 136.50, target 144.60. Cash $295.54, equity $400.82. CBRS bounce rejected (no verified catalyst).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-13",
@@ -4069,6 +4069,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-13 12:44 ET",
       "equity": 400.17
+    },
+    {
+      "t": "2026-11-13 12:56 ET",
+      "equity": 400.82
     }
   ],
   "positions": [
@@ -4078,7 +4082,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "tier": "-",
       "qty": 0.754397,
       "entry": 139.18,
-      "price": 138.7,
+      "price": 139.56,
       "stop": 136.5,
       "target": 144.6
     }
@@ -4278,10 +4282,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Recovering: SPY 751.8 (-0.7%), no new low since 745.20; SMH -4.0%. MR off; momentum position open.",
+    "read": "Recovering: SPY 752.1 (-0.7%), no new low since 745.20; SMH -3.9%. MR off; momentum position open.",
     "chips": [
       "SPY -0.7%",
-      "MOD long -0.5%",
+      "MOD long +0.3%",
       "1 trade"
     ]
   }
@@ -12415,4 +12419,12 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum sweep: MOD (held), CBRS +10.1% RVOL 2.3 (107.66, still below its 108.33 open: fail), BZ (Kanzhun, foreign ADR: fail), KLAR (RVOL 1.15 <1.3), NU (+11%, RVOL 1.03), CLBT (RVOL 1.09), WSE (foreign): no second entry. MR scan: IREN only (Gates 2/4 fail).
 - Risk reminder: the one tail risk remains a Samsung denial gapping MOD toward 106.10 (not protected by the stop).
 - Decision: HOLD MOD; no new entry. Next: stop check at 13:03 ET onward; target 144.60; exit by about 15:50 ET.
+
+### Cycle 1035 - Fri 2026-11-13 12:58 ET (trigger :52, fired 17:54:18Z; dedupe passed, last commit 17:43Z)
+- STOP CHECK (first): MOD long 0.754397 sh @ $139.18. Quote 139.56 (bid 139.17 / ask 139.70), unrealized about +$0.29. Stop 136.50 is $3.06 (2.2%) away; target 144.60. 5-min lows since entry 138.44, 138.71 (above the 136.70 base). Thesis intact; the 30-minute hold rule ends at 13:03 ET.
+- Reconcile: cash $295.54, equity $400.82, buying power $295.54, one position, no pending orders.
+- Tape: SPY 752.06 (-0.7%), QQQ -1.6%, SMH -3.9%, IWM -0.6%; SPY's last four 5-min lows 751.14-751.59, no new low since 745.20.
+- Momentum sweep: CBRS (Cerebras) now +12.3% RVOL 2.40 at 109.9, above its 108.33 open and above its 5-min VWAP (107.91). Checked: it gapped to 120.44 and faded to 101.2 before this bounce, giving back about 47% of the day's gain from the high (right at the limit), and I found NO dated news catalyst for today's move (search returned only IPO-era history). Gate 2 FAIL (a price move alone is not a catalyst; sector bounce is not a catalyst). Also it would add a second AI-hardware long next to MOD. No entry. KLAR +6.5% RVOL 1.17, NU +10.8% RVOL 1.07, CLBT +6.5% RVOL 1.11 (all under 1.3); BZ (Kanzhun) and WSE foreign (fail).
+- MR scan: IREN only (-8.3%, Gates 2/4 fail). MR remains off.
+- Decision: HOLD MOD; no new entry.
 
