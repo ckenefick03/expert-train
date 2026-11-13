@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-13 13:44 ET",
+  "as_of": "2026-11-13 13:55 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 13 13:44 ET: holding MOD 0.754 sh @ 139.18 (now 138.97, -$0.16), stop 136.50, target 144.60. Cash $295.54, equity $400.38. Exit trigger: 5-min close below 138.32 base low. No new entries.",
+  "status_note": "Nov 13 13:55 ET: holding MOD 0.754 sh @ 139.18 (now 139.11, -$0.05), stop 136.50, target 144.60. Cash $295.54, equity $400.48. Exit trigger: 5-min close below 138.07. No new entries.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-13",
@@ -4093,6 +4093,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-13 13:44 ET",
       "equity": 400.38
+    },
+    {
+      "t": "2026-11-13 13:55 ET",
+      "equity": 400.48
     }
   ],
   "positions": [
@@ -4102,7 +4106,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "tier": "-",
       "qty": 0.754397,
       "entry": 139.18,
-      "price": 138.97,
+      "price": 139.11,
       "stop": 136.5,
       "target": 144.6
     }
@@ -4302,10 +4306,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Stable/rising-ish: SPY 752.71 (-0.6%), making higher highs in the range; SMH -3.5% recovering. MR candidates (AI complex) unverified; one momentum position drifting sideways.",
+    "read": "Stable/rising: SPY 753.33 (-0.5%), steady higher highs since 11:35 low; SMH -3.4% recovering. MR candidates (AI complex) unverified; one momentum position chopping sideways.",
     "chips": [
-      "SPY -0.6%",
-      "MOD long -0.1%",
+      "SPY -0.5%",
+      "MOD long -0.0%",
       "1 trade"
     ]
   }
@@ -12487,5 +12491,13 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Tape: SPY 752.71 (-0.6%, higher highs in range), QQQ 678.25 (-1.4%), SMH 483.98 (-3.5%), IWM 276.99 (-0.5%). Regime: Stable-ish, mildly improving.
 - Momentum scan (8): MOD (held), CBRS (no catalyst, skip), CGON +8.0% RVOL 1.00 (<1.3 fail), VKTX 1.14, KLAR 1.26, NU 1.23 (<1.3 fail), CLBT 1.31 (marginal pass on RVOL but +6.0% is not >=2 pts above a defined peer complex/SPY with a cited catalyst; no catalyst identified, Gate 2 fail), WSE foreign (fail). No entry.
 - MR scan (cap>=5B, <=-5%, RSI<40): SNDK, DELL, MRVL, NBIS, IREN - all AI/hardware complex, same candidates as 13:24 ET; no verified Gate 1/2/3 pass written, IREN fails Gates 2/4. No entry. (Same limitation as Cycle 1038: not per-name researched; hourly news search due at ~14:15 ET.)
+- Decision: HOLD MOD; no new entry. Trades today: 1.
+
+### Cycle 1041 - 2026-11-13 13:55 ET (10-min trigger fired 13:52 ET; last commit 13:43 ET, dedupe passed)
+- Reconcile: MOD 0.754397 sh @ 139.18, no open orders, cash $295.54, equity $400.48 (breaker level $394.19, $6.29 room).
+- Stop check (MOD, first): last 139.105 (bid 138.86/ask 139.30), $2.61 above stop 136.50. 5-min bars: 13:40 closed 139.16; 13:45 bar wicked to 138.075 (below the 138.32 base low) but CLOSED 138.46, back above it. Invalidation rule is a close below, so no exit; however this is a lower low (138.08) and the base is eroding. Updated exit trigger: completed 5-min close below 138.07, or price within ~$0.50 of 136.50. Relative strength vs SMH intact (+31% vs -3.4%). HOLD.
+- Tape: SPY 753.33 (-0.5%, steady higher highs), QQQ 679.03 (-1.3%), SMH 484.84 (-3.4%), IWM 277.00 (-0.5%). Regime: Stable/rising.
+- Momentum scan (8): MOD (held), CBRS (no catalyst, skip), CGON +7.5% RVOL 1.09, VKTX 1.18, KLAR 1.28, NU 1.27 (all <1.3 fail), CLBT 1.32 (+5.9%, no identified catalyst, Gate 2 fail), WSE foreign. No entry.
+- MR scan (Tier B, cap>=5B, <=-3.5%, RSI<40): 12 names - SNDK, LITE, STX, DELL, MRVL, NBIS (AI/hardware complex), HOOD (-3.8%, Robinhood-specific, likely Gate 1 fail), ASTS, CAI, IREN, BMNR, NIO. None has a written Gate 1/2/3 pass (no per-name research done this cycle; hourly news search due ~14:15 ET). Unverified = no trade; disclosed limitation, not a full gate review. Tier B closes 14:30 ET.
 - Decision: HOLD MOD; no new entry. Trades today: 1.
 
