@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-13 12:19 ET",
+  "as_of": "2026-11-13 12:28 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 13 12:19 ET: flat, all cash $400.54, 0 trades. MOD (Samsung takeover-talks gap) broke its 138.43 bounce high on the 17:05Z bar (close 138.82) but fails the 0.3% spread cap (0.33%) and sits on VWAP; unconfirmed rumor. SPY recovering to 751-752.",
+  "status_note": "Nov 13 12:28 ET: flat, all cash $400.54, 0 trades. MOD (Samsung takeover-talks gap) is holding a tight 136.7-138.8 range right on its VWAP (137.95); order was reviewed but NOT placed because the live price (137.84) was below VWAP. SPY 750-751, recovering.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-13",
@@ -4057,6 +4057,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-13 12:15 ET",
       "equity": 400.54
+    },
+    {
+      "t": "2026-11-13 12:25 ET",
+      "equity": 400.54
     }
   ],
   "positions": [],
@@ -4255,11 +4259,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Improving: SPY 751.01 (-0.8%), 17:05Z bar closed 752.03; lows since the 745.20 print are 749.42, 749.31, 749.05, 749.50, 749.45, 750.02, i.e. no new low and the last two bars rising. Not yet three clean higher lows. SMH -4.3%, QQQ -1.7%. MR still OFF.",
+    "read": "Recovering: SPY 750.65 (-0.9%), 17:05Z bar high 752.17; no new low since 745.20 at 16:35Z, last 5-min lows 749.45, 750.02, 750.80, 750.32 (rising, then flat). SMH -4.3%, QQQ -1.8%. Treating as Stabilizing-forming; MR still not gate-checked (all oversold names fail Gate 4 anyway).",
     "chips": [
-      "SPY -0.8%",
+      "SPY -0.9%",
       "SMH -4.3%",
-      "MR off",
+      "MOD watch",
       "0 trades"
     ]
   }
@@ -12354,4 +12358,17 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
   - CBRS +8.3%: still under its open (fail). KLAR +6.6% RVOL 1.10 (under 1.3, fail). BZ and WSE foreign (fail).
 - MR Tier A scan (<=-5%, RSI<35): IREN only (-8.9%), fails Gates 2/4 as before.
 - Decision: NO TRADE. Gates not loosened; the 1-trade/day minimum is still unmet (Tier C opens 14:30 ET).
+
+### Cycle 1032 - Fri 2026-11-13 12:28 ET (trigger :22, fired 17:22:26Z; dedupe passed, last commit 17:14Z)
+- Reconcile: cash/equity $400.54, no positions, no open orders. Tape: SPY 750.65 (-0.9%), QQQ -1.8%, SMH -4.3%, IWM -0.8%.
+- MOD follow-up (the Cycle 1031 candidate), checked against momentum.md gates in writing:
+  - Gate 1 (relative strength, not fading): up 29.8% vs SPY -0.9%, RVOL 2.81, cap 5.6B, avg volume 2.0M, spread at 12:23 ET bid/ask 137.75/137.96 = 0.15% (passes the 0.3% cap now); not a foreign ADR; earnings were Nov 3 (outside the 2-day window); gave back about 21% of the gain from the 146.50 high. VWAP condition: 5-min VWAP is 137.95 and the last two completed bars (17:10Z 138.22, 17:15Z 138.15) closed above it, BUT the live last trade at review time was 137.84, i.e. BELOW VWAP by 0.11. The rule requires price above gap-day VWAP; at the moment of the order the answer was no.
+  - Gate 2: catalyst is news (Bloomberg Nov 12 report of Samsung takeover talks, cited by Digitimes and others). momentum.md accepts news as confirmation, so this passes by the letter, with the caveat that no company has confirmed it and no offer price exists (a denial would gap it toward 106.10; I count that as a real tail risk and not a gate).
+  - Gate 3: base higher lows 134.91, then 136.31, then 136.70 on rising EMA(9); the break of the 138.43 pullback high happened on the 17:05Z bar (close 138.82), and price has since been retesting the broken level / VWAP. Retest is forming, not yet a confirmed hold.
+  - Gate 4: 12:23 ET, fine.
+  - Order review: review_equity_order on $105 market was run (no order_checks, customer approval not required). I did NOT call place_equity_order: with the live price 0.11 under VWAP, this is a Gate 1 FAIL at the decision moment, and flipping around the VWAP line is the 'at-the-line' noise I declined last cycle too. Not a trade, no order id exists.
+  - Would-enter trigger written down: a completed 5-min close above 138.83 (a fresh break of the pullback high) with price above VWAP and spread <= 0.3%; stop under the 136.31-136.70 base (about 135.9), 2R target about 142.8 (below the 146.50 day high so headroom exists), EOD exit.
+- Other momentum: CBRS +8.2% (faded under its open), KLAR +6.4% RVOL 1.12, CLBT +6.3% RVOL 1.03 (under 1.3), WSE foreign: no entry.
+- MR Tier A scan: IREN only (fails Gates 2/4). Oversold group still fails Gate 4.
+- Decision: NO TRADE. Gates not loosened. One more honesty note: this is the second near-miss on MOD in two cycles; both turned on a 0.1-0.4 pt margin around VWAP and the 0.3% spread cap, and I am treating those thresholds as hard.
 
