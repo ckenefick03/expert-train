@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-12 15:48 ET",
+  "as_of": "2026-11-13 09:35 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -40,8 +40,8 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "min_trades": 1,
     "max_trades": 10
   },
-  "status": "green",
-  "status_note": "Flat, all cash $400.54, nothing rolls overnight. Nov 12: 0 trades (min is 1), no gate loosened, no forced trade. AMD fired once on one bar and failed to hold; every other candidate failed a gate.",
+  "status": "amber",
+  "status_note": "Nov 13 09:35 ET: Robinhood connection FAILED this cycle, so live account state is UNVERIFIED. Last verified (Nov 12 15:48 ET): flat, all cash $400.54, no orders. Before 10:00 ET entries are closed anyway. Not trading until the connection is back.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-12",
@@ -12204,4 +12204,10 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
   - Mean reversion: gold/silver miners failed Gates 2/4 (EGO EPS miss; HL/SSRM/PAAS/AG multi-week downtrends); the late AI/semis/crypto selloff names had no dated external cause (NVDA's drop is its own CEO news).
 - Errors and misses to own: Cycles 987-991 reported 'no candidates' because I passed percent-style numbers to the scanner's ratio filter (found and fixed in Cycle 992, disclosed then). Several triggers fired 7-16 minutes late and two were skipped by the 6-minute dedupe. Cycle 1011 skipped the mean-reversion scan (disclosed). Cycle 1016/1017 skipped scans because entries were closed. Many mean-reversion names in late cycles were not individually written up.
 - Open questions for the user (not blocking, never answered): whether marginal RVOL passes (1.30-1.34) should count as fails; a one-bar reclaim versus a confirmed-hold rule for entries; whether to cut the $105 size with the breaker 6.35 away; whether to add a profit-protection rule.
+
+### Cycle 1019 - Fri 2026-11-13 09:35 ET (hourly trigger, scheduled 14:12Z, fired 14:33:36Z = ~21 minutes late)
+- RobinhoodMCP failed to connect this session (502 / CLIENT_HTTP_NOT_IMPLEMENTED from the MCP endpoint); a ToolSearch for get_portfolio returned no match. I could not reconcile the account, check stops, pull quotes, or run either scan. NOTHING was verified live this cycle.
+- Last verified state (Nov 12 15:48 ET, cycle 1018): flat, cash/equity $400.54, no positions, no open or filled orders that day. I have no evidence that anything changed overnight, but I did not confirm it; positions/orders for Nov 13 are unchecked. No orders were placed (I had no tool to place any).
+- It is 09:35 ET, so no entries are allowed before 10:00 ET in any case; the missed scan cost nothing yet. If the connection is still down at 10:00 ET, entries cannot happen and the 1-trade/day minimum will go unmet through no gate decision.
+- Next: retry tools at the next trigger (:42 / 09:42 ET, then :52); do a full reconcile first when they return. Not asking the user for anything; flagging the outage here and in the dashboard status (amber).
 
