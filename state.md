@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-13 13:27 ET",
+  "as_of": "2026-11-13 13:35 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 13 13:27 ET: holding MOD 0.754 sh @ 139.18 (now 139.22, +$0.03), stop 136.50, target 144.60. Cash $295.54, equity $400.57. No new entries; MR/momentum candidates failed gates or lacked verified catalyst.",
+  "status_note": "Nov 13 13:35 ET: holding MOD 0.754 sh @ 139.18 (now 138.78, -$0.30), stop 136.50, target 144.60. Cash $295.54, equity $400.24. No new entries.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-13",
@@ -4085,6 +4085,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-13 13:27 ET",
       "equity": 400.57
+    },
+    {
+      "t": "2026-11-13 13:35 ET",
+      "equity": 400.24
     }
   ],
   "positions": [
@@ -4094,7 +4098,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "tier": "-",
       "qty": 0.754397,
       "entry": 139.18,
-      "price": 139.22,
+      "price": 138.78,
       "stop": 136.5,
       "target": 144.6
     }
@@ -4294,10 +4298,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Stable-ish: SPY 751.36 (-0.8%), range 750.5-752.4 ~2h, no new low since 745.20 (11:35 ET); SMH -4.0% but flat for the last hour. MR on in principle (Tier B) but no candidate passes written gates; one momentum position.",
+    "read": "Stable-ish: SPY 752.10 (-0.7%), 750.5-752.5 range ~2h, no new low since 745.20; SMH -3.8%, drifting up. MR candidates unverified; one momentum position.",
     "chips": [
-      "SPY -0.8%",
-      "MOD long +0.0%",
+      "SPY -0.7%",
+      "MOD long -0.2%",
       "1 trade"
     ]
   }
@@ -12463,4 +12467,13 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - MR scan (Tier B sweep, 36 names): almost all AI/semis/hardware (SNDK, MU, LITE, STX, AMAT, DELL, MRVL, NBIS, CRDO etc.) plus HOOD, INTC, IREN, NIO, CAI. Spot-checked 10-min bars for HOOD, INTC, MRVL, NBIS: flat to slightly higher lows for ~1h (stabilizing) but none has a verified written pass on Gate 1 (dated external cause vs company-specific), Gate 2 (latest fundamental datapoint) or Gate 3 (named anchor >=2R) - no per-name news/fundamentals check was run this cycle, only the 13:14 hourly market search which returned nothing usable. Per rules, unverified = no trade. These were not exhaustively gate-checked; disclosed as a limitation, not as clean fails. HOOD -4% vs SPY -0.8% looks company-specific (likely Gate 1 fail); IREN fails Gates 2/4 as before. Extra consideration: another AI-complex long would stack correlated risk on MOD with only $6.38 to the breaker.
 - Follow-up to fill later: HOOD 78.20, INTC 58.82, MRVL 154.65, NBIS 116.34 at 13:20 ET.
 - Decision: no new entry. Trades today: 1 (minimum met).
+
+### Cycle 1039 - 2026-11-13 13:35 ET (10-min trigger fired 13:32 ET; last commit 13:23-13:24 ET, dedupe passed)
+- Timestamp correction: the Cycle 1038 header said 13:27 ET but the commit was at ~13:24 ET (18:23:47Z); label was approximate.
+- Reconcile: MOD 0.754397 sh @ 139.18, no open orders, cash $295.54, equity $400.24 (breaker level $394.19, $6.05 room).
+- Stop check (MOD, first): last 138.78 (bid 138.52/ask 139.25), $2.28 above stop 136.50. 5-min bars: 13:20 ET dipped to 138.56 (close 138.82), 13:25 bar 138.94-139.36 close 139.33; the base low 138.32 (13:00 bar) still holds. A wide bid/ask on thin volume. No invalidation, no close below base support. HOLD.
+- Tape: SPY 752.10 (-0.7%), QQQ 677.55 (-1.5%), SMH 482.87 (-3.8%), IWM 276.75 (-0.6%). SPY last bar 752.31, no new low. Regime: Stable-ish.
+- Momentum scan (7): MOD (held), CBRS (no catalyst, skip), VKTX RVOL 1.11, KLAR 1.23, NU 1.20, CLBT 1.28 (all <1.3 fail; CLBT is marginal, also no cited catalyst), WSE foreign (fail). No entry.
+- MR scan: not re-run this cycle (the 13:24 ET sweep 9 minutes ago listed 36 names with no verified gate pass; disclosed as a skipped scan to save rate-limit budget). No MR entry.
+- Decision: HOLD MOD; no new entry. Trades today: 1.
 
