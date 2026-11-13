@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-13 10:55 ET",
+  "as_of": "2026-11-13 11:03 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 13 10:55 ET: Robinhood connection is BACK after missing cycles 09:33-10:13 ET. Reconciled live: flat, all cash $400.54, no orders since Nov 12. Falling tape (SMH -4.8%, QQQ -1.9%, SPY -0.8% at lows); MR off, momentum only for fresh non-fading catalyst gaps; MOD (Samsung takeover report) fails Gate 1 (below VWAP). No trade.",
+  "status_note": "Nov 13 11:03 ET: flat, all cash $400.54, 0 trades. Tape: SMH -4.7%, SPY -0.85% but stabilizing (no new low since 10:20 ET), so mean reversion is ON again; the only Tier A fit (INTC) fails Gates 2 and 4 (Oct 30 guidance-cut gap, -55% from 127 in 7 weeks). MOD takeover-rumor gap still below VWAP.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-13",
@@ -4025,6 +4025,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-13 10:51 ET",
       "equity": 400.54
+    },
+    {
+      "t": "2026-11-13 10:58 ET",
+      "equity": 400.54
     }
   ],
   "positions": [],
@@ -4223,11 +4227,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Falling into a late bounce: SPY made new session lows through 15:25Z (747.89) vs prior-day low 753.67, then five bars of no new low but not three clean higher lows (749.64, 749.27, 749.55, 749.86). SMH -4.8%, AMD -9%, QQQ -1.9%. Mean reversion OFF; momentum only for fresh non-fading catalyst gaps.",
+    "read": "Stabilizing: SPY has made no new low since the 15:20Z bar (747.89); the last four 5-min lows rose (749.27, 749.55, 749.86, 750.11). SMH -4.7%, QQQ -1.9%, AMD -9.2%. Mean reversion ON (all four gates apply); momentum not eligible without a non-fading catalyst.",
     "chips": [
-      "SPY -0.8%",
-      "SMH -4.8%",
-      "MR off",
+      "SPY -0.85%",
+      "SMH -4.7%",
+      "MR on",
       "0 trades"
     ]
   }
@@ -12247,4 +12251,15 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
   - CBRS +6% RVOL 1.71: gapped to 120.44, now 103.6 and under its 108.33 open; fading. WSE (Wise Group PLC) +8%: foreign ADR-type listing, fails Gate 1. No entry.
 - Mean reversion: scan returned 54 names (semis/AI/crypto crash). MR is OFF in this regime, so no gate check was done on them. For the record, closest in oversold terms were NVDA (-3.6%, RSI 26, company-specific), INTC (-5.7%, RSI 33.4), MSTR (-3.5%, RSI 33.9), CAI (-4.7%, RSI 32.8); none has a clean external cause and the regime blocks them anyway.
 - Decision: NO TRADE. Gates not loosened; the 1-trade/day minimum is at risk (no organic setup yet; Tier C 'forced' window opens 14:30 ET, still with every gate intact).
+
+### Cycle 1024 - Fri 2026-11-13 11:03 ET (trigger :22, scheduled 15:22Z, fired 15:58:22Z = ~36 minutes late; dedupe passed, last commit 15:51Z)
+- Reconcile: cash/equity $400.54, buying power $400.54, no positions. Tape: SPY 750.67 (-0.85%), QQQ -1.9%, SMH -4.7%, IWM -1.0%, AMD 531.20 (-9.2%).
+- Regime: STABILIZING. SPY's last new low was the 15:20Z bar (747.89); since then the 5-min lows are 749.64, 749.27, 749.55, 749.86, 750.11, i.e. no new low and the last four rising. That meets the 'about 3 consecutive higher lows' test, so mean reversion is ON this cycle, with all four gates still required.
+- Momentum sweep: MOD +27% RVOL 2.18, CBRS +7.8% RVOL 1.76, WSE +8.1% RVOL 2.05. MOD: Samsung takeover-talks report, unconfirmed, no price; last bar closed 133.93, price 134.71, still below the ~138.8 VWAP and lower highs since 137.99; Gate 1 (not fading, above VWAP) fails, Gate 3 not formed. CBRS: gapped and faded under its open. WSE: foreign listing, Gate 1 fail. No entry.
+- Mean reversion Tier A scan (cap>=5B, vol>=1M, <=-5%, RSI<35): INTC and IREN only.
+  - INTC (-5.8%, RSI 33.4, SMH -4.7%, down about 1.1 pts more than the sector, vol 37.8M): price rules fit, but Gate 2 FAILS: the Oct 29 report (EPS beat 0.52 vs 0.37) was followed by an Oct 30 gap from ~92 to ~66-68 (-28%) after a Q4 guidance cut (PC demand, memory/supply constraints, an Israel facility incident). The latest fundamental datapoint is a guidance cut. Gate 4 FAILS: 127.4 on Sep 24 to 57.7 now, a seven-week downtrend. Gate 1 is also weak: reports tie today's drop to the Nvidia CEO exit and sector profit-taking, but the stock has been sliding on its own news for weeks. Intraday: lower highs/lows from 61.34 to 57.0; the 15:35Z bar made the low 57.00, then 57.13, 57.35, 57.42 are marginally higher lows, but no gate-passing setup. No entry.
+  - IREN (-8.7%, RSI 34.6): same prior fails (Nov 5 EPS miss, large multi-week decline; Gates 2 and 4). No entry.
+  - Tier A names with RSI 35-45 (SNDK, MRVL, NBIS, LITE, etc.) do not meet the RSI<35 Tier A rule; Tier B (11:30+) and C apply to them later with all gates. Not individually gate-checked this cycle.
+- News: hourly extended search already run in Cycle 1023; Intel-specific search this cycle found no same-day Intel news (articles mostly describe Nov 12 or the Oct 30 guidance event).
+- Decision: NO TRADE. Gates not loosened. 1-trade/day minimum still unmet; Tier B opens 11:30 ET.
 
