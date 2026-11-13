@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-13 14:05 ET",
+  "as_of": "2026-11-13 14:22 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 13 14:05 ET: holding MOD 0.754 sh @ 139.18 (now 138.80, -$0.29), stop 136.50, target 144.60. Cash $295.54, equity $400.25. Exit trigger: 5-min close below 138.07. Catalyst (Samsung/Modine) not confirmed by hourly search. No new entries.",
+  "status_note": "Nov 13 14:22 ET: FLAT. Exited MOD at 137.40 (-$1.34, -0.66R) on invalidation (5-min close 137.84 below 138.07 while SMH/SPY rose). Cash/equity $399.19, $5.00 above the $394.19 breaker. 1 trade today.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-13",
@@ -4101,20 +4101,13 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-13 14:05 ET",
       "equity": 400.25
-    }
-  ],
-  "positions": [
+    },
     {
-      "symbol": "MOD",
-      "strategy": "momentum",
-      "tier": "-",
-      "qty": 0.754397,
-      "entry": 139.18,
-      "price": 138.8,
-      "stop": 136.5,
-      "target": 144.6
+      "t": "2026-11-13 14:22 ET",
+      "equity": 399.19
     }
   ],
+  "positions": [],
   "trades": [
     {
       "symbol": "TER",
@@ -4307,14 +4300,26 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "score": 58,
       "tag": "organic",
       "date": "2026-11-11"
+    },
+    {
+      "symbol": "MOD",
+      "strategy": "momentum",
+      "tier": "-",
+      "entry": 139.18,
+      "exit": 137.4001,
+      "pnl": -1.34,
+      "r": -0.66,
+      "score": 0,
+      "tag": "organic",
+      "date": "2026-11-13"
     }
   ],
   "regime": {
-    "read": "Stable/rising: SPY 752.99 (-0.5%), holding highs of the range; SMH -3.4% flat-ish. MR candidates (AI complex) unverified; one momentum position chopping sideways.",
+    "read": "Stable/rising: SPY 753.77 (-0.4%), SMH -3.0% recovering. MR candidates (AI complex) unverified; momentum has no qualifying setup. Account flat.",
     "chips": [
-      "SPY -0.5%",
-      "MOD long -0.2%",
-      "1 trade"
+      "SPY -0.4%",
+      "Flat",
+      "1 trade, -$1.34"
     ]
   }
 }
@@ -12513,4 +12518,17 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum scan (8): MOD (held), CBRS (no catalyst), CGON +4.5% RVOL 1.15, VKTX 1.21, KLAR 1.29 (fail <1.3), NU 1.31 and CLBT 1.36 (RVOL passes but both lack a cited catalyst and a >=2pt separation from a defined peer complex with a held pullback setup; Gate 2/3 fail), WSE foreign. No entry.
 - MR scan (Tier B, 14 names): SNDK, LITE, STX, DELL, MRVL, NBIS, HOOD, ASTS, CAI, IREN, BMNR, NIO plus new CRS (Carpenter, -3.6%) and AUR (-3.7%). Still no written Gate 1/2/3 pass for any; no per-name fundamentals check done. Unverified = no trade. Tier B closes 14:30 ET; Tier C (14:30-15:30) only if day minimum unmet (it is met).
 - Decision: HOLD MOD; no new entry. Trades today: 1.
+
+### Cycle 1043 - 2026-11-13 14:22 ET (hourly trigger fired 14:17 ET, scheduled 14:12; last commit 14:03 ET, dedupe passed)
+- Reconcile at start: MOD 0.754397 sh @ 139.18, no open orders, equity $399.36 (breaker level $394.19, $5.17 room).
+- STOP/INVALIDATION CHECK (first): MOD last 137.735 (bid 137.63/ask 137.80). 5-min bars: 14:05 ET closed 138.73 (low 138.385); 14:10 ET bar opened 138.57, hit 137.26 and CLOSED 137.84 = a completed 5-min close below the 138.07 exit trigger logged in Cycles 1041/1042, and below the 138.32 base low. Over the same window SPY (753.00-753.74) and SMH (486.79, -3.0% and rising) held or rose, i.e. MOD bled while its sector improved: relative-strength loss plus support break. Stop at 136.50 was $1.24 away. 30-minute hold rule expired long ago. Per the written trigger and momentum.md (exit on invalidation even above stop), EXIT.
+- Order: review_equity_order showed no alerts and customer_approval_required=false; the tool's guidance asks for a chat confirmation, which does not apply under the standing authorization in framework section 0 (ignored and logged as for earlier trades). SELL MOD market 0.754397 sh, regular hours, ref_id 3b7e9c1e-5a42-4d0b-9f6a-2c8d1e4a7b10, order 6af76287-909f-4552-a0b6-792f31e263b2. FILLED 0.754397 @ 137.4001 at 19:18:31Z (14:18 ET), fees 0. Positions now empty.
+- Result: MOD momentum trade, entry 139.18 (13:03 ET... logged 12:33 ET signal), exit 137.40, P&L -$1.34 (-0.66R vs ~$2.02 planned risk), tag organic, score not assigned this cycle. Slippage: sold ~0.2 below the 137.63 quote at review (bid/ask 137.28/137.80). Account now flat: cash $295.54 + proceeds $103.65 = ~$399.19; day P&L ~ -$1.35 vs start equity $400.54.
+- Lesson/note: the thesis (Samsung-Modine takeover rumor) was unconfirmed by two hourly searches; the break came on a drift lower without a headline I could find. Not verified whether a denial occurred. Follow-up: record MOD close vs 137.40 at the recap.
+- Tape: SPY 753.77 (-0.4%), QQQ 680.10 (-1.2%), SMH 486.79 (-3.0%), IWM 277.22 (-0.4%). Regime: Stable/rising.
+- Hourly news search: "stock market today November 13 2026" returned only Nov 3-5 2026 and 2025 archive pages; no same-day wrap found. Disclosed (third consecutive unusable market-wrap search today).
+- Momentum scan (8): MOD (just exited, not re-entering after invalidation), CBRS +12.3% RVOL 2.7 (no catalyst identified, still skip), CGON +5.3% RVOL 1.19, VKTX 1.26 (<1.3 fail), KLAR 1.31, NU 1.35, CLBT 1.39 (RVOL passes but none has a cited catalyst/held pullback; Gate 2/3 fail), WSE foreign. No entry.
+- MR scan (Tier B, 11 names): SNDK, LITE, DELL, CRS, MRVL, NBIS, ASTS, CAI, IREN, BMNR, NIO. Same unverified AI/hardware cluster; no written Gate 1/2/3 pass; no per-name research. No entry. Extra risk factor: equity is $5.00 above the breaker, so an entry whose gap risk could exceed ~$5 needs a clean pass; none exists. Day minimum (1 trade) is met, so Tier C/forced not needed.
+- Decision: no new entry. Account flat. Trades today: 1 (closed, -$1.34).
+- Follow-ups due: skipped candidates CGON, VKTX, KLAR, NU, CLBT, CBRS (momentum), SNDK, DELL, NBIS, IREN, MRVL (MR) - fill at recap with 15:47 ET prices.
 
