@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-13 11:58 ET",
+  "as_of": "2026-11-13 12:08 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 13 11:58 ET: flat, all cash $400.54, 0 trades. SPY back to 750 after the 745.20 spike low; regime still Falling by the 16:35Z new low until 3 higher lows print. Only Tier A MR name is IREN (fails Gates 2/4). MOD rumor gap near but below VWAP.",
+  "status_note": "Nov 13 12:08 ET: flat, all cash $400.54, 0 trades. MOD (takeover-rumor gap) is the only near-miss: last 5-min close 137.97 equals VWAP 137.95, live price 136.77 below it. Regime still Falling/choppy (SPY 750, low 745.20).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-13",
@@ -4049,6 +4049,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-13 11:56 ET",
       "equity": 400.54
+    },
+    {
+      "t": "2026-11-13 12:06 ET",
+      "equity": 400.54
     }
   ],
   "positions": [],
@@ -4247,10 +4251,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Falling by \u00a74.1 (new session low 745.20 at 16:35Z), now recovering: the 16:40Z and 16:45Z lows (749.42, 749.31) are above 745.20 but not yet three rising lows. SMH -4.5%, QQQ -1.9%. MR stays OFF until that streak forms.",
+    "read": "Choppy under a Falling label: SPY 749.99 (-0.9%), no new low since 745.20 (16:35Z) but recent lows (749.42, 749.31, 749.05, 749.50) are flat, not rising. SMH -4.4%. MR off; momentum only for non-fading catalyst gaps.",
     "chips": [
       "SPY -0.9%",
-      "low 745.20",
+      "SMH -4.4%",
       "MR off",
       "0 trades"
     ]
@@ -12323,5 +12327,14 @@ Equity/cash/BP $405.58, no positions. Tape: SPY 741.1 (+1.1%), QQQ 661.1 (+2.2%)
 - Regime: Falling by the 16:35Z new low (745.20), recovering: lows since are 749.42 and 749.31 (two bars, not yet the three rising lows needed for 'Stabilizing'). MR stays OFF; I did not gate-check mean-reversion names.
 - Momentum sweep: MOD +29.4% RVOL 2.63, 137.33 (now at the 137.29 high of the last bar and just under the ~138.5 VWAP and the 137.99 bounce high): still unconfirmed takeover talk with no offer price and not above VWAP, so Gate 1 fails. CBRS +8.1% (still under its open), BZ and WSE (foreign): fail. No entry.
 - MR Tier A scan (<=-5%, RSI<35): only IREN (-8.9%); fails Gates 2/4 as before (Nov 5 EPS miss, multi-week collapse). INTC and CAI dropped off the list (price recovered above -5%).
+- Decision: NO TRADE. Gates not loosened; 1-trade/day minimum unmet.
+
+### Cycle 1030 - Fri 2026-11-13 12:08 ET (trigger :02, fired 17:03:10Z; dedupe passed, last commit 16:55Z)
+- Reconcile: cash/equity $400.54, no positions. Tape: SPY 749.99 (-0.9%), QQQ -1.9%, SMH -4.4%, IWM -0.8%.
+- Regime: Falling label stands (745.20 new low at 16:35Z); since then SPY lows 749.42, 749.31, 749.05, 749.50 are flat, not three rising lows. MR OFF; momentum only for a fresh, non-fading catalyst gap.
+- Momentum sweep: MOD, CBRS, KLAR (Klarna, +6.2% RVOL 1.05: under the 1.3 volume gate), BZ and WSE (foreign), plus MOD detail:
+  - MOD (+28.9%, RVOL 2.70) was the near-miss. Gate 1 needs price above the gap-day VWAP: 5-min VWAP 137.95, last completed bar (16:55Z) closed 137.97 (high 138.43, a break of the 137.99 bounce high), but live price is 136.77, back below VWAP. Higher lows since 16:45Z (134.91, 136.28, 136.78) and EMA(9) 136.23 rising, so Gate 3 is forming. But Gate 1 is failed on the live price, and the catalyst is an unconfirmed Bloomberg report of Samsung takeover talks with no offer price; a denial would gap the stock toward the 106 prior close (a stop at ~135 would not protect against that). I am not entering on a one-bar tag of VWAP that has already slipped. Watch: a completed 5-min close above ~138.4 with price holding above VWAP.
+  - CBRS +8.0% RVOL 2.1: gapped and faded under its 108.33 open; fail.
+- Mean reversion: scan 27 names (-5% or more, RSI<45), the same AI-hardware/semis complex and crypto/space/quantum names; regime is OFF and Gate 4 already fails for the group; not gate-checked.
 - Decision: NO TRADE. Gates not loosened; 1-trade/day minimum unmet.
 
