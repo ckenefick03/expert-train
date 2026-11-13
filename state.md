@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-13 13:14 ET",
+  "as_of": "2026-11-13 13:27 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 13 13:14 ET: holding MOD 0.754 sh @ 139.18 (now 139.82, +$0.48), stop 136.50, target 144.60. Cash $295.54, equity $401.02. No new entries; scans found no qualifying second setup.",
+  "status_note": "Nov 13 13:27 ET: holding MOD 0.754 sh @ 139.18 (now 139.22, +$0.03), stop 136.50, target 144.60. Cash $295.54, equity $400.57. No new entries; MR/momentum candidates failed gates or lacked verified catalyst.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-13",
@@ -4081,6 +4081,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-13 13:14 ET",
       "equity": 401.02
+    },
+    {
+      "t": "2026-11-13 13:27 ET",
+      "equity": 400.57
     }
   ],
   "positions": [
@@ -4090,7 +4094,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
       "tier": "-",
       "qty": 0.754397,
       "entry": 139.18,
-      "price": 139.82,
+      "price": 139.22,
       "stop": 136.5,
       "target": 144.6
     }
@@ -4290,10 +4294,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Stable-ish: SPY 750.98 (-0.8%), 750.5-752.4 range ~1.5h, no new low since 745.20 (11:35 ET); SMH -4.3% still weak. MR off (no candidate passes gates); one momentum position.",
+    "read": "Stable-ish: SPY 751.36 (-0.8%), range 750.5-752.4 ~2h, no new low since 745.20 (11:35 ET); SMH -4.0% but flat for the last hour. MR on in principle (Tier B) but no candidate passes written gates; one momentum position.",
     "chips": [
       "SPY -0.8%",
-      "MOD long +0.3%",
+      "MOD long +0.0%",
       "1 trade"
     ]
   }
@@ -12450,4 +12454,13 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - MR scan (cap>=5B, <=-5%, RSI<35): IREN only (-8.8%, RSI 34.6): company-specific/AI-hardware downtrend, fails Gates 2/4 as logged previously. No entry.
 - News: WebSearch for same-day market wrap returned only older (2025) articles; no usable Nov 13, 2026 midday coverage. Disclosed: no fresh headline check on Samsung/Modine denial this cycle (risk stays open).
 - Decision: HOLD MOD; no new entry. Trades today: 1. Plan: exit by ~15:50 ET unless an explicit hold decision is logged.
+
+### Cycle 1038 - 2026-11-13 13:27 ET (10-min trigger fired 13:23 ET; last cycle 13:14, dedupe passed)
+- Reconcile: MOD 0.754397 sh @ 139.18, no open orders, cash $295.54, equity $400.57 (breaker level $394.19, $6.38 of room).
+- Stop check (MOD, first): last 139.22 (bid 139.07/ask 139.35), $2.72 above stop 136.50. 5-min bars: 18:10 closed 139.515, 18:15 closed 139.745 (lows 139.27/139.40 stay above the 138.32/139.23 base). No invalidation. HOLD.
+- Tape: SPY 751.36 (-0.8%), QQQ 676.46 (-1.7%), SMH 481.43 (-4.0%), IWM 276.71 (-0.6%). SPY no new low. Regime: Stable-ish.
+- Momentum scan (8 names): MOD (held), CBRS +10.9% (no catalyst identified, skip), VKTX +4.9% RVOL 1.08 (<1.3 fail), KLAR RVOL 1.22, NU 1.16, CLBT 1.25 (all <1.3 fail), BZ and WSE foreign ADRs (fail). No entry.
+- MR scan (Tier B sweep, 36 names): almost all AI/semis/hardware (SNDK, MU, LITE, STX, AMAT, DELL, MRVL, NBIS, CRDO etc.) plus HOOD, INTC, IREN, NIO, CAI. Spot-checked 10-min bars for HOOD, INTC, MRVL, NBIS: flat to slightly higher lows for ~1h (stabilizing) but none has a verified written pass on Gate 1 (dated external cause vs company-specific), Gate 2 (latest fundamental datapoint) or Gate 3 (named anchor >=2R) - no per-name news/fundamentals check was run this cycle, only the 13:14 hourly market search which returned nothing usable. Per rules, unverified = no trade. These were not exhaustively gate-checked; disclosed as a limitation, not as clean fails. HOOD -4% vs SPY -0.8% looks company-specific (likely Gate 1 fail); IREN fails Gates 2/4 as before. Extra consideration: another AI-complex long would stack correlated risk on MOD with only $6.38 to the breaker.
+- Follow-up to fill later: HOOD 78.20, INTC 58.82, MRVL 154.65, NBIS 116.34 at 13:20 ET.
+- Decision: no new entry. Trades today: 1 (minimum met).
 
