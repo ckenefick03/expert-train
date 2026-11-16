@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 10:06 ET",
+  "as_of": "2026-11-16 10:19 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 16 10:06 ET: FLAT, cash/equity $399.19. SPY -1.2% making new lows each 5-min bar; regime FALLING; MR off. No qualifying setup.",
+  "status_note": "Nov 16 10:19 ET: FLAT, cash/equity $399.19. SPY -1.35% on new lows; regime FALLING; MR off; momentum gap names (TSN, CGON) fading. No qualifying setup.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-16",
@@ -4177,6 +4177,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-16 10:06 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 10:19 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4387,10 +4391,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Falling and accelerating: SPY 745.51 (-1.17%), new session lows each 5-min bar (746.45 at 09:55 ET, lower since); QQQ -2.0%, SMH -4.3%, IWM -1.0%, NVDA -2.0%. MR off (no stabilization). Momentum only for non-fading catalyst gaps after 10:30 ET.",
+    "read": "Falling: SPY 744.23 (-1.35%), still making new session lows (744.34 at 10:05 ET, lower since); QQQ -2.3%, SMH -4.5%, IWM -1.2%. Cause: continuation of the AI-complex selloff that began Nov 5 (AP: S&P worst day since April 2025). Multi-week downtrend = MR Gate 4 FAIL for AI names. MR off; momentum gap names fading.",
     "chips": [
-      "SPY -1.2%",
-      "SMH -4.3%",
+      "SPY -1.4%",
+      "SMH -4.5%",
       "Flat",
       "Regime: falling"
     ]
@@ -12749,4 +12753,12 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum sweep (cap>=2B, >=+4%, RVOL>=0.3 because the sweep is blind before 11:00 ET): CGON +12.7% (RVOL 2.2, off +28% pre-market high but holding +12%; catalyst unsourced; biotech), TSN +9.8% (RVOL 0.47 vs the 1.3 minimum, below 10:30 ET, earnings Mon am), HTHT +8.2% and XPEV +6.2% (China ADRs, foreign: fail), TU +11.7% (RVOL 2.07; Canadian ADR with an unsourced catalyst: fail). No entry (window opens 10:30 ET).
 - No news search this cycle (hourly search due 10:17 ET; nothing would otherwise pass).
 - Decision: no action. Trades today: 0 (minimum is 1; no gate relaxed to meet it).
+
+### Cycle 1061 - 2026-11-16 10:19 ET (hourly trigger fired 10:16 ET, scheduled 10:12 ET; last commit 10:06 ET, dedupe passed)
+- Reconcile: positions empty, no open orders, cash/equity $399.19 (breaker level $394.19, $5.00 room).
+- Tape (10:16 ET): SPY 744.23 (-1.35%), QQQ 664.39 (-2.28%), SMH 464.79 (-4.51%), IWM 274.32 (-1.16%), NVDA 159.72 (-1.9%). SPY 5-min: 09:55 close 746.51; 10:00 close 744.97 (low 744.76); 10:05 close 744.94 (low 744.34, new session low); 10:10 close 745.00 (low 744.43). Lower low on each of the last three bars until the 10:10 bar; no sequence of higher lows. SMH: 10:00 low 464.54, 10:05 low 462.61 (new low), 10:10 low 464.00 (higher low, first). Regime: FALLING (framework 4.1). MR OFF.
+- News (WebSearch standard, this hour): the only 2026 sources were AP syndications dated 2026-11-05 ("A brutal sell-off for AI stocks sends Wall Street reeling; S&P 500 sees worst day since 2025 'Liberation Day' tariffs", Fox5/WDBJ/KBTX URLs) and a Trefis piece dated 2026-11-06 on Nvidia's drop; no source dated 16 Nov and none confirms the Nvidia-CEO story. Read: today's weakness continues the AI-complex selloff that began Nov 5, i.e. a roughly 2-week downtrend in the AI hardware names; that is MR Gate 4 FAIL for AI/semis candidates (SNDK, INTC, NBIS and peers) regardless of the dated sector cause, which is sourced to Nov 5, not today. Disclosed that no same-day wrap was found for the fifth time.
+- Skipped-candidate follow-ups: TSN 63.26 (+7.6%, faded from the 65.28 high at 09:53 ET, -$2.02 from the high, still above prior close 58.82, VWAP not checked); CGON 80.42 (+8.1%, faded from +28% pre-market and from +12.7% at 10:03 ET): the gap is FADING, fails the momentum non-fading test. No re-entry candidates.
+- Scans: not re-run this cycle (10:03 ET sweeps just logged; momentum window opens 10:30 ET and the next cycle runs it with the RVOL filter). No entry.
+- Decision: no action. Trades today: 0.
 
