@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 08:46 ET",
+  "as_of": "2026-11-16 08:57 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 16 08:46 ET (pre-market): FLAT, cash/equity $399.19. Pre-market SPY -0.6%, SMH -3.8%. No entries possible before 10:00 ET.",
+  "status_note": "Nov 16 08:57 ET (pre-market): FLAT, cash/equity $399.19. Pre-market SPY -0.7%, SMH -4.1%. No entries possible before 10:00 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-16",
@@ -4144,6 +4144,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-16 08:46 ET",
+      "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 08:57 ET",
       "equity": 399.19
     }
   ],
@@ -12666,4 +12670,9 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Before the 10:00 ET entry window: reconcile only, no scans, no entries. Positions empty, no open orders, cash/equity $399.19 (breaker level $394.19, $5.00 room).
 - Pre-market tape (vs Friday closes): SPY 749.53 (-0.64%), QQQ 670.77 (-1.35%), SMH 467.97 (-3.85%), IWM 276.24 (-0.48%), NVDA 157.42 (-3.3%). Slightly less bad than the 08:31 ET reading (SPY 748.91, SMH 467.06).
 - Decision: no action. The 09:42/10:00 ET cycles begin the scan work; regime still "falling" at the open.
+
+### Cycle 1053 - 2026-11-16 08:57 ET (10-min trigger fired 08:55 ET, scheduled 08:52 ET; last commit 08:44 ET, dedupe passed)
+- Before the 10:00 ET entry window: reconcile only, no scans, no entries. Positions empty, no open orders, cash/equity $399.19 (breaker level $394.19, $5.00 room).
+- Pre-market tape (vs Friday closes): SPY 748.97 (-0.71%), QQQ 670.01 (-1.46%), SMH 466.57 (-4.14%), IWM 276.17 (-0.50%), NVDA 156.58 (-3.8%). Selling pressure back to the 08:31 ET level; no stabilization yet.
+- Decision: no action. First real scan cycle is the ~09:12/10:02 ET trigger.
 
