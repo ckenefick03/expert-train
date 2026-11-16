@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 12:36 ET",
+  "as_of": "2026-11-16 12:46 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, 0 trades today. Regime Falling (new SPY session low 743.18 at 12:25 ET): MR off. Breaker level $394.19 ($5.00 room).",
+  "status_note": "Flat, 0 trades today. Regime Falling (SPY new low 742.94 at 12:35 ET): MR off. Breaker level $394.19 ($5.00 room).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-16",
@@ -4237,6 +4237,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-16 12:36 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 12:46 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4447,7 +4451,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "FALLING: SPY 743.43 (-1.45%), new session low 743.18 (12:25 ET bar) below the 743.31 low from 10:25. SMH -4.2%, QQQ -2.2%. MR off; momentum only for a fresh non-fading catalyst gap.",
+    "read": "FALLING: SPY 743.47 (-1.45%), session low 742.935 (12:35 ET bar), lower lows since 12:15. SMH -4.1%, QQQ -2.1%. MR off; momentum only for a fresh non-fading catalyst gap.",
     "chips": [
       "SPY -1.1%",
       "SMH -3.5%",
@@ -12935,3 +12939,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - MR sweep (shown for the record, MR is off in a Falling regime): 25 names, same set plus SQM -3.9% (RSI 34.9). All would also fail Gates 1 and 4 as in Cycle 1074.
 - No WebSearch this cycle (not hourly; no candidate would otherwise pass).
 - Decision: NO TRADE. Trades today 0; minimum unmet; no gate relaxed. Tier C 14:30-15:30 ET is the last window, but in a Falling regime MR stays off and any entry still needs every gate; flat before the bell (NVDA reports Tue after close).
+
+### Cycle 1076 - 2026-11-16 12:46 ET (Tier B, regime FALLING)
+- Dedupe passed (last commit 17:33:55Z vs trigger 17:43:41Z). Reconcile: no positions, no open orders, equity/cash $399.19 (breaker $394.19, room $5.00).
+- Tape 12:43 ET: SPY 743.47 (-1.45%), QQQ 665.43 (-2.13%), SMH 466.59 (-4.1%), IWM 274.03 (-1.27%), NVDA 156.89 (-3.7%). SPY 5-min lows 743.18 (12:25), 743.17 (12:30), 742.935 (12:35): another new session low. Still Falling; MR off.
+- Momentum sweep (>=+3%, RVOL>=1.0): POWL +6.8% (fading from +8.8%, no sourced catalyst: FAIL), CGON +16.7% (RVOL 5.1; unsourced biotech catalyst, gap off +28% pre-mkt: FAIL), TSN +7.5% (no sourced catalyst: FAIL), HTHT +10.0% / XPEV +5.7% (China ADRs: FAIL), MBGL +5.5% (no catalyst identified: FAIL), TU +9.3% (Canadian ADR, unsourced: FAIL). None qualifies.
+- MR sweep (for the record; MR off): 26 names. New: NVDA -3.6% (RSI 24.9, cap $3.9T), which is also excluded by the earnings rule (reports Tue Nov 17 after the close, within 2 trading days) and is an AI-complex name in a multi-week selloff. Rest unchanged and fail Gates 1 and 4.
+- No WebSearch this cycle (not hourly; nothing would otherwise pass).
+- Decision: NO TRADE. Trades today 0; minimum unmet; no gate relaxed. Tier C 14:30-15:30 ET is the last window; flat before the bell.
