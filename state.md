@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 14:06 ET",
+  "as_of": "2026-11-16 14:16 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, 0 trades today. Regime Stabilizing (marginal, 3 higher lows off 738.73): MR on, no candidate passes. Breaker level $394.19 ($5.00 room).",
+  "status_note": "Flat, 0 trades today. Bounce stalling (lower 5-min lows again, no new session low). No candidate passes. Breaker level $394.19 ($5.00 room).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-16",
@@ -4273,6 +4273,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-16 14:06 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 14:16 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4483,7 +4487,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "STABILIZING (marginal): SPY 741.15 (-1.75%), lows 738.73, 739.14, 739.69, 741.39 (3 higher lows) then 741.10 (above prior lows), no new session low since 13:35 ET. SMH -4.5%, QQQ -2.4%. MR eligible but names fail Gates 1 and 4.",
+    "read": "RANGE/SOFT, bounce stalling: SPY 740.90 (-1.78%); 5-min lows 741.39, 741.10, 740.65, 740.56 are lower again but above the 738.73 session low. Stabilization lapsed (not 3 higher lows). SMH -4.3%, QQQ -2.3%. Treat MR as not confirmed.",
     "chips": [
       "SPY -1.1%",
       "SMH -3.5%",
@@ -13043,3 +13047,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - MR sweep (<=-3.5%, RSI<35): 31 names. Gate 1 (sourced dated sector/macro cause this cycle) fails for all: no source found for any of them today (searches in Cycles 1072, 1073, 1079 returned no Nov 16 content, and no same-day source is available for the oil/LatAm, metals, China ADR or industrial names). Gate 4 (not a multi-week downtrend) fails for AI/semis/software/crypto (SNDK, DDOG, RDDT, COIN, MSTR, HOOD, CRCL, IREN, INTC, MCHP; RSI 31-35 after a multi-week selloff), oil/LatAm (PBR, YPF, VIST, GGAL, BBD/BBDO: RSI 25-32), NVDA (excluded by earnings Tue after the close). Company-specific/unverified: NTRA -8.0%, CORT, ARWR, CAI, NIO, CTVA, STLA, CMI -3.6%, BABA, SQM. None passes; marginal stabilization does not relax any gate.
 - No WebSearch this cycle (hourly cycle at ~14:12 ET will include one; nothing would otherwise pass).
 - Decision: NO TRADE. Trades today 0; minimum unmet; no gate relaxed. Tier C 14:30-15:30 ET is the last window; flat before the bell (NVDA reports Tue after close).
+
+### Cycle 1085 - 2026-11-16 14:16 ET (hourly trigger, Tier B, regime RANGE/SOFT)
+- Dedupe passed (last commit 19:03:09Z vs trigger 19:13:38Z). Reconcile: no positions, no open orders, equity/cash $399.19 (breaker $394.19, room $5.00).
+- Tape 14:13 ET: SPY 740.90 (-1.78%), QQQ 663.98 (-2.34%), SMH 465.65 (-4.3%), IWM 273.03 (-1.62%), NVDA 156.18 (-4.1%), XLE 63.80 (-1.8%), XLK 165.44 (-2.9%). SPY 5-min lows: 13:50 741.39, 13:55 741.10, 14:00 740.65, 14:05 740.56 (lower lows again), closes 741.56/741.76/741.09/741.07, no new session low (738.73 at 13:35). The run of 3 higher lows I logged in Cycle 1084 has not extended: the last three lows descend, so the Stabilizing read lapses; regime = Range/soft, MR not confirmed.
+- Momentum sweep (>=+3%, RVOL>=1.0): POWL +6.5% (no sourced catalyst: FAIL), CGON +13.9% (unsourced: FAIL), TSN +6.6% (no sourced catalyst: FAIL), GXO +4.4% (RVOL 1.09 < 1.3, no catalyst: FAIL), HTHT +8.9% / XPEV +3.9% (China ADRs: FAIL), MBGL +5.1% (no catalyst identified: FAIL), TU +10.7% (Canadian ADR: FAIL), PS +6.0% (thin 453k shares: FAIL), PLBL +4.4% (thin, foreign: FAIL), new STWD +3.4% (Starwood Property Trust, RVOL 1.00, a rate-sensitive REIT, no catalyst: FAIL). None qualifies.
+- MR sweep (<=-3.5%, RSI<35): 32 names; new ALNY -3.6% (RSI 34.6, biotech, no sourced cause: FAIL). Same character as Cycle 1084: AI/semis/software/crypto and oil/LatAm fail Gate 4, all fail Gate 1 (no same-day sourced cause). NVDA excluded by earnings.
+- WebSearch (hourly): "stocks Nvidia earnings Tuesday AI selloff Wall Street Monday afternoon Nasdaq sinks" returned no Nov 16 wrap. Only relevant dated item: roic.ai "Nvidia slides into the red for 2026 as AI selloff intensifies" dated 11-05-2026 (Nov 5), plus a Nov 2026 item attributing the NVDA rout to financing costs, data-center construction risk and political uncertainty (undated within November in the snippet). This supports that the AI weakness is a multi-week trend (Gate 4 FAIL for AI/semis names), but gives no sourced same-day cause (Gate 1). Limitation logged again.
+- Decision: NO TRADE. Trades today 0; minimum unmet; no gate relaxed. Tier C opens 14:30 ET (last window to 15:30); flat before the bell (NVDA reports Tue after close).
