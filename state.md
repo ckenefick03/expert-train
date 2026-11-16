@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 12:56 ET",
+  "as_of": "2026-11-16 13:06 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, 0 trades today. Regime Falling (SPY new low 742.755 at 12:45 ET): MR off. Breaker level $394.19 ($5.00 room).",
+  "status_note": "Flat, 0 trades today. Regime Falling (SPY new low 742.70 at 12:55 ET): MR off. Breaker level $394.19 ($5.00 room).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-16",
@@ -4245,6 +4245,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-16 12:56 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 13:06 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4455,7 +4459,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "FALLING: SPY 743.34 (-1.46%), session low 742.755 (12:45 ET bar), repeated new lows since 12:25. SMH -4.2%, QQQ -2.1%. MR off; momentum only for a fresh non-fading catalyst gap.",
+    "read": "FALLING: SPY 742.41 (-1.58%), session low 742.70 (12:55 ET bar) with the last print below it. SMH -4.6%, QQQ -2.3%. MR off; momentum only for a fresh non-fading catalyst gap.",
     "chips": [
       "SPY -1.1%",
       "SMH -3.5%",
@@ -12958,4 +12962,12 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum sweep (>=+3%, RVOL>=1.0): POWL +6.6% (fading, no sourced catalyst: FAIL), CGON +16.5% (RVOL 5.2; unsourced biotech catalyst: FAIL), TSN +7.6% (no sourced catalyst: FAIL), HTHT +10.0% / XPEV +5.8% (China ADRs: FAIL), MBGL +5.3% (no catalyst identified: FAIL), TU +8.7% (Canadian ADR, unsourced: FAIL), new PS +6.1% (Pershing Square Inc., RVOL 1.02, 382k shares traded; no catalyst researched, fails the 1M avg-volume/$20M-dollar-volume liquidity test on its thin tape: FAIL). None qualifies.
 - MR sweep (for the record; MR off): 26 names, same set as Cycle 1076, including NVDA (excluded: earnings Tue after close). All fail Gates 1 and 4.
 - No WebSearch this cycle (not hourly; nothing would otherwise pass).
+- Decision: NO TRADE. Trades today 0; minimum unmet; no gate relaxed. Tier C 14:30-15:30 ET is the last window; flat before the bell.
+
+### Cycle 1078 - 2026-11-16 13:06 ET (Tier B, regime FALLING)
+- Dedupe passed (last commit 17:53:35Z vs trigger 18:03:00Z). Reconcile: no positions, no open orders, equity/cash $399.19 (breaker $394.19, room $5.00).
+- Tape 13:03 ET: SPY 742.41 (-1.58%), QQQ 664.01 (-2.33%), SMH 464.42 (-4.6%), IWM 273.61 (-1.41%), NVDA 156.01 (-4.2%). SPY 5-min: 12:50 low 743.17, 12:55 low 742.70 / close 742.945; the last print 742.41 is below the 12:55 low, so another new session low. Regime Falling; MR off; no sign of stabilization (no higher lows).
+- Momentum sweep (>=+3%, RVOL>=1.0): POWL +7.2% (no sourced catalyst: FAIL), CGON +16.7% (unsourced biotech: FAIL), TSN +7.5% (no sourced catalyst: FAIL), HTHT +10.3% / XPEV +5.5% (China ADRs: FAIL), MBGL +5.3% (no catalyst identified: FAIL), TU +8.5% (Canadian ADR, unsourced: FAIL), PS +5.7% (thin volume 387k shares: FAIL). None qualifies; no fresh sourced catalyst gap.
+- MR sweep (for the record; MR off): 26 names, same set as Cycle 1077; NVDA -4.2% excluded by earnings (Tue after close). All fail Gates 1 and 4.
+- No WebSearch this cycle (hourly search ran at 12:13 ET, Cycle 1073; nothing would otherwise pass).
 - Decision: NO TRADE. Trades today 0; minimum unmet; no gate relaxed. Tier C 14:30-15:30 ET is the last window; flat before the bell.
