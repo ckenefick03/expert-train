@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 09:28 ET",
+  "as_of": "2026-11-16 09:34 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 16 09:28 ET (pre-market): FLAT, cash/equity $399.19. Pre-market SPY -0.6%, SMH -3.4%. Market opens 09:30 ET; entries not before 10:00 ET.",
+  "status_note": "Nov 16 09:34 ET: FLAT, cash/equity $399.19. Open: SPY -0.8%, SMH -4.1%. Entries not before 10:00 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-16",
@@ -4161,6 +4161,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-16 09:28 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 09:34 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4371,12 +4375,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Pre-open: risk-off, AI/semis and crypto-linked names gapping down again (SMH -4.0%, NVDA -3.8%, BTC proxies -6 to -8%). Regime = falling until SPY stops making new session lows: MR off, momentum only for a fresh, non-fading catalyst gap.",
+    "read": "Open: risk-off. SPY 748.51 (-0.78%), QQQ -1.55%, SMH -4.1%, NVDA -2.3%. Falling regime until SPY stops making new session lows. No entries before 10:00 ET.",
     "chips": [
-      "SPY -0.7% pre",
-      "SMH -4.0% pre",
-      "Flat",
-      "NVDA earnings Tue pm"
+      "SPY -0.8%",
+      "SMH -4.1%",
+      "Flat"
     ]
   }
 }
@@ -12703,4 +12706,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Two minutes before the open: reconcile and tape only. Positions empty, no open orders, cash/equity $399.19 (breaker level $394.19, $5.00 room).
 - Pre-market tape (vs Friday closes): SPY 749.62 (-0.63%), QQQ 671.45 (-1.25%), SMH 470.00 (-3.4%), IWM 276.35 (-0.43%), NVDA 158.28 (-2.8%). Semis still the weak spot, slightly less so.
 - Decision: no action. The regime read at the open decides MR vs momentum; first possible MR entry 10:00 ET.
+
+### Cycle 1057 - 2026-11-16 09:34 ET (10-min trigger fired 09:32 ET; last commit 09:26 ET, dedupe passed)
+- Two minutes into the session: reconcile and tape only. Positions empty, no open orders, cash/equity $399.19 (breaker level $394.19, $5.00 room).
+- Tape at 09:32 ET: SPY 748.51 (-0.78%), QQQ 669.34 (-1.55%), SMH 466.82 (-4.09%), IWM 276.08 (-0.53%), NVDA 159.10 (-2.3%). Opening weaker than the pre-market read for the indices; semis unchanged at about -4%.
+- Data note: a 5-minute bars request failed (HTTP 400, "end must be after start") because no completed 5-minute bar existed yet; no regime structure read this cycle. Disclosed.
+- Regime: FALLING (open near the lows). MR off; momentum only on a fresh non-fading catalyst gap after 10:30 ET. No scans this cycle (nothing can be entered before 10:00 ET).
+- Decision: no action.
 
