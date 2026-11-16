@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 11:27 ET",
+  "as_of": "2026-11-16 11:36 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 16 11:27 ET: FLAT, cash/equity $399.19. SPY -1.05% range-bound; no change in candidates since 11:15 ET. 0 trades today.",
+  "status_note": "Flat, 0 trades today. Tier B open; no candidate passes all gates. Breaker level $394.19 ($5.00 room).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-16",
@@ -4209,6 +4209,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-16 11:27 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 11:36 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4419,7 +4423,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Stabilizing/range: SPY 746.44 (-1.05%), range 744.85-747.36 since 10:45 ET; SMH 469.62 (-3.5%) higher lows 466.33 at 11:15. MR allowed by regime; no candidate with a sourced cause.",
+    "read": "Stabilizing: SPY 746.51 (-1.04%), 4 higher 5-min lows since 11:10, no new session low since 10:25. SMH -3.3%, QQQ -1.55%.",
     "chips": [
       "SPY -1.1%",
       "SMH -3.5%",
@@ -12850,3 +12854,12 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Scans: the full MR (RSI<35, cap>=5B) and momentum sweeps were run at 11:15 ET, 7 minutes earlier (9 MR names, 3 momentum names, all FAIL Gate 1 or the foreign-ADR rule). Not re-run in this cycle because nothing about the sourcing situation changed and prices moved <0.3% on SPY; disclosed skip. The Tier A window ends at 11:30 ET; Tier B (>=3.5% intraday, RSI<45) from 11:30 ET covers a wider set that still needs a sourced dated cause and a higher low at the name.
 - Decision: no entry. Trades today: 0.
 
+
+### Cycle 1069 - 2026-11-16 11:36 ET (Tier B open, regime Stabilizing)
+- Reconcile: positions none, open orders none, equity/cash $399.19 (breaker $394.19, room $5.00). Dedupe passed (last commit 16:22Z vs trigger 16:32Z).
+- Tape 11:32 ET: SPY 746.51 (-1.04%), QQQ 669.34 (-1.55%), SMH 470.72 (-3.3%), IWM 274.84 (-0.97%), NVDA 159.87 (-1.8%). SPY 5-min lows 744.85/745.04/746.02/746.25 (higher lows), SMH lows also rising. Regime: Stabilizing; MR and momentum nominally on.
+- Momentum sweep (>=+3%, RVOL>=1.0): CGON +11.8% (unsourced biotech catalyst, faded from +28% pre-mkt: FAIL), HTHT +10.0% and XPEV +6.1% (China ADRs: foreign ADR FAIL), TU +10.4% (Canadian ADR, no sourced catalyst: FAIL). None qualifies.
+- MR sweep (<=-3.5%, RSI<32): DDOG, CRCL, CAI (AI/software/crypto multi-week downtrend: Gate 4 FAIL, no sourced same-day cause: Gate 1 FAIL); CORT, ARWR, VIST (company-specific/unverified: Gate 1 FAIL); YPF, PBR, PBR.A (oil-linked: XLE 64.04 -1.4%, XOP -1.8%, USO -2.5%, EWZ -3.1% confirm a sector-wide oil/Brazil move on the tape, but my WebSearch returned only older Mondays (Oct 19, Sep 21/28), no Nov 16 source, so the cause is unverified: Gate 1 FAIL; RSI 25-29 also suggests multi-week downtrend); NIO (China ADR, unsourced: FAIL).
+- Other ETFs: GDX -1.8%, XBI -1.3%, IGV -1.1%, BITO -6.0% (crypto leading weakness).
+- Search (disclosed): the oil/LatAm WebSearch did not return a same-day source; limitation logged again.
+- Decision: NO TRADE. Trades today 0, minimum unmet; no gate relaxed. Tier C (14:30-15:30 ET) remains the last window; any trade must pass every gate and be flat before the bell (NVDA reports Tue after close).
