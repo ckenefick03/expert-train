@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 14:56 ET",
+  "as_of": "2026-11-16 15:06 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, 0 trades today. Regime Falling (new SPY low 738.07 at 14:45 ET, now bouncing). Tier C open to 15:30 ET; no candidate passes. Breaker level $394.19 ($5.00 room).",
+  "status_note": "Flat, 0 trades today. Tier C open to 15:30 ET (~24 min); no candidate passes. Breaker level $394.19 ($5.00 room).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-16",
@@ -4293,6 +4293,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-16 14:56 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 15:06 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4503,7 +4507,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "FALLING: new session low 738.07 (14:45 ET bar) on 279k volume, SPY now 739.80 (-1.93%) after a 1.7-pt bounce in the last few minutes. SMH -4.3%, QQQ -2.5%. MR off until higher lows form.",
+    "read": "FALLING with bounce: SPY 740.14 (-1.88%); session low 738.07 (14:45 ET), then higher 5-min lows 738.67 and 740.27. SMH -4.4%, QQQ -2.5%. Two higher lows only; MR still not confirmed.",
     "chips": [
       "SPY -1.1%",
       "SMH -3.5%",
@@ -13106,3 +13110,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - No WebSearch this cycle (hourly search runs ~15:12 ET; nothing would otherwise pass).
 - Tier C status: ~34 minutes to the 15:30 ET cutoff. No candidate passes every gate; no forced entry placed; no gate relaxed.
 - Decision: NO TRADE. Trades today 0; minimum unmet; flat before the bell (NVDA reports Tue after close).
+
+### Cycle 1090 - 2026-11-16 15:06 ET (Tier C open, regime FALLING with bounce)
+- Dedupe passed (last commit 19:53:16Z vs trigger 20:02:53Z). Reconcile: no positions, no open orders, equity/cash $399.19 (breaker $394.19, room $5.00).
+- Tape 15:03 ET: SPY 740.14 (-1.88%), QQQ 663.19 (-2.45%), SMH 465.19 (-4.4%), IWM 272.97 (-1.65%), NVDA 155.98 (-4.2%). SPY 5-min: 14:45 low 738.07 (session low), 14:50 low 738.67 / close 740.52 (253k), 14:55 low 740.27 / close 740.755 (111k, fading volume). Two higher lows, no new low in 15 minutes. That is short of ~3 higher lows, so Stabilizing is not confirmed; regime stays Falling-with-bounce, MR off.
+- Momentum sweep (>=+3%, RVOL>=1.0): 16 names. New: MOH +8.8% (Molina Healthcare, cap $10.9B, price 228, volume 1.0M, RVOL 1.09). MOH is the one name that moved on a real gap on a -1.9% tape, about 10.7 points above SPY, but it fails the RVOL >= 1.3 test (1.09) and I have no sourced same-day catalyst (not searched this cycle; the sweep arrived late in Tier C and the RVOL fail alone blocks it). I did not treat a marginal RVOL as a pass. Also new: STWD +3.0% (REIT, RVOL 1.19: FAIL), SEZL +3.7% (RVOL 1.02: FAIL). Repeats fail as before: POWL +7.4% (RVOL 2.17, no sourced catalyst), CGON +15.5% (unsourced), TSN +7.1% (no sourced catalyst), GXO +3.8% (RVOL 1.21), HTHT +9.0% / XPEV +4.0% / BEKE +5.2% (China ADRs), MBGL +4.4% (no catalyst identified), TU +11.6% (Canadian ADR), PS +4.4% (thin 524k), KVYO +4.1% (RVOL 1.14), TIGO +3.4% (foreign), PLBL +3.9% (thin, foreign). None qualifies.
+- MR sweep (for the record; MR off): 29 names; new ILMN -3.7% (RSI 35.0, no sourced cause). Same character: all fail Gates 1 and 4; NVDA excluded by earnings.
+- No WebSearch this cycle (hourly search runs ~15:12 ET). With ~24 minutes left to the 15:30 ET entry cutoff, a trade entered after the 15:12 search would still need to pass all gates and be flat by ~15:50 ET.
+- Decision: NO TRADE. Trades today 0; minimum unmet; no gate relaxed.
