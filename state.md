@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 15:06 ET",
+  "as_of": "2026-11-16 15:16 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, 0 trades today. Tier C open to 15:30 ET (~24 min); no candidate passes. Breaker level $394.19 ($5.00 room).",
+  "status_note": "Flat, 0 trades today. Tier C closes 15:30 ET (~14 min); no candidate passes. Breaker level $394.19 ($5.00 room).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-16",
@@ -4297,6 +4297,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-16 15:06 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 15:16 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4507,7 +4511,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "FALLING with bounce: SPY 740.14 (-1.88%); session low 738.07 (14:45 ET), then higher 5-min lows 738.67 and 740.27. SMH -4.4%, QQQ -2.5%. Two higher lows only; MR still not confirmed.",
+    "read": "FALLING/range: SPY 739.36 (-1.99%), session low 738.07 (14:45 ET); 5-min lows 740.27, 739.94, 739.87 (lower again). SMH -4.9%, QQQ -2.6%. MR off.",
     "chips": [
       "SPY -1.1%",
       "SMH -3.5%",
@@ -13118,3 +13122,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - MR sweep (for the record; MR off): 29 names; new ILMN -3.7% (RSI 35.0, no sourced cause). Same character: all fail Gates 1 and 4; NVDA excluded by earnings.
 - No WebSearch this cycle (hourly search runs ~15:12 ET). With ~24 minutes left to the 15:30 ET entry cutoff, a trade entered after the 15:12 search would still need to pass all gates and be flat by ~15:50 ET.
 - Decision: NO TRADE. Trades today 0; minimum unmet; no gate relaxed.
+
+### Cycle 1091 - 2026-11-16 15:16 ET (hourly trigger, Tier C, regime FALLING/range)
+- Dedupe passed (last commit 20:03:21Z vs trigger 20:12:36Z). Reconcile: no positions, no open orders, equity/cash $399.19 (breaker $394.19, room $5.00).
+- Tape 15:13 ET: SPY 739.36 (-1.99%), QQQ 661.99 (-2.63%), SMH 463.02 (-4.9%), IWM 272.67 (-1.76%), NVDA 155.67 (-4.4%). SPY 5-min: 14:55 low 740.27, 15:00 low 739.94, 15:05 low 739.87 (lower lows, the bounce off 738.07 has faded), no new session low. Two higher lows from 14:50 became three lower lows, so Stabilizing did not form. Regime Falling/range; MR off.
+- Momentum sweep (>=+3%, RVOL>=1.0): 16 names. MOH +9.2% (Molina Healthcare, 228.74 vs 209.49 prior close, RVOL 1.17 < 1.3). Hourly WebSearch on MOH: found only older context (Nov 4 election-day sector jump of 8.9% for Molina, a Nov 5 Trefis note that Molina is up ~72% since Feb 6 and that management sees the start of a Medicaid margin turn but lowered its 2027 premium revenue outlook on delayed Georgia/Texas contracts). Nothing sourced for Nov 16, so the cause of today's +9.2% gap is unverified: Gate 2 (real cited catalyst) FAILS and RVOL 1.17 is below the 1.3 minimum: FAIL. I did not treat the marginal RVOL as a pass. Others unchanged and fail: POWL +6.8% (RVOL 2.24, no sourced catalyst), CGON +14.2% (unsourced), TSN +7.0% (no sourced catalyst), GXO +4.0% (RVOL 1.23 < 1.3), HTHT +8.9% / XPEV +3.9% / BEKE +5.2% (China ADRs), MBGL +4.3% (no catalyst identified), TU +10.9% (Canadian ADR), PS +3.7% (thin 537k), KVYO +3.5% (RVOL 1.17), TIGO +3.7% (foreign), STWD +3.1% (RVOL 1.25), SEZL +3.6% (RVOL 1.04), PLBL +4.1% (thin, foreign). None qualifies.
+- MR sweep (for the record; MR off): 31 names (ILMN, ALNY back on the list at -3.8%). All fail Gates 1 and 4 as before; NVDA -4.4% excluded by earnings (Tue after the close). The hourly search found no Nov 16 market wrap again; limitation logged.
+- Tier C status: about 14 minutes to the 15:30 ET cutoff. No candidate passes every gate; no forced entry placed; no gate relaxed. After this, the close-recap cycle (~15:47 ET) will state the day's result and the overnight status.
+- Decision: NO TRADE. Trades today 0; minimum unmet; flat before the bell (NVDA reports Tue after close).
