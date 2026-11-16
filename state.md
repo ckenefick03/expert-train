@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 12:06 ET",
+  "as_of": "2026-11-16 12:16 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -4225,6 +4225,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-16 12:06 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 12:16 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4435,7 +4439,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Range, soft: SPY 744.89 (-1.25%), 5-min lows 745.06/744.43/744.61, above the 743.31 session low (10:25 ET). SMH -3.8%, QQQ -1.86%.",
+    "read": "Range, soft: SPY 744.42 (-1.32%), 5-min lows sliding (744.43/744.61/744.53/744.32), still above the 743.31 session low. SMH -3.9%, QQQ -1.93%.",
     "chips": [
       "SPY -1.1%",
       "SMH -3.5%",
@@ -12898,4 +12902,12 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum sweep (>=+3%, RVOL>=1.0): POWL +8.8% (no sourced catalyst: FAIL), CGON +11.9% (unsourced, faded from pre-mkt high: FAIL), TSN +6.5% (no sourced catalyst: FAIL), HTHT +10.6% / XPEV +6.4% (China ADRs: FAIL), TU +10.3% (Canadian ADR, unsourced: FAIL), LFTO +3.7% (recent IPO, no catalyst: FAIL). None qualifies.
 - MR sweep (<=-3.5%, RSI<35): 23 names, same set as Cycle 1071 (SNDK, NTRA -7.9%, DDOG, SCCO, COIN, MSTR, RDDT, HOOD, CORT, MCHP, CRCL, INTC, VIST, ARWR, YPF, CAI, PBR, IREN, PBR.A, PSLV, VALE, NIO, BBD). AI/semis/crypto names fail Gate 4 (multi-week downtrend) and Gate 1; oil/LatAm/metals names lack a same-day sourced cause (Gate 1 FAIL); NTRA, CORT, ARWR, CAI, NIO company-specific/unverified (FAIL).
 - Hourly WebSearch ("stock market today November 16 2026"): returned no Nov 16 content. Latest items were Nov 9-10, with conflicting figures (S&P +2.35% on Nov 9 vs -0.38% on Nov 10 from one source), so I can't source anything for today and treat it as unverified. Limitation logged again; no cause for any dislocation was established.
+- Decision: NO TRADE. Trades today 0; minimum unmet; no gate relaxed. Tier C 14:30-15:30 ET is the last window; flat before the bell (NVDA reports Tue after close).
+
+### Cycle 1073 - 2026-11-16 12:16 ET (hourly-trigger cycle, Tier B, regime Range/soft)
+- Dedupe passed (last commit 17:03:22Z vs trigger 17:13:25Z, 10 min). Reconcile: no positions, no open orders, equity/cash $399.19 (breaker $394.19, room $5.00).
+- Tape 12:13 ET: SPY 744.42 (-1.32%), QQQ 666.79 (-1.93%), SMH 468.00 (-3.9%), IWM 274.30 (-1.17%), NVDA 158.26 (-2.8%). SPY 5-min lows 744.43, 744.61, 744.53, 744.32 (12:05 bar): flat-to-lower, 1.0 above the 743.31 session low; no new low, no higher lows either. Regime Range/soft.
+- Momentum sweep (>=+3%, RVOL>=1.0): POWL +8.2% (RVOL 1.31; still no sourced catalyst: FAIL), CGON +11.8% (unsourced: FAIL), TSN +6.9% (no sourced catalyst: FAIL), HTHT +10.1%, XPEV +5.7% (China ADRs: FAIL), TU +10.2% (Canadian ADR: FAIL), LFTO +4.5% (recent IPO, no catalyst: FAIL), new MBGL +5.9% (Mobility Global, RVOL 1.1; not researched this cycle, no catalyst found or checked, so no Gate 2 pass: FAIL). None qualifies.
+- MR sweep (<=-3.5%, RSI<35): 24 names, same set as Cycle 1072 plus CTVA -3.7%. Names unchanged in character: AI/semis/crypto (SNDK, MSTR -7.5%, COIN, HOOD, IREN, INTC, CRCL, DDOG, RDDT, MCHP) fail Gate 4 and Gate 1; oil/LatAm/metals (PBR, YPF, VIST, BBD, SCCO, VALE, PSLV) no same-day sourced cause (Gate 1 FAIL); NTRA -7.9%, CORT, ARWR, CAI, NIO, CTVA company-specific/unverified (FAIL).
+- WebSearch (this trigger is the hourly one): returned mostly Nov 17, 2025 coverage (Nvidia earnings nerves, bitcoin below $90k), which is a year old and is NOT used as a source for today. No Nov 16, 2026 market wrap found. Limitation logged again; nothing sourced for any gate.
 - Decision: NO TRADE. Trades today 0; minimum unmet; no gate relaxed. Tier C 14:30-15:30 ET is the last window; flat before the bell (NVDA reports Tue after close).
