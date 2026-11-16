@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 14:46 ET",
+  "as_of": "2026-11-16 14:56 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, 0 trades today. Regime Falling again (SPY printing below 738.73 session low at 14:42 ET). Tier C open; no candidate passes. Breaker level $394.19 ($5.00 room).",
+  "status_note": "Flat, 0 trades today. Regime Falling (new SPY low 738.07 at 14:45 ET, now bouncing). Tier C open to 15:30 ET; no candidate passes. Breaker level $394.19 ($5.00 room).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-16",
@@ -4289,6 +4289,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-16 14:46 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 14:56 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4499,7 +4503,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "FALLING: SPY 738.56 (-2.09%), new session low (last print under the 738.73 low from 13:35 ET); 5-min lows 739.95, 739.81, 739.32, 739.15 descending. SMH -4.8%, QQQ -2.7%. MR off.",
+    "read": "FALLING: new session low 738.07 (14:45 ET bar) on 279k volume, SPY now 739.80 (-1.93%) after a 1.7-pt bounce in the last few minutes. SMH -4.3%, QQQ -2.5%. MR off until higher lows form.",
     "chips": [
       "SPY -1.1%",
       "SMH -3.5%",
@@ -13092,4 +13096,13 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - MR sweep (for the record; MR off): 31 names, same set as Cycle 1087. All fail Gates 1 and 4; NVDA excluded by earnings (Tue after close).
 - No WebSearch this cycle (hourly search ran in Cycle 1085; the next hourly is ~15:12 ET).
 - Tier C status: open to 15:30 ET, about 44 minutes left. A forced entry would still need every gate; none passes, and in a Falling regime MR is off, so none is placed. No gate relaxed to meet the minimum.
+- Decision: NO TRADE. Trades today 0; minimum unmet; flat before the bell (NVDA reports Tue after close).
+
+### Cycle 1089 - 2026-11-16 14:56 ET (Tier C open, regime FALLING, late bounce)
+- Dedupe passed (last commit 19:42:46Z vs trigger 19:52:50Z). Reconcile: no positions, no open orders, equity/cash $399.19 (breaker $394.19, room $5.00).
+- Tape 14:53 ET: SPY 739.80 (-1.93%), QQQ 663.16 (-2.45%), SMH 465.55 (-4.3%), IWM 273.02 (-1.62%), NVDA 156.23 (-4.1%). SPY 5-min: 14:35 low 739.15, 14:40 low 738.50 / close 738.595 (272k), 14:45 low 738.07 (new session low, 279k) / close 738.79. Since 14:50 the quote has bounced to 739.80, +1.7 points off the low, but the bounce is only one bar old (the 14:50 bar had not closed) and no higher low has formed. Regime Falling; MR off.
+- Momentum sweep (>=+3%, RVOL>=1.0): 14 names. New: SEZL +4.3% (Sezzle, RVOL 1.01 < 1.3, no catalyst: FAIL). Repeats fail as before: POWL +7.4% (RVOL 2.07, no sourced catalyst: FAIL), CGON +16.2% (unsourced: FAIL), TSN +7.0% (no sourced catalyst: FAIL), GXO +3.8% (RVOL 1.19 < 1.3: FAIL), HTHT +8.7% / XPEV +3.9% / BEKE +5.2% (China ADRs: FAIL), MBGL +4.3% (no catalyst identified: FAIL), TU +11.1% (Canadian ADR: FAIL), PS +4.8% (thin 509k: FAIL), KVYO +4.6% (RVOL 1.10 < 1.3: FAIL), TIGO +3.0% (foreign: FAIL), PLBL +3.9% (thin, foreign: FAIL). None qualifies.
+- MR sweep (for the record; MR off): 27 names (MCHP, STLA, BABA, BBD/BBDO dropped out or moved off the filter as the tape bounced); same fundamentals: all fail Gates 1 and 4; NVDA excluded by earnings.
+- No WebSearch this cycle (hourly search runs ~15:12 ET; nothing would otherwise pass).
+- Tier C status: ~34 minutes to the 15:30 ET cutoff. No candidate passes every gate; no forced entry placed; no gate relaxed.
 - Decision: NO TRADE. Trades today 0; minimum unmet; flat before the bell (NVDA reports Tue after close).
