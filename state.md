@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 11:46 ET",
+  "as_of": "2026-11-16 11:56 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -4217,6 +4217,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-16 11:46 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 11:56 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4427,7 +4431,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Stabilizing/range: SPY 745.95 (-1.12%), lows 744.85 held since 11:10 ET, no new session low since 10:25. SMH -3.6%, QQQ -1.69%.",
+    "read": "Range, drifting toward lows: SPY 745.08 (-1.23%), 5-min lows 745.55/745.42/745.06 descending toward the 744.85 session low (not a new low). SMH -3.7%, QQQ -1.82%.",
     "chips": [
       "SPY -1.1%",
       "SMH -3.5%",
@@ -12875,3 +12879,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - MR sweep (<=-3.5%, RSI<35): 24 names. New: SNDK -6.4%, MSTR -7.0%, COIN -6.4%, HOOD -5.8%, IREN -9.7%, INTC -6.3%, MCHP, RDDT (AI/semis/crypto-linked, continuation of multi-week selloff: Gate 4 FAIL, no sourced same-day cause: Gate 1 FAIL); NTRA -7.2% (company-specific/unverified: Gate 1 FAIL); SCCO, BVN, VALE, PSLV (metals, XLE/GDX weak, no same-day source: FAIL); BBD, PBR, YPF, VIST (Brazil/Argentina/oil, no Nov 16 source: FAIL). Repeats from before also fail.
 - Disclosure: the POWL WebSearch returned only earlier-dated items; nothing verified for today.
 - Decision: NO TRADE. Trades today 0; minimum unmet; no gate relaxed. Tier C 14:30-15:30 ET is the last window; must be flat before the bell (NVDA reports Tue after close).
+
+### Cycle 1071 - 2026-11-16 11:56 ET (Tier B, regime Range/Unconfirmed)
+- Dedupe passed (last commit 16:43:01Z vs trigger 16:52:54Z). Reconcile: no positions, no open orders, equity/cash $399.19 (breaker $394.19, room $5.00).
+- Tape 11:53 ET: SPY 745.08 (-1.23%), QQQ 667.54 (-1.82%), SMH 468.53 (-3.7%), IWM 274.34 (-1.15%), NVDA 159.09 (-2.3%). SPY 5-min lows 745.55 (11:35), 745.42 (11:40), 745.06 (11:45): descending again, within 0.2 of the 744.85 session low but no new low. Stabilization is NOT confirmed (the higher-lows run ended); regime read as Range/unconfirmed, treating MR as needing extra caution and momentum as only for fresh non-fading catalysts.
+- Momentum sweep (>=+3%, RVOL>=1.0): POWL +7.4% (no sourced catalyst, thin volume: FAIL), CGON +11.6% (unsourced biotech, faded from pre-mkt: FAIL), TSN +6.6% (RVOL 1.02; no sourced catalyst this cycle; previously low RVOL: FAIL), HTHT +10.6%, XPEV +6.2% (China ADRs: FAIL), TU +10.7% (Canadian ADR, unsourced: FAIL), LFTO +4.3% (recent IPO, no catalyst: FAIL). None qualifies.
+- MR sweep (<=-3.5%, RSI<35): 25 names, same set as Cycle 1070 plus CTVA -3.6% (RSI 27.4, no sourced cause: Gate 1 FAIL). AI/semis/crypto (SNDK, MSTR, COIN, HOOD, IREN, INTC, CRCL, DDOG, RDDT, MCHP) fail Gate 4 (multi-week downtrend) and Gate 1; oil/LatAm (PBR, YPF, VIST, BBD) and metals (SCCO, BVN, VALE, PSLV) lack a same-day sourced cause: Gate 1 FAIL; NTRA, CORT, ARWR, CAI, NIO company-specific/unverified: FAIL.
+- No WebSearch this cycle (not the hourly cycle; no candidate would otherwise pass).
+- Decision: NO TRADE. Trades today 0; minimum unmet; no gate relaxed. Tier C 14:30-15:30 ET is the last window; flat before the bell (NVDA reports Tue after close). Hourly cycle ~12:12 ET will include a WebSearch.
