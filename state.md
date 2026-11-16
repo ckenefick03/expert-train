@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 09:46 ET",
+  "as_of": "2026-11-16 09:56 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 16 09:46 ET: FLAT, cash/equity $399.19. SPY -0.8% bouncing off 746.85 low; SMH -3.1%. Entries not before 10:00 ET (MR) / 10:30 ET (momentum). Watch TSN (+10%, earnings).",
+  "status_note": "Nov 16 09:56 ET: FLAT, cash/equity $399.19. SPY made a new session low (746.65) at 09:40 ET, now 747.63 (-0.9%); regime FALLING. Entries from 10:00 ET (MR) / 10:30 ET (momentum). TSN +11% on watch.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-16",
@@ -4169,6 +4169,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-16 09:46 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 09:56 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4379,12 +4383,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Falling with a first bounce attempt: SPY low 746.85 (09:35-09:40 ET) now 748.57; SMH low 462.56, now 471.36 (-3.2%); NVDA reclaimed 162.00 (-0.5%). Need ~3 higher 5-min lows with no new low before calling it Stabilizing. MR off for now.",
+    "read": "Falling: SPY new session low 746.65 in the 09:40 ET bar (prior low 746.85), now 747.63 (-0.89%); QQQ -1.5%, SMH -3.45%, IWM -0.76%. NVDA 160.6 (-1.4%). MR OFF; momentum only for non-fading catalyst gaps (TSN watch).",
     "chips": [
-      "SPY -0.8%",
-      "SMH -3.2%",
+      "SPY -0.9%",
+      "SMH -3.5%",
       "Flat",
-      "Bounce attempt"
+      "Regime: falling"
     ]
   }
 }
@@ -12725,4 +12729,12 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Gap-up sweep (cap>=2B, ADV>=1M, >=+4%, no RVOL filter since volume is still thin): 9 names - CGON +11.7% (faded from +28% pre-market; gap fading, no catalyst found; fails the not-fading test and Gate 2), TSN +10.0% (Tyson: reported Mon am, EPS 0.61 vs 0.61 est per the earnings calendar; the report is the thesis but today's driver, probably guidance, is unsourced), HTHT +7.6% and BEKE +6.0% (China ADRs, earnings beats; foreign ADR fail), TU +10.2% at 9.40 (earlier pre-market +21% was wrong/inflated; foreign listing, no catalyst), CNC +4.7% (no catalyst), TSCO +4.0%, MMED +5.2%, XPEV +4.6% (China ADR, foreign). No entry possible before 10:30 ET regardless.
 - Watch for 10:30 ET (momentum window): TSN is the only domestic, sourced-earnings gap name. It needs: >=2 pts above peers and SPY (yes at +10%), not fading above gap-day VWAP and prior close, RVOL >=1.3 (volume 0.87M vs 3.58M ADV at 09:43 = 0.24 so far), a sourced catalyst for the move (to be searched only if it would otherwise pass), a held pullback with a higher low, and no earnings window issue (already reported). Not a candidate yet.
 - Decision: no action. Scans beyond the gap-up sweep not run (no entry possible before 10:00 ET; MR sweep deferred to the 10:02 ET cycle).
+
+### Cycle 1059 - 2026-11-16 09:56 ET (10-min trigger fired 09:53 ET; last commit 09:46 ET, dedupe passed)
+- Reconcile: positions empty, no open orders, cash/equity $399.19 (breaker level $394.19, $5.00 room).
+- Tape (09:53 ET): SPY 747.63 (-0.89%), QQQ 669.77 (-1.49%), SMH 469.91 (-3.46%), IWM 275.43 (-0.76%), NVDA 160.63 (-1.4%). SPY 5-min lows: 747.09 (09:30), 746.85 (09:35), 746.65 (09:40, NEW session low), 747.68 (09:45); closes 747.76 / 749.13 / 749.34 / 748.39, so the market is still making lower lows: regime FALLING (SPY has not shown ~3 higher lows). SMH lows: 463.24, 462.56, 467.83, 468.61: two higher lows after the 09:35 low (first stabilization sign), but SMH is still -3.5%.
+- Regime (framework 4.1): FALLING. MR off. Momentum only for a fresh, non-fading catalyst gap, entry after 10:30 ET.
+- Watch TSN (momentum): +11.0% at 65.28 (prior close 58.82); steady 5-min closes 62.99 / 64.21 / 64.88 / 65.03 (09:30-09:50 ET), always above its rising lows, so not fading so far; but it has not yet pulled back, so there is no base/higher-low entry. Catalyst on record: Q4 FY2026 results Mon am (EPS 0.61 vs 0.61 est), today's move likely a guidance/outlook driver - unsourced; to be searched only if it still looks otherwise valid after 10:30 ET. Cannot be bought before 10:30 ET in any case.
+- No scans beyond the 09:43 ET gap-up sweep (no entry possible before 10:00 ET); the full MR/momentum sweeps run in the 10:02 ET cycle.
+- Decision: no action.
 
