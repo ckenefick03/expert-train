@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 09:56 ET",
+  "as_of": "2026-11-16 10:06 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 16 09:56 ET: FLAT, cash/equity $399.19. SPY made a new session low (746.65) at 09:40 ET, now 747.63 (-0.9%); regime FALLING. Entries from 10:00 ET (MR) / 10:30 ET (momentum). TSN +11% on watch.",
+  "status_note": "Nov 16 10:06 ET: FLAT, cash/equity $399.19. SPY -1.2% making new lows each 5-min bar; regime FALLING; MR off. No qualifying setup.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-16",
@@ -4173,6 +4173,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-16 09:56 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 10:06 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4383,10 +4387,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Falling: SPY new session low 746.65 in the 09:40 ET bar (prior low 746.85), now 747.63 (-0.89%); QQQ -1.5%, SMH -3.45%, IWM -0.76%. NVDA 160.6 (-1.4%). MR OFF; momentum only for non-fading catalyst gaps (TSN watch).",
+    "read": "Falling and accelerating: SPY 745.51 (-1.17%), new session lows each 5-min bar (746.45 at 09:55 ET, lower since); QQQ -2.0%, SMH -4.3%, IWM -1.0%, NVDA -2.0%. MR off (no stabilization). Momentum only for non-fading catalyst gaps after 10:30 ET.",
     "chips": [
-      "SPY -0.9%",
-      "SMH -3.5%",
+      "SPY -1.2%",
+      "SMH -4.3%",
       "Flat",
       "Regime: falling"
     ]
@@ -12737,4 +12741,12 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Watch TSN (momentum): +11.0% at 65.28 (prior close 58.82); steady 5-min closes 62.99 / 64.21 / 64.88 / 65.03 (09:30-09:50 ET), always above its rising lows, so not fading so far; but it has not yet pulled back, so there is no base/higher-low entry. Catalyst on record: Q4 FY2026 results Mon am (EPS 0.61 vs 0.61 est), today's move likely a guidance/outlook driver - unsourced; to be searched only if it still looks otherwise valid after 10:30 ET. Cannot be bought before 10:30 ET in any case.
 - No scans beyond the 09:43 ET gap-up sweep (no entry possible before 10:00 ET); the full MR/momentum sweeps run in the 10:02 ET cycle.
 - Decision: no action.
+
+### Cycle 1060 - 2026-11-16 10:06 ET (10-min trigger fired 10:03 ET; last commit 09:54 ET, dedupe passed)
+- Reconcile: positions empty, no open orders, cash/equity $399.19 (breaker level $394.19, $5.00 room).
+- Tape (10:03 ET): SPY 745.51 (-1.17%), QQQ 666.23 (-2.01%), SMH 465.77 (-4.30%), IWM 274.82 (-0.98%), NVDA 159.56 (-2.0%). SPY 5-min: 09:45 low 747.68 close 748.39; 09:50 low 746.98 close 747.02; 09:55 low 746.45 close 746.51; and now below that: new session lows on three consecutive bars. SMH: 09:50 and 09:55 lows 468.44 / 467.74 then 465.77 now, i.e. lower lows again, the earlier higher-low bounce failed. Regime: FALLING (framework 4.1). MR is OFF while SPY still makes new session lows.
+- MR sweep (Tier A window, cap>=5B, <=-5%, RSI<35): 8 names - SNDK -7.6% RSI 33.9, NTRA -5.5% RSI 34.1, COIN -5.6% RSI 32.4, MSTR -6.4% RSI 32.6, CRCL -5.7% RSI 31.5, INTC -5.9% RSI 32.4, CAI -5.3% RSI 30.9, IREN -9.9% RSI 32.7. Tier A requires a sourced sector/macro cause with the sector ETF <= -2% (SMH -4.3% qualifies for SNDK/INTC; the crypto names have no ETF/cause sourced; NTRA/CAI are diagnostics/healthcare with no cause), a HIGHER 5-min low, and stabilization; none exists while SPY/SMH make new lows. All FAIL. The cause behind the AI/semis selloff is still unsourced (no same-day wrap found), so Gate 1 also fails. No entry.
+- Momentum sweep (cap>=2B, >=+4%, RVOL>=0.3 because the sweep is blind before 11:00 ET): CGON +12.7% (RVOL 2.2, off +28% pre-market high but holding +12%; catalyst unsourced; biotech), TSN +9.8% (RVOL 0.47 vs the 1.3 minimum, below 10:30 ET, earnings Mon am), HTHT +8.2% and XPEV +6.2% (China ADRs, foreign: fail), TU +11.7% (RVOL 2.07; Canadian ADR with an unsourced catalyst: fail). No entry (window opens 10:30 ET).
+- No news search this cycle (hourly search due 10:17 ET; nothing would otherwise pass).
+- Decision: no action. Trades today: 0 (minimum is 1; no gate relaxed to meet it).
 
