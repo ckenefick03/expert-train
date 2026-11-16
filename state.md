@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 11:02 ET",
+  "as_of": "2026-11-16 11:08 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 16 11:02 ET: FLAT, cash/equity $399.19. SPY -1.0% basing (no new low since 10:25 ET); breadth very weak (91 names <= -3.5%); no MR/momentum candidate passes the gates. 0 trades today.",
+  "status_note": "Nov 16 11:08 ET: FLAT, cash/equity $399.19. SPY stabilizing (4 higher 5-min lows, -1.0%); MR enabled by regime but no candidate has a sourced dated cause. 0 trades today.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-16",
@@ -4197,6 +4197,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-16 11:02 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 11:08 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4407,12 +4411,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Basing, not yet confirmed: SPY 746.86 (-0.9%) with no new session low since 743.31 at 10:25 ET and a higher 5-min low at 10:45 (744.60); SMH 467.45 (-4.0%) also off its 462.19 low (higher lows 462.64, 464.84). Breadth is poor (91 names <= -3.5% incl. metals, LatAm, crypto, software, AI hardware). MR eligible only with a sourced dated cause + stabilization at the name; none found.",
+    "read": "Stabilizing: SPY 746.69 (-1.0%) with four consecutive higher 5-min lows (743.96, 744.60, 745.73, 746.69) and no new low since 10:25 ET; SMH 468.13 (-3.8%) also making higher lows. MR is ON by the regime rule but each name still needs a sourced dated cause (none found), a higher low at the name, and a neutral fundamental datapoint. Momentum: only unsourced foreign/biotech gaps.",
     "chips": [
-      "SPY -0.9%",
-      "SMH -4.0%",
+      "SPY -1.0%",
+      "SMH -3.8%",
       "Flat",
-      "Regime: basing"
+      "Regime: stabilizing"
     ]
   }
 }
@@ -12816,4 +12820,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
   - Metals, LatAm, ITUB/BBD/PBR/YPF: broad commodity/LatAm selling with no sourced cause found.
 - Momentum sweep (cap>=2B, >=+4%, RVOL>=0.9): CGON +9.5% (81.45, RVOL 3.3; off the +28% pre-market gap, no sourced catalyst, biotech) and TU +11.4% (9.505, RVOL 2.8; Canadian ADR, no sourced catalyst): both FAIL. TSN dropped out (RVOL <0.9).
 - Decision: no entry. Trades today: 0 (minimum not met; no gate relaxed). Hourly news: today's searches (DDOG, NTRA, TU, plus the 10:16 ET market search) found no same-day source; sixth consecutive session without a usable same-day market wrap. Window status: Tier A until 11:30 ET, Tier B 11:30-14:30, Tier C 14:30-15:30 ET.
+
+### Cycle 1066 - 2026-11-16 11:08 ET (10-min trigger fired 11:03 ET, 9 min after the previous commit, dedupe passed)
+- Reconcile: positions empty, no open orders, cash/equity $399.19 (breaker level $394.19, $5.00 room).
+- Tape (11:03 ET): SPY 746.69 (-1.02%), QQQ 668.53 (-1.67%), SMH 468.13 (-3.82%), IWM 274.90 (-0.95%), NVDA 159.20 (-2.2%). SPY 5-min lows: 743.96 (10:40), 744.60 (10:45), 745.73 (10:50), 746.69 (10:55): four consecutive higher lows, no new low since 10:25 ET, closes 744.79 / 745.88 / 747.04 / 746.74. SMH lows 462.64 / 464.84 / 466.22 / 467.62: also four higher lows. Regime (framework 4.1): STABILIZING -> MR enabled (Tier A window until 11:30 ET, then Tier B to 14:30); momentum still on for non-fading catalyst gaps.
+- MR check: the Tier A numerics (>= -5%, RSI<35) are met by SNDK, NTRA, COIN, MSTR, CRCL, INTC, CAI, IREN, DDOG and a few small ones, and the regime now allows MR, but every candidate still fails Gate 1 (no sourced dated external cause: the only dated sources are the AP Nov 5 AI-selloff pieces, and a commodities search this cycle returned only February 2026 episodes) and, for AI/crypto/software names, Gate 4 (multi-week downtrend since Nov 5). Gate 2 (fundamental datapoint) and Gate 3 (anchor) were not researched since Gate 1 already fails. Unverified news = FAIL (framework 2.1 rule 5).
+- Momentum sweep (RVOL>=1.0): CGON +7.7% (80.10; RVOL 3.5; no sourced catalyst; gap faded from +28%), TU +12.0% (9.56; RVOL 2.9; no sourced catalyst; Canadian listing): fail. No entry.
+- Decision: no entry. Trades today: 0. NVDA earnings Tuesday after the close remains an event risk for any AI-complex idea; any entry must be flat by 15:50 ET.
 
