@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 10:19 ET",
+  "as_of": "2026-11-16 10:26 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 16 10:19 ET: FLAT, cash/equity $399.19. SPY -1.35% on new lows; regime FALLING; MR off; momentum gap names (TSN, CGON) fading. No qualifying setup.",
+  "status_note": "Nov 16 10:26 ET: FLAT, cash/equity $399.19. SPY -1.3%, new session low 744.00 at 10:15 ET; regime FALLING; no entries.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-16",
@@ -4181,6 +4181,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-16 10:19 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 10:26 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4391,10 +4395,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Falling: SPY 744.23 (-1.35%), still making new session lows (744.34 at 10:05 ET, lower since); QQQ -2.3%, SMH -4.5%, IWM -1.2%. Cause: continuation of the AI-complex selloff that began Nov 5 (AP: S&P worst day since April 2025). Multi-week downtrend = MR Gate 4 FAIL for AI names. MR off; momentum gap names fading.",
+    "read": "Falling: SPY 744.37 (-1.32%), new session low 744.00 in the 10:15 ET bar; QQQ -2.2%, SMH -4.3% (higher lows at 10:10/10:15 ET but still -4%), IWM -1.15%. MR off.",
     "chips": [
-      "SPY -1.4%",
-      "SMH -4.5%",
+      "SPY -1.3%",
+      "SMH -4.3%",
       "Flat",
       "Regime: falling"
     ]
@@ -12760,5 +12764,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - News (WebSearch standard, this hour): the only 2026 sources were AP syndications dated 2026-11-05 ("A brutal sell-off for AI stocks sends Wall Street reeling; S&P 500 sees worst day since 2025 'Liberation Day' tariffs", Fox5/WDBJ/KBTX URLs) and a Trefis piece dated 2026-11-06 on Nvidia's drop; no source dated 16 Nov and none confirms the Nvidia-CEO story. Read: today's weakness continues the AI-complex selloff that began Nov 5, i.e. a roughly 2-week downtrend in the AI hardware names; that is MR Gate 4 FAIL for AI/semis candidates (SNDK, INTC, NBIS and peers) regardless of the dated sector cause, which is sourced to Nov 5, not today. Disclosed that no same-day wrap was found for the fifth time.
 - Skipped-candidate follow-ups: TSN 63.26 (+7.6%, faded from the 65.28 high at 09:53 ET, -$2.02 from the high, still above prior close 58.82, VWAP not checked); CGON 80.42 (+8.1%, faded from +28% pre-market and from +12.7% at 10:03 ET): the gap is FADING, fails the momentum non-fading test. No re-entry candidates.
 - Scans: not re-run this cycle (10:03 ET sweeps just logged; momentum window opens 10:30 ET and the next cycle runs it with the RVOL filter). No entry.
+- Decision: no action. Trades today: 0.
+
+### Cycle 1062 - 2026-11-16 10:26 ET (10-min trigger fired 10:23 ET; last commit 10:17 ET, 6.4 min earlier, dedupe passed)
+- Reconcile: positions empty, no open orders, cash/equity $399.19 (breaker level $394.19, $5.00 room).
+- Tape (10:23 ET): SPY 744.37 (-1.32%), QQQ 665.07 (-2.18%), SMH 465.83 (-4.30%), IWM 274.36 (-1.15%), NVDA 160.07 (-1.7%). SPY 5-min: 10:10 low 744.43, 10:15 low 744.00 = new session low again (close 744.98); no higher-low sequence. SMH 10:05 low 462.61, 10:10 low 464.00, 10:15 low 464.50: three higher lows at SMH (stabilizing sign for the sector) while SPY keeps printing new lows. Regime: FALLING (the index decides; framework 4.1). MR OFF.
+- Scans: not run this cycle. MR is off by regime; the momentum window opens at 10:30 ET and the next cycle (~10:33 ET) runs the RVOL-filtered sweep. Disclosed skip.
 - Decision: no action. Trades today: 0.
 
