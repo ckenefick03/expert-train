@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 13:26 ET",
+  "as_of": "2026-11-16 13:36 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, 0 trades today. Regime Falling (SPY new low 741.83 at 13:15 ET): MR off. Breaker level $394.19 ($5.00 room).",
+  "status_note": "Flat, 0 trades today. Regime Falling (SPY breaking down, low 740.31 at 13:25 ET): MR off. Breaker level $394.19 ($5.00 room).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-16",
@@ -4257,6 +4257,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-16 13:26 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 13:36 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4467,7 +4471,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "FALLING: SPY 741.75 (-1.67%), session low 741.83 (13:15 ET bar) and the last print below it. SMH -4.7%, QQQ -2.4%. MR off; momentum only for a fresh non-fading catalyst gap.",
+    "read": "FALLING, accelerating: SPY 740.20 (-1.88%), 13:25 ET bar low 740.31 on 290k volume (2x recent bars). SMH -4.9%, QQQ -2.6%. MR off; momentum only for a fresh non-fading catalyst gap.",
     "chips": [
       "SPY -1.1%",
       "SMH -3.5%",
@@ -12994,4 +12998,12 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum sweep (>=+3%, RVOL>=1.0): POWL +6.7% (no sourced catalyst: FAIL), CGON +15.2% (fading from +17.9%, unsourced biotech: FAIL), TSN +7.2% (no sourced catalyst: FAIL), HTHT +9.6% / XPEV +5.2% (China ADRs: FAIL), MBGL +5.0% (no catalyst identified: FAIL), TU +7.6% (Canadian ADR, unsourced: FAIL), PS +4.8% (thin 408k shares: FAIL). None qualifies.
 - MR sweep (for the record; MR off): 29 names; new ILMN -3.5% (RSI 35.0 marginal, no sourced cause) and BBDO (Bradesco second line). NVDA -4.5% excluded by earnings (Tue after close). All fail Gates 1 and 4.
 - No WebSearch this cycle (hourly search ran in Cycle 1079 and returned nothing for today; nothing would otherwise pass).
+- Decision: NO TRADE. Trades today 0; minimum unmet; no gate relaxed. Tier C 14:30-15:30 ET is the last window; flat before the bell.
+
+### Cycle 1081 - 2026-11-16 13:36 ET (Tier B, regime FALLING, accelerating)
+- Dedupe passed (last commit 18:22:41Z vs trigger 18:32:50Z). Reconcile: no positions, no open orders, equity/cash $399.19 (breaker $394.19, room $5.00).
+- Tape 13:33 ET: SPY 740.20 (-1.88%), QQQ 662.20 (-2.60%), SMH 463.04 (-4.9%), IWM 272.76 (-1.72%), NVDA 155.28 (-4.7%). SPY 5-min: 13:20 low 741.67, 13:25 low 740.31 / close 740.56 on 289.6k volume (about 2x the prior bars), a ~1.3 point drop in one bar. New session lows; selling is accelerating, not stabilizing. Regime Falling; MR off.
+- Momentum sweep (>=+3%, RVOL>=1.0): POWL +6.5% (no sourced catalyst: FAIL), CGON +14.5% (fading from +17.9%, unsourced: FAIL), TSN +7.3% (no sourced catalyst: FAIL), HTHT +9.4% / XPEV +4.6% (China ADRs: FAIL), MBGL +5.0% (no catalyst identified: FAIL), TU +7.7% (Canadian ADR, unsourced: FAIL), PS +5.1% (thin 416k shares: FAIL), new PLBL +5.7% (Polibeli, cap $2.7B, RVOL 1.03, 196k shares traded, foreign-domiciled name: fails liquidity and foreign tests: FAIL). None qualifies.
+- MR sweep (for the record; MR off): 30 names; new BABA -3.6% (RSI 33.7, China ADR, no sourced cause: FAIL). NVDA -4.6% excluded by earnings. All fail Gates 1 and 4.
+- No WebSearch this cycle (hourly search ran in Cycle 1079; nothing would otherwise pass).
 - Decision: NO TRADE. Trades today 0; minimum unmet; no gate relaxed. Tier C 14:30-15:30 ET is the last window; flat before the bell.
