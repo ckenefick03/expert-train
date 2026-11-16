@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 09:06 ET",
+  "as_of": "2026-11-16 09:19 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 16 09:06 ET (pre-market): FLAT, cash/equity $399.19. Pre-market SPY -0.6%, SMH -3.7%. No entries possible before 10:00 ET.",
+  "status_note": "Nov 16 09:19 ET (pre-market): FLAT, cash/equity $399.19. Pre-market SPY -0.6%, SMH -3.8%. Market opens 09:30 ET; entries not before 10:00 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-16",
@@ -4152,6 +4152,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-16 09:06 ET",
+      "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 09:19 ET",
       "equity": 399.19
     }
   ],
@@ -12684,4 +12688,10 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Before the 10:00 ET entry window: reconcile only. Positions empty, no open orders, cash/equity $399.19 (breaker level $394.19, $5.00 room).
 - Pre-market tape (vs Friday closes): SPY 749.60 (-0.64%), QQQ 671.02 (-1.30%), SMH 468.65 (-3.7%), IWM 276.13 (-0.51%), NVDA 157.49 (-3.3%). Mild improvement versus 08:57 ET.
 - Decision: no action. Next cycle (~09:14 ET) and the open (09:30 ET) come before the 10:00 ET entry window.
+
+### Cycle 1055 - 2026-11-16 09:19 ET (hourly trigger fired 09:17 ET, scheduled 09:12 ET; last commit 09:08 ET, dedupe passed)
+- Still pre-market (open 09:30 ET): reconcile and tape only; no scan sweeps or news search this cycle because no entry is possible before 10:00 ET (MR) / 10:30 ET (momentum) and the pre-open brief (08:40 ET) already covers news. Disclosed skip.
+- Reconcile: positions empty, no open orders, cash/equity $399.19 (breaker level $394.19, $5.00 room).
+- Pre-market tape (vs Friday closes): SPY 749.87 (-0.60%), QQQ 671.31 (-1.27%), SMH 468.05 (-3.84%), IWM 276.35 (-0.43%), NVDA 157.33 (-3.4%). Little change since 09:06 ET.
+- Decision: no action. First scan cycles after the open: ~09:42 ET (observation only), 10:02 ET (MR Tier A window opens), 10:32 ET (momentum window opens).
 
