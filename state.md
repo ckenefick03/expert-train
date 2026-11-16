@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 08:40 ET",
+  "as_of": "2026-11-16 08:46 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 16 08:40 ET pre-open: FLAT, cash/equity $399.19 ($5.00 above the $394.19 breaker; 8.9% below the $437.99 peak). Pre-market: SPY -0.7%, QQQ -1.4%, SMH -4.0%, NVDA -3.8% (reports Nov 17 pm). No orders in pre-open.",
+  "status_note": "Nov 16 08:46 ET (pre-market): FLAT, cash/equity $399.19. Pre-market SPY -0.6%, SMH -3.8%. No entries possible before 10:00 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-16",
@@ -4140,6 +4140,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-16 08:40 ET",
+      "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 08:46 ET",
       "equity": 399.19
     }
   ],
@@ -12657,4 +12661,9 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Watch list, MEAN-REVERSION (only if the regime flips to Stabilizing; each needs a sourced external dated cause, neutral-or-better fundamentals, a named >=2R anchor, and not a multi-week downtrend; none are cleared yet): MU (cap $880B; was RSI 44 on Friday, check RSI<45 for Tier B / <35 for Tier A), NBIS (-8.6%, RSI 38.7 Friday), MRVL (-6.1%, RSI 37 Friday), LITE (-7.0%, RSI 39 Friday), SNDK (-7.0%, RSI 35.9 Friday). Gate 4 history: AI hardware names failed as multi-week-downtrend/no-cause on Nov 13; NVDA earnings Tue pm is a fresh event risk for the whole group. Realistic read: the same cluster as Friday, with the same unverified gates.
 - Flags: a fourth consecutive session of unusable market-wrap searches (disclosed); the Friday log said the Nvidia-CEO driver, which I still cannot verify; PDT/settled-funds on limited_margin remains unverified (round trip count 2 in this account's recent log).
 - Plan for the 09:42/10:00 ET cycles: reconcile; tape first (SPY/SMH 5-min structure for a stabilization read); momentum sweep with the RVOL filter plus a no-RVOL fallback before ~11:00 ET; MR sweep only if regime flips; no entries before 10:00/10:30 ET.
+
+### Cycle 1052 - 2026-11-16 08:46 ET (10-min trigger fired 08:44 ET; last commit 08:32 ET, dedupe passed)
+- Before the 10:00 ET entry window: reconcile only, no scans, no entries. Positions empty, no open orders, cash/equity $399.19 (breaker level $394.19, $5.00 room).
+- Pre-market tape (vs Friday closes): SPY 749.53 (-0.64%), QQQ 670.77 (-1.35%), SMH 467.97 (-3.85%), IWM 276.24 (-0.48%), NVDA 157.42 (-3.3%). Slightly less bad than the 08:31 ET reading (SPY 748.91, SMH 467.06).
+- Decision: no action. The 09:42/10:00 ET cycles begin the scan work; regime still "falling" at the open.
 
