@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 12:46 ET",
+  "as_of": "2026-11-16 12:56 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, 0 trades today. Regime Falling (SPY new low 742.94 at 12:35 ET): MR off. Breaker level $394.19 ($5.00 room).",
+  "status_note": "Flat, 0 trades today. Regime Falling (SPY new low 742.755 at 12:45 ET): MR off. Breaker level $394.19 ($5.00 room).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-16",
@@ -4241,6 +4241,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-16 12:46 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 12:56 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4451,7 +4455,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "FALLING: SPY 743.47 (-1.45%), session low 742.935 (12:35 ET bar), lower lows since 12:15. SMH -4.1%, QQQ -2.1%. MR off; momentum only for a fresh non-fading catalyst gap.",
+    "read": "FALLING: SPY 743.34 (-1.46%), session low 742.755 (12:45 ET bar), repeated new lows since 12:25. SMH -4.2%, QQQ -2.1%. MR off; momentum only for a fresh non-fading catalyst gap.",
     "chips": [
       "SPY -1.1%",
       "SMH -3.5%",
@@ -12945,5 +12949,13 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Tape 12:43 ET: SPY 743.47 (-1.45%), QQQ 665.43 (-2.13%), SMH 466.59 (-4.1%), IWM 274.03 (-1.27%), NVDA 156.89 (-3.7%). SPY 5-min lows 743.18 (12:25), 743.17 (12:30), 742.935 (12:35): another new session low. Still Falling; MR off.
 - Momentum sweep (>=+3%, RVOL>=1.0): POWL +6.8% (fading from +8.8%, no sourced catalyst: FAIL), CGON +16.7% (RVOL 5.1; unsourced biotech catalyst, gap off +28% pre-mkt: FAIL), TSN +7.5% (no sourced catalyst: FAIL), HTHT +10.0% / XPEV +5.7% (China ADRs: FAIL), MBGL +5.5% (no catalyst identified: FAIL), TU +9.3% (Canadian ADR, unsourced: FAIL). None qualifies.
 - MR sweep (for the record; MR off): 26 names. New: NVDA -3.6% (RSI 24.9, cap $3.9T), which is also excluded by the earnings rule (reports Tue Nov 17 after the close, within 2 trading days) and is an AI-complex name in a multi-week selloff. Rest unchanged and fail Gates 1 and 4.
+- No WebSearch this cycle (not hourly; nothing would otherwise pass).
+- Decision: NO TRADE. Trades today 0; minimum unmet; no gate relaxed. Tier C 14:30-15:30 ET is the last window; flat before the bell.
+
+### Cycle 1077 - 2026-11-16 12:56 ET (Tier B, regime FALLING)
+- Dedupe passed (last commit 17:44:03Z vs trigger 17:53:12Z). Reconcile: no positions, no open orders, equity/cash $399.19 (breaker $394.19, room $5.00).
+- Tape 12:53 ET: SPY 743.34 (-1.46%), QQQ 665.38 (-2.13%), SMH 466.38 (-4.2%), IWM 273.81 (-1.34%), NVDA 156.74 (-3.7%). SPY 5-min lows 742.935 (12:35), 743.03 (12:40), 742.755 (12:45): another new session low intrabar, closes holding ~743.2-743.5. Regime Falling; MR off.
+- Momentum sweep (>=+3%, RVOL>=1.0): POWL +6.6% (fading, no sourced catalyst: FAIL), CGON +16.5% (RVOL 5.2; unsourced biotech catalyst: FAIL), TSN +7.6% (no sourced catalyst: FAIL), HTHT +10.0% / XPEV +5.8% (China ADRs: FAIL), MBGL +5.3% (no catalyst identified: FAIL), TU +8.7% (Canadian ADR, unsourced: FAIL), new PS +6.1% (Pershing Square Inc., RVOL 1.02, 382k shares traded; no catalyst researched, fails the 1M avg-volume/$20M-dollar-volume liquidity test on its thin tape: FAIL). None qualifies.
+- MR sweep (for the record; MR off): 26 names, same set as Cycle 1076, including NVDA (excluded: earnings Tue after close). All fail Gates 1 and 4.
 - No WebSearch this cycle (not hourly; nothing would otherwise pass).
 - Decision: NO TRADE. Trades today 0; minimum unmet; no gate relaxed. Tier C 14:30-15:30 ET is the last window; flat before the bell.
