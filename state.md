@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 14:16 ET",
+  "as_of": "2026-11-16 14:28 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, 0 trades today. Bounce stalling (lower 5-min lows again, no new session low). No candidate passes. Breaker level $394.19 ($5.00 room).",
+  "status_note": "Flat, 0 trades today. Range/soft tape; no candidate passes (CHYM checked, no sourced catalyst). Tier C opens 14:30 ET. Breaker level $394.19 ($5.00 room).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-16",
@@ -4277,6 +4277,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-16 14:16 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 14:28 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4487,7 +4491,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "RANGE/SOFT, bounce stalling: SPY 740.90 (-1.78%); 5-min lows 741.39, 741.10, 740.65, 740.56 are lower again but above the 738.73 session low. Stabilization lapsed (not 3 higher lows). SMH -4.3%, QQQ -2.3%. Treat MR as not confirmed.",
+    "read": "RANGE/SOFT: SPY 740.03 (-1.90%), 5-min lows 740.65, 740.56, 740.56, 740.47 (flat-to-lower, above the 738.73 session low). SMH -4.4%, QQQ -2.5%. Stabilization not confirmed.",
     "chips": [
       "SPY -1.1%",
       "SMH -3.5%",
@@ -13055,3 +13059,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - MR sweep (<=-3.5%, RSI<35): 32 names; new ALNY -3.6% (RSI 34.6, biotech, no sourced cause: FAIL). Same character as Cycle 1084: AI/semis/software/crypto and oil/LatAm fail Gate 4, all fail Gate 1 (no same-day sourced cause). NVDA excluded by earnings.
 - WebSearch (hourly): "stocks Nvidia earnings Tuesday AI selloff Wall Street Monday afternoon Nasdaq sinks" returned no Nov 16 wrap. Only relevant dated item: roic.ai "Nvidia slides into the red for 2026 as AI selloff intensifies" dated 11-05-2026 (Nov 5), plus a Nov 2026 item attributing the NVDA rout to financing costs, data-center construction risk and political uncertainty (undated within November in the snippet). This supports that the AI weakness is a multi-week trend (Gate 4 FAIL for AI/semis names), but gives no sourced same-day cause (Gate 1). Limitation logged again.
 - Decision: NO TRADE. Trades today 0; minimum unmet; no gate relaxed. Tier C opens 14:30 ET (last window to 15:30); flat before the bell (NVDA reports Tue after close).
+
+### Cycle 1086 - 2026-11-16 14:28 ET (Tier B, regime RANGE/SOFT)
+- Dedupe passed (last commit 19:14:11Z vs trigger 19:22:39Z). Reconcile: no positions, no open orders, equity/cash $399.19 (breaker $394.19, room $5.00).
+- Tape 14:23 ET: SPY 740.03 (-1.90%), QQQ 663.21 (-2.45%), SMH 465.44 (-4.4%), IWM 272.69 (-1.75%), NVDA 156.24 (-4.1%). SPY 5-min lows 14:00 740.65, 14:05 740.56, 14:10 740.555, 14:15 740.47: flat-to-lower, volume fading (119-150k). No new session low (738.73), no higher lows. Regime Range/soft; MR not confirmed; momentum only for fresh non-fading catalyst gaps.
+- Momentum sweep (>=+3%, RVOL>=1.0): 14 names. Repeats fail as before: POWL +7.0% (no sourced catalyst), CGON +13.4% (unsourced, faded), TSN +6.3% (no sourced catalyst), GXO +4.1% (RVOL 1.10 < 1.3), HTHT +8.8% / XPEV +4.3% / BEKE +5.2% (China ADRs), MBGL +4.9% (no catalyst identified), TU +10.6% (Canadian ADR), PS +5.5% (thin 481k), PLBL +4.3% (thin, foreign), STWD +3.2% (REIT, RVOL 1.02). New: KVYO +5.3% (Klaviyo, RVOL 1.02 < 1.3, no catalyst: FAIL) and CHYM +3.0% (Chime Financial, cap $12.9B, RVOL 2.24). CHYM investigated: it gapped to ~34.5 at the open (prior close ~33.55) and has since ranged 34.0-34.6 on fading volume, now 34.58 at the high of its range on rising lows; this is a +3.0% move, only just over the sweep threshold, about 4.9 points above SPY. But no same-day catalyst is sourced: my WebSearch returned only undated price pages and a note that Chime reported its quarter ended Sept 30 (revenue +32% y/y to $718M), with no date for the report and no link to today's move. Gate 2 (real cited catalyst) FAILS and the post-earnings thesis is unverified, so no entry. Noted for follow-up: CHYM is a relative-strength name holding up on a -1.9% tape.
+- MR sweep (<=-3.5%, RSI<35): 32 names, same set as Cycle 1085 (SNDK, CMI, NTRA, DDOG, ALNY, SCCO, NVDA, COIN, MSTR, RDDT, BABA, HOOD, CORT, MCHP, CRCL, INTC, VIST, SQM, ARWR, YPF, GGAL, CAI, PBR, IREN, PBR.A, PSLV, VALE, CTVA, STLA, NIO, BBD, BBDO). All fail Gate 1 (no same-day sourced cause); AI/semis/crypto/oil-LatAm also fail Gate 4. NVDA excluded by earnings. MR is not confirmed by the regime anyway.
+- WebSearch: CHYM-specific search only (not the hourly one; that ran in Cycle 1085). get_earnings_results rejected the `symbols` param (invalid-params error), so I could not pull CHYM's report date from the tool; logged as a data gap.
+- Decision: NO TRADE. Trades today 0; minimum unmet; no gate relaxed. Tier C 14:30-15:30 ET is the last window; flat before the bell (NVDA reports Tue after close).
