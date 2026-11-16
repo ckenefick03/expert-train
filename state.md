@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 14:28 ET",
+  "as_of": "2026-11-16 14:36 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, 0 trades today. Range/soft tape; no candidate passes (CHYM checked, no sourced catalyst). Tier C opens 14:30 ET. Breaker level $394.19 ($5.00 room).",
+  "status_note": "Flat, 0 trades today. Tier C open (14:30-15:30 ET), no candidate passes all gates. Breaker level $394.19 ($5.00 room).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-16",
@@ -4281,6 +4281,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-16 14:28 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 14:36 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4491,7 +4495,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "RANGE/SOFT: SPY 740.03 (-1.90%), 5-min lows 740.65, 740.56, 740.56, 740.47 (flat-to-lower, above the 738.73 session low). SMH -4.4%, QQQ -2.5%. Stabilization not confirmed.",
+    "read": "SOFT, drifting back toward lows: SPY 739.41 (-1.98%), 5-min lows 740.47, 739.95, 739.81 (descending), 0.7 above the 738.73 session low. SMH -4.6%, QQQ -2.6%. Not stabilizing.",
     "chips": [
       "SPY -1.1%",
       "SMH -3.5%",
@@ -13067,3 +13071,12 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - MR sweep (<=-3.5%, RSI<35): 32 names, same set as Cycle 1085 (SNDK, CMI, NTRA, DDOG, ALNY, SCCO, NVDA, COIN, MSTR, RDDT, BABA, HOOD, CORT, MCHP, CRCL, INTC, VIST, SQM, ARWR, YPF, GGAL, CAI, PBR, IREN, PBR.A, PSLV, VALE, CTVA, STLA, NIO, BBD, BBDO). All fail Gate 1 (no same-day sourced cause); AI/semis/crypto/oil-LatAm also fail Gate 4. NVDA excluded by earnings. MR is not confirmed by the regime anyway.
 - WebSearch: CHYM-specific search only (not the hourly one; that ran in Cycle 1085). get_earnings_results rejected the `symbols` param (invalid-params error), so I could not pull CHYM's report date from the tool; logged as a data gap.
 - Decision: NO TRADE. Trades today 0; minimum unmet; no gate relaxed. Tier C 14:30-15:30 ET is the last window; flat before the bell (NVDA reports Tue after close).
+
+### Cycle 1087 - 2026-11-16 14:36 ET (Tier C open, regime SOFT / near lows)
+- Dedupe passed (last commit 19:23:17Z vs trigger 19:32:43Z). Reconcile: no positions, no open orders, equity/cash $399.19 (breaker $394.19, room $5.00).
+- Tape 14:33 ET: SPY 739.41 (-1.98%), QQQ 662.39 (-2.58%), SMH 464.38 (-4.6%), IWM 272.79 (-1.71%), NVDA 155.92 (-4.3%). SPY 5-min lows 14:15 740.47, 14:20 739.95, 14:25 739.81: three descending lows, 0.7 above the 738.73 session low (13:35), no new session low yet. Volume 164-174k per bar (moderate). Regime not Stabilizing; treat as Falling-bias range. MR not confirmed; momentum only for fresh non-fading catalyst gaps.
+- Momentum sweep (>=+3%, RVOL>=1.0): 13 names. POWL +8.9% (up from +6.5%; RVOL 1.91; still no sourced catalyst: FAIL), CGON +14.8% (unsourced: FAIL), TSN +6.6% (no sourced catalyst: FAIL), GXO +3.8% (RVOL 1.14 < 1.3: FAIL), HTHT +8.5% / XPEV +4.5% / BEKE +5.2% (China ADRs: FAIL), MBGL +4.4% (no catalyst identified: FAIL), TU +10.7% (Canadian ADR: FAIL), PS +5.9% (thin 490k: FAIL), PLBL +3.9% (thin, foreign: FAIL), KVYO +5.1% (RVOL 1.06 < 1.3, no catalyst: FAIL), TIGO +3.0% (foreign: FAIL). CHYM dropped out of the sweep (<+3%). None qualifies.
+- MR sweep (<=-3.5%, RSI<35): 31 names, same set as Cycle 1086; all fail Gate 1 (no same-day sourced cause; my searches in Cycles 1072/1073/1079/1085 returned nothing for Nov 16), AI/semis/crypto/oil-LatAm also fail Gate 4; NVDA excluded by earnings; the regime does not support MR anyway (descending lows).
+- No WebSearch this cycle (hourly search ran in Cycle 1085; nothing would otherwise pass).
+- Tier C status: 14:30-15:30 ET open now. This is the last window for the 1-trade minimum. A forced tag would apply only to a trade that passes every gate; none does, so none is placed. No gate is relaxed to meet the minimum.
+- Decision: NO TRADE. Trades today 0; minimum unmet; flat before the bell (NVDA reports Tue after close).
