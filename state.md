@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-13 15:50 ET",
+  "as_of": "2026-11-16 08:40 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,12 +41,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 13 close: FLAT overnight, nothing held. Cash/equity $399.19 ($5.00 above the $394.19 breaker; 8.9% below the $437.99 peak). Day P&L -$1.35 (one trade: MOD momentum, -$1.34). Morning outage 09:30-~10:50 ET logged.",
+  "status_note": "Nov 16 08:40 ET pre-open: FLAT, cash/equity $399.19 ($5.00 above the $394.19 breaker; 8.9% below the $437.99 peak). Pre-market: SPY -0.7%, QQQ -1.4%, SMH -4.0%, NVDA -3.8% (reports Nov 17 pm). No orders in pre-open.",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-11-13",
-    "start_equity": 400.54,
-    "trades": 1,
+    "date": "2026-11-16",
+    "start_equity": 399.19,
+    "trades": 0,
     "forced": 0
   },
   "equity_history": [
@@ -4137,6 +4137,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-13 15:50 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 08:40 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4347,11 +4351,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Close: SPY 752.99 (-0.5%), QQQ -1.3%, SMH -3.2%, IWM -0.4%. Semis/AI hardware sold off on Nvidia CEO exit and downgrades; broad tape stabilized after 11:35 ET. No overnight exposure.",
+    "read": "Pre-open: risk-off, AI/semis and crypto-linked names gapping down again (SMH -4.0%, NVDA -3.8%, BTC proxies -6 to -8%). Regime = falling until SPY stops making new session lows: MR off, momentum only for a fresh, non-fading catalyst gap.",
     "chips": [
-      "SPY -0.5%",
-      "Flat overnight",
-      "1 trade, -$1.34"
+      "SPY -0.7% pre",
+      "SMH -4.0% pre",
+      "Flat",
+      "NVDA earnings Tue pm"
     ]
   }
 }
@@ -12636,4 +12641,20 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Missed/late/skipped: several triggers fired 5-98 minutes late; four cycle triggers were deduped as <6 min after a prior cycle (14:22, 14:42 ET and similar); MR scan not run after 14:30 ET (Tier C only when the day minimum is unmet). Hourly market-wrap news searches returned only older pages on three occasions; the Samsung-Modine takeover report (MOD thesis) was never independently confirmed.
 - Lessons: (1) the MOD thesis relied on one unconfirmed rumor and a thin base; the invalidation exit limited loss to -0.66R and price was still within ~$0.30 of the exit at the close, so the rule was reasonable but not clearly profitable; (2) the 30-min hold rule meant the position was not exited during its early dip; (3) the equity is only $5.00 above the 10% breaker, so tomorrow a full $105 position hitting its stop could cost ~$3-4, leaving a very thin margin; the user's open questions on size and the breaker margin (reduce the $105 size, marginal RVOL/spread passes, profit protection) remain unanswered.
 - Next session: Monday 2026-11-16 (market closed Saturday/Sunday).
+
+### Pre-open brief - Monday 2026-11-16 08:40 ET (trigger fired 08:31 ET, scheduled 08:27 ET; read-only, no orders)
+- Reconcile / stop check: positions empty, no open orders, cash/equity $399.19 (breaker level $394.19, $5.00 room; 8.86% below the $437.99 peak). Nothing held, so nothing to stop-check on pre-market prices. Skipped-candidate follow-ups against Friday closes: MOD closed 135.66 (my exit 137.40; avoided ~$1.31/sh, ~$1.31 on the position, pre-market 135.50), CLBT closed 11.53 (pre-market 11.32, -1.8%).
+- Tape (pre-market vs Friday close): SPY 748.91 vs 754.37 (-0.72%), QQQ 670.17 vs 679.89 (-1.43%), SMH 467.06 vs 486.75 (-4.05%), IWM 276.02 vs 277.54 (-0.55%), NVDA 156.62 vs 162.85 (-3.8%). Another AI/semis-led risk-off open after Friday's SMH -3.0%.
+- Scan read (preview_scan, cap>=2B/5B, ADV>=1M; day-change columns reflect pre-market): gap-downs (88 names at <=-3.5%) are dominated by AI hardware/semis and data-center power names (SNDK -7.0, MU -6.3, LITE -7.0, COHR -7.5, AMD -5.7, AVGO -4.3, NBIS -8.6, CRWV -7.3, MRVL -6.1, ALAB -6.2, CRDO -6.6, MTSI -6.4, VRT -5.6, GEV -4.0, BE -6.0) plus crypto-linked names (COIN -7.2, MSTR -8.4, HUT/RIOT/WULF/IREN/BMNR -6 to -8). Gap-ups (>=4%) are only 4 names: CGON +27.9%, TU +21.5%, HTHT +4.0%, STGW +4.7%.
+- News (sources found this cycle, all weak): three standard WebSearch queries returned no same-day market wrap. The only dated item was an FXStreet piece (URL slug 202611091223, i.e. 9 Nov) saying NVDA was down >4% pre-market and Bitcoin below $75,000; it is a week old and cannot be treated as today's cause. No source found for the Nvidia CEO story I recorded on Nov 13, for CGON's +28% gap, or for TU's +21% (a quoted TU number of +21% on a $10.36 large-cap telecom looks like a data artifact; treated as unverified). Per section 2.1 rule 5: ambiguous/unverifiable news = gates FAIL. Earnings calendar (get_earnings_calendar, verified): NVDA reports Tue Nov 17 after the close (EPS est 2.47); also Tue: KLAR, HD, DIS, JD (am), PANW/KLIC Wed pm, WMT Thu am, INTU/ROST Thu pm; Mon: HTHT, BIDU, BEKE (am, already reported), POWL/XP/PAGS (pm). ARMK reported Mon am (EPS 0.71 vs 0.75 est: a miss, so its -5.9% is company-specific, MR gate 2 FAIL). SMMT -14%/EMBJ (-75%, corporate-action/data artifact, exclude) are not tradable ideas.
+- Regime (framework 4.1): FALLING at the open (futures/pre-market down, semis -4%). MR is OFF until SPY stops making new session lows with ~3 higher 5-min lows; momentum ON only for a fresh non-fading catalyst gap. No entries before 10:00 ET (MR) / 10:30 ET (momentum); the first 30-60 minutes are off-limits.
+- Key risks: breaker $5.00 away (a full $105 entry that hits a 3-4% stop costs ~$3-4); NVDA reports Tue after the close, so any AI-complex long must be flat by Monday's close and should be treated as event-risk through Wednesday; the whole AI-hardware complex is now two sessions into a selloff with no confirmed cause I could source this cycle.
+- Watch list, MOMENTUM (3-4, all currently FAIL pending verification):
+  1. CGON (+27.9% gap, cap ~$6.6B; biotech): needs a cited catalyst (none found), not fading vs gap-day VWAP and prior close, RVOL >=1.3, held pullback with higher low after 10:30 ET. Bid/ask and volume to be checked at the open.
+  2. HTHT (H World, +4.0%, EPS 0.93 vs 0.78 est, reported this morning): earnings catalyst is sourced, but it is a China ADR (home-session driven move: foreign ADR fails Gate 1), so expected FAIL.
+  3. STGW (Stagwell, +4.7%, cap ~$2.8B): no catalyst found; low priority.
+  4. TU (Telus, +21.5% per scanner): unverified/likely artifact and a foreign (Canadian) listing; do not trade without a sourced catalyst.
+- Watch list, MEAN-REVERSION (only if the regime flips to Stabilizing; each needs a sourced external dated cause, neutral-or-better fundamentals, a named >=2R anchor, and not a multi-week downtrend; none are cleared yet): MU (cap $880B; was RSI 44 on Friday, check RSI<45 for Tier B / <35 for Tier A), NBIS (-8.6%, RSI 38.7 Friday), MRVL (-6.1%, RSI 37 Friday), LITE (-7.0%, RSI 39 Friday), SNDK (-7.0%, RSI 35.9 Friday). Gate 4 history: AI hardware names failed as multi-week-downtrend/no-cause on Nov 13; NVDA earnings Tue pm is a fresh event risk for the whole group. Realistic read: the same cluster as Friday, with the same unverified gates.
+- Flags: a fourth consecutive session of unusable market-wrap searches (disclosed); the Friday log said the Nvidia-CEO driver, which I still cannot verify; PDT/settled-funds on limited_margin remains unverified (round trip count 2 in this account's recent log).
+- Plan for the 09:42/10:00 ET cycles: reconcile; tape first (SPY/SMH 5-min structure for a stabilization read); momentum sweep with the RVOL filter plus a no-RVOL fallback before ~11:00 ET; MR sweep only if regime flips; no entries before 10:00/10:30 ET.
 
