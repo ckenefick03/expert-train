@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 10:48 ET",
+  "as_of": "2026-11-16 11:02 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 16 10:48 ET: FLAT, cash/equity $399.19. SPY -1.3% base-building at 744 (two higher 5-min lows); SMH still making new lows; no qualifying setup. 0 trades today.",
+  "status_note": "Nov 16 11:02 ET: FLAT, cash/equity $399.19. SPY -1.0% basing (no new low since 10:25 ET); breadth very weak (91 names <= -3.5%); no MR/momentum candidate passes the gates. 0 trades today.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-16",
@@ -4193,6 +4193,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-16 10:48 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 11:02 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4403,12 +4407,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Falling, possibly basing: SPY 744.73 (-1.27%) with higher 5-min lows 743.94 and 744.21 after the 743.31 low (needs a third, no new low, before Stabilizing); SMH 465.06 (-4.5%) still printing new lows (462.19). MR remains off until SPY confirms ~3 higher lows.",
+    "read": "Basing, not yet confirmed: SPY 746.86 (-0.9%) with no new session low since 743.31 at 10:25 ET and a higher 5-min low at 10:45 (744.60); SMH 467.45 (-4.0%) also off its 462.19 low (higher lows 462.64, 464.84). Breadth is poor (91 names <= -3.5% incl. metals, LatAm, crypto, software, AI hardware). MR eligible only with a sourced dated cause + stabilization at the name; none found.",
     "chips": [
-      "SPY -1.3%",
-      "SMH -4.5%",
+      "SPY -0.9%",
+      "SMH -4.0%",
       "Flat",
-      "Basing?"
+      "Regime: basing"
     ]
   }
 }
@@ -12798,4 +12802,18 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum sweep (cap>=2B, >=+4%, RVOL>=0.8): 4 names, none new: CGON +7.3% (79.83, RVOL 3.2; faded from +28% pre-market, no sourced catalyst: fail), TSN +7.5% (63.21, RVOL 0.80 <1.3: fail), XPEV +4.5% (China ADR: fail), TU +11.7% (9.53, RVOL 2.7; Canadian ADR, no sourced catalyst: fail). No entry.
 - MR not run this cycle (regime). No news search (nothing would otherwise pass).
 - Decision: no action. Trades today: 0.
+
+### Cycle 1065 - 2026-11-16 11:02 ET (10-min trigger fired 10:53 ET, 10 min after the previous commit, dedupe passed)
+- Reconcile: positions empty, no open orders, cash/equity $399.19 (breaker level $394.19, $5.00 room).
+- Tape (10:53 ET): SPY 746.86 (-0.99%), QQQ 667.89 (-1.76%), SMH 467.45 (-3.97%), IWM 275.26 (-0.82%), NVDA 159.38 (-2.1%). SPY 5-min lows: 743.31 (10:25), 743.94, 744.21, 743.96, 744.60 (10:45); closes 744.43 / 744.72 / 744.79 / 745.88: no new low for 30 minutes and the 10:45 low is the highest since the session low. SMH: 462.19 (10:35), 462.64, 464.84: higher lows, close 466.58. Regime: BASING; I will treat it as Falling-to-Stabilizing but not confirmed (the lows are not a clean 3-bar higher-low sequence: 744.21 then 743.96). MR requires the name to have its own sourced dated cause + a higher 5-min low; momentum requires a non-fading catalyst gap.
+- MR sweep (Tier B numbers, cap>=5B, <=-3.5%, RSI<45): 91 names - breadth is poor and not just AI: AI/semis (SNDK -6.9% RSI 33.9, MU, LITE, DELL, MRVL, ALAB, ARM, NBIS, INTC), crypto-linked (COIN -6.0% RSI 32.4, MSTR -6.6%, CRCL -6.6%, HUT, IREN -9.8%, BMNR), software (DDOG -5.2% RSI 31.5), diagnostics/biotech (NTRA -7.0% RSI 34.1, CAI, CORT RSI 26, ARWR RSI 26), metals/miners (FCX, SCCO, PAAS, AG, HL, CDE), LatAm/energy (PBR RSI 29, YPF RSI 25, VALE, ITUB, BBD), consumer (RDDT, HOOD). Written checks:
+  - DDOG: 10-min lows 176.30 -> 176.66 -> 177.54 -> 176.16 -> 174.55 -> 173.79 -> 174.57 -> 174.48 (still making lower lows through 11:40); WebSearch (standard) returned only undated/older items on a 2026 AI-driven software selloff ("Datadog dropped 34% in a week", rallies.ai/stocktwits pieces with no dates), not a same-day source; the downtrend is multi-week -> Gate 1 (no dated source) and Gate 4 FAIL.
+  - NTRA: lows 302.37, 301.50, 301.65, 299.50, 298.13, 295.25, 294.76, 295.75: only the last bar is a higher low; search returned no 2026-11-16 cause (latest item May 2026) -> Gate 1 FAIL (unsourced; looks company/sector-idiosyncratic).
+  - RDDT: lows 93.66, 94.14, 94.61, 94.43, 93.86, 93.05, 93.25, 93.44: bottoming but -4.0% (below the 5% Tier A line; Tier B needs a sourced cause): no cause found -> FAIL.
+  - HOOD: -4.5% RSI 33.2; lows 73.75, 74.15, 74.53, 74.27, 73.89, 73.26, 73.20 (11:30), 73.56: a first higher low, crypto/fintech correlation, no sourced dated cause -> Gate 1 FAIL.
+  - AI/hardware (SNDK, INTC, MU, ARM etc.) fail Gate 4 (about two weeks into the AI selloff since Nov 5) and have no same-day source.
+  - Crypto-linked (COIN, MSTR, CRCL, IREN): cause = bitcoin weakness tied to the tech selloff (FXStreet dated 9 Nov, no same-day source); two-week downtrend -> Gate 4 FAIL.
+  - Metals, LatAm, ITUB/BBD/PBR/YPF: broad commodity/LatAm selling with no sourced cause found.
+- Momentum sweep (cap>=2B, >=+4%, RVOL>=0.9): CGON +9.5% (81.45, RVOL 3.3; off the +28% pre-market gap, no sourced catalyst, biotech) and TU +11.4% (9.505, RVOL 2.8; Canadian ADR, no sourced catalyst): both FAIL. TSN dropped out (RVOL <0.9).
+- Decision: no entry. Trades today: 0 (minimum not met; no gate relaxed). Hourly news: today's searches (DDOG, NTRA, TU, plus the 10:16 ET market search) found no same-day source; sixth consecutive session without a usable same-day market wrap. Window status: Tier A until 11:30 ET, Tier B 11:30-14:30, Tier C 14:30-15:30 ET.
 
