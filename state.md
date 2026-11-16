@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 09:19 ET",
+  "as_of": "2026-11-16 09:28 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 16 09:19 ET (pre-market): FLAT, cash/equity $399.19. Pre-market SPY -0.6%, SMH -3.8%. Market opens 09:30 ET; entries not before 10:00 ET.",
+  "status_note": "Nov 16 09:28 ET (pre-market): FLAT, cash/equity $399.19. Pre-market SPY -0.6%, SMH -3.4%. Market opens 09:30 ET; entries not before 10:00 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-16",
@@ -4156,6 +4156,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-16 09:19 ET",
+      "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 09:28 ET",
       "equity": 399.19
     }
   ],
@@ -12694,4 +12698,9 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Reconcile: positions empty, no open orders, cash/equity $399.19 (breaker level $394.19, $5.00 room).
 - Pre-market tape (vs Friday closes): SPY 749.87 (-0.60%), QQQ 671.31 (-1.27%), SMH 468.05 (-3.84%), IWM 276.35 (-0.43%), NVDA 157.33 (-3.4%). Little change since 09:06 ET.
 - Decision: no action. First scan cycles after the open: ~09:42 ET (observation only), 10:02 ET (MR Tier A window opens), 10:32 ET (momentum window opens).
+
+### Cycle 1056 - 2026-11-16 09:28 ET (10-min trigger fired 09:25 ET, scheduled 09:22 ET; last commit 09:18 ET, dedupe passed)
+- Two minutes before the open: reconcile and tape only. Positions empty, no open orders, cash/equity $399.19 (breaker level $394.19, $5.00 room).
+- Pre-market tape (vs Friday closes): SPY 749.62 (-0.63%), QQQ 671.45 (-1.25%), SMH 470.00 (-3.4%), IWM 276.35 (-0.43%), NVDA 158.28 (-2.8%). Semis still the weak spot, slightly less so.
+- Decision: no action. The regime read at the open decides MR vs momentum; first possible MR entry 10:00 ET.
 
