@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 14:36 ET",
+  "as_of": "2026-11-16 14:46 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, 0 trades today. Tier C open (14:30-15:30 ET), no candidate passes all gates. Breaker level $394.19 ($5.00 room).",
+  "status_note": "Flat, 0 trades today. Regime Falling again (SPY printing below 738.73 session low at 14:42 ET). Tier C open; no candidate passes. Breaker level $394.19 ($5.00 room).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-16",
@@ -4285,6 +4285,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-16 14:36 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 14:46 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4495,7 +4499,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "SOFT, drifting back toward lows: SPY 739.41 (-1.98%), 5-min lows 740.47, 739.95, 739.81 (descending), 0.7 above the 738.73 session low. SMH -4.6%, QQQ -2.6%. Not stabilizing.",
+    "read": "FALLING: SPY 738.56 (-2.09%), new session low (last print under the 738.73 low from 13:35 ET); 5-min lows 739.95, 739.81, 739.32, 739.15 descending. SMH -4.8%, QQQ -2.7%. MR off.",
     "chips": [
       "SPY -1.1%",
       "SMH -3.5%",
@@ -13079,4 +13083,13 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - MR sweep (<=-3.5%, RSI<35): 31 names, same set as Cycle 1086; all fail Gate 1 (no same-day sourced cause; my searches in Cycles 1072/1073/1079/1085 returned nothing for Nov 16), AI/semis/crypto/oil-LatAm also fail Gate 4; NVDA excluded by earnings; the regime does not support MR anyway (descending lows).
 - No WebSearch this cycle (hourly search ran in Cycle 1085; nothing would otherwise pass).
 - Tier C status: 14:30-15:30 ET open now. This is the last window for the 1-trade minimum. A forced tag would apply only to a trade that passes every gate; none does, so none is placed. No gate is relaxed to meet the minimum.
+- Decision: NO TRADE. Trades today 0; minimum unmet; flat before the bell (NVDA reports Tue after close).
+
+### Cycle 1088 - 2026-11-16 14:46 ET (Tier C open, regime FALLING again)
+- Dedupe passed (last commit 19:33:09Z vs trigger 19:42:21Z). Reconcile: no positions, no open orders, equity/cash $399.19 (breaker $394.19, room $5.00).
+- Tape 14:43 ET: SPY 738.56 (-2.09%), QQQ 661.45 (-2.71%), SMH 463.39 (-4.8%), IWM 272.50 (-1.82%), NVDA 155.56 (-4.5%). SPY 5-min lows 14:20 739.95, 14:25 739.81, 14:30 739.32, 14:35 739.15: four descending lows, and the last print 738.555 is below the 738.73 session low (13:35). Session low broken again; regime = Falling, MR off, momentum only for a fresh non-fading catalyst gap.
+- Momentum sweep (>=+3%, RVOL>=1.0): 12 names, the same set as Cycle 1087 without KVYO/BEKE changes of substance: POWL +7.8% (no sourced catalyst, fading from +8.9%: FAIL), CGON +15.3% (unsourced: FAIL), TSN +6.4% (no sourced catalyst: FAIL), GXO +3.7% (RVOL 1.16 < 1.3: FAIL), HTHT +8.6% / XPEV +4.3% / BEKE +5.1% (China ADRs: FAIL), MBGL +4.5% (no catalyst identified: FAIL), TU +11.0% (Canadian ADR: FAIL), PS +5.0% (thin 504k: FAIL), KVYO +4.8% (RVOL 1.08 < 1.3: FAIL), PLBL +3.9% (thin, foreign: FAIL). None qualifies; no fresh sourced catalyst gap.
+- MR sweep (for the record; MR off): 31 names, same set as Cycle 1087. All fail Gates 1 and 4; NVDA excluded by earnings (Tue after close).
+- No WebSearch this cycle (hourly search ran in Cycle 1085; the next hourly is ~15:12 ET).
+- Tier C status: open to 15:30 ET, about 44 minutes left. A forced entry would still need every gate; none passes, and in a Falling regime MR is off, so none is placed. No gate relaxed to meet the minimum.
 - Decision: NO TRADE. Trades today 0; minimum unmet; flat before the bell (NVDA reports Tue after close).
