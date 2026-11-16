@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 13:56 ET",
+  "as_of": "2026-11-16 14:06 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, 0 trades today. SPY bouncing off 738.73 low; two higher 5-min lows, not yet Stabilizing. MR still off. Breaker level $394.19 ($5.00 room).",
+  "status_note": "Flat, 0 trades today. Regime Stabilizing (marginal, 3 higher lows off 738.73): MR on, no candidate passes. Breaker level $394.19 ($5.00 room).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-16",
@@ -4269,6 +4269,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-16 13:56 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 14:06 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4479,7 +4483,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "FALLING, early bounce: SPY 741.81 (-1.66%) off the 738.73 low (13:35 ET); lows 739.14 then 739.69 (two higher lows, below the 3 required). SMH -4.4%, QQQ -2.3%. MR still off until ~3 higher lows with no new low.",
+    "read": "STABILIZING (marginal): SPY 741.15 (-1.75%), lows 738.73, 739.14, 739.69, 741.39 (3 higher lows) then 741.10 (above prior lows), no new session low since 13:35 ET. SMH -4.5%, QQQ -2.4%. MR eligible but names fail Gates 1 and 4.",
     "chips": [
       "SPY -1.1%",
       "SMH -3.5%",
@@ -13031,3 +13035,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - MR sweep (for the record; MR off): 30 names, same set as Cycle 1082 minus CMI. NVDA -4.0% excluded by earnings. All fail Gates 1 and 4.
 - No WebSearch this cycle (hourly search ran in Cycle 1079; the next hourly cycle ~14:12 ET will include one).
 - Decision: NO TRADE. Trades today 0; minimum unmet; no gate relaxed. Tier C 14:30-15:30 ET is the last window; flat before the bell.
+
+### Cycle 1084 - 2026-11-16 14:06 ET (Tier B, regime STABILIZING (marginal))
+- Dedupe passed (last commit 18:53:06Z vs trigger 19:02:38Z). Reconcile: no positions, no open orders, equity/cash $399.19 (breaker $394.19, room $5.00).
+- Tape 14:03 ET: SPY 741.15 (-1.75%), QQQ 663.79 (-2.37%), SMH 465.07 (-4.5%), IWM 273.23 (-1.55%), NVDA 156.15 (-4.1%). SPY 5-min lows: 13:35 738.73 (session low), 13:40 739.14, 13:45 739.69, 13:50 741.39 (three consecutive higher lows), 13:55 741.10 (a slightly lower low than 741.39 but far above the session low; closes 741.40/741.56/741.76). No new session low for 30 min. By the framework 4.1 test (~3 consecutive higher lows, no new lows) the regime moves to Stabilizing, but it is marginal: the bounce is only ~3 points off a 15-point drop from the open, SPY is still -1.75%, and the last bar printed a lower low. MR is eligible again; momentum stays on only for non-fading catalyst gaps.
+- Momentum sweep (>=+3%, RVOL>=1.0): POWL +6.9% (no sourced catalyst: FAIL), CGON +14.4% (unsourced biotech: FAIL), TSN +6.5% (no sourced catalyst: FAIL), GXO +4.2% (RVOL 1.06 below the 1.3 minimum, no catalyst: FAIL), HTHT +9.0% / XPEV +4.1% (China ADRs: FAIL), MBGL +5.6% (no catalyst identified: FAIL), TU +10.4% (Canadian ADR: FAIL), PS +6.1% (thin 447k shares: FAIL), TIGO +3.3% (foreign: FAIL), PLBL +5.5% (thin, foreign: FAIL). None qualifies.
+- MR sweep (<=-3.5%, RSI<35): 31 names. Gate 1 (sourced dated sector/macro cause this cycle) fails for all: no source found for any of them today (searches in Cycles 1072, 1073, 1079 returned no Nov 16 content, and no same-day source is available for the oil/LatAm, metals, China ADR or industrial names). Gate 4 (not a multi-week downtrend) fails for AI/semis/software/crypto (SNDK, DDOG, RDDT, COIN, MSTR, HOOD, CRCL, IREN, INTC, MCHP; RSI 31-35 after a multi-week selloff), oil/LatAm (PBR, YPF, VIST, GGAL, BBD/BBDO: RSI 25-32), NVDA (excluded by earnings Tue after the close). Company-specific/unverified: NTRA -8.0%, CORT, ARWR, CAI, NIO, CTVA, STLA, CMI -3.6%, BABA, SQM. None passes; marginal stabilization does not relax any gate.
+- No WebSearch this cycle (hourly cycle at ~14:12 ET will include one; nothing would otherwise pass).
+- Decision: NO TRADE. Trades today 0; minimum unmet; no gate relaxed. Tier C 14:30-15:30 ET is the last window; flat before the bell (NVDA reports Tue after close).
