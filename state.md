@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 15:46 ET",
+  "as_of": "2026-11-16 15:49 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, 0 trades today. Entry window closed (15:30 ET). Flat into the close; breaker level $394.19 ($5.00 room).",
+  "status_note": "Flat overnight, no positions or orders. Day 2026-11-16: 0 trades, P&L $0.00, equity $399.19 (unchanged). Drawdown from peak $437.99 is 8.86%; breaker level $394.19 leaves $5.00. NVDA reports Tue Nov 17 after the close.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-16",
@@ -4313,6 +4313,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-16 15:46 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 15:49 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4523,7 +4527,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "FALLING/range into the close: SPY 738.87 (-2.06%), above the 738.07 session low. SMH -5.1%, QQQ -2.7%.",
+    "read": "FALLING/range into the close: SPY 738.77 (-2.07%) at 15:48 ET, session low 738.07 (14:45 ET). SMH -5.1%, QQQ -2.7%, IWM -1.9%, NVDA -4.5%. AI/semis/crypto-led risk-off continues.",
     "chips": [
       "SPY -1.1%",
       "SMH -3.5%",
@@ -13163,3 +13167,18 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Tape 15:43 ET: SPY 738.87 (-2.06%), QQQ 661.42 (-2.72%), SMH 461.97 (-5.1%), IWM 272.34 (-1.87%), NVDA 155.51 (-4.5%). Range-bound, 0.8 above the 738.07 session low.
 - Scans: NOT run (disclosed skip): the 15:30 ET entry cutoff has passed, so no entry is permitted; the last full sweeps were Cycle 1092.
 - Decision: NO TRADE (entry window closed). Trades today 0. The close-recap cycle (~15:47 ET trigger) follows.
+
+### Cycle 1095 - 2026-11-16 15:49 ET (close recap trigger fired 15:48 ET; last commit 15:46 ET, trigger is the scheduled close-recap run)
+- Stop checks first: nothing held, no stops to check. Reconcile: no positions, no open orders, equity/cash $399.19, buying power $399.19. Nothing to place after 15:30 ET (entry cutoff passed).
+- Tape 15:48 ET: SPY 738.77 (-2.07%), QQQ 661.25 (-2.74%), SMH 461.89 (-5.1%), IWM 272.25 (-1.90%), NVDA 155.51 (-4.5%). These are 15:48 ET prints, not final closes (the official close was not available when this was written).
+- **Overnight status: FLAT. No position rolls overnight, so there is no thesis to defend.** Default flat-before-the-bell held; no explicit hold decision was needed.
+
+#### Day recap - Monday 2026-11-16
+- What ran: pre-open brief (08:40 ET, read-only) plus Cycles 1052-1095 (44 cycle entries, including this one). The 10-minute cadence ran from 08:46 to 15:49 ET with no cycle missed that I can find: triggers sometimes fired a few minutes after their schedule (for example 09:17 vs 09:12, 11:15 vs 11:12), and every cycle passed the dedupe check. Cycles 1093 (15:36) and 1094 (15:46) skipped the strategy scans because the 15:30 ET entry cutoff had passed (disclosed in each entry).
+- Trades: 0 (0 organic, 0 forced). Skips: every momentum and mean-reversion sweep from 10:00 to 15:26 ET found no name that passed all gates. Momentum names failed on no sourced catalyst (POWL, CGON, TSN, MBGL, MOH), foreign ADR status (HTHT, XPEV, BEKE, TU, TIGO, PLBL), thin volume (PS), relative volume under the 1.3 minimum (GXO, KVYO, STWD, SEZL, MOH late) or fading (CGON). Mean-reversion names failed Gate 1 (no sourced same-day cause) and, for AI/semis/software/crypto/oil-LatAm names, Gate 4 (multi-week downtrend); mean-reversion was also off while SPY made new session lows (from 12:25 ET).
+- P&L: $0.00 on the day. Equity $399.19 at the open and at the close. Peak equity remains $437.99; drawdown from peak is 8.86%; the 10% breaker level is $394.19, which leaves $5.00 of room.
+- **The 1-trade minimum was NOT met.** No gate was relaxed to meet it and no forced trade was placed. Tier C (14:30-15:30 ET) was the last window and produced no candidate that passed every gate.
+- Market: AI/semis/crypto-led risk-off, continuing the AI selloff running since early November. SPY opened weak, fell to 743.31 by 10:25 ET, ranged until 12:25, then broke to new lows (738.73 at 13:35, 738.07 at 14:45 ET) and closed near the low. SMH -5.1%, QQQ -2.7%, SPY -2.07%, IWM -1.9%, NVDA -4.5% at 15:48 ET.
+- Disclosed limitations and errors: (1) WebSearch never returned a usable Nov 16 market wrap or sector cause all day (hourly searches at 09:17, 10:16, 11:15, 12:13, 13:16, 14:16, 15:16 ET found only older dates, including a one-year-old Nov 17, 2025 result that I did not use). Gate 1 therefore failed for every mean-reversion name. (2) A 5-minute bars request at 09:32 ET returned HTTP 400 (no completed bar yet); retried successfully later. (3) get_earnings_results rejected the `symbols` parameter at 14:28 ET (data gap; CHYM's report date not pulled). (4) The Samsung-Modine thesis behind the Nov 13 MOD trade was never independently confirmed. (5) Final official closes were not available at the time of this write; 15:48 ET prints are shown.
+- Open user questions still unanswered (I made no change): whether marginal RVOL/spread passes count as fails (I treated them as fails), one-bar reclaim vs confirmed-hold rule, whether to reduce the $105 size given breaker proximity, and a profit-protection rule.
+- Next: Tuesday 2026-11-17. NVDA reports after the close (event risk; excluded by the earnings rule); KLAR/HD/DIS/JD report in the morning; WMT Thursday morning. The next pre-open brief runs about 08:30 ET.
