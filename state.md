@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 10:26 ET",
+  "as_of": "2026-11-16 10:38 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 16 10:26 ET: FLAT, cash/equity $399.19. SPY -1.3%, new session low 744.00 at 10:15 ET; regime FALLING; no entries.",
+  "status_note": "Nov 16 10:38 ET: FLAT, cash/equity $399.19. SPY -1.2%, new lows (743.31 at 10:25 ET); regime FALLING; no qualifying momentum setup. 0 trades today.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-16",
@@ -4185,6 +4185,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-16 10:26 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 10:38 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4395,10 +4399,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Falling: SPY 744.37 (-1.32%), new session low 744.00 in the 10:15 ET bar; QQQ -2.2%, SMH -4.3% (higher lows at 10:10/10:15 ET but still -4%), IWM -1.15%. MR off.",
+    "read": "Falling: SPY 744.95 (-1.25%), new session low 743.31 in the 10:25 ET bar; SMH 464.95 (-4.5%) also new low 463.00; QQQ -2.2%, IWM -1.0%. MR off. Momentum window open: no non-fading catalyst gap that passes (TU, CGON, TSN fail).",
     "chips": [
-      "SPY -1.3%",
-      "SMH -4.3%",
+      "SPY -1.2%",
+      "SMH -4.5%",
       "Flat",
       "Regime: falling"
     ]
@@ -12771,4 +12775,16 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Tape (10:23 ET): SPY 744.37 (-1.32%), QQQ 665.07 (-2.18%), SMH 465.83 (-4.30%), IWM 274.36 (-1.15%), NVDA 160.07 (-1.7%). SPY 5-min: 10:10 low 744.43, 10:15 low 744.00 = new session low again (close 744.98); no higher-low sequence. SMH 10:05 low 462.61, 10:10 low 464.00, 10:15 low 464.50: three higher lows at SMH (stabilizing sign for the sector) while SPY keeps printing new lows. Regime: FALLING (the index decides; framework 4.1). MR OFF.
 - Scans: not run this cycle. MR is off by regime; the momentum window opens at 10:30 ET and the next cycle (~10:33 ET) runs the RVOL-filtered sweep. Disclosed skip.
 - Decision: no action. Trades today: 0.
+
+### Cycle 1063 - 2026-11-16 10:38 ET (10-min trigger fired 10:32 ET, 8 min after the previous commit, dedupe passed)
+- Reconcile: positions empty, no open orders, cash/equity $399.19 (breaker level $394.19, $5.00 room).
+- Tape (10:32 ET): SPY 744.95 (-1.25%), QQQ 665.12 (-2.17%), SMH 464.95 (-4.48%), IWM 274.76 (-1.00%), NVDA 159.64 (-2.0%). SPY 5-min: 10:20 low 743.84 (close 743.87), 10:25 low 743.31 (new session low, close 744.08). SMH: 10:20 low 464.00, 10:25 low 463.00 (new low). The earlier SMH higher-low run is broken. Regime: FALLING; MR OFF.
+- Momentum sweep (window open since 10:30 ET; cap>=2B, ADV>=1M, >=+4%, RVOL>=0.6 because the sweep is still volume-blind): 5 names.
+  - CGON +8.5% (80.75), RVOL 3.0, biotech; opened +28% pre-market and has faded to +8.5%: gap FADING (gave back well over half), no catalyst sourced. Gate 1 and Gate 2 FAIL.
+  - TSN +7.8% (63.44), RVOL 0.77 (<1.3 minimum), faded from the 65.28 high; earnings Monday am were in line (EPS 0.61 vs 0.61 est), today's driver unsourced. FAIL.
+  - HTHT +9.0% (54.95) and XPEV +4.9% (9.83): China ADRs, home-session driven. Foreign ADR FAIL.
+  - TU (Telus, Canadian, NYSE) +12.5% (9.595), RVOL 2.6: not fading, but a WebSearch this cycle ("Telus shares surge November 16 2026") returned no same-day catalyst (only undated or older Telus items). Catalyst unsourced and a foreign listing whose move may be home-session driven. Gate 1/Gate 2 FAIL.
+  - Note: the pre-market +21% for TU was a data distortion; today's +12.5% is the real figure.
+- MR not run (regime FALLING; none of the MR conditions can pass while SPY and SMH make new lows). No MR entry.
+- Decision: no entry. Trades today: 0. The 1-trade minimum is not met, and no gate is relaxed to meet it; Tier C (14:30-15:30 ET) is the only path, and only if a candidate passes every gate there too (tag forced if so).
 
