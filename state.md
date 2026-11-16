@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 09:34 ET",
+  "as_of": "2026-11-16 09:46 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 16 09:34 ET: FLAT, cash/equity $399.19. Open: SPY -0.8%, SMH -4.1%. Entries not before 10:00 ET.",
+  "status_note": "Nov 16 09:46 ET: FLAT, cash/equity $399.19. SPY -0.8% bouncing off 746.85 low; SMH -3.1%. Entries not before 10:00 ET (MR) / 10:30 ET (momentum). Watch TSN (+10%, earnings).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-16",
@@ -4165,6 +4165,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-16 09:34 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 09:46 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4375,11 +4379,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Open: risk-off. SPY 748.51 (-0.78%), QQQ -1.55%, SMH -4.1%, NVDA -2.3%. Falling regime until SPY stops making new session lows. No entries before 10:00 ET.",
+    "read": "Falling with a first bounce attempt: SPY low 746.85 (09:35-09:40 ET) now 748.57; SMH low 462.56, now 471.36 (-3.2%); NVDA reclaimed 162.00 (-0.5%). Need ~3 higher 5-min lows with no new low before calling it Stabilizing. MR off for now.",
     "chips": [
       "SPY -0.8%",
-      "SMH -4.1%",
-      "Flat"
+      "SMH -3.2%",
+      "Flat",
+      "Bounce attempt"
     ]
   }
 }
@@ -12713,4 +12718,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Data note: a 5-minute bars request failed (HTTP 400, "end must be after start") because no completed 5-minute bar existed yet; no regime structure read this cycle. Disclosed.
 - Regime: FALLING (open near the lows). MR off; momentum only on a fresh non-fading catalyst gap after 10:30 ET. No scans this cycle (nothing can be entered before 10:00 ET).
 - Decision: no action.
+
+### Cycle 1058 - 2026-11-16 09:46 ET (10-min trigger fired 09:42 ET; last commit 09:33 ET, dedupe passed)
+- Reconcile: positions empty, no open orders, cash/equity $399.19 (breaker level $394.19, $5.00 room).
+- Tape (09:43 ET): SPY 748.57 (-0.77%), QQQ 670.38 (-1.40%), SMH 471.36 (-3.2%), IWM 275.92 (-0.58%), NVDA 162.00 (-0.5%, up from 157-159 pre-market). First two 5-min bars: SPY 09:30 bar 749.65 -> 747.76 (low 747.09), 09:35 bar low 746.85, close 749.13; SMH low 462.56, closed the 09:35 bar at 470.85 (+1.5% off the low). Early bounce, but SPY has only one completed higher close and no higher low yet; regime stays FALLING until ~3 higher 5-min lows with no new low (framework 4.1). MR OFF.
+- Gap-up sweep (cap>=2B, ADV>=1M, >=+4%, no RVOL filter since volume is still thin): 9 names - CGON +11.7% (faded from +28% pre-market; gap fading, no catalyst found; fails the not-fading test and Gate 2), TSN +10.0% (Tyson: reported Mon am, EPS 0.61 vs 0.61 est per the earnings calendar; the report is the thesis but today's driver, probably guidance, is unsourced), HTHT +7.6% and BEKE +6.0% (China ADRs, earnings beats; foreign ADR fail), TU +10.2% at 9.40 (earlier pre-market +21% was wrong/inflated; foreign listing, no catalyst), CNC +4.7% (no catalyst), TSCO +4.0%, MMED +5.2%, XPEV +4.6% (China ADR, foreign). No entry possible before 10:30 ET regardless.
+- Watch for 10:30 ET (momentum window): TSN is the only domestic, sourced-earnings gap name. It needs: >=2 pts above peers and SPY (yes at +10%), not fading above gap-day VWAP and prior close, RVOL >=1.3 (volume 0.87M vs 3.58M ADV at 09:43 = 0.24 so far), a sourced catalyst for the move (to be searched only if it would otherwise pass), a held pullback with a higher low, and no earnings window issue (already reported). Not a candidate yet.
+- Decision: no action. Scans beyond the gap-up sweep not run (no entry possible before 10:00 ET; MR sweep deferred to the 10:02 ET cycle).
 
