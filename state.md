@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 11:22 ET",
+  "as_of": "2026-11-16 11:27 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 16 11:22 ET: FLAT, cash/equity $399.19. SPY -1.2% range-bound 744.9-747.4 since 10:45 ET; no sourced cause for any MR candidate; no momentum candidate. 0 trades today.",
+  "status_note": "Nov 16 11:27 ET: FLAT, cash/equity $399.19. SPY -1.05% range-bound; no change in candidates since 11:15 ET. 0 trades today.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-16",
@@ -4205,6 +4205,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-16 11:22 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 11:27 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4415,10 +4419,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Stabilizing/range: SPY 745.39 (-1.2%) in a 744.85-747.36 range since 10:45 ET (lows 745.73, 746.69, 745.97, 745.72, 744.85: higher lows then a dip), SMH 467.13 (-4.0%) flat; no new session low since 10:25 ET. MR allowed by regime; no candidate has a sourced dated cause.",
+    "read": "Stabilizing/range: SPY 746.44 (-1.05%), range 744.85-747.36 since 10:45 ET; SMH 469.62 (-3.5%) higher lows 466.33 at 11:15. MR allowed by regime; no candidate with a sourced cause.",
     "chips": [
-      "SPY -1.2%",
-      "SMH -4.0%",
+      "SPY -1.1%",
+      "SMH -3.5%",
       "Flat",
       "Regime: range"
     ]
@@ -12839,4 +12843,10 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum sweep (RVOL>=1.0): CGON +8.9% (80.99, RVOL 3.7; off the pre-market gap, no sourced catalyst), XPEV +5.3% (China ADR: fail), TU +11.6% (9.52, RVOL 3.1; Canadian listing, no sourced catalyst). All FAIL. No entry.
 - Hourly news search (WebSearch standard): "stock market today Dow S&P Nasdaq Monday Nvidia earnings week ..." returned November 2025 items only (and one 2026-dated page whose figures were the 2025 close); no usable same-day source again. Disclosed.
 - Decision: no entry. Trades today: 0. Tier B window 11:30-14:30 ET starts next cycle; Tier C 14:30-15:30 ET is the last chance to meet the day minimum, only if a candidate passes every gate (tag forced).
+
+### Cycle 1068 - 2026-11-16 11:27 ET (10-min trigger fired 11:22 ET, 6.4 min after the previous commit, dedupe passed)
+- Reconcile: positions empty, no open orders, cash/equity $399.19 (breaker level $394.19, $5.00 room).
+- Tape (11:22 ET): SPY 746.44 (-1.05%), QQQ 668.78 (-1.64%), SMH 469.62 (-3.52%), IWM 274.81 (-0.98%), NVDA 159.55 (-2.0%). SPY 5-min: 11:00 low 745.97, 11:05 low 745.72, 11:10 low 744.85, 11:15 low 745.04 (close 746.16); no new low below 743.31; range 744.85-747.36. SMH: lows 466.65, 466.39, 465.86, 466.33 (higher), close 468.16. Regime: Stabilizing / range-bound.
+- Scans: the full MR (RSI<35, cap>=5B) and momentum sweeps were run at 11:15 ET, 7 minutes earlier (9 MR names, 3 momentum names, all FAIL Gate 1 or the foreign-ADR rule). Not re-run in this cycle because nothing about the sourcing situation changed and prices moved <0.3% on SPY; disclosed skip. The Tier A window ends at 11:30 ET; Tier B (>=3.5% intraday, RSI<45) from 11:30 ET covers a wider set that still needs a sourced dated cause and a higher low at the name.
+- Decision: no entry. Trades today: 0.
 
