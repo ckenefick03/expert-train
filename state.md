@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 15:26 ET",
+  "as_of": "2026-11-16 15:36 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, 0 trades today. Tier C closes 15:30 ET (4 min); no candidate passes. Breaker level $394.19 ($5.00 room). Default flat into the close.",
+  "status_note": "Flat, 0 trades today. Entry window closed (15:30 ET). Flat into the close; breaker level $394.19 ($5.00 room).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-16",
@@ -4305,6 +4305,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-16 15:26 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 15:36 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4515,7 +4519,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "FALLING: SPY 738.84 (-2.06%) on heavy late volume (15:15 bar 614k, low 738.51), 0.4 above the 738.07 session low. SMH -5.1%, QQQ -2.8%. MR off.",
+    "read": "FALLING/range into the close: SPY 739.37 (-1.99%), 5-min lows 738.51-738.71 holding above the 738.07 session low. SMH -5.0%, QQQ -2.6%.",
     "chips": [
       "SPY -1.1%",
       "SMH -3.5%",
@@ -13143,3 +13147,9 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - No WebSearch this cycle (hourly search ran in Cycle 1091).
 - Tier C status: this is the last cycle before the 15:30 ET cutoff (about 4 minutes left, too little to complete the 30-minute hold rule and a clean entry anyway). No candidate passed all gates at any point today; the 1-trade minimum is NOT met and no gate was relaxed to meet it. No forced trade was placed.
 - Decision: NO TRADE. Trades today 0; flat into the close.
+
+### Cycle 1093 - 2026-11-16 15:36 ET (entry window closed)
+- Dedupe passed (last commit 20:22:51Z vs trigger 20:32:41Z). Reconcile: no positions, no open orders, equity/cash $399.19 (breaker $394.19, room $5.00). Stop checks: nothing held.
+- Tape 15:33 ET: SPY 739.37 (-1.99%), QQQ 661.98 (-2.63%), SMH 462.51 (-5.0%), IWM 272.68 (-1.75%), NVDA 155.61 (-4.5%). SPY 5-min lows 15:15 738.51, 15:20 738.52, 15:25 738.71 (higher, at the session floor of 738.07 +0.4-0.6), closes 739.41/738.83/739.32. No new session low; range.
+- Scans: NOT run this cycle (disclosed skip). The 15:30 ET entry cutoff has passed, so no new entry is allowed whatever the scans showed, and the last full momentum/MR sweeps were in Cycle 1092 (15:26 ET), which found no qualifying candidate.
+- Decision: NO TRADE (entry window closed). Trades today 0; the 1-trade minimum was NOT met. No gate was relaxed, no forced trade placed. Flat into the close; the close-recap cycle (~15:47 ET) will record the day and the overnight status.
