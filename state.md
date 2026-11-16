@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 10:38 ET",
+  "as_of": "2026-11-16 10:48 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Nov 16 10:38 ET: FLAT, cash/equity $399.19. SPY -1.2%, new lows (743.31 at 10:25 ET); regime FALLING; no qualifying momentum setup. 0 trades today.",
+  "status_note": "Nov 16 10:48 ET: FLAT, cash/equity $399.19. SPY -1.3% base-building at 744 (two higher 5-min lows); SMH still making new lows; no qualifying setup. 0 trades today.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-16",
@@ -4189,6 +4189,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-16 10:38 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-16 10:48 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4399,12 +4403,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "Falling: SPY 744.95 (-1.25%), new session low 743.31 in the 10:25 ET bar; SMH 464.95 (-4.5%) also new low 463.00; QQQ -2.2%, IWM -1.0%. MR off. Momentum window open: no non-fading catalyst gap that passes (TU, CGON, TSN fail).",
+    "read": "Falling, possibly basing: SPY 744.73 (-1.27%) with higher 5-min lows 743.94 and 744.21 after the 743.31 low (needs a third, no new low, before Stabilizing); SMH 465.06 (-4.5%) still printing new lows (462.19). MR remains off until SPY confirms ~3 higher lows.",
     "chips": [
-      "SPY -1.2%",
+      "SPY -1.3%",
       "SMH -4.5%",
       "Flat",
-      "Regime: falling"
+      "Basing?"
     ]
   }
 }
@@ -12787,4 +12791,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
   - Note: the pre-market +21% for TU was a data distortion; today's +12.5% is the real figure.
 - MR not run (regime FALLING; none of the MR conditions can pass while SPY and SMH make new lows). No MR entry.
 - Decision: no entry. Trades today: 0. The 1-trade minimum is not met, and no gate is relaxed to meet it; Tier C (14:30-15:30 ET) is the only path, and only if a candidate passes every gate there too (tag forced if so).
+
+### Cycle 1064 - 2026-11-16 10:48 ET (10-min trigger fired 10:42 ET, 9.5 min after the previous commit, dedupe passed)
+- Reconcile: positions empty, no open orders, cash/equity $399.19 (breaker level $394.19, $5.00 room).
+- Tape (10:42 ET): SPY 744.73 (-1.27%), QQQ 665.54 (-2.12%), SMH 465.06 (-4.46%), IWM 274.36 (-1.15%), NVDA 159.03 (-2.3%). SPY 5-min lows: 10:25 743.31 (session low), 10:30 743.94, 10:35 744.21 (two higher lows, closes 744.43 / 744.72). SMH lows: 10:30 463.39, 10:35 462.19 (new low): the sector has not stabilized. Regime: still FALLING by the index rule (needs ~3 consecutive higher lows with no new low); a basing attempt is under way. MR stays OFF.
+- Momentum sweep (cap>=2B, >=+4%, RVOL>=0.8): 4 names, none new: CGON +7.3% (79.83, RVOL 3.2; faded from +28% pre-market, no sourced catalyst: fail), TSN +7.5% (63.21, RVOL 0.80 <1.3: fail), XPEV +4.5% (China ADR: fail), TU +11.7% (9.53, RVOL 2.7; Canadian ADR, no sourced catalyst: fail). No entry.
+- MR not run this cycle (regime). No news search (nothing would otherwise pass).
+- Decision: no action. Trades today: 0.
 
