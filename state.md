@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-17 10:46 ET",
+ "as_of": "2026-11-17 10:55 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Cycle 1107: flat, 0 trades. SPY new lows 731.24 (-1.17%); regime Falling, MR off; AS/KLAR RVOL 1.29/1.27 <1.3.",
+ "status_note": "Cycle 1108: flat, 0 trades. SPY 727.69 (-1.66%) accelerating lower; MR off; AS/KLAR now RVOL>=1.3 but fail catalyst/pullback-reclaim gates.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-17",
@@ -4369,6 +4369,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-17 10:46 ET",
    "equity": 399.19
+  },
+  {
+   "t": "2026-11-17 10:55 ET",
+   "equity": 399.19
   }
  ],
  "positions": [],
@@ -4579,7 +4583,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "FALLING, accelerating: SPY 731.24 (-1.17%) making new session lows (734.30 at 15:30 UTC bar, 731.24 at 10:42); QQQ 651.72, SMH 450.84 (-2.4%), IWM 269.76 (-1.2%), NVDA 151.19 (-3.2%), IGV 95.10 (-3.9%). MR off.",
+  "read": "FALLING, accelerating: SPY 727.69 (-1.66%), 5-min bars 15:40Z/15:45Z -3.0/-2.0 pts on ~1.1M vol, new lows each bar; QQQ 647.36 (-2.17%), SMH 445.79 (-3.49%), IWM 268.27 (-1.71%), NVDA 150.40 (-3.68%), IGV 94.73 (-4.31%). MR off.",
   "chips": [
    "SPY -1.1%",
    "SMH -3.5%",
@@ -13334,3 +13338,10 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum scan (cap>=2B, +3%, RVOL>=0.8): AS +8.02% RVOL 1.292, KLAR +3.15% RVOL 1.269. Both below the 1.3 RVOL minimum (marginal, treated as FAIL, not rounded up). AS is also fading from highs (31.435 vs 31.83 open of 15:15Z bar). No other names pass +3%. No entry.
 - MR sweep (cap>=5B, <=-5%, RSI<35), record only: SNDK -5.7% RSI 31, DDOG -5.8% RSI 28, TEAM -5.9% RSI 28, NOW -6.6% RSI 30, CRCL -5.6% RSI 28, SMCI -5.4% RSI 33, SMMT -7.1% RSI 35 (34.9), KEP -5.4% RSI 32. All fail regime (Falling) and Gate 1 (no dated external cause sourced this cycle; software/semis selloff cause unverified = FAIL). No WebSearch this cycle (not an hourly cycle).
 - Decision: no trade. 0 trades today; Tier C (14:30-15:30) remains the last window for the minimum; no gate relaxed.
+
+### Cycle 1108 - 2026-11-17 10:55 ET
+- Dedupe: last commit 15:43Z, trigger 15:52Z (9 min) - proceeded. Reconcile: no positions, no open orders, equity/cash/BP $399.19 (breaker level $394.19, $5.00 cushion). Trades today: 0. (Tool connections dropped/reconnected around this trigger; tools reloaded, no data gap.)
+- Tape: SPY 727.69 (-1.66%); 5-min 15:40Z bar 733.97->730.98 (low 730.05), 15:45Z bar 730.97->728.99 (low 728.17), ~1.1M volume each - accelerating selling, new lows every bar. QQQ 647.36 (-2.17%), SMH 445.79 (-3.49%), IWM 268.27 (-1.71%), NVDA 150.40 (-3.68%), IGV 94.73 (-4.31%). Regime: FALLING. MR OFF (sec 4.1). Momentum only for a fresh, non-fading catalyst gap.
+- Momentum scan (cap>=2B, +3%, RVOL>=0.8): AS +6.63% RVOL 1.370, KLAR +3.12% RVOL 1.362 (RVOL is raw volume vs 30-day avg before ~11:00 ET), MNSO +5.96% RVOL 0.81. AS/KLAR now clear 1.3 numerically but: (a) both are fading intraday (AS +8.0% -> +6.6%, 31.435 -> 31.03; KLAR +4.4% -> +3.1%) = Gate 1 not-fading FAIL; (b) Gate 2 catalyst not re-sourced this cycle (no search this cycle; non-hourly) = unverifiable = FAIL; (c) Gate 3 no held pullback with higher low and rising 9/20 EMA and no reclaim of a pullback high - AS 5-min lows flat/lower, price below prior highs = FAIL. MNSO fails RVOL (0.81) and ADR rule (foreign ADR). No entry.
+- MR sweep (cap>=5B, <=-5%, RSI<35), record only: 14 names (SNDK, ZS, DDOG, TEAM, MSTR, NOW, HOOD, AFRM, CRCL, INTC, SMCI, IREN, SMMT, KEP). Broad risk-off across software/semis/crypto/fintech. All fail regime (Falling) and Gate 1 (no dated external cause sourced; unverifiable = FAIL). Breadth widening is the opposite of stabilization.
+- Decision: no trade. Next hourly WebSearch at the :12 cycle. 0 trades today; Tier C (14:30-15:30) is the last window for the minimum; no gate relaxed.
