@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-17 11:35 ET",
+ "as_of": "2026-11-17 11:47 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Cycle 1112: flat, 0 trades. SPY rolled over again (730.23, lower 5-min lows), regime not confirmed Stabilizing; AS (+8.1%, RVOL 1.71) is the watch name - one-bar reclaim of 31.38 unconfirmed, 9/20 EMA not crossed.",
+ "status_note": "Cycle 1113: flat, 0 trades. SPY drifting lower (729.85, lower 5-min lows, flush low 727.00 intact); AS rejected at 31.475; BILL +7% unsourced vertical spike (fails pullback/spread); MR off.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-17",
@@ -4389,6 +4389,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-17 11:35 ET",
    "equity": 399.19
+  },
+  {
+   "t": "2026-11-17 11:47 ET",
+   "equity": 399.19
   }
  ],
  "positions": [],
@@ -4599,7 +4603,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "CHOPPY / NOT CONFIRMED: SPY 730.23 (-1.31%), 5-min lows 732.16, 731.52, 731.01, 730.96 and now below (lower lows) though flush low 727.00 still holds. QQQ 651.94 (-1.48%), SMH 453.18 (-1.89%), IWM 268.64 (-1.57%), NVDA 153.39 (-1.76%), IGV 95.11 (-3.93%). MR off (stabilization failed); momentum only for fresh non-fading catalyst names.",
+  "read": "CHOPPY / DRIFTING LOWER: SPY 729.85 (-1.36%), 5-min lows 731.01, 730.96, 730.21, 729.82 (lower lows, session low 727.00 intact). QQQ 651.93 (-1.48%), SMH 454.07 (-1.69%), IWM 268.88 (-1.49%), NVDA 153.48 (-1.70%), IGV 95.24 (-3.80%). MR off.",
   "chips": [
    "SPY -1.1%",
    "SMH -3.5%",
@@ -13390,3 +13394,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum scan (cap>=2B, +3%, RVOL>=0.8): AS +8.04-8.1% RVOL 1.71, ACM +12.0% RVOL 0.89 (<1.3 FAIL, catalyst unsourced), SA/MNSO/TME RVOL <1.1 and foreign/ADR/low-liquidity FAIL; KLAR dropped out of the scan (<+3%). AS detail: 5-min lows 31.09, 31.11, 31.19, 31.24 = higher lows since the 30.96 base; 16:20Z bar high 31.38, 16:25Z close 31.33, live 31.45; 9-EMA 31.307 (turning up) vs 20-EMA 31.313 (flat) on 5-min closes - 9 still marginally BELOW 20, no cross yet; the real pullback high is 31.97 (15:00Z) and is not reclaimed. Catalyst sourced at 11:17 (Q3 reported 11/17 am, EPS 0.42 vs 0.35 est); guidance not verified. Gate 3 verdict: the 31.38 break exists only as a live tick - the last COMPLETED 5-min bar closed under it - so it is a one-bar/unconfirmed reclaim, and with SPY printing lower lows I am not buying it (open question on one-bar vs confirmed-hold still unanswered; treated as FAIL, consistent with earlier cycles). Math if it did qualify: entry ~31.45, stop 31.19 (below higher low) = R 0.26, 2R target 31.97 = the day high, so upside anchor is thin. Watch-list: next cycle needs a completed 5-min close >31.38 with 9-EMA above 20-EMA, lows >=31.19 held, SPY not breaking 727.
 - MR sweep (cap>=5B, <=-3.5%, RSI<45): 58 names (record; broadening again: MU -4.8%, TSM -4.2%, PANW -4.0%, CRM -9.4%, ORCL -4.2%, SNDK -5.1%, MDB -7.0%, NOW -7.2%, HOOD -5.9%, CRCL -6.3%, IONQ -7.2%, etc.). Tier B (11:30-14:30) now active. All fail regime (not stabilized) and Gate 1 (no dated cause: the 11:17 searches found none; no new source this non-hourly cycle) and the software names Gate 4. No MR entry.
 - Decision: no trade. 0 trades today. Next hourly WebSearch at 12:12 ET cycle. Tier C 14:30-15:30 is the last window for the minimum. No gate relaxed.
+
+### Cycle 1113 - 2026-11-17 11:47 ET
+- Dedupe: last commit 16:34Z, trigger 16:42Z (8 min) - proceeded. Tools disconnected/reconnected around the trigger; reloaded, no data gap. Reconcile: no positions, no open orders, equity/cash/BP $399.19 (breaker level $394.19, $5.00 cushion). Trades today: 0.
+- Tape: SPY 729.85 (-1.36%); 5-min lows 731.01, 730.96, 730.21 (16:30Z), 729.82 (16:35Z) - successive lower lows, tight but sliding, flush low 727.00 not broken. Regime: not Stabilizing (no higher lows), not a new-low Falling leg either - CHOPPY/DRIFTING LOWER; MR OFF. QQQ 651.93 (-1.48%), SMH 454.07 (-1.69%), IWM 268.88 (-1.49%), NVDA 153.48 (-1.70%), IGV 95.24 (-3.80%).
+- Momentum scan (cap>=2B, +3%, RVOL>=0.8): ACM +12.5% RVOL 0.93 (FAIL <1.3, catalyst unsourced), BILL +7.3% RVOL 1.99 (new), AS +7.08% RVOL 1.74, SA/MNSO/TME RVOL ~1.0 and foreign/ADR/low-liquidity FAIL. AS: 16:30Z bar spiked to 31.475 and CLOSED 31.27, 16:35Z bar 31.14-31.29 close 31.275 (tiny 27K volume), live 31.16 - rejected at 31.38-31.475, no completed 5-min close above 31.38 = the watch-list trigger from Cycle 1112 did NOT occur; higher-low chain 31.19/31.21/31.14 now ambiguous (31.14 < 31.19). Gate 3 FAIL. BILL: bars were dead (1K-16K shares per 5 min, 55.2-56.7) until 16:30Z, then 55.25 -> 58.99 (340K shares) and 59.40 -> 62.20 (618K shares) = a vertical ~12% spike in two bars; live 61.96 (+7.5% vs 57.63 close), spread 61.56/61.80 = 0.39% (>0.3% FAIL), no base/pullback/higher low (Gate 3 FAIL), cap $4.9B ok, last earnings 11/05 (not within 2 days). Catalyst: WebSearch (standard) returned only older BILL items (Nov 2025 sale-exploration, Feb 2026 earnings) and nothing dated 11/17/2026 - UNSOURCED = Gate 2 FAIL; likely news-driven (possibly sale/activist related, unverified - I am not guessing). Vertical, unsourced, wide-spread spike = chase, not a setup. No entry.
+- MR sweep (cap>=5B, <=-5%, RSI<35): DDOG -5.4% RSI 28, TEAM -6.6% RSI 28, NOW -7.1% RSI 30, HOOD -6.3% RSI 29, AFRM -5.5% RSI 35 (34.8), CRCL -6.5% RSI 28, CAI -5.0% RSI 27, SMMT -8.8% RSI 35 (34.9), KEP -5.6% RSI 32 (9 names). Tier B (11:30-14:30) active but regime not stabilized and Gate 1 (no dated cause) FAIL for all; software names also Gate 4 FAIL. No MR entry.
+- Search note: 1 WebSearch this cycle (BILL, targeted at a momentum candidate); the hourly search is due at the 12:12 ET cycle.
+- Decision: no trade. 0 trades today; Tier C 14:30-15:30 is the last window for the minimum. No gate relaxed.
