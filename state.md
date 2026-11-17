@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-17 10:09 ET",
+  "as_of": "2026-11-17 10:20 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, 0 trades today. Tier A open 10:00-11:30 ET: software selloff (IGV -2.6%) but no name passes (no sourced same-day cause, multi-week downtrends, no higher lows). Equity $399.19; breaker level $394.19 ($5.00 room).",
+  "status_note": "Flat, 0 trades today. SPY made a new session low (736.34 at 10:10 ET): regime Falling, MR off. Momentum opens 10:30 ET. Equity $399.19; breaker level $394.19 ($5.00 room).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-17",
@@ -4353,6 +4353,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-17 10:09 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-17 10:20 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4563,7 +4567,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "RANGE/soft: SPY 737.60 (-0.32%) just above the 737.47 opening low; 5-min lows 737.67, 737.47, 737.75, 737.84, 738.03, 738.46 rose, then the 10:00 bar dipped. QQQ -0.21%, SMH -0.18%, IWM -0.38%, NVDA -0.57%. Software is the weak group: IGV -2.60%, CRM -7.0%, TEAM -6.2%, NOW -4.6%.",
+    "read": "FALLING: SPY 737.15 (-0.38%), new session low 736.34 (10:10 ET bar), below the 737.47 opening low. SMH -0.79%, QQQ -0.38%, IWM -0.58%, NVDA -1.35%, IGV -2.7%. MR off; momentum only for a fresh non-fading catalyst gap.",
     "chips": [
       "SPY -1.1%",
       "SMH -3.5%",
@@ -13286,3 +13290,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Gate-check, best candidate TEAM (Atlassian, 143.05 vs 149.94 prior close, -6.2%, RSI 28.0, IGV -2.60%): technicals: -6.2% and RSI 28.0 and down more than IGV meet Tier A; the 5-min lows are DESCENDING (146.01, 144.65, 144.76, 143.24, 143.665, 142.88), so the higher-low test FAILS. Gate 1 (external dated cause sourced this cycle): I searched; results ("software stocks selloff Tuesday Salesforce ServiceNow Atlassian shares fall why") described earlier episodes (Feb 4, Mar 24, 2026 AI-disruption selloffs, an IBM warning, a Salesforce outlook miss, a Claude-release item), none dated Nov 17; no same-day source, so Gate 1 FAILS. Gate 4 (not a multi-week downtrend): TEAM fell from ~227.6 (Oct 23) to ~150 (Nov 13), -34% in 3 weeks, including a -16% earnings gap on Nov 6 (company-specific); this IS a multi-week downtrend: FAIL. Gate 2 (fundamental datapoint) and Gate 3 (2R anchor) not completed since gates 1 and 4 already fail. CRM -6.9% (RSI 37, above 35: fails Tier A RSI; lows falling 205.63 to 200.72): FAIL. NOW -4.6% (below 5%): fails Tier A intraday; the 14:55 bar low 94.855 vs 94.81 is one marginal higher low: FAIL on size and Gate 1. DDOG -4.3% (<5%): FAIL. The rest: company-specific or unverified (SMMT), foreign ADRs (SSL, BILI, KEP: framework treats foreign names as fails for the momentum side; for mean-reversion Gate 1 still needs a sourced cause: none).
 - Disclosures: (1) Gate 1 sourcing: the search returned no Nov 17 items, same limitation as the pre-open brief and 09:19 ET search. (2) I did not run the momentum sweep at RVOL >= 1.3 this cycle because momentum is not eligible until 10:30 ET; the AS/KLAR RVOLs are from the prep sweep at 0.5.
 - Decision: NO TRADE. Trades today 0. Tier A runs to 11:30 ET; if the software group makes higher lows and a dated sector cause is sourced, it could still qualify, but Gate 4 (multi-week downtrend) remains the likely blocker for TEAM/NOW/CRM.
+
+### Cycle 1104 - 2026-11-17 10:20 ET (hourly trigger, scheduled 10:12 ET, fired 10:15 ET; Tier A open, regime FALLING)
+- Dedupe passed (last commit 15:03:47Z vs trigger 15:15:43Z). Reconcile: no positions, no open orders, equity/cash $399.19 (breaker $394.19, room $5.00). Stop checks: nothing held.
+- Tape 10:16 ET: SPY 737.15 (-0.38%), QQQ 659.24 (-0.38%), SMH 458.26 (-0.79%), IWM 271.37 (-0.58%), NVDA 154.03 (-1.35%), IGV 96.31 (-2.73%), XLE 63.94 (+0.39%). SPY 5-min: 10:00 bar low 737.59, 10:05 bar low 736.76 / close 736.86, 10:10 bar low 736.34: lower lows, and a NEW session low (736.34 < 737.47 opening low). IGV lows 96.43, 96.355, 96.12: also lower. Regime = Falling per framework 4.1: mean-reversion OFF; momentum only for a fresh, non-fading catalyst gap (and not before 10:30 ET).
+- Mean-reversion sweep for the record (cap >= $5B, <= -5%, RSI < 35, the Tier A cut): 4 names. DDOG -5.0% (RSI 28.5), TEAM -5.0% (RSI 28.0), SMMT -7.5% (RSI 34.9, biotech, unsourced), KEP -5.1% (Korea Electric Power, foreign). MR is off in a Falling regime; even apart from that, DDOG and TEAM fail Gate 4 (multi-week downtrend; TEAM -34% in 3 weeks) and Gate 1 (no sourced same-day cause).
+- Momentum sweep (>= +3%, RVOL >= 0.6, record only; not eligible before 10:30 ET): AS +9.4% (RVOL 1.09), KLAR +5.5% (RVOL 1.04), MNSO +7.3% (RVOL 0.61; Miniso, China ADR: foreign). RVOL for AS and KLAR is above 1.0 but still below the 1.3 minimum (raw volume vs 30-day average, said so for the pre-11:00 rule), so neither passes.
+- Hourly WebSearch ("stock market today November 17 2026 Dow S&P 500 Nasdaq software stocks Home Depot Disney"): returned no Nov 17, 2026 coverage. Latest 2026 items were Nov 9-13 (for example, the S&P 500 down 0.4% to 7,592.40 on Nov 13 per a Zacks item; earlier reports on Nov 9-10 conflict with each other) and a Nov 17, 2025 set from a year earlier that I do not use. Nothing sourced for today's tape; limitation logged again (this is the third Nov 17 search with no same-day result).
+- Decision: NO TRADE. Trades today 0. Tier A runs to 11:30 ET but MR is off while SPY keeps making new lows. Momentum opens at 10:30 ET.
