@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-17 09:46 ET",
+  "as_of": "2026-11-17 09:57 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Open 15 min, flat, no positions or orders. Entries open 10:00 ET (momentum 10:30). Equity $399.19; breaker level $394.19 ($5.00 room).",
+  "status_note": "Open 25 min, flat, no positions or orders. Entries open at 10:00 ET (momentum 10:30). Software selloff under way (CRM, NOW, MDB). Equity $399.19; breaker level $394.19 ($5.00 room).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-17",
@@ -4345,6 +4345,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-17 09:46 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-17 09:57 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4555,7 +4559,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "OPEN: SPY 739.40 (-0.07%) after an opening low 737.47 (09:35 ET bar), QQQ +0.22%, SMH +0.73%, IWM -0.07%, NVDA +0.28%. Early rebound off the open low; regime read comes with the 10:00+ bars.",
+    "read": "OPEN, range: SPY 738.97 (-0.13%), 5-min lows 737.67, 737.47, 737.75, 737.84 (opening low 737.47 held). QQQ -0.10%, SMH +0.13%, IWM -0.18%, NVDA -0.31%. Software/SaaS is the weak group (CRM -5.8%, NOW -3.9%, MDB -4.4%).",
     "chips": [
       "SPY -1.1%",
       "SMH -3.5%",
@@ -13261,3 +13265,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Tape 09:43 ET: SPY 739.40 (-0.07%), QQQ 663.21 (+0.22%), SMH 465.27 (+0.73%), IWM 272.74 (-0.07%), NVDA 156.57 (+0.28%). SPY 5-min: 09:30 bar 738.39 -> 737.69 (low 737.67, 486k volume), 09:35 bar low 737.47 / close 738.105 (254k); the 09:43 print of 739.40 is a 1.9-point rebound off the opening low. Opening bars only; one rebound is not a regime.
 - Scans: NOT run (disclosed): before the 10:00 ET entry window; the first 30 minutes are off-limits. Full sweeps start with the 10:0x cycle.
 - Decision: NO TRADE (before the entry window). Trades today 0.
+
+### Cycle 1102 - 2026-11-17 09:57 ET (last pre-entry cycle; scans run for preparation only)
+- Dedupe passed (last commit 14:42:59Z vs trigger 14:53:27Z). Reconcile: no positions, no open orders, equity/cash $399.19 (breaker $394.19, room $5.00). Stop checks: nothing held.
+- Tape 09:54 ET: SPY 738.97 (-0.13%), QQQ 661.09 (-0.10%), SMH 462.50 (+0.13%), IWM 272.44 (-0.18%), NVDA 155.65 (-0.31%). SPY 5-min lows 14:30 737.67, 14:35 737.47 (opening low), 14:40 737.75, 14:45 737.84: flat-to-higher lows above the 737.47 opening low, closes 737.69/738.11/737.87/739.01. The semis bounce is gone (SMH +1.5% pre-market to +0.1%); small range, no new session low. Regime too early to call (the 10:00+ bars decide); no entry is allowed before 10:00 ET anyway.
+- Prep scans (disclosed as preparation, not for entry; it is 09:54 ET): Momentum (cap >= $2B, >= +4%, RVOL >= 0.4 only because volume is light this early, so these are not passes): AS +7.5% (Amer Sports, 31.30, RVOL 0.74, post-earnings: reported this morning with EPS 0.42 vs 0.35 est), KLAR +5.8% (Klarna, 14.42, RVOL 0.81, reported this morning, EPS -0.19 vs -0.14 est: a miss, yet the stock is up, cause unverified). Neither is eligible before 10:30 ET and both would need RVOL >= 1.3 and a sourced reaction. Mean-reversion (cap >= $5B, <= -3.5%, RSI < 45): 14 names, mostly a SOFTWARE cluster: CRM -5.8% (RSI 37), NOW -3.9% (RSI 30.2), MDB -4.4%, ESTC -4.2%, PEGA -4.7%, GWRE -3.6%, QLYS -3.5%, CVLT -4.3%, FIG -4.2%, IONQ -3.7%; plus SSL -5.6% (Sasol, South Africa ADR, foreign), BILI -4.4% (China ADR), KEP -4.3% (Korea ADR), SMMT -4.8% (biotech). This is a sector-wide software dislocation, which is the shape Gate 1 allows IF a dated sector cause is sourced in the cycle of the entry; none sourced yet (the 08:34 ET and 09:19 ET searches found no Nov 17 coverage). Gate 4 is also a concern: software has been weak for weeks (CRM -5.8% with RSI 37, NOW RSI 30).
+- No WebSearch this cycle (before the entry window; the next cycle, 10:0x ET, will search the software selloff only if a software name looks like it passes the other gates).
+- Watch for the 10:0x cycle: software cluster for Tier A mean-reversion (needs a sourced sector cause, a neutral-or-better fundamental datapoint, a named 2R anchor, higher 5-min low, SPY not making new session lows). AS and KLAR for momentum from 10:30 ET only with RVOL >= 1.3 and a cited reaction.
+- Decision: NO TRADE (before the 10:00 ET entry window). Trades today 0.
