@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-17 09:19 ET",
+  "as_of": "2026-11-17 09:36 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Pre-market, flat, no positions or orders. Entries open 10:00 ET (momentum 10:30). Equity $399.19; breaker level $394.19 ($5.00 room).",
+  "status_note": "Market open (09:32 ET), flat, no positions or orders. Entries open 10:00 ET (momentum 10:30). Equity $399.19; breaker level $394.19 ($5.00 room).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-17",
@@ -4337,6 +4337,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-17 09:19 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-17 09:36 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4547,7 +4551,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "PRE-MARKET: SPY 739.16 (-0.11%), QQQ +0.32%, SMH +1.50%, IWM -0.45%, NVDA +1.15%, XLE +0.7%. AI/semis bounce into NVDA earnings after the close; broad market flat, small caps soft. Regime set after the open.",
+    "read": "OPEN, first minutes: SPY 738.26 (-0.23%), QQQ +0.01%, SMH +0.29%, IWM -0.30%, NVDA +0.61%. The pre-market semis bounce faded at the open. Too early to set a regime.",
     "chips": [
       "SPY -1.1%",
       "SMH -3.5%",
@@ -13240,4 +13244,10 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Pre-market tape 09:16 ET (thin): SPY 739.16 (-0.11%), QQQ 663.86 (+0.32%), SMH 468.82 (+1.50%), IWM 271.72 (-0.45%), NVDA 157.94 (+1.15%), XLE 64.12 (+0.67%), BITO 8.64 (+0.1%). The semis bounce keeps building while SPY and IWM are about unchanged to soft.
 - Hourly WebSearch ("Wall Street stocks open Tuesday Home Depot Disney earnings Nvidia ahead Fed retail sales"): returned no Nov 17, 2026 coverage. Results were older (Nov 18, 2025 Reuters pre-open piece, a May 19, 2026 Home Depot Q1 item, and 2022-2024 items); I do not use them as sources for today. No same-day macro, rates, tariff or geopolitical item verified; limitation logged again. Today's sourced facts remain the earnings calendar entries from the 08:34 ET brief.
 - Scans: NOT run (disclosed): before the 10:00 ET entry window.
+- Decision: NO TRADE (before the entry window). Trades today 0.
+
+### Cycle 1100 - 2026-11-17 09:36 ET (opening minutes, no entries before 10:00 ET)
+- Dedupe passed (last commit 14:16:48Z vs trigger 14:32:28Z). Reconcile: no positions, no open orders, equity/cash $399.19 (breaker $394.19, room $5.00). Stop checks: nothing held.
+- Tape 09:32 ET (first two minutes of the regular session, regular-session prices): SPY 738.26 (-0.23%), QQQ 661.81 (+0.01%), SMH 463.24 (+0.29%), IWM 272.14 (-0.30%), NVDA 157.09 (+0.61%). The pre-market AI/semis bounce (SMH +1.5% at 09:16) faded to +0.3% at the open; SPY is below yesterday's 739.95 close. Opening-minute prints are noisy; no regime read yet.
+- Scans: NOT run (disclosed): before the 10:00 ET entry window, and the opening 30 minutes are off-limits.
 - Decision: NO TRADE (before the entry window). Trades today 0.
