@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-17 14:56 ET",
+ "as_of": "2026-11-17 15:07 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Cycle 1132: EXITED ACM on invalidation at 82.005 (-$0.22, -0.2R). Flat, cash $398.97. 1 trade today (organic, closed). Breaker cushion $4.78. Tier C still open to 15:30.",
+ "status_note": "Cycle 1133: flat ($398.97), 1 trade today (ACM -0.22). SPY 728.49 sliding toward the 727.00 low, regime weakening; RYTM spike unsourced; no entry.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-17",
@@ -4469,6 +4469,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-17 14:56 ET",
    "equity": 398.97
+  },
+  {
+   "t": "2026-11-17 15:07 ET",
+   "equity": 398.97
   }
  ],
  "positions": [],
@@ -4691,7 +4695,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "STABILIZING -> WEAKENING: SPY 729.89 (-1.36%), 5-min lows 730.53, 730.34, 729.82 (new lower lows, 2.8 pts above the 727.00 flush low). QQQ 653.20 (-1.29%), SMH 453.40 (-1.84%), IWM 268.91 (-1.48%), NVDA 152.84 (-2.12%), IGV 95.95 (-3.08%).",
+  "read": "WEAKENING: SPY 728.49 (-1.55%), 5-min lows 730.34, 729.82, 729.54, 728.73 (lower lows each bar), 1.5 pts above the 727.00 flush low. QQQ 651.61 (-1.53%), SMH 451.46 (-2.26%), IWM 268.37 (-1.68%), NVDA 152.03 (-2.63%), IGV 95.73 (-3.30%). MR off; momentum only for a fresh non-fading catalyst.",
   "chips": [
    "SPY -1.1%",
    "SMH -3.5%",
@@ -13651,3 +13655,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum scan (cap>=2B, +3%, RVOL>=1.0): 13 names - BILL +11.7% RVOL 5.20 (64.35; cause still unsourced FAIL), VIK +4.6% RVOL 1.77 (EPS miss FAIL), AS +5.2% RVOL 2.22 (30.61; lower lows FAIL), SA +6.3% RVOL 2.37 (no cited catalyst FAIL), RYTM +9.1% RVOL 1.33 (cap $7.4B; no cited catalyst, no checks done FAIL), KLAR +4.0% (EPS miss FAIL), MNSO/TME/BZ/XPEV/NIO foreign ADRs FAIL, SNAP RVOL 1.29 FAIL. ACM exited (+13.1%). No new entry.
 - MR sweep (cap>=5B, <=-5%, RSI<35): TEAM -5.9% RSI 28, MSTR -5.9% RSI 29, NOW -6.5% RSI 30, AFRM -5.3% RSI 35 (34.8), SMMT -9.3% RSI 35 (34.9), KEP -5.4% RSI 32 (6 names). Gate 1 FAIL (no dated cause; next hourly WebSearch 15:12), regime weakening, software names Gate 4 FAIL. No MR entry.
 - STATE: flat, no open orders. Trades today 1 (organic, closed, -$0.22). Daily P&L -$0.22 (limit $60). Equity $398.97, breaker level $394.19, cushion $4.78. Tier C open until 15:30 ET: any further entry must pass every gate; no overnight position planned.
+
+### Cycle 1133 - 2026-11-17 15:07 ET
+- Dedupe: last commit 19:54Z, trigger 20:02Z (8 min) - proceeded. Tools disconnected/reconnected around the trigger; reloaded, no data gap. Reconcile: no positions, no open orders, cash/equity $398.97 (breaker level $394.19, cushion $4.78). Trades today: 1 (ACM, closed, -$0.22). Daily P&L -$0.22 (limit $60).
+- Tape: SPY 728.49 (-1.55%); 5-min lows 730.34, 729.82, 729.54, 728.73 - a new lower low every bar on rising volume (210-260K), 1.5 pts above the 727.00 flush low. QQQ 651.61 (-1.53%), SMH 451.46 (-2.26%), IWM 268.37 (-1.68%), NVDA 152.03 (-2.63% into tonight's report), IGV 95.73 (-3.30%). Regime: WEAKENING (becomes FALLING if 727.00 breaks); MR OFF; momentum only for a fresh, non-fading catalyst gap.
+- Momentum scan (cap>=2B, +3%, RVOL>=1.0): 14 names - BILL +11.5% RVOL 5.29 (64.25; cause still unsourced FAIL), ACM +13.0% RVOL 1.77 (exited at 82.005; now 81.96-81.93 - no re-entry: the invalidation stands and SPY is weakening), VIK +4.0% RVOL 1.83 (EPS miss FAIL), AS +4.9% RVOL 2.26 (30.52 lower lows FAIL), SA +6.6% RVOL 2.43 (no cited catalyst FAIL), KLAR +4.3% (EPS miss FAIL), RYTM +7.6% RVOL 1.36 (see below), GFF +3.2% RVOL 1.15 (<1.3 FAIL), MNSO/TME/BZ/XPEV/NIO foreign ADRs FAIL, SNAP RVOL 1.32 (cap $8.8B, +7.6%, no cited catalyst; not checked further = FAIL on Gate 2).
+- RYTM check (it just crossed RVOL 1.3): cap $7.4B, earnings 11/03 (not in window, EPS -0.61 vs -0.73 est, 2 weeks old - not a same-day catalyst). 5-min bars: dead 104.4-106.5 range on 1-35K shares until 16:50Z, then a vertical spike 105.27 -> 116.86 in two bars (16:50-16:55Z, 54K + 197K shares), then a steady drift 111 -> 117.9 with higher lows. Standard WebSearch found nothing dated 11/17/2026 (only older June/other RYTM news, none used) - the cause of the spike is UNSOURCED = Gate 2 FAIL. Same pattern as BILL: a vertical, unexplained, news-style spike. I will not guess a catalyst. No entry.
+- MR sweep (cap>=5B, <=-5%, RSI<35): TEAM -6.2% RSI 28, MSTR -5.8% RSI 29, NOW -6.9% RSI 30, HOOD -5.2% RSI 29, AFRM -5.8% RSI 35 (34.8), CRCL -5.1% RSI 28, SMCI -5.6% RSI 33, CAI -5.1% RSI 27, SMMT -10.2% RSI 35 (34.9), KEP -5.5% RSI 32 (10 names, widening again). Regime weakening/not stabilized; Gate 1 FAIL (no dated cause; hourly WebSearch is next cycle 15:12); software names Gate 4 FAIL. No MR entry.
+- Decision: no trade. 1 trade today (organic, closed, -$0.22). Tier C closes 15:30 ET; nothing qualifies. Flat overnight status will be stated in the 15:47 close recap.
