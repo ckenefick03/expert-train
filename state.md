@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-17 11:47 ET",
+ "as_of": "2026-11-17 11:56 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Cycle 1113: flat, 0 trades. SPY drifting lower (729.85, lower 5-min lows, flush low 727.00 intact); AS rejected at 31.475; BILL +7% unsourced vertical spike (fails pullback/spread); MR off.",
+ "status_note": "Cycle 1114: flat, 0 trades. SPY 728.81 grinding toward the 727.00 low; AS broke its higher-low base (30.94) = fading; BILL spike unsourced; MR off.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-17",
@@ -4393,6 +4393,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-17 11:47 ET",
    "equity": 399.19
+  },
+  {
+   "t": "2026-11-17 11:56 ET",
+   "equity": 399.19
   }
  ],
  "positions": [],
@@ -4603,7 +4607,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "CHOPPY / DRIFTING LOWER: SPY 729.85 (-1.36%), 5-min lows 731.01, 730.96, 730.21, 729.82 (lower lows, session low 727.00 intact). QQQ 651.93 (-1.48%), SMH 454.07 (-1.69%), IWM 268.88 (-1.49%), NVDA 153.48 (-1.70%), IGV 95.24 (-3.80%). MR off.",
+  "read": "FALLING (grind): SPY 728.81 (-1.50%), 5-min lows 730.21, 729.82, 729.58, 728.84, 1.8 pts above the 727.00 session low. QQQ 650.50 (-1.70%), SMH 452.00 (-2.14%), IWM 268.91 (-1.48%), NVDA 152.93 (-2.06%), IGV 94.91 (-4.13%). MR off.",
   "chips": [
    "SPY -1.1%",
    "SMH -3.5%",
@@ -13402,3 +13406,10 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - MR sweep (cap>=5B, <=-5%, RSI<35): DDOG -5.4% RSI 28, TEAM -6.6% RSI 28, NOW -7.1% RSI 30, HOOD -6.3% RSI 29, AFRM -5.5% RSI 35 (34.8), CRCL -6.5% RSI 28, CAI -5.0% RSI 27, SMMT -8.8% RSI 35 (34.9), KEP -5.6% RSI 32 (9 names). Tier B (11:30-14:30) active but regime not stabilized and Gate 1 (no dated cause) FAIL for all; software names also Gate 4 FAIL. No MR entry.
 - Search note: 1 WebSearch this cycle (BILL, targeted at a momentum candidate); the hourly search is due at the 12:12 ET cycle.
 - Decision: no trade. 0 trades today; Tier C 14:30-15:30 is the last window for the minimum. No gate relaxed.
+
+### Cycle 1114 - 2026-11-17 11:56 ET
+- Dedupe: last commit 16:43Z, trigger 16:52Z (9 min) - proceeded. Tools disconnected/reconnected around the trigger; reloaded, no data gap. Reconcile: no positions, no open orders, equity/cash/BP $399.19 (breaker level $394.19, $5.00 cushion). Trades today: 0.
+- Tape: SPY 728.81 (-1.50%); 5-min lows 730.21, 729.82, 729.58, 728.84 - steady lower lows, 1.8 pts above the 727.00 flush low (not yet broken). Regime: FALLING grind, no stabilization; MR OFF. QQQ 650.50 (-1.70%), SMH 452.00 (-2.14%), IWM 268.91 (-1.48%), NVDA 152.93 (-2.06%), IGV 94.91 (-4.13%).
+- Momentum scan (cap>=2B, +3%, RVOL>=0.8): ACM +12.3% RVOL 1.02, BILL +6.5% RVOL 2.41, AS +5.98% RVOL 1.77, SA/MNSO/TME RVOL ~1.0 (foreign/ADR/low-liquidity). AS: 16:45Z bar 31.20 -> 30.955 (low 30.9375) = new pullback low below the 30.96 base, now 30.87 (+6.1%); the day's fade from +8.5% continues, higher-low structure BROKEN; Gate 1 not-fading and Gate 3 FAIL. BILL: 61.38 (+6.5%), off the 62.50 spike high, still no base/pullback, spread ~0.2% (61.32/61.45) now within 0.3% but catalyst still UNSOURCED (no new search this cycle) = Gate 2 FAIL; Gate 3 FAIL (vertical spike, no higher-low base). ACM: RVOL 1.02 <1.3 FAIL. No entry.
+- MR sweep (cap>=5B, <=-5%, RSI<35): DDOG -5.9% RSI 28, TEAM -6.8% RSI 28, MSTR -5.4% RSI 29, NOW -7.2% RSI 30, HOOD -6.5% RSI 29, AFRM -5.7% RSI 35 (34.8), CRCL -6.5% RSI 28, SMCI -5.1% RSI 33, CAI -5.8% RSI 27, SMMT -7.5% RSI 35 (34.9), KEP -5.8% RSI 32 (11 names). Gate 1 FAIL for all (no dated cause - last searches 11:17/11:47 found none; no WebSearch this non-hourly cycle), regime not stabilized, software names Gate 4 FAIL. No MR entry.
+- Decision: no trade. 0 trades today. Hourly WebSearch due at the 12:12 ET cycle (the next one); Tier C 14:30-15:30 last window for the minimum. No gate relaxed.
