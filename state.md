@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-17 10:20 ET",
+  "as_of": "2026-11-17 10:28 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, 0 trades today. SPY made a new session low (736.34 at 10:10 ET): regime Falling, MR off. Momentum opens 10:30 ET. Equity $399.19; breaker level $394.19 ($5.00 room).",
+  "status_note": "Flat, 0 trades today. SPY keeps making new session lows (736.07 at 10:15 ET): regime Falling, MR off. Momentum opens 10:30 ET. Equity $399.19; breaker level $394.19 ($5.00 room).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-17",
@@ -4357,6 +4357,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-17 10:20 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-17 10:28 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4567,7 +4571,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "FALLING: SPY 737.15 (-0.38%), new session low 736.34 (10:10 ET bar), below the 737.47 opening low. SMH -0.79%, QQQ -0.38%, IWM -0.58%, NVDA -1.35%, IGV -2.7%. MR off; momentum only for a fresh non-fading catalyst gap.",
+    "read": "FALLING: SPY 736.64 (-0.45%), new low 736.07 (10:15 ET bar), three lower lows in a row (736.76, 736.34, 736.07). SMH -0.55%, QQQ -0.39%, IWM -0.61%, NVDA -1.33%, IGV -2.8%. MR off; momentum only for a fresh non-fading catalyst gap.",
     "chips": [
       "SPY -1.1%",
       "SMH -3.5%",
@@ -13298,3 +13302,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum sweep (>= +3%, RVOL >= 0.6, record only; not eligible before 10:30 ET): AS +9.4% (RVOL 1.09), KLAR +5.5% (RVOL 1.04), MNSO +7.3% (RVOL 0.61; Miniso, China ADR: foreign). RVOL for AS and KLAR is above 1.0 but still below the 1.3 minimum (raw volume vs 30-day average, said so for the pre-11:00 rule), so neither passes.
 - Hourly WebSearch ("stock market today November 17 2026 Dow S&P 500 Nasdaq software stocks Home Depot Disney"): returned no Nov 17, 2026 coverage. Latest 2026 items were Nov 9-13 (for example, the S&P 500 down 0.4% to 7,592.40 on Nov 13 per a Zacks item; earlier reports on Nov 9-10 conflict with each other) and a Nov 17, 2025 set from a year earlier that I do not use. Nothing sourced for today's tape; limitation logged again (this is the third Nov 17 search with no same-day result).
 - Decision: NO TRADE. Trades today 0. Tier A runs to 11:30 ET but MR is off while SPY keeps making new lows. Momentum opens at 10:30 ET.
+
+### Cycle 1105 - 2026-11-17 10:28 ET (Tier A open, regime FALLING)
+- Dedupe passed (last commit 15:16:18Z vs trigger 15:22:44Z, 6.4 min). Reconcile: no positions, no open orders, equity/cash $399.19 (breaker $394.19, room $5.00). Stop checks: nothing held.
+- Tape 10:23 ET: SPY 736.64 (-0.45%), QQQ 659.16 (-0.39%), SMH 459.36 (-0.55%), IWM 271.28 (-0.61%), NVDA 154.06 (-1.33%), IGV 96.22 (-2.81%). SPY 5-min lows 15:05 736.76, 15:10 736.34, 15:15 736.07: three lower lows in a row; 736.07 is a new session low. Regime Falling; MR off.
+- Mean-reversion sweep for the record (cap >= $5B, <= -5%, RSI < 35): 4 names: TEAM -5.2% (RSI 28.0), NOW -5.2% (RSI 30.2), SMMT -7.2% (RSI 34.9), KEP -5.1% (foreign). MR is off in a Falling regime; TEAM and NOW also fail Gate 4 (multi-week downtrend) and Gate 1 (no sourced same-day cause: three searches today found no Nov 17 coverage).
+- Momentum (opens 10:30 ET; record only): AS +8.1% (RVOL 1.14), KLAR +6.1% (RVOL 1.11), MNSO +7.1% (RVOL 0.65, China ADR). RVOL below the 1.3 minimum for AS and KLAR (raw volume vs the 30-day average, pre-11:00 rule). No momentum entry possible.
+- No WebSearch this cycle (the hourly search ran in Cycle 1104).
+- Decision: NO TRADE. Trades today 0. Tier A to 11:30 ET but MR is off while SPY makes new lows; momentum opens in about two minutes with AS/KLAR the only names and both short of RVOL 1.3.
