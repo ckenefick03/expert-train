@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-17 08:34 ET",
+  "as_of": "2026-11-17 08:46 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Pre-open: flat, no positions or orders. Equity $399.19; breaker level $394.19 ($5.00 room); peak $437.99. Pre-market AI/semis bounce into NVDA earnings (after the close today); entries start 10:00 ET.",
+  "status_note": "Pre-market, flat, no positions or orders. Entries open 10:00 ET. Equity $399.19; breaker level $394.19 ($5.00 room).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-17",
@@ -4321,6 +4321,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-17 08:34 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-17 08:46 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4531,7 +4535,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "PRE-MARKET: AI/semis bounce, SMH +1.2%, QQQ +0.4%, NVDA +1.2%, SPY flat (-0.05%), IWM -0.4% (SPY 739.57 vs close 739.95). Yesterday closed near the lows (SPY -1.91%). Regime is set by the session tape after the open; NVDA reports after the close.",
+    "read": "PRE-MARKET fading: SPY 738.49 (-0.20%), QQQ +0.18%, SMH +0.78%, IWM -0.57%, NVDA +0.69%. The AI bounce is narrowing; DIS -2.4% and HD -2.6% on earnings. Regime set after the open.",
     "chips": [
       "SPY -1.1%",
       "SMH -3.5%",
@@ -13199,3 +13203,10 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Watch list, momentum (need a sourced catalyst, RVOL >= 1.3 (raw volume vs the 30-day average before ~11:00 ET, said so), not fading, a held pullback with a higher low, earliest 10:30 ET, foreign ADRs fail): AS (Amer Sports, +5.8% on an EPS beat; a post-report thesis candidate, subject to checking the reaction and whether its domicile counts as foreign), DIS (reported am, beat; reaction not yet seen), HD (slight miss; likely not a long), COHR / LITE / FN (AI optics bounce; sector-driven into NVDA's report after the close, so they carry event risk and fade risk), MOH (+9% yesterday, unsourced; only if a source appears). POWL and CGON were strong yesterday without a sourced catalyst; they fail Gate 2 unless one appears.
 - Event risk today: NVDA reports after the close, so any position must be flat before the bell (default flat anyway; no overnight holds into the print). Mandatory 15:30 ET entry cutoff stands.
 - Open user questions still unanswered (no change made): whether marginal RVOL/spread passes count as fails (treated as fails), one-bar reclaim vs confirmed-hold rule, whether to reduce the $105 size given breaker proximity, and a profit-protection rule. The 1-trade minimum was missed on Nov 16; the minimum is still never met by relaxing a gate. Tier C (14:30-15:30 ET) is the last window; a forced tag applies only to a trade that passes every gate.
+
+### Cycle 1096 - 2026-11-17 08:46 ET (pre-market cycle, no entries before 10:00 ET)
+- Dedupe passed (last commit 13:28:43Z vs trigger 13:42:47Z). Reconcile: no positions, no open orders, equity/cash $399.19 (breaker $394.19, room $5.00). Stop checks: nothing held.
+- Pre-market tape 08:43 ET (extended hours, thin): SPY 738.49 (-0.20% vs 739.95), QQQ 662.92 (+0.18%), SMH 465.50 (+0.78%), IWM 271.39 (-0.57%), NVDA 157.22 (+0.69%). Compared with 08:28 ET, the early AI bounce has narrowed (SPY -0.05% -> -0.20%, SMH +1.20% -> +0.78%, QQQ +0.36% -> +0.18%).
+- Earnings reactions seen in pre-market: DIS 115.87 (-2.4% vs 118.70; EPS 1.77 vs 1.68 est per the calendar), HD 338.54 (-2.6% vs 347.51; EPS 3.86 vs 3.87 est), AS 30.05 (+3.3% vs 29.10; EPS 0.42 vs 0.35 est; was +5.8% at 08:28). Pre-market prices only; no conclusions before the open.
+- Scans: NOT run this cycle (disclosed): entries are not allowed before 10:00 ET and pre-market volume is too thin for a gate-check; the pre-open brief (08:34 ET) already holds the pre-market mover list. Full sweeps start with the 10:0x cycle.
+- Decision: NO TRADE (before the 10:00 ET entry window). Trades today 0.
