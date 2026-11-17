@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-17 12:46 ET",
+ "as_of": "2026-11-17 12:58 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Cycle 1119: flat, 0 trades. SPY 732.28 (-1.04%) range-bound; BILL +9.8% new high RVOL 3.4 but catalyst unsourced; AS drifting to 31.01; MR names lack sourced cause.",
+ "status_note": "Cycle 1120: flat, 0 trades. SPY 732.04 range-bound; BILL +9.7% steady higher lows RVOL 3.6 but spike cause unsourced (searched: only a Nov 16 analyst upgrade, no 8-K today); AS fading; MR sourcing fails.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-17",
@@ -4417,6 +4417,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-17 12:46 ET",
    "equity": 399.19
+  },
+  {
+   "t": "2026-11-17 12:58 ET",
+   "equity": 399.19
   }
  ],
  "positions": [],
@@ -4627,7 +4631,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "STABILIZING / RANGE: SPY 732.28 (-1.04%), 5-min lows 733.23, 732.95, 732.50, 731.67 (drifting lower inside the range; flush low 727.00 intact). QQQ 654.91 (-1.03%), SMH 456.52 (-1.17%), IWM 270.54 (-0.88%), NVDA 153.96 (-1.40%), IGV 95.40 (-3.64%). Not a confirmed uptrend; MR still blocked by sourcing.",
+  "read": "STABILIZING / RANGE: SPY 732.04 (-1.07%), 5-min lows 732.50, 731.67, 731.68, 731.40 (flat to slightly lower inside 731.4-734.5); flush low 727.00 intact. QQQ 654.53 (-1.09%), SMH 455.81 (-1.32%), IWM 270.49 (-0.90%), NVDA 153.65 (-1.60%), IGV 95.42 (-3.62%).",
   "chips": [
    "SPY -1.1%",
    "SMH -3.5%",
@@ -13469,3 +13473,10 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum scan (cap>=2B, +3%, RVOL>=0.8): 11 names. BILL +9.8% RVOL 3.36 (63.285, new high of day, 12.0 pts of ATR-style range; catalyst STILL UNSOURCED - two searches at 11:47 and 12:20 found nothing dated today = Gate 2 FAIL; Gate 3 FAIL: no held pullback after the vertical spike, entry would be above the spike range). AS +6.9% RVOL 1.90, 31.01-31.11, lows 31.02/30.99 drifting under 31.04-31.10 = no higher-low base and falling intraday = Gate 3 FAIL. ACM +12.8% RVOL 1.26, VIK +3.5% RVOL 1.25, SA +6.6% RVOL 1.30 (1.302 - marginal pass on RVOL but cap $2.65B gold miner, avg volume low; I treat marginal as FAIL and it has no cited catalyst), MNSO/TME foreign ADR, RYTM/XPEV/SNAP/NIO RVOL <1.0 (FAIL). KLAR dropped out of the scan. No entry.
 - MR sweep (cap>=5B, <=-3.5%, RSI<35): 16 names incl. DDOG -5.0% RSI 28, TEAM -5.2% RSI 28, MSTR -4.7% RSI 29, NOW -6.9% RSI 30, HOOD -5.3% RSI 29, CRCL -5.1% RSI 28, SMMT -8.2% RSI 35 (34.9), KEP -5.2% RSI 32, ZS -3.8% RSI 34.9, SMCI -4.0%, BABA -4.1%, AFRM -5.0% RSI 35, CAI/NTNX/GIL/AUR -3.6 to -4.3%. Gate 1 FAIL for all (no dated cause; last hourly searches 12:20; none this non-hourly cycle); Tier B needs >=3.5% intraday with visible stabilization, and the software/crypto names still fail Gate 4 / cause sourcing. No MR entry.
 - Decision: no trade. 0 trades today. Next hourly WebSearch at the 13:12 ET cycle; Tier C 14:30-15:30 is the last window for the minimum; NVDA after the close - flat before the bell. No gate relaxed.
+
+### Cycle 1120 - 2026-11-17 12:58 ET
+- Dedupe: last commit 17:42Z, trigger 17:53Z (11 min) - proceeded. Tools disconnected/reconnected around the trigger; no data gap. Reconcile: no positions, no open orders, equity/cash/BP $399.19 (breaker level $394.19, $5.00 cushion). Trades today: 0.
+- Tape: SPY 732.04 (-1.07%); 5-min lows 732.50, 731.67, 731.68, 731.40 - flat-to-lower inside the 731.4-734.5 range, volume thin (114K-210K per bar). Regime: STABILIZING/RANGE, no momentum either way. QQQ 654.53 (-1.09%), SMH 455.81 (-1.32%), IWM 270.49 (-0.90%), NVDA 153.65 (-1.60%), IGV 95.42 (-3.62%).
+- Momentum scan (cap>=2B, +3%, RVOL>=0.8): 14 names. BILL +9.7% RVOL 3.58 is the only name with improving structure: 5-min lows 61.98 (17:30Z), 62.58, 62.91, 63.50 = four ascending lows after the 11:30 ET spike, closes 62.67/62.89/63.88/63.51, spread 63.18/63.31 = 0.2% (PASS), cap $4.95B (PASS). Because it would otherwise pass Gates 1/3/4, I ran the heavier search now (1 extended WebSearch + SEC filing index): the search found NO takeover/activist/news item dated today; the only dated BILL catalyst is a William Blair upgrade to Outperform on Monday 11/16 (+5.2% that day, MarketBeat), and the filing index shows no 8-K today (latest 8-K 11/05 = earnings; Form 4 11/10). So the 11:30 ET vertical spike (+12% in two bars on 340K/618K shares) has NO sourced cause = Gate 2 FAIL (unverifiable = FAIL, I will not guess a takeover rumor). Also entry would be a chase above the day high 64.17 with stop below 62.58, ~2.4% risk; no entry. AS +6.7% RVOL 1.92: 31.06, lows 30.99-31.04 drifting, below 31.38, no higher-low base = Gate 3 FAIL. KLAR +3.3% RVOL 1.94 (EPS miss, no positive catalyst) = Gate 2 FAIL. SA +6.3% RVOL 1.41 (cap $2.65B gold miner, no cited catalyst, avg vol low) = Gate 2 FAIL. ACM +12.6% RVOL 1.296 and VIK +4.2% RVOL 1.295 (both a hair under 1.3 = FAIL, treated as fails, no rounding; neither has a cited catalyst). RYTM +7.3% RVOL 0.95, UNFI +7.6% RVOL 0.80, SITE +3.1% RVOL 1.12, SNAP/XPEV/NIO <1.0, MNSO/TME foreign ADRs: FAIL. No entry.
+- MR sweep (cap>=5B, <=-5%, RSI<35): DDOG -5.4% RSI 28, TEAM -5.3% RSI 28, NOW -6.6% RSI 30, HOOD -5.2% RSI 29, SMMT -8.2% RSI 35 (34.9), KEP -5.1% RSI 32 (6 names). Gate 1 FAIL for all (no dated cause, includes this cycle's extended search which was BILL-specific; the 12:20 hourly searches also found none); TEAM/NOW Gate 4 FAIL. No MR entry.
+- Decision: no trade. 0 trades today. Next hourly WebSearch at the 13:12 ET cycle; Tier C 14:30-15:30 is the last window for the minimum; NVDA after the close - flat before the bell. No gate relaxed. Disclosure: I used one 'extended' WebSearch (higher cost) because BILL was the only candidate near passing.
