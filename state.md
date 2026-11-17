@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-17 15:42 ET",
+ "as_of": "2026-11-17 15:48 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Flat, no orders. Entry window closed (15:30 ET). Equity 398.97 (breaker 394.19). Expect flat overnight.",
+ "status_note": "Close recap: FLAT overnight, no positions, no open orders. Day -0.22 (1 trade, ACM, organic). Equity 398.97 (breaker 394.19). NVDA reports after the close.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-17",
@@ -4489,6 +4489,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-17 15:42 ET",
    "equity": 398.97
+  },
+  {
+   "t": "2026-11-17 15:48 ET",
+   "equity": 398.97
   }
  ],
  "positions": [],
@@ -4711,7 +4715,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "WEAK / BASING: SPY 730.98 (-1.21%), QQQ -1.09%, SMH -1.34%, IWM -1.36%; flat since 15:32. Entries closed.",
+  "read": "WEAK / BASING at the close: SPY 730.39 (-1.30%), QQQ -1.18%, SMH -1.45%, IWM -1.40%. Entries closed.",
   "chips": [
    "SPY -1.1%",
    "SMH -3.5%",
@@ -13708,3 +13712,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Tape: SPY 730.98 (-1.21%), QQQ 654.50 (-1.09%), SMH 455.70 (-1.34%), IWM 269.23 (-1.36%), IGV 95.73 (-3.3%). Unchanged vs 15:32; regime weak / basing.
 - Scans: not run (past the 15:30 ET entry cutoff; no strategy can open a position). Deliberate skip, disclosed.
 - Decision: no trade. Day total 1 trade (ACM, -$0.22, organic). Next: 15:47 ET close recap with the overnight status.
+
+### Cycle 1138 - 2026-11-17 15:48 ET (close recap)
+- Stop checks / reconcile: account 771144490 flat, no open orders, cash/equity $398.97. No stops to check. No entries after 15:30 ET.
+- **Overnight status: NO positions roll overnight.** Nothing to justify holding; the account is 100% cash. NVDA reports after the close today (tape-level event risk, no exposure).
+- Close tape: SPY 730.39 (-1.30%), QQQ 653.94 (-1.18%), SMH 455.22 (-1.45%), IWM 269.13 (-1.40%). Weak / basing day.
+- Day recap (2026-11-17): start equity $399.19, end $398.97, P&L -$0.22. 1 trade: ACM momentum, bought 13:14 ET @ 82.18, sold 14:54 ET @ 82.005 on a documented 5-min structure invalidation, -0.22R, tag organic (not forced). Minimum of 1 trade met without relaxing any gate.
+- Skips: mean-reversion never had a dated, sourced external cause all day (including the TEAM/NOW software selloff at 15:23); BILL/RYTM were unsourced vertical spikes; VIK/KLAR were EPS misses; AS had no base. Follow-ups: ACM now 81.45, so the 14:54 exit avoided about -$0.7 vs holding. BILL, skipped as unsourced, ran roughly +3.8% after 13:00, so it is a data point for the strict-sourcing review.
+- Process disclosures: the ACM entry rested on a one-bar completed-close trigger (the weakest part of the trade). WebSearch returned only wrong-year coverage in the hourly runs, so it was never used as a same-day source. Scans were deliberately skipped at 15:32/15:42 (past the entry cutoff). Missed cycles: none known. Breaker cushion is thin ($4.78 above $394.19), still unanswered by the user whether to cut the $105 size.
