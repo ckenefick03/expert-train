@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-17 10:28 ET",
+  "as_of": "2026-11-17 10:38 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat, 0 trades today. SPY keeps making new session lows (736.07 at 10:15 ET): regime Falling, MR off. Momentum opens 10:30 ET. Equity $399.19; breaker level $394.19 ($5.00 room).",
+  "status_note": "Flat, 0 trades today. Regime Falling, selling accelerating (SPY 735.11, SMH -1.3%, NVDA -2.2%). MR off; momentum opened 10:30 ET but AS/KLAR RVOL below 1.3. Equity $399.19; breaker level $394.19 ($5.00 room).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-17",
@@ -4361,6 +4361,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-17 10:28 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-17 10:38 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4571,7 +4575,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "FALLING: SPY 736.64 (-0.45%), new low 736.07 (10:15 ET bar), three lower lows in a row (736.76, 736.34, 736.07). SMH -0.55%, QQQ -0.39%, IWM -0.61%, NVDA -1.33%, IGV -2.8%. MR off; momentum only for a fresh non-fading catalyst gap.",
+    "read": "FALLING, accelerating: SPY 735.11 (-0.65%), new session lows each bar (736.07, 736.22, 736.30 then 735.1). SMH -1.32%, QQQ -0.76%, IWM -0.68%, NVDA -2.19% into its earnings after the close, IGV -3.15%. MR off; momentum only for a fresh non-fading catalyst gap.",
     "chips": [
       "SPY -1.1%",
       "SMH -3.5%",
@@ -13310,3 +13314,12 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum (opens 10:30 ET; record only): AS +8.1% (RVOL 1.14), KLAR +6.1% (RVOL 1.11), MNSO +7.1% (RVOL 0.65, China ADR). RVOL below the 1.3 minimum for AS and KLAR (raw volume vs the 30-day average, pre-11:00 rule). No momentum entry possible.
 - No WebSearch this cycle (the hourly search ran in Cycle 1104).
 - Decision: NO TRADE. Trades today 0. Tier A to 11:30 ET but MR is off while SPY makes new lows; momentum opens in about two minutes with AS/KLAR the only names and both short of RVOL 1.3.
+
+### Cycle 1106 - 2026-11-17 10:38 ET (momentum window open from 10:30 ET; regime FALLING)
+- Dedupe passed (last commit 15:23:10Z vs trigger 15:32:46Z). Reconcile: no positions, no open orders, equity/cash $399.19 (breaker $394.19, room $5.00). Stop checks: nothing held.
+- Tape 10:33 ET: SPY 735.11 (-0.65%), QQQ 656.73 (-0.76%), SMH 455.81 (-1.32%), IWM 271.09 (-0.68%), NVDA 152.72 (-2.19%), IGV 95.88 (-3.15%). SPY 5-min: 15:15 bar low 736.07, 15:20 low 736.22, 15:25 low 736.30, and the 15:30 bar now trades 735.11, a new session low by about 1 point. Selling is picking up into NVDA's report after the close. Regime Falling; MR off.
+- Momentum sweep (cap >= $2B, >= +3%, RVOL >= 0.8, record of the window's first look): 2 names. AS +8.5% (Amer Sports, 31.56, RVOL 1.24; EPS 0.42 vs 0.35 est, the only sourced item, from the earnings calendar, not a reaction article): 5-min lows mostly rising (29.63, 30.90, 31.16, 31.25, 31.21, 31.26, 31.60, 31.49, 31.63, 31.47, 31.39, 31.41), holding above the opening range and well above its prior close of 29.10, 6 to 9 points stronger than SPY: it is the only real relative-strength name. But RVOL is 1.24 against the 1.3 minimum, so Gate 1 FAILS on volume (raw volume vs the 30-day average, pre-11:00 rule, said so); I do not treat 1.24 as a pass. Also unresolved: Gate 2 (a catalyst beyond the EPS beat: revenue/guidance reaction not sourced this cycle) and whether Amer Sports (Cayman-incorporated, NYSE-listed, global operations) counts as foreign. KLAR +4.4% (RVOL 1.19; reported an EPS miss, -0.19 vs -0.14 est, yet up: cause unverified): FAIL on RVOL and Gate 2. No other name >= +3% with RVOL >= 0.8.
+- Mean-reversion (for the record, MR off): >= 5% down and RSI < 35: DDOG -5.2% (RSI 28.5), NOW -5.4% (RSI 30.2), SMMT -6.7% (RSI 34.9, biotech), KEP -5.1% (foreign). All fail Gate 4 (multi-week downtrend) and Gate 1 (no sourced same-day cause), and the regime has MR off.
+- No WebSearch this cycle (hourly search ran in Cycle 1104; no candidate would otherwise pass).
+- Watch: AS if RVOL reaches 1.3 with its higher lows intact; it would also need a cited reaction (revenue/guidance) and a 2R target above a stop under the 31.39-31.41 base lows.
+- Decision: NO TRADE. Trades today 0.
