@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-17 10:55 ET",
+ "as_of": "2026-11-17 11:05 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Cycle 1108: flat, 0 trades. SPY 727.69 (-1.66%) accelerating lower; MR off; AS/KLAR now RVOL>=1.3 but fail catalyst/pullback-reclaim gates.",
+ "status_note": "Cycle 1109: flat, 0 trades. SPY flushed to 727.00 then bounced to 731.93 (-1.09%); only one higher bar, not yet Stabilizing; MR off; AS/KLAR fail pullback gate.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-17",
@@ -4373,6 +4373,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-17 10:55 ET",
    "equity": 399.19
+  },
+  {
+   "t": "2026-11-17 11:05 ET",
+   "equity": 399.19
   }
  ],
  "positions": [],
@@ -4583,7 +4587,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "FALLING, accelerating: SPY 727.69 (-1.66%), 5-min bars 15:40Z/15:45Z -3.0/-2.0 pts on ~1.1M vol, new lows each bar; QQQ 647.36 (-2.17%), SMH 445.79 (-3.49%), IWM 268.27 (-1.71%), NVDA 150.40 (-3.68%), IGV 94.73 (-4.31%). MR off.",
+  "read": "FALLING, first bounce: SPY low 727.00 (15:50Z bar) then +3.8 pt bar to 731.93 (-1.09%); one higher bar only (need ~3 higher lows). QQQ 654.12 (-1.15%), SMH 455.20 (-1.45%), IWM 269.31 (-1.33%), NVDA 154.27 (-1.20%), IGV 95.57 (-3.46%). MR off until stabilization confirmed.",
   "chips": [
    "SPY -1.1%",
    "SMH -3.5%",
@@ -13345,3 +13349,10 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum scan (cap>=2B, +3%, RVOL>=0.8): AS +6.63% RVOL 1.370, KLAR +3.12% RVOL 1.362 (RVOL is raw volume vs 30-day avg before ~11:00 ET), MNSO +5.96% RVOL 0.81. AS/KLAR now clear 1.3 numerically but: (a) both are fading intraday (AS +8.0% -> +6.6%, 31.435 -> 31.03; KLAR +4.4% -> +3.1%) = Gate 1 not-fading FAIL; (b) Gate 2 catalyst not re-sourced this cycle (no search this cycle; non-hourly) = unverifiable = FAIL; (c) Gate 3 no held pullback with higher low and rising 9/20 EMA and no reclaim of a pullback high - AS 5-min lows flat/lower, price below prior highs = FAIL. MNSO fails RVOL (0.81) and ADR rule (foreign ADR). No entry.
 - MR sweep (cap>=5B, <=-5%, RSI<35), record only: 14 names (SNDK, ZS, DDOG, TEAM, MSTR, NOW, HOOD, AFRM, CRCL, INTC, SMCI, IREN, SMMT, KEP). Broad risk-off across software/semis/crypto/fintech. All fail regime (Falling) and Gate 1 (no dated external cause sourced; unverifiable = FAIL). Breadth widening is the opposite of stabilization.
 - Decision: no trade. Next hourly WebSearch at the :12 cycle. 0 trades today; Tier C (14:30-15:30) is the last window for the minimum; no gate relaxed.
+
+### Cycle 1109 - 2026-11-17 11:05 ET
+- Dedupe: last commit 15:53Z, trigger 16:03Z (10 min) - proceeded. Reconcile: no positions, no open orders, equity/cash/BP $399.19 (breaker level $394.19). Trades today: 0. Tool connections dropped/reconnected again around the trigger; reloaded, no data gap.
+- Tape: SPY 5-min: 15:50Z bar 728.98->727.53 (low 727.00 = session low), 15:55Z bar 727.45->731.33 (high 731.75, low 727.20), now 731.93 (-1.09%). Sharp V off the flush, but just ONE higher bar - no 3 consecutive higher 5-min lows yet. QQQ 654.12 (-1.15%), SMH 455.20 (-1.45%), IWM 269.31 (-1.33%), NVDA 154.27 (-1.20%, big bounce from 150.40), IGV 95.57 (-3.46%). Regime: FALLING with first bounce; not Stabilizing -> MR still OFF. Next cycle needs higher lows (>727.20) to flip.
+- Momentum scan (cap>=2B, +3%, RVOL>=0.8): AS +6.94% RVOL 1.52, KLAR +3.93% RVOL 1.40, MNSO +5.4% RVOL 0.87 (foreign ADR + RVOL fail). AS 5-min lows: 31.17, 30.98, 30.96 (lower lows, below prior pullback) - no held pullback/higher low, 9/20 EMA falling = Gate 3 FAIL; catalyst not re-sourced this cycle = Gate 2 unverifiable FAIL. KLAR 5-min: lows 14.32 (15:10Z) -> 13.96 (15:50Z), lower lows throughout the 14:50-15:50Z window, only one up bar (15:55Z close 14.155) = Gate 3 FAIL; catalyst unverified = FAIL. No entry.
+- MR sweep (cap>=5B, <=-5%, RSI<35), record only: down to 6 names (TEAM -5.3%, NOW -6.1%, AFRM -5.1%, CRCL -5.3%, SMMT -6.9%, KEP -5.7%) as the bounce pulled others above -5%. All fail regime (not Stabilizing) and Gate 1 (no dated external cause sourced this cycle = FAIL). Hourly WebSearch due at :12 cycle.
+- Decision: no trade. 0 trades today; Tier C (14:30-15:30) remains the last window for the minimum; no gate relaxed.
