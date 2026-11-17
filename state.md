@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-17 11:05 ET",
+ "as_of": "2026-11-17 11:17 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Cycle 1109: flat, 0 trades. SPY flushed to 727.00 then bounced to 731.93 (-1.09%); only one higher bar, not yet Stabilizing; MR off; AS/KLAR fail pullback gate.",
+ "status_note": "Cycle 1110 (hourly): flat, 0 trades. Regime flipped to STABILIZING (3 higher 5-min lows); MR on but every candidate fails Gate 1 (no same-day cause found); AS earnings beat sourced but EMAs falling, no reclaim.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-17",
@@ -4377,6 +4377,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-17 11:05 ET",
    "equity": 399.19
+  },
+  {
+   "t": "2026-11-17 11:17 ET",
+   "equity": 399.19
   }
  ],
  "positions": [],
@@ -4587,7 +4591,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "FALLING, first bounce: SPY low 727.00 (15:50Z bar) then +3.8 pt bar to 731.93 (-1.09%); one higher bar only (need ~3 higher lows). QQQ 654.12 (-1.15%), SMH 455.20 (-1.45%), IWM 269.31 (-1.33%), NVDA 154.27 (-1.20%), IGV 95.57 (-3.46%). MR off until stabilization confirmed.",
+  "read": "STABILIZING: SPY 732.79 (-0.97%), session low 727.00 (15:50Z), 5-min lows 727.20 -> 731.24 -> 731.74 (3 higher lows, no new low). QQQ 654.72 (-1.06%), SMH 456.97 (-1.07%), IWM 269.65 (-1.21%), NVDA 155.27 (-0.56%), IGV 95.39 (-3.64%). MR enabled by regime; no candidate passes gates.",
   "chips": [
    "SPY -1.1%",
    "SMH -3.5%",
@@ -13356,3 +13360,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum scan (cap>=2B, +3%, RVOL>=0.8): AS +6.94% RVOL 1.52, KLAR +3.93% RVOL 1.40, MNSO +5.4% RVOL 0.87 (foreign ADR + RVOL fail). AS 5-min lows: 31.17, 30.98, 30.96 (lower lows, below prior pullback) - no held pullback/higher low, 9/20 EMA falling = Gate 3 FAIL; catalyst not re-sourced this cycle = Gate 2 unverifiable FAIL. KLAR 5-min: lows 14.32 (15:10Z) -> 13.96 (15:50Z), lower lows throughout the 14:50-15:50Z window, only one up bar (15:55Z close 14.155) = Gate 3 FAIL; catalyst unverified = FAIL. No entry.
 - MR sweep (cap>=5B, <=-5%, RSI<35), record only: down to 6 names (TEAM -5.3%, NOW -6.1%, AFRM -5.1%, CRCL -5.3%, SMMT -6.9%, KEP -5.7%) as the bounce pulled others above -5%. All fail regime (not Stabilizing) and Gate 1 (no dated external cause sourced this cycle = FAIL). Hourly WebSearch due at :12 cycle.
 - Decision: no trade. 0 trades today; Tier C (14:30-15:30) remains the last window for the minimum; no gate relaxed.
+
+### Cycle 1110 - 2026-11-17 11:17 ET (hourly, WebSearch run)
+- Dedupe: last commit 16:03Z, trigger fired 16:14Z (11 min) - proceeded. Reconcile: no positions, no open orders, equity/cash/BP $399.19 (breaker level $394.19; $5.00 cushion). Trades today: 0. Disclosure: my first get_earnings_results call used wrong params (start_date/end_date; tool takes a single `symbol`) and errored; re-called correctly, no data gap.
+- Tape: SPY 732.79 (-0.97%). 5-min lows since the 727.00 flush (15:50Z): 727.20, 731.24, 731.74 = THREE consecutive higher lows, no new session low -> regime STABILIZING per sec 4.1 (MR on, momentum on). QQQ 654.72 (-1.06%), SMH 456.97 (-1.07%), IWM 269.65 (-1.21%), NVDA 155.27 (-0.56%), IGV 95.39 (-3.64%, software still the weak complex; XRT 88.68 -1.0%).
+- WebSearch (2 standard queries): (1) software selloff cause 11/17/2026 - returned only older-2026 items (Feb/Apr SaaS AI-disruption, an undated WSJ blurb); no dated Nov 17 source -> cause UNVERIFIABLE. (2) market today 11/17/2026 - no same-day wrap; only Nov 10-13 2026 items and 11/17/2025 items (wrong year, not used). So no sector/macro cause can be tied to today = MR Gate 1 FAIL for every candidate.
+- MR sweep (cap>=5B, <=-3.5%, RSI<45) = 46 names (record). Tier A-grade (>=5% intraday, RSI<35, sector weak): TEAM -5.6% RSI 28, NOW -6.6% RSI 30, CRCL -5.2% RSI 28, SMMT -8.8% RSI 34.9, KEP -5.7% RSI 32, CRM -9.1% RSI 37 (RSI fails <35). Software names (TEAM/NOW/DDOG/CRM/MDB etc.): Gate 1 FAIL (no dated cause) and Gate 4 FAIL (TEAM -34% in 3 weeks per prior cycle; NOW/CRM at multi-week lows, RSI near 30 = continuing downtrend). SMMT/KEP/CRCL: idiosyncratic or unverifiable, no sector cause, Gate 1 FAIL. No MR entry.
+- Momentum scan (cap>=2B, +3%, RVOL>=0.8): AS +7.18% RVOL 1.59; KLAR +3.15% RVOL 1.46; SA +6.2% RVOL 0.88, MNSO +4.7% RVOL 0.96, TME +4.5% RVOL 0.84 (all three < 1.3 and foreign/ADR or low-liquidity). AS gate check: Gate 1 relative strength PASS (+7.2% vs SPY -0.97%, peers ONON -1.5%, DECK -1.0%, NKE +1.2%, LULU +0.4%, VFC +0.3%, XRT -1.0%; it is a stock-specific earnings move), RVOL 1.59 PASS, spread ~0.06% PASS, cap $16.9B PASS, ordinary shares (not an ADR). Gate 2 catalyst PASS (this cycle's source: Robinhood earnings data - Q3 2026 reported 2026-11-17 am, EPS actual 0.42 vs est 0.35, verified; guidance change NOT verified - WebSearch only returned the 2025 report, not used). Gate 3 FAIL: day high 31.97 (15:00Z), pullback low 30.96 is BELOW the prior swing lows (31.16-31.26) so no higher low; 9-EMA 31.29 and 20-EMA 31.32 (5-min closes) both FALLING, 9 below 20, price 31.20 below both; no break/reclaim of pullback high (31.97, nor even 31.34 mini-high). Entering would be buying a fade. KLAR Gate 3 FAIL (lower lows through 15:50Z, falling EMAs) and catalyst unverified. No momentum entry.
+- Decision: no trade. 0 trades today. Next gates to watch: SPY keeping higher lows (regime already Stabilizing); a sourced same-day cause for the software/AI selloff (still none); AS reclaiming above ~31.35 with rising 9/20 EMA (needs RVOL >=1.3 hold). Tier A ends 11:30; Tier B 11:30-14:30; Tier C 14:30-15:30 last window for the minimum. No gate relaxed.
