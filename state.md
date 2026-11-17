@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-17 14:45 ET",
+ "as_of": "2026-11-17 14:56 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Cycle 1131: holding ACM +$0.33 (82.43; stop 81.40, target 83.74). SPY 730.56 drifting lower; no second entry.",
+ "status_note": "Cycle 1132: EXITED ACM on invalidation at 82.005 (-$0.22, -0.2R). Flat, cash $398.97. 1 trade today (organic, closed). Breaker cushion $4.78. Tier C still open to 15:30.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-17",
@@ -4465,21 +4465,13 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-17 14:45 ET",
    "equity": 399.46
-  }
- ],
- "positions": [
+  },
   {
-   "symbol": "ACM",
-   "strategy": "momentum",
-   "qty": 1.277683,
-   "entry": 82.18,
-   "price": 82.43,
-   "stop": 81.4,
-   "target": 83.74,
-   "opened": "2026-11-17 13:14 ET",
-   "horizon": "EOD, flat before 15:45 ET (NVDA after close)"
+   "t": "2026-11-17 14:56 ET",
+   "equity": 398.97
   }
  ],
+ "positions": [],
  "trades": [
   {
    "symbol": "TER",
@@ -4684,10 +4676,22 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
    "score": 0,
    "tag": "organic",
    "date": "2026-11-13"
+  },
+  {
+   "symbol": "ACM",
+   "strategy": "momentum",
+   "tier": "-",
+   "entry": 82.18,
+   "exit": 82.005,
+   "pnl": -0.22,
+   "r": -0.22,
+   "score": 66,
+   "tag": "organic",
+   "date": "2026-11-17"
   }
  ],
  "regime": {
-  "read": "STABILIZING / RANGE (drifting lower): SPY 730.56 (-1.27%), 5-min lows 730.68, 730.64, 730.53 (lower lows, 3.5 pts above 727.00). QQQ 653.94 (-1.18%), SMH 454.40 (-1.62%), IWM 269.13 (-1.40%), NVDA 153.60 (-1.64%), IGV 96.12 (-2.91%).",
+  "read": "STABILIZING -> WEAKENING: SPY 729.89 (-1.36%), 5-min lows 730.53, 730.34, 729.82 (new lower lows, 2.8 pts above the 727.00 flush low). QQQ 653.20 (-1.29%), SMH 453.40 (-1.84%), IWM 268.91 (-1.48%), NVDA 152.84 (-2.12%), IGV 95.95 (-3.08%).",
   "chips": [
    "SPY -1.1%",
    "SMH -3.5%",
@@ -13635,3 +13639,15 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum scan (cap>=2B, +3%, RVOL>=1.0): 13 names - ACM (held, RVOL 1.69), BILL +11.9% RVOL 5.12 (64.50; cause STILL unsourced FAIL), VIK +4.1% RVOL 1.75 (EPS miss = no positive catalyst FAIL), AS +4.9% RVOL 2.18 (30.52, lower lows, fading FAIL), SA +6.4% RVOL 2.26 (no cited catalyst FAIL), RYTM +8.8% RVOL 1.29 (<1.3 FAIL), KLAR +3.9% RVOL 2.37 (EPS miss FAIL), MNSO/TME/BZ/XPEV/NIO foreign ADRs FAIL, SNAP RVOL 1.21 FAIL. No second entry.
 - MR sweep (cap>=5B, <=-5%, RSI<35): TEAM -5.5% RSI 28, MSTR -5.9% RSI 29, NOW -6.3% RSI 30, HOOD -5.0% RSI 29, SMMT -8.7% RSI 35 (34.9), KEP -5.5% RSI 32 (6 names). Gate 1 FAIL (no dated cause; next hourly WebSearch 15:12); software names Gate 4 FAIL. No MR entry.
 - Decision: hold ACM. 1 trade today (organic). Tier C open to 15:30. Next cycle 14:52 ET (stop check first). Flat before 15:45 ET (NVDA after close).
+
+### Cycle 1132 - 2026-11-17 14:56 ET - EXIT: SOLD ACM on thesis invalidation
+- Dedupe: last commit 19:43Z, trigger 19:53Z (10 min) - proceeded. Reconcile at start: ACM 1.277683 sh @ 82.18, no open orders, cash $294.19, equity $399.00 (breaker level $394.19).
+- STOP CHECK (first): ACM 82.03 (bid 82.01 / ask 82.12) vs stop 81.40: $0.63 above (~$0.80). The 5-min structure that justified the trade broke: 19:40Z bar low 82.32 (lower than 82.43), 19:45Z bar opened 82.50 and CLOSED 82.10 (low 82.10) - that is below the 82.22 higher low that was the base (19:10Z), i.e. the 'higher low' chain failed, and below the 20-EMA (82.35) and 9-EMA (82.46) computed on 5-min closes. Momentum rule: a close back below the rising short-term support is an invalidation; the 30-minute hold lock expired long ago (entry 13:14 ET). SPY simultaneously made new lower lows (729.82; 2.8 pts above the 727.00 flush low), SMH -1.84%, NVDA -2.12% into tonight's report, and peers softened (J -0.5%, KBR -2.1%; PWR +0.7%). ACM relative strength vs peers was still intact (+13.1% on the day), so this is a structure/support exit, not a relative-strength exit.
+- DECISION: exit now rather than wait for the 81.40 stop: the thesis (rising-support base) was broken, upside to 83.74 needed a new high against a weakening tape, and I must be flat before ~15:45 ET anyway (NVDA after the close). This is a judgment call (the stop had not traded and relative strength was intact); recorded as such.
+- ORDER: review_equity_order (customer_approval_required false, order_checks {}; the tool's confirmation request does not apply under the framework 0 standing authorization, logged). SELL market (fractional) 1.277683 ACM gfd regular_hours, ref_id ledger-2026-11-17-ACM-sell-1, order 6afcb0d4-0f1e-4290-a3ad-e38de9ff9d21. FILLED 19:53:56Z @ 82.005 (quote at placement 81.95/82.04), fees $0. Positions now empty (get_equity_positions); cash $398.97, equity $398.97.
+- TRADE LOG: ACM | momentum | entry 13:14 ET @ 82.18 | exit 14:54 ET @ 82.005 | P&L -$0.22 (= 1.277683 x -0.175; -0.22R on a ~$1.00 1R) | tag organic | peer complex: engineering/infrastructure services (J, PWR, KBR) | gates all passed at entry (catalyst caveat noted in Cycle 1122) | holding time ~100 min.
+- SCORE 66/100: setup quality 28/40 (all four gates passed as written, but the catalyst was only a small verified EPS beat and the +13% reaction's cause was never independently sourced; the entry trigger was a single 7K-share bar close); execution 28/35 (right window/timing/strategy; market order for fractional sizing instead of the default limit order, justified by the broker's whole-share-only limits; manual-stop discipline held; exited on a documented invalidation); outcome 10/25 (small loss of -0.22R; neither stop nor target hit, closed on a discretionary-but-rule-based invalidation, so ambiguous resolution). Note: the base held for two hours but the trade never reached +1R; entering a one-bar reclaim on thin volume was the weak point - consistent with the open question on one-bar vs confirmed reclaim.
+- Tape: SPY 729.89 (-1.36%), 5-min lows 730.53, 730.34, 729.82 = lower lows, regime weakening (STABILIZING at risk of FALLING if 727.00 breaks). QQQ 653.20 (-1.29%), SMH 453.40 (-1.84%), IWM 268.91 (-1.48%), NVDA 152.84 (-2.12%), IGV 95.95 (-3.08%).
+- Momentum scan (cap>=2B, +3%, RVOL>=1.0): 13 names - BILL +11.7% RVOL 5.20 (64.35; cause still unsourced FAIL), VIK +4.6% RVOL 1.77 (EPS miss FAIL), AS +5.2% RVOL 2.22 (30.61; lower lows FAIL), SA +6.3% RVOL 2.37 (no cited catalyst FAIL), RYTM +9.1% RVOL 1.33 (cap $7.4B; no cited catalyst, no checks done FAIL), KLAR +4.0% (EPS miss FAIL), MNSO/TME/BZ/XPEV/NIO foreign ADRs FAIL, SNAP RVOL 1.29 FAIL. ACM exited (+13.1%). No new entry.
+- MR sweep (cap>=5B, <=-5%, RSI<35): TEAM -5.9% RSI 28, MSTR -5.9% RSI 29, NOW -6.5% RSI 30, AFRM -5.3% RSI 35 (34.8), SMMT -9.3% RSI 35 (34.9), KEP -5.4% RSI 32 (6 names). Gate 1 FAIL (no dated cause; next hourly WebSearch 15:12), regime weakening, software names Gate 4 FAIL. No MR entry.
+- STATE: flat, no open orders. Trades today 1 (organic, closed, -$0.22). Daily P&L -$0.22 (limit $60). Equity $398.97, breaker level $394.19, cushion $4.78. Tier C open until 15:30 ET: any further entry must pass every gate; no overnight position planned.
