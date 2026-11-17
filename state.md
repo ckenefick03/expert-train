@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-17 13:08 ET",
+ "as_of": "2026-11-17 13:15 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,12 +41,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Cycle 1121: flat, 0 trades. SPY range-bound 731.6; ACM (+12.7%, post-earnings, higher lows, 9>20 EMA rising) is the watch name - needs a completed 5-min close >81.99; BILL spike still unsourced; MR sourcing fails.",
+ "status_note": "Cycle 1122: ENTERED ACM momentum (1.277683 sh @ 82.18, $105). Stop 81.40, target 83.74 (2R), EOD flat before NVDA. Breaker cushion $5.00; max loss at stop ~$1.00.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-17",
   "start_equity": 399.19,
-  "trades": 0,
+  "trades": 1,
   "forced": 0
  },
  "equity_history": [
@@ -4425,9 +4425,25 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-17 13:08 ET",
    "equity": 399.19
+  },
+  {
+   "t": "2026-11-17 13:15 ET",
+   "equity": 399.19
   }
  ],
- "positions": [],
+ "positions": [
+  {
+   "symbol": "ACM",
+   "strategy": "momentum",
+   "qty": 1.277683,
+   "entry": 82.18,
+   "price": 82.18,
+   "stop": 81.4,
+   "target": 83.74,
+   "opened": "2026-11-17 13:14 ET",
+   "horizon": "EOD, flat before 15:45 ET (NVDA after close)"
+  }
+ ],
  "trades": [
   {
    "symbol": "TER",
@@ -4635,7 +4651,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "STABILIZING / RANGE: SPY 731.64 (-1.12%), 5-min lows 731.40, 731.30, 731.22 (flat-to-lower, very low volume 100-120K/bar); flush low 727.00 intact. QQQ 654.08 (-1.15%), SMH 455.22 (-1.45%), IWM 270.17 (-1.01%), NVDA 153.91 (-1.43%), IGV 95.47 (-3.57%). Momentum on, MR on in regime but unsourced.",
+  "read": "STABILIZING / RANGE: SPY 731.19 (-1.18%), 5-min lows 731.22, 730.82, 731.56 (flat range 730.8-732.4, thin volume); flush low 727.00 intact. QQQ 653.94 (-1.18%), SMH 454.46 (-1.61%), IWM 270.06 (-1.06%), NVDA 153.60 (-1.63%), IGV 95.63 (-3.40%).",
   "chips": [
    "SPY -1.1%",
    "SMH -3.5%",
@@ -13494,3 +13510,19 @@ Gate check, written (momentum.md), live data at 12:33 ET:
   * BILL +9.5% RVOL 3.92: 17:50Z-17:55Z bars 63.18/62.85 closes with a 344K-share bar at 62.80-63.55 - lower closes, unsourced cause (13:00 extended search found only the Nov-16 upgrade) = Gate 2 FAIL. AS +6.9% RVOL 1.93 (31.10, no base) Gate 3 FAIL. KLAR (EPS miss) Gate 2 FAIL. SA (no catalyst, thin gold-miner) FAIL. RYTM/UNFI/SNAP/XPEV/NIO RVOL <1.0; MNSO/TME ADRs. No entry.
 - MR sweep (cap>=5B, <=-5%, RSI<35): DDOG -5.1% RSI 28, TEAM -5.6% RSI 28, MSTR -5.0% RSI 29, NOW -6.5% RSI 30, HOOD -5.5% RSI 29, AFRM -5.1% RSI 35 (34.8), SMMT -8.8% RSI 35 (34.9), KEP -5.2% RSI 32 (8 names). Gate 1 FAIL for all (no dated cause; hourly searches due 13:12 ET); software Gate 4 FAIL. No MR entry.
 - Decision: no trade. 0 trades today. Hourly WebSearch at the 13:12 ET cycle (next); Tier C 14:30-15:30 is the last window for the minimum; NVDA after the close - flat before the bell. No gate relaxed.
+
+### Cycle 1122 - 2026-11-17 13:15 ET (hourly, WebSearch run) - TRADE 1 OF THE DAY: BUY ACM (momentum, organic)
+- Dedupe: last commit 18:03Z, trigger 18:12Z (9 min) - proceeded. Tools disconnected/reconnected around the trigger; reloaded. Reconcile at start: no positions, no open orders, equity/cash/BP $399.19 (breaker level $394.19, $5.00 cushion). Trades today before this: 0.
+- Tape: SPY 731.44 (-1.15%) in a flat 730.8-732.4 range on thin volume (5-min lows 731.30, 731.22, 730.82, 731.56). Regime STABILIZING/RANGE: momentum allowed, MR allowed but unsourced. QQQ 653.94 (-1.17%), SMH 454.46 (-1.61%), IWM 270.06 (-1.06%), NVDA 153.60 (-1.63%), IGV 95.63 (-3.40%).
+- WebSearch (2 standard queries): (1) AECOM Q4 FY2026 reaction 11/17/2026 - only FY2025 (Nov 2025) items and older (not used): reason for the +13% reaction (guidance/backlog/strategic) is NOT independently verified. (2) market wrap Tuesday 11/17/2026 - only 2025 coverage; no sector/macro cause for today's selloff can be dated = MR Gate 1 FAIL for all MR names (software/crypto/semis names, incl. 42 oversold names in the broad sweep and 8 at <=-5%/RSI<35).
+- Momentum scan (cap>=2B, +3%, RVOL>=0.8): 15 names. ACM +13.5% RVOL 1.346, VIK +4.2% RVOL 1.384 (EPS MISS today - no positive catalyst, FAIL), BILL +9.7% RVOL 4.00 (spike cause unsourced, FAIL), AS +7.5% RVOL 1.95 (31.27, still under 31.38 with no higher-low base, FAIL), KLAR +3.3% RVOL 2.02 (EPS miss, FAIL), SA +6.4% RVOL 1.63 (no catalyst), SITE RVOL 1.20, MNSO/TME ADRs, RYTM/UNFI/SNAP/XPEV/NIO/AVAL RVOL ~<1.1 (FAIL).
+- GATE CHECK - ACM (AECOM), peer complex = engineering/infrastructure services (J, PWR, KBR):
+  1. Relative strength: +13.5% vs SPY -1.15% and peers J 0.0%, PWR +0.7%, KBR -0.2% (>=2 pts above both) PASS. Not fading: price 82.27 vs prior close 72.50 and approx session VWAP 80.6 (computed from the 5-min bars; scanner volume includes pre-market so this is an approximation), gave back only ~11% of the day's gain from the 83.54 open spike (limit is 50%) PASS. RVOL 1.346 (>=1.3; full-day volume vs 30-day average, scanner-based) PASS - marginal, note intraday per-bar volume is thin (3-55K shares/5 min). Spread 82.10/82.24 = 0.17% PASS (<=0.3%). Cap $9.3B PASS; average volume ~1.3M and ~$140M dollar volume PASS. Earnings: reported 11/16 after the close and is the thesis (exception applies) PASS. US-listed, not an ADR.
+  2. Catalyst: FQ4 earnings reported 2026-11-16 pm, EPS 1.63 vs est 1.59 (Robinhood earnings data, verified) - a small beat; same evidentiary standard I applied to AS. FLAGGED: the +13% reaction's actual driver is not independently confirmed (no dated source found); this is the weakest gate and I am recording it as such. PASS (on the cited datapoint), with that caveat.
+  3. Held pullback/base: after the 83.54 thin-volume opening spike it flushed to 78.25 (14:35Z), then built two hours of ascending 5-min lows (78.52 -> 79.11 -> 79.6 -> 80.0 -> 80.55 -> 80.85 -> 81.0 -> 81.46/81.54), 5-min 9-EMA 81.74 > 20-EMA 81.41, both rising, price above both = rising short-term support and a genuine higher-low base PASS. Trigger: the 18:05Z 5-min bar COMPLETED at 82.28, above the 81.99 range high (my pre-set trigger from Cycle 1121); live 82.11-82.24 at the order. It is a one-bar completed close on only 7K shares, which is the weakest part of the entry; I took it because it was the pre-stated trigger and all other conditions held.
+  4. Timing: 13:14 ET inside 10:30-15:30 PASS.
+- Risk checks: positions 0 -> 1 (<5), BP $399.19 >= $105, daily P&L $0 (limit $60), equity $5.00 above the $394.19 breaker; max loss at the stop is ~$1.00 (1R); a gap through the stop could cost more (fractional shares have no resting stop; stops are manual per framework 3). Not a forced trade (passed every gate on its own); tag: organic.
+- Thesis: post-earnings gap-and-base continuation in an infrastructure-services name that is holding a 13% gain on a down tape while peers are flat. ORDER: review_equity_order (customer_approval_required false, order_checks {}); the tool's guidance asks for conversational confirmation, which does not apply under the framework 0 standing authorization (logged per policy). Placed BUY market (fractional) $105.00 ACM gfd regular_hours, ref_id ledger-2026-11-17-ACM-buy-1 (market, not limit, because limit orders cannot be fractional on the broker and a whole-share limit would break the $105 sizing; spread 0.17% on a $9B name).
+- FILL: order 6afc9960-70bb-4b30-b1f7-2596fe871a7e filled 18:13:53Z, 1.277683 sh @ 82.18 (cost $105.00; market quote at placement 82.10/82.24, so ~$0.08/sh slippage vs the 82.10 bid / 82.18 mid), fees $0. Position confirmed via get_equity_positions (1.277683 long). Equity $399.19 (cash $294.19).
+- PLAN: entry 82.18; stop 81.40 (below the 81.46 base low and the rising 20-EMA, 0.95% = $0.78/sh = ~$1.00, 1R); target 83.74 (2R, just above the 83.54 spike high; trim on a push to ~83.5); horizon: end of day, FLAT before 15:45 ET (NVDA reports after the close - no overnight hold); 30-minute hold rule applies (no discretionary invalidation exit before 13:44 ET, only the stop actually trading). Invalidation signals: completed 5-min close below the rising 9/20 EMA support (~81.4-81.7) after 13:44 ET, or ACM losing relative strength vs peers.
+- MR sweep and others: no MR entry (Gate 1/4 as above). Decision: 1 trade today (organic). Next cycle (13:22 ET) starts with STOP CHECKS on ACM.
