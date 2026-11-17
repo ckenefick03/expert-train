@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-17 15:23 ET",
+ "as_of": "2026-11-17 15:32 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Flat, no orders. Cycle 1135: no gate-passing setup; Tier C window closes 15:30 ET. Equity 398.97 (breaker 394.19).",
+ "status_note": "Flat, no orders. Entry window closed (15:30 ET). Equity 398.97 (breaker 394.19). Expect flat overnight.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-17",
@@ -4481,6 +4481,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-17 15:23 ET",
    "equity": 398.97
+  },
+  {
+   "t": "2026-11-17 15:32 ET",
+   "equity": 398.97
   }
  ],
  "positions": [],
@@ -4703,7 +4707,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "WEAK / BASING: SPY 730.04 (-1.34%), 5-min lows 728.76/728.98/728.83 above the 727.86 session low but not 3 consecutive higher lows; MR stays off, momentum off (market not rising).",
+  "read": "WEAK / BASING: SPY 731.03 (-1.20%), QQQ -1.08%, SMH -1.33%, IWM -1.41%; drifting up off the 727.86 low. Entries closed.",
   "chips": [
    "SPY -1.1%",
    "SMH -3.5%",
@@ -13688,3 +13692,9 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - MR scan (cap>=5B, <=-5%, RSI<35): TEAM -6.4% (RSI 28), NOW -6.7% (RSI 30), MSTR -5.1%, AFRM -5.4%, SMMT -10.4%, KEP -5.3%. TEAM/NOW are the software complex (IGV -3.2%) so they track the sector, but I have no dated, sourced external cause for the software selloff this cycle (no WebSearch run; the hourly run was at :12 and returned wrong-year results) = Gate 1 FAIL (unverifiable). MSTR/SMMT/AFRM/KEP are company-specific or unsourced = FAIL. No entry, and with 7 minutes left before the 15:30 cutoff there is no time to source one properly.
 - Decision: no trade. The minimum-trade requirement is met (1 trade today), so there is no forced-trade pressure. No gate relaxed.
 - Follow-up note: software names (TEAM/NOW) could bounce into the close; skipped for lack of a sourced cause. Check the 15:47 recap.
+
+### Cycle 1136 - 2026-11-17 15:32 ET
+- Reconcile: account 771144490 flat, no open orders, cash/equity $398.97 (breaker level $394.19, cushion $4.78). No stops to check.
+- Tape: SPY 731.03 (-1.20%), QQQ 654.63 (-1.08%), SMH 455.75 (-1.33%), IWM 269.08 (-1.41%), IGV 95.83 (-3.2%, flat vs 15:23). Mild drift up off the lows; regime weak / basing.
+- Scans: not run. It is past the 15:30 ET entry cutoff, so neither strategy can open a position and a scan could not change anything. Disclosed as a deliberate skip, not a miss.
+- Decision: no trade. Day total 1 trade (ACM, -$0.22, organic). Next: 15:47 ET close recap with the overnight status.
