@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-17 14:34 ET",
+ "as_of": "2026-11-17 14:45 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Cycle 1130: holding ACM +$0.56 (82.62; stop 81.40, target 83.74). Tier C open; no second candidate passes.",
+ "status_note": "Cycle 1131: holding ACM +$0.33 (82.43; stop 81.40, target 83.74). SPY 730.56 drifting lower; no second entry.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-17",
@@ -4461,6 +4461,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-17 14:34 ET",
    "equity": 399.75
+  },
+  {
+   "t": "2026-11-17 14:45 ET",
+   "equity": 399.46
   }
  ],
  "positions": [
@@ -4469,7 +4473,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
    "strategy": "momentum",
    "qty": 1.277683,
    "entry": 82.18,
-   "price": 82.62,
+   "price": 82.43,
    "stop": 81.4,
    "target": 83.74,
    "opened": "2026-11-17 13:14 ET",
@@ -4683,7 +4687,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "STABILIZING / RANGE: SPY 730.82 (-1.24%), 5-min lows 731.54, 731.07, 730.68 (drifting lower in the range); flush low 727.00 intact. QQQ 654.13 (-1.15%), SMH 454.97 (-1.50%), IWM 269.41 (-1.30%), NVDA 153.55 (-1.66%), IGV 96.13 (-2.90%).",
+  "read": "STABILIZING / RANGE (drifting lower): SPY 730.56 (-1.27%), 5-min lows 730.68, 730.64, 730.53 (lower lows, 3.5 pts above 727.00). QQQ 653.94 (-1.18%), SMH 454.40 (-1.62%), IWM 269.13 (-1.40%), NVDA 153.60 (-1.64%), IGV 96.12 (-2.91%).",
   "chips": [
    "SPY -1.1%",
    "SMH -3.5%",
@@ -13623,3 +13627,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum scan (cap>=2B, +3%, RVOL>=1.0): 13 names - ACM (held, RVOL 1.63), BILL +11.7% RVOL 5.02 (64.38; cause STILL unsourced FAIL), VIK +3.4% RVOL 1.70 (EPS miss FAIL), AS +6.1% RVOL 2.13 (30.87, no higher-low base FAIL), SA +6.8% RVOL 2.18 (no cited catalyst FAIL), RYTM +8.5% RVOL 1.28 (<1.3 FAIL), KLAR +3.1% (EPS miss FAIL), MNSO/TME/BZ/XPEV/NIO foreign ADRs or RVOL <1.3 FAIL, SNAP RVOL 1.20 FAIL. No second entry.
 - MR sweep (cap>=5B, <=-5%, RSI<35): TEAM -5.2% RSI 28, MSTR -5.7% RSI 29, NOW -6.2% RSI 30, SMMT -9.1% RSI 35 (34.9), KEP -5.3% RSI 32 (5 names). Gate 1 FAIL (no dated cause; the 14:17 hourly searches found none; next at 15:12); software names Gate 4 FAIL. No MR entry.
 - Decision: hold ACM. 1 trade today (organic). Tier C 14:30-15:30 is open but nothing qualifies. Next cycle 14:42 ET (stop check first); flat before 15:45 ET (NVDA after close).
+
+### Cycle 1131 - 2026-11-17 14:45 ET
+- Dedupe: last commit 19:33Z, trigger 19:43Z (10 min) - proceeded. Reconcile: ACM 1.277683 sh @ 82.18, no open orders, cash $294.19, equity $399.46 (+$0.27 vs open), breaker level $394.19 (cushion $5.27). Trades today: 1.
+- STOP CHECK (first): ACM 82.43 (82.37/82.49) vs stop 81.40: $1.03/sh above; unrealized +$0.32 (+0.3R); target 83.74 is $1.31 away. 5-min: 19:30Z bar 82.475-82.72 close 82.59, 19:35Z bar 82.43-82.61 close 82.56 (flat, low 82.43 is above the 82.22 pullback low); price 82.43 is now just ~0.1 above the 9-EMA (~82.5) and above the 20-EMA (~82.1) - still above the rising 20-EMA/82.0 breakout. Peers: J 159.15 (-0.4%), PWR +0.9%, KBR -1.8% - ACM +13.7% = relative strength intact (peer complex weakening a little, ACM holding). No invalidation (no 5-min close below the 20-EMA/82.0). HOLD. Watch item: a close below ~82.0 would break the breakout support and tighten my plan to exit before the stop.
+- Tape: SPY 730.56 (-1.27%), 5-min lows 730.68, 730.64, 730.53 = drifting to slightly lower lows, 3.5 pts above 727.00; weak but no breakdown. QQQ 653.94 (-1.18%), SMH 454.40 (-1.62%), IWM 269.13 (-1.40%), NVDA 153.60 (-1.64%, reports after the close), IGV 96.12 (-2.91%).
+- Momentum scan (cap>=2B, +3%, RVOL>=1.0): 13 names - ACM (held, RVOL 1.69), BILL +11.9% RVOL 5.12 (64.50; cause STILL unsourced FAIL), VIK +4.1% RVOL 1.75 (EPS miss = no positive catalyst FAIL), AS +4.9% RVOL 2.18 (30.52, lower lows, fading FAIL), SA +6.4% RVOL 2.26 (no cited catalyst FAIL), RYTM +8.8% RVOL 1.29 (<1.3 FAIL), KLAR +3.9% RVOL 2.37 (EPS miss FAIL), MNSO/TME/BZ/XPEV/NIO foreign ADRs FAIL, SNAP RVOL 1.21 FAIL. No second entry.
+- MR sweep (cap>=5B, <=-5%, RSI<35): TEAM -5.5% RSI 28, MSTR -5.9% RSI 29, NOW -6.3% RSI 30, HOOD -5.0% RSI 29, SMMT -8.7% RSI 35 (34.9), KEP -5.5% RSI 32 (6 names). Gate 1 FAIL (no dated cause; next hourly WebSearch 15:12); software names Gate 4 FAIL. No MR entry.
+- Decision: hold ACM. 1 trade today (organic). Tier C open to 15:30. Next cycle 14:52 ET (stop check first). Flat before 15:45 ET (NVDA after close).
