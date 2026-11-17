@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-17 15:14 ET",
+ "as_of": "2026-11-17 15:23 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Cycle 1134 (hourly): flat ($398.97), 1 trade today (ACM -0.22). SPY tested 727.86 and bounced to 729.55; no entry; no dated cause found.",
+ "status_note": "Flat, no orders. Cycle 1135: no gate-passing setup; Tier C window closes 15:30 ET. Equity 398.97 (breaker 394.19).",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-17",
@@ -4477,6 +4477,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-17 15:14 ET",
    "equity": 398.97
+  },
+  {
+   "t": "2026-11-17 15:23 ET",
+   "equity": 398.97
   }
  ],
  "positions": [],
@@ -4699,7 +4703,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "WEAK / TESTING LOWS: SPY 729.55 (-1.40%), 5-min 20:00Z bar low 727.86 (0.86 above the 727.00 session low) closed 729.19; lows 729.54, 728.73, 727.86, 728.76 (a bounce attempt). QQQ 652.65 (-1.37%), SMH 453.00 (-1.92%), IWM 268.65 (-1.57%), NVDA 153.06 (-1.97%), IGV 95.78 (-3.25%). MR off.",
+  "read": "WEAK / BASING: SPY 730.04 (-1.34%), 5-min lows 728.76/728.98/728.83 above the 727.86 session low but not 3 consecutive higher lows; MR stays off, momentum off (market not rising).",
   "chips": [
    "SPY -1.1%",
    "SMH -3.5%",
@@ -13676,3 +13680,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - MR sweep (cap>=5B, <=-5%, RSI<35): TEAM -6.4% RSI 28, MSTR -5.5% RSI 29, NOW -6.8% RSI 30, AFRM -5.4% RSI 35 (34.8), SMMT -10.3% RSI 35 (34.9), KEP -5.4% RSI 32 (6 names). Gate 1 FAIL (no dated cause), regime weak, software names Gate 4 FAIL. No MR entry.
 - Follow-ups on skipped candidates: AS (skipped as no-base) is down from 31.2-31.4 at 12:05 to 30.46 now = skip was right; BILL (skipped, unsourced) is +0.3 to 64.39 since 13:00 (62.0 -> 64.4: would have gained ~+3.8% after 13:00 - the skip cost ~+$4.0 on $105 in hindsight; the strict sourcing rule held, noted); RYTM and KLAR/VIK (earnings-miss names) drifted flat. Logged so the unsourced-spike rule can be reviewed against outcomes.
 - Decision: no trade. Entries close 15:30 ET. Close-recap cycle at ~15:47 ET; flat overnight (no positions, nothing to roll).
+
+### Cycle 1135 - 2026-11-17 15:23 ET
+- Reconcile: account 771144490 flat, no open orders, cash/equity $398.97 (breaker level $394.19, cushion $4.78). Daily P&L -$0.22 (1 trade, ACM, organic).
+- Tape: SPY 730.04 (-1.34%), QQQ 653.24 (-1.29%), SMH 454.10 (-1.69%), IWM 268.88 (-1.49%), NVDA 153.43 (-1.74%, reports after the close), IGV 95.83 (-3.2%). SPY 5-min bars since 19:55Z: lows 728.73, 727.86, 728.76, 728.98, 728.83 - holding above the 727.86 session low, but not 3 consecutive higher lows. Regime: weak / basing. MR off, momentum off.
+- Momentum scan (cap>=2B, +3%, RVOL>=1.0): 15 names. Fail Gate 1/2/3 with no new data this cycle: ACM (my own exit at 14:54 on invalidation; no re-entry, no new base), BILL and RYTM (spikes, no sourced catalyst, no held base), VIK and KLAR (EPS-miss names), AS (no base), SNAP/NIO/XPEV/BZ/MNSO/TME (foreign ADR or RVOL<1.3 or no sourced catalyst), SA/UNFI/GFF (no sourced catalyst, RVOL <1.3 or thin). No entry.
+- MR scan (cap>=5B, <=-5%, RSI<35): TEAM -6.4% (RSI 28), NOW -6.7% (RSI 30), MSTR -5.1%, AFRM -5.4%, SMMT -10.4%, KEP -5.3%. TEAM/NOW are the software complex (IGV -3.2%) so they track the sector, but I have no dated, sourced external cause for the software selloff this cycle (no WebSearch run; the hourly run was at :12 and returned wrong-year results) = Gate 1 FAIL (unverifiable). MSTR/SMMT/AFRM/KEP are company-specific or unsourced = FAIL. No entry, and with 7 minutes left before the 15:30 cutoff there is no time to source one properly.
+- Decision: no trade. The minimum-trade requirement is met (1 trade today), so there is no forced-trade pressure. No gate relaxed.
+- Follow-up note: software names (TEAM/NOW) could bounce into the close; skipped for lack of a sourced cause. Check the 15:47 recap.
