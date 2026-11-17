@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-17 12:36 ET",
+ "as_of": "2026-11-17 12:46 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Cycle 1118: flat, 0 trades. SPY consolidating 733 (-0.94%); MR candidates (6) lack sourced cause; momentum names fail RVOL/catalyst/structure gates.",
+ "status_note": "Cycle 1119: flat, 0 trades. SPY 732.28 (-1.04%) range-bound; BILL +9.8% new high RVOL 3.4 but catalyst unsourced; AS drifting to 31.01; MR names lack sourced cause.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-17",
@@ -4413,6 +4413,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-17 12:36 ET",
    "equity": 399.19
+  },
+  {
+   "t": "2026-11-17 12:46 ET",
+   "equity": 399.19
   }
  ],
  "positions": [],
@@ -4623,7 +4627,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "STABILIZING / CONSOLIDATING: SPY 732.99 (-0.94%), 5-min lows 731.765, 733.23, 732.95 (tight 733-734.5 range); flush low 727.00 intact. QQQ 655.75 (-0.91%), SMH 457.71 (-0.91%), IWM 270.60 (-0.86%), NVDA 154.47 (-1.07%), IGV 95.65 (-3.38%). MR allowed by regime.",
+  "read": "STABILIZING / RANGE: SPY 732.28 (-1.04%), 5-min lows 733.23, 732.95, 732.50, 731.67 (drifting lower inside the range; flush low 727.00 intact). QQQ 654.91 (-1.03%), SMH 456.52 (-1.17%), IWM 270.54 (-0.88%), NVDA 153.96 (-1.40%), IGV 95.40 (-3.64%). Not a confirmed uptrend; MR still blocked by sourcing.",
   "chips": [
    "SPY -1.1%",
    "SMH -3.5%",
@@ -13457,4 +13461,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Tape: SPY 732.99 (-0.94%), consolidating in 733-734.5 after the 17:15Z push (lows 731.765, 733.23, 732.95; the last is a hair below 733.23 but well above 729.46) - Stabilizing, not accelerating. QQQ 655.75 (-0.91%), SMH 457.71 (-0.91%), IWM 270.60 (-0.86%), NVDA 154.47 (-1.07%), IGV 95.65 (-3.38%).
 - Momentum scan (cap>=2B, +3%, RVOL>=0.8): 11 names. BILL +7.9% RVOL 3.09 (62.2; tight 61.6-62.3 range, catalyst still UNSOURCED = Gate 2 FAIL), AS +6.8% RVOL 1.88 (31.07-31.09, still under the 31.38 pullback high, no higher-low base = Gate 3 FAIL), KLAR +3.1% RVOL 1.87 (EPS miss today, no positive catalyst = Gate 2 FAIL), ACM +12.8% RVOL 1.22 and VIK +3.6% RVOL 1.22 (<1.3 FAIL), RYTM +6.2% RVOL 0.84, SNAP +7.7% RVOL 0.86, NIO RVOL 0.86 (all <1.3), SA/MNSO/TME foreign/ADR/low-liquidity. No entry.
 - MR sweep (cap>=5B, <=-5%, RSI<35): TEAM -5.0% RSI 28, NOW -6.4% RSI 30, HOOD -5.2% RSI 29, CRCL -5.2% RSI 28, SMMT -8.5% RSI 35 (34.9), KEP -5.2% RSI 32 (6 names). Regime allows MR but Gate 1 FAIL for all (no dated external cause - hourly searches at 12:20 found none; no WebSearch this non-hourly cycle); TEAM/NOW also Gate 4 FAIL (multi-week downtrend). No MR entry.
+- Decision: no trade. 0 trades today. Next hourly WebSearch at the 13:12 ET cycle; Tier C 14:30-15:30 is the last window for the minimum; NVDA after the close - flat before the bell. No gate relaxed.
+
+### Cycle 1119 - 2026-11-17 12:46 ET
+- Dedupe: last commit 17:33Z, trigger 17:42Z (9 min) - proceeded. Reconcile: no positions, no open orders, equity/cash/BP $399.19 (breaker level $394.19, $5.00 cushion). Trades today: 0.
+- Tape: SPY 732.28 (-1.04%); 5-min lows 733.23, 732.95, 732.50, 731.67 - fading back down inside the 731.7-734.5 range after the 17:15Z push (the latest low is the lowest of the four, so the higher-low chain has paused; still well above 727.00 and 729.46). Regime: STABILIZING but stalling (range). QQQ 654.91 (-1.03%), SMH 456.52 (-1.17%), IWM 270.54 (-0.88%), NVDA 153.96 (-1.40%), IGV 95.40 (-3.64%).
+- Momentum scan (cap>=2B, +3%, RVOL>=0.8): 11 names. BILL +9.8% RVOL 3.36 (63.285, new high of day, 12.0 pts of ATR-style range; catalyst STILL UNSOURCED - two searches at 11:47 and 12:20 found nothing dated today = Gate 2 FAIL; Gate 3 FAIL: no held pullback after the vertical spike, entry would be above the spike range). AS +6.9% RVOL 1.90, 31.01-31.11, lows 31.02/30.99 drifting under 31.04-31.10 = no higher-low base and falling intraday = Gate 3 FAIL. ACM +12.8% RVOL 1.26, VIK +3.5% RVOL 1.25, SA +6.6% RVOL 1.30 (1.302 - marginal pass on RVOL but cap $2.65B gold miner, avg volume low; I treat marginal as FAIL and it has no cited catalyst), MNSO/TME foreign ADR, RYTM/XPEV/SNAP/NIO RVOL <1.0 (FAIL). KLAR dropped out of the scan. No entry.
+- MR sweep (cap>=5B, <=-3.5%, RSI<35): 16 names incl. DDOG -5.0% RSI 28, TEAM -5.2% RSI 28, MSTR -4.7% RSI 29, NOW -6.9% RSI 30, HOOD -5.3% RSI 29, CRCL -5.1% RSI 28, SMMT -8.2% RSI 35 (34.9), KEP -5.2% RSI 32, ZS -3.8% RSI 34.9, SMCI -4.0%, BABA -4.1%, AFRM -5.0% RSI 35, CAI/NTNX/GIL/AUR -3.6 to -4.3%. Gate 1 FAIL for all (no dated cause; last hourly searches 12:20; none this non-hourly cycle); Tier B needs >=3.5% intraday with visible stabilization, and the software/crypto names still fail Gate 4 / cause sourcing. No MR entry.
 - Decision: no trade. 0 trades today. Next hourly WebSearch at the 13:12 ET cycle; Tier C 14:30-15:30 is the last window for the minimum; NVDA after the close - flat before the bell. No gate relaxed.
