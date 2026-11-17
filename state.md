@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-17 12:58 ET",
+ "as_of": "2026-11-17 13:08 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Cycle 1120: flat, 0 trades. SPY 732.04 range-bound; BILL +9.7% steady higher lows RVOL 3.6 but spike cause unsourced (searched: only a Nov 16 analyst upgrade, no 8-K today); AS fading; MR sourcing fails.",
+ "status_note": "Cycle 1121: flat, 0 trades. SPY range-bound 731.6; ACM (+12.7%, post-earnings, higher lows, 9>20 EMA rising) is the watch name - needs a completed 5-min close >81.99; BILL spike still unsourced; MR sourcing fails.",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-17",
@@ -4421,6 +4421,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-17 12:58 ET",
    "equity": 399.19
+  },
+  {
+   "t": "2026-11-17 13:08 ET",
+   "equity": 399.19
   }
  ],
  "positions": [],
@@ -4631,7 +4635,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "STABILIZING / RANGE: SPY 732.04 (-1.07%), 5-min lows 732.50, 731.67, 731.68, 731.40 (flat to slightly lower inside 731.4-734.5); flush low 727.00 intact. QQQ 654.53 (-1.09%), SMH 455.81 (-1.32%), IWM 270.49 (-0.90%), NVDA 153.65 (-1.60%), IGV 95.42 (-3.62%).",
+  "read": "STABILIZING / RANGE: SPY 731.64 (-1.12%), 5-min lows 731.40, 731.30, 731.22 (flat-to-lower, very low volume 100-120K/bar); flush low 727.00 intact. QQQ 654.08 (-1.15%), SMH 455.22 (-1.45%), IWM 270.17 (-1.01%), NVDA 153.91 (-1.43%), IGV 95.47 (-3.57%). Momentum on, MR on in regime but unsourced.",
   "chips": [
    "SPY -1.1%",
    "SMH -3.5%",
@@ -13480,3 +13484,13 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum scan (cap>=2B, +3%, RVOL>=0.8): 14 names. BILL +9.7% RVOL 3.58 is the only name with improving structure: 5-min lows 61.98 (17:30Z), 62.58, 62.91, 63.50 = four ascending lows after the 11:30 ET spike, closes 62.67/62.89/63.88/63.51, spread 63.18/63.31 = 0.2% (PASS), cap $4.95B (PASS). Because it would otherwise pass Gates 1/3/4, I ran the heavier search now (1 extended WebSearch + SEC filing index): the search found NO takeover/activist/news item dated today; the only dated BILL catalyst is a William Blair upgrade to Outperform on Monday 11/16 (+5.2% that day, MarketBeat), and the filing index shows no 8-K today (latest 8-K 11/05 = earnings; Form 4 11/10). So the 11:30 ET vertical spike (+12% in two bars on 340K/618K shares) has NO sourced cause = Gate 2 FAIL (unverifiable = FAIL, I will not guess a takeover rumor). Also entry would be a chase above the day high 64.17 with stop below 62.58, ~2.4% risk; no entry. AS +6.7% RVOL 1.92: 31.06, lows 30.99-31.04 drifting, below 31.38, no higher-low base = Gate 3 FAIL. KLAR +3.3% RVOL 1.94 (EPS miss, no positive catalyst) = Gate 2 FAIL. SA +6.3% RVOL 1.41 (cap $2.65B gold miner, no cited catalyst, avg vol low) = Gate 2 FAIL. ACM +12.6% RVOL 1.296 and VIK +4.2% RVOL 1.295 (both a hair under 1.3 = FAIL, treated as fails, no rounding; neither has a cited catalyst). RYTM +7.3% RVOL 0.95, UNFI +7.6% RVOL 0.80, SITE +3.1% RVOL 1.12, SNAP/XPEV/NIO <1.0, MNSO/TME foreign ADRs: FAIL. No entry.
 - MR sweep (cap>=5B, <=-5%, RSI<35): DDOG -5.4% RSI 28, TEAM -5.3% RSI 28, NOW -6.6% RSI 30, HOOD -5.2% RSI 29, SMMT -8.2% RSI 35 (34.9), KEP -5.1% RSI 32 (6 names). Gate 1 FAIL for all (no dated cause, includes this cycle's extended search which was BILL-specific; the 12:20 hourly searches also found none); TEAM/NOW Gate 4 FAIL. No MR entry.
 - Decision: no trade. 0 trades today. Next hourly WebSearch at the 13:12 ET cycle; Tier C 14:30-15:30 is the last window for the minimum; NVDA after the close - flat before the bell. No gate relaxed. Disclosure: I used one 'extended' WebSearch (higher cost) because BILL was the only candidate near passing.
+
+### Cycle 1121 - 2026-11-17 13:08 ET
+- Dedupe: last commit 17:54Z, trigger 18:02Z (9 min) - proceeded. Tools disconnected/reconnected around the trigger; no data gap. Reconcile: no positions, no open orders, equity/cash/BP $399.19 (breaker level $394.19, $5.00 cushion). Trades today: 0.
+- Tape: SPY 731.64 (-1.12%); 5-min lows 731.40, 731.30, 731.22 (flat-to-slightly-lower in a 731.2-732.7 range on very light 100-120K/bar volume) - Stabilizing/range, no direction. QQQ 654.08 (-1.15%), SMH 455.22 (-1.45%), IWM 270.17 (-1.01%), NVDA 153.91 (-1.43%), IGV 95.47 (-3.57%).
+- Momentum scan (cap>=2B, +3%, RVOL>=0.8): 13 names; new RVOL >=1.3 passers: ACM +12.7% RVOL 1.318, VIK +4.2% RVOL 1.325, plus BILL 3.92, AS 1.93, KLAR 1.97, SA 1.51 (already failing on other gates). Full gate-check of the two new passers:
+  * ACM (AECOM, cap $9.3B): earnings were reported 11/16 after the close (Robinhood earnings data, verified: FQ4 EPS 1.63 vs est 1.59), prior close 72.50, opened ~79.5 (+9.7%) with a thin first-bar spike to 83.54, flushed to 78.25, then built 2 hours of ascending lows (78.52 -> 79.11 -> 79.6 -> 80.0 -> 80.55 -> 80.85 -> 81.0 -> 81.5), 5-min 9-EMA 81.58 > 20-EMA 81.27, both rising, price 81.68 above both. Gate 1: relative strength PASS (+12.7% vs SPY -1.12%; peers J 0.0%, PWR +0.7%, KBR -0.2%), RVOL 1.318 PASS (marginal, but >=1.3; intraday volume has faded to 3-55K shares/bar), spread 81.54/81.70 = 0.20% PASS, avg vol ~1.3M and ~$140M dollar volume PASS, earnings were yesterday (post-report thesis exception). Gate 2: EPS beat is a verified positive datapoint (small beat, +2.5%); the WebSearch (standard) returned only FY2025/Nov-2025 coverage, so the reason for the +12.7% reaction (guidance/backlog) is UNVERIFIED - I am counting the verified EPS beat as the catalyst, same standard as AS, and flagging the gap. Gate 3: higher lows + rising 9>20 EMA PASS, but the entry trigger (a completed 5-min close above the 5-min range high 81.99 set at 17:45Z) has NOT occurred - price 81.68, inside the range -> FAIL for now. Math if triggered: entry ~82.0, stop 81.40 (under the 81.46 base lows) R=0.60, 2R target 83.20 < anchor 83.54 (day high) = 2.6R; position $105 ~1.28 sh, risk ~$0.77. Gate 4: 13:00-15:30 ET timing OK; must be flat before the bell. No entry this cycle - WATCH: at the 13:12 ET cycle, enter only on a completed close >81.99 with 9>20 EMA, lows >=81.46 intact, RVOL >=1.3 and SPY not breaking 727.
+  * VIK (Viking Holdings, cap $40B): reported Q3 today am, EPS 1.11 vs est 1.26 (a MISS) = no positive catalyst; the +4.2% move rose from 89.0 at 15:50Z to 94.0 on thin volume (10-88K/bar) - Gate 2 FAIL.
+  * BILL +9.5% RVOL 3.92: 17:50Z-17:55Z bars 63.18/62.85 closes with a 344K-share bar at 62.80-63.55 - lower closes, unsourced cause (13:00 extended search found only the Nov-16 upgrade) = Gate 2 FAIL. AS +6.9% RVOL 1.93 (31.10, no base) Gate 3 FAIL. KLAR (EPS miss) Gate 2 FAIL. SA (no catalyst, thin gold-miner) FAIL. RYTM/UNFI/SNAP/XPEV/NIO RVOL <1.0; MNSO/TME ADRs. No entry.
+- MR sweep (cap>=5B, <=-5%, RSI<35): DDOG -5.1% RSI 28, TEAM -5.6% RSI 28, MSTR -5.0% RSI 29, NOW -6.5% RSI 30, HOOD -5.5% RSI 29, AFRM -5.1% RSI 35 (34.8), SMMT -8.8% RSI 35 (34.9), KEP -5.2% RSI 32 (8 names). Gate 1 FAIL for all (no dated cause; hourly searches due 13:12 ET); software Gate 4 FAIL. No MR entry.
+- Decision: no trade. 0 trades today. Hourly WebSearch at the 13:12 ET cycle (next); Tier C 14:30-15:30 is the last window for the minimum; NVDA after the close - flat before the bell. No gate relaxed.
