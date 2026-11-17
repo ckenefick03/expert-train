@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-17 09:57 ET",
+  "as_of": "2026-11-17 10:09 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Open 25 min, flat, no positions or orders. Entries open at 10:00 ET (momentum 10:30). Software selloff under way (CRM, NOW, MDB). Equity $399.19; breaker level $394.19 ($5.00 room).",
+  "status_note": "Flat, 0 trades today. Tier A open 10:00-11:30 ET: software selloff (IGV -2.6%) but no name passes (no sourced same-day cause, multi-week downtrends, no higher lows). Equity $399.19; breaker level $394.19 ($5.00 room).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-17",
@@ -4349,6 +4349,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-17 09:57 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-17 10:09 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4559,7 +4563,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "OPEN, range: SPY 738.97 (-0.13%), 5-min lows 737.67, 737.47, 737.75, 737.84 (opening low 737.47 held). QQQ -0.10%, SMH +0.13%, IWM -0.18%, NVDA -0.31%. Software/SaaS is the weak group (CRM -5.8%, NOW -3.9%, MDB -4.4%).",
+    "read": "RANGE/soft: SPY 737.60 (-0.32%) just above the 737.47 opening low; 5-min lows 737.67, 737.47, 737.75, 737.84, 738.03, 738.46 rose, then the 10:00 bar dipped. QQQ -0.21%, SMH -0.18%, IWM -0.38%, NVDA -0.57%. Software is the weak group: IGV -2.60%, CRM -7.0%, TEAM -6.2%, NOW -4.6%.",
     "chips": [
       "SPY -1.1%",
       "SMH -3.5%",
@@ -13273,3 +13277,12 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - No WebSearch this cycle (before the entry window; the next cycle, 10:0x ET, will search the software selloff only if a software name looks like it passes the other gates).
 - Watch for the 10:0x cycle: software cluster for Tier A mean-reversion (needs a sourced sector cause, a neutral-or-better fundamental datapoint, a named 2R anchor, higher 5-min low, SPY not making new session lows). AS and KLAR for momentum from 10:30 ET only with RVOL >= 1.3 and a cited reaction.
 - Decision: NO TRADE (before the 10:00 ET entry window). Trades today 0.
+
+### Cycle 1103 - 2026-11-17 10:09 ET (first entry-eligible cycle, Tier A open; momentum from 10:30 ET)
+- Dedupe passed (last commit 14:53:59Z vs trigger 15:02:52Z). Reconcile: no positions, no open orders, equity/cash $399.19 (breaker $394.19, room $5.00). Stop checks: nothing held.
+- Tape 10:03 ET: SPY 737.60 (-0.32%), QQQ 660.37 (-0.21%), SMH 461.07 (-0.18%), IWM 271.90 (-0.38%), NVDA 155.25 (-0.57%), IGV 96.43 (-2.60% vs 99.00). SPY 5-min lows: 09:30 737.67, 09:35 737.47 (opening low), 09:40 737.75, 09:45 737.84, 09:50 738.03, 09:55 738.46 (five higher lows), but the price at 10:03 (737.595) is back near the opening low in a bar still forming. Regime: range / unconfirmed; not Falling (no new session low yet), not confirmed Stabilizing. IGV lows fell every bar (97.83 to 96.575): the software group has no higher lows.
+- Momentum (not eligible before 10:30 ET): AS +9.6% (RVOL 0.97), KLAR +5.9% (RVOL 0.93): RVOL below the 1.3 minimum even though volume is high in raw terms (raw volume vs the 30-day average, said so for the pre-11:00 rule). No momentum entry possible this cycle regardless.
+- Mean-reversion sweep (cap >= $5B, <= -3.5%, RSI < 45): 22 names, 17 of them software/security: CRM -6.9% (RSI 37.1), NOW -4.6% (RSI 30.2), TEAM -6.2% (RSI 28.0), MDB -6.0% (RSI 39.8), ESTC -6.0%, CVLT -6.2%, S -5.2%, FIG -4.9%, DDOG -4.3% (RSI 28.5), ZS -3.9% (RSI 34.9), OKTA, SNOW, GWRE, QLYS, PEGA, RNG, GTLB, OTEX; non-software: SSL -5.8% (Sasol, South Africa ADR, foreign), BILI -4.1% (China ADR), KEP -4.4% (Korea ADR, foreign), SMMT -5.0% (biotech, RSI 34.9). Tier A needs >= 5% intraday, sector ETF <= -2%, RSI < 35, down more than the sector, a higher 5-min low.
+- Gate-check, best candidate TEAM (Atlassian, 143.05 vs 149.94 prior close, -6.2%, RSI 28.0, IGV -2.60%): technicals: -6.2% and RSI 28.0 and down more than IGV meet Tier A; the 5-min lows are DESCENDING (146.01, 144.65, 144.76, 143.24, 143.665, 142.88), so the higher-low test FAILS. Gate 1 (external dated cause sourced this cycle): I searched; results ("software stocks selloff Tuesday Salesforce ServiceNow Atlassian shares fall why") described earlier episodes (Feb 4, Mar 24, 2026 AI-disruption selloffs, an IBM warning, a Salesforce outlook miss, a Claude-release item), none dated Nov 17; no same-day source, so Gate 1 FAILS. Gate 4 (not a multi-week downtrend): TEAM fell from ~227.6 (Oct 23) to ~150 (Nov 13), -34% in 3 weeks, including a -16% earnings gap on Nov 6 (company-specific); this IS a multi-week downtrend: FAIL. Gate 2 (fundamental datapoint) and Gate 3 (2R anchor) not completed since gates 1 and 4 already fail. CRM -6.9% (RSI 37, above 35: fails Tier A RSI; lows falling 205.63 to 200.72): FAIL. NOW -4.6% (below 5%): fails Tier A intraday; the 14:55 bar low 94.855 vs 94.81 is one marginal higher low: FAIL on size and Gate 1. DDOG -4.3% (<5%): FAIL. The rest: company-specific or unverified (SMMT), foreign ADRs (SSL, BILI, KEP: framework treats foreign names as fails for the momentum side; for mean-reversion Gate 1 still needs a sourced cause: none).
+- Disclosures: (1) Gate 1 sourcing: the search returned no Nov 17 items, same limitation as the pre-open brief and 09:19 ET search. (2) I did not run the momentum sweep at RVOL >= 1.3 this cycle because momentum is not eligible until 10:30 ET; the AS/KLAR RVOLs are from the prep sweep at 0.5.
+- Decision: NO TRADE. Trades today 0. Tier A runs to 11:30 ET; if the software group makes higher lows and a dated sector cause is sourced, it could still qualify, but Gate 4 (multi-week downtrend) remains the likely blocker for TEAM/NOW/CRM.
