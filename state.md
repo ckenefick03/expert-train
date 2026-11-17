@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-16 15:49 ET",
+  "as_of": "2026-11-17 08:34 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,10 +41,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Flat overnight, no positions or orders. Day 2026-11-16: 0 trades, P&L $0.00, equity $399.19 (unchanged). Drawdown from peak $437.99 is 8.86%; breaker level $394.19 leaves $5.00. NVDA reports Tue Nov 17 after the close.",
+  "status_note": "Pre-open: flat, no positions or orders. Equity $399.19; breaker level $394.19 ($5.00 room); peak $437.99. Pre-market AI/semis bounce into NVDA earnings (after the close today); entries start 10:00 ET.",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-11-16",
+    "date": "2026-11-17",
     "start_equity": 399.19,
     "trades": 0,
     "forced": 0
@@ -4317,6 +4317,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-16 15:49 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-17 08:34 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4527,7 +4531,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "FALLING/range into the close: SPY 738.77 (-2.07%) at 15:48 ET, session low 738.07 (14:45 ET). SMH -5.1%, QQQ -2.7%, IWM -1.9%, NVDA -4.5%. AI/semis/crypto-led risk-off continues.",
+    "read": "PRE-MARKET: AI/semis bounce, SMH +1.2%, QQQ +0.4%, NVDA +1.2%, SPY flat (-0.05%), IWM -0.4% (SPY 739.57 vs close 739.95). Yesterday closed near the lows (SPY -1.91%). Regime is set by the session tape after the open; NVDA reports after the close.",
     "chips": [
       "SPY -1.1%",
       "SMH -3.5%",
@@ -13182,3 +13186,16 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Disclosed limitations and errors: (1) WebSearch never returned a usable Nov 16 market wrap or sector cause all day (hourly searches at 09:17, 10:16, 11:15, 12:13, 13:16, 14:16, 15:16 ET found only older dates, including a one-year-old Nov 17, 2025 result that I did not use). Gate 1 therefore failed for every mean-reversion name. (2) A 5-minute bars request at 09:32 ET returned HTTP 400 (no completed bar yet); retried successfully later. (3) get_earnings_results rejected the `symbols` parameter at 14:28 ET (data gap; CHYM's report date not pulled). (4) The Samsung-Modine thesis behind the Nov 13 MOD trade was never independently confirmed. (5) Final official closes were not available at the time of this write; 15:48 ET prints are shown.
 - Open user questions still unanswered (I made no change): whether marginal RVOL/spread passes count as fails (I treated them as fails), one-bar reclaim vs confirmed-hold rule, whether to reduce the $105 size given breaker proximity, and a profit-protection rule.
 - Next: Tuesday 2026-11-17. NVDA reports after the close (event risk; excluded by the earnings rule); KLAR/HD/DIS/JD report in the morning; WMT Thursday morning. The next pre-open brief runs about 08:30 ET.
+
+### Pre-open brief - Tuesday 2026-11-17 08:34 ET (trigger fired 08:27 ET; read-only, no orders)
+- Correction to the Nov 16 close recap (Cycle 1095), which used 15:48 ET prints and said so: official closes for Mon 2026-11-16 are SPY 739.95 (-1.91%), QQQ 661.75 (-2.67%), SMH 461.90 (-5.10%), IWM 272.94 (-1.66%), NVDA 156.14 (-4.12%). The recap's 15:48 prints (SPY 738.77, QQQ 661.25, SMH 461.89, IWM 272.25, NVDA 155.51) were a few cents to ~1.2 points below the final closes; nothing else in the recap changes (flat, 0 trades, $0.00 P&L).
+- Reconcile: no positions, no open orders, equity/cash $399.19, buying power $399.19. Nothing to stop-check. Peak equity $437.99; drawdown 8.86%; the 10% breaker level is $394.19 (room $5.00).
+- Tape first (pre-market, extended hours, 08:28 ET): SPY 739.57 (-0.05% vs 739.95), QQQ 664.12 (+0.36%), SMH 467.42 (+1.20%), IWM 271.86 (-0.40%), NVDA 158.04 (+1.22%), XLK 166.09 (+0.81%), XLE 63.98 (+0.46%), BITO 8.63 (flat). A tech/AI bounce into NVDA's report after today's close; small caps weaker; crypto flat. Pre-market volume is thin, so these are indications only.
+- Pre-market movers (cap >= $2B, >= +4%, 23 names): AI optics/networking/semis bounce: COHR +8.5%, FN +7.5%, AAOI +7.5%, LITE +4.7%, MRVL +4.2%, CRDO +4.4%, ALAB +4.2%, ENTG +4.1%, TEL +5.2%, ACMR +4.8%. Biotech/diagnostics: NTRA +4.3% (301, was -8.6% yesterday), CAI +5.0% (was -7.7%), TEM +5.6%. Earnings-driven: ESLT +8.0% (Elbit Systems, reported am, EPS 4.36 vs 3.92 est; Israeli-domiciled, foreign), AS +5.8% (Amer Sports, reported am, EPS 0.42 vs 0.35 est). Others: PAM +8.2% (Pampa Energia, Argentina, foreign), HG +8.7% (Hamilton Insurance, unsourced), ACM +6.4%, SITE +5.0%, BETA +7.1%, TAC +5.4%, PS +4.5%, NIO +4.2%. No name with cap >= $5B, down >= 3.5% and RSI < 40 pre-market: nothing is gapping down into mean-reversion territory.
+- News and politics: WebSearch ("stock futures Tuesday November 17 2026 Nvidia earnings tech selloff premarket"; "Home Depot Disney JD.com earnings results shares premarket Tuesday") returned no Nov 17, 2026 coverage: only older items (Aug 26, 2026 pre-NVDA-earnings piece, Nov 2025 pieces, 2019-2022 items). Nothing was verified about overnight macro, rates, tariffs, geopolitics or policy for today; I will not cite any headline as a cause. Calendar facts (get_earnings_calendar, verified) are the only sourced items: Tue am reports (already printed): HD (EPS 3.86 vs 3.87 est, slight miss), DIS (1.77 vs 1.68, beat), JD (0.88 vs 0.93, miss), KLAR, AS (beat), ENR, MFP, MNSO, TME, VIK, ESLT, WB, OPRA; Tue after the close: NVDA (est EPS 2.47), SQM, CAAP, ZTO, GBDC, LZB, DLB; Wed: TJX, LOW, TGT, PANW, KLIC, ZIM, TCEHY, PONY, GLBE (am/pm mix); Thu: WMT, BABA, PDD, INTU, ROST, WSM, KEYS, NTES, MANU, FUTU (am/pm mix).
+- Earnings exclusions (avoid within 2 trading days unless post-report thesis): NVDA, SQM, CAAP, ZTO, GBDC, LZB, DLB today after the close; TJX, LOW, TGT, PANW, KLIC, ZIM, SBLK, TCEHY and others Wed; WMT, BABA, PDD, INTU, ROST, WSM and others Thu. For mean-reversion names, Gate 1's sourced-cause requirement still applies.
+- Regime read: not yet set. Yesterday ended near the lows in a risk-off AI/semis/crypto selloff; the pre-market shows a bounce but the open will decide. Rules: Falling (SPY still making new session lows) = MR off and momentum only for fresh non-fading catalyst gaps; Stabilizing (about 3 higher 5-min lows, no new lows) = MR on; Stable/rising = momentum on. No entries before 10:00 ET.
+- Watch list, mean-reversion (all need an intraday dislocation after 10:00 ET, a sourced dated sector/macro cause found that cycle, a neutral-or-better fundamental datapoint, a named 2R anchor, and not a multi-week downtrend; Gate 1 is the likely failure again): NTRA (diagnostics, 301 pre-market; if it fades back into a >= 3.5% drop), CAI, DDOG (software, RSI 31 yesterday), PBR / YPF (oil-linked, LatAm; XLE +0.5% pre-market, no sourced cause yet), CORT. Honest odds: low, because yesterday's drops lacked sourced same-day causes and the AI names are in a multi-week downtrend (Gate 4).
+- Watch list, momentum (need a sourced catalyst, RVOL >= 1.3 (raw volume vs the 30-day average before ~11:00 ET, said so), not fading, a held pullback with a higher low, earliest 10:30 ET, foreign ADRs fail): AS (Amer Sports, +5.8% on an EPS beat; a post-report thesis candidate, subject to checking the reaction and whether its domicile counts as foreign), DIS (reported am, beat; reaction not yet seen), HD (slight miss; likely not a long), COHR / LITE / FN (AI optics bounce; sector-driven into NVDA's report after the close, so they carry event risk and fade risk), MOH (+9% yesterday, unsourced; only if a source appears). POWL and CGON were strong yesterday without a sourced catalyst; they fail Gate 2 unless one appears.
+- Event risk today: NVDA reports after the close, so any position must be flat before the bell (default flat anyway; no overnight holds into the print). Mandatory 15:30 ET entry cutoff stands.
+- Open user questions still unanswered (no change made): whether marginal RVOL/spread passes count as fails (treated as fails), one-bar reclaim vs confirmed-hold rule, whether to reduce the $105 size given breaker proximity, and a profit-protection rule. The 1-trade minimum was missed on Nov 16; the minimum is still never met by relaxing a gate. Tier C (14:30-15:30 ET) is the last window; a forced tag applies only to a trade that passes every gate.
