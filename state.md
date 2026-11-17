@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-17 08:56 ET",
+  "as_of": "2026-11-17 09:06 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -4329,6 +4329,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-17 08:56 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-17 09:06 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4539,7 +4543,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "PRE-MARKET: SPY 738.63 (-0.18%), QQQ +0.22%, SMH +1.07%, IWM -0.52%, NVDA +0.87%. Narrow AI/semis bounce, broad market and small caps soft. Regime set after the open.",
+    "read": "PRE-MARKET: SPY 739.35 (-0.08%), QQQ +0.42%, SMH +1.36%, IWM -0.44%, NVDA +1.17%. AI/semis bounce firming into NVDA earnings; broad market flat. Regime set after the open.",
     "chips": [
       "SPY -1.1%",
       "SMH -3.5%",
@@ -13219,4 +13223,10 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Dedupe passed (last commit 13:43:13Z vs trigger 13:53:18Z). Reconcile: no positions, no open orders, equity/cash $399.19 (breaker $394.19, room $5.00). Stop checks: nothing held.
 - Pre-market tape 08:53 ET (thin): SPY 738.63 (-0.18%), QQQ 663.19 (+0.22%), SMH 466.83 (+1.07%), IWM 271.52 (-0.52%), NVDA 157.50 (+0.87%). Little change from 08:43 ET: a narrow AI/semis bounce while SPY and IWM sit below yesterday's close.
 - Scans: NOT run (disclosed): before the 10:00 ET entry window, and pre-market volume is too thin to gate-check. Full sweeps begin with the first cycle after 10:00 ET.
+- Decision: NO TRADE (before the entry window). Trades today 0.
+
+### Cycle 1098 - 2026-11-17 09:06 ET (pre-market cycle, no entries before 10:00 ET)
+- Dedupe passed (last commit 13:53:39Z vs trigger 14:03:25Z). Reconcile: no positions, no open orders, equity/cash $399.19 (breaker $394.19, room $5.00). Stop checks: nothing held.
+- Pre-market tape 09:03 ET (thin): SPY 739.35 (-0.08%), QQQ 664.54 (+0.42%), SMH 468.20 (+1.36%), IWM 271.75 (-0.44%), NVDA 157.97 (+1.17%). The AI/semis bounce is firming (SMH +0.78% -> +1.36% since 08:43 ET) while SPY recovered toward flat and IWM stays soft.
+- Scans: NOT run (disclosed): before the 10:00 ET entry window; pre-market volume is too thin to gate-check. Full sweeps start with the first cycle after 10:00 ET.
 - Decision: NO TRADE (before the entry window). Trades today 0.
