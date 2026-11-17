@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-17 09:06 ET",
+  "as_of": "2026-11-17 09:19 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Pre-market, flat, no positions or orders. Entries open 10:00 ET. Equity $399.19; breaker level $394.19 ($5.00 room).",
+  "status_note": "Pre-market, flat, no positions or orders. Entries open 10:00 ET (momentum 10:30). Equity $399.19; breaker level $394.19 ($5.00 room).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-17",
@@ -4333,6 +4333,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-17 09:06 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-17 09:19 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4543,7 +4547,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "PRE-MARKET: SPY 739.35 (-0.08%), QQQ +0.42%, SMH +1.36%, IWM -0.44%, NVDA +1.17%. AI/semis bounce firming into NVDA earnings; broad market flat. Regime set after the open.",
+    "read": "PRE-MARKET: SPY 739.16 (-0.11%), QQQ +0.32%, SMH +1.50%, IWM -0.45%, NVDA +1.15%, XLE +0.7%. AI/semis bounce into NVDA earnings after the close; broad market flat, small caps soft. Regime set after the open.",
     "chips": [
       "SPY -1.1%",
       "SMH -3.5%",
@@ -13229,4 +13233,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Dedupe passed (last commit 13:53:39Z vs trigger 14:03:25Z). Reconcile: no positions, no open orders, equity/cash $399.19 (breaker $394.19, room $5.00). Stop checks: nothing held.
 - Pre-market tape 09:03 ET (thin): SPY 739.35 (-0.08%), QQQ 664.54 (+0.42%), SMH 468.20 (+1.36%), IWM 271.75 (-0.44%), NVDA 157.97 (+1.17%). The AI/semis bounce is firming (SMH +0.78% -> +1.36% since 08:43 ET) while SPY recovered toward flat and IWM stays soft.
 - Scans: NOT run (disclosed): before the 10:00 ET entry window; pre-market volume is too thin to gate-check. Full sweeps start with the first cycle after 10:00 ET.
+- Decision: NO TRADE (before the entry window). Trades today 0.
+
+### Cycle 1099 - 2026-11-17 09:19 ET (hourly trigger, scheduled 09:12 ET, fired 09:16 ET; pre-market, no entries before 10:00 ET)
+- Dedupe passed (last commit 14:03:47Z vs trigger 14:16:20Z). Reconcile: no positions, no open orders, equity/cash $399.19 (breaker $394.19, room $5.00). Stop checks: nothing held.
+- Pre-market tape 09:16 ET (thin): SPY 739.16 (-0.11%), QQQ 663.86 (+0.32%), SMH 468.82 (+1.50%), IWM 271.72 (-0.45%), NVDA 157.94 (+1.15%), XLE 64.12 (+0.67%), BITO 8.64 (+0.1%). The semis bounce keeps building while SPY and IWM are about unchanged to soft.
+- Hourly WebSearch ("Wall Street stocks open Tuesday Home Depot Disney earnings Nvidia ahead Fed retail sales"): returned no Nov 17, 2026 coverage. Results were older (Nov 18, 2025 Reuters pre-open piece, a May 19, 2026 Home Depot Q1 item, and 2022-2024 items); I do not use them as sources for today. No same-day macro, rates, tariff or geopolitical item verified; limitation logged again. Today's sourced facts remain the earnings calendar entries from the 08:34 ET brief.
+- Scans: NOT run (disclosed): before the 10:00 ET entry window.
 - Decision: NO TRADE (before the entry window). Trades today 0.
