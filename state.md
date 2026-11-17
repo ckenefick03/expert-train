@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-17 09:36 ET",
+  "as_of": "2026-11-17 09:46 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "Market open (09:32 ET), flat, no positions or orders. Entries open 10:00 ET (momentum 10:30). Equity $399.19; breaker level $394.19 ($5.00 room).",
+  "status_note": "Open 15 min, flat, no positions or orders. Entries open 10:00 ET (momentum 10:30). Equity $399.19; breaker level $394.19 ($5.00 room).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-17",
@@ -4341,6 +4341,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     {
       "t": "2026-11-17 09:36 ET",
       "equity": 399.19
+    },
+    {
+      "t": "2026-11-17 09:46 ET",
+      "equity": 399.19
     }
   ],
   "positions": [],
@@ -4551,7 +4555,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     }
   ],
   "regime": {
-    "read": "OPEN, first minutes: SPY 738.26 (-0.23%), QQQ +0.01%, SMH +0.29%, IWM -0.30%, NVDA +0.61%. The pre-market semis bounce faded at the open. Too early to set a regime.",
+    "read": "OPEN: SPY 739.40 (-0.07%) after an opening low 737.47 (09:35 ET bar), QQQ +0.22%, SMH +0.73%, IWM -0.07%, NVDA +0.28%. Early rebound off the open low; regime read comes with the 10:00+ bars.",
     "chips": [
       "SPY -1.1%",
       "SMH -3.5%",
@@ -13250,4 +13254,10 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Dedupe passed (last commit 14:16:48Z vs trigger 14:32:28Z). Reconcile: no positions, no open orders, equity/cash $399.19 (breaker $394.19, room $5.00). Stop checks: nothing held.
 - Tape 09:32 ET (first two minutes of the regular session, regular-session prices): SPY 738.26 (-0.23%), QQQ 661.81 (+0.01%), SMH 463.24 (+0.29%), IWM 272.14 (-0.30%), NVDA 157.09 (+0.61%). The pre-market AI/semis bounce (SMH +1.5% at 09:16) faded to +0.3% at the open; SPY is below yesterday's 739.95 close. Opening-minute prints are noisy; no regime read yet.
 - Scans: NOT run (disclosed): before the 10:00 ET entry window, and the opening 30 minutes are off-limits.
+- Decision: NO TRADE (before the entry window). Trades today 0.
+
+### Cycle 1101 - 2026-11-17 09:46 ET (first 15 minutes, no entries before 10:00 ET)
+- Dedupe passed (last commit 14:32:48Z vs trigger 14:42:36Z). Reconcile: no positions, no open orders, equity/cash $399.19 (breaker $394.19, room $5.00). Stop checks: nothing held.
+- Tape 09:43 ET: SPY 739.40 (-0.07%), QQQ 663.21 (+0.22%), SMH 465.27 (+0.73%), IWM 272.74 (-0.07%), NVDA 156.57 (+0.28%). SPY 5-min: 09:30 bar 738.39 -> 737.69 (low 737.67, 486k volume), 09:35 bar low 737.47 / close 738.105 (254k); the 09:43 print of 739.40 is a 1.9-point rebound off the opening low. Opening bars only; one rebound is not a regime.
+- Scans: NOT run (disclosed): before the 10:00 ET entry window; the first 30 minutes are off-limits. Full sweeps start with the 10:0x cycle.
 - Decision: NO TRADE (before the entry window). Trades today 0.
