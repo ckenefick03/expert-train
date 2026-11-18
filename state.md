@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-18 09:33 ET",
+ "as_of": "2026-11-18 09:43 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Flat, no orders. Market open 09:30; entries barred until 10:00 ET. Equity 398.97 (breaker 394.19).",
+ "status_note": "Flat, no orders. Opening gap faded: indexes flat to red, semis reversed. Entries barred until 10:00 ET. Equity 398.97 (breaker 394.19).",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-18",
@@ -4517,6 +4517,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-18 09:33 ET",
    "equity": 398.97
+  },
+  {
+   "t": "2026-11-18 09:43 ET",
+   "equity": 398.97
   }
  ],
  "positions": [],
@@ -4739,7 +4743,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "OPEN (first minutes): SPY 734.38 (+0.27%), QQQ 661.68 (+0.72%), SMH 466.53 (+1.40%), IWM 268.84 (-0.08%), NVDA 158.69 (+2.1%), GLD 345.50 (-2.0%). Regime decided on the 5-min tape after 10:00 ET.",
+  "read": "OPEN, GAP FADED: SPY 731.37 (-0.15%), QQQ 656.51 (-0.07%), SMH 457.91 (-0.48%), IWM 269.61 (+0.21%), NVDA 155.29 (-0.1%, +3% pre-mkt gap fully reversed), GLD -2.0%. Falling/unstable until the 10:00 ET 5-min read.",
   "chips": [
    "SPY -1.1%",
    "SMH -3.5%",
@@ -13786,4 +13790,10 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Reconcile: account 771144490 flat, no open orders, cash/equity $398.97 (breaker level $394.19, cushion $4.78). No stops to check.
 - Tape (first regular-session prints vs 11/17 close): SPY 734.38 (+0.27%), QQQ 661.68 (+0.72%), SMH 466.53 (+1.40%), IWM 268.84 (-0.08%), NVDA 158.69 (+2.1%), GLD 345.50 (-2.0%). The semis gap is easing (SMH was +2.5% pre-market at 08:43); GLD keeps falling.
 - Scans: not run (no entries before 10:00 ET; opening-range volume data is unreliable). Deliberate skip, disclosed. First live momentum/MR sweeps run at the 10:02 ET cycle.
+- Decision: no trade.
+
+### Cycle 1144 - 2026-11-18 09:43 ET (opening range, no entries possible)
+- Reconcile: account 771144490 flat, no open orders, cash/equity $398.97 (breaker level $394.19, cushion $4.78). No stops to check.
+- Tape: SPY 731.37 (-0.15%), QQQ 656.51 (-0.07%), SMH 457.91 (-0.48%), IWM 269.61 (+0.21%), NVDA 155.29 (-0.1%), GLD 345.29 (-2.0%). Sharp reversal vs 09:33 (SPY 734.38, SMH 466.53, NVDA 158.69): the pre-market semis/NVDA gap was sold in full within the first 13 minutes. Any momentum idea built on the NVDA-beat gap (CRDO, NBIS, CRWV, COHR, LITE) is now suspect, since the gap is fading; they would fail the "not fading" part of Gate 1 unless they hold their own gains.
+- Scans: not run (no entries before 10:00 ET). Deliberate skip, disclosed. The 10:02 ET cycle runs the first live sweeps and sets the regime label.
 - Decision: no trade.
