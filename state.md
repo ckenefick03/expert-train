@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-18 11:23 ET",
+ "as_of": "2026-11-18 11:33 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Flat, no orders. 11:23: SPY broke to a new session low (727.79): regime back to FALLING, MR/momentum off. Equity 398.97 (breaker 394.19).",
+ "status_note": "Flat, no orders. 11:33 Tier B open: SPY printed another new low (726.80) at 11:20; regime FALLING, MR/momentum off. Broad energy + metals + software weakness logged for the 12:12 search. Equity 398.97 (breaker 394.19).",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-18",
@@ -4561,6 +4561,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-18 11:23 ET",
    "equity": 398.97
+  },
+  {
+   "t": "2026-11-18 11:33 ET",
+   "equity": 398.97
   }
  ],
  "positions": [],
@@ -4783,7 +4787,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "FALLING (re-confirmed): SPY 727.98 (-0.61%), new session low 727.79 on the 11:15 ET bar (below 728.34 of 10:45), after a failed 5-higher-lows base. QQQ 654.73 (-0.34%), SMH 455.59 (-0.98%), IWM 269.42 (+0.14%), XRT 89.67 (+1.6%), GLD 342.80 (-2.7%). MR off, momentum off.",
+  "read": "FALLING: SPY 729.26 (-0.43%) after a new session low 726.80 (11:20 ET bar), bounce since (11:25 low 728.08). QQQ 656.26 (-0.11%), SMH 456.65 (-0.75%), IWM 270.25 (+0.45%), XRT 90.05 (+2.0%), GLD 342.57 (-2.8%). MR off until ~3 higher lows after 726.80.",
   "chips": [
    "SPY -1.1%",
    "SMH -3.5%",
@@ -13921,3 +13925,10 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum sweep (cap >= 2B, >= +3%, RVOL >= 0.8 for record): TTWO +7.3% (RVOL 1.65, price 218.80 vs 221.07 at 11:15: faded 1.0% and back below 220.45), TJX +10.4% (1.16), TGT +5.0% (1.14), VIK +5.9% (0.87), BIPC +3.5% (1.21), BLSH +8.7% (1.15), SLS +6.4% (1.47, biotech, 16M shares, no catalyst sourced this cycle, small-cap-ish at $3.9B). All fail: TTWO now below the break level (the 11:15 trigger was one bar and has reversed), others RVOL < 1.3 or no cited catalyst; SLS passes the RVOL number but has no sourced catalyst and no peer complex. No entry.
 - MR sweep (cap >= 5B, <= -5%, RSI14 < 35): 12 rows: SCCO -7.0%, DINO -6.7%, FCX -7.6%, SQM -5.7%, PAAS -7.1%, ASTS -6.5%, IONQ -5.1% (RSI 34.7, new row, quantum computing, company/sector unsourced), BVN -7.9%, HBM -9.5%, PSLV -5.2%, SSL -6.9%, AG -8.2%. All FAIL: regime Falling; metals fail Gate 1 and Gate 4 (sourced multi-week downtrend per the 11/2 article found at 11:15); the rest have no sourced cause. They are still making new lows (AG -7.3% -> -8.2%).
 - Decision: no trade. No gate relaxed. Tier B (11:30-14:30) starts next cycle.
+
+### Cycle 1155 - 2026-11-18 11:33 ET (Tier B opens)
+- Reconcile: account 771144490 flat, no open orders, cash/equity $398.97 (breaker level $394.19, cushion $4.78). No stops to check. 0 trades today.
+- Tape: SPY 729.26 (-0.43%), QQQ 656.26 (-0.11%), SMH 456.65 (-0.75%), IWM 270.25 (+0.45%), XRT 90.05 (+2.0%), GLD 342.57 (-2.8%). SPY 5-min (UTC bars): 16:15 L 727.79, 16:20 L 726.795 (new session low, range 726.80-729.82, vol 455k, the heaviest bar of the day), 16:25 L 728.08. One higher low after a washout low: not 3, so Falling holds. MR OFF; momentum off.
+- Momentum sweep (cap >= 2B, >= +3%, RVOL >= 0.8 for record): TTWO +8.3% (RVOL 1.70, 220.80, retesting the 220.45-221.59 area), TGT +5.4% (1.18), TJX +10.4% (1.20), VIK +6.2% (0.96), BIPC +4.0% (1.33), SLS +11.0% (1.70), BLSH +10.0% (1.19), KLAR +3.7% (0.83). All fail: regime not supportive; TTWO peer separation < 2 pts vs RBLX and no sourced same-day catalyst; SLS/BIPC pass the RVOL number but have no cited catalyst and no peer complex; the rest RVOL < 1.3. No entry.
+- MR sweep, Tier B grade (cap >= 5B, <= -3.5%, RSI14 < 45): 63 rows. Themes: (a) metals/miners (AEM -8.8%, NEM -7.8%, AU -9.1%, B -7.8%, KGC -8.1%, SCCO -7.3%, FCX -7.7% and more) = Gate 1 and Gate 4 FAIL as before (no same-day cause, sourced multi-week downtrend); (b) energy: refiners MPC -5.0%, VLO -4.8%, PSX -4.0%, DINO -5.9%, PBF -6.8%; producers OXY -3.9%, CNQ -3.9%, SU -4.1%, CVE -3.8%, SM -4.3%, PBR -3.6%: a sector-wide energy selloff, which is a genuine sector (not company) pattern, but I have NO sourced same-day cause yet (to be searched at the 12:12 hourly run); (c) software: TEAM -4.2% (RSI 24.8), ADBE -3.9%, SAP -4.3%, PATH -3.7%, CRWV -5.6%, CBRS -7.1%; (d) idiosyncratic: UNH -7.1% (RSI 42.9), SNDK -4.3% (RSI 30.9), MSTR -5.0%, OSCR -5.8%, GLBE -6.5%, CTVA -4.3% (RSI 24.5), IONQ -4.8%, ASTS -6.7%. None can pass Gate 1 without a sourced cause, and the Falling regime forbids MR now anyway. No entry.
+- Decision: no trade. No gate relaxed. Plan: the 12:12 hourly run searches energy first (largest sector-wide non-metals group), then software.
