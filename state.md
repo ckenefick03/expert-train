@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-18 13:04 ET",
+ "as_of": "2026-11-18 13:14 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "OPEN: TJX 0.73018 sh @143.80, last 143.94 (+$0.10), stop 142.70, target 146.00. No new entry. Equity 399.07 (breaker 394.19, cushion 4.88).",
+ "status_note": "OPEN: TJX 0.73018 sh @143.80, last 143.67 (-$0.09), stop 142.70, target 146.00; retesting the 143.69 breakout level, tripwire: completed 5-min close < 143.50. Equity 398.87 (breaker 394.19, cushion 4.68).",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-18",
@@ -4601,6 +4601,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-18 13:04 ET",
    "equity": 399.07
+  },
+  {
+   "t": "2026-11-18 13:14 ET",
+   "equity": 398.87
   }
  ],
  "positions": [
@@ -4609,7 +4613,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
    "strategy": "momentum",
    "qty": 0.73018,
    "entry": 143.8,
-   "price": 143.94,
+   "price": 143.67,
    "stop": 142.7,
    "target": 146.0,
    "opened": "2026-11-18 12:14 ET",
@@ -4835,7 +4839,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "STABLE / SIDEWAYS: SPY 731.04 (-0.19%), 5-min closes 731.53 -> 732.01 -> 731.38, lows 730.94+. QQQ 658.42 (+0.22%), SMH 456.77 (-0.73%), IWM 271.39 (+0.87%), XRT 90.82 (+2.9%). Momentum selective; MR blocked by sourcing.",
+  "read": "STABLE / FADING: SPY 729.82 (-0.36%), 5-min closes 732.01 -> 731.38 -> 731.14 -> 730.36 (lows 730.12), still above the 726.80 low. QQQ 657.27 (+0.05%), SMH 455.64 (-1.0%), IWM 271.10 (+0.8%), XRT 90.75 (+2.8%), XLE 61.43 (-3.1%), USO 135.37 (-3.5%), GLD 342.38 (-2.9%), IGV 96.38 (+0.7%). Momentum selective; MR blocked by sourcing.",
   "chips": [
    "SPY -1.1%",
    "SMH -3.5%",
@@ -14059,3 +14063,12 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum sweep (cap >= 2B, >= +3%, RVOL >= 0.8): PANW +6.6% (0.86; reports after the close, FAIL), TTWO +7.3% (2.11), TGT +7.0% (1.68), POWL +3.4% (0.86), TJX +10.8% (1.47), VIK +7.0% (1.36), CALM +8.6% (0.83), MKC.V +3.2% (1.38, a thin voting class, ADV < the 1M-share floor, FAIL), BIPC +4.1% (2.38), MDLN +4.2% (2.91), CNX +3.8% (0.93), BLSH +12.2% (1.67), SLS +4.2% (2.23), TU +3.4% (0.86, foreign/Canadian), PLBL +11.7% (1.14). New: VIK now clears RVOL (1.36) but was an earnings-MISS name on 11/17 (logged) and has no cited catalyst today; Gate 2 FAIL. TGT: no change (reward:risk). No entry.
 - MR sweep (cap >= 5B, <= -5%, RSI14 < 35): 10 rows (SCCO -6.0%, DINO -6.7%, FCX -6.5%, SQM -6.1%, PAAS -6.2%, ASTS -5.2%, BVN -6.1%, HBM -8.3%, SSL -7.1%, AG -6.8%). Same fails. No entry.
 - Decision: hold TJX, no new entry. Hourly WebSearch run at 13:12 ET next.
+
+### Cycle 1165 - 2026-11-18 13:14 ET (hourly, WebSearch run)
+- STOP CHECK / reconcile: account 771144490, position TJX 0.730180 sh avg $143.80, no open orders, cash $293.97, equity $398.87 (TJX -$0.09 unrealized; day P&L -$0.10 vs the 398.97 start). TJX 143.67 vs stop 142.70 (-0.7%), target 146.00. 5-min bars: 18:00 close 143.756 (L 143.750), 18:05 close 143.600 (L 143.595): the first lower low since the breakout, and price is back at the 143.69 breakout level (a retest). Computed 5-min EMAs on the day's closes: EMA9 143.82 (falling), EMA20 143.615 (rising from 143.56). The last completed close 143.600 is $0.015 BELOW the rising EMA20: a technical touch, not a decisive break (noise-level); the stop is 0.7% away. XRT +2.8% and TJX +10.6% (relative strength vs the peer complex intact), but SPY is fading (729.82). Judgement: HOLD, with a written tripwire: a completed 5-min close below 143.50 (below the EMA20 with a buffer, and below the 143.595 retest low) = invalidation exit at the next cycle's market order, and the 142.70 hard stop always applies. Disclosed: this is a borderline call on the strategy file's "close below rising short-term support", the stakes are about $0.1-0.2, and a stricter reading would have exited here.
+- Tape: SPY 729.82 (-0.36%), QQQ 657.27 (+0.05%), SMH 455.64 (-1.0%), IWM 271.10 (+0.77%), XRT 90.75 (+2.8%), XLE 61.43 (-3.1%), USO 135.37 (-3.5%), GLD 342.38 (-2.9%), IGV 96.38 (+0.7%). SPY 5-min closes: 732.01, 731.38, 731.14, 730.36 (lows 730.94 -> 730.77 -> 730.12): drifting lower inside the day's range; session low still 726.80. Regime: stable but fading; not Falling.
+- News (WebSearch standard, two queries): (1) "UnitedHealth stock falls today": results are 2025 articles plus one undated Rallies.ai item (Medicare Advantage margin fears, DOJ overhang): NOT usable as a same-day source; UNH -8.9% (RSI 42.9) is company-specific anyway = MR Gate 1 FAIL. (2) market wrap query: nothing dated 2026-11-18 (latest items Nov 11-13; an undated mention of a hot CPI/hawkish Fed and an unverified headline about NVIDIA's CEO resigning: NOT usable, not verified). No dated macro cause found for energy, metals or software: MR Gate 1 FAIL for all.
+- Momentum sweep (cap >= 2B, >= +3%, RVOL >= 0.8): PANW +6.1% (0.88, reports after the close: FAIL), TTWO +7.7% (2.14), TGT +6.9% (1.73), POWL +3.3% (0.87), TJX +10.6% (1.49), MOD +3.5% (0.81), VIK +7.3% (1.39), CALM +9.0% (0.87), MKC.V +3.2% (1.38; illiquid voting class, FAIL), BIPC +4.2% (2.47), MDLN +4.2% (2.94), CNX +3.9% (0.95), MP +4.1% (0.80), BLSH +11.8% (1.70), SLS +3.1% (2.26), TU +3.2% (0.93), PLBL +12.2% (1.17), GGB +3.3% (0.81). Nothing new passes: TGT still fails the reward:risk anchor; TTWO fails Gate 1; VIK is a 11/17 earnings-miss name with no catalyst today; BIPC/MDLN/SLS/BLSH have no cited catalyst or peer separation.
+- MR sweep, Tier B grade (cap >= 5B, <= -3.5%, RSI14 < 45): 76 rows. Groups: energy (MPC -5.1%, VLO -6.0%, PSX -4.7%, DINO -7.2%, PBF -7.1%, XOM -3.7%, OXY -4.6%, SU -5.2%, CNQ -5.4%, BP -3.9%, CVE -4.5%, SM -5.7%, PR -3.6%, PBR -4.0%, YPF, EC); metals/miners (AEM -7.7%, NEM -6.7%, AU -8.2%, SCCO -6.1%, FCX -6.7%, B -6.8% and many more); software (TEAM -5.1% RSI 24.8, NOW -3.9% RSI 26.7, ADBE -4.3%, SAP -4.7%, WDAY -3.8%, GWRE, PEGA, PATH, FIG); AI/semis (CBRS -7.6%, CRWV -4.6%, MRVL -3.6%, QCOM -3.6%); health (UNH -8.9%, CVS -3.5%, OSCR -5.5%, DVA -4.2%, ALNY RSI 31). Sector facts confirmed by price: XLE -3.1%/USO -3.5% = real energy move; IGV +0.7% while TEAM/NOW/ADBE/SAP fall = software names weak against a green sector (idiosyncratic). Gate 1 (dated sourced cause) FAILS for every group; there is no sourced catalyst for energy or metals; metals also fail Gate 4. NO MR entry.
+- Follow-ups on skipped candidates (price now vs at skip): TTWO 219.56 (+0.6% vs the 218.2 skip at 10:43, neutral); TGT 170.58 (vs 170.30 skip at 12:35: +0.2%); the TJX-based skip at 10:33 (143.0 at the time) would have been +0.5% (entered at 143.80 later); BILL/RYTM/TEAM/NOW last seen 12:15: TEAM now -5.1% (133.74 vs 137.05 then), NOW -3.9% (89.31 vs 91.71).
+- Decision: hold TJX with a written tripwire; no new entry. Next: 13:22.
