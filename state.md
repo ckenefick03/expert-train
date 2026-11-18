@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-18 09:03 ET",
+ "as_of": "2026-11-18 09:17 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Flat, no orders. Pre-10:00 ET: no entries allowed. Pre-market tape firm but easing slightly. Equity 398.97 (breaker 394.19).",
+ "status_note": "Flat, no orders. Pre-10:00 ET: no entries allowed. Pre-market tape fading from highs; gold -1.8%. Equity 398.97 (breaker 394.19).",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-18",
@@ -4509,6 +4509,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-18 09:03 ET",
    "equity": 398.97
+  },
+  {
+   "t": "2026-11-18 09:17 ET",
+   "equity": 398.97
   }
  ],
  "positions": [],
@@ -4731,7 +4735,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "PRE-OPEN: SPY 734.79 (+0.32%), QQQ 661.77 (+0.73%), SMH 469.83 (+2.12%), IWM 268.44 (-0.23%), NVDA 159.89 (+2.9%). Slight fade from 08:53; regime decided on the 5-min tape after 10:00 ET.",
+  "read": "PRE-OPEN: SPY 733.66 (+0.17%), QQQ 660.54 (+0.54%), SMH 468.00 (+1.72%), IWM 268.15 (-0.34%), NVDA 159.13 (+2.4%); GLD -1.8%, NEM -3.3%. Fading since 08:43; regime decided on the 5-min tape after 10:00 ET.",
   "chips": [
    "SPY -1.1%",
    "SMH -3.5%",
@@ -13764,4 +13768,12 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Reconcile: account 771144490 flat, no open orders, cash/equity $398.97 (breaker level $394.19, cushion $4.78). No stops to check.
 - Tape (pre-market vs 11/17 close): SPY 734.79 (+0.32%), QQQ 661.77 (+0.73%), SMH 469.83 (+2.12%), IWM 268.44 (-0.23%), NVDA 159.89 (+2.9%). A small fade vs 08:53 (SPY 735.12, SMH 470.67).
 - Scans: not run (no entries before 10:00 ET; pre-market RVOL blind). Deliberate skip, disclosed. The first live scans run in the 10:02 ET cycle (14:02Z? no: 15:02Z).
+- Decision: no trade.
+
+### Cycle 1142 - 2026-11-18 09:17 ET (hourly, WebSearch run; pre-10:00, no entries possible)
+- Correction to Cycle 1141: its line "(10:02 ET cycle (14:02Z? no: 15:02Z))" was a garbled conversion. 10:02 ET = 15:02Z (ET = UTC-5).
+- Reconcile: account 771144490 flat, no open orders, cash/equity $398.97 (breaker level $394.19, cushion $4.78). No stops to check.
+- Tape (pre-market vs 11/17 close): SPY 733.66 (+0.17%), QQQ 660.54 (+0.54%), SMH 468.00 (+1.72%), IWM 268.15 (-0.34%), NVDA 159.13 (+2.4%). Fading since 08:43 (SPY 735.19, SMH 471.47). GLD 346.26 (-1.8%), NEM 107.63 (-3.3%): the gold/miner drop is real in the price data.
+- News (WebSearch standard, "gold price falls miners selloff today"): returned only 2025 and Feb-2026 episodes. NOTHING dated 2026-11-18, so no sourced cause for today's gold move. Not usable for Gate 1; any gold-miner mean-reversion candidate stays FAIL until a same-day cause is sourced.
+- Scans: not run (no entries before 10:00 ET). Deliberate skip, disclosed. Follow-ups on skipped candidates from 11/17 (BILL, RYTM, TEAM/NOW) are deferred to the first cycle with RTH prices.
 - Decision: no trade.
