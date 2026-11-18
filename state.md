@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-18 10:33 ET",
+ "as_of": "2026-11-18 10:43 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Flat, no orders. 10:33: TJX/TGT momentum setups look clean but fail the literal RVOL >= 1.3 gate; no trade. Equity 398.97 (breaker 394.19).",
+ "status_note": "Flat, no orders. 10:43: SPY drifting toward session low; TTWO RVOL now 1.35 but peer/catalyst gates fail; no trade. Equity 398.97 (breaker 394.19).",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-18",
@@ -4541,6 +4541,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-18 10:33 ET",
    "equity": 398.97
+  },
+  {
+   "t": "2026-11-18 10:43 ET",
+   "equity": 398.97
   }
  ],
  "positions": [],
@@ -4763,7 +4767,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "CHOPPY / SLIGHTLY WEAK: SPY 730.49 (-0.27%), range 728.6-735.1 since the open, 5-min lows 730.94/731.34/730.96/730.66 (flat). QQQ 657.84 (+0.14%), SMH 459.02 (-0.23%), IWM 270.39 (+0.50%), XRT 89.97 (+1.9%), GLD 344.49 (-2.3%). Momentum allowed (not Falling) but only idiosyncratic names (retail earnings gaps) are separating.",
+  "read": "DRIFTING LOWER: SPY 728.67 (-0.52%), 5-min lows 730.96 -> 730.66 -> 730.42 -> 729.77 (falling lows), 0.2% above the 728.58 session low. QQQ 655.36 (-0.24%), SMH 456.50 (-0.78%), IWM 269.40 (+0.13%), XRT 89.72 (+1.6%), GLD 344.00 (-2.4%). Falling-lite: any new SPY low turns the regime Falling (MR off, momentum off).",
   "chips": [
    "SPY -1.1%",
    "SMH -3.5%",
@@ -13858,3 +13862,12 @@ Gate check, written (momentum.md), live data at 12:33 ET:
   - Result: no momentum entry. FLAG FOR REVIEW (not a loosening): RVOL here is cumulative day volume over the 30-day average daily volume. After 63 minutes, a reading of ~0.94 means roughly a full average day's volume has already traded, which is a high pace and probably what the rule intends to capture. The gate text says to use raw volume vs the 30-day average before ~11:00 and say so; the literal threshold (1.3) was kept, so TJX and TGT FAIL. If the user wants the threshold interpreted as time-of-day-adjusted pace, that is a rule change to be decided by the user, not by me.
 - MR sweep (cap >= 5B, <= -5%, RSI14 < 35): 8 rows, still metals/materials: SCCO -7.1% (RSI 30.6), FCX -7.4% (31.0), BVN -7.0% (27.2), HBM -8.3% (34.2), AG -6.9% (32.1), SSL -6.1% (31.4), SQM -6.1% (32.0), PAAS -5.9% (32.7). Gate 1 FAIL (no dated, sourced cause; hourly search is at :12). Prices flat since 10:23 (SCCO -7.0% -> -7.1%), no bounce yet.
 - Decision: no trade. No gate relaxed. Next hourly run (:12, 11:12 ET) will search the TJX move and the metals cause so they can be gated properly if still relevant.
+
+### Cycle 1150 - 2026-11-18 10:43 ET
+- Reconcile: account 771144490 flat, no open orders, cash/equity $398.97 (breaker level $394.19, cushion $4.78). No stops to check. 0 trades today.
+- Tape: SPY 728.67 (-0.52%), QQQ 655.36 (-0.24%), SMH 456.50 (-0.78%), IWM 269.40 (+0.13%), XRT 89.72 (+1.6%), GLD 344.00 (-2.4%). SPY 5-min lows (UTC bars 15:20-15:35): 730.96, 730.66, 730.42, 729.77: falling lows, only 1.2 points above the 728.58 session low. Regime: weak, drifting toward Falling; momentum on a market that is not stable/rising is not supported, and MR stays off for the same reason.
+- Momentum sweep (cap >= 2B, >= +3%, RVOL >= 0.8 for record): TTWO +7.1% (RVOL 1.35, passes the volume number for the first time), TJX +10.1% (RVOL 0.99), TGT +5.9% (0.99), BLSH +6.9% (0.91).
+  - TTWO gate-check: Gate 1 relative strength: peer proxy RBLX +5.3% (46.34 vs 44.00), XLC +0.2%, SPY -0.52%: TTWO leads RBLX by only 1.8 pts (< 2 pts) = FAIL (EA not found on the broker data; no other games peer was checked). Gate 2 catalyst: WebSearch (standard, "Take-Two Interactive stock jumps GTA VI") found NO article dated today: only older items and generic mentions that GTA VI launches November 19 (i.e. tomorrow), cited by TIKR/other sites with unknown dates. Today's +7% cause is unverifiable = FAIL. Gate 3: the open spiked to 221.00 then dropped to 210.50; later lows rise 212.86 (15:15 bar) -> 214.18 -> 215.87 -> 216.67 -> 217.09, but the 15:05 bar printed 214.00 as a lower low vs the prior 215.20/216.00, and the pullback high 220.45 has not broken (price 218.17), so there is no confirmed break. Also a binary launch event tomorrow adds gap risk (no overnight hold anyway). FAIL on Gates 1, 2, 3.
+  - TJX/TGT: unchanged (0.99 RVOL, literal fail; TJX cause unsourced). No change from 10:33.
+- MR sweep (cap >= 5B, <= -5%, RSI14 < 35): 10 rows: SCCO -7.2% (RSI 30.6), FCX -7.8% (31.0), HBM -9.3% (34.2), BVN -7.4% (27.2), AG -7.6% (32.1), PAAS -6.7% (32.7), SSL -6.4% (31.4), SQM -6.0% (32.0), BHP -5.0% (33.5), ASTS -5.3% (31.6). The metals group is still sliding (AG -6.9% -> -7.6%, PAAS -5.9% -> -6.7%), so no base. Gate 1 FAIL for the group (no dated sourced cause), plus the regime gate. ASTS: space/satellite, company-specific/unsourced = FAIL.
+- Decision: no trade. No gate relaxed. Tier A closes 11:30; Tier B starts then.
