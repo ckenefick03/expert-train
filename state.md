@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-18 10:03 ET",
+ "as_of": "2026-11-18 10:15 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Flat, no orders. First live sweeps 10:03: no gate-passing candidate; regime Falling->Stabilizing (1 higher 5-min low). Equity 398.97 (breaker 394.19).",
+ "status_note": "Flat, no orders. 10:15 hourly run: no gate-passing candidate; metals selloff unsourced. Equity 398.97 (breaker 394.19).",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-18",
@@ -4529,6 +4529,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-18 10:03 ET",
    "equity": 398.97
+  },
+  {
+   "t": "2026-11-18 10:15 ET",
+   "equity": 398.97
   }
  ],
  "positions": [],
@@ -4751,7 +4755,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "FALLING -> STABILIZING (unconfirmed): SPY 732.55 (+0.02%) after lows 728.74/728.58 (09:45-09:55 bars), then a higher low 730.52 (09:55 bar); only 1 higher low so far, MR stays off until ~3. QQQ 659.97 (+0.46%), SMH 462.12 (+0.44%), IWM 270.63 (+0.59%), IGV 96.50 (+0.8%), GLD 344.74 (-2.2%), NVDA 154.67 (-0.5%).",
+  "read": "STABILIZING (marginal): SPY 732.21 (-0.03%), 5-min lows 728.58 -> 730.52 -> 732.25 -> 731.30 (no new low since 09:50 ET, but the last low dipped vs the prior). QQQ 659.93 (+0.45%), SMH 461.46 (+0.30%), IWM 270.81 (+0.65%), IGV 96.79 (+1.1%), GLD 344.32 (-2.3%). MR allowed in principle; momentum not before 10:30.",
   "chips": [
    "SPY -1.1%",
    "SMH -3.5%",
@@ -13819,3 +13823,12 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - MR sweep (cap >= 5B, <= -5%, RSI14 < 35): 9 rows, all one theme: metals/materials. SCCO -6.7% (RSI 30.6), FCX -6.7% (31.0), BVN -5.9% (27.2), HBM -9.2% (34.2), PAAS -5.2% (32.7), AG -5.2% (32.1), SQM -5.6% (32.0), SSL -5.6% (31.4), DINO -5.0% (34.1). Sector proxy GLD -2.2% (meets the sector-ETF <= -2% part for the precious-metal names). Gate 1 FAIL for every row: no dated, sourced external cause (the 09:17 WebSearch returned only 2025/Feb-2026 items, and I did not repeat a search because regime is not Stabilizing and no gate set is close to passing). Gate 4 is also doubtful: miners were already falling over multiple days (11/17 list included NEM/WPM/AEM down 3-4%). Regime gate (MR off while SPY just made new lows) alone blocks entry.
 - Decision: no trade. The one-trade minimum is not yet in play (Tier C runs to 15:30); no gate relaxed.
 - Open follow-ups for the next cycles: BILL/RYTM/TEAM/NOW skipped 11/17 (no prices pulled this cycle).
+
+### Cycle 1147 - 2026-11-18 10:15 ET (hourly, WebSearch run)
+- Reconcile: account 771144490 flat, no open orders, cash/equity $398.97 (breaker level $394.19, cushion $4.78). No stops to check. 0 trades today.
+- Tape: SPY 732.21 (-0.03%), QQQ 659.93 (+0.45%), SMH 461.46 (+0.30%), IWM 270.81 (+0.65%), IGV 96.79 (+1.1%), NVDA 154.67 (-0.5%), GLD 344.32 (-2.3%). SPY 5-min (UTC, ET=UTC-5): 14:55 L 730.52, 15:00 L 732.245, 15:05 L 731.30. No new low since 14:50 (728.58). Regime: Stabilizing, marginal (the last low dipped vs the prior). Breadth is broadening (IWM/IGV green) vs the semis-led open.
+- News (WebSearch standard, "copper gold prices fall stocks November 18 2026"): nothing dated 2026-11-18. Results are older (2024/2025 episodes, one Sept-2026 item). Not usable; the metals selloff has NO sourced same-day cause.
+- Momentum sweep (cap >= 2B, >= +3%, RVOL >= 0.8 for record): TTWO +5.4% (RVOL 1.10 < 1.3, no sourced catalyst), SLS +4.9% (RVOL 1.02, biotech), SMMT +4.2% (RVOL 0.83). All FAIL Gate 1 (RVOL < 1.3) and Gate 2 (no cited catalyst this cycle). Before 10:30 anyway. No candidate.
+- MR sweep (cap >= 5B, <= -5%, RSI14 < 35): 10 rows, the same metals/materials theme: SCCO -7.4% (RSI 30.6), FCX -7.5% (31.0), HBM -8.4% (34.2), BVN -6.5% (27.2), SQM -6.3% (32.0), PAAS -5.6% (32.7), AG -5.6% (32.1), SSL -5.6% (31.4), DINO -5.4% (34.1), BHP -5.2% (33.5). Gate 1 FAIL for every row: sector-wide (GLD -2.3%), but no dated, sourced external cause (two searches this morning found nothing from today). Prices are also still sliding (SCCO -6.7% -> -7.4%, FCX -6.7% -> -7.5% since 10:03), so there is no sign of a dislocation base yet (Gate 4 untested, would not count as a multi-week trend only if verified). No entry.
+- Follow-ups on 11/17 skips (price now vs 11/17 skip-time price): BILL 65.39 (skip-time 64.53; 11/17 close 64.88; flat), RYTM 117.28 (skip-time 116.67; flat), TEAM 137.05 (skip-time 140.41; -2.4% lower, MR skip avoided a loss so far), NOW 91.71 (skip-time 92.67; -1.0% lower, same). ACM 80.83 (11/17 exit 82.005; exit avoided further loss: -1.4% since). TTWO sourced nothing.
+- Decision: no trade. No gate relaxed; the one-trade minimum is not in play before Tier C.
