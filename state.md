@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-18 09:54 ET",
+ "as_of": "2026-11-18 10:03 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Flat, no orders. 09:54 ET: entries open at 10:00. Regime FALLING into 09:50 (SPY making lower 5-min lows), bounce since. Equity 398.97 (breaker 394.19).",
+ "status_note": "Flat, no orders. First live sweeps 10:03: no gate-passing candidate; regime Falling->Stabilizing (1 higher 5-min low). Equity 398.97 (breaker 394.19).",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-18",
@@ -4525,6 +4525,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-18 09:54 ET",
    "equity": 398.97
+  },
+  {
+   "t": "2026-11-18 10:03 ET",
+   "equity": 398.97
   }
  ],
  "positions": [],
@@ -4747,7 +4751,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "FALLING-then-bounce: SPY 5-min lows 732.85 > 731.28 > 730.24 > 728.74 (09:30-09:50 bars) = new session lows each bar; now 731.63 (-0.11%), QQQ 657.79 (+0.13%), SMH 458.85 (-0.27%), IWM 270.03 (+0.36%), NVDA 154.84 (-0.4%), GLD 345.16 (-2.1%). MR off until 3 higher lows form.",
+  "read": "FALLING -> STABILIZING (unconfirmed): SPY 732.55 (+0.02%) after lows 728.74/728.58 (09:45-09:55 bars), then a higher low 730.52 (09:55 bar); only 1 higher low so far, MR stays off until ~3. QQQ 659.97 (+0.46%), SMH 462.12 (+0.44%), IWM 270.63 (+0.59%), IGV 96.50 (+0.8%), GLD 344.74 (-2.2%), NVDA 154.67 (-0.5%).",
   "chips": [
    "SPY -1.1%",
    "SMH -3.5%",
@@ -13807,3 +13811,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Tape: SPY 731.63 (-0.11%), QQQ 657.79 (+0.13%), SMH 458.85 (-0.27%), IWM 270.03 (+0.36%), NVDA 154.84 (-0.4%), GLD 345.16 (-2.1%). SPY 5-min bars (UTC, ET = UTC-5): 14:30 L 732.85, 14:35 L 731.28, 14:40 L 730.24, 14:45 L 728.74 (close 729.74): new session lows on every bar through 09:50 ET, then a bounce to 731.63 by 09:53. §4.1 reads this as Falling (MR off) until about 3 consecutive higher lows with no new low appear. Rotation: IWM and QQQ green, semis red.
 - Scans: not run (still before 10:00 ET). Deliberate skip, disclosed. The 10:02 cycle (15:02Z) runs the first full sweeps and sets the label.
 - Decision: no trade.
+
+### Cycle 1146 - 2026-11-18 10:03 ET (first live sweeps)
+- Reconcile: account 771144490 flat, no open orders, cash/equity $398.97 (breaker level $394.19, cushion $4.78). No stops to check. Daily P&L $0, 0 trades so far.
+- Tape: SPY 732.55 (+0.02%), QQQ 659.97 (+0.46%), SMH 462.12 (+0.44%), IWM 270.63 (+0.59%), IGV 96.50 (+0.79%), NVDA 154.67 (-0.5%), GLD 344.74 (-2.2%). SPY 5-min (UTC, ET=UTC-5): 14:45 L 728.74, 14:50 L 728.58 (new low), 14:55 L 730.52 / C 733.65 = first higher low. Regime: Falling -> Stabilizing, not confirmed (1 higher low; need ~3 with no new low). MR off for now; momentum not before 10:30.
+- Momentum sweep (cap >= 2B, >= +3%, RVOL >= 0.8 for record): 2 rows. TTWO +7.3% (RVOL 0.94 < 1.3, no sourced catalyst this cycle) FAIL Gates 1 and 2; SLS +3.2% (biotech, RVOL 0.81 < 1.3) FAIL. The NVDA-gap complex (CRDO/NBIS/CRWV/COHR/LITE) no longer shows >= +3%: the gap faded, so no momentum candidate. Timing also bars entry before 10:30.
+- MR sweep (cap >= 5B, <= -5%, RSI14 < 35): 9 rows, all one theme: metals/materials. SCCO -6.7% (RSI 30.6), FCX -6.7% (31.0), BVN -5.9% (27.2), HBM -9.2% (34.2), PAAS -5.2% (32.7), AG -5.2% (32.1), SQM -5.6% (32.0), SSL -5.6% (31.4), DINO -5.0% (34.1). Sector proxy GLD -2.2% (meets the sector-ETF <= -2% part for the precious-metal names). Gate 1 FAIL for every row: no dated, sourced external cause (the 09:17 WebSearch returned only 2025/Feb-2026 items, and I did not repeat a search because regime is not Stabilizing and no gate set is close to passing). Gate 4 is also doubtful: miners were already falling over multiple days (11/17 list included NEM/WPM/AEM down 3-4%). Regime gate (MR off while SPY just made new lows) alone blocks entry.
+- Decision: no trade. The one-trade minimum is not yet in play (Tier C runs to 15:30); no gate relaxed.
+- Open follow-ups for the next cycles: BILL/RYTM/TEAM/NOW skipped 11/17 (no prices pulled this cycle).
