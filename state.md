@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-17 15:48 ET",
+ "as_of": "2026-11-18 08:30 ET (pre-open)",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,12 +41,12 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Close recap: FLAT overnight, no positions, no open orders. Day -0.22 (1 trade, ACM, organic). Equity 398.97 (breaker 394.19). NVDA reports after the close.",
+ "status_note": "Pre-open brief 11/18: flat, no orders. Futures-proxy tape firm (NVDA beat, SMH +1.9% pre-mkt). Equity 398.97 (breaker 394.19). No entries before 10:00 ET.",
  "peak_equity": 437.99,
  "day": {
-  "date": "2026-11-17",
-  "start_equity": 399.19,
-  "trades": 1,
+  "date": "2026-11-18",
+  "start_equity": 398.97,
+  "trades": 0,
   "forced": 0
  },
  "equity_history": [
@@ -4493,6 +4493,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-17 15:48 ET",
    "equity": 398.97
+  },
+  {
+   "t": "2026-11-18 08:30 ET",
+   "equity": 398.97
   }
  ],
  "positions": [],
@@ -4715,7 +4719,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "WEAK / BASING at the close: SPY 730.39 (-1.30%), QQQ -1.18%, SMH -1.45%, IWM -1.40%. Entries closed.",
+  "read": "PRE-OPEN: SPY +0.22%, QQQ +0.67%, SMH +1.93%, IWM -0.39%, IGV +0.5% (pre-market). Semis/AI-led bounce after NVDA beat; breadth narrow. Regime unconfirmed until the open; MR/momentum set by 5-min tape after 10:00 ET.",
   "chips": [
    "SPY -1.1%",
    "SMH -3.5%",
@@ -13720,3 +13724,14 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Day recap (2026-11-17): start equity $399.19, end $398.97, P&L -$0.22. 1 trade: ACM momentum, bought 13:14 ET @ 82.18, sold 14:54 ET @ 82.005 on a documented 5-min structure invalidation, -0.22R, tag organic (not forced). Minimum of 1 trade met without relaxing any gate.
 - Skips: mean-reversion never had a dated, sourced external cause all day (including the TEAM/NOW software selloff at 15:23); BILL/RYTM were unsourced vertical spikes; VIK/KLAR were EPS misses; AS had no base. Follow-ups: ACM now 81.45, so the 14:54 exit avoided about -$0.7 vs holding. BILL, skipped as unsourced, ran roughly +3.8% after 13:00, so it is a data point for the strict-sourcing review.
 - Process disclosures: the ACM entry rested on a one-bar completed-close trigger (the weakest part of the trade). WebSearch returned only wrong-year coverage in the hourly runs, so it was never used as a same-day source. Scans were deliberately skipped at 15:32/15:42 (past the entry cutoff). Missed cycles: none known. Breaker cushion is thin ($4.78 above $394.19), still unanswered by the user whether to cut the $105 size.
+
+### Pre-open brief - 2026-11-18 08:30 ET (read-only, no orders)
+- Reconcile: account 771144490 flat, no open orders, no held names (no stop checks). Cash/equity $398.97; peak $437.99; breaker level $394.19 (cushion $4.78). Overnight status confirmed flat.
+- Tape (pre-market last vs 11/17 close): SPY 734.03 (+0.22%), QQQ 661.32 (+0.67%), SMH 469.00 (+1.93%), IWM 268.01 (-0.39%), IGV ~96.2 (+0.5%), NVDA 159.84 (+2.8%), MSTR 96.36 (-0.15%). Semis/AI lead; small caps lag.
+- News (sources found this cycle): the Robinhood earnings tool shows NVDA reported FQ3 on 2026-11-17 after the close, verified: EPS $2.68 vs $2.47 estimate (a beat). That is the only same-cycle sourced item. WebSearch (standard) for pre-market futures/NVDA returned only 2025/Aug-2026 coverage, so it is NOT a valid same-day source. No macro or political item is verified this cycle. Anything not tied to a source is FAIL for gating.
+- Earnings today (get_earnings_calendar, verified): AM reports already out: TGT, TJX, LOW, GLBE, BRBR, ZIM, BLSH, TCEHY, PONY. After the close: PANW, KLIC, WWD, CPA, SBLK and others. Tomorrow: WMT, ROST, INTU, BABA, PDD, WSM, GAP, KEYS and others. Names reporting within 2 trading days fail unless the report is the thesis.
+- Scans (pre-market, >= +3% with cap >= $2B: 39 rows; <= -3% with cap >= $5B: 39 rows; RVOL not usable pre-market):
+  - Momentum watch (semis/AI complex led by the NVDA beat; need >= 2 pts above SMH +1.9% and SPY, not fading, RVOL >= 1.3, held higher low after 10:30): CRDO +4.1% (AI optical/connectivity, thin 2.2 pt edge), NBIS +4.1%, CRWV +3.5% (neoclouds), COHR +3.7% / LITE +3.5% (optical), CORZ +4.9% / WULF +4.9% (AI-hosting miners; weakly sourced). Retail-earnings catalyst names with the report as the thesis: TJX +5.3% (reported this AM, EPS 1.34 vs 1.34 est = in line, so the gap is not an earnings beat: verify the cause), TGT (EPS 2.65 vs 2.05 est). ROST +3.4% reports tomorrow = earnings-window FAIL. TTWO +5.5%: no source found = FAIL until sourced.
+  - Mean-reversion watch (needs a dated, sourced sector/macro cause, RSI(14,d)<35, neutral fundamentals, 2R anchor, not a multi-week downtrend): gold/silver miners and royalty names broadly -3 to -5% (NEM -3.4%, WPM -4.1%, AEM -3.4%, AU -4.3%, FCX -3.7%, SCCO -3.4%): a sector-wide move, so it can satisfy Gate 1 only if a dated cause (metals/dollar/rates) is sourced after the open; none found now. Single-name: LOW -4.8% (reported this AM, EPS beat 3.10 vs 2.86: price down on a beat is company-specific = FAIL), HEI -6.7%, GLBE -12.5% (earnings, company-specific = FAIL), MET -4.2%, PRMB -6.0%: company-specific or unsourced. TEAM/NOW: not in the pre-market list, so the software bounce is already partial.
+- Regime read: bounce day set-up, momentum-leaning if SPY/QQQ hold above the pre-market levels after 10:00; if the open fades below Monday's 727.86 low zone, regime goes Falling and MR stays off. Final label is decided on the 5-min tape at 10:00 ET, not now.
+- Reminders for today: no entries before 10:00 ET (momentum earliest 10:30); $105 size, max 5, daily loss limit $60, breaker cushion $4.78; minimum 1 trade/day without loosening any gate; flat before the close unless a hold decision is logged. Open user questions still unanswered: one-bar vs confirmed-hold entry, marginal RVOL/spread treatment, whether to cut size near the breaker.
