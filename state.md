@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-18 08:53 ET",
+ "as_of": "2026-11-18 09:03 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Flat, no orders. Pre-10:00 ET: no entries allowed. Pre-market tape firm. Equity 398.97 (breaker 394.19).",
+ "status_note": "Flat, no orders. Pre-10:00 ET: no entries allowed. Pre-market tape firm but easing slightly. Equity 398.97 (breaker 394.19).",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-18",
@@ -4505,6 +4505,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-18 08:53 ET",
    "equity": 398.97
+  },
+  {
+   "t": "2026-11-18 09:03 ET",
+   "equity": 398.97
   }
  ],
  "positions": [],
@@ -4727,7 +4731,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "PRE-OPEN: SPY 735.12 (+0.37%), QQQ 662.26 (+0.81%), SMH 470.67 (+2.30%), IWM 268.59 (-0.17%), NVDA 160.18 (+3.0%). Steady vs 08:43; regime decided on the 5-min tape after 10:00 ET.",
+  "read": "PRE-OPEN: SPY 734.79 (+0.32%), QQQ 661.77 (+0.73%), SMH 469.83 (+2.12%), IWM 268.44 (-0.23%), NVDA 159.89 (+2.9%). Slight fade from 08:53; regime decided on the 5-min tape after 10:00 ET.",
   "chips": [
    "SPY -1.1%",
    "SMH -3.5%",
@@ -13754,4 +13758,10 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Reconcile: account 771144490 flat, no open orders, cash/equity $398.97 (breaker level $394.19, cushion $4.78). No stops to check.
 - Tape (pre-market vs 11/17 close): SPY 735.12 (+0.37%), QQQ 662.26 (+0.81%), SMH 470.67 (+2.30%), IWM 268.59 (-0.17%), NVDA 160.18 (+3.0%). Unchanged vs 08:43; semis-led.
 - Scans: not run (no entries before 10:00 ET; pre-market RVOL blind). Deliberate skip, disclosed. Watch lists from the 08:30 brief stand. The first live scans run in the 10:02 cycle.
+- Decision: no trade.
+
+### Cycle 1141 - 2026-11-18 09:03 ET (pre-10:00, no entries possible)
+- Reconcile: account 771144490 flat, no open orders, cash/equity $398.97 (breaker level $394.19, cushion $4.78). No stops to check.
+- Tape (pre-market vs 11/17 close): SPY 734.79 (+0.32%), QQQ 661.77 (+0.73%), SMH 469.83 (+2.12%), IWM 268.44 (-0.23%), NVDA 159.89 (+2.9%). A small fade vs 08:53 (SPY 735.12, SMH 470.67).
+- Scans: not run (no entries before 10:00 ET; pre-market RVOL blind). Deliberate skip, disclosed. The first live scans run in the 10:02 ET cycle (14:02Z? no: 15:02Z).
 - Decision: no trade.
