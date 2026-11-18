@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-18 12:15 ET",
+ "as_of": "2026-11-18 12:24 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "OPEN: TJX momentum long 0.73018 sh @143.80 (12:14 ET), stop 142.70 (manual), target 146.00, EOD horizon; 30-min hold lock to 12:44 ET. Equity ~398.97 (breaker 394.19, cushion ~4.78; max risk at stop ~$0.80).",
+ "status_note": "OPEN: TJX 0.73018 sh @143.80, last 143.96 (+$0.12), stop 142.70, target 146.00, hold lock to 12:44 ET. TGT trigger not confirmed on a completed bar. Equity 399.09 (breaker 394.19, cushion 4.90).",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-18",
@@ -4581,6 +4581,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-18 12:15 ET",
    "equity": 398.97
+  },
+  {
+   "t": "2026-11-18 12:24 ET",
+   "equity": 399.09
   }
  ],
  "positions": [
@@ -4589,7 +4593,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
    "strategy": "momentum",
    "qty": 0.73018,
    "entry": 143.8,
-   "price": 143.8,
+   "price": 143.96,
    "stop": 142.7,
    "target": 146.0,
    "opened": "2026-11-18 12:14 ET",
@@ -4815,7 +4819,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "STABILIZING (marginal): SPY 729.95 (-0.34%), 5-min lows 727.16 -> 729.14 -> 729.78 (two higher lows, no new low since 11:20 ET). XRT 90.60 (+2.6%) leads on off-price retail strength (TJX +10.7%, BURL +6.7%, ROST +3.8%); GLD -2.7%, XLE -2.9%, USO -3.3%. Momentum selectively on; MR still off.",
+  "read": "STABILIZING: SPY 731.70 (-0.10%), 5-min lows 727.16 -> 729.14 -> 729.78 -> 729.28 -> 729.61 (no new low since 11:20 ET). QQQ 659.28 (+0.35%), SMH 458.75 (-0.29%), IWM 271.65 (+0.97%), XRT 91.02 (+3.1%). Broadening. MR still off (no sourced cause); momentum selective.",
   "chips": [
    "SPY -1.1%",
    "SMH -3.5%",
@@ -13999,3 +14003,12 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Other candidates skipped: TGT (EPS 2.65 vs 2.05 beat is the cleaner catalyst; +5.9% vs XRT +2.6%, RVOL 1.37; it is consolidating 168-169.8 for two hours but has NOT broken the pullback high 169.84, so no trigger yet): on watch for the next cycles. TTWO: fails Gate 1 (see above). BIPC/SLS/BLSH/OMF: no cited catalyst; PLBL RVOL 0.83.
 - MR sweep (cap >= 5B, <= -5%, RSI14 < 35): 13 rows (SCCO -6.3%, DINO -6.1%, MSTR -5.1%, FCX -7.1%, SQM -6.0%, PAAS -6.4%, ASTS -6.4%, IONQ -5.5%, BVN -6.1%, HBM -8.6%, PSLV -5.2%, SSL -6.9%, AG -7.6%). Gate 1 FAIL for all (no sourced same-day cause; the oil and metals searches found nothing dated today) and metals Gate 4 FAIL (sourced multi-week downtrend); regime not confirmed. No MR entry.
 - Disclosed judgment calls: (a) I treated the 8-K plus the earnings event as a sufficient cited catalyst even though the substance is unverified; the 11/17 rule I applied to TTWO and others was stricter on same-day sourcing, and that is a rule-consistency question the user should look at; (b) RVOL passed at 1.34 only after 63 minutes earlier readings of ~1.0-1.2 failed; (c) one-bar trigger; (d) a 1R of only $0.80 means a small win/loss either way (2R target $1.61).
+
+### Cycle 1160 - 2026-11-18 12:24 ET
+- STOP CHECK / reconcile: account 771144490, position TJX 0.730180 sh, avg cost $143.80, no open orders, cash $293.97, equity $399.09 (portfolio total 399.0867; +$0.12 unrealized on TJX). TJX 143.96 vs stop 142.70 (-0.9% away), target 146.00. 5-min bars: 17:10 L 143.76 (high 144.29, a new day high), 17:15 L 143.65: higher lows, price above the 142.74 base low. The position is 10 minutes old, inside the 30-minute hold lock (to 12:44 ET). No invalidation. HOLD. Breaker cushion $4.90.
+- Tape: SPY 731.70 (-0.10%), QQQ 659.28 (+0.35%), SMH 458.75 (-0.29%), IWM 271.65 (+0.97%), XRT 91.02 (+3.1%), ROST 229.31 (+4.0%), BURL 251.67 (+7.0%). SPY 5-min lows: 727.16, 729.14, 729.78, 729.28, 729.61: no new session low since 11:20 ET; the tape is stabilizing and broadening. Peer strength supports the TJX thesis (XRT up 0.5 pt since entry).
+- Momentum sweep (cap >= 2B, >= +3%, RVOL >= 0.8 for record): TTWO +6.8% (RVOL 1.97), TGT +6.6% (1.46), TJX +10.9% (1.37), VIK +7.1% (1.21), OMF +3.4% (1.28), BIPC +4.2% (1.96), MDLN +3.4% (2.78), CNX +4.0% (0.81), BLSH +11.9% (1.47), SLS +3.7% (2.05), KLAR +4.0% (0.95), PLBL +14.2% (0.88).
+  - TGT (second retail candidate): +6.6% vs XRT +3.1% (lead 3.5 pts), vs SPY -0.10%; RVOL 1.46; catalyst EPS 2.65 vs 2.05 est (earnings tool, this cycle, verified) = PASS on Gates 1-2. Gate 3: base 167.26-169.84 for two hours; the live tick reached 170.13 (above the 169.84 pullback high) but the last completed 5-min bar (17:15) closed 169.395, high 169.48, i.e. NO completed bar has closed above 169.84. I applied a completed-close trigger to TJX, so for consistency TGT waits for a completed 5-min close above 169.84 (also a second correlated retail position would stack on the same earnings-read-through theme). NOT YET. Check next cycle: a bar close > 169.84 with the stop below 167.26 (about 1.7%, $1.8 risk).
+  - TTWO: Gate 1 still fails (peer lead < 2 pts; TTWO +6.8% vs RBLX about +7%). Others: no cited catalyst or peer separation. No new entry.
+- MR sweep (cap >= 5B, <= -5%, RSI14 < 35): 10 rows: SCCO -5.9%, DINO -6.1%, FCX -6.5%, SQM -5.8%, PAAS -6.0%, ASTS -5.1%, BVN -5.9%, HBM -7.7%, SSL -6.9%, AG -6.5%. The metals are bouncing (SCCO -7.3% at 11:53 to -5.9%), but Gate 1 FAIL (no sourced same-day cause; searches at 12:15 found none) and metals Gate 4 FAIL (sourced multi-week downtrend). No entry. MSTR, IONQ, PSLV dropped out of the list.
+- Decision: no new trade. Hold TJX. Next cycle (12:32) is the first after the lock ends at 12:44? No: the lock ends 12:44, so the 12:32 cycle is still inside it, and the 12:42 cycle is the first where an invalidation exit can act.
