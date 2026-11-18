@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-18 10:23 ET",
+ "as_of": "2026-11-18 10:33 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Flat, no orders. 10:23: no gate-passing candidate; TJX/TGT post-earnings gaps on watch for the 10:32 cycle. Equity 398.97 (breaker 394.19).",
+ "status_note": "Flat, no orders. 10:33: TJX/TGT momentum setups look clean but fail the literal RVOL >= 1.3 gate; no trade. Equity 398.97 (breaker 394.19).",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-18",
@@ -4537,6 +4537,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-18 10:23 ET",
    "equity": 398.97
+  },
+  {
+   "t": "2026-11-18 10:33 ET",
+   "equity": 398.97
   }
  ],
  "positions": [],
@@ -4759,7 +4763,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "STABILIZING: SPY 732.25 (-0.03%), 5-min lows 730.52 -> 732.25 -> 731.30 -> 730.94 -> 731.34, no new low since 09:50 ET (range 730.9-735.0). QQQ 660.67 (+0.57%), SMH 463.47 (+0.73%), IWM 271.08 (+0.75%), IGV 96.71 (+1.0%), GLD 344.05 (-2.4%). Retail earnings gaps (TJX +10%, TGT +5.8%) are the day's idiosyncratic movers.",
+  "read": "CHOPPY / SLIGHTLY WEAK: SPY 730.49 (-0.27%), range 728.6-735.1 since the open, 5-min lows 730.94/731.34/730.96/730.66 (flat). QQQ 657.84 (+0.14%), SMH 459.02 (-0.23%), IWM 270.39 (+0.50%), XRT 89.97 (+1.9%), GLD 344.49 (-2.3%). Momentum allowed (not Falling) but only idiosyncratic names (retail earnings gaps) are separating.",
   "chips": [
    "SPY -1.1%",
    "SMH -3.5%",
@@ -13843,3 +13847,14 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum sweep (cap >= 2B, >= +3%, RVOL >= 0.8 for record): TJX +10.3% (RVOL 0.87), TGT +5.8% (RVOL 0.90), TTWO +6.3% (RVOL 1.16), BLSH +6.4% (RVOL 0.81). All RVOL < 1.3 = Gate 1 FAIL as a hard criterion (marginal passes treated as fails). Gate 2 for TJX/TGT: the earnings report this morning is the catalyst and counts as thesis (TGT EPS 2.65 vs 2.05 est from the earnings calendar; TJX EPS 1.34 vs 1.34 in line, so TJX's +10% reflects something beyond the EPS print, unsourced this cycle = needs a source). TTWO: no sourced catalyst. BLSH: crypto-adjacent, unsourced. Entry is also barred before 10:30 ET. No candidate. Watch for the 10:32 cycle: TJX and TGT (peer complex: retailers; need relative strength vs XRT and SPY, RVOL >= 1.3, a held higher low). Both are already up > 5% from the close, so a pullback-base entry with a stop below the base low must still deliver 2R: probably hard.
 - MR sweep (cap >= 5B, <= -5%, RSI14 < 35): 8 rows, the metals/materials group again: SCCO -7.0% (RSI 30.6), FCX -7.1% (31.0), BVN -7.0% (27.2), HBM -8.4% (34.2), AG -6.2% (32.1), SSL -5.9% (31.4), PAAS -5.8% (32.7), SQM -5.9% (32.0). Gate 1 FAIL for all: no dated, sourced cause (searches at 09:17 and 10:15 found only older items; no new search this cycle, the hourly run is at :12). They stopped sliding vs 10:15 (SCCO -7.4% -> -7.0%), so a base is forming, but without a sourced cause the setup stays FAIL. DINO and BHP dropped out of the list (> -5%).
 - Decision: no trade.
+
+### Cycle 1149 - 2026-11-18 10:33 ET
+- Reconcile: account 771144490 flat, no open orders, cash/equity $398.97 (breaker level $394.19, cushion $4.78). No stops to check. 0 trades today.
+- Tape: SPY 730.49 (-0.27%), QQQ 657.84 (+0.14%), SMH 459.02 (-0.23%), IWM 270.39 (+0.50%), XRT 89.97 (+1.9%), GLD 344.49 (-2.3%). SPY 5-min lows (UTC bars 15:05-15:25): 731.30, 730.94, 731.34, 730.96, 730.66: flat, no new low below 728.58, no rising sequence either. Regime: choppy/stabilized; not Falling, so momentum is allowed (>= 10:30 ET). Momentum market is not rising: only idiosyncratic names separate.
+- Momentum sweep (cap >= 2B, >= +3%, RVOL >= 0.8 for record): TJX +10.2% (RVOL 0.94), TGT +6.0% (RVOL 0.95), TTWO +6.3% (RVOL 1.23), BLSH +4.2% (RVOL 0.85).
+  - TJX (peer complex: retailers, XRT +1.9%, SPY -0.27%): +8.3 pts over XRT, +10.5 over SPY (passes the 2-pt separation). Not fading: 143.03 vs day high 143.54, above prior close 129.85, a continuous series of higher 5-min lows from 138.52 to 143.14; the small base at 142.00-142.15 (15:05-15:15 bars) is the higher low, breakout level 143.125-143.54. Spread tight, cap $143B, foreign no. Gate 1 volume: 6.34M shares = 0.94x the 30-day average daily volume after 63 minutes (not >= 1.3 in the literal reading) = FAIL. Gate 2: earnings this morning (EPS 1.34 vs 1.34 est, in line per the earnings calendar); the EPS print alone does not explain +10%, and I have NOT sourced the cause (guidance/comps) this cycle = cannot cite, FAIL as written. Gate 3: only a shallow 3-bar base, not a true pullback to a rising 9/20 EMA (computed informally: price is well above any short EMA); acceptable only if I treat the 142.00 low as the base. Stop below 142.00 would be about 0.7% (risk ~$0.74 on $105), 2R target ~ +1.4% = 145.0, plausible but chasing a +10% day.
+  - TGT (retailers): +6.0%, +4.1 pts over XRT, +6.3 over SPY. EPS 2.65 vs 2.05 est (beat) is the cited catalyst (earnings calendar). Not fading (169.11 vs high 169.84, above prior close 159.53). Held pullback: dip to 167.03 (15:10 bar), higher than the earlier 164.55 low; re-test of the pullback high 169.84 not yet made. Gate 1 volume: 3.75M = 0.95x the 30-day average = FAIL under the literal 1.3 reading. Stop below 167.03 ~1.1%, 2R target ~172.8.
+  - TTWO +6.3%: RVOL 1.23 (<1.3 marginal, treated as fail), no catalyst sourced. BLSH: crypto-adjacent, RVOL 0.85, unsourced. FAIL.
+  - Result: no momentum entry. FLAG FOR REVIEW (not a loosening): RVOL here is cumulative day volume over the 30-day average daily volume. After 63 minutes, a reading of ~0.94 means roughly a full average day's volume has already traded, which is a high pace and probably what the rule intends to capture. The gate text says to use raw volume vs the 30-day average before ~11:00 and say so; the literal threshold (1.3) was kept, so TJX and TGT FAIL. If the user wants the threshold interpreted as time-of-day-adjusted pace, that is a rule change to be decided by the user, not by me.
+- MR sweep (cap >= 5B, <= -5%, RSI14 < 35): 8 rows, still metals/materials: SCCO -7.1% (RSI 30.6), FCX -7.4% (31.0), BVN -7.0% (27.2), HBM -8.3% (34.2), AG -6.9% (32.1), SSL -6.1% (31.4), SQM -6.1% (32.0), PAAS -5.9% (32.7). Gate 1 FAIL (no dated, sourced cause; hourly search is at :12). Prices flat since 10:23 (SCCO -7.0% -> -7.1%), no bounce yet.
+- Decision: no trade. No gate relaxed. Next hourly run (:12, 11:12 ET) will search the TJX move and the metals cause so they can be gated properly if still relevant.
