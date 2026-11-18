@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-18 11:03 ET",
+ "as_of": "2026-11-18 11:15 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Flat, no orders. 11:03: SPY bouncing off 728.34 (2 higher 5-min lows), regime Falling->Stabilizing, not confirmed. No gate-passing candidate. Equity 398.97 (breaker 394.19).",
+ "status_note": "Flat, no orders. 11:15 hourly run: regime STABILIZING (5 higher 5-min lows); no candidate passes: metals fail Gate 1+4, TTWO fails peer/catalyst. Equity 398.97 (breaker 394.19).",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-18",
@@ -4553,6 +4553,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-18 11:03 ET",
    "equity": 398.97
+  },
+  {
+   "t": "2026-11-18 11:15 ET",
+   "equity": 398.97
   }
  ],
  "positions": [],
@@ -4775,7 +4779,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "FALLING -> STABILIZING (unconfirmed): SPY 729.59 (-0.39%), 5-min lows 728.34 (10:45) -> 728.39 (10:50) -> 729.29 (10:55): two higher lows, no new low since 10:45. QQQ 657.16 (+0.03%), SMH 459.04 (-0.23%), IWM 270.07 (+0.38%), XRT 89.80 (+1.7%), GLD 343.63 (-2.5%). MR needs ~3 higher lows; momentum needs a stable/rising tape.",
+  "read": "STABILIZING (confirmed): SPY 729.38 (-0.42%), 5-min lows 728.34 (10:45) -> 728.39 -> 729.29 -> 729.46 -> 729.70 (11:05 bar): five higher lows, no new low since 10:45. QQQ 656.82 (-0.02%), SMH 457.92 (-0.47%), IWM 269.78 (+0.27%), XRT 89.86 (+1.8%), GLD 343.26 (-2.6%). MR on in principle, momentum tape flat; breadth narrow.",
   "chips": [
    "SPY -1.1%",
    "SMH -3.5%",
@@ -13893,3 +13897,16 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum sweep (cap >= 2B, >= +3%, RVOL >= 0.8 for record): TTWO +8.0% (RVOL 1.51), TJX +10.2% (1.07), TGT +5.6% (1.07), VIK +5.0% (0.81), BIPC +4.0% (0.96), BLSH +9.0% (1.05). TTWO: volume passes now (1.51) and it sits at 220.34 vs the 220.45 pullback high, but the earlier fails stand: no same-day sourced catalyst (10:43 search found nothing dated today; a fresh search is due at the 11:12 hourly run) and peer separation vs RBLX unverified this cycle. TJX/TGT: RVOL ~1.07 < 1.3, TJX cause unsourced. VIK: 11/17 EPS-miss name and RVOL 0.81. BIPC: utilities/infrastructure, RVOL 0.96, no catalyst. BLSH: unsourced. No entry.
 - MR sweep (cap >= 5B, <= -5%, RSI14 < 35): 10 rows: SCCO -7.0%, FCX -7.6%, HBM -9.3%, BVN -8.1%, AG -7.7%, PAAS -6.8%, SSL -6.6%, SQM -5.5%, PSLV -5.1%, DINO -5.5% (RSI 34.1, refiner; company/energy-specific, unsourced). Still flat-to-lower versus 10:53, so no metals base yet. Gate 1 FAIL (no sourced cause) plus the regime gate. No entry.
 - Decision: no trade. No gate relaxed. Tier A ends 11:30 ET.
+
+### Cycle 1153 - 2026-11-18 11:15 ET (hourly, WebSearch run)
+- Reconcile: account 771144490 flat, no open orders, cash/equity $398.97 (breaker level $394.19, cushion $4.78). No stops to check. 0 trades today.
+- Tape: SPY 729.38 (-0.42%), QQQ 656.82 (-0.02%), SMH 457.92 (-0.47%), IWM 269.78 (+0.27%), XRT 89.86 (+1.8%), GLD 343.26 (-2.6%), XLC 105.66 (+0.4%). SPY 5-min lows (UTC bars): 15:45 728.34, 15:50 728.39, 15:55 729.29, 16:00 729.46, 16:05 729.70: five consecutive higher lows, no new low since 10:45 ET. Regime: STABILIZING (§4.1: ~3 higher lows, no new lows) = mean-reversion ON; the tape is flat rather than rising, so momentum needs name-specific strength.
+- News (WebSearch standard, two queries, results read this cycle):
+  1) TJX guidance/Marmaxx query: results cover TJX reports from Aug 2025, Nov 2025 and May 2026 only. NOTHING dated 2026-11-18, so the cause of TJX's +10% today is still unsourced (EPS 1.34 vs 1.34 in line per the earnings calendar). Gate 2 FAIL.
+  2) Metals query: nothing dated 2026-11-18. The most recent item found is a Motley Fool Canada piece dated 2026-11-02 saying gold is down nearly 16% since late August and silver about 30%. That is a dated, sourced multi-week downtrend: Gate 4 FAIL (dislocation is part of a multi-week downtrend) for gold/silver/copper miners, in addition to no sourced same-day cause (Gate 1 FAIL).
+- Momentum sweep (cap >= 2B, >= +3%, RVOL >= 0.8 for record): TTWO +8.4% (RVOL 1.60), TJX +10.2% (1.12), TGT +6.0% (1.10), VIK +5.4% (0.85), BIPC +3.5% (1.13), BLSH +8.6% (1.10).
+  - TTWO: volume passes (1.60), price 221.07 is above the earlier pullback high 220.45 (bars 15:55-16:05 highs 221.40/221.59/221.50, lows 219.80/220.00/220.24 rising), so the entry trigger exists. But Gate 1 relative strength: RBLX +7.0% (47.06 vs 44.00), XLC +0.4%, SPY -0.42%: TTWO leads its closest peer by about 1.4 pts (< 2 pts) = FAIL; Gate 2: no same-day sourced catalyst (10:43 search and this cycle's results show nothing dated today; the GTA VI Nov 19 launch is a known pre-existing date, not today's cause) = FAIL. No entry.
+  - TJX/TGT: RVOL 1.12/1.10 (< 1.3) FAIL. TJX also Gate 2 FAIL. VIK/BIPC/BLSH: RVOL < 1.3 or no catalyst. No entry.
+- MR sweep (cap >= 5B, <= -5%, RSI14 < 35): 10 rows: SCCO -6.8% (RSI 30.6), DINO -6.1% (34.1), FCX -7.4% (31.0), SQM -5.4% (32.0), PAAS -6.7% (32.7), ASTS -5.6% (31.6), BVN -7.7% (27.2), HBM -9.0% (34.2), SSL -6.5% (31.4), AG -7.3% (32.1). Regime allows MR now, but every row fails Gate 1 (no sourced same-day sector/macro cause): the metals complex also fails Gate 4 (sourced multi-week downtrend, above); DINO (refiner), ASTS (space), SSL (Sasol, South Africa energy/chemicals), SQM (lithium) are company- or commodity-specific with no cited cause. FCX/SCCO have not bounced (FCX -7.8% at 10:53 to -7.4% now: no base). No entry.
+- Follow-ups: 11/17 skips: TEAM/NOW not repriced this cycle (done at 10:15). TTWO: skipped at 10:43 (RVOL 1.35, +7.1%, price 218.2), now 221.07 (+1.3% since), so a TTWO entry on the break would have been in the money; the peer/catalyst rule kept me out (data point for the sourcing-rule review).
+- Decision: no trade. No gate relaxed. Tier A ends 11:30; Tier B (11:30-14:30) follows.
