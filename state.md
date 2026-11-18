@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-18 12:43 ET",
+ "as_of": "2026-11-18 12:53 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "OPEN: TJX 0.73018 sh @143.80, last 143.97 (+$0.12), stop 142.70, target 146.00, hold lock ends 12:44 ET. No new entry. Equity 399.09 (breaker 394.19, cushion 4.90).",
+ "status_note": "OPEN: TJX 0.73018 sh @143.80, last 143.88 (+$0.06), stop 142.70, target 146.00; hold lock expired. No invalidation. Equity 399.07 (breaker 394.19, cushion 4.88).",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-18",
@@ -4593,6 +4593,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-18 12:43 ET",
    "equity": 399.09
+  },
+  {
+   "t": "2026-11-18 12:53 ET",
+   "equity": 399.07
   }
  ],
  "positions": [
@@ -4601,7 +4605,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
    "strategy": "momentum",
    "qty": 0.73018,
    "entry": 143.8,
-   "price": 143.97,
+   "price": 143.88,
    "stop": 142.7,
    "target": 146.0,
    "opened": "2026-11-18 12:14 ET",
@@ -4827,7 +4831,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "STABLE: SPY 731.51 (-0.13%), 5-min closes 732.55 -> 733.15 -> 733.40 -> 732.04 (pullback from 734.03), lows still above 729. QQQ 659.21 (+0.34%), SMH 458.87 (-0.27%), IWM 271.61 (+0.95%), XRT 90.78 (+2.8%). Momentum on; MR blocked by sourcing.",
+  "read": "STABLE / SIDEWAYS: SPY 731.71 (-0.10%), 5-min closes 733.40 -> 732.04 -> 731.48 -> 731.53 (drifting off 734.03), lows 731.16+ (no new low). QQQ 659.42 (+0.38%), SMH 458.28 (-0.40%), IWM 271.76 (+1.0%), XRT 90.84 (+2.9%). Momentum on selectively; MR blocked by sourcing.",
   "chips": [
    "SPY -1.1%",
    "SMH -3.5%",
@@ -14037,3 +14041,10 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum sweep (cap >= 2B, >= +3%, RVOL >= 0.8 for record): PANW +7.2% (RVOL 0.82; reports after the close today = inside the earnings window, FAIL), TTWO +7.5% (2.05), TGT +6.8% (1.56), TJX +10.9% (1.43), VIK +6.7% (1.28), BIPC +4.2% (2.21), MDLN +4.0% (2.85), CNX +4.4% (0.87), BLSH +13.1% (1.57), SLS +5.9% (2.17), KLAR +3.4% (0.97), PLBL +14.5% (0.99). No change vs 12:35: TGT stays out on the 2R-anchor check (170.36, day high 171.01); TTWO fails Gate 1; the rest lack a cited catalyst or peer separation; VIK still below 1.3. No entry.
 - MR sweep (cap >= 5B, <= -5%, RSI14 < 35): 9 rows: SCCO -5.9%, DINO -5.7%, FCX -6.1%, SQM -5.8%, PAAS -6.0%, BVN -6.1%, HBM -8.0%, SSL -6.4%, AG -6.6%. The metals gave back part of their bounce (SCCO -5.1% at 12:35, -5.9% now); Gate 1 and Gate 4 FAIL as before. No entry.
 - Decision: hold TJX, no new entry. From 12:44 ET the invalidation rule can act: exit on a completed 5-min close below the rising short-term support (about 143.70 now, the 17:25-17:30 lows 143.85-144.13) and the hard stop 142.70 always applies. Plan to move the stop to breakeven at 144.90.
+
+### Cycle 1163 - 2026-11-18 12:53 ET
+- STOP CHECK / reconcile: account 771144490, position TJX 0.730180 sh avg $143.80, no open orders, cash $293.97, equity $399.07 (TJX +$0.06 unrealized). TJX 143.88 vs stop 142.70 (-0.8%), target 146.00. The hold lock has expired (12:44). 5-min closes: 143.97, 144.325, 144.21, 143.925, 143.89, 143.87 with lows 143.79-143.82: sideways just under the 144.36 day high, 1.1 points above the 142.74 base low and above the (flat to rising) 9/20 EMAs (about 143.9 / 143.5). A 5-min close below about 143.5 would be the invalidation signal; none yet. Relative strength vs XRT intact (TJX +10.8% vs XRT +2.9%). HOLD. Breaker cushion $4.88.
+- Tape: SPY 731.71 (-0.10%), QQQ 659.42 (+0.38%), SMH 458.28 (-0.40%), IWM 271.76 (+1.0%), XRT 90.84 (+2.9%). SPY's closes since 733.40: 732.04, 731.48, 731.53: a gentle drift lower, lows 731.16 or higher, no new low. Regime: stable.
+- Momentum sweep (cap >= 2B, >= +3%, RVOL >= 0.8 for record): PANW +7.0% (0.84, reports after the close = earnings-window FAIL), TTWO +7.3% (2.09), TGT +7.1% (1.62), POWL +3.8% (0.83), TJX +10.8% (1.45), VIK +7.1% (1.30), CALM +8.9% (0.81), BIPC +4.0% (2.32), MDLN +4.1% (2.88), CNX +4.2% (0.90), BLSH +12.7% (1.64), SLS +4.5% (2.20), KLAR +3.3% (0.98), PLBL +13.2% (1.02). TGT at 170.84 is just under the 171.01 day high; the 12:35 reward:risk finding stands (structural anchors 172.4 = +0.9% to +1.0%, stop 168.10 = 1.6% away). VIK RVOL 1.296 (just under 1.3, fail). No entry.
+- MR sweep (cap >= 5B, <= -5%, RSI14 < 35): 10 rows: SCCO -5.9%, DINO -6.1%, FCX -6.3%, SQM -6.2%, PAAS -6.3%, BVN -6.0%, HBM -8.3%, PSLV -5.1%, SSL -6.8%, AG -6.9%. Unchanged theme and unchanged fails (Gate 1 no sourced same-day cause; Gate 4 sourced multi-week downtrend). No entry.
+- Decision: hold TJX, no new entry. Next cycle 13:02 (hourly run 13:12 with WebSearch).
