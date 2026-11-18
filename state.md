@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-18 10:43 ET",
+ "as_of": "2026-11-18 10:53 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Flat, no orders. 10:43: SPY drifting toward session low; TTWO RVOL now 1.35 but peer/catalyst gates fail; no trade. Equity 398.97 (breaker 394.19).",
+ "status_note": "Flat, no orders. 10:53: SPY made a new session low (728.34): regime FALLING, MR and momentum off. Equity 398.97 (breaker 394.19).",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-18",
@@ -4545,6 +4545,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-18 10:43 ET",
    "equity": 398.97
+  },
+  {
+   "t": "2026-11-18 10:53 ET",
+   "equity": 398.97
   }
  ],
  "positions": [],
@@ -4767,7 +4771,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "DRIFTING LOWER: SPY 728.67 (-0.52%), 5-min lows 730.96 -> 730.66 -> 730.42 -> 729.77 (falling lows), 0.2% above the 728.58 session low. QQQ 655.36 (-0.24%), SMH 456.50 (-0.78%), IWM 269.40 (+0.13%), XRT 89.72 (+1.6%), GLD 344.00 (-2.4%). Falling-lite: any new SPY low turns the regime Falling (MR off, momentum off).",
+  "read": "FALLING: SPY 728.46 (-0.54%), new session low 728.34 (15:45Z bar, below 728.58). 5-min lows 729.77 -> 728.49 -> 728.34. QQQ 655.72 (-0.19%), SMH 457.91 (-0.48%), IWM 269.58 (+0.20%), XRT 89.65 (+1.5%), GLD 343.73 (-2.5%). MR off (market still making new lows); momentum off (not stable/rising).",
   "chips": [
    "SPY -1.1%",
    "SMH -3.5%",
@@ -13871,3 +13875,10 @@ Gate check, written (momentum.md), live data at 12:33 ET:
   - TJX/TGT: unchanged (0.99 RVOL, literal fail; TJX cause unsourced). No change from 10:33.
 - MR sweep (cap >= 5B, <= -5%, RSI14 < 35): 10 rows: SCCO -7.2% (RSI 30.6), FCX -7.8% (31.0), HBM -9.3% (34.2), BVN -7.4% (27.2), AG -7.6% (32.1), PAAS -6.7% (32.7), SSL -6.4% (31.4), SQM -6.0% (32.0), BHP -5.0% (33.5), ASTS -5.3% (31.6). The metals group is still sliding (AG -6.9% -> -7.6%, PAAS -5.9% -> -6.7%), so no base. Gate 1 FAIL for the group (no dated sourced cause), plus the regime gate. ASTS: space/satellite, company-specific/unsourced = FAIL.
 - Decision: no trade. No gate relaxed. Tier A closes 11:30; Tier B starts then.
+
+### Cycle 1151 - 2026-11-18 10:53 ET
+- Reconcile: account 771144490 flat, no open orders, cash/equity $398.97 (breaker level $394.19, cushion $4.78). No stops to check. 0 trades today.
+- Tape: SPY 728.46 (-0.54%), QQQ 655.72 (-0.19%), SMH 457.91 (-0.48%), IWM 269.58 (+0.20%), XRT 89.65 (+1.5%), GLD 343.73 (-2.5%). SPY 5-min (UTC bars): 15:35 L 729.77, 15:40 L 728.49, 15:45 L 728.34 (close 728.62). 728.34 is a new session low (prior 728.58). Regime per §4.1: FALLING (SPY still making new session lows) => mean-reversion OFF; momentum has no stable/rising market either.
+- Momentum sweep (cap >= 2B, >= +3%, RVOL >= 0.8 for record): TTWO +7.5% (RVOL 1.42), TGT +5.8% (1.03), TJX +10.2% (1.03), BLSH +8.5% (0.99). TTWO: the volume number now clears 1.3 but the 10:43 fails stand (peer separation vs RBLX < 2 pts, no sourced same-day catalyst, no confirmed break of the 220.45 pullback high; it ran to 219.55). TJX/TGT: RVOL ~1.03 (< 1.3), TJX cause still unsourced. BLSH: RVOL 0.99, unsourced. No entry.
+- MR sweep (cap >= 5B, <= -5%, RSI14 < 35): 10 rows: SCCO -7.2%, FCX -7.9%, HBM -9.5%, BVN -7.6%, AG -7.6%, PAAS -6.6%, SSL -6.3%, SQM -5.5%, ASTS -5.3%, PSLV -5.0% (RSI 29.1; a silver trust, not an operating company). Regime FALLING blocks all of them regardless of the gates; Gate 1 also still FAIL (no sourced same-day cause).
+- Decision: no trade. No gate relaxed. Hourly search at 11:12 ET.
