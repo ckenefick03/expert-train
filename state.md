@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
- "as_of": "2026-11-18 11:43 ET",
+ "as_of": "2026-11-18 11:54 ET",
  "account": {
   "name": "Agentic Account",
   "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   "max_trades": 10
  },
  "status": "green",
- "status_note": "Flat, no orders. 11:43: regime FALLING (lower low 727.86 after the 726.80 washout); XLE -2.7% / USO -2.2% price-confirm an energy selloff, cause not yet sourced. Equity 398.97 (breaker 394.19).",
+ "status_note": "Flat, no orders. 11:54: SPY grinding 0.3% above its 726.80 low, regime FALLING/choppy, MR and momentum off. Equity 398.97 (breaker 394.19).",
  "peak_equity": 437.99,
  "day": {
   "date": "2026-11-18",
@@ -4569,6 +4569,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   {
    "t": "2026-11-18 11:43 ET",
    "equity": 398.97
+  },
+  {
+   "t": "2026-11-18 11:54 ET",
+   "equity": 398.97
   }
  ],
  "positions": [],
@@ -4791,7 +4795,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
   }
  ],
  "regime": {
-  "read": "FALLING: SPY 727.96 (-0.61%), 5-min lows 726.80 -> 728.08 -> 728.13 -> 727.86 (11:35 bar lower than the prior). QQQ 654.38 (-0.39%), SMH 454.74 (-1.17%), IWM 269.85 (+0.30%), XLE 61.67 (-2.7%), USO 137.16 (-2.2%), IGV 95.95 (+0.2%), GLD 342.37 (-2.9%). MR off; momentum off.",
+  "read": "FALLING / BASING AT LOWS: SPY 727.45 (-0.68%), 5-min lows 727.86 -> 727.54 -> 727.73 (no new session low below 726.80 since 11:20, but lower lows inside the range). QQQ 653.87 (-0.47%), SMH 453.67 (-1.40%), IWM 269.70 (+0.24%), XLE 61.49 (-3.0%), USO 135.94 (-3.1%), GLD 342.70 (-2.8%). MR off until ~3 higher lows; momentum off.",
   "chips": [
    "SPY -1.1%",
    "SMH -3.5%",
@@ -13944,3 +13948,10 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum sweep (cap >= 2B, >= +3%, RVOL >= 0.8 for record): TTWO +8.4% (RVOL 1.75, 221.15), TGT +5.8% (1.22), TJX +10.1% (1.23), VIK +5.6% (1.01), BIPC +4.2% (1.46), SLS +8.2% (1.82), BLSH +7.2% (1.24), KLAR +3.0% (0.86). Same fails as 11:33: market Falling, TTWO peer lead < 2 pts and unsourced cause, TJX cause unsourced, others RVOL < 1.3 or no cited catalyst (BIPC and SLS clear the RVOL number but have no catalyst/peer complex). No entry.
 - MR sweep (cap >= 5B, <= -5%, RSI14 < 35): 13 rows: SCCO -7.2%, DINO -6.2%, MSTR -6.2% (RSI 26.2), FCX -7.6%, SQM -6.0%, PAAS -7.4%, ASTS -7.2%, IONQ -5.5%, BVN -8.0%, HBM -10.0%, PSLV -5.2%, SSL -6.9%, AG -8.5%. Regime Falling blocks all; metals also Gate 1/4 FAIL; MSTR/ASTS/IONQ company-specific or unsourced. Still making new lows. No entry.
 - Decision: no trade. No gate relaxed. Next: 11:52 cycle, then the 12:12 hourly run with the energy search.
+
+### Cycle 1157 - 2026-11-18 11:54 ET
+- Reconcile: account 771144490 flat, no open orders, cash/equity $398.97 (breaker level $394.19, cushion $4.78). No stops to check. 0 trades today.
+- Tape: SPY 727.45 (-0.68%), QQQ 653.87 (-0.47%), SMH 453.67 (-1.40%), IWM 269.70 (+0.24%), XLE 61.49 (-3.0%), USO 135.94 (-3.1%), GLD 342.70 (-2.8%). SPY 5-min lows (UTC bars): 16:30 728.13, 16:35 727.86, 16:40 727.54, 16:45 727.73. No break of the 726.80 low, but no higher-low sequence either (the 16:40 low undercut the 16:35). Regime: FALLING / basing at the lows: MR OFF, momentum OFF.
+- Momentum sweep (cap >= 2B, >= +3%, RVOL >= 0.8 for record): TTWO +6.6% (RVOL 1.82, 217.42, off the 221.59 high), TGT +5.9% (1.26), TJX +10.1% (1.27), VIK +5.6% (1.03), BIPC +4.4% (1.60), BLSH +8.6% (1.29), SLS +7.3% (1.89), KLAR +3.0% (0.88). Fails unchanged: no stable/rising market; TTWO has faded 2% off its high and has no sourced catalyst/peer separation; TJX/TGT RVOL still < 1.3 (1.27 and 1.26, marginal = fail); BIPC and SLS clear RVOL but have no cited catalyst. No entry.
+- MR sweep (cap >= 5B, <= -5%, RSI14 < 35): 14 rows: SNDK -5.0% (RSI 30.9, new: memory/storage, sector SMH -1.4% so a sector link exists but its day move is -5.0%, 3.6 pts worse than the sector, company-specific on top; no source), SCCO -7.3%, DINO -6.1%, MSTR -6.1%, FCX -7.9%, SQM -5.9%, PAAS -7.4%, ASTS -8.2%, IONQ -6.3%, BVN -8.0%, HBM -10.2%, PSLV -5.1%, SSL -7.2%, AG -8.6%. Regime Falling blocks all of them; none has a sourced cause. No entry.
+- Decision: no trade. No gate relaxed. Next: the 12:12 hourly run (WebSearch: energy/oil first, then metals/semis memory, then TJX).
