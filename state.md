@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-19 14:03 ET",
+  "as_of": "2026-11-19 14:13 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "FLAT 14:03 ET 11/19, cash $398.81, no positions/orders. SPY 720.11 (-1.38%) flat range 719.2-721 since 13:45 ET, above 717.55 low. No candidate passes all gates (MR: no sourced cause; PANW only ~0.5 pt above OKTA). Next: hourly run 14:12 ET, then Tier C 14:30-15:30. No entry.",
+  "status_note": "FLAT 14:13 ET 11/19 (hourly run), cash $398.81, no positions/orders. SPY 718.98 (-1.53%) drifting lower toward the 717.55 low, regime weak. WebSearch again found no same-day source (only Nov 16-17 context). No candidate passes all gates. Next: Tier C 14:30-15:30, then close recap ~15:48. No entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-19",
@@ -4804,6 +4804,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-19 14:03 ET",
+      "equity": 398.81
+    },
+    {
+      "t": "2026-11-19 14:13 ET",
       "equity": 398.81
     }
   ],
@@ -14669,3 +14673,12 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum scan (14): PANW +5.9% RVOL 1.99: OKTA +5.35% (206.08), ZS +3.85%, CRWD +2.8% -> 0.5 pt over OKTA, 2.0 over ZS, 3.1 over CRWD; not >=2 pts above the whole complex: Gate 1 FAIL (unchanged). WWD +5.2% RVOL 2.01, INSM +18.9% RVOL 3.14, P +7.3% RVOL 1.55, VVV +11.6% RVOL 1.50: no cited catalyst -> Gate 2 FAIL. BBWI +3.1% RVOL 1.33 (cap $3.8B, avg-volume unverified, no catalyst) FAIL. CPA foreign (RVOL 1.35), AMBA 1.26, USAR 1.23, RBRK 1.07 <1.3; LBTYB volume floor; FUTU/PDD/TU foreign fail.
 - MR scan (standard sweep, 54 names): MELI -4.3% RSI 29.4, UNH -4.2% RSI 28.5, CI -4.0%, VEEV -4.0%, ILMN -4.0%, AFRM -3.5% RSI 30.1 (new), HBM -3.6% RSI 28.6 (new), NBIS -7.6%, TWLO -5.5%, ESTC -6.4%, SHOP -5.4%, TEM -5.9%, CRWV -5.0%, etc. Gate 1 FAIL for all: no dated external sector/macro cause sourced in a same-day source (last hourly search 13:12 found none); foreign (NTES, ASX, KT, YPF) excluded.
 - Decision: no entry. Trades today 0 (0 forced); gates not loosened. Hourly run 14:12 ET (WebSearch); Tier C 14:30-15:30 is the last window for the minimum.
+
+### Cycle 1215 - 2026-11-19 14:13 ET (hourly run, WebSearch included)
+- Dedupe: last commit 19:03:15Z, trigger 19:13:14Z (~10 min) -> proceed. Tools reloaded earlier; no data gap.
+- Reconcile: equity = cash = $398.81, positions empty, open orders empty. Breaker cushion $4.62.
+- Tape: SPY 718.98 (-1.53%), a new low for the post-bounce leg: 19:05Z bar low 718.46, lower highs 721.6 -> 720.98 -> 720.48 -> 719.67, still ~$0.9 above the 717.55 session low. QQQ -1.65%, SMH -1.6%, IWM -1.7%, IGV -0.4%, XLV -2.1%, GLD -1.4%. Regime: weak, drifting toward the lows (a break of 717.55 = Falling); MR off in practice, momentum not supported.
+- Momentum scan (15): PANW +5.8% RVOL 2.02 vs OKTA +5.2% (205.81), ZS +4.0%, CRWD +2.6%: 0.6 pt over OKTA, 1.8 over ZS: Gate 1 FAIL (unchanged). WWD +4.9% RVOL 2.10, INSM +20.4% RVOL 3.17, P +7.4% RVOL 1.58, VVV +11.0% RVOL 1.55, BBWI +3.3% RVOL 1.39: no cited catalyst -> Gate 2 FAIL. CPA foreign (RVOL 1.39); AMBA 1.28, USAR 1.25, RBRK +5.2% RVOL 1.09, JD (new, foreign ADR, RVOL 1.01) <1.3; LBTYB volume floor; FUTU/PDD/TU foreign fail.
+- MR scan (standard sweep, 60 names, widening again): MELI -4.3%, UNH -5.0% RSI 28.5, CI -4.1%, VEEV -4.2%, ILMN -4.1%, TWLO -5.8%, MTZ -5.4%, SHOP -5.0%, MRK -3.9% (new), IMO (foreign) -3.5%, AVAV -3.5% (new), HALO -4.3%, CBRS -5.7%, ESTC -6.6%, FLUT -5.2%, TEM -5.9%, AFRM -3.5%, NBIS -7.4%, CRWV -4.9%, FCX -3.8% RSI 26.2, OSCR -5.3%, etc. Breadth washout.
+- News (WebSearch x2, hourly): market-wide query returned a Reuters piece dated 2026-11-17 (six of 11 S&P sectors down, healthcare -0.9%, UNH and Humana each -4.7%, market slipping ahead of Nvidia results) and an undated-in-snippet AP item on an AI-led selloff (17 of 20 index stocks fell) that I could not date; nothing dated 11/19. The UNH/Cigna search returned only the Jan 2026 CMS rate proposal and a June 2026 rebound item. Judgment: none of this is a dated external cause for today's UNH/CI/XLV decline (the 11/17 drop is two sessions old and the 11/19 move is a fresh -5% leg), and the managed-care selloff reads as company/sector-specific. MR Gate 1 therefore FAIL for the healthcare cluster; nothing sourced for the broader washout either.
+- Decision: no entry. Trades today 0 (0 forced); gates not loosened. Tier C opens 14:30 ET, the last window for the minimum.
