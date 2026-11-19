@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-19 11:43 ET",
+  "as_of": "2026-11-19 11:53 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "FLAT 11:43 ET 11/19, cash $398.81, no positions/orders. SPY +0.11% rising. No candidate passes all gates (MR: no sourced dated cause; PANW +6.6% lags CRWD +7.2%, no 2-pt edge). No entry.",
+  "status_note": "FLAT 11:53 ET 11/19, cash $398.81, no positions/orders. Sharp tape reversal: SPY 724.71 (-0.76%), new session low -> regime Falling, MR off. PANW fading, no edge. No entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-19",
@@ -4748,6 +4748,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-19 11:43 ET",
+      "equity": 398.81
+    },
+    {
+      "t": "2026-11-19 11:53 ET",
       "equity": 398.81
     }
   ],
@@ -14494,3 +14498,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum scan: PANW +6.6% RVOL 1.38, WWD +5.5% RVOL 1.12, INSM +20.3% RVOL 2.59, FUTU/PDD/TU foreign. PANW fails Gate 1 relative strength: CRWD 254.0 = +7.2% leads it, no >=2-pt edge over cyber peers. WWD RVOL <1.3 fail. INSM no cited catalyst (unverifiable = FAIL). ADRs fail.
 - MR scan: 17 names (new: ELV -3.8% RSI 39.8, ACN -3.8%, GAP -4.3%; healthcare UNH -6.2%, CI -5.9%, DVA -5.1%, FMS). None has a dated external cause sourced this cycle -> Gate 1 FAIL for all; SNEX/PS/GLBE/NKE etc. company-specific/unsourced; NTES/KT foreign.
 - Decision: no entry. Trades today 0 (0 forced); gates not loosened.
+
+### Cycle 1201 - 2026-11-19 11:53 ET
+- Dedupe: last commit 16:42:35Z, trigger 16:52:55Z (~10 min) -> proceed. Non-hourly: no WebSearch, no newly sourced news.
+- Reconcile: equity = cash = $398.81, positions empty, no open orders. Breaker cushion $4.62.
+- Tape: SPY 724.71 (-0.76%), down ~$6.3 in 10 min from 730.99 and below the earlier 11:00-11:30 range low (~726.5): new session low. QQQ -0.57%, SMH -0.3% (from +1.7%), IWM -1.3%, IGV +1.1% (from +2.5%), XLV -1.8%, GLD -1.0%. Regime: Falling (SPY making new session lows) -> MR OFF per section 4.1; momentum needs stable/rising tape.
+- Momentum scan: PANW +5.1% RVOL 1.46 (faded from +6.6%; CRWD +5.0% -> no 2-pt edge and fading = Gate 1 FAIL), WWD +4.1% RVOL 1.15 fail, INSM +18.7% RVOL 2.66 no cited catalyst fail, P (Everpure) +12.6% RVOL 1.05 fail, FUTU/PDD/TU foreign fail.
+- MR scan: 34 names (breadth selloff incl. NBIS, DASH, ESTC, FLUT, SCI, CORT, OSCR, plus healthcare cluster UNH -6.7%, CI -6.1%, ELV -4.0%, DVA, FMS). MR disabled in Falling regime and no dated external cause sourced anyway -> none eligible.
+- Decision: no entry. Trades today 0 (0 forced); Tier B open, Tier C 14:30-15:30 remains; gates not loosened.
