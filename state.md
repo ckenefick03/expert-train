@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-19 15:42 ET",
+  "as_of": "2026-11-19 15:48 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "FLAT 15:42 ET 11/19, cash $398.81, no positions/orders. Entry window closed (15:30 ET); 0 trades today (0 forced), no candidate passed every gate. SPY 716.93 (-1.82%). Close recap next cycle (~15:48 ET); flat overnight.",
+  "status_note": "CLOSE 11/19: FLAT overnight, cash $398.81, no positions/orders. 0 trades (0 forced), day P&L $0.00; the 1-trade minimum was missed, no gate loosened. SPY 716.29 (-1.90%). Breaker level $394.19 (cushion $4.62). Next: pre-open brief ~08:30 ET 11/20.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-19",
@@ -4844,6 +4844,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-19 15:42 ET",
+      "equity": 398.81
+    },
+    {
+      "t": "2026-11-19 15:48 ET",
       "equity": 398.81
     }
   ],
@@ -14790,3 +14794,12 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Tape: SPY 716.93 (-1.82%), QQQ 646.52 (-1.97%), SMH 450.14 (-2.04%), IWM 264.91 (-1.93%). Range-bound just above the 715.65 low. Regime: weak, no new lows.
 - Entry window closed at 15:30 ET: no entry possible, so scans were skipped (disclosed, same as Cycle 1223). No position to stop-check or flatten. Trades today 0 (0 forced).
 - Next: close recap (~15:48 ET).
+
+### Cycle 1225 - 2026-11-19 15:48 ET (CLOSE RECAP)
+- Stop checks: none (no positions). Reconcile (live): equity = cash = $398.81, positions empty, open orders empty.
+- Tape: SPY 716.29 (-1.90%), QQQ 645.62 (-2.11%), SMH 449.10 (-2.26%), IWM 264.69 (-2.02%). No entries after 15:30 ET; scans skipped (nothing actionable), disclosed.
+- **Overnight status: nothing rolls overnight. The account is 100% cash, so there is no thesis to keep intact and no hold decision to log.**
+- **Day recap 11/19:** ~100 cycles ran across the session (every 10 min, with the hourly WebSearch cycle). Trades 0, forced 0, day P&L $0.00, equity $398.81 (start = end). Market: broad risk-off liquidation, SPY down ~1.9% at the close with software, semis, healthcare and AI infra all weak. Skips: no candidate ever passed every gate. PANW strength was a sector-wide security-software bid (OKTA/ZS matched it), catalysts for WWD/INSM/P/VVV were never cited, and MR names never had a sourced dated cause, with the regime flipping between Falling and a weak range. The 1-trade/day minimum was missed; gates were not loosened to meet it, and no 'forced' tag applies.
+- Disclosed process errors today: wrong MR filter thresholds in cycles 1204, 1220 and 1222 (corrected the next cycle), several cycles that did not re-query open orders, a mis-labeled bar time in the Cycle 1208 note (corrected in 1209), repeated MCP disconnects with no data gaps, and WebSearch never returned a 11/19-dated source (nothing from searches was used). Missed cycles: none known.
+- Drawdown: peak equity $437.99, breaker level $394.19, cushion $4.62 vs equity $398.81.
+- Open user questions (unanswered, defaults kept): marginal RVOL/spread passes, one-bar vs confirmed-hold entry, sizing near the breaker, profit-protection rule, time-of-day-adjusted RVOL, catalyst-sourcing standard.
