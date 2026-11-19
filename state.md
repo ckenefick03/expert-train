@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-19 14:22 ET",
+  "as_of": "2026-11-19 14:33 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "FLAT 14:22 ET 11/19, cash $398.81, no positions. SPY 720.09 (-1.38%) range-bound 718.5-720.5, no new low. No candidate passes all gates (MR: no sourced cause; PANW ~0.7 pt above OKTA). Tier C opens 14:30 ET. No entry.",
+  "status_note": "FLAT 14:33 ET 11/19 (Tier C open), cash $398.81, no positions/orders. SPY 721.17 (-1.24%) with higher lows 718.97/719.45 off a flat ~718.5 floor, tentatively Stabilizing. No candidate passes all gates (MR: no sourced same-day cause; PANW ~0.7 pt over OKTA). No entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-19",
@@ -4812,6 +4812,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-19 14:22 ET",
+      "equity": 398.81
+    },
+    {
+      "t": "2026-11-19 14:33 ET",
       "equity": 398.81
     }
   ],
@@ -14694,3 +14698,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum scan (15): PANW +5.9% RVOL 2.06 vs OKTA +5.3% (205.94), ZS +4.05%, CRWD +2.7% -> 0.6 pt over OKTA, 1.9 over ZS: Gate 1 FAIL. WWD +5.3% RVOL 2.16, INSM +20.1% RVOL 3.19, P +7.9% RVOL 1.61, VVV +10.2% RVOL 1.62, BBWI +3.7% RVOL 1.42: no cited catalyst -> Gate 2 FAIL. CPA foreign (1.41); AMBA 1.30 (marginal, cap $2.4B, no catalyst) FAIL; USAR 1.26, RBRK 1.10, JD 1.02 <1.3; LBTYB volume floor; FUTU/PDD/TU foreign fail.
 - MR scan (standard sweep, 54 names): MELI -4.3% RSI 29.4, UNH -4.9% RSI 28.5, CI -4.2%, VEEV -4.8%, ILMN -3.9%, TWLO -6.0%, MTZ -5.4%, SHOP -4.3%, MRK -3.8%, HALO -4.1% RSI 23.3, ESTC -6.7%, CBRS -5.3%, NBIS -7.2%, FCX -3.6% RSI 26.2, HBM -3.7% RSI 28.6, OSCR -5.3%, FIG -5.3%, etc.; foreign NTES/YPF/ASX/KT excluded. Gate 1 FAIL for all: no dated external sector/macro cause sourced in a same-day source (the 14:12 hourly search found only 11/17 context).
 - Decision: no entry. Trades today 0 (0 forced); gates not loosened. Tier C (14:30-15:30 ET) opens next cycle.
+
+### Cycle 1217 - 2026-11-19 14:33 ET (Tier C window opens)
+- Dedupe: last commit 19:22:36Z, trigger 19:32:47Z (~10 min) -> proceed. Tools disconnected/reloaded; no data gap. Non-hourly: no WebSearch (next hourly 15:12 ET).
+- Reconcile: equity = cash = $398.81, positions empty, open orders empty. Breaker cushion $4.62.
+- Tape: SPY 721.17 (-1.24%); 5-min lows 718.46 (19:05Z), 718.49, 718.53, 718.97 (19:20Z), 719.45 (19:25Z): a flat floor near 718.5 then two rising lows, highs up to 721.76; no break of 717.55 -> tentatively Stabilizing. QQQ -1.2%, SMH -1.0%, IWM -1.5%, IGV -0.1%, XLV -1.8%, GLD -1.3%.
+- Momentum scan (16): PANW +6.3% RVOL 2.10 vs OKTA +5.6% (206.61), ZS +4.2% (206.22), CRWD +3.1% (244.42) -> 0.7 pt over OKTA, 2.1 over ZS: not >=2 pts above the whole peer complex, Gate 1 FAIL (unchanged). WWD +5.5% RVOL 2.20, INSM +20.7% RVOL 3.23, P +8.4% RVOL 1.63, VVV +10.4% RVOL 1.67, BBWI +3.9% RVOL 1.48: no cited catalyst -> Gate 2 FAIL. AMBA +9.3% RVOL 1.31 (cap $2.4B, marginal RVOL, no catalyst) FAIL. New: NTSK (Netskope) +6.8% RVOL 1.01 <1.3 fail. CPA foreign (1.45); USAR 1.29, RBRK 1.12, JD 1.06 <1.3; LBTYB volume floor; FUTU/PDD/TU foreign fail.
+- MR scan (standard sweep, 49 names): MELI -4.6% RSI 29.4, UNH -4.6% RSI 28.5, CI -4.0%, VEEV -4.2%, ILMN -3.8%, TWLO -6.0%, MTZ -5.1%, SHOP -4.1%, MRK -3.8%, HALO -3.6% RSI 23.3, ESTC -6.6%, CBRS -5.0%, NBIS -7.2%, FIG -4.9%, OSCR -4.8%, BBDO (foreign ADR, new), FCX dropped off, etc. Gate 1 FAIL for all: no dated external sector/macro cause sourced in a same-day source; foreign names excluded.
+- Tier C (14:30-15:30 ET) is now open for the last window toward the daily minimum. Gates not loosened: a forced entry would require a trade passing every gate; none does. Decision: no entry. Trades today 0 (0 forced).
