@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-19 13:03 ET",
+  "as_of": "2026-11-19 13:12 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "FLAT 13:03 ET 11/19, cash $398.81, no positions/orders. SPY 722.94 (-0.99%) range-bound, Stabilizing. PANW on watch (higher lows since 15:25 ET-equiv bars, +6.1%, RVOL 1.81) but fails Gate 1 vs peers OKTA/ZS and catalyst not sourced this cycle; re-check at 13:12 hourly run. No entry.",
+  "status_note": "FLAT 13:12 ET 11/19 (hourly run), cash $398.81, no positions/orders. SPY 719.77 (-1.43%) back near session low 717.55 -> regime Falling, MR off. PANW (earnings beat verified 11/18) faded below its 9/20 EMA and has no 2-pt edge over ZS/OKTA: fails Gates 1 and 3. No entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-19",
@@ -4780,6 +4780,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-19 13:03 ET",
+      "equity": 398.81
+    },
+    {
+      "t": "2026-11-19 13:12 ET",
       "equity": 398.81
     }
   ],
@@ -14594,3 +14598,14 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Other momentum: WWD +4.5% RVOL 1.70 no cited catalyst FAIL; INSM +18.6% RVOL 2.93 no cited catalyst FAIL; P (Everpure) +10.3% RVOL 1.33 no cited catalyst FAIL; VVV 1.25, AMBA 1.13, CPA 1.12, USAR 1.13, LBTYB (cap $3.4B, +3.5%, RVOL 1.73, avg volume tiny ~12k shares today, fails the 1M avg-volume/$20M floor) fail; FUTU/PDD/TU foreign fail.
 - MR scan (standard sweep, 40 names): UNH -4.6% RSI 28.5 and CI -4.8% have both retraced ~1-2 pts from the lows (XLV -1.7%); DVA, ACN, HUBS, SHOP (new, -3.8%), ESTC, TEM, CBRS, NBIS, IREN, FIS, FIG etc. None has a dated external sector/macro cause sourced in a same-day source (Gate 1 FAIL for all); NTES/ASX/KT foreign.
 - Decision: no entry. Trades today 0 (0 forced); gates not loosened.
+
+### Cycle 1209 - 2026-11-19 13:12 ET (hourly run, WebSearch included)
+- Correction to Cycle 1208: its dashboard status_note said "higher lows since 15:25 ET-equiv bars" for PANW; the bars referenced were 15:25Z = 10:25 ET. The Cycle 1208 body text is correct; only the status_note wording was sloppy.
+- Dedupe: last commit 18:03:22Z, trigger 18:12:23Z (~9 min) -> proceed. Tools disconnected/reloaded; no data gap.
+- Reconcile: equity = cash = $398.81, positions empty, open orders empty. Breaker cushion $4.62.
+- Tape: SPY 719.77 (-1.43%), back down toward the 717.55 session low (18:05Z bar low 720.12, bars 17:55-18:05Z all closing lower: 721.78, 721.52, 721.10); the 12:35-12:45 stabilization has faded. QQQ -1.6%, SMH -1.8%, IWM -1.6%, IGV -0.2% (turned negative), XLV -1.9%, GLD -1.3%. Regime: weakening/Falling-leaning (lower highs from 726.35 and no higher low since 17:25Z; a break of 717.55 would confirm Falling). MR off; momentum has no supportive tape.
+- Momentum: PANW 358.11 (+5.35%, RVOL 1.84). get_earnings_results (tool, this cycle): PANW reported FY27 Q1 on 2026-11-18 after the close, EPS actual 1.05 vs estimate 0.88 (verified true) - that sources the catalyst fact (a post-report beat); the market reaction itself is not sourced (WebSearch returned only 2025/older PANW items, no Nov 2026 piece). Peers now: CRWD +2.8%, ZS +5.0%, OKTA +5.4%, NET +1.3%, FTNT +0.5%, S +3.7%, HACK +1.6%, CIBR +0.6%. PANW leads CRWD by 2.5 pts but is level with OKTA (+5.4%) and only 0.35 pt above ZS -> no >=2 pt edge over the whole peer complex: Gate 1 FAIL (consistent with 13:03 reading; sector-wide security bid). Gate 3: 5-min EMA(9)=359.87, EMA(20)=359.17 (tool, 18:05Z bar); price 358.11 is BELOW both, last bar close 359.68, so no reclaim of the rising short-term support; the high-of-day 370 fade and the stalled higher-low staircase (358.25 low at 18:05Z) -> Gate 3 FAIL (no reclaim). No entry.
+- Other momentum: WWD +4.6% RVOL 1.75 no cited catalyst FAIL; INSM +18.8% RVOL 2.95 no cited catalyst FAIL; P +8.4% RVOL 1.36 no cited catalyst FAIL; VVV 1.27, AMBA 1.15, CPA 1.13 (foreign) <1.3 fail; LBTYB fails volume floor; FUTU/PDD/TU foreign fail.
+- MR scan (standard sweep): widened to 55 names (MELI -3.8% RSI 29.4, UNH -4.9%, CI -4.5%, TWLO, SHOP -5.2%, CBRS, NBIS -6.8%, FLUT -5.1%, TEM, PINS, MRK -3.6%, ...). Breadth washout is a market-wide risk-off day, not a sourced sector cause; WebSearch (market-wide query) returned no 11/19/2026 item. MR is OFF in this regime and Gate 1 fails for all regardless (no dated external cause sourced); foreign names excluded.
+- News (WebSearch x2, hourly): PANW query returned only 2025 and an undated Barchart/Webull item ("2d ago", +113.5% over 3 months) - not used. Market-wide query returned 2025/early-2026 items only, none dated 11/19/2026. No source usable as today's cause.
+- Decision: no entry. Trades today 0 (0 forced). Tier B open to 14:30, Tier C 14:30-15:30 last window for the minimum; gates not loosened.
