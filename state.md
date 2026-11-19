@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-19 13:43 ET",
+  "as_of": "2026-11-19 13:53 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "FLAT 13:43 ET 11/19, cash $398.81, no positions/orders. SPY 721.76 (-1.15%), higher lows since 18:15Z, Stabilizing. No candidate passes all gates (MR: no sourced cause; PANW level with OKTA, no 2-pt edge). No entry.",
+  "status_note": "FLAT 13:53 ET 11/19, cash $398.81, no positions. SPY 720.37 (-1.35%) fading back from the 18:30Z bounce high 723.21, no new low below 717.55; regime weak/range-bound. No candidate passes all gates (MR: no sourced cause; PANW +5.7% vs OKTA +5.7%, no 2-pt edge). No entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-19",
@@ -4796,6 +4796,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-19 13:43 ET",
+      "equity": 398.81
+    },
+    {
+      "t": "2026-11-19 13:53 ET",
       "equity": 398.81
     }
   ],
@@ -14644,4 +14648,12 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Tape: SPY 721.76 (-1.15%); 5-min lows 718.59, 719.20, 720.39, 721.15, 721.78 (five rising lows since 18:15Z), no new session low since 717.55 -> Stabilizing (not yet rising: still ~$8.4 below prior close). QQQ -1.25%, SMH -1.2%, IWM -1.3%, IGV -0.1%, XLV -1.6%, GLD -1.2%. MR eligible by tape; momentum on only if stable/rising.
 - Momentum scan (13): PANW +6.0% RVOL 1.92 vs OKTA +6.0% (level), ZS +4.3%, CRWD +3.1% -> no >=2-pt edge over the whole peer complex: Gate 1 FAIL (unchanged). WWD +5.0% RVOL 1.89, INSM +18.5% RVOL 3.07, P +8.7% RVOL 1.47, VVV +11.4% RVOL 1.39: no cited catalyst found -> Gate 2 FAIL. CPA (foreign) 1.28, AMBA 1.22, USAR 1.20, RBRK 1.02 <1.3 fail; LBTYB volume floor; FUTU/PDD/TU foreign fail.
 - MR scan (standard sweep, 47 names): UNH -4.4% RSI 28.5, CI -4.1%, MELI -3.9% RSI 29.4, VEEV -3.9% RSI 30.7, DVA, SHOP -5.1%, TWLO, NBIS, CBRS, ESTC, FLUT, TEM, HUBS, ACN, ACIW, GLBE, etc. Gate 1 FAIL for all: no dated external sector/macro cause sourced in a same-day source (the 13:12 hourly search found none); foreign (NTES, ASX, KT, YPF) excluded.
+- Decision: no entry. Trades today 0 (0 forced); gates not loosened. Hourly run 14:12 ET; Tier C 14:30-15:30 is the last window for the minimum.
+
+### Cycle 1213 - 2026-11-19 13:53 ET
+- Dedupe: last commit 18:42:59Z, trigger 18:52:57Z (~10 min) -> proceed. Non-hourly: no WebSearch (hourly 14:12 ET). Open orders not re-queried (none placed since the empty check at 13:43; disclosed).
+- Reconcile: equity = cash = $398.81, positions empty. Breaker cushion $4.62.
+- Tape: SPY 720.37 (-1.35%); the 13:30-13:35 ET bounce (high 723.21) is fading: 18:40Z low 721.05, 18:45Z low 720.01 on 204k, lower highs 722.66 -> 721.62. Still above 717.55. QQQ -1.4%, SMH -1.4%, IWM -1.5%, IGV -0.2%, XLV -1.8%, GLD -1.2%. Regime: weak/range-bound, rising-low run (719.2-721.8) has stalled; momentum has no supportive tape; MR eligible only by the loosest reading and Gate 1 fails anyway.
+- Momentum scan (13): PANW +5.7% RVOL 1.96 vs OKTA +5.7% (206.70), ZS +3.8%, CRWD +2.9% -> level with OKTA, no >=2-pt edge: Gate 1 FAIL. WWD +5.4% RVOL 1.97, INSM +18.7% RVOL 3.09, P +8.2% RVOL 1.52, VVV +10.9% RVOL 1.45: no cited catalyst -> Gate 2 FAIL. CPA (foreign, Panama, +6.2%, RVOL 1.33) foreign fail; AMBA 1.24, USAR 1.22, RBRK 1.04 <1.3; LBTYB volume floor; FUTU/PDD/TU foreign fail.
+- MR scan (standard sweep, 53 names, breadth washout widening): MELI -4.1%, UNH -4.4% RSI 28.5, CI -4.0%, VEEV -4.1%, TWLO -5.3%, ESTC -6.2%, SHOP -5.3%, NBIS -7.0%, ILMN -3.6% (new), CAI -3.7% RSI 24.7 (new), DKNG -3.7% (new), CORT, TEM, HUBS, ACN, DVA, FLUT, DASH, etc. No dated external sector/macro cause sourced in a same-day source -> Gate 1 FAIL for all; foreign (NTES, ASX, KT, YPF) excluded.
 - Decision: no entry. Trades today 0 (0 forced); gates not loosened. Hourly run 14:12 ET; Tier C 14:30-15:30 is the last window for the minimum.
