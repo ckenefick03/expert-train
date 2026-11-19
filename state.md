@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-19 13:53 ET",
+  "as_of": "2026-11-19 14:03 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "FLAT 13:53 ET 11/19, cash $398.81, no positions. SPY 720.37 (-1.35%) fading back from the 18:30Z bounce high 723.21, no new low below 717.55; regime weak/range-bound. No candidate passes all gates (MR: no sourced cause; PANW +5.7% vs OKTA +5.7%, no 2-pt edge). No entry.",
+  "status_note": "FLAT 14:03 ET 11/19, cash $398.81, no positions/orders. SPY 720.11 (-1.38%) flat range 719.2-721 since 13:45 ET, above 717.55 low. No candidate passes all gates (MR: no sourced cause; PANW only ~0.5 pt above OKTA). Next: hourly run 14:12 ET, then Tier C 14:30-15:30. No entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-19",
@@ -4800,6 +4800,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-19 13:53 ET",
+      "equity": 398.81
+    },
+    {
+      "t": "2026-11-19 14:03 ET",
       "equity": 398.81
     }
   ],
@@ -14657,3 +14661,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum scan (13): PANW +5.7% RVOL 1.96 vs OKTA +5.7% (206.70), ZS +3.8%, CRWD +2.9% -> level with OKTA, no >=2-pt edge: Gate 1 FAIL. WWD +5.4% RVOL 1.97, INSM +18.7% RVOL 3.09, P +8.2% RVOL 1.52, VVV +10.9% RVOL 1.45: no cited catalyst -> Gate 2 FAIL. CPA (foreign, Panama, +6.2%, RVOL 1.33) foreign fail; AMBA 1.24, USAR 1.22, RBRK 1.04 <1.3; LBTYB volume floor; FUTU/PDD/TU foreign fail.
 - MR scan (standard sweep, 53 names, breadth washout widening): MELI -4.1%, UNH -4.4% RSI 28.5, CI -4.0%, VEEV -4.1%, TWLO -5.3%, ESTC -6.2%, SHOP -5.3%, NBIS -7.0%, ILMN -3.6% (new), CAI -3.7% RSI 24.7 (new), DKNG -3.7% (new), CORT, TEM, HUBS, ACN, DVA, FLUT, DASH, etc. No dated external sector/macro cause sourced in a same-day source -> Gate 1 FAIL for all; foreign (NTES, ASX, KT, YPF) excluded.
 - Decision: no entry. Trades today 0 (0 forced); gates not loosened. Hourly run 14:12 ET; Tier C 14:30-15:30 is the last window for the minimum.
+
+### Cycle 1214 - 2026-11-19 14:03 ET
+- Dedupe: last commit 18:53:22Z, trigger 19:02:48Z (~9.4 min) -> proceed. Tools disconnected/reloaded; no data gap. Non-hourly: no WebSearch (hourly 14:12 ET).
+- Reconcile: equity = cash = $398.81, positions empty, open orders empty. Breaker cushion $4.62.
+- Tape: SPY 720.11 (-1.38%); 5-min bars 18:50Z (low 719.16) and 18:55Z (low 719.56, close 720.25): flat 719.2-721 range for ~25 min on ~200k/bar, no new low below 717.55, no higher highs. QQQ -1.5%, SMH -1.6%, IWM -1.6%, IGV -0.2%, XLV -1.8%, GLD -1.3%. Regime: range-bound/weak (neither falling to new lows nor rising); momentum not supported; MR eligible by tape only.
+- Momentum scan (14): PANW +5.9% RVOL 1.99: OKTA +5.35% (206.08), ZS +3.85%, CRWD +2.8% -> 0.5 pt over OKTA, 2.0 over ZS, 3.1 over CRWD; not >=2 pts above the whole complex: Gate 1 FAIL (unchanged). WWD +5.2% RVOL 2.01, INSM +18.9% RVOL 3.14, P +7.3% RVOL 1.55, VVV +11.6% RVOL 1.50: no cited catalyst -> Gate 2 FAIL. BBWI +3.1% RVOL 1.33 (cap $3.8B, avg-volume unverified, no catalyst) FAIL. CPA foreign (RVOL 1.35), AMBA 1.26, USAR 1.23, RBRK 1.07 <1.3; LBTYB volume floor; FUTU/PDD/TU foreign fail.
+- MR scan (standard sweep, 54 names): MELI -4.3% RSI 29.4, UNH -4.2% RSI 28.5, CI -4.0%, VEEV -4.0%, ILMN -4.0%, AFRM -3.5% RSI 30.1 (new), HBM -3.6% RSI 28.6 (new), NBIS -7.6%, TWLO -5.5%, ESTC -6.4%, SHOP -5.4%, TEM -5.9%, CRWV -5.0%, etc. Gate 1 FAIL for all: no dated external sector/macro cause sourced in a same-day source (last hourly search 13:12 found none); foreign (NTES, ASX, KT, YPF) excluded.
+- Decision: no entry. Trades today 0 (0 forced); gates not loosened. Hourly run 14:12 ET (WebSearch); Tier C 14:30-15:30 is the last window for the minimum.
