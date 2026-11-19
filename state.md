@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-19 14:43 ET",
+  "as_of": "2026-11-19 14:53 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "FLAT 14:43 ET 11/19 (Tier C open), cash $398.81, no positions. SPY 720.38 (-1.34%) in a 718.5-721.8 range, no new low. No candidate passes all gates (MR: no sourced same-day cause; PANW ~0.9 pt over OKTA). 47 min left to the 15:30 entry cutoff. No entry.",
+  "status_note": "FLAT 14:53 ET 11/19 (Tier C open), cash $398.81, no positions/orders. SPY 718.49 (-1.60%) sliding back to the 717.55 session low; selling widening (MR sweep 73 names). No candidate passes all gates. 37 min to the 15:30 cutoff. No entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-19",
@@ -4820,6 +4820,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-19 14:43 ET",
+      "equity": 398.81
+    },
+    {
+      "t": "2026-11-19 14:53 ET",
       "equity": 398.81
     }
   ],
@@ -14718,3 +14722,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Momentum scan (16): PANW +5.9% RVOL 2.16 vs OKTA +5.0% (205.42), ZS +3.9%, CRWD +2.65%: 0.9 pt over OKTA, 2.0 over ZS: not >=2 pts above the whole complex, Gate 1 FAIL (unchanged). WWD +5.2% RVOL 2.24, INSM +20.9% RVOL 3.31, P +8.0% RVOL 1.66, VVV +10.1% RVOL 1.73, BBWI +3.8% RVOL 1.52: no cited catalyst -> Gate 2 FAIL. AMBA RVOL 1.35, USAR 1.30 (marginal, cap $2.4B/2.5B, no catalyst) FAIL. NTSK +6.2% RVOL 1.03, RBRK 1.15, JD 1.08 <1.3; CPA foreign; LBTYB volume floor; FUTU/PDD/TU foreign fail.
 - MR scan (standard sweep, 54 names): MELI -4.4% RSI 29.4, UNH -4.8% RSI 28.5, CI -4.0%, VEEV -4.5%, ILMN -3.9%, TWLO -6.3%, MTZ -5.1%, SHOP -4.4%, MRK -4.0%, DASH -4.5%, HALO -3.6% RSI 23.3, ESTC -7.2%, CBRS -5.3%, NBIS -7.2%, DLB -3.6% RSI 27.9 (new), PATH -3.5% RSI 31.0 (new), FIG -5.5%, PS -8.0%, OSCR -5.1%, FMS -3.6%, etc.; foreign NTES/YPF/ASX/KT/IMO excluded. Gate 1 FAIL for all: no dated external sector/macro cause sourced in a same-day source.
 - Tier C open (14:30-15:30 ET). Gates not loosened; no trade passes. Decision: no entry. Trades today 0 (0 forced). Cutoff 15:30 ET; hourly search 15:12 ET; close recap ~15:48 ET.
+
+### Cycle 1219 - 2026-11-19 14:53 ET (Tier C)
+- Dedupe: last commit 19:43:16Z, trigger 19:52:49Z (~9.6 min) -> proceed. Non-hourly: no WebSearch (hourly 15:12 ET).
+- Reconcile: equity = cash = $398.81, positions empty, open orders empty. Breaker cushion $4.62.
+- Tape: SPY 718.49 (-1.60%), quote ~$0.9 below the prior 5-min close and $0.9 above the 717.55 session low; 19:30Z high 721.46 -> 19:40Z 721.03 -> 19:45Z 720.98 (lower highs), 19:45Z low 719.33. QQQ -1.7%, SMH -1.7%, IWM -1.8%, IGV -0.6%, XLV -2.1%, GLD -1.5%. Regime: weak, testing the lows (a break of 717.55 = Falling); MR off in practice, momentum unsupported.
+- Momentum scan (15): PANW +5.65% RVOL 2.21 vs OKTA +4.9% (205.29), ZS +3.5%, CRWD +2.3%: 0.75 pt over OKTA, 2.15 over ZS: Gate 1 FAIL (unchanged; the whole complex is also fading). WWD +5.2% RVOL 2.28, INSM +21.2% RVOL 3.36, P +7.4% RVOL 1.67, VVV +9.3% RVOL 1.79, BBWI +3.2% RVOL 1.56: no cited catalyst -> Gate 2 FAIL. AMBA 1.37, USAR 1.32 (marginal, no catalyst) FAIL. NTSK +5.1% RVOL 1.04, RBRK 1.18, JD 1.10 <1.3; CPA foreign; FUTU/PDD/TU foreign fail.
+- MR scan (standard sweep, 73 names, broadest of the day): MELI -4.7% RSI 29.4, UNH -5.0% RSI 28.5, CI -4.6%, VEEV -4.7%, ILMN -4.4%, TWLO -6.6%, HUBS -5.1%, SHOP -4.9%, MRK -4.2%, DASH -4.6%, DVA -3.7%, HALO -3.8% RSI 23.3, ESTC -7.4%, FLUT -5.7%, CBRS -6.0%, NBIS -7.4%, TEM -5.8%, DLB -3.6% RSI 27.9, FIG -6.1%, PS -8.2%, NKE -5.8%, EC (foreign ADR) RSI 25.3, new: LGND, TWST, IOT, DOCS, CX, IBRX, AUGO, AG, HL, EC etc. Broad risk-off; no dated external sector/macro cause sourced in a same-day source -> Gate 1 FAIL for all; foreign names (NTES, YPF, ASX, KT, IMO, CX, EC) excluded.
+- Tier C open (14:30-15:30 ET). Gates not loosened; no trade passes every gate. Decision: no entry. Trades today 0 (0 forced). Hourly run 15:12 ET with WebSearch; last chance for an entry 15:30 ET; close recap ~15:48 ET.
