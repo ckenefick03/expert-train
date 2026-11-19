@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-19 15:13 ET",
+  "as_of": "2026-11-19 15:23 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "FLAT 15:13 ET 11/19 (hourly run, Tier C), cash $398.81, no positions/orders. SPY 716.26 (-1.90%) at fresh session lows (20:05Z low 715.65) -> regime Falling, MR off, momentum off. WebSearch again found no 11/19 source. No candidate passes all gates. 17 min to the 15:30 cutoff. No entry.",
+  "status_note": "FLAT 15:23 ET 11/19 (Tier C, 7 min to the 15:30 cutoff), cash $398.81, no positions/orders. SPY 716.59 (-1.86%) bouncing off the 715.65 low with three rising 5-min lows (tentatively Stabilizing, unconfirmed). No candidate passes all gates (MR: no sourced cause; PANW ~0.3 pt over OKTA). No entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-19",
@@ -4832,6 +4832,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-19 15:13 ET",
+      "equity": 398.81
+    },
+    {
+      "t": "2026-11-19 15:23 ET",
       "equity": 398.81
     }
   ],
@@ -14755,3 +14759,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - MR scan (standard sweep, 92 names - the widest of the day, run correctly at -3.5% this cycle): MELI -4.6% RSI 29.4, ISRG -3.6%, AMAT -3.9%, UNH -5.6% RSI 28.5, TPL, CI -4.7%, VEEV -5.2%, ACN -4.1%, LRCX -3.6%, SAP (foreign) -3.5%, ILMN -4.9%, HUBS -5.4%, VRT -4.7%, CRM -3.6% RSI 24.1, TWLO -7.3%, MRVL -4.2%, SHOP -5.1%, MRK -4.6%, NBIS -8.8%, CBRS -6.9%, ESTC -7.1%, FLUT -6.1%, TEM -6.3%, PS -9.5%, NKE -5.8%, CRWV -5.9%, etc. Software, semis (AMAT/LRCX/MRVL), healthcare (UNH/CI/ISRG/MRK/ILMN) and AI infrastructure all in the washout: a market-wide liquidation. MR is OFF by regime.
 - News (WebSearch x2, hourly): market-wide query returned nothing dated 11/19/2026 (only 2025 and an earlier 2026 June chip-rout item). Nvidia query returned dated-2026 items: Nvidia reported fiscal Q3 FY27 on 2026-11-17 (revenue $115.8B vs ~$109B est., adj. EPS 2.68 vs ~2.48, guide ~$130B, +$150B buyback), but sources conflict on the stock reaction (one headline says the stock gained after-hours, another says it plunged 'Thursday' - the date in that snippet cannot be tied to 2026), and there is context from the earlier 11/17 AP piece (AI-stock jitters, leadership change at Nvidia). None of it is a dated external cause for today's -1.9% SPY move or a sector-specific cause for any single MR name. Unverifiable = FAIL; not used to justify any entry.
 - Tier C (14:30-15:30 ET): last 17 minutes. Gates not loosened; no gate-passing trade exists and the regime is Falling. Decision: no entry. Trades today 0 (0 forced). Close recap ~15:48 ET.
+
+### Cycle 1222 - 2026-11-19 15:23 ET (Tier C, last cycle before the 15:30 entry cutoff)
+- Dedupe: last commit 20:13:04Z, trigger 20:22:36Z (~9.5 min) -> proceed. Non-hourly: no WebSearch (hourly 16:12 ET is after the close; last search was 15:13 ET).
+- Reconcile: equity = cash = $398.81, positions empty, open orders empty. Breaker cushion $4.62.
+- Tape: SPY 716.59 (-1.86%); 5-min lows 715.86 (20:00Z), 715.65 (20:05Z), 715.71 (20:10Z), 716.36 (20:15Z): the last three lows are 715.65 < 715.71 < 716.36 (rising), and the 20:15Z bar closed 718.16 on 497k volume, the best close since 19:40Z. Tentatively Stabilizing after the 15:00-15:10 ET low, but it is only 3 bars and still ~2% below the prior close. QQQ -2.1%, SMH -2.3%, IWM -1.9%, IGV -0.9%, XLV -2.2%, GLD -1.6%.
+- Momentum scan (18): PANW +5.5% RVOL 2.38 vs OKTA +5.3% (205.96), ZS +3.7% (205.23), CRWD +1.9% (241.45): level with OKTA, 1.8 over ZS -> Gate 1 FAIL (unchanged). WWD +4.3% RVOL 2.45, INSM +21.1% RVOL 3.51, P +5.5% RVOL 1.78, VVV +9.2% RVOL 2.10, BBWI +3.0% RVOL 1.67, AMBA 1.46, USAR 1.39: no cited catalyst -> Gate 2 FAIL (or marginal + no catalyst). OKTA (+5.3%, RVOL 1.02), ZS 1.06, RBRK 1.23, JD 1.17, NTSK 1.10 <1.3. CPA, FUTU, PDD, TU foreign; LBTYB fails the volume floor.
+- MR scan: DEVIATION DISCLOSED - this cycle I ran the stricter Tier-A-style sweep (<= -3.5%, RSI<35, cap>=5B; 32 names) rather than the Tier C sweep (RSI<45). It is a subset of the RSI<45 universe, so names with RSI 35-45 (e.g. CI, ACN, HUBS, SHOP, DASH, NKE, ILMN) were not re-listed this cycle; they were all in the 15:13 sweep with no sourced cause. In the RSI<35 set: MELI -4.8% RSI 29.4, UNH -4.9% RSI 28.5, VEEV -5.1%, CRM -3.6% RSI 24.1, TWLO -7.3%, MRVL -4.0%, GWRE -3.6%, NBIS -8.6%, AVAV -4.7%, RDDT -4.2%, MSTR -4.0% RSI 24.0, CORT, AFRM, DLB, ACIW, FCX, EGO, FIS, CAI, HBM, PINS, FIG -6.8%, IREN, AG, HL, NXE, SKYD, plus foreign BIDU/YPF/EC/UMC/CDE-adjacent. None has a dated external sector/macro cause sourced in a same-day source -> MR Gate 1 FAIL for all; Gates 2-4 not assessed because Gate 1 fails.
+- Decision: no entry; no forced entry (a forced tag requires a trade passing every gate, and none did). Trades today 0 (0 forced). Entry window closes 15:30 ET. Close recap at ~15:48 ET.
