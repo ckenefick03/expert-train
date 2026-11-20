@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-20 09:42 ET",
+  "as_of": "2026-11-20 09:53 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "FLAT 09:42 ET 11/20, cash $398.81, no positions/orders. SPY 713.28 (-0.36%), QQQ 636.05 (-1.40%), SMH 429.85 (-3.94%), IWM 264.30 (+0.03%, green). Narrow semis-led weakness; broad market mild. No entries before 10:00 ET (MR Tier A), momentum 10:30. Breaker level $394.19, cushion $4.62.",
+  "status_note": "FLAT 09:53 ET 11/20, cash $398.81, no positions/orders. SPY 713.96 (-0.27%), QQQ 637.99 (-1.10%), SMH 432.89 (-3.26%), IWM 263.84 (-0.14%): semis bouncing off the 09:42 low. No entries before 10:00 ET; the 10:02 cycle is the first entry-eligible (MR Tier A). Breaker level $394.19, cushion $4.62.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-20",
@@ -4880,6 +4880,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-20 09:42 ET",
+      "equity": 398.81
+    },
+    {
+      "t": "2026-11-20 09:53 ET",
       "equity": 398.81
     }
   ],
@@ -14895,4 +14899,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Reconcile (live): equity = cash = $398.81, positions empty, open orders empty. Nothing to stop-check.
 - Tape (12 min into the session): SPY 713.28 (-0.36%), QQQ 636.05 (-1.40%), SMH 429.85 (-3.94%, new low of the morning), IWM 264.30 (+0.03%). SPY and IWM are ticking up while SMH keeps sliding: a narrow, semis/AI-led decline rather than a broad liquidation. Regime: not yet classified (no 5-min bar read this cycle; entries are barred until 10:00 ET).
 - Before 10:00 ET: no entry allowed; preview_scans skipped (disclosed). Next: 09:52 ET, then 10:02 ET (first entry-eligible: MR Tier A; needs a >=5% intraday drop with RSI<35 and sector ETF <=-2%).
+- Trades today 0 (0 forced).
+
+### Cycle 1233 - 2026-11-20 09:53 ET (regular session, 7 min before the first entry window)
+- Dedupe: last commit 14:42:48Z, trigger 14:53:26Z (~10.6 min) -> proceed.
+- Reconcile (live): equity = cash = $398.81, positions empty, open orders empty. Nothing to stop-check.
+- Tape: SPY 713.96 (-0.27%), QQQ 637.99 (-1.10%), SMH 432.89 (-3.26%), IWM 263.84 (-0.14%). Modest bounce from the 09:42 lows (SPY 713.28, SMH 429.85), still narrow semis weakness. Regime: not classified (no 5-min bar read this cycle; reserved for 10:02 when scans are allowed).
+- Before 10:00 ET: no entry allowed; preview_scans skipped (disclosed). Next: 10:02 ET, the first entry-eligible cycle (MR Tier A: >=5% intraday drop, RSI<35, sector ETF <=-2%); momentum from 10:32 ET. Hourly WebSearch is due at the 10:12 ET run.
 - Trades today 0 (0 forced).
