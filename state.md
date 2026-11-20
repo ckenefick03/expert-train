@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-20 09:53 ET",
+  "as_of": "2026-11-20 10:03 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "FLAT 09:53 ET 11/20, cash $398.81, no positions/orders. SPY 713.96 (-0.27%), QQQ 637.99 (-1.10%), SMH 432.89 (-3.26%), IWM 263.84 (-0.14%): semis bouncing off the 09:42 low. No entries before 10:00 ET; the 10:02 cycle is the first entry-eligible (MR Tier A). Breaker level $394.19, cushion $4.62.",
+  "status_note": "FLAT 10:03 ET 11/20 (Tier A open), cash $398.81, no positions/orders. SPY 715.56 (-0.04%) after a V-recovery from the 711.74 open low (six rising 5-min lows): regime Stabilizing/rising, MR on. MR scan (RSI<35, >=3.5%): LITE/DELL/NBIS/IREN pass the numbers but gate 1 (dated external cause) FAILS: search found no 11/20-dated source. No entry. Momentum opens 10:30 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-20",
@@ -4884,6 +4884,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-20 09:53 ET",
+      "equity": 398.81
+    },
+    {
+      "t": "2026-11-20 10:03 ET",
       "equity": 398.81
     }
   ],
@@ -14906,4 +14910,13 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Reconcile (live): equity = cash = $398.81, positions empty, open orders empty. Nothing to stop-check.
 - Tape: SPY 713.96 (-0.27%), QQQ 637.99 (-1.10%), SMH 432.89 (-3.26%), IWM 263.84 (-0.14%). Modest bounce from the 09:42 lows (SPY 713.28, SMH 429.85), still narrow semis weakness. Regime: not classified (no 5-min bar read this cycle; reserved for 10:02 when scans are allowed).
 - Before 10:00 ET: no entry allowed; preview_scans skipped (disclosed). Next: 10:02 ET, the first entry-eligible cycle (MR Tier A: >=5% intraday drop, RSI<35, sector ETF <=-2%); momentum from 10:32 ET. Hourly WebSearch is due at the 10:12 ET run.
+- Trades today 0 (0 forced).
+
+### Cycle 1234 - 2026-11-20 10:03 ET (Tier A open; first entry-eligible cycle)
+- Dedupe: last commit 14:53:44Z, trigger 15:03:02Z (~9.3 min) -> proceed.
+- Reconcile (live): equity = cash = $398.81, positions empty, open orders empty. Nothing to stop-check.
+- Tape: SPY 715.56 (-0.04%), QQQ 639.76 (-0.82%), SMH 433.34 (-3.16%), IWM 264.55 (+0.12%), XLV 179.74 (+1.3%). SPY 5-min bars since the open: lows 711.74, 711.93, 712.13, 712.30, 712.62, 715.11 (six consecutive higher lows, no new low after the first bar), last bar closed 717.14. Regime: Stabilizing, tipping to rising (index nearly flat on the day; semis -3.2% is the lone deep sector hole). MR on; momentum opens 10:30 ET.
+- MR scan (Tier A: cap >=$5B, <=-3.5% on the day, RSI(14,d)<35; ran RSI<35, correct for Tier A): 12 hits. Meet the Tier A size (>=5%) and RSI<35: LITE -5.4% (RSI 34.4), DELL -5.2% (32.5), NBIS -5.7% (31.8), IREN -6.6% (27.7), NTES -5.0% (28.4, foreign ADR), BVN -7.7% (21.9, Peruvian miner ADR, not tied to semis). Excluded: SNDK (-88%, corporate-action artifact), UMC/NIO (<5%, foreign), TSEM/TER/MRVL under 5%. Sector ETF: SMH -3.2% (<= -2%, satisfies the Tier A sector condition for the semis/AI-infra names).
+- Gate-check (written): gate 1 (dated external sector/macro cause sourced this cycle) FAIL for all. One standard WebSearch for DELL/NBIS/LITE returned only undated or older pieces (July 2026, Oct 14 2026, an undated Zacks 'AI stocks bleed as inflation bites'); none dated 11/20/2026. Nothing from them is used as a cause; unverifiable = FAIL. Not evaluated further: gates 2 (fundamentals), 3 (>=2R anchor), 4 (multi-week downtrend) were not run, since gate 1 already fails; no earnings-window check was made. The foreign ADRs (NTES, BVN) also fail the US-listed mean-reversion intent (company/country-specific).
+- Result: no entry. Hourly WebSearch is due at the 10:12 ET run; momentum scan starts 10:32 ET.
 - Trades today 0 (0 forced).
