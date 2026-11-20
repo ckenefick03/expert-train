@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-20 14:03 ET",
+  "as_of": "2026-11-20 14:13 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "FLAT 14:03 ET 11/20 (Tier B), cash $398.81, no positions/orders. SPY 701.41 (-2.0%): three higher 5-min lows (699.41, 699.92, 701.43), no new low since 17:45Z: regime STABILIZING, MR ON. Tier B MR scan: 172 hits (semis/AI-infra liquidation); gate 1 (dated external cause) FAILS for all: a targeted search again found only Jun/Aug/Sep 2026 items, none dated 11/20. No entry. Trades 0 (0 forced).",
+  "status_note": "FLAT 14:13 ET 11/20 (hourly, Tier B), cash $398.81, no positions/orders. SPY 698.19 (-2.5%) broke below the 699.01 base low: the 14:03 Stabilizing signal failed, regime FALLING, MR and momentum OFF. Momentum sweep: GAP/GPN/UNH/HDB/CPNG, all blocked by regime and no cited catalysts. Hourly search found no 11/20 source. No entry. Trades 0 (0 forced).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-20",
@@ -4984,6 +4984,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-20 14:03 ET",
+      "equity": 398.81
+    },
+    {
+      "t": "2026-11-20 14:13 ET",
       "equity": 398.81
     }
   ],
@@ -15194,3 +15198,12 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - News check for the would-be-pass candidates (WebSearch, standard): 'Micron SK hynix Sandisk memory stocks plunge today AI chip selloff Friday'. The results are from Jun 23, Aug 18/24 and Sep 14 2026 (memory/AI selloffs); none is dated 11/20/2026, and the cause for today's move is not found. They are not used as a cause.
 - Gate-check (written): gate 1 (external dated sector/macro cause sourced this cycle) = FAIL for every candidate: unverifiable = FAIL under the news rule. Gates 2-4 (fundamentals, >=2R anchor, not a multi-week downtrend) were not evaluated since gate 1 fails; several names also look like multi-week downtrends (RSI 20-44) and the earnings-within-2-days check was not run.
 - Result: no entry. Trades today 0 (0 forced); minimum still unmet, no gate loosened. Tier B runs to 14:30 ET, Tier C to 15:30 ET, last entry cutoff 15:30 ET.
+
+### Cycle 1259 - 2026-11-20 14:13 ET (hourly run, Tier B, regime Falling again)
+- Dedupe: last commit 19:03:22Z, trigger 19:12:38Z (scheduled 19:12Z; ~9.3 min) -> proceed.
+- Reconcile (live): equity = cash = $398.81, positions empty, open orders empty. Nothing to stop-check.
+- Tape: SPY 698.19 (-2.47%), QQQ 617.88 (-4.2%), SMH 408.88 (-8.6%), IWM 259.17 (-1.9%), XLV 178.56 (+0.6%). SPY 5-min lows: 701.425 (18:55Z), 700.49 (19:00Z), 699.51 (19:05Z) (lower lows), and the live price 698.19 is below the 699.01 base low: a new session low. The 14:03 Stabilizing read (three higher lows) lasted one cycle and has failed. Regime: FALLING -> MR off, momentum off.
+- Momentum sweep (cap >=$2B, >=+3%, RVOL(30d) >=1.0; real minimum 1.3): 5 hits: GAP +12.2% (RVOL 3.18), GPN +12.0% (RVOL 1.51), UNH +4.4% (1.21), HDB +4.9% (1.46, foreign ADR), CPNG +3.5% (1.05). All fail the regime gate (Falling), HDB also fails as a foreign ADR, UNH and CPNG are under the 1.3 RVOL minimum, and no catalyst was cited or searched for GAP/GPN. No catalyst source found, so gate 2 would fail regardless.
+- MR scan: not rerun this cycle (regime has MR off; the 14:03 sweep listed 172 names, all failing gate 1).
+- News (WebSearch, standard, hourly): 'Wall Street Friday afternoon stocks AI chip rout options expiration November 20'. No result dated 11/20/2026 (items from 2023-2025). Nothing used as a cause, so MR gate 1 stays FAIL.
+- Result: no entry. Trades today 0 (0 forced); minimum unmet, no gate loosened. Tier B runs to 14:30 ET, then Tier C (14:30-15:30), last entry cutoff 15:30 ET.
