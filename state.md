@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-20 12:53 ET",
+  "as_of": "2026-11-20 13:03 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "FLAT 12:53 ET 11/20 (Tier B), cash $398.81, no positions/orders. SPY 699.62 (-2.3%), new session low 699.01 (17:45Z): regime FALLING, MR and momentum OFF. SMH 409.9 (-8.4%), QQQ -3.9%. Scans skipped. No entry. Trades 0 (0 forced).",
+  "status_note": "FLAT 13:03 ET 11/20 (Tier B), cash $398.81, no positions/orders. SPY 699.79 (-2.2%): two higher 5-min lows since the 699.01 session low (699.41, 699.66), no new low: edging toward Stabilizing, not confirmed; MR/momentum still OFF. SMH 409.9 (-8.4%). Scans skipped. No entry. Trades 0 (0 forced).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-20",
@@ -4956,6 +4956,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-20 12:53 ET",
+      "equity": 398.81
+    },
+    {
+      "t": "2026-11-20 13:03 ET",
       "equity": 398.81
     }
   ],
@@ -15111,4 +15115,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Reconcile (live): equity = cash = $398.81, positions empty, open orders empty. Nothing to stop-check.
 - Tape: SPY 699.62 (-2.27%), QQQ 619.81 (-3.9%), SMH 409.87 (-8.4%), IWM 259.30 (-1.9%), XLV 178.38 (+0.5%). SPY 5-min lows: 699.25, 699.89, 699.01 (17:45Z, new session low). Regime: FALLING -> MR off, momentum off.
 - Scans skipped (disclosed): regime has both strategies off. Hourly news search due 13:12 ET.
+- Result: no entry. Trades today 0 (0 forced); minimum unmet, no gate loosened.
+
+### Cycle 1252 - 2026-11-20 13:03 ET (Tier B, regime Falling -> edging toward Stabilizing)
+- Dedupe: last commit 17:53:21Z, trigger 18:02:40Z (~9.3 min) -> proceed.
+- Reconcile (live): equity = cash = $398.81, positions empty, open orders empty. Nothing to stop-check.
+- Tape: SPY 699.79 (-2.25%), QQQ 619.98 (-3.9%), SMH 409.88 (-8.4%), IWM 259.30 (-1.9%), XLV 178.35 (+0.5%). SPY 5-min lows since the 17:45Z session low 699.01: 699.41 (17:50Z), 699.66 (17:55Z): two higher lows, no new low. The ~3-consecutive-higher-lows test for Stabilizing is not yet met; the 18:00Z bar is still forming. Regime: FALLING / unconfirmed -> MR off, momentum off.
+- Scans skipped (disclosed): regime has both strategies off. If the 18:00Z bar's low holds above 699.66, the 13:12 hourly cycle will treat the regime as Stabilizing and run the Tier B MR scan (>=3.5%, RSI<45) plus the hourly news search.
 - Result: no entry. Trades today 0 (0 forced); minimum unmet, no gate loosened.
