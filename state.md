@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-20 09:16 ET",
+  "as_of": "2026-11-20 09:22 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "FLAT 09:16 ET 11/20, cash $398.81, no positions/orders. Pre-market SPY ~712.1 (-0.5%), QQQ ~637.0 (-1.2%), SMH ~437.0 (-2.4%), IWM ~263.8 (-0.2%). Hourly WebSearch found no 11/20-dated source (nothing used). No entries before 10:00 ET (momentum 10:30). Breaker level $394.19, cushion $4.62.",
+  "status_note": "FLAT 09:22 ET 11/20, cash $398.81, no positions/orders. Pre-market SPY ~712.3 (-0.5%), QQQ ~637.1 (-1.2%), SMH ~437.8 (-2.2%), IWM ~264.0 (-0.1%): pre-market bounce has stalled/flattened. No entries before 10:00 ET (momentum 10:30). Breaker level $394.19, cushion $4.62.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-20",
@@ -4868,6 +4868,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-20 09:16 ET",
+      "equity": 398.81
+    },
+    {
+      "t": "2026-11-20 09:22 ET",
       "equity": 398.81
     }
   ],
@@ -14863,3 +14867,10 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - News (WebSearch, standard, hourly): query 'stock market today semiconductors selloff Nasdaq futures'. No result dated 11/20/2026; the newest dated item was Oct 15, 2026 and the rest were earlier in 2026. Nothing from the search is used or cited as a cause for today's tape. Any mean-reversion gate 1 stays UNVERIFIED = FAIL until a dated source is found.
 - Before 10:00 ET: no entry allowed; preview_scans skipped (disclosed, as in Cycles 1226-1228).
 - Trades today 0 (0 forced). Next: 09:22 ET; first entry-eligible cycle 10:02 ET.
+
+### Cycle 1230 - 2026-11-20 09:22 ET (pre-session, no entries allowed)
+- Dedupe: last commit 14:16:30Z, trigger 14:22:34Z (~6.1 min, just past the 6-minute floor) -> proceed.
+- Reconcile (live): equity = cash = $398.81, positions empty, open orders empty. Nothing to stop-check.
+- Tape (pre-market, thin): SPY ~712.3 (-0.5%), QQQ ~637.1 (-1.2%), SMH ~437.8 (-2.2%), IWM ~264.0 (-0.1%). The narrowing has flattened (SPY 712.1 -> 712.3). Pre-market only.
+- Before 10:00 ET: no entry allowed; preview_scans skipped (disclosed). No search this cycle (hourly search ran in Cycle 1229).
+- Trades today 0 (0 forced). Next: 09:32 ET; first entry-eligible cycle 10:02 ET.
