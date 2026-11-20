@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-20 15:43 ET",
+  "as_of": "2026-11-20 15:48 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "FLAT 15:43 ET 11/20, cash $398.81, no positions/orders. Entry window closed; 0 trades (0 forced). SPY 691.05 (-3.5%). Close recap next cycle (~15:48 ET); flat overnight.",
+  "status_note": "CLOSE 11/20: FLAT overnight, cash $398.81, no positions/orders. 0 trades (0 forced), day P&L $0.00; the 1-trade minimum was missed (no gate loosened). SPY 693.20 (-3.2%), SMH -10.0%, QQQ -5.1%: a broad AI/semis liquidation with no dated cause found. Breaker level $394.19 (cushion $4.62). Next: pre-open brief ~08:30 ET on the next trading day (Mon 11/23).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-20",
@@ -5024,6 +5024,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-20 15:43 ET",
+      "equity": 398.81
+    },
+    {
+      "t": "2026-11-20 15:48 ET",
       "equity": 398.81
     }
   ],
@@ -15306,3 +15310,14 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Reconcile (live): equity = cash = $398.81, positions empty, open orders empty. Nothing to stop-check.
 - Tape (quotes only): SPY 691.05 (-3.47%), QQQ 610.86 (-5.3%), SMH 401.58 (-10.3%), IWM 257.31 (-2.6%), XLV 177.24 (-0.1%).
 - No entries permitted after 15:30 ET; scans skipped (disclosed). Trades today 0 (0 forced). Next: close recap (~15:48 ET).
+
+### Cycle 1269 - 2026-11-20 15:48 ET (CLOSE RECAP)
+- Stop checks: none (no positions). Reconcile (live): equity = cash = $398.81, positions empty, open orders empty.
+- Tape: SPY 693.20 (-3.17%), QQQ 612.41 (-5.1%), SMH 402.56 (-10.0%), IWM 257.97 (-2.4%), XLV 177.74 (+0.2%). No entries after 15:30 ET; scans skipped, disclosed.
+- **Overnight status: nothing rolls overnight. The account is 100% cash ($398.81), so there is no position and no thesis to carry; the next trading day is Monday 11/23 (a weekend sits in between).**
+- **Day recap 11/20:** ~65 cycles ran from the 08:27 ET pre-open brief through 15:48 ET (every 10 minutes, with the hourly WebSearch runs). Trades 0, forced 0, day P&L $0.00, equity $398.81 (start = end). Market: a broad AI/semis/data-center liquidation. SPY closed the day near -3.2% (low 692.70), QQQ about -5.1%, SMH about -10%, IWM about -2.4%, healthcare (XLV) the lone flat sector ETF. The regime was Falling for almost the whole session; the only Stabilizing read (14:03 ET, three higher lows) lasted one cycle before a new session low. The mean-reversion sweeps (10:03, 10:15, 10:22, 14:03) listed 15-172 oversold names, e.g. LITE, DELL, NBIS, IREN, MU, MRVL, LRCX, AMAT, NVDA, but mean-reversion gate 1 (a dated external sector/macro cause sourced in the same cycle) failed every time: the hourly WebSearch runs (09:16, 10:15, 11:14, 12:13, 13:13, 14:03, 14:13 [targeted], 15:13) never returned a single result dated 11/20/2026. A 13:13 lead (NVDA earnings after 11/19) was checked with get_earnings_results at 13:23 and refuted (NVDA reported 11/17). The momentum sweeps (10:32 and 14:13) found only GAP, GPN, UNH, HDB and CPNG, all blocked by the regime, with no catalysts cited for the big movers.
+- Skips and misses: both strategies were off for the session by the regime rules; the 1-trade-per-day minimum was missed again (0 entries on 11/19 and 11/20); no gate was loosened and no 'forced' trade was made because no candidate passed every gate.
+- Errors and disclosures: the git commit label for the 13:13 hourly cycle says 'Cycle 1254' while its state.md entry is 'Cycle 1253' (noted in Cycle 1254); many cycles skipped the preview_scans because the regime had both strategies off (each disclosed); the 08:27 pre-open brief's SNDK -88% was a data artifact (excluded); WebSearch returned older or undated items every time, none used. Missed cycles: none known.
+- Drawdown: peak equity $437.99, breaker level $394.19, equity $398.81 (cushion $4.62).
+- Open user questions (unanswered, defaults kept): marginal RVOL/spread passes, one-bar vs confirmed-hold entry, sizing near the breaker, profit-protection rule, time-of-day-adjusted RVOL, catalyst-sourcing standard.
+- Weekend note: markets are closed Sat 11/21 and Sun 11/22. The next pre-open brief is due Mon 11/23 ~08:30 ET.
