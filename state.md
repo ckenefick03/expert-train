@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-20 13:43 ET",
+  "as_of": "2026-11-20 13:53 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "FLAT 13:43 ET 11/20 (Tier B), cash $398.81, no positions/orders. SPY 700.89 (-2.1%) in the 699-702.5 base, no new low since 17:45Z (699.01); latest low 701.38 is the highest of the base but not three consecutive higher lows: Stabilizing unconfirmed, MR/momentum OFF. Gate 1 (dated cause) still unmet. Scans skipped. No entry. Trades 0 (0 forced).",
+  "status_note": "FLAT 13:53 ET 11/20 (Tier B), cash $398.81, no positions/orders. SPY 701.54 (-2.0%) still in the 699-702.5 base, no new low since 17:45Z (699.01): lows 701.38, 699.93, 699.41 (lower): Stabilizing unconfirmed, MR/momentum OFF. Gate 1 (dated cause) unmet. Scans skipped. No entry. Trades 0 (0 forced). Hourly search due 14:12 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-20",
@@ -4976,6 +4976,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-20 13:43 ET",
+      "equity": 398.81
+    },
+    {
+      "t": "2026-11-20 13:53 ET",
       "equity": 398.81
     }
   ],
@@ -15170,3 +15174,10 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Tape: SPY 700.89 (-2.09%), QQQ 620.79 (-3.8%), SMH 412.02 (-7.9%), IWM 259.81 (-1.7%), XLV 178.76 (+0.7%). SPY 5-min lows since the 17:45Z session low 699.01: 699.08, 699.53, 700.44, 699.68, 699.275 (18:30Z, lower than 699.68), 701.38 (18:35Z, highest of the base). No new session low for ~55 min but the lows are not three consecutive higher ones (the sequence broke at 699.68 and 699.275). Regime: basing/unconfirmed -> MR off, momentum off under a strict read of 4.1.
 - Scans skipped (disclosed). MR gate 1 (dated external cause sourced in-cycle) is also unmet; the hourly news search is due at 14:12 ET.
 - Result: no entry. Trades today 0 (0 forced); minimum unmet, no gate loosened. Tier B runs to 14:30 ET, then Tier C 14:30-15:30.
+
+### Cycle 1257 - 2026-11-20 13:53 ET (Tier B, basing range, Stabilizing unconfirmed)
+- Dedupe: last commit 18:42:38Z, trigger 18:53:14Z (~10.6 min) -> proceed.
+- Reconcile (live): equity = cash = $398.81, positions empty, open orders empty. Nothing to stop-check.
+- Tape: SPY 701.54 (-2.0%), QQQ 621.92 (-3.6%), SMH 413.00 (-7.7%), IWM 260.04 (-1.6%), XLV 178.73 (+0.7%). SPY 5-min lows: 701.38 (18:35Z), 699.93 (18:40Z), 699.41 (18:45Z): lower lows inside the 699.01-702.5 base; no new session low. Regime: basing/unconfirmed -> MR off, momentum off (strict read of 4.1).
+- Scans skipped (disclosed). MR gate 1 remains unmet (no 11/20-dated source found in the 13:13 search). Hourly search due 14:12 ET.
+- Result: no entry. Trades today 0 (0 forced); minimum unmet, no gate loosened.
