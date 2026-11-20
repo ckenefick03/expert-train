@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-20 14:13 ET",
+  "as_of": "2026-11-20 14:23 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "FLAT 14:13 ET 11/20 (hourly, Tier B), cash $398.81, no positions/orders. SPY 698.19 (-2.5%) broke below the 699.01 base low: the 14:03 Stabilizing signal failed, regime FALLING, MR and momentum OFF. Momentum sweep: GAP/GPN/UNH/HDB/CPNG, all blocked by regime and no cited catalysts. Hourly search found no 11/20 source. No entry. Trades 0 (0 forced).",
+  "status_note": "FLAT 14:23 ET 11/20 (Tier B), cash $398.81, no positions/orders. SPY 697.37 (-2.6%), fresh session lows (697.41): regime FALLING, MR and momentum OFF. SMH 408.2 (-8.8%), QQQ -4.3%. Scans skipped. No entry. Trades 0 (0 forced). Tier C opens 14:30 ET; last entry cutoff 15:30 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-20",
@@ -4988,6 +4988,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-20 14:13 ET",
+      "equity": 398.81
+    },
+    {
+      "t": "2026-11-20 14:23 ET",
       "equity": 398.81
     }
   ],
@@ -15207,3 +15211,10 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - MR scan: not rerun this cycle (regime has MR off; the 14:03 sweep listed 172 names, all failing gate 1).
 - News (WebSearch, standard, hourly): 'Wall Street Friday afternoon stocks AI chip rout options expiration November 20'. No result dated 11/20/2026 (items from 2023-2025). Nothing used as a cause, so MR gate 1 stays FAIL.
 - Result: no entry. Trades today 0 (0 forced); minimum unmet, no gate loosened. Tier B runs to 14:30 ET, then Tier C (14:30-15:30), last entry cutoff 15:30 ET.
+
+### Cycle 1260 - 2026-11-20 14:23 ET (Tier B, regime Falling)
+- Dedupe: last commit 19:13:06Z, trigger 19:22:35Z (~9.5 min) -> proceed.
+- Reconcile (live): equity = cash = $398.81, positions empty, open orders empty. Nothing to stop-check.
+- Tape: SPY 697.37 (-2.58%), QQQ 617.18 (-4.3%), SMH 408.19 (-8.8%), IWM 258.89 (-2.0%), XLV 178.53 (+0.6%). SPY 5-min lows: 699.51 (19:05Z), 697.73 (19:10Z), 697.41 (19:15Z): each a new session low. Regime: FALLING -> MR off, momentum off.
+- Scans skipped (disclosed): regime has both strategies off. Hourly news search due 15:12 ET.
+- Result: no entry. Trades today 0 (0 forced); minimum unmet, no gate loosened. Tier C opens 14:30 ET; the last entry cutoff is 15:30 ET, so the remaining entry windows are the 14:32, 14:42, 14:52, 15:02, 15:12 and 15:22 cycles.
