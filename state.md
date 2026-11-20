@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-20 13:53 ET",
+  "as_of": "2026-11-20 14:03 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "FLAT 13:53 ET 11/20 (Tier B), cash $398.81, no positions/orders. SPY 701.54 (-2.0%) still in the 699-702.5 base, no new low since 17:45Z (699.01): lows 701.38, 699.93, 699.41 (lower): Stabilizing unconfirmed, MR/momentum OFF. Gate 1 (dated cause) unmet. Scans skipped. No entry. Trades 0 (0 forced). Hourly search due 14:12 ET.",
+  "status_note": "FLAT 14:03 ET 11/20 (Tier B), cash $398.81, no positions/orders. SPY 701.41 (-2.0%): three higher 5-min lows (699.41, 699.92, 701.43), no new low since 17:45Z: regime STABILIZING, MR ON. Tier B MR scan: 172 hits (semis/AI-infra liquidation); gate 1 (dated external cause) FAILS for all: a targeted search again found only Jun/Aug/Sep 2026 items, none dated 11/20. No entry. Trades 0 (0 forced).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-20",
@@ -4980,6 +4980,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-20 13:53 ET",
+      "equity": 398.81
+    },
+    {
+      "t": "2026-11-20 14:03 ET",
       "equity": 398.81
     }
   ],
@@ -15181,3 +15185,12 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Tape: SPY 701.54 (-2.0%), QQQ 621.92 (-3.6%), SMH 413.00 (-7.7%), IWM 260.04 (-1.6%), XLV 178.73 (+0.7%). SPY 5-min lows: 701.38 (18:35Z), 699.93 (18:40Z), 699.41 (18:45Z): lower lows inside the 699.01-702.5 base; no new session low. Regime: basing/unconfirmed -> MR off, momentum off (strict read of 4.1).
 - Scans skipped (disclosed). MR gate 1 remains unmet (no 11/20-dated source found in the 13:13 search). Hourly search due 14:12 ET.
 - Result: no entry. Trades today 0 (0 forced); minimum unmet, no gate loosened.
+
+### Cycle 1258 - 2026-11-20 14:03 ET (Tier B, regime Stabilizing, MR on)
+- Dedupe: last commit 18:53:31Z, trigger 19:02:41Z (~9.2 min) -> proceed.
+- Reconcile (live): equity = cash = $398.81, positions empty, open orders empty. Nothing to stop-check.
+- Tape: SPY 701.41 (-2.02%), QQQ 621.99 (-3.6%), SMH 413.63 (-7.6%), IWM 260.05 (-1.6%), XLV 178.74 (+0.7%). SPY 5-min lows: 699.41 (18:45Z), 699.92 (18:50Z), 701.425 (18:55Z): three consecutive higher lows, no new session low since 17:45Z (699.01). Regime: STABILIZING -> mean-reversion ON (Tier B: >=3.5% drop, RSI<45); momentum needs stable/rising and relative strength, none in a -2% tape, so no momentum scan.
+- MR scan (Tier B: cap >=$5B, <=-3.5%, RSI<45): 172 hits. Deepest: HUT -14.9%, CLS -13.9%, IREN -13.7%, TTMI -13.1%, NBIS -12.6%, BE -12.4%, ONTO, SMTC, DOCN, CRDO, WDC, ALAB -11.6%, MU -11.1% (RSI 35.9), VICR, P, STX, LITE -10.6% (RSI 34.4), INTU -10.6%, ARM, SKHY, DELL -9.3% (RSI 32.5), MRVL -9.1%, KLAC -8.6%, AMAT -8.3%, LRCX -8.3% (RSI 35.7), TSM -7.8%, NVDA -6.9% (RSI 19.6), and many foreign ADRs and miners (SKM, ASX, SKHY, UMC, BVN, NTES). SNDK -89% is a corporate-action artifact, excluded. Individual stock moves have widened since the 10:03 and 12:13 sweeps (e.g. LITE -7.8% at 10:22 -> -10.6% now) even though the index has based.
+- News check for the would-be-pass candidates (WebSearch, standard): 'Micron SK hynix Sandisk memory stocks plunge today AI chip selloff Friday'. The results are from Jun 23, Aug 18/24 and Sep 14 2026 (memory/AI selloffs); none is dated 11/20/2026, and the cause for today's move is not found. They are not used as a cause.
+- Gate-check (written): gate 1 (external dated sector/macro cause sourced this cycle) = FAIL for every candidate: unverifiable = FAIL under the news rule. Gates 2-4 (fundamentals, >=2R anchor, not a multi-week downtrend) were not evaluated since gate 1 fails; several names also look like multi-week downtrends (RSI 20-44) and the earnings-within-2-days check was not run.
+- Result: no entry. Trades today 0 (0 forced); minimum still unmet, no gate loosened. Tier B runs to 14:30 ET, Tier C to 15:30 ET, last entry cutoff 15:30 ET.
