@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-20 13:03 ET",
+  "as_of": "2026-11-20 13:13 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "FLAT 13:03 ET 11/20 (Tier B), cash $398.81, no positions/orders. SPY 699.79 (-2.2%): two higher 5-min lows since the 699.01 session low (699.41, 699.66), no new low: edging toward Stabilizing, not confirmed; MR/momentum still OFF. SMH 409.9 (-8.4%). Scans skipped. No entry. Trades 0 (0 forced).",
+  "status_note": "FLAT 13:13 ET 11/20 (hourly, Tier B), cash $398.81, no positions/orders. SPY 699.51 (-2.3%) range-bound just above the 699.01 low; the higher-lows sequence stalled (699.41, 699.66, 699.56, 699.55): regime weak/unconfirmed, MR and momentum OFF. Hourly search: still no 11/20-dated source; one lead (NVDA earnings 11/19 after close) is unverified. Scans skipped. No entry. Trades 0 (0 forced).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-20",
@@ -4960,6 +4960,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-20 13:03 ET",
+      "equity": 398.81
+    },
+    {
+      "t": "2026-11-20 13:13 ET",
       "equity": 398.81
     }
   ],
@@ -15122,4 +15126,12 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Reconcile (live): equity = cash = $398.81, positions empty, open orders empty. Nothing to stop-check.
 - Tape: SPY 699.79 (-2.25%), QQQ 619.98 (-3.9%), SMH 409.88 (-8.4%), IWM 259.30 (-1.9%), XLV 178.35 (+0.5%). SPY 5-min lows since the 17:45Z session low 699.01: 699.41 (17:50Z), 699.66 (17:55Z): two higher lows, no new low. The ~3-consecutive-higher-lows test for Stabilizing is not yet met; the 18:00Z bar is still forming. Regime: FALLING / unconfirmed -> MR off, momentum off.
 - Scans skipped (disclosed): regime has both strategies off. If the 18:00Z bar's low holds above 699.66, the 13:12 hourly cycle will treat the regime as Stabilizing and run the Tier B MR scan (>=3.5%, RSI<45) plus the hourly news search.
+- Result: no entry. Trades today 0 (0 forced); minimum unmet, no gate loosened.
+
+### Cycle 1253 - 2026-11-20 13:13 ET (hourly run, Tier B, regime weak/unconfirmed)
+- Dedupe: last commit 18:02:58Z, trigger 18:12:08Z (scheduled 18:12Z; ~9.2 min) -> proceed.
+- Reconcile (live): equity = cash = $398.81, positions empty, open orders empty. Nothing to stop-check.
+- Tape: SPY 699.51 (-2.28%), QQQ 619.39 (-4.0%), SMH 409.48 (-8.5%), IWM 259.36 (-1.8%), XLV 178.54 (+0.6%). SPY 5-min lows after the 699.01 session low: 699.41, 699.66, 699.56, 699.55. The higher-lows sequence stalled at two (the next two lows were below 699.66), and there is no new session low since 17:45Z (live price 699.51 is still above 699.01). Regime: neither Falling (no new low) nor Stabilizing (no 3 higher lows): range-bound weak tape; the rules give MR no enable signal, so MR stays off and momentum stays off.
+- News (WebSearch, standard, hourly): 'Wall Street stocks close Friday Nasdaq chipmakers Nvidia November 2026'. No result is dated 11/20/2026; the newest pieces are Nov 13, 14 and 16 (e.g. a Nov 13 close with chip weakness and PPI 0.5% m/m for October) and some of them contradict each other (one CBS Nov 14 item cites different index levels). The search summary also noted NVDA's quarterly report was due after the close on 11/19, but no result I found states the outcome or its market reaction, and I did not confirm it with get_earnings_results this cycle. This is a LEAD, not a verified cause: nothing is cited as the cause of today's selloff, so MR gate 1 (dated external cause sourced this cycle) stays FAIL. Follow-up for the next cycle: check NVDA via get_earnings_results (a sourced datapoint) and look for a post-report dated headline.
+- Scans skipped (disclosed): no regime enable signal for either strategy, so no full-universe scan despite the hourly cadence.
 - Result: no entry. Trades today 0 (0 forced); minimum unmet, no gate loosened.
