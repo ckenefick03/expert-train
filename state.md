@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-20 08:30 ET (pre-open)",
+  "as_of": "2026-11-20 08:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "PRE-OPEN 11/20: FLAT, cash $398.81, no positions/orders, no orders placed. Pre-market SPY ~708.8 (-1.0%), QQQ ~633 (-1.9%), SMH ~431.4 (-3.6%): semis/AI-infra led risk-off continues. Regime at open: expected Falling (MR off until Stabilizing); no entries before 10:00 ET (momentum 10:30). Breaker level $394.19, cushion $4.62.",
+  "status_note": "FLAT 08:43 ET 11/20, cash $398.81, no positions/orders. Pre-market SPY ~707.8 (-1.1%), QQQ ~631.6 (-2.1%), SMH ~431.0 (-3.7%), IWM ~263.0 (-0.5%): risk-off persists. No entries before 10:00 ET (momentum 10:30). Regime: expected Falling at the open. Breaker level $394.19, cushion $4.62.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-20",
@@ -4852,6 +4852,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-20 08:30 ET",
+      "equity": 398.81
+    },
+    {
+      "t": "2026-11-20 08:43 ET",
       "equity": 398.81
     }
   ],
@@ -14818,3 +14822,10 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Watch list, mean-reversion (all conditional on gates; need a dated sector/macro cause, neutral fundamentals, >=2R anchor): LRCX, AMAT (semi-equipment, RSI mid-30s), PLTR (RSI 31), GEV (RSI 37, -4%), META (RSI 37, -3.7%). Tier A starts 10:00 ET and requires >=5% intraday with RSI<35 (so the RSI<35 names matter most). NVDA is flagged: RSI 19.6 but a mega-cap in a liquidation, and not a stabilizing signal.
 - Watch list, momentum (earliest 10:30 ET): MOG.A (post-earnings beat, a post-report thesis is allowed but needs a held pullback and rising 9/20 EMAs), ESE (+5.4%, check the cause and RVOL), IESC (EPS 4.07 vs 2.81 est., confirm cap/volume), BJ (beat, check RS vs retail peers). All unverified beyond the scan and earnings table; no catalyst is claimed until checked in-session.
 - No entries before 10:00 ET. The first cycle at :02/:12 will run the full reconcile and scans.
+
+### Cycle 1226 - 2026-11-20 08:43 ET (pre-session, no entries allowed)
+- Dedupe: last commit 13:28:13Z, trigger 13:43:15Z (~15 min) -> proceed.
+- Reconcile (live): equity = cash = $398.81, positions empty, open orders empty. Nothing to stop-check.
+- Tape (pre-market, thin): SPY ~707.8 (-1.1%), QQQ ~631.6 (-2.1%), SMH ~431.0 (-3.7%), IWM ~263.0 (-0.5%). Slightly weaker than the 08:27 brief. Regime: expected Falling at the open (MR off; momentum off by tape).
+- Before the 10:00 ET entry window: no entry of any kind is allowed, so the preview_scans were skipped this cycle (disclosed; the pre-open brief already covered the pre-market sweep).
+- Trades today 0 (0 forced). Next cycle ~08:53 ET; first entry-eligible cycles start at 10:02 ET (MR Tier A), momentum 10:32 ET.
