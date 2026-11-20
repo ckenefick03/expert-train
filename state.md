@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-20 14:53 ET",
+  "as_of": "2026-11-20 15:03 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "FLAT 14:53 ET 11/20 (Tier C), cash $398.81, no positions/orders. SPY 694.39 (-3.0%) in a tight 693-697 bounce above the 692.85 session low; lows 693.35, 695.33, 694.68 (not 3 higher): Stabilizing unconfirmed, MR and momentum OFF. SMH 404.4 (-9.6%). Scans skipped. No entry. Trades 0 (0 forced). Cutoff 15:30 ET.",
+  "status_note": "FLAT 15:03 ET 11/20 (Tier C), cash $398.81, no positions/orders. SPY 694.28 (-3.0%) in a tight 693-697 range for 30 min above the 692.85 low; lows 694.68, 693.95, 694.92 (no 3 higher): Stabilizing unconfirmed, MR and momentum OFF. SMH 404.7 (-9.6%). Scans skipped. No entry. Trades 0 (0 forced). Cutoff 15:30 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-20",
@@ -5004,6 +5004,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-20 14:53 ET",
+      "equity": 398.81
+    },
+    {
+      "t": "2026-11-20 15:03 ET",
       "equity": 398.81
     }
   ],
@@ -15251,3 +15255,10 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Tape: SPY 694.39 (-3.00%), QQQ 614.48 (-4.7%), SMH 404.44 (-9.6%), IWM 258.04 (-2.3%), XLV 178.15 (+0.4%). SPY 5-min lows after the 692.85 session low: 693.35 (19:35Z), 695.33 (19:40Z), 694.68 (19:45Z, lower than the prior low). One higher low then a lower one: no confirmed Stabilizing and no new session low. Regime: weak range-bound/unconfirmed -> MR off, momentum off.
 - Scans skipped (disclosed). Hourly news search due 15:12 ET.
 - Result: no entry. Trades today 0 (0 forced); minimum unmet, no gate loosened. Windows left before the 15:30 cutoff: 15:02, 15:12, 15:22.
+
+### Cycle 1264 - 2026-11-20 15:03 ET (Tier C, narrow range, Stabilizing unconfirmed)
+- Dedupe: last commit 19:53:08Z, trigger 20:02:41Z (~9.6 min) -> proceed.
+- Reconcile (live): equity = cash = $398.81, positions empty, open orders empty. Nothing to stop-check.
+- Tape: SPY 694.28 (-3.01%), QQQ 614.34 (-4.8%), SMH 404.66 (-9.6%), IWM 257.96 (-2.4%), XLV 178.18 (+0.4%). SPY 5-min lows: 695.33 (19:40Z), 694.68 (19:45Z), 693.95 (19:50Z), 694.92 (19:55Z): a 693-697 range for ~30 minutes with no new session low (692.85) but no three consecutive higher lows. Regime: unconfirmed/range -> MR off, momentum off.
+- Scans skipped (disclosed). Hourly news search due 15:12 ET.
+- Result: no entry. Trades today 0 (0 forced); minimum unmet, no gate loosened. Windows left before the 15:30 cutoff: 15:12 and 15:22.
