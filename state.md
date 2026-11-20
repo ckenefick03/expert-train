@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-20 12:03 ET",
+  "as_of": "2026-11-20 12:13 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "FLAT 12:03 ET 11/20 (Tier B), cash $398.81, no positions/orders. SPY 701.64 (-2.0%), at/below the 701.69 session low after a failed bounce (704.31 high): regime FALLING, MR and momentum OFF. SMH 410.1 (-8.4%), QQQ -3.8%. Scans skipped (regime off). No entry. Trades 0 (0 forced).",
+  "status_note": "FLAT 12:13 ET 11/20 (hourly, Tier B), cash $398.81, no positions/orders. SPY 701.59 (-2.0%), new session low 700.85 at 17:00Z: regime FALLING, MR and momentum OFF. SMH 410.2 (-8.3%). Hourly news search again found nothing dated 11/20 (cause unverified). Scans skipped (regime off). No entry. Trades 0 (0 forced).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-20",
@@ -4936,6 +4936,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-20 12:03 ET",
+      "equity": 398.81
+    },
+    {
+      "t": "2026-11-20 12:13 ET",
       "equity": 398.81
     }
   ],
@@ -15056,3 +15060,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Tape: SPY 701.64 (-1.99%), QQQ 620.83 (-3.8%), SMH 410.07 (-8.4%), IWM 259.70 (-1.7%), XLV 178.97 (+0.8%). SPY 5-min: 16:50Z low 701.83 (not below 701.69), 16:55Z bar rallied to a 704.31 high and closed 704.24, but the live price is back at 701.64, at/below the 701.69 low (a new session low by 0.05). Regime: FALLING -> MR off, momentum off.
 - Scans skipped (disclosed): regime has both strategies off. Hourly news search due at the next :12 run.
 - Result: no entry. Trades today 0 (0 forced); minimum unmet, no gate loosened.
+
+### Cycle 1247 - 2026-11-20 12:13 ET (hourly run, Tier B, regime Falling)
+- Dedupe: last commit 17:03:01Z, trigger 17:12:54Z (scheduled 17:12Z; ~9.9 min) -> proceed.
+- Reconcile (live): equity = cash = $398.81, positions empty, open orders empty. Nothing to stop-check.
+- Tape: SPY 701.59 (-2.0%), QQQ 621.03 (-3.7%), SMH 410.21 (-8.3%), IWM 259.60 (-1.7%), XLV 178.96 (+0.8%). SPY 5-min: 17:00Z bar printed a new session low 700.88 (close 700.91) after a failed bounce to 704.31; the 17:05Z bar low 700.85 is lower still; close 703.11. Regime: FALLING -> MR off, momentum off.
+- News (WebSearch, standard, hourly): 'stock market news November 20 2026 S&P 500 Nasdaq selloff reason'. No result dated 11/20/2026; items were from 2024-2026 earlier episodes (Feb 2026 AI-spend worries, June 2026 rate-hike/chip rout, an undated Nasdaq -5.5% day). Not used or cited as a cause for today. Cause of today's selloff remains unverified, so MR gate 1 (dated external cause sourced this cycle) is FAIL for any name.
+- Scans skipped (disclosed): regime has both strategies off, so no full-universe scan despite the hourly cadence.
+- Result: no entry. Trades today 0 (0 forced); minimum unmet, no gate loosened. Tier B runs to 14:30 ET.
