@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-20 13:23 ET",
+  "as_of": "2026-11-20 13:33 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "FLAT 13:23 ET 11/20 (Tier B), cash $398.81, no positions/orders. SPY 701.03 (-2.1%) bouncing in a weak range above the 699.01 low (last bar low 699.53, no new low): regime weak/unconfirmed, MR and momentum OFF. NVDA lead checked: tool shows NVDA reported 11/17 (EPS 2.68 vs 2.47 est), NOT 11/19: earlier hourly lead was wrong. Scans skipped. No entry. Trades 0 (0 forced).",
+  "status_note": "FLAT 13:33 ET 11/20 (Tier B), cash $398.81, no positions/orders. SPY 700.71 (-2.1%) in a 699-702 base since 17:45Z (no new low): lows 699.08, 699.53, 700.44, then 699.68: Stabilizing not strictly met; MR/momentum OFF. Gate 1 (dated cause) still unmet anyway. Scans skipped. No entry. Trades 0 (0 forced).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-20",
@@ -4968,6 +4968,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-20 13:23 ET",
+      "equity": 398.81
+    },
+    {
+      "t": "2026-11-20 13:33 ET",
       "equity": 398.81
     }
   ],
@@ -15147,4 +15151,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Tape: SPY 701.03 (-2.07%), QQQ 621.74 (-3.6%), SMH 412.07 (-7.9%), IWM 259.81 (-1.7%), XLV 178.55 (+0.6%), NVDA 136.17 (-6.7% vs 145.98 close). SPY 5-min lows: 699.56, 699.55, 699.08, 699.53 (no new low below 699.01; not three clean higher lows). Regime: weak range, no enable signal for either strategy.
 - NVDA follow-up (from the 13:13 lead): get_earnings_results shows NVDA's last report was 2026-11-17 pm (EPS actual 2.68 vs 2.47 est, verified), and the next is 2027-02-24. So the 13:13 search-summary claim that NVDA reported after the close on 11/19 is NOT supported for 2026; the 11/19 date in the tool belongs to 2025 (Q3 FY26). The lead is refuted: no earnings event on 11/19-11/20 explains today's tape. NVDA is -6.7% today on its own, on no report in the window. Still no dated cause for MR gate 1, which stays FAIL.
 - Scans skipped (disclosed): no regime enable signal. Hourly search ran at 13:13.
+- Result: no entry. Trades today 0 (0 forced); minimum unmet, no gate loosened.
+
+### Cycle 1255 - 2026-11-20 13:33 ET (Tier B, basing range, Stabilizing not strictly met)
+- Dedupe: last commit 18:23:21Z, trigger 18:33:02Z (~9.7 min) -> proceed.
+- Reconcile (live): equity = cash = $398.81, positions empty, open orders empty. Nothing to stop-check.
+- Tape: SPY 700.71 (-2.11%), QQQ 620.94 (-3.7%), SMH 411.74 (-8.0%), IWM 259.75 (-1.7%), XLV 178.55 (+0.6%). SPY 5-min lows since the 17:45Z session low 699.01: 699.08 (18:10Z), 699.53 (18:15Z), 700.44 (18:20Z), 699.68 (18:25Z): no new session low for ~45 min, a 699-702 base, but the last low (699.68) is below the prior one (700.44), so three consecutive higher lows are not met. Regime: basing/unconfirmed. Applying 4.1 strictly: Stabilizing is not confirmed (and it is not Falling), so MR and momentum stay off.
+- Scans skipped (disclosed). Even if the regime were confirmed, MR gate 1 (dated external sector/macro cause sourced in-cycle) remains unmet: the 13:13 search found no 11/20-dated source and the NVDA earnings lead was refuted at 13:23.
 - Result: no entry. Trades today 0 (0 forced); minimum unmet, no gate loosened.
