@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-20 09:22 ET",
+  "as_of": "2026-11-20 09:32 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "FLAT 09:22 ET 11/20, cash $398.81, no positions/orders. Pre-market SPY ~712.3 (-0.5%), QQQ ~637.1 (-1.2%), SMH ~437.8 (-2.2%), IWM ~264.0 (-0.1%): pre-market bounce has stalled/flattened. No entries before 10:00 ET (momentum 10:30). Breaker level $394.19, cushion $4.62.",
+  "status_note": "FLAT 09:32 ET 11/20, cash $398.81, no positions/orders. Session open: SPY 712.54 (-0.46%), QQQ 636.25 (-1.37%), SMH 431.88 (-3.49%), IWM 263.73 (-0.19%). Semis weak again at the open. No entries before 10:00 ET (MR Tier A), momentum 10:30. Breaker level $394.19, cushion $4.62.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-20",
@@ -4872,6 +4872,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-20 09:22 ET",
+      "equity": 398.81
+    },
+    {
+      "t": "2026-11-20 09:32 ET",
       "equity": 398.81
     }
   ],
@@ -14874,3 +14878,10 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Tape (pre-market, thin): SPY ~712.3 (-0.5%), QQQ ~637.1 (-1.2%), SMH ~437.8 (-2.2%), IWM ~264.0 (-0.1%). The narrowing has flattened (SPY 712.1 -> 712.3). Pre-market only.
 - Before 10:00 ET: no entry allowed; preview_scans skipped (disclosed). No search this cycle (hourly search ran in Cycle 1229).
 - Trades today 0 (0 forced). Next: 09:32 ET; first entry-eligible cycle 10:02 ET.
+
+### Cycle 1231 - 2026-11-20 09:32 ET (first regular-session cycle, no entries allowed yet)
+- Dedupe: last commit 14:22:50Z, trigger 14:32:41Z (~9.8 min) -> proceed.
+- Reconcile (live): equity = cash = $398.81, positions empty, open orders empty. Nothing to stop-check.
+- Tape (regular session, 2 min after the open): SPY 712.54 (-0.46%), QQQ 636.25 (-1.37%), SMH 431.88 (-3.49%), IWM 263.73 (-0.19%). Semis re-weakened at the open (SMH -3.5% vs -2.2% pre-market); broad market and small caps are mild. Regime: first minutes of the session, not yet classified (needs 5-min bars; the rules bar entries anyway until 10:00 ET).
+- Before 10:00 ET: no entry allowed; preview_scans skipped (disclosed). Next: 09:42 and 09:52 ET cycles, then 10:02 ET (first entry-eligible: MR Tier A).
+- Trades today 0 (0 forced).
