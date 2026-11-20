@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-20 11:53 ET",
+  "as_of": "2026-11-20 12:03 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "FLAT 11:53 ET 11/20 (Tier B), cash $398.81, no positions/orders. SPY 702.35 (-1.9%), new session low 701.69: regime FALLING, MR and momentum OFF. SMH 412.3 (-7.9%), QQQ -3.5%. Scans skipped (regime off). No entry. Trades 0 (0 forced).",
+  "status_note": "FLAT 12:03 ET 11/20 (Tier B), cash $398.81, no positions/orders. SPY 701.64 (-2.0%), at/below the 701.69 session low after a failed bounce (704.31 high): regime FALLING, MR and momentum OFF. SMH 410.1 (-8.4%), QQQ -3.8%. Scans skipped (regime off). No entry. Trades 0 (0 forced).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-20",
@@ -4932,6 +4932,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-20 11:53 ET",
+      "equity": 398.81
+    },
+    {
+      "t": "2026-11-20 12:03 ET",
       "equity": 398.81
     }
   ],
@@ -15044,4 +15048,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Reconcile (live): equity = cash = $398.81, positions empty, open orders empty. Nothing to stop-check.
 - Tape: SPY 702.35 (-1.89%), QQQ 622.31 (-3.5%), SMH 412.30 (-7.9%), IWM 260.29 (-1.5%), XLV 178.94 (+0.8%). SPY 5-min lows: 704.08, 703.54, 702.44, 701.69 (each lower; 16:45Z bar made a new session low 701.69). Regime: FALLING -> MR off, momentum off.
 - Scans skipped (disclosed): regime has both strategies off. Hourly news search due 12:12 ET.
+- Result: no entry. Trades today 0 (0 forced); minimum unmet, no gate loosened.
+
+### Cycle 1246 - 2026-11-20 12:03 ET (Tier B, regime Falling)
+- Dedupe: last commit 16:52:32Z, trigger 17:02:44Z (~10.2 min) -> proceed.
+- Reconcile (live): equity = cash = $398.81, positions empty, open orders empty. Nothing to stop-check.
+- Tape: SPY 701.64 (-1.99%), QQQ 620.83 (-3.8%), SMH 410.07 (-8.4%), IWM 259.70 (-1.7%), XLV 178.97 (+0.8%). SPY 5-min: 16:50Z low 701.83 (not below 701.69), 16:55Z bar rallied to a 704.31 high and closed 704.24, but the live price is back at 701.64, at/below the 701.69 low (a new session low by 0.05). Regime: FALLING -> MR off, momentum off.
+- Scans skipped (disclosed): regime has both strategies off. Hourly news search due at the next :12 run.
 - Result: no entry. Trades today 0 (0 forced); minimum unmet, no gate loosened.
