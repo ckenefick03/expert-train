@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-19 15:48 ET",
+  "as_of": "2026-11-20 08:30 ET (pre-open)",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,10 +41,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "CLOSE 11/19: FLAT overnight, cash $398.81, no positions/orders. 0 trades (0 forced), day P&L $0.00; the 1-trade minimum was missed, no gate loosened. SPY 716.29 (-1.90%). Breaker level $394.19 (cushion $4.62). Next: pre-open brief ~08:30 ET 11/20.",
+  "status_note": "PRE-OPEN 11/20: FLAT, cash $398.81, no positions/orders, no orders placed. Pre-market SPY ~708.8 (-1.0%), QQQ ~633 (-1.9%), SMH ~431.4 (-3.6%): semis/AI-infra led risk-off continues. Regime at open: expected Falling (MR off until Stabilizing); no entries before 10:00 ET (momentum 10:30). Breaker level $394.19, cushion $4.62.",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-11-19",
+    "date": "2026-11-20",
     "start_equity": 398.81,
     "trades": 0,
     "forced": 0
@@ -4848,6 +4848,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-19 15:48 ET",
+      "equity": 398.81
+    },
+    {
+      "t": "2026-11-20 08:30 ET",
       "equity": 398.81
     }
   ],
@@ -14803,3 +14807,14 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Disclosed process errors today: wrong MR filter thresholds in cycles 1204, 1220 and 1222 (corrected the next cycle), several cycles that did not re-query open orders, a mis-labeled bar time in the Cycle 1208 note (corrected in 1209), repeated MCP disconnects with no data gaps, and WebSearch never returned a 11/19-dated source (nothing from searches was used). Missed cycles: none known.
 - Drawdown: peak equity $437.99, breaker level $394.19, cushion $4.62 vs equity $398.81.
 - Open user questions (unanswered, defaults kept): marginal RVOL/spread passes, one-bar vs confirmed-hold entry, sizing near the breaker, profit-protection rule, time-of-day-adjusted RVOL, catalyst-sourcing standard.
+
+### Pre-open brief - 2026-11-20 08:27 ET (read-only, no orders)
+- Reconcile (live): equity = cash = $398.81, positions empty, open orders empty. Stop-check: nothing held. Breaker $394.19, cushion $4.62.
+- Tape (extended-hours quotes, 13:27Z; thin liquidity): SPY 708.8 (-1.0% vs 715.87 close), QQQ 633.0 (-1.9%), SMH 431.4 (-3.6%), IWM 263.1 (-0.4%), XLV 178.1-178.5 (+0.4-0.6%), PANW 353.4 (-2.3%). Semis and AI infrastructure are leading the decline; healthcare is bid.
+- Scanner (as of 13:27Z; the filter reads the all-day change): the MR sweep (cap >=$5B, <=-3.5%, RSI<45) returned 79 names, dominated by semis/AI-infra/optical/data-center power (MU -5.1%, TSM -6.1%, LRCX -3.9% RSI 35.7, AMAT -3.8% RSI 36.8, NVDA -3.6% RSI 19.6, PLTR -4.0% RSI 31.3, INTU -9.2%, DELL -5.9%). Excluded as data artifacts or foreign ADRs: SNDK (-88%, an implausible move, likely a corporate action), CIG.C, ENIC, SKM, UMC, ASX, SKHY, TSM, NTES. The momentum sweep (cap >=$2B, >=+3%) returned 10 names, mostly earnings gaps: MOG.A +4.9%, BKE +3.5% (both reporting this morning), ESE +5.4%, MZTI +6.3%, GAP +3.1%.
+- News (WebSearch, standard): the search returned nothing dated 11/20/2026 (newest item early Nov 2026). No source found this cycle explains the tape, so no news claim is made and any MR gate 1 cause stays UNVERIFIED = FAIL until a dated source is found in-session. Not a data gap: the search simply returned nothing current.
+- Earnings (get_earnings_calendar, cap >$1B, next 3 days, this morning): FRO, BJ, BKE, MOG.A, WRD, RLX, IESC all reported am 11/20 (EPS beats on BJ, MOG.A, IESC, BKE slight). Names reporting today or within 2 sessions are avoided except post-report thesis after the print.
+- Regime expectation: Falling at the open (SPY pre-market near the lows). MR stays off until Stabilizing (~3 higher 5-min lows, no new lows). Momentum needs relative strength at least 2 pts above the peer complex AND SPY, which is a high bar on a risk-off day.
+- Watch list, mean-reversion (all conditional on gates; need a dated sector/macro cause, neutral fundamentals, >=2R anchor): LRCX, AMAT (semi-equipment, RSI mid-30s), PLTR (RSI 31), GEV (RSI 37, -4%), META (RSI 37, -3.7%). Tier A starts 10:00 ET and requires >=5% intraday with RSI<35 (so the RSI<35 names matter most). NVDA is flagged: RSI 19.6 but a mega-cap in a liquidation, and not a stabilizing signal.
+- Watch list, momentum (earliest 10:30 ET): MOG.A (post-earnings beat, a post-report thesis is allowed but needs a held pullback and rising 9/20 EMAs), ESE (+5.4%, check the cause and RVOL), IESC (EPS 4.07 vs 2.81 est., confirm cap/volume), BJ (beat, check RS vs retail peers). All unverified beyond the scan and earnings table; no catalyst is claimed until checked in-session.
+- No entries before 10:00 ET. The first cycle at :02/:12 will run the full reconcile and scans.
