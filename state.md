@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-20 08:43 ET",
+  "as_of": "2026-11-20 08:53 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "FLAT 08:43 ET 11/20, cash $398.81, no positions/orders. Pre-market SPY ~707.8 (-1.1%), QQQ ~631.6 (-2.1%), SMH ~431.0 (-3.7%), IWM ~263.0 (-0.5%): risk-off persists. No entries before 10:00 ET (momentum 10:30). Regime: expected Falling at the open. Breaker level $394.19, cushion $4.62.",
+  "status_note": "FLAT 08:53 ET 11/20, cash $398.81, no positions/orders. Pre-market SPY ~709.6 (-0.9%), QQQ ~634.5 (-1.6%), SMH ~434.9 (-2.8%), IWM ~263.1 (-0.4%): losses narrowing from the 08:43 lows. No entries before 10:00 ET (momentum 10:30). Breaker level $394.19, cushion $4.62.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-20",
@@ -4856,6 +4856,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-20 08:43 ET",
+      "equity": 398.81
+    },
+    {
+      "t": "2026-11-20 08:53 ET",
       "equity": 398.81
     }
   ],
@@ -14829,3 +14833,10 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Tape (pre-market, thin): SPY ~707.8 (-1.1%), QQQ ~631.6 (-2.1%), SMH ~431.0 (-3.7%), IWM ~263.0 (-0.5%). Slightly weaker than the 08:27 brief. Regime: expected Falling at the open (MR off; momentum off by tape).
 - Before the 10:00 ET entry window: no entry of any kind is allowed, so the preview_scans were skipped this cycle (disclosed; the pre-open brief already covered the pre-market sweep).
 - Trades today 0 (0 forced). Next cycle ~08:53 ET; first entry-eligible cycles start at 10:02 ET (MR Tier A), momentum 10:32 ET.
+
+### Cycle 1227 - 2026-11-20 08:53 ET (pre-session, no entries allowed)
+- Dedupe: last commit 13:43:35Z, trigger 13:53:20Z (~9.8 min) -> proceed.
+- Reconcile (live): equity = cash = $398.81, positions empty, open orders empty. Nothing to stop-check.
+- Tape (pre-market, thin): SPY ~709.6 (-0.9%), QQQ ~634.5 (-1.6%), SMH ~434.9 (-2.8%), IWM ~263.1 (-0.4%). Losses have narrowed from the 08:43 reading (SPY 707.8, QQQ 631.6, SMH 431.0), a pre-market bounce only; not a regime signal (pre-open liquidity is thin).
+- Before the 10:00 ET entry window: no entry allowed; preview_scans skipped (disclosed, as in Cycle 1226).
+- Trades today 0 (0 forced). Next: 09:02 ET cycle; first entry-eligible cycle 10:02 ET.
