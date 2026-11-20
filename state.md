@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-20 15:23 ET",
+  "as_of": "2026-11-20 15:32 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "FLAT 15:23 ET 11/20 (Tier C, LAST entry cycle before the 15:30 cutoff), cash $398.81, no positions/orders. SPY 694.56 (-3.0%) in a 692.70-696 range; lows 693.42, 693.28 not higher: Stabilizing unconfirmed, MR and momentum OFF. No entry. 0 trades (0 forced) so far today; the 1-trade minimum will be missed with no gate loosened. Close recap ~15:48 ET.",
+  "status_note": "FLAT 15:32 ET 11/20, cash $398.81, no positions/orders. Entry window closed at 15:30 ET with 0 trades (0 forced; no candidate passed every gate). SPY 691.39 (-3.4%), session lows still being made into the close. Close recap at ~15:48 ET; flat overnight.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-20",
@@ -5016,6 +5016,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-20 15:23 ET",
+      "equity": 398.81
+    },
+    {
+      "t": "2026-11-20 15:32 ET",
       "equity": 398.81
     }
   ],
@@ -15285,3 +15289,10 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Tape: SPY 694.56 (-2.97%), QQQ 614.06 (-4.8%), SMH 403.96 (-9.7%), IWM 258.26 (-2.3%), XLV 178.26 (+0.4%). SPY 5-min lows after the 692.70 session low: 693.42 (20:10Z), 693.28 (20:15Z): not higher, not a new low. Regime: unconfirmed/weak range -> MR off, momentum off.
 - Scans skipped (disclosed): regime has both strategies off; the earlier sweeps (10:22 MR, 10:32/12:13/14:13 momentum, 14:03 MR) found nothing passing, with gate 1 (dated external cause) failing every time because no 11/20-dated source was found.
 - Result: no entry. This was the last entry-eligible cycle: after 15:30 ET no entries are permitted. Trades today 0 (0 forced). The 1-trade-per-day minimum is MISSED; no gate was loosened and no 'forced' trade was made because no candidate passed every gate. Close recap at ~15:48 ET.
+
+### Cycle 1267 - 2026-11-20 15:32 ET (entry window closed)
+- Dedupe: last commit 20:22:50Z, trigger 20:32:18Z (~9.5 min) -> proceed.
+- Reconcile (live): equity = cash = $398.81, positions empty, open orders empty. Nothing to stop-check.
+- Tape (quotes only): SPY 691.39 (-3.42%), QQQ 610.64 (-5.3%), SMH 401.00 (-10.4%), IWM 257.34 (-2.6%), XLV 177.49 (+0.0%). New session lows into the final half hour.
+- The 15:30 ET entry cutoff has passed, so no entry of any kind is permitted. Scans skipped (disclosed): nothing could be acted on. No 5-minute bar read this cycle.
+- Trades today 0 (0 forced). Minimum shortfall: 0 of the 1 required, recorded honestly; no gate loosened. Next: close recap at ~15:48 ET (20:48Z).
