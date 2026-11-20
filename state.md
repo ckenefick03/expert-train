@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-20 10:22 ET",
+  "as_of": "2026-11-20 10:32 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "FLAT 10:22 ET 11/20 (Tier A), cash $398.81, no positions/orders. SPY 711.12 (-0.66%) just broke the 711.74 morning low (new session low 711.21): regime FALLING, MR OFF; momentum off (tape falling, opens 10:30). SMH 424.6 (-5.1%). No entry.",
+  "status_note": "FLAT 10:32 ET 11/20 (momentum window opens), cash $398.81, no positions/orders. SPY 709.08 (-0.94%) making new session lows (708.83): regime FALLING, MR and momentum both OFF. SMH 420.8 (-6.0%). Momentum scan: only GAP (+15.6%, RVOL 1.44): no cited catalyst, regime off, no entry. Zero trades so far (0 forced).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-20",
@@ -4896,6 +4896,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-20 10:22 ET",
+      "equity": 398.81
+    },
+    {
+      "t": "2026-11-20 10:32 ET",
       "equity": 398.81
     }
   ],
@@ -14943,4 +14947,12 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Reconcile (live): equity = cash = $398.81, positions empty, open orders empty. Nothing to stop-check.
 - Tape: SPY 711.12 (-0.66%), QQQ 633.08 (-1.86%), SMH 424.63 (-5.1%, new low of the day), IWM 262.99 (-0.47%), XLV 179.75 (+1.3%). SPY 5-min bars: 15:15Z bar low 711.21 broke below the earlier 711.74 morning low (15:15 bar closed 711.24), after four straight lower lows from the 718.29 high. Regime: FALLING (SPY making new session lows) -> mean-reversion OFF per framework 4.1; momentum off by regime and by clock (opens 10:30).
 - MR scan (Tier A, cap >=$5B, <=-5%, RSI<35): 15 hits (LITE -7.8%, DELL -7.4%, MRVL -7.1%, NBIS -7.6%, IREN -8.5%, TER -5.7%, TSEM -6.8%, STRL -5.5%, BMNR -5.3% and foreign ADRs / SNDK artifact). Listed for the record only: the regime switch has MR off, and gate 1 still fails (no dated cause found at 10:03 or 10:15). No gate-check was run on them. No new WebSearch (hourly one ran at 10:15).
+- Result: no entry. Trades today 0 (0 forced).
+
+### Cycle 1237 - 2026-11-20 10:32 ET (momentum window opens, regime Falling)
+- Dedupe: last commit 15:23:02Z, trigger 15:32:48Z (~9.8 min) -> proceed.
+- Reconcile (live): equity = cash = $398.81, positions empty, open orders empty. Nothing to stop-check.
+- Tape: SPY 709.08 (-0.94%), QQQ 630.11 (-2.32%), SMH 420.75 (-6.0%, new low of the day), IWM 262.37 (-0.70%), XLV 179.41 (+1.1%). SPY 5-min bars: 15:20 low 709.66, 15:25 low 708.83 (new session low after 711.21 / 711.74). Regime: FALLING (new session lows continue) -> MR off, momentum off (needs stable/rising per 4.1).
+- Momentum scan (cap >=$2B, >=+3%, RVOL(30d) >=1.0; real minimum 1.3): 1 hit: GAP +15.6% (last 21.73, RVOL 1.44, cap $6.6B). Gate-check: regime gate FAIL (Falling). Catalyst gate (real cited catalyst) not established: I did not search for it, so the cause of the +15.6% move is unverified, and I do not claim it is earnings. Retest/higher-low/EMA gate not evaluated. Result: FAIL, no entry. A thin one-name sweep is itself a sign of a broad risk-off tape.
+- MR: not scanned this cycle (regime has MR off; the 10:22 sweep already listed the -5% / RSI<35 names, all failing gate 1).
 - Result: no entry. Trades today 0 (0 forced).
