@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-20 10:03 ET",
+  "as_of": "2026-11-20 10:15 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "FLAT 10:03 ET 11/20 (Tier A open), cash $398.81, no positions/orders. SPY 715.56 (-0.04%) after a V-recovery from the 711.74 open low (six rising 5-min lows): regime Stabilizing/rising, MR on. MR scan (RSI<35, >=3.5%): LITE/DELL/NBIS/IREN pass the numbers but gate 1 (dated external cause) FAILS: search found no 11/20-dated source. No entry. Momentum opens 10:30 ET.",
+  "status_note": "FLAT 10:15 ET 11/20 (Tier A, hourly), cash $398.81, no positions/orders. SPY 713.75 (-0.30%), faded from the 718.29 high; last three 5-min lows lower (715.37, 714.93, 713.71), above the 711.74 low: weak range, Stabilizing NOT confirmed. MR names (DELL -6.3%, LITE -7.1%, NBIS -6.9%, IREN, MRVL, TER) fail gate 1: search again found no 11/20-dated source. No entry. Momentum opens 10:30 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-20",
@@ -4888,6 +4888,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-20 10:03 ET",
+      "equity": 398.81
+    },
+    {
+      "t": "2026-11-20 10:15 ET",
       "equity": 398.81
     }
   ],
@@ -14920,3 +14924,12 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Gate-check (written): gate 1 (dated external sector/macro cause sourced this cycle) FAIL for all. One standard WebSearch for DELL/NBIS/LITE returned only undated or older pieces (July 2026, Oct 14 2026, an undated Zacks 'AI stocks bleed as inflation bites'); none dated 11/20/2026. Nothing from them is used as a cause; unverifiable = FAIL. Not evaluated further: gates 2 (fundamentals), 3 (>=2R anchor), 4 (multi-week downtrend) were not run, since gate 1 already fails; no earnings-window check was made. The foreign ADRs (NTES, BVN) also fail the US-listed mean-reversion intent (company/country-specific).
 - Result: no entry. Hourly WebSearch is due at the 10:12 ET run; momentum scan starts 10:32 ET.
 - Trades today 0 (0 forced).
+
+### Cycle 1235 - 2026-11-20 10:15 ET (hourly run, Tier A)
+- Dedupe: last commit 15:03:42Z, trigger 15:14:56Z (scheduled 15:12Z, ~11.2 min) -> proceed.
+- Reconcile (live): equity = cash = $398.81, positions empty, open orders empty. Nothing to stop-check.
+- Tape: SPY 713.75 (-0.30%), QQQ 636.36 (-1.35%), SMH 428.66 (-4.2%, a new low of the day), IWM 264.40 (+0.07%), XLV 180.47 (+1.7%). SPY 5-min bars: highs 718.29 at 10:00, then lows 715.37, 714.93, 713.71 (three consecutive LOWER lows after the spike), session low still 711.74 (not broken). Regime: weak range-bound; the Stabilizing test (~3 higher lows) is not met and there is no new session low either, so neither Falling nor Stabilizing is confirmed. I am treating MR as not enabled by the regime and, independently, failing gate 1 below.
+- MR scan (Tier A, cap >=$5B, <=-3.5%, RSI<35): 16 hits, same names as the 10:03 cycle plus TSM/NVDA/STRL/PSLV etc. Larger-than-5% names: LITE -7.1% (RSI 34.4), DELL -6.3% (32.5), NBIS -6.9% (31.8), IREN -7.7% (27.7), MRVL -6.2% (31.6), TER -5.2% (33.5), TSEM -5.8% (34.0), STRL -5.1% (33.0). Excluded: SNDK (-89% corporate-action artifact), TSM/NTES/UMC/BVN (foreign ADRs), PSLV (silver trust, not a sector ETF cause), NVDA (-4.0%, under 5%).
+- News (WebSearch, standard, hourly): query 'Wall Street stocks Friday November 20 2026 Nasdaq chip stocks'. No result dated 11/20/2026; the newest were from July 2026. Nothing used or cited; gate 1 (dated external sector/macro cause sourced this cycle) = FAIL for every MR name. Gates 2-4 not run (gate 1 already fails). No earnings-window check was made for the MR names.
+- Momentum: not yet open (earliest 10:30 ET); first scan at the 10:32 cycle.
+- Result: no entry. Trades today 0 (0 forced).
