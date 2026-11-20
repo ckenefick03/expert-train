@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-20 10:15 ET",
+  "as_of": "2026-11-20 10:22 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "FLAT 10:15 ET 11/20 (Tier A, hourly), cash $398.81, no positions/orders. SPY 713.75 (-0.30%), faded from the 718.29 high; last three 5-min lows lower (715.37, 714.93, 713.71), above the 711.74 low: weak range, Stabilizing NOT confirmed. MR names (DELL -6.3%, LITE -7.1%, NBIS -6.9%, IREN, MRVL, TER) fail gate 1: search again found no 11/20-dated source. No entry. Momentum opens 10:30 ET.",
+  "status_note": "FLAT 10:22 ET 11/20 (Tier A), cash $398.81, no positions/orders. SPY 711.12 (-0.66%) just broke the 711.74 morning low (new session low 711.21): regime FALLING, MR OFF; momentum off (tape falling, opens 10:30). SMH 424.6 (-5.1%). No entry.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-20",
@@ -4892,6 +4892,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     },
     {
       "t": "2026-11-20 10:15 ET",
+      "equity": 398.81
+    },
+    {
+      "t": "2026-11-20 10:22 ET",
       "equity": 398.81
     }
   ],
@@ -14932,4 +14936,11 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - MR scan (Tier A, cap >=$5B, <=-3.5%, RSI<35): 16 hits, same names as the 10:03 cycle plus TSM/NVDA/STRL/PSLV etc. Larger-than-5% names: LITE -7.1% (RSI 34.4), DELL -6.3% (32.5), NBIS -6.9% (31.8), IREN -7.7% (27.7), MRVL -6.2% (31.6), TER -5.2% (33.5), TSEM -5.8% (34.0), STRL -5.1% (33.0). Excluded: SNDK (-89% corporate-action artifact), TSM/NTES/UMC/BVN (foreign ADRs), PSLV (silver trust, not a sector ETF cause), NVDA (-4.0%, under 5%).
 - News (WebSearch, standard, hourly): query 'Wall Street stocks Friday November 20 2026 Nasdaq chip stocks'. No result dated 11/20/2026; the newest were from July 2026. Nothing used or cited; gate 1 (dated external sector/macro cause sourced this cycle) = FAIL for every MR name. Gates 2-4 not run (gate 1 already fails). No earnings-window check was made for the MR names.
 - Momentum: not yet open (earliest 10:30 ET); first scan at the 10:32 cycle.
+- Result: no entry. Trades today 0 (0 forced).
+
+### Cycle 1236 - 2026-11-20 10:22 ET (Tier A, regime Falling)
+- Dedupe: last commit 15:15:26Z, trigger 15:22:39Z (~7.2 min, over the 6-minute floor) -> proceed.
+- Reconcile (live): equity = cash = $398.81, positions empty, open orders empty. Nothing to stop-check.
+- Tape: SPY 711.12 (-0.66%), QQQ 633.08 (-1.86%), SMH 424.63 (-5.1%, new low of the day), IWM 262.99 (-0.47%), XLV 179.75 (+1.3%). SPY 5-min bars: 15:15Z bar low 711.21 broke below the earlier 711.74 morning low (15:15 bar closed 711.24), after four straight lower lows from the 718.29 high. Regime: FALLING (SPY making new session lows) -> mean-reversion OFF per framework 4.1; momentum off by regime and by clock (opens 10:30).
+- MR scan (Tier A, cap >=$5B, <=-5%, RSI<35): 15 hits (LITE -7.8%, DELL -7.4%, MRVL -7.1%, NBIS -7.6%, IREN -8.5%, TER -5.7%, TSEM -6.8%, STRL -5.5%, BMNR -5.3% and foreign ADRs / SNDK artifact). Listed for the record only: the regime switch has MR off, and gate 1 still fails (no dated cause found at 10:03 or 10:15). No gate-check was run on them. No new WebSearch (hourly one ran at 10:15).
 - Result: no entry. Trades today 0 (0 forced).
