@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-23 10:03 ET",
+  "as_of": "2026-11-23 10:15 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "10:03 ET 11/23 (Tier A open): account 771144490 STILL reads $0.00, no positions/orders; cause unverified (was $398.81 at the 11/20 close). No entry possible at $0 buying power. SPY 720.7 (+4.5%), QQQ 649.2 (+6.7%), SMH 459.0 (+14.7%). Scans skipped. Awaiting owner confirmation or a restored balance.",
+  "status_note": "10:15 ET 11/23 (hourly): account 771144490 STILL reads $0.00, no positions/orders; cause unverified (was $398.81 at the 11/20 close). No entry possible at $0 buying power. SPY 722.8 (+4.8%), QQQ 652.0 (+7.2%), SMH 462.4 (+15.6%). Scans and news search skipped as moot. Awaiting owner confirmation or a restored balance.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-23",
@@ -15382,3 +15382,9 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Reconcile (live): get_portfolio $0.00 total/cash/buying power; positions empty; open orders empty. Unchanged since 13:30Z; cause unverified; no action taken.
 - Tape: SPY 720.73 (+4.48% vs 689.81), QQQ 649.15 (+6.69%), SMH 459.04 (+14.74%): the gap is holding and re-extending after the 10:00 open.
 - Entry windows are open (Tier A) but the size rule needs buying power of at least $50 (entry = min($105, buying power - $0.50)); buying power is $0.00, so no entry of any kind is possible, and the preview_scans were skipped as moot (disclosed). Trades 0 (0 forced). If the balance is restored the cycle would scan immediately.
+
+### Cycle 1278 - 2026-11-23 10:15 ET (hourly run, account balance still $0)
+- Dedupe: last commit 15:03:28Z, trigger 15:15:35Z (scheduled 15:12Z; ~12 min) -> proceed.
+- Reconcile (live): get_portfolio $0.00 total/cash/buying power; positions empty; open orders empty. Unchanged since 13:30Z (about 1h45m); cause unverified; no action taken.
+- Tape: SPY 722.78 (+4.78% vs 689.81), QQQ 652.04 (+7.17%), SMH 462.36 (+15.57%): the gap is holding near the highs.
+- Scans and the hourly WebSearch were skipped (disclosed) because no entry is possible at $0 buying power, so neither would change any decision; no news claim is made. Trades 0 (0 forced).
