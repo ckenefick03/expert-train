@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-23 09:19 ET",
+  "as_of": "2026-11-23 09:33 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "09:19 ET 11/23 (hourly): account 771144490 STILL reads $0.00, no positions/orders; cause unverified (was $398.81 at the 11/20 close). No trading possible. Extended-hours SPY ~722.2 (+4.7%), QQQ +7.2%, SMH ~465.9 (+16.5%): extraordinary pre-market surge, cause unverified (no 11/23-dated source). Awaiting owner confirmation or a restored balance.",
+  "status_note": "09:33 ET 11/23: account 771144490 STILL reads $0.00, no positions/orders; cause unverified (was $398.81 at the 11/20 close). No trading possible. Regular session open confirms the gap: SPY 722.1 (+4.7%), QQQ 653.0 (+7.3%), SMH 461.1 (+15.3%). Awaiting owner confirmation or a restored balance.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-23",
@@ -15357,4 +15357,10 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Reconcile (live): get_portfolio $0.00 total/cash/buying power; positions empty; open orders empty. Unchanged since 13:30Z; cause unverified; no action taken. I did not count this as an equity point or a trading loss.
 - Tape (extended hours, thin): SPY ~722.2 (+4.7% vs 689.81), QQQ ~652.5 (+7.2% vs 608.45), SMH ~465.9 (+16.5% vs 400.06), IWM ~265.2 (+3.4%), XLV ~176.8 (-0.3%). A surge that has grown in three consecutive checks (SPY 707.5 -> 705.5 -> 719.6 -> 722.2). I cannot explain it.
 - News (WebSearch, standard, hourly): 'stocks surge Monday Nasdaq rally November 23 2026 why'. No result dated 11/23/2026; the items were from Mar, May, Jun and Aug 2026. Nothing used or cited as the cause. The cause of today's gap remains UNVERIFIED.
+- No trade possible ($0 buying power); before 10:00 ET in any case. No scans (disclosed). Trades 0 (0 forced).
+
+### Cycle 1274 - 2026-11-23 09:33 ET (regular session open, account balance still $0)
+- Dedupe: last commit 14:19:10Z, trigger 14:32:41Z (~13.5 min) -> proceed. (The 14:22 cycle was skipped for the 6-minute rule: its trigger fired at 14:24:50Z, 5.7 min after the 14:19:10Z commit.)
+- Reconcile (live): get_portfolio $0.00 total/cash/buying power; positions empty; open orders empty. Unchanged since 13:30Z. Cause unverified; no action taken.
+- Tape (regular session, 3 min after the open): SPY 722.13 (+4.69% vs 689.81), QQQ 653.04 (+7.33% vs 608.45), SMH 461.13 (+15.26% vs 400.06). The regular-session prints confirm that the extended-hours surge was real, so I withdraw the 'unverified data fault' reading of the tape; its cause is still unknown (no 11/23-dated source found).
 - No trade possible ($0 buying power); before 10:00 ET in any case. No scans (disclosed). Trades 0 (0 forced).
