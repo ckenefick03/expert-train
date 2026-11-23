@@ -122,13 +122,19 @@ Cycle entry template (copy for each cycle):
 - Tape: SPY 722.97 (+4.8% vs 689.81), QQQ 650.8 (+7.0%), SMH 457.8 (+14.4%).
 - No entry possible at $0 buying power; scans and the hourly WebSearch skipped as moot (disclosed). Trades 0 (0 forced).
 
+### Cycle 1308 - 2026-11-23 15:12 ET (hourly-routine run)
+- Dedupe: last commit 20:03:10Z, trigger 20:12:47Z (~9.6 min) → proceed.
+- Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
+- Tape: SPY 722.94 (+4.8% vs 689.81), QQQ 650.55 (+6.9%), SMH 458.1 (+14.5%).
+- No entry possible at $0 buying power; scans and news searches skipped as moot (disclosed). Trades 0 (0 forced). Close recap due ~15:47-15:49 ET.
+
 ## DASHBOARD_DATA
 
 Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) open and watched, `red` = stop recently hit or circuit breaker tripped. Trade rows go in `trades` (newest last); positions needing no stop (legacy) are marked `"legacy": true`.
 
 ```json
 {
-  "as_of": "2026-11-23 15:03 ET",
+  "as_of": "2026-11-23 15:12 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -143,7 +149,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "15:03 ET 11/23 (hourly): account 771144490 STILL reads $0.00, no positions/orders; cause unverified (was $398.81 at the 11/20 close). No entry possible at $0 buying power. SPY 723.0 (+4.8%), QQQ 650.8 (+7.0%), SMH 457.8 (+14.4%). Scans and news search skipped as moot. Awaiting owner confirmation or a restored balance.",
+  "status_note": "15:12 ET 11/23: account 771144490 STILL reads $0.00, no positions/orders; cause unverified (was $398.81 at the 11/20 close). No entry possible at $0 buying power. SPY 722.9 (+4.8%), QQQ 650.6 (+6.9%), SMH 458.1 (+14.5%). Scans skipped as moot. Awaiting owner confirmation or a restored balance.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-23",
