@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-23 09:33 ET",
+  "as_of": "2026-11-23 09:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "09:33 ET 11/23: account 771144490 STILL reads $0.00, no positions/orders; cause unverified (was $398.81 at the 11/20 close). No trading possible. Regular session open confirms the gap: SPY 722.1 (+4.7%), QQQ 653.0 (+7.3%), SMH 461.1 (+15.3%). Awaiting owner confirmation or a restored balance.",
+  "status_note": "09:43 ET 11/23: account 771144490 STILL reads $0.00, no positions/orders; cause unverified (was $398.81 at the 11/20 close). No trading possible. SPY 716.8 (+3.9%), QQQ 645.4 (+6.1%), SMH 452.9 (+13.2%): fading from the open highs. Awaiting owner confirmation or a restored balance.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-23",
@@ -15363,4 +15363,10 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Dedupe: last commit 14:19:10Z, trigger 14:32:41Z (~13.5 min) -> proceed. (The 14:22 cycle was skipped for the 6-minute rule: its trigger fired at 14:24:50Z, 5.7 min after the 14:19:10Z commit.)
 - Reconcile (live): get_portfolio $0.00 total/cash/buying power; positions empty; open orders empty. Unchanged since 13:30Z. Cause unverified; no action taken.
 - Tape (regular session, 3 min after the open): SPY 722.13 (+4.69% vs 689.81), QQQ 653.04 (+7.33% vs 608.45), SMH 461.13 (+15.26% vs 400.06). The regular-session prints confirm that the extended-hours surge was real, so I withdraw the 'unverified data fault' reading of the tape; its cause is still unknown (no 11/23-dated source found).
+- No trade possible ($0 buying power); before 10:00 ET in any case. No scans (disclosed). Trades 0 (0 forced).
+
+### Cycle 1275 - 2026-11-23 09:43 ET (account balance still $0)
+- Dedupe: last commit 14:32:58Z, trigger 14:42:51Z (~9.9 min) -> proceed.
+- Reconcile (live): get_portfolio $0.00 total/cash/buying power; positions empty; open orders empty. Unchanged since 13:30Z; cause unverified; no action taken.
+- Tape: SPY 716.77 (+3.9% vs 689.81), QQQ 645.43 (+6.1%), SMH 452.92 (+13.2%): the opening surge is fading (SPY 722.1 at 09:33 -> 716.8).
 - No trade possible ($0 buying power); before 10:00 ET in any case. No scans (disclosed). Trades 0 (0 forced).
