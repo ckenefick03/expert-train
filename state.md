@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-23 11:33 ET",
+  "as_of": "2026-11-23 11:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "11:33 ET 11/23 (Tier B): account 771144490 STILL reads $0.00, no positions/orders; cause unverified (was $398.81 at the 11/20 close). No entry possible at $0 buying power. SPY 723.6 (+4.9%), QQQ 651.7 (+7.1%), SMH 460.7 (+15.2%). Scans skipped as moot. Awaiting owner confirmation or a restored balance.",
+  "status_note": "11:43 ET 11/23 (Tier B): account 771144490 STILL reads $0.00, no positions/orders; cause unverified (was $398.81 at the 11/20 close). No entry possible at $0 buying power. SPY 719.2 (+4.3%), QQQ 646.7 (+6.3%), SMH 454.9 (+13.7%): fading from the highs. Scans skipped as moot. Awaiting owner confirmation or a restored balance.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-23",
@@ -15436,4 +15436,10 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Dedupe: last commit 16:22:46Z, trigger 16:32:33Z (~9.8 min) -> proceed.
 - Reconcile (live): get_portfolio $0.00 total/cash/buying power; positions empty; open orders empty. Unchanged since 13:30Z (3h); cause unverified; no action taken.
 - Tape: SPY 723.58 (+4.89% vs 689.81), QQQ 651.68 (+7.10%), SMH 460.72 (+15.16%).
+- No entry possible ($0 buying power); scans skipped as moot (disclosed). Trades 0 (0 forced).
+
+### Cycle 1287 - 2026-11-23 11:43 ET (Tier B, account balance still $0)
+- Dedupe: last commit 16:32:50Z, trigger 16:42:20Z (~9.5 min) -> proceed.
+- Reconcile (live): get_portfolio $0.00 total/cash/buying power; positions empty; open orders empty. Unchanged since 13:30Z (3h+); cause unverified; no action taken.
+- Tape: SPY 719.21 (+4.26% vs 689.81), QQQ 646.74 (+6.29%), SMH 454.93 (+13.71%): a 0.6% fade over ten minutes from the highs (SPY 727.7 at 10:33).
 - No entry possible ($0 buying power); scans skipped as moot (disclosed). Trades 0 (0 forced).
