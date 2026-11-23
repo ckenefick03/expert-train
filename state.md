@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-23 10:23 ET",
+  "as_of": "2026-11-23 10:33 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "10:23 ET 11/23: account 771144490 STILL reads $0.00, no positions/orders; cause unverified (was $398.81 at the 11/20 close). No entry possible at $0 buying power. SPY 725.5 (+5.2%), QQQ 655.3 (+7.7%), SMH 465.7 (+16.4%), new highs of the day. Scans skipped as moot. Awaiting owner confirmation or a restored balance.",
+  "status_note": "10:33 ET 11/23: account 771144490 STILL reads $0.00, no positions/orders; cause unverified (was $398.81 at the 11/20 close). No entry possible at $0 buying power (momentum window also open). SPY 727.7 (+5.5%), QQQ 657.1 (+8.0%), SMH 467.1 (+16.8%). Scans skipped as moot. Awaiting owner confirmation or a restored balance.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-23",
@@ -15394,3 +15394,9 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Reconcile (live): get_portfolio $0.00 total/cash/buying power; positions empty; open orders empty. Unchanged since 13:30Z; cause unverified; no action taken.
 - Tape: SPY 725.54 (+5.18% vs 689.81), QQQ 655.26 (+7.69%), SMH 465.72 (+16.41%): new highs of the day, a very strong relief rally after Friday's liquidation.
 - No entry possible ($0 buying power); scans skipped as moot (disclosed). Trades 0 (0 forced).
+
+### Cycle 1280 - 2026-11-23 10:33 ET (account balance still $0)
+- Dedupe: last commit 15:23:14Z, trigger 15:32:33Z (~9.3 min) -> proceed.
+- Reconcile (live): get_portfolio $0.00 total/cash/buying power; positions empty; open orders empty. Unchanged since 13:30Z (about 2h); cause unverified; no action taken.
+- Tape: SPY 727.67 (+5.48% vs 689.81), QQQ 657.07 (+8.00%), SMH 467.08 (+16.75%). New highs of the day; still no explanation found.
+- The momentum window is now also open (10:30 ET), but with $0 buying power no entry of any kind is possible; scans skipped as moot (disclosed). Trades 0 (0 forced).
