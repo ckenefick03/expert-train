@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-20 15:48 ET",
+  "as_of": "2026-11-23 08:30 ET (pre-open)",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,11 +41,11 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "CLOSE 11/20: FLAT overnight, cash $398.81, no positions/orders. 0 trades (0 forced), day P&L $0.00; the 1-trade minimum was missed (no gate loosened). SPY 693.20 (-3.2%), SMH -10.0%, QQQ -5.1%: a broad AI/semis liquidation with no dated cause found. Breaker level $394.19 (cushion $4.62). Next: pre-open brief ~08:30 ET on the next trading day (Mon 11/23).",
+  "status_note": "PRE-OPEN 11/23: ALERT - account 771144490 (limited_margin, state active) reads total_value $0.00, cash $0.00, buying power $0.00, no positions, no orders (get_portfolio twice and get_accounts). It was $398.81 flat at the 11/20 close. Cause UNVERIFIED (funds withdrawn/transferred or a data fault; I did not place any order or cause this). Not charted as an equity point until verified. No entries are possible at $0 buying power. Market gapping up: SPY pre-market ~707.5 (+2.6% vs 689.81 close).",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-11-20",
-    "start_equity": 398.81,
+    "date": "2026-11-23",
+    "start_equity": null,
     "trades": 0,
     "forced": 0
   },
@@ -15321,3 +15321,14 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Drawdown: peak equity $437.99, breaker level $394.19, equity $398.81 (cushion $4.62).
 - Open user questions (unanswered, defaults kept): marginal RVOL/spread passes, one-bar vs confirmed-hold entry, sizing near the breaker, profit-protection rule, time-of-day-adjusted RVOL, catalyst-sourcing standard.
 - Weekend note: markets are closed Sat 11/21 and Sun 11/22. The next pre-open brief is due Mon 11/23 ~08:30 ET.
+
+### Pre-open brief - 2026-11-23 08:30 ET (read-only, no orders)
+- **ACCOUNT ANOMALY (needs the owner's attention):** the agentic account 771144490 (nickname 'MCP', type limited_margin, state active, not deactivated) now reports total_value $0.00, cash $0.00, buying power $0.00, no positions and no open orders. get_portfolio returned the same zeros twice (13:30Z) and get_accounts shows the account active with unsettled_funds 0. At the 11/20 close it held $398.81 in cash with no positions (verified live at 15:48 ET), and no order was placed over the weekend by this agent (the agent was read-only after 15:48 ET Friday and has placed no orders since 11/18). The cause is NOT verified: funds may have been withdrawn or transferred by the owner, or this may be a data fault. I took no action on it and did not try to infer a cause. Consequences: (1) no entry is possible at $0 buying power (size rule: min($105, buying power - $0.50), skip if under $50); (2) I am not appending a $0 equity point to the dashboard chart or treating the numbers as a trading loss until the balance is verified; (3) the circuit-breaker rule (10% below peak equity $437.99, level $394.19) would read as triggered by the $0 balance, but this is not a trading drawdown. The trading framework otherwise continues unchanged: cycles will keep reconciling live and resume trading only if the balance is restored and verified.
+- Earlier-stated open items are unchanged (see the 11/20 recap).
+- Tape (extended-hours quotes, 13:30Z; thin liquidity): vs the 11/20 closes, SPY ~707.5 (+2.6% vs 689.81), QQQ ~630.0 (+3.5% vs 608.45), SMH ~423.0 (+5.7% vs 400.06), IWM ~262.6 (+2.3% vs 256.61), XLV ~177.8 (+0.3% vs 177.24); NVDA ~135.9 (+8.3% vs 125.53), MU ~626.1 (+5.3% vs 594.51), DELL ~300.8 (+8.2% vs 278.02). A sharp relief gap after Friday's liquidation (SPY closed 11/20 at 689.81, -3.6%).
+- News (WebSearch, standard): query 'stock futures Monday November 23 2026 premarket'. No result is dated 11/23/2026 (newest was Sep 22 2026). No catalyst for the gap is established, so no cause is cited and MR gate 1 stays unverifiable = FAIL.
+- Earnings (get_earnings_calendar, cap >$1B, next 3 days): reporting today before the open: CRWD (EPS 0.34 vs 0.31 est), ZS (1.23 vs 0.95); after the close today: A, SMTC, HPE, ZM, J, AMTM, DAC and others; tomorrow (11/24): MDT, ADI (am); DELL, HPQ, WDAY, ADSK, NTNX, URBN, AMBA, CLSK (pm); DE, BMA on 11/25. Avoid names reporting within 2 trading days (DELL, HPE, SMTC, HPQ, WDAY, ADI, ADSK, ZM, NTNX, MDT) except a post-report thesis.
+- Regime expectation: Stabilizing/rising at the open if the gap holds; Falling if it fades into new lows. A gap-up open after a -3.6% day often retests: wait for 5-minute bars.
+- Watch list, mean-reversion (all conditional on gates, and moot while buying power is $0): MU, LRCX, AMAT (semis, oversold on 11/20, bouncing premarket); NVDA (RSI under 20 on 11/20; earnings already out 11/17); META or PLTR (large-cap AI names). Excluded: DELL (reports 11/24 pm), SNDK (corporate-action artifact), foreign ADRs.
+- Watch list, momentum (earliest 10:30 ET, moot at $0): CRWD, ZS (post-earnings beats this morning, check price action and RVOL), MU, NVDA (if relative strength holds above SPY). No catalyst claimed beyond the earnings table.
+- No orders were placed. No trades are possible until funding is verified.
