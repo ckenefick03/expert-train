@@ -50,13 +50,19 @@ Cycle entry template (copy for each cycle):
 - Tape: SPY 723.01 (+4.8% vs 689.81), QQQ 651.6 (+7.1%), SMH 459.55 (+14.9%).
 - No entry possible at $0 buying power; scans and the hourly WebSearch skipped as moot (disclosed). Trades 0 (0 forced).
 
+### Cycle 1296 - 2026-11-23 13:12 ET (hourly-routine run)
+- Dedupe: last commit 18:02:53Z, trigger 18:12:10Z (~9.3 min) → proceed.
+- Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
+- Tape: SPY 722.65 (+4.8% vs 689.81), QQQ 650.6 (+6.9%), SMH 458.2 (+14.5%).
+- No entry possible at $0 buying power; scans and news searches skipped as moot (disclosed). Trades 0 (0 forced).
+
 ## DASHBOARD_DATA
 
 Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) open and watched, `red` = stop recently hit or circuit breaker tripped. Trade rows go in `trades` (newest last); positions needing no stop (legacy) are marked `"legacy": true`.
 
 ```json
 {
-  "as_of": "2026-11-23 13:03 ET",
+  "as_of": "2026-11-23 13:12 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -71,7 +77,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "13:03 ET 11/23 (hourly): account 771144490 STILL reads $0.00, no positions/orders; cause unverified (was $398.81 at the 11/20 close). No entry possible at $0 buying power. SPY 723.0 (+4.8%), QQQ 651.6 (+7.1%), SMH 459.6 (+14.9%). Scans and news search skipped as moot. Awaiting owner confirmation or a restored balance.",
+  "status_note": "13:12 ET 11/23: account 771144490 STILL reads $0.00, no positions/orders; cause unverified (was $398.81 at the 11/20 close). No entry possible at $0 buying power. SPY 722.7 (+4.8%), QQQ 650.6 (+6.9%), SMH 458.2 (+14.5%). Scans skipped as moot. Awaiting owner confirmation or a restored balance.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-23",
