@@ -146,13 +146,20 @@ Cycle entry template (copy for each cycle):
 - Tape: SPY 724.82 (+5.1% vs 689.81), QQQ 653.7 (+7.4%), SMH 461.4 (+15.3%).
 - Past the 15:30 ET entry cutoff; nothing to enter at $0 buying power; scans skipped (disclosed). Trades 0 (0 forced). Close recap follows at ~15:47-15:49 ET.
 
+### Cycle 1312 - 2026-11-23 15:48 ET (close recap)
+- Trigger "Trading close recap" fired 20:48:10Z; last commit 20:42:37Z (~5.7 min). The 6-minute dedupe rule is written for the 10-minute cycle triggers; the recap is a distinct required task, so it ran (judgment call, disclosed).
+- Stop checks: none (no positions). Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
+- Overnight: NOTHING rolls overnight - the account is flat with no holdings and no orders. No thesis to maintain. No entries after 15:30 ET (and none possible at $0 buying power).
+- Tape at 15:48 ET: SPY 724.19 (+5.0% vs 689.81), QQQ 652.8 (+7.3%), SMH 460.3 (+15.1%). A broad relief rally; cause never sourced (no 11/23-dated source found).
+- **Day recap 11/23:** 0 trades (0 forced); the 1-trade minimum was missed because buying power was $0.00 all session (balance gone since the 11/20 close, cause unverified: possible withdrawal/transfer by the owner or a data fault; agent placed no orders/positions after the 11/20 close). No gate was loosened. P&L: none attributable to the agent (no positions); start_equity left null and no $0 equity points charted to avoid distorting the history. Cycles ran on schedule from the pre-open brief through this recap; scans, hourly WebSearches and news checks were skipped as moot (disclosed in each entry). The 10% circuit breaker (level $394.19) would read as triggered by the $0 balance, but it is not a trading drawdown. Trading resumes only if the balance is restored and verified. OPEN QUESTION for the owner: was the $398.81 withdrawn/transferred on purpose?
+
 ## DASHBOARD_DATA
 
 Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) open and watched, `red` = stop recently hit or circuit breaker tripped. Trade rows go in `trades` (newest last); positions needing no stop (legacy) are marked `"legacy": true`.
 
 ```json
 {
-  "as_of": "2026-11-23 15:43 ET",
+  "as_of": "2026-11-23 15:48 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -167,7 +174,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "15:43 ET 11/23: account 771144490 STILL reads $0.00, no positions/orders; cause unverified (was $398.81 at the 11/20 close). No entry possible (also past the 15:30 cutoff). SPY 724.8 (+5.1%), QQQ 653.7 (+7.4%), SMH 461.4 (+15.3%). Scans skipped as moot. Awaiting owner confirmation or a restored balance.",
+  "status_note": "15:48 ET 11/23 close recap: FLAT overnight, nothing rolls. Account 771144490 reads $0.00 all day (was $398.81 at the 11/20 close; cause unverified; owner question open). 0 trades, 0 forced; no gate loosened. SPY 724.2 (+5.0%), QQQ 652.8 (+7.3%), SMH 460.3 (+15.1%). Pre-open brief for 11/24 due ~08:30 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-23",
