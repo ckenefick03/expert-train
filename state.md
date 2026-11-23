@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-23 08:54 ET",
+  "as_of": "2026-11-23 09:03 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "08:54 ET 11/23: account 771144490 STILL reads $0.00 (value, cash, buying power), no positions/orders; cause unverified (was $398.81 at the 11/20 close). No trading possible. Pre-market SPY ~705.5 (+2.3%), SMH ~421.5 (+5.4%). Awaiting owner confirmation or a restored balance.",
+  "status_note": "09:03 ET 11/23: account 771144490 STILL reads $0.00 (value, cash, buying power), no positions/orders; cause unverified (was $398.81 at the 11/20 close). No trading possible. Extended-hours quotes jumped to SPY ~719.6 (+4.3%), SMH ~463.6 (+15.9%) from 705.5/421.5 ten minutes earlier: abnormal and unverified (thin pre-market). Awaiting owner confirmation or a restored balance.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-23",
@@ -15344,4 +15344,10 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Dedupe: last commit 13:43:56Z, trigger 13:54:02Z (~10 min) -> proceed.
 - Reconcile (live): get_portfolio still $0.00 total/cash/buying power; positions empty; open orders empty. Unchanged since 13:30Z. Cause unverified; no action taken.
 - Tape (extended hours): SPY ~705.5 (+2.3% vs 689.81), QQQ ~627.8 (+3.2%), SMH ~421.5 (+5.4%). The gap is easing slightly (SPY 707.5 at 08:30 -> 705.5).
+- No trade possible ($0 buying power); before 10:00 ET in any case. No scans (disclosed). Trades 0 (0 forced).
+
+### Cycle 1272 - 2026-11-23 09:03 ET (pre-session, account balance still $0)
+- Dedupe: last commit 13:54:18Z, trigger 14:03:37Z (~9.3 min) -> proceed.
+- Reconcile (live): get_portfolio still $0.00 total/cash/buying power; positions empty; open orders empty. Unchanged since 13:30Z; cause still unverified and no action taken.
+- Tape (extended hours, thin): SPY ~719.6 (+4.3% vs 689.81), QQQ ~651.9 (+7.1% vs 608.45), SMH ~463.6 (+15.9% vs 400.06). These are ~2% (SPY), ~3.8% (QQQ) and ~10% (SMH) above the quotes read ten minutes earlier (705.5 / 627.8 / 421.5), an unusually violent premarket move that I cannot explain: no news source found for it (the 13:30Z search returned nothing dated 11/23). I treat the extended-hours prints as unverified until regular-session data confirms them.
 - No trade possible ($0 buying power); before 10:00 ET in any case. No scans (disclosed). Trades 0 (0 forced).
