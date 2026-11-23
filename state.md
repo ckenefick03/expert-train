@@ -110,13 +110,19 @@ Cycle entry template (copy for each cycle):
 - Tape: SPY 721.07 (+4.5% vs 689.81), QQQ 648.3 (+6.5%), SMH 455.5 (+13.9%).
 - No entry possible at $0 buying power; scans skipped as moot (disclosed). Trades 0 (0 forced).
 
+### Cycle 1306 - 2026-11-23 14:53 ET
+- Dedupe: last commit 19:43:08Z, trigger 19:53:20Z (~10 min) → proceed.
+- Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
+- Tape: SPY 721.39 (+4.6% vs 689.81), QQQ 648.9 (+6.6%), SMH 455.8 (+13.9%).
+- No entry possible at $0 buying power; scans skipped as moot (disclosed). Trades 0 (0 forced).
+
 ## DASHBOARD_DATA
 
 Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) open and watched, `red` = stop recently hit or circuit breaker tripped. Trade rows go in `trades` (newest last); positions needing no stop (legacy) are marked `"legacy": true`.
 
 ```json
 {
-  "as_of": "2026-11-23 14:43 ET",
+  "as_of": "2026-11-23 14:53 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -131,7 +137,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "14:43 ET 11/23: account 771144490 STILL reads $0.00, no positions/orders; cause unverified (was $398.81 at the 11/20 close). No entry possible at $0 buying power. SPY 721.1 (+4.5%), QQQ 648.3 (+6.5%), SMH 455.5 (+13.9%). Scans skipped as moot. Awaiting owner confirmation or a restored balance.",
+  "status_note": "14:53 ET 11/23: account 771144490 STILL reads $0.00, no positions/orders; cause unverified (was $398.81 at the 11/20 close). No entry possible at $0 buying power. SPY 721.4 (+4.6%), QQQ 648.9 (+6.6%), SMH 455.8 (+13.9%). Scans skipped as moot. Awaiting owner confirmation or a restored balance.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-23",
