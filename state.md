@@ -134,13 +134,19 @@ Cycle entry template (copy for each cycle):
 - Tape: SPY 723.99 (+5.0% vs 689.81), QQQ 652.2 (+7.2%), SMH 460.0 (+15.0%).
 - No entry possible at $0 buying power; scans skipped as moot (disclosed). Trades 0 (0 forced). Close recap due ~15:47-15:49 ET.
 
+### Cycle 1310 - 2026-11-23 15:33 ET
+- Dedupe: last commit 20:22:49Z, trigger 20:32:35Z (~9.8 min) → proceed.
+- Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
+- Tape: SPY 724.02 (+5.0% vs 689.81), QQQ 652.3 (+7.2%), SMH 460.1 (+15.0%).
+- Past the 15:30 ET entry cutoff; no entry possible anyway at $0 buying power; scans skipped (disclosed). Trades 0 (0 forced). Close recap due ~15:47-15:49 ET.
+
 ## DASHBOARD_DATA
 
 Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) open and watched, `red` = stop recently hit or circuit breaker tripped. Trade rows go in `trades` (newest last); positions needing no stop (legacy) are marked `"legacy": true`.
 
 ```json
 {
-  "as_of": "2026-11-23 15:23 ET",
+  "as_of": "2026-11-23 15:33 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -155,7 +161,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "15:23 ET 11/23: account 771144490 STILL reads $0.00, no positions/orders; cause unverified (was $398.81 at the 11/20 close). No entry possible at $0 buying power. SPY 724.0 (+5.0%), QQQ 652.2 (+7.2%), SMH 460.0 (+15.0%). Scans skipped as moot. Awaiting owner confirmation or a restored balance.",
+  "status_note": "15:33 ET 11/23: account 771144490 STILL reads $0.00, no positions/orders; cause unverified (was $398.81 at the 11/20 close). No entry possible (also past the 15:30 cutoff). SPY 724.0 (+5.0%), QQQ 652.3 (+7.2%), SMH 460.1 (+15.0%). Scans skipped as moot. Awaiting owner confirmation or a restored balance.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-23",
