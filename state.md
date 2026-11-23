@@ -26,7 +26,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
 
 ```json
 {
-  "as_of": "2026-11-23 08:30 ET (pre-open)",
+  "as_of": "2026-11-23 08:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -41,7 +41,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "PRE-OPEN 11/23: ALERT - account 771144490 (limited_margin, state active) reads total_value $0.00, cash $0.00, buying power $0.00, no positions, no orders (get_portfolio twice and get_accounts). It was $398.81 flat at the 11/20 close. Cause UNVERIFIED (funds withdrawn/transferred or a data fault; I did not place any order or cause this). Not charted as an equity point until verified. No entries are possible at $0 buying power. Market gapping up: SPY pre-market ~707.5 (+2.6% vs 689.81 close).",
+  "status_note": "08:43 ET 11/23: account 771144490 STILL reads $0.00 (value, cash, buying power), no positions/orders; unverified cause (was $398.81 at the 11/20 close). No trading possible; no equity point charted. Pre-market SPY ~706.6 (+2.4% vs 689.81), SMH ~423.2 (+5.8%). Awaiting owner confirmation or a restored balance.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-23",
@@ -15332,3 +15332,10 @@ Gate check, written (momentum.md), live data at 12:33 ET:
 - Watch list, mean-reversion (all conditional on gates, and moot while buying power is $0): MU, LRCX, AMAT (semis, oversold on 11/20, bouncing premarket); NVDA (RSI under 20 on 11/20; earnings already out 11/17); META or PLTR (large-cap AI names). Excluded: DELL (reports 11/24 pm), SNDK (corporate-action artifact), foreign ADRs.
 - Watch list, momentum (earliest 10:30 ET, moot at $0): CRWD, ZS (post-earnings beats this morning, check price action and RVOL), MU, NVDA (if relative strength holds above SPY). No catalyst claimed beyond the earnings table.
 - No orders were placed. No trades are possible until funding is verified.
+
+### Cycle 1270 - 2026-11-23 08:43 ET (pre-session, account balance still $0)
+- Dedupe: last commit 13:30:44Z, trigger 13:43:36Z (~13 min) -> proceed.
+- Reconcile (live): get_portfolio again returns total_value $0.00, cash $0.00, buying power $0.00; positions empty; open orders empty. The 11/20 close value was $398.81. The balance has not been restored since the 13:30Z read, and I have still not verified why it changed. No equity point is charted and the day's start_equity is left unset (null) until the balance is verified.
+- Tape (extended hours): SPY ~706.6 (+2.4% vs 689.81 close), QQQ ~629.4 (+3.4%), SMH ~423.2 (+5.8%), IWM ~262.5 (+2.3%), XLV ~177.9 (+0.4%). Gap-up holding so far.
+- Before 10:00 ET and with $0 buying power no entry is possible; scans skipped (disclosed). The question to the owner (was the $398.81 withdrawn or transferred on purpose?) is open. No trades (0, 0 forced).
+- Next: 08:52 ET cycle (the 09:12 run includes the hourly search), the first entry-eligible cycle would be 10:02 ET only if buying power is restored.
