@@ -164,13 +164,18 @@ Cycle entry template (copy for each cycle):
 - WATCH LIST (informational ONLY - account has $0 buying power, so no entry is possible regardless). Mean-reversion watch (need >=3.5-5% intraday drop, RSI(14,d) thresholds, sourced dated cause, neutral-or-better fundamentals, 2R anchor, no multi-week downtrend): 1) ADI - beat on EPS but -10.5% pre-mkt; post-report thesis allowed, gate 2 reads neutral/better (beat), gate 1 needs a dated source for the drop; 2) MDT - in-line report, -4.6%; 3) NVDA (-5.5%) and 4) AMD (-5.3%) - semis liquidation, gate 1 currently FAILS (no source); 5) MU (-6.9%, stock at 707.70 close was extended - check multi-week trend gate). Momentum watch (earliest 10:30 ET; needs RVOL>=1.3, held pullback/retest, higher low, rising 9/20 EMA, spread<=0.3%, real cited catalyst = earnings beat): 1) DKS (+13.1%, beat 1.94 vs 1.38); 2) DLTR (+6.8%, beat); 3) BBY (+4.1%, beat). Excluded by the 2-trading-day earnings rule: DELL, HPQ, WDAY, NTNX, ADSK (report today after the close).
 - Honest caveats: pre-market quotes are thin and can reverse at the open; no scans were run (preview_scan skipped as moot with $0 buying power); watch names came from the earnings calendar and a semis quote check, not a full-universe sweep.
 
+### Cycle 1314 - 2026-11-24 08:43 ET (pre-market)
+- Dedupe: last commit 13:29:32Z, trigger 13:43:09Z (~13.6 min) -> proceed.
+- Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
+- Tape (pre-market, thin): SPY 713.54 (-1.2% vs 722.29), QQQ 637.16 (-2.1%), SMH 438.64 (-4.7%). Unchanged from the brief. Regime: Falling (pre-market). Before the 10:00 ET entry window in any case; no entry possible at $0 buying power; scans skipped as moot (disclosed). Trades 0 (0 forced).
+
 ## DASHBOARD_DATA
 
 Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) open and watched, `red` = stop recently hit or circuit breaker tripped. Trade rows go in `trades` (newest last); positions needing no stop (legacy) are marked `"legacy": true`.
 
 ```json
 {
-  "as_of": "2026-11-24 08:29 ET",
+  "as_of": "2026-11-24 08:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -185,7 +190,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "08:29 ET 11/24 PRE-OPEN: account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open) - no orders possible. Pre-market the rally is reversing: SPY 713.6 (-1.2% vs 722.29 close), QQQ 636.9 (-2.2%), SMH 437.5 (-4.9%). Cause unverified (no 11/24-dated source). Regime Falling at the open: MR and momentum off. Watch only: MR ADI/MDT/NVDA/AMD/MU; momentum DKS/DLTR/BBY.",
+  "status_note": "08:43 ET 11/24 (pre-market): account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open) - no orders possible. SPY 713.5 (-1.2%), QQQ 637.2 (-2.1%), SMH 438.6 (-4.7%) pre-market. Regime Falling: MR and momentum off. Scans skipped as moot.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-24",
