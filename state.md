@@ -319,13 +319,18 @@ Cycle entry template (copy for each cycle):
 - Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
 - Tape: SPY 718.93 (-0.5% vs 722.29), QQQ 639.19 (-1.8%), SMH 429.99 (-6.6%). Flat vs 13:33 (719.37/639.79/430.01), still the same tight range. Regime label: Stabilizing/range-bound, unconfirmed (no 5-minute bars pulled). No entry possible at $0 buying power; scans and news searches skipped as moot (disclosed). Trades 0 (0 forced).
 
+### Cycle 1345 - 2026-11-24 13:53 ET
+- Dedupe: last commit 18:42:44Z, trigger 18:52:51Z (~10 min) -> proceed.
+- Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
+- Tape: SPY 717.52 (-0.7% vs 722.29), QQQ 637.73 (-2.0%), SMH 428.07 (-7.0%). A small step lower vs 13:43 (718.93/639.19/429.99); still above the 11:14 lows (712.75/631.22/418.51). Regime label: range-bound/choppy (the "stabilizing" read is not strengthening; no 5-minute bars pulled). No entry possible at $0 buying power; scans and news searches skipped as moot (disclosed). Trades 0 (0 forced). Close recap due ~15:47-15:49 ET.
+
 ## DASHBOARD_DATA
 
 Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) open and watched, `red` = stop recently hit or circuit breaker tripped. Trade rows go in `trades` (newest last); positions needing no stop (legacy) are marked `"legacy": true`.
 
 ```json
 {
-  "as_of": "2026-11-24 13:43 ET",
+  "as_of": "2026-11-24 13:53 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -340,7 +345,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "13:43 ET 11/24: account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open) - no orders possible. SPY 718.9 (-0.5%), QQQ 639.2 (-1.8%), SMH 430.0 (-6.6%), range-bound. Regime Stabilizing/range-bound, unconfirmed. Scans skipped as moot.",
+  "status_note": "13:53 ET 11/24: account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open) - no orders possible. SPY 717.5 (-0.7%), QQQ 637.7 (-2.0%), SMH 428.1 (-7.0%). Regime range-bound/choppy. Scans skipped as moot.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-24",
