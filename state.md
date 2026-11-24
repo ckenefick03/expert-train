@@ -153,13 +153,24 @@ Cycle entry template (copy for each cycle):
 - Tape at 15:48 ET: SPY 724.19 (+5.0% vs 689.81), QQQ 652.8 (+7.3%), SMH 460.3 (+15.1%). A broad relief rally; cause never sourced (no 11/23-dated source found).
 - **Day recap 11/23:** 0 trades (0 forced); the 1-trade minimum was missed because buying power was $0.00 all session (balance gone since the 11/20 close, cause unverified: possible withdrawal/transfer by the owner or a data fault; agent placed no orders/positions after the 11/20 close). No gate was loosened. P&L: none attributable to the agent (no positions); start_equity left null and no $0 equity points charted to avoid distorting the history. Cycles ran on schedule from the pre-open brief through this recap; scans, hourly WebSearches and news checks were skipped as moot (disclosed in each entry). The 10% circuit breaker (level $394.19) would read as triggered by the $0 balance, but it is not a trading drawdown. Trading resumes only if the balance is restored and verified. OPEN QUESTION for the owner: was the $398.81 withdrawn/transferred on purpose?
 
+### Cycle 1313 - 2026-11-24 08:29 ET (PRE-OPEN BRIEF, read-only, no orders)
+- Trigger "Trading pre-open brief" fired 13:28:30Z; last commit 20:48:30Z (11/23). Framework §2.1 pre-open cycle: no orders.
+- Reconcile: account 771144490 (get_accounts: active, not deactivated, unsettled_funds 0) STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered. Nothing to stop-check. Trades 0.
+- Official 11/23 settled closes: SPY 722.29, QQQ 651.03, SMH 460.18 (slightly below my 15:48 ET intraday reads logged in Cycle 1312, which used 724.2/652.8/460.3 - the last 12 minutes faded; not an error, but the recap's % changes were intraday, not final: final SPY +4.7%, QQQ +7.0%, SMH +15.0% vs Friday).
+- Tape (pre-market, 13:28Z = 08:28 ET, thin liquidity): SPY 713.61 (-1.2% vs 722.29), QQQ 636.86 (-2.2%), SMH 437.53 (-4.9%), XLK 157.42 (-3.1%), XLE 60.16 (+0.5%), XLF 55.45 (-0.4%). The relief rally is being sold: chip/AI weakness leads. NVDA 156.04 (-5.5%), AMD 429.50 (-5.3%), AVGO 300.41 (-4.2%), MU 658.75 (-6.9%), TSM 353.12 (-2.9%), INTC 55.91 (-6.3%), QCOM 160.07 (-3.2%).
+- News/politics: ONE WebSearch ("stock futures premarket November 24 2026 Nasdaq semiconductors fall") returned NO 11/24-dated source (newest item was Oct 15, 2026; others June-July). Cause of the pre-market selloff therefore UNVERIFIED; per the news rule that means MR gate 1 FAILS for every semis/AI name until a dated source is found in-session. Not claiming a cause.
+- Earnings (get_earnings_calendar, verified dates): reported pre-market today - ADI (EPS 4.06 vs 3.89 est; stock 339.14 vs 378.75 close, -10.5% pre-mkt), MDT (1.34 vs 1.33; 96.07, -4.6%), DKS (1.94 vs 1.38; 151.20, +13.1%), DLTR (1.16 vs 0.89; 148.51, +6.8%), BBY (1.62 vs 1.49; 101.00, +4.1%), ANF, BURL, KSS, DY, SJM. Reporting after the close today: DELL, HPQ, WDAY, NTNX, ADSK, AMBA, CLSK, URBN. Tomorrow 11/25: DE, BZ, GDS, LI (am), BMA (pm).
+- Regime at the open: Falling pre-market (SPY/QQQ well below Monday's close and sliding with chips) -> MR and momentum OFF until the tape shows ~3 consecutive higher 5-minute lows (Stabilizing -> MR) or stable/rising (momentum). Regime label to be written each cycle from 09:30 ET.
+- WATCH LIST (informational ONLY - account has $0 buying power, so no entry is possible regardless). Mean-reversion watch (need >=3.5-5% intraday drop, RSI(14,d) thresholds, sourced dated cause, neutral-or-better fundamentals, 2R anchor, no multi-week downtrend): 1) ADI - beat on EPS but -10.5% pre-mkt; post-report thesis allowed, gate 2 reads neutral/better (beat), gate 1 needs a dated source for the drop; 2) MDT - in-line report, -4.6%; 3) NVDA (-5.5%) and 4) AMD (-5.3%) - semis liquidation, gate 1 currently FAILS (no source); 5) MU (-6.9%, stock at 707.70 close was extended - check multi-week trend gate). Momentum watch (earliest 10:30 ET; needs RVOL>=1.3, held pullback/retest, higher low, rising 9/20 EMA, spread<=0.3%, real cited catalyst = earnings beat): 1) DKS (+13.1%, beat 1.94 vs 1.38); 2) DLTR (+6.8%, beat); 3) BBY (+4.1%, beat). Excluded by the 2-trading-day earnings rule: DELL, HPQ, WDAY, NTNX, ADSK (report today after the close).
+- Honest caveats: pre-market quotes are thin and can reverse at the open; no scans were run (preview_scan skipped as moot with $0 buying power); watch names came from the earnings calendar and a semis quote check, not a full-universe sweep.
+
 ## DASHBOARD_DATA
 
 Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) open and watched, `red` = stop recently hit or circuit breaker tripped. Trade rows go in `trades` (newest last); positions needing no stop (legacy) are marked `"legacy": true`.
 
 ```json
 {
-  "as_of": "2026-11-23 15:48 ET",
+  "as_of": "2026-11-24 08:29 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -174,10 +185,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "15:48 ET 11/23 close recap: FLAT overnight, nothing rolls. Account 771144490 reads $0.00 all day (was $398.81 at the 11/20 close; cause unverified; owner question open). 0 trades, 0 forced; no gate loosened. SPY 724.2 (+5.0%), QQQ 652.8 (+7.3%), SMH 460.3 (+15.1%). Pre-open brief for 11/24 due ~08:30 ET.",
+  "status_note": "08:29 ET 11/24 PRE-OPEN: account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open) - no orders possible. Pre-market the rally is reversing: SPY 713.6 (-1.2% vs 722.29 close), QQQ 636.9 (-2.2%), SMH 437.5 (-4.9%). Cause unverified (no 11/24-dated source). Regime Falling at the open: MR and momentum off. Watch only: MR ADI/MDT/NVDA/AMD/MU; momentum DKS/DLTR/BBY.",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-11-23",
+    "date": "2026-11-24",
     "start_equity": null,
     "trades": 0,
     "forced": 0
