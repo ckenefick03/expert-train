@@ -204,13 +204,18 @@ Cycle entry template (copy for each cycle):
 - Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
 - Tape: SPY 719.17 (-0.4% vs 722.29), QQQ 641.20 (-1.5%), SMH 434.93 (-5.5%). SPY/QQQ keep recovering off the open lows (713.41/637.55); chips still heavily down. Regime label: Falling/unclear tending to stabilizing for the broad index (no 5-minute bars pulled, so unconfirmed). Entries open at 10:00 ET; no entry possible at $0 buying power; scans skipped as moot (disclosed). Trades 0 (0 forced).
 
+### Cycle 1322 - 2026-11-24 10:03 ET (hourly run)
+- Dedupe: last commit 14:53:29Z, trigger 15:02:53Z (~9.4 min) -> proceed.
+- Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
+- Tape: SPY 719.49 (-0.4% vs 722.29), QQQ 640.79 (-1.6%), SMH 432.02 (-6.1%, new low of the session so far vs 434.25-434.93 earlier). Index holding its recovery, chips still weak. Regime label: Falling for semis, unclear for the index (no 5-minute bars pulled). The 10:00 ET entry window is now open, but no entry is possible at $0 buying power; scans and the hourly WebSearch skipped as moot (disclosed). Trades 0 (0 forced).
+
 ## DASHBOARD_DATA
 
 Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) open and watched, `red` = stop recently hit or circuit breaker tripped. Trade rows go in `trades` (newest last); positions needing no stop (legacy) are marked `"legacy": true`.
 
 ```json
 {
-  "as_of": "2026-11-24 09:53 ET",
+  "as_of": "2026-11-24 10:03 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -225,7 +230,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "09:53 ET 11/24: account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open) - no orders possible. SPY 719.2 (-0.4%), QQQ 641.2 (-1.5%), SMH 434.9 (-5.5%). Regime unclear (index recovering, chips down). Scans skipped as moot.",
+  "status_note": "10:03 ET 11/24 (hourly): account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open) - no orders possible even though the entry window is open. SPY 719.5 (-0.4%), QQQ 640.8 (-1.6%), SMH 432.0 (-6.1%). Regime: semis falling, index unclear. Scans and news search skipped as moot.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-24",
