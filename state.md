@@ -379,13 +379,20 @@ Cycle entry template (copy for each cycle):
 - Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
 - Tape: SPY 716.46 (-0.8% vs 722.29), QQQ 635.57 (-2.4%), SMH 425.73 (-7.5%). Unchanged vs 15:33. Regime label: range-bound/choppy (no 5-minute bars pulled). Past the 15:30 ET entry cutoff; no entry possible at $0 buying power anyway; scans skipped (disclosed). Trades 0 (0 forced). Close recap follows at ~15:47-15:49 ET.
 
+### Cycle 1357 - 2026-11-24 15:48 ET (close recap)
+- Trigger "Trading close recap" fired 20:48:23Z; last commit 20:42:5xZ (~5.5 min). The 6-minute dedupe rule is written for the 10-minute cycle triggers; the recap is a distinct required task, so it ran (judgment call, disclosed, same as 11/23).
+- Stop checks: none (no positions). Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
+- Overnight: NOTHING rolls overnight - the account is flat with no holdings and no orders. No thesis to maintain. No entries after 15:30 ET (and none possible at $0 buying power).
+- Tape at 15:48 ET: SPY 717.55 (-0.7% vs the 722.29 close), QQQ 636.84 (-2.2%), SMH 426.93 (-7.2%). Closing prints are not yet final (the official 11/24 closes will be in the 11/25 pre-open brief).
+- **Day recap 11/24:** 0 trades (0 forced); the 1-trade minimum was missed because buying power was $0.00 all session (balance gone since the 11/20 close, cause unverified). No gate was loosened. P&L: none attributable to the agent (no positions); start_equity left null and no $0 equity points charted. Cycles ran on schedule from the pre-open brief (08:29 ET) through this recap; scans, hourly WebSearches and news checks were skipped as moot (disclosed in each entry); the only search run (pre-open) found no 11/24-dated source, so the cause of today's selloff (SPY -1.2% to -1.3%, SMH -9% at the 11:14 low, then range-bound -7% to -8%) is unverified. Pre-open watch lists (MR: ADI/MDT/NVDA/AMD/MU; momentum: DKS/DLTR/BBY) were informational only and never evaluated. The 10% circuit breaker (level $394.19) would read as triggered by the $0 balance, but it is not a trading drawdown. Trading resumes only if the balance is restored and verified. OPEN QUESTION for the owner: was the $398.81 withdrawn/transferred on purpose?
+
 ## DASHBOARD_DATA
 
 Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) open and watched, `red` = stop recently hit or circuit breaker tripped. Trade rows go in `trades` (newest last); positions needing no stop (legacy) are marked `"legacy": true`.
 
 ```json
 {
-  "as_of": "2026-11-24 15:42 ET",
+  "as_of": "2026-11-24 15:48 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -400,7 +407,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "15:42 ET 11/24: account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open) - no orders possible. SPY 716.5 (-0.8%), QQQ 635.6 (-2.4%), SMH 425.7 (-7.5%). Regime range-bound/choppy. Close recap next.",
+  "status_note": "15:48 ET 11/24 close recap: FLAT overnight, nothing rolls. Account 771144490 reads $0.00 all day (was $398.81 at the 11/20 close; cause unverified; owner question open). 0 trades, 0 forced; no gate loosened. SPY 717.6 (-0.7%), QQQ 636.8 (-2.2%), SMH 426.9 (-7.2%). Pre-open brief for 11/25 due ~08:30 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-24",
