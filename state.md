@@ -386,13 +386,24 @@ Cycle entry template (copy for each cycle):
 - Tape at 15:48 ET: SPY 717.55 (-0.7% vs the 722.29 close), QQQ 636.84 (-2.2%), SMH 426.93 (-7.2%). Closing prints are not yet final (the official 11/24 closes will be in the 11/25 pre-open brief).
 - **Day recap 11/24:** 0 trades (0 forced); the 1-trade minimum was missed because buying power was $0.00 all session (balance gone since the 11/20 close, cause unverified). No gate was loosened. P&L: none attributable to the agent (no positions); start_equity left null and no $0 equity points charted. Cycles ran on schedule from the pre-open brief (08:29 ET) through this recap; scans, hourly WebSearches and news checks were skipped as moot (disclosed in each entry); the only search run (pre-open) found no 11/24-dated source, so the cause of today's selloff (SPY -1.2% to -1.3%, SMH -9% at the 11:14 low, then range-bound -7% to -8%) is unverified. Pre-open watch lists (MR: ADI/MDT/NVDA/AMD/MU; momentum: DKS/DLTR/BBY) were informational only and never evaluated. The 10% circuit breaker (level $394.19) would read as triggered by the $0 balance, but it is not a trading drawdown. Trading resumes only if the balance is restored and verified. OPEN QUESTION for the owner: was the $398.81 withdrawn/transferred on purpose?
 
+### Cycle 1358 - 2026-11-25 08:29 ET (PRE-OPEN BRIEF, read-only, no orders)
+- Trigger "Trading pre-open brief" fired 13:28:12Z; last commit 20:48:42Z (11/24). Framework §2.1 pre-open cycle: no orders.
+- Reconcile: account 771144490 (get_accounts: active, not deactivated, unsettled_funds 0) STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered. Nothing to stop-check. Trades 0.
+- Official 11/24 settled closes: SPY 718.78 (-0.5% vs 11/23 close 722.29), QQQ 638.10 (-2.0% vs 651.03), SMH 426.75 (-7.3% vs 460.18). (My 15:48 ET recap prints were within ~0.2% of these.)
+- Tape (pre-market, thin, 13:28Z = 08:28 ET): SPY 705.44 (-1.9% vs 718.78), QQQ 620.52 (-2.8%), SMH 408.50 (-4.3%), XLK 151.58 (-3.5%), XLE 60.22 (-0.4%), XLF 55.72 (-0.7%). Selling is broad and tech/semis-led again; energy and financials are holding up better. NVDA 147.40 (-5.1%), AMD 391.64 (-5.2%), AVGO 288.62 (-4.1%), MU 592.68 (-5.9%), TSM 332.82 (-4.7%). Two-day cumulative vs the 11/21 relief-rally close: SPY 705.4 vs 722.3 = -2.3%; the whole 11/23 bounce is gone.
+- News/politics: ONE WebSearch ("stock market premarket Wednesday November 25 2026 Nasdaq futures chips sell-off why") returned NO 11/25-dated source (results were June-July 2026 pieces on earlier chip selloffs; not used as a cause). Cause of the pre-market selloff UNVERIFIED; per the news rule, MR gate 1 FAILS for every name until a dated source is found in-session.
+- Earnings (get_earnings_calendar, verified dates, window 11/25-11/27): reported pre-market today - DE (EPS 3.89 vs 4.06 est: a miss), LI (-0.02 vs -0.08), BZ (0.35 vs 0.22), GDS (-0.006 vs 1.31: big miss), IMKTA; BMA reports after the close. No large-cap earnings 11/26 (Thanksgiving, markets closed) or 11/27 (early close, 13:00 ET) appeared in the calendar window.
+- Regime at the open: Falling pre-market (SPY/QQQ well below yesterday's close with chips leading) -> MR and momentum OFF until the tape shows ~3 consecutive higher 5-minute lows (Stabilizing -> MR) or stable/rising (momentum). Regime label to be written every cycle from 09:30 ET. Note: 11/27 is a half day (early close), so any hold-through-holiday decision would also be flagged.
+- WATCH LISTS (informational ONLY - the account has $0 buying power, so no entry is possible regardless). Mean-reversion watch (needs >=3.5-5% intraday drop, RSI(14,d) thresholds, a sourced dated cause, neutral-or-better fundamentals, a 2R anchor, not a multi-week downtrend): 1) NVDA (-5.1% pre-mkt), 2) AMD (-5.2%), 3) MU (-5.9%), 4) AVGO (-4.1%), 5) TSM (-4.7% - foreign ADR, fine for MR but check spread). Gate 1 currently FAILS on all five (no dated source); gate 4 (multi-week downtrend) must be checked - these names have fallen for 4 sessions. Momentum watch: NONE credibly identified. The earnings calendar offers no clean beat candidates (LI, BZ, GDS are foreign ADRs = auto-fail; DE missed). Relative-strength names to check at 10:30 ET (unverified, no quotes pulled): energy and financials constituents, since XLE/XLF are only -0.4%/-0.7%. I am not naming single stocks I have not quoted.
+- Honest caveats: pre-market quotes are thin and can reverse at the open; no scans were run (preview_scan skipped as moot with $0 buying power); the MR list comes from a quote check of the semis names carried over from 11/24, not a full-universe sweep.
+
 ## DASHBOARD_DATA
 
 Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) open and watched, `red` = stop recently hit or circuit breaker tripped. Trade rows go in `trades` (newest last); positions needing no stop (legacy) are marked `"legacy": true`.
 
 ```json
 {
-  "as_of": "2026-11-24 15:48 ET",
+  "as_of": "2026-11-25 08:29 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -407,10 +418,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "15:48 ET 11/24 close recap: FLAT overnight, nothing rolls. Account 771144490 reads $0.00 all day (was $398.81 at the 11/20 close; cause unverified; owner question open). 0 trades, 0 forced; no gate loosened. SPY 717.6 (-0.7%), QQQ 636.8 (-2.2%), SMH 426.9 (-7.2%). Pre-open brief for 11/25 due ~08:30 ET.",
+  "status_note": "08:29 ET 11/25 PRE-OPEN: account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open) - no orders possible. Pre-market SPY 705.4 (-1.9% vs 718.78 close), QQQ 620.5 (-2.8%), SMH 408.5 (-4.3%); the 11/23 bounce is fully gone. Cause unverified (no 11/25-dated source). Regime Falling at the open: MR and momentum off. Watch only: MR NVDA/AMD/MU/AVGO/TSM; no credible momentum names.",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-11-24",
+    "date": "2026-11-25",
     "start_equity": null,
     "trades": 0,
     "forced": 0
