@@ -397,13 +397,18 @@ Cycle entry template (copy for each cycle):
 - WATCH LISTS (informational ONLY - the account has $0 buying power, so no entry is possible regardless). Mean-reversion watch (needs >=3.5-5% intraday drop, RSI(14,d) thresholds, a sourced dated cause, neutral-or-better fundamentals, a 2R anchor, not a multi-week downtrend): 1) NVDA (-5.1% pre-mkt), 2) AMD (-5.2%), 3) MU (-5.9%), 4) AVGO (-4.1%), 5) TSM (-4.7% - foreign ADR, fine for MR but check spread). Gate 1 currently FAILS on all five (no dated source); gate 4 (multi-week downtrend) must be checked - these names have fallen for 4 sessions. Momentum watch: NONE credibly identified. The earnings calendar offers no clean beat candidates (LI, BZ, GDS are foreign ADRs = auto-fail; DE missed). Relative-strength names to check at 10:30 ET (unverified, no quotes pulled): energy and financials constituents, since XLE/XLF are only -0.4%/-0.7%. I am not naming single stocks I have not quoted.
 - Honest caveats: pre-market quotes are thin and can reverse at the open; no scans were run (preview_scan skipped as moot with $0 buying power); the MR list comes from a quote check of the semis names carried over from 11/24, not a full-universe sweep.
 
+### Cycle 1359 - 2026-11-25 08:43 ET (pre-market)
+- Dedupe: last commit 13:28:59Z, trigger 13:43:15Z (~14 min) -> proceed.
+- Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
+- Tape (pre-market, thin): SPY 703.95 (-2.1% vs 718.78), QQQ 617.75 (-3.2%), SMH 405.23 (-5.0%). Lower than the 08:29 brief (705.44/620.52/408.50): the pre-market selloff is deepening. Regime: Falling (pre-market). Before the 10:00 ET entry window; no entry possible at $0 buying power; scans skipped as moot (disclosed). Trades 0 (0 forced).
+
 ## DASHBOARD_DATA
 
 Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) open and watched, `red` = stop recently hit or circuit breaker tripped. Trade rows go in `trades` (newest last); positions needing no stop (legacy) are marked `"legacy": true`.
 
 ```json
 {
-  "as_of": "2026-11-25 08:29 ET",
+  "as_of": "2026-11-25 08:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -418,7 +423,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "08:29 ET 11/25 PRE-OPEN: account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open) - no orders possible. Pre-market SPY 705.4 (-1.9% vs 718.78 close), QQQ 620.5 (-2.8%), SMH 408.5 (-4.3%); the 11/23 bounce is fully gone. Cause unverified (no 11/25-dated source). Regime Falling at the open: MR and momentum off. Watch only: MR NVDA/AMD/MU/AVGO/TSM; no credible momentum names.",
+  "status_note": "08:43 ET 11/25 (pre-market): account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open) - no orders possible. SPY 704.0 (-2.1% vs 718.78), QQQ 617.8 (-3.2%), SMH 405.2 (-5.0%): selloff deepening. Regime Falling: MR and momentum off. Scans skipped as moot.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-25",
