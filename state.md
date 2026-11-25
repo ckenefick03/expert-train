@@ -482,13 +482,18 @@ Cycle entry template (copy for each cycle):
 - Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
 - Tape: SPY 699.80 (-2.6% vs 718.78), QQQ 611.30 (-4.2%), SMH 397.07 (-7.0%). A bounce off the 11:13 prints (697.69/609.00/395.13), which were the lows of the day for QQQ and SMH (SPY's low was 697.60 at 09:43). Regime label: Falling, with a tentative bounce off a double-bottom area; unconfirmed (no 5-minute bars pulled). No entry possible at $0 buying power; scans and news searches skipped as moot (disclosed). Trades 0 (0 forced).
 
+### Cycle 1376 - 2026-11-25 11:33 ET
+- Dedupe: last commit 16:23:04Z, trigger 16:32:59Z (~9.9 min) -> proceed.
+- Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
+- Tape: SPY 699.52 (-2.7% vs 718.78), QQQ 611.12 (-4.2%), SMH 396.59 (-7.1%). Flat vs 11:23 (699.80/611.30/397.07), holding above the 11:13 lows (697.69/609.00/395.13). Regime label: Falling/range-bound near a double-bottom area, unconfirmed (no 5-minute bars pulled). Tier B window (11:30-14:30) now open; no entry possible at $0 buying power; scans and news searches skipped as moot (disclosed). Trades 0 (0 forced).
+
 ## DASHBOARD_DATA
 
 Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) open and watched, `red` = stop recently hit or circuit breaker tripped. Trade rows go in `trades` (newest last); positions needing no stop (legacy) are marked `"legacy": true`.
 
 ```json
 {
-  "as_of": "2026-11-25 11:23 ET",
+  "as_of": "2026-11-25 11:33 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -503,7 +508,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "11:23 ET 11/25: account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open) - no orders possible. SPY 699.8 (-2.6%), QQQ 611.3 (-4.2%), SMH 397.1 (-7.0%): tentative bounce off the 11:13 lows. Regime Falling/tentative base, unconfirmed. Scans skipped as moot.",
+  "status_note": "11:33 ET 11/25: account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open) - no orders possible. SPY 699.5 (-2.7%), QQQ 611.1 (-4.2%), SMH 396.6 (-7.1%): range-bound above the 11:13 lows. Regime Falling/range-bound, unconfirmed. Scans skipped as moot.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-25",
