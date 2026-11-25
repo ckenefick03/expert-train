@@ -612,13 +612,21 @@ Cycle entry template (copy for each cycle):
 - Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
 - Tape: SPY 714.60 (-0.6% vs 718.78), QQQ 630.20 (-1.2%), SMH 416.11 (-2.5%). Flat to slightly lower vs 15:33 (714.53/630.29/416.66). Regime label: Falling/flat, unconfirmed (no 5-minute bars pulled). 15:30 entry cutoff has passed; no entry possible in any case ($0 buying power); scans and news searches skipped as moot (disclosed). Trades 0 (0 forced). Close recap due ~15:47-15:49 ET.
 
+### Cycle 1402 - 2026-11-25 15:48 ET (close recap, last cycle of the day)
+- Dedupe: last commit 20:42:43Z, trigger 20:48:10Z (~5.5 min, under the 6-min skip rule). Proceeding anyway because the close recap is a required separate task (disclosed judgment call, same as the 11/23 and 11/24 recaps).
+- Stop checks / reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Nothing to stop out of. Cause of the $0 balance unverified (was $398.81 at the 11/20 close); owner question (was it withdrawn or transferred on purpose?) still unanswered.
+- Tape at 15:48 ET (not the official close; official closes will be noted in the next pre-open brief): SPY 716.27 (-0.3% vs 718.78), QQQ 632.29 (-0.9%), SMH 418.30 (-2.0%). Recovered from the 15:33-15:42 low (714.5/630.3/416.1).
+- Overnight status: FLAT. No positions roll overnight, so there is no thesis to defend. No entries after 15:30 ET in any case.
+- Day recap 11/25: trades 0 (0 forced); no orders placed or open; P&L $0.00 (no positions all day); start_equity null, no equity point charted. Cycles ran every ~10 min from the 9:3x ET open through 15:42 ET; each reconciled and each found the account at $0.00, so scans and news searches were skipped as moot (disclosed). Pre-open brief (Cycle 1358) listed MR watch names NVDA/AMD/MU/AVGO/TSM and no credible momentum names; none were actionable. The cause of the 11/24 and 11/25 selloffs was never sourced; per the news rule, MR gate 1 would have failed. The 1-trade/day minimum was not met; no gate was loosened because no entry was possible at $0 buying power.
+- Next: Thursday 11/26 is closed (Thanksgiving); Friday 11/27 is an early close at 13:00 ET. Trading resumes only if the balance is restored and verified.
+
 ## DASHBOARD_DATA
 
 Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) open and watched, `red` = stop recently hit or circuit breaker tripped. Trade rows go in `trades` (newest last); positions needing no stop (legacy) are marked `"legacy": true`.
 
 ```json
 {
-  "as_of": "2026-11-25 15:42 ET",
+  "as_of": "2026-11-25 15:48 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -633,7 +641,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "15:42 ET 11/25: account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open) - no orders possible; entry cutoff 15:30 passed. SPY 714.6 (-0.6%), QQQ 630.2 (-1.2%), SMH 416.1 (-2.5%): flat after the late leg down. Regime Falling/flat, unconfirmed. Close recap due ~15:47.",
+  "status_note": "15:48 ET 11/25 close recap: FLAT overnight, 0 trades (0 forced), P&L $0.00. Account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open). SPY 716.3 (-0.3%), QQQ 632.3 (-0.9%), SMH 418.3 (-2.0%). Markets closed 11/26 (Thanksgiving); 11/27 early close 13:00 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-25",
