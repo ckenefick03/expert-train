@@ -532,13 +532,18 @@ Cycle entry template (copy for each cycle):
 - Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
 - Tape: SPY 711.81 (-1.0% vs 718.78), QQQ 624.98 (-2.1%), SMH 410.27 (-3.9%). Up a little more vs 12:53 (710.76/623.99/408.96): the best prints since the open, a steady climb of roughly +14 SPY points from the 11:13 low (697.69). Regime label: Stabilizing/rising, unconfirmed against the framework's 5-minute-bar test (no bars pulled). Cause of the selloff and of the rebound still unverified; hourly WebSearch skipped as moot (disclosed). Tier B window open; no entry possible at $0 buying power; scans skipped. Trades 0 (0 forced).
 
+### Cycle 1386 - 2026-11-25 13:12 ET (hourly-routine run)
+- Dedupe: last commit 18:02:51Z, trigger 18:12:46Z (~10 min) -> proceed.
+- Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
+- Tape: SPY 711.50 (-1.0% vs 718.78), QQQ 625.09 (-2.0%), SMH 410.54 (-3.8%). Flat vs 13:03 (711.81/624.98/410.27): consolidating at the day's highs. Regime label: Stabilizing/flat, unconfirmed (no 5-minute bars pulled). Tier B window open; no entry possible at $0 buying power; scans and news searches skipped as moot (disclosed). Trades 0 (0 forced).
+
 ## DASHBOARD_DATA
 
 Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) open and watched, `red` = stop recently hit or circuit breaker tripped. Trade rows go in `trades` (newest last); positions needing no stop (legacy) are marked `"legacy": true`.
 
 ```json
 {
-  "as_of": "2026-11-25 13:03 ET",
+  "as_of": "2026-11-25 13:12 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -553,7 +558,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "13:03 ET 11/25 (hourly): account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open) - no orders possible. SPY 711.8 (-1.0%), QQQ 625.0 (-2.1%), SMH 410.3 (-3.9%): best prints since the open. Regime Stabilizing/rising, unconfirmed. Scans skipped as moot.",
+  "status_note": "13:12 ET 11/25: account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open) - no orders possible. SPY 711.5 (-1.0%), QQQ 625.1 (-2.0%), SMH 410.5 (-3.8%): consolidating at the day highs. Regime Stabilizing/flat, unconfirmed. Scans skipped as moot.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-25",
