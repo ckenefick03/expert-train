@@ -607,13 +607,18 @@ Cycle entry template (copy for each cycle):
 - Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
 - Tape: SPY 714.53 (-0.6% vs 718.78), QQQ 630.29 (-1.2%), SMH 416.66 (-2.4%). Softer vs 15:23 (716.43/632.80/419.73): a late-session leg down of roughly 0.3-0.7%. Cause unverified (no news search run). Regime label: Falling/choppy, unconfirmed (no 5-minute bars pulled); MR and momentum would be off by the regime switch regardless. 15:30 entry cutoff has passed, so no entries are allowed in any case. Trades 0 (0 forced). Close recap due ~15:47-15:49 ET.
 
+### Cycle 1401 - 2026-11-25 15:42 ET
+- Dedupe: last commit 20:32:49Z, trigger 20:42:28Z (~9.65 min) -> proceed.
+- Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
+- Tape: SPY 714.60 (-0.6% vs 718.78), QQQ 630.20 (-1.2%), SMH 416.11 (-2.5%). Flat to slightly lower vs 15:33 (714.53/630.29/416.66). Regime label: Falling/flat, unconfirmed (no 5-minute bars pulled). 15:30 entry cutoff has passed; no entry possible in any case ($0 buying power); scans and news searches skipped as moot (disclosed). Trades 0 (0 forced). Close recap due ~15:47-15:49 ET.
+
 ## DASHBOARD_DATA
 
 Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) open and watched, `red` = stop recently hit or circuit breaker tripped. Trade rows go in `trades` (newest last); positions needing no stop (legacy) are marked `"legacy": true`.
 
 ```json
 {
-  "as_of": "2026-11-25 15:33 ET",
+  "as_of": "2026-11-25 15:42 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -628,7 +633,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "15:33 ET 11/25: account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open) - no orders possible; entry cutoff 15:30 passed. SPY 714.5 (-0.6%), QQQ 630.3 (-1.2%), SMH 416.7 (-2.4%): late leg down, cause unverified. Regime Falling/choppy, unconfirmed.",
+  "status_note": "15:42 ET 11/25: account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open) - no orders possible; entry cutoff 15:30 passed. SPY 714.6 (-0.6%), QQQ 630.2 (-1.2%), SMH 416.1 (-2.5%): flat after the late leg down. Regime Falling/flat, unconfirmed. Close recap due ~15:47.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-25",
