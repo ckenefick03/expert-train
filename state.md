@@ -698,13 +698,19 @@ Cycle entry template (copy for each cycle):
 - Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
 - Markets closed today (Thanksgiving), so no tape read, scans or news searches were run; no entry is possible in any case. Trades 0 (0 forced). Next session: Fri 11/27, early close 13:00 ET.
 
+### Cycle 1417 - 2026-11-26 11:03 ET (US markets CLOSED, Thanksgiving)
+- Dedupe: last commit 15:42:52Z, trigger 16:02:55Z (~20 min) -> proceed.
+- MISSED CYCLE (disclosed): the 11:52Z... correction, the 10:52 ET (15:52Z) cycle was not logged or committed. Bash and the open-orders call returned a transient auto-mode classifier error ("no verdict") on repeated attempts, so I could not run the commit/build/push steps. A partial reconcile at that time showed $0.00 and no positions; open orders could not be checked then. Nothing was traded and no order could have been placed (markets closed). There is no 10:52 ET entry.
+- Reconcile (this cycle, all three calls succeeded): account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
+- Markets closed today (Thanksgiving), so no tape read, scans or news searches were run; no entry is possible in any case. Trades 0 (0 forced). Next session: Fri 11/27, early close 13:00 ET.
+
 ## DASHBOARD_DATA
 
 Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) open and watched, `red` = stop recently hit or circuit breaker tripped. Trade rows go in `trades` (newest last); positions needing no stop (legacy) are marked `"legacy": true`.
 
 ```json
 {
-  "as_of": "2026-11-26 10:42 ET",
+  "as_of": "2026-11-26 11:03 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
