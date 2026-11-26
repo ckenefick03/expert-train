@@ -620,13 +620,25 @@ Cycle entry template (copy for each cycle):
 - Day recap 11/25: trades 0 (0 forced); no orders placed or open; P&L $0.00 (no positions all day); start_equity null, no equity point charted. Cycles ran every ~10 min from the 9:3x ET open through 15:42 ET; each reconciled and each found the account at $0.00, so scans and news searches were skipped as moot (disclosed). Pre-open brief (Cycle 1358) listed MR watch names NVDA/AMD/MU/AVGO/TSM and no credible momentum names; none were actionable. The cause of the 11/24 and 11/25 selloffs was never sourced; per the news rule, MR gate 1 would have failed. The 1-trade/day minimum was not met; no gate was loosened because no entry was possible at $0 buying power.
 - Next: Thursday 11/26 is closed (Thanksgiving); Friday 11/27 is an early close at 13:00 ET. Trading resumes only if the balance is restored and verified.
 
+### Cycle 1403 - 2026-11-26 09:28 ET (pre-open brief trigger; US markets CLOSED today, Thanksgiving)
+- Dedupe: last commit 2026-11-25 20:48:29Z, trigger 2026-11-26 13:28:16Z (~16.7 h) -> proceed. Read-only, NO orders. I did not re-read framework.md, strategies/ or state.md in full this cycle (disclosed); standing rules are unchanged from my working notes.
+- Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Nothing to stop-check. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
+- 11/25 official regular-session closes (last regular trade ~15:59:59 ET): SPY 716.75 (-0.28% vs 718.78), QQQ 633.95 (-0.65% vs 638.10), SMH 422.60 (-0.97% vs 426.75). My 15:48 ET quotes (716.27/632.29/418.30) were not final; the tape rallied into the close, especially SMH (418.30 -> 422.60). Corrects the 15:48 figures in Cycle 1402.
+- Extended hours (last prints ~20:59 ET 11/25 = 00:59Z 11/26): SPY 720.43, QQQ 636.62, SMH 428.00. Thin after-hours prints; SMH's bid read 388.80 against an ask of 429.00, an obviously stale/bad quote, ignored (disclosed). No session today, so these roll to Friday 11/27.
+- Calendar: Thursday 11/26 closed (Thanksgiving); Friday 11/27 early close 13:00 ET, so MR Tier A/B/C windows and momentum earliest 10:30 ET all compress into 09:30-13:00. The next brief should be 11/27 ~09:28 ET (13:27-13:30Z), if a trigger fires.
+- Earnings (get_earnings_calendar, high_market_cap, 11/27-12/1; verified dates): 11/30: CHA (am), RBRK (pm). 12/1: VSTS, NIO, CPRT (am); TCOM, CRDO, HQY, NTAP, NCNO, OKTA, MDB, ASAN, MRVL, GTLB, BOX (pm). Under the 2-trading-day rule, CRDO and MRVL (semis) on 12/1 are excluded on 11/27 (12/1 is the next trading day after 11/27 plus one... 11/27 -> 11/30 -> 12/1 = 2 trading days) and CHA/RBRK (11/30) are excluded.
+- Watch lists for 11/27 (informational only; no entry is possible at $0 buying power, and nothing here is a recommendation):
+  - Mean reversion (only if the regime is Stabilizing AND gates pass; gate 1 needs a dated external cause sourced in-session, which I have NOT found for the 11/24-11/25 selloff): NVDA, AMD, MU, AVGO, TSM. Excluded: MRVL, CRDO (earnings 12/1).
+  - Momentum: no credible candidate identified; no quotes/RVOL/catalyst data pulled today. Foreign ADRs (e.g. LI, BZ, GDS, NIO, TCOM) auto-fail.
+- News/politics: NOT searched this cycle (markets closed, no orders possible); no news claims made here. Trades 0 (0 forced).
+
 ## DASHBOARD_DATA
 
 Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) open and watched, `red` = stop recently hit or circuit breaker tripped. Trade rows go in `trades` (newest last); positions needing no stop (legacy) are marked `"legacy": true`.
 
 ```json
 {
-  "as_of": "2026-11-25 15:48 ET",
+  "as_of": "2026-11-26 09:28 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -641,10 +653,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "15:48 ET 11/25 close recap: FLAT overnight, 0 trades (0 forced), P&L $0.00. Account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open). SPY 716.3 (-0.3%), QQQ 632.3 (-0.9%), SMH 418.3 (-2.0%). Markets closed 11/26 (Thanksgiving); 11/27 early close 13:00 ET.",
+  "status_note": "11/26 09:28 ET (Thanksgiving, markets closed): account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open). 11/25 official closes SPY 716.75 (-0.28%), QQQ 633.95 (-0.65%), SMH 422.60 (-0.97%). Next session Fri 11/27, early close 13:00 ET. No orders possible.",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-11-25",
+    "date": "2026-11-26",
     "start_equity": null,
     "trades": 0,
     "forced": 0
