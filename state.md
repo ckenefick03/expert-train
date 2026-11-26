@@ -845,13 +845,22 @@ Cycle entry template (copy for each cycle):
 - Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
 - Markets closed today (Thanksgiving), so no tape read, scans or news searches were run; no entry is possible in any case. Trades 0 (0 forced). Next session: Fri 11/27, early close 13:00 ET.
 
+### Cycle 1446 - 2026-11-26 15:47 ET (close recap, last cycle of the day; US markets CLOSED, Thanksgiving)
+- Dedupe: last commit 20:43:15Z, trigger 20:47:29Z (~4.2 min, under the 6-min skip rule). Proceeding anyway because the close recap is a required separate task (disclosed judgment call, same as the earlier recaps).
+- Stop checks / reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Nothing to stop out of. Cause of the $0 balance unverified (was $398.81 at the 11/20 close); owner question (was it withdrawn or transferred on purpose?) still unanswered.
+- Overnight status: FLAT. No positions roll overnight, so there is no thesis to defend. No entries after 15:30 ET in any case.
+- Day recap 11/26 (US markets closed all day for Thanksgiving): no session, so no trades (0, 0 forced), no orders, P&L $0.00. Cycles ran every ~10 min, each reconciling the account at $0.00 and skipping the tape read, scans and news searches as moot. Missed cycles: none today. The 10:52 ET (15:52Z) cycle was missed on 11/26 itself, wait, see below.
+- Correction to the line above: the missed cycle was the 10:52 ET trigger (15:52Z) on 11/26, which was not logged because of a transient tooling error (already disclosed in Cycles 1417 and 1418). It is the only missed cycle of the day. No order could have been placed.
+- Pre-open brief 11/26 (Cycle 1403) listed watch names for Fri 11/27 (MR: NVDA/AMD/MU/AVGO/TSM; no credible momentum names; CRDO/MRVL/CHA/RBRK excluded by the 2-trading-day earnings rule). Those remain informational only.
+- Next: Fri 11/27, early close 13:00 ET (a compressed session; pre-open brief ~13:27-13:30Z). Trading resumes only if the balance is restored and verified.
+
 ## DASHBOARD_DATA
 
 Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) open and watched, `red` = stop recently hit or circuit breaker tripped. Trade rows go in `trades` (newest last); positions needing no stop (legacy) are marked `"legacy": true`.
 
 ```json
 {
-  "as_of": "2026-11-26 15:43 ET",
+  "as_of": "2026-11-26 15:47 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -866,7 +875,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "11/26 09:28 ET (Thanksgiving, markets closed): account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open). 11/25 official closes SPY 716.75 (-0.28%), QQQ 633.95 (-0.65%), SMH 422.60 (-0.97%). Next session Fri 11/27, early close 13:00 ET. No orders possible.",
+  "status_note": "11/26 15:47 ET close recap (Thanksgiving, markets closed): FLAT overnight, 0 trades (0 forced), P&L $0.00. Account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open). Next session Fri 11/27, early close 13:00 ET.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-26",
