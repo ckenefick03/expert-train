@@ -881,13 +881,19 @@ Cycle entry template (copy for each cycle):
 - Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
 - Tape (extended-hours prints ~09:02 ET, thin): SPY 727.56 (+1.5% vs 716.70), QQQ 647.64 (+2.2% vs 633.93), SMH 438.18 (+3.7% vs 422.46). Slightly off the 08:53 highs (728.20/648.58/439.55). Pre-market, so no entry window is open (none before 10:00 ET); scans and news searches skipped as moot (disclosed). Trades 0 (0 forced).
 
+### Cycle 1451 - 2026-11-27 09:13 ET (hourly trigger; pre-market; session opens 09:30 ET, early close 13:00 ET)
+- Dedupe: last commit 14:03:01Z, trigger 14:13:35Z (~10.5 min) -> proceed.
+- Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
+- Tape (extended-hours prints ~09:13 ET, thin): SPY 727.34 (+1.5% vs 716.70), QQQ 647.67 (+2.2% vs 633.93), SMH 438.20 (+3.7% vs 422.46). Flat vs 09:02 (727.56/647.64/438.18).
+- The hourly trigger asks for a full read of framework/strategies/state, news and politics searches and scans. None were run: it is pre-market (no entry before 10:00 ET) and no entry is possible at $0 buying power (disclosed). Trades 0 (0 forced).
+
 ## DASHBOARD_DATA
 
 Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) open and watched, `red` = stop recently hit or circuit breaker tripped. Trade rows go in `trades` (newest last); positions needing no stop (legacy) are marked `"legacy": true`.
 
 ```json
 {
-  "as_of": "2026-11-27 09:02 ET",
+  "as_of": "2026-11-27 09:13 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -902,7 +908,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "11/27 09:02 ET pre-market (early close 13:00 ET): account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open) - no orders possible. Pre-market gap up holds: SPY +1.5%, QQQ +2.2%, SMH +3.7% (thin extended-hours prints, cause not researched).",
+  "status_note": "11/27 09:13 ET pre-market (early close 13:00 ET): account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open) - no orders possible. Pre-market gap up holds: SPY +1.5%, QQQ +2.2%, SMH +3.7% (thin extended-hours prints, cause not researched).",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-27",
