@@ -897,13 +897,18 @@ Cycle entry template (copy for each cycle):
 - Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
 - Tape (regular-session prints, first quotes after the 09:30 open): SPY 724.81 (+1.1% vs 716.70), QQQ 643.40 (+1.5% vs 633.93), SMH 431.90 (+2.2% vs 422.46). The pre-market gap faded at the open (09:23 extended-hours: 726.34/646.71/436.73), most of all in SMH (+3.4% -> +2.2%). Regime label: gap-up fading, Stabilizing/unconfirmed (no 5-minute bars pulled). Entries are not allowed before 10:00 ET in any case; no entry is possible at $0 buying power; scans and news searches skipped as moot (disclosed). Trades 0 (0 forced).
 
+### Cycle 1454 - 2026-11-27 09:43 ET (early close 13:00 ET)
+- Dedupe: last commit 14:32:46Z, trigger 14:43:06Z (~10.3 min) -> proceed.
+- Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
+- Tape (regular session): SPY 721.58 (+0.7% vs 716.70), QQQ 638.45 (+0.7% vs 633.93), SMH 425.39 (+0.7% vs 422.46). The gap kept fading: SPY 724.81 -> 721.58 and SMH 431.90 -> 425.39 since 09:32 (about -0.4% and -1.5%). Regime label: Falling/fading intraday, unconfirmed (no 5-minute bars pulled); MR and momentum would be off by the regime switch anyway. Entries are not allowed before 10:00 ET in any case; no entry is possible at $0 buying power; scans and news searches skipped as moot (disclosed). Trades 0 (0 forced).
+
 ## DASHBOARD_DATA
 
 Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) open and watched, `red` = stop recently hit or circuit breaker tripped. Trade rows go in `trades` (newest last); positions needing no stop (legacy) are marked `"legacy": true`.
 
 ```json
 {
-  "as_of": "2026-11-27 09:32 ET",
+  "as_of": "2026-11-27 09:43 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -918,7 +923,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "11/27 09:32 ET (open; early close 13:00 ET): account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open) - no orders possible. SPY 724.8 (+1.1%), QQQ 643.4 (+1.5%), SMH 431.9 (+2.2%): the pre-market gap faded at the open. Regime gap-up fading, unconfirmed. Scans skipped as moot.",
+  "status_note": "11/27 09:43 ET (early close 13:00 ET): account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open) - no orders possible. SPY 721.6 (+0.7%), QQQ 638.5 (+0.7%), SMH 425.4 (+0.7%): the opening gap kept fading. Regime Falling/fading, unconfirmed. Scans skipped as moot.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-27",
