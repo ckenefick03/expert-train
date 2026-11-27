@@ -1013,13 +1013,18 @@ Cycle entry template (copy for each cycle):
 - Markets closed (early close at 13:00 ET). Last regular-session trades (~12:59:59 ET) unchanged from Cycle 1474: SPY 728.73, QQQ 650.76, SMH 439.67. Thin after-hours prints at 13:12 ET: SPY 728.03, QQQ 650.25, SMH 438.51.
 - The hourly trigger asks for a full read of framework/strategies/state, a tape read, news and politics searches and scans. None were run: markets are closed and no entry is possible at $0 buying power (disclosed). Trades 0 (0 forced). Overnight/weekend status: FLAT. Next session: Mon 11/30 (full day).
 
+### Cycle 1476 - 2026-11-27 13:22 ET (US markets CLOSED after the 13:00 ET early close)
+- Dedupe: last commit 18:12:51Z, trigger 18:22:47Z (~9.9 min) -> proceed.
+- Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
+- Markets closed, so no tape read, scans or news searches were run; no entry is possible in any case. Trades 0 (0 forced). Overnight/weekend status: FLAT. Next session: Mon 11/30 (full day).
+
 ## DASHBOARD_DATA
 
 Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) open and watched, `red` = stop recently hit or circuit breaker tripped. Trade rows go in `trades` (newest last); positions needing no stop (legacy) are marked `"legacy": true`.
 
 ```json
 {
-  "as_of": "2026-11-27 13:12 ET",
+  "as_of": "2026-11-27 13:22 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
