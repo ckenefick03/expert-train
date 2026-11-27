@@ -1088,13 +1088,22 @@ Cycle entry template (copy for each cycle):
 - Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
 - Markets closed, so no tape read, scans or news searches were run; no entry is possible in any case. Trades 0 (0 forced). Overnight/weekend status: FLAT. Next session: Mon 11/30 (full day). The close recap is due in a few minutes (~20:47Z / 15:47 ET).
 
+### Cycle 1491 - 2026-11-27 15:48 ET (close recap, last cycle of the day; US markets CLOSED after the 13:00 ET early close)
+- Dedupe: last commit 20:43:07Z, trigger 20:47:55Z (~4.8 min, under the 6-min skip rule). Proceeding anyway because the close recap is a required separate task (disclosed judgment call, same as the earlier recaps).
+- Stop checks / reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Nothing to stop out of. Cause of the $0 balance unverified (was $398.81 at the 11/20 close); owner question (was it withdrawn or transferred on purpose?) still unanswered.
+- Overnight / weekend status: FLAT. No positions roll over the weekend, so there is no thesis to defend. No entries after 15:30 ET in any case (and the session ended at 13:00 ET today).
+- Session close: last regular-session trades (~12:59:59 ET): SPY 728.73 (+1.7% vs 716.70), QQQ 650.76 (+2.7% vs 633.93), SMH 439.67 (+4.1% vs 422.46). The quote tool's `close` object still showed the 11/25 closes at this read, so these are last trades, not confirmed official closes; the official 11/27 closes will be noted in the Monday pre-open brief.
+- Day recap 11/27 (early close 13:00 ET): trades 0 (0 forced), no orders placed or open, P&L $0.00. Pre-open brief at 08:28 ET (Cycle 1447): MR watch NVDA/AMD/MU/AVGO/TSM, no credible momentum names, 11/30-12/1 earnings reporters excluded. Pre-market gap up (SPY +1.6%, SMH +3.9%) faded at the open (09:32-09:54), then the market climbed to session highs by 11:52 and rallied again into the close. Every cycle reconciled the account at $0.00 and skipped scans and news searches as moot. Missed cycles today: none.
+- Tidy-up of the 11/26 recap (Cycle 1446): its day-recap line carried a clumsy "wait, see below" aside. The accurate statement is the line that follows it: the only missed cycle on 11/26 was the 10:52 ET (15:52Z) trigger, caused by a transient tooling error, already disclosed in Cycles 1417 and 1418.
+- Next: Mon 11/30 (full day); pre-open brief ~13:27-13:30Z (UTC-5, so ~08:28 ET). Earnings: CHA (am) and RBRK (pm) report 11/30; CRDO, MRVL, OKTA, MDB and others report 12/1. Trading resumes only if the balance is restored and verified.
+
 ## DASHBOARD_DATA
 
 Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) open and watched, `red` = stop recently hit or circuit breaker tripped. Trade rows go in `trades` (newest last); positions needing no stop (legacy) are marked `"legacy": true`.
 
 ```json
 {
-  "as_of": "2026-11-27 15:43 ET",
+  "as_of": "2026-11-27 15:48 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1109,7 +1118,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "11/27 13:12 ET (markets closed after the 13:00 early close): account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open) - no orders possible; flat into the weekend. Last regular-session trades SPY 728.7 (+1.7%), QQQ 650.8 (+2.7%), SMH 439.7 (+4.1%). Next session Mon 11/30.",
+  "status_note": "11/27 15:48 ET close recap (early close 13:00 ET): FLAT into the weekend, 0 trades (0 forced), P&L $0.00. Account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open). Last regular-session trades SPY 728.7 (+1.7%), QQQ 650.8 (+2.7%), SMH 439.7 (+4.1%). Next session Mon 11/30.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-27",
