@@ -902,13 +902,18 @@ Cycle entry template (copy for each cycle):
 - Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
 - Tape (regular session): SPY 721.58 (+0.7% vs 716.70), QQQ 638.45 (+0.7% vs 633.93), SMH 425.39 (+0.7% vs 422.46). The gap kept fading: SPY 724.81 -> 721.58 and SMH 431.90 -> 425.39 since 09:32 (about -0.4% and -1.5%). Regime label: Falling/fading intraday, unconfirmed (no 5-minute bars pulled); MR and momentum would be off by the regime switch anyway. Entries are not allowed before 10:00 ET in any case; no entry is possible at $0 buying power; scans and news searches skipped as moot (disclosed). Trades 0 (0 forced).
 
+### Cycle 1455 - 2026-11-27 09:54 ET (early close 13:00 ET)
+- Dedupe: last commit 14:43:24Z, trigger 14:53:54Z (~10.5 min) -> proceed.
+- Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
+- Tape (regular session): SPY 721.22 (+0.6% vs 716.70), QQQ 638.94 (+0.8% vs 633.93), SMH 425.75 (+0.8% vs 422.46). Flat vs 09:43 (721.58/638.45/425.39): the fade has paused. Regime label: Stabilizing/flat, unconfirmed (no 5-minute bars pulled). The 10:00 ET entry window has not opened yet; no entry is possible at $0 buying power; scans and news searches skipped as moot (disclosed). Trades 0 (0 forced).
+
 ## DASHBOARD_DATA
 
 Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) open and watched, `red` = stop recently hit or circuit breaker tripped. Trade rows go in `trades` (newest last); positions needing no stop (legacy) are marked `"legacy": true`.
 
 ```json
 {
-  "as_of": "2026-11-27 09:43 ET",
+  "as_of": "2026-11-27 09:54 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -923,7 +928,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "11/27 09:43 ET (early close 13:00 ET): account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open) - no orders possible. SPY 721.6 (+0.7%), QQQ 638.5 (+0.7%), SMH 425.4 (+0.7%): the opening gap kept fading. Regime Falling/fading, unconfirmed. Scans skipped as moot.",
+  "status_note": "11/27 09:54 ET (early close 13:00 ET): account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open) - no orders possible. SPY 721.2 (+0.6%), QQQ 638.9 (+0.8%), SMH 425.7 (+0.8%): the opening fade paused. Regime Stabilizing/flat, unconfirmed. Scans skipped as moot.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-27",
