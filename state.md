@@ -1007,13 +1007,19 @@ Cycle entry template (copy for each cycle):
 - Session end: last regular-session trades (~12:59:59 ET): SPY 728.73 (+1.7% vs 716.70), QQQ 650.76 (+2.7% vs 633.93), SMH 439.67 (+4.1% vs 422.46). A late rally into the close from the 12:53 prints (725.86/646.29/432.60). These are last trades, not yet the official closes (the `close` object still showed 11/25 at this read); the official closes will be noted in the next pre-open brief. After-hours prints at 13:03 ET: SPY 727.93, QQQ 650.75, SMH 439.05 (thin).
 - Markets are closed, so no scans or news searches were run; no entry is possible in any case. Trades 0 (0 forced). Overnight/weekend status: FLAT (no positions). Next session: Mon 11/30 (full day).
 
+### Cycle 1475 - 2026-11-27 13:12 ET (hourly trigger; US markets CLOSED after the 13:00 ET early close)
+- Dedupe: last commit 18:03:17Z, trigger 18:12:34Z (~9.3 min) -> proceed.
+- Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
+- Markets closed (early close at 13:00 ET). Last regular-session trades (~12:59:59 ET) unchanged from Cycle 1474: SPY 728.73, QQQ 650.76, SMH 439.67. Thin after-hours prints at 13:12 ET: SPY 728.03, QQQ 650.25, SMH 438.51.
+- The hourly trigger asks for a full read of framework/strategies/state, a tape read, news and politics searches and scans. None were run: markets are closed and no entry is possible at $0 buying power (disclosed). Trades 0 (0 forced). Overnight/weekend status: FLAT. Next session: Mon 11/30 (full day).
+
 ## DASHBOARD_DATA
 
 Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) open and watched, `red` = stop recently hit or circuit breaker tripped. Trade rows go in `trades` (newest last); positions needing no stop (legacy) are marked `"legacy": true`.
 
 ```json
 {
-  "as_of": "2026-11-27 13:02 ET",
+  "as_of": "2026-11-27 13:12 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -1028,7 +1034,7 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "11/27 13:02 ET (markets closed after the 13:00 early close): account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open) - no orders possible; flat into the weekend. Last regular-session trades SPY 728.7 (+1.7%), QQQ 650.8 (+2.7%), SMH 439.7 (+4.1%): late rally into the close. Next session Mon 11/30.",
+  "status_note": "11/27 13:12 ET (markets closed after the 13:00 early close): account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open) - no orders possible; flat into the weekend. Last regular-session trades SPY 728.7 (+1.7%), QQQ 650.8 (+2.7%), SMH 439.7 (+4.1%). Next session Mon 11/30.",
   "peak_equity": 437.99,
   "day": {
     "date": "2026-11-27",
