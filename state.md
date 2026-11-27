@@ -1058,13 +1058,18 @@ Cycle entry template (copy for each cycle):
 - Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
 - Markets closed, so no tape read, scans or news searches were run; no entry is possible in any case. Trades 0 (0 forced). Overnight/weekend status: FLAT. Next session: Mon 11/30 (full day).
 
+### Cycle 1485 - 2026-11-27 14:53 ET (US markets CLOSED after the 13:00 ET early close)
+- Dedupe: last commit 19:42:54Z, trigger 19:52:54Z (~10 min) -> proceed.
+- Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
+- Markets closed, so no tape read, scans or news searches were run; no entry is possible in any case. Trades 0 (0 forced). Overnight/weekend status: FLAT. Next session: Mon 11/30 (full day). The close recap is due next (~20:47Z / 15:47 ET).
+
 ## DASHBOARD_DATA
 
 Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) open and watched, `red` = stop recently hit or circuit breaker tripped. Trade rows go in `trades` (newest last); positions needing no stop (legacy) are marked `"legacy": true`.
 
 ```json
 {
-  "as_of": "2026-11-27 14:42 ET",
+  "as_of": "2026-11-27 14:53 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
