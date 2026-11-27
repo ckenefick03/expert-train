@@ -854,13 +854,25 @@ Cycle entry template (copy for each cycle):
 - Pre-open brief 11/26 (Cycle 1403) listed watch names for Fri 11/27 (MR: NVDA/AMD/MU/AVGO/TSM; no credible momentum names; CRDO/MRVL/CHA/RBRK excluded by the 2-trading-day earnings rule). Those remain informational only.
 - Next: Fri 11/27, early close 13:00 ET (a compressed session; pre-open brief ~13:27-13:30Z). Trading resumes only if the balance is restored and verified.
 
+### Cycle 1447 - 2026-11-27 08:28 ET (pre-open brief; Fri 11/27, early close 13:00 ET)
+- Dedupe: last commit 2026-11-26 20:47:43Z, trigger 2026-11-27 13:27:43Z (~16.7 h) -> proceed. Read-only, NO orders. I did not re-read framework.md, strategies/ or state.md in full this cycle (disclosed).
+- Reconcile: account 771144490 STILL reads $0.00 (total value, cash, buying power); no positions; no open orders. Nothing to stop-check. Cause unverified (was $398.81 at the 11/20 close); owner question still unanswered.
+- Official closes 11/25: SPY 716.70, QQQ 633.93, SMH 422.46. Correction: the 11/26 brief (Cycle 1403) listed 716.75/633.95/422.60, which were the last regular-session trades, not the official closes. The official closes are the figures here.
+- Pre-market (extended-hours prints ~08:27 ET, thin): SPY 728.29 (+1.6%), QQQ 648.39 (+2.3%), SMH 438.74 (+3.9%). Semis: NVDA 152.76 (+2.3% vs 149.30), AMD 423.51 (+4.3% vs 406.03), MU 634.36 (+5.5% vs 601.25), AVGO 310.47 (+3.2% vs 300.86), TSM 354.00 (+3.4% vs 342.34). A broad gap up, led by semis, reversing the 11/24-11/25 selloff. Cause NOT researched or sourced (no news search run), so no news claim is made.
+- Session shape: early close 13:00 ET, so MR Tier A (10:00-11:30) and Tier B (11:30-14:30, truncated at 13:00) plus momentum earliest 10:30 ET all compress into 09:30-13:00. Tier C (14:30-15:30) does not exist today.
+- Earnings (get_earnings_calendar, high_market_cap, 11/27-12/1; verified dates): 11/30: CHA (am), RBRK (pm). 12/1: VSTS, NIO, CPRT (am); TCOM, CRDO, HQY, NTAP, NCNO, OKTA, MDB, ASAN, MRVL, GTLB, BOX (pm). Under the 2-trading-day rule, CHA, RBRK, CRDO, MRVL and the other 11/30-12/1 names are excluded for entries on 11/27 (11/30 is 1 trading day away, 12/1 is 2).
+- Watch lists for 11/27 (informational only; no entry is possible at $0 buying power; not a recommendation):
+  - Mean reversion: with the semis gapping UP, the oversold premise from 11/24-11/25 is weaker; an MR setup would need a fresh intraday drop of 5%+ (Tier A) or 3.5%+ (Tier B) plus RSI(14,d) and sector-ETF conditions and a dated external cause sourced in-session (gate 1). Names to monitor if that happens: NVDA, AMD, MU, AVGO, TSM. Excluded: MRVL, CRDO (earnings 12/1).
+  - Momentum: no credible candidate identified (no RVOL, spread, catalyst or relative-strength data pulled). Foreign ADRs auto-fail (e.g. TSM, NIO, TCOM), so TSM is MR-watch only if a gate-passing setup ever appears; I list it above for completeness but flag that it fails the momentum foreign-ADR rule.
+- News/politics: NOT searched this cycle (read-only, no orders possible; disclosed). Trades 0 (0 forced).
+
 ## DASHBOARD_DATA
 
 Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) open and watched, `red` = stop recently hit or circuit breaker tripped. Trade rows go in `trades` (newest last); positions needing no stop (legacy) are marked `"legacy": true`.
 
 ```json
 {
-  "as_of": "2026-11-26 15:47 ET",
+  "as_of": "2026-11-27 08:28 ET",
   "account": {
     "name": "Agentic Account",
     "last4": "4490",
@@ -875,10 +887,10 @@ Edit values in place. `status`: `green` = flat/healthy, `amber` = position(s) op
     "max_trades": 10
   },
   "status": "green",
-  "status_note": "11/26 15:47 ET close recap (Thanksgiving, markets closed): FLAT overnight, 0 trades (0 forced), P&L $0.00. Account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open). Next session Fri 11/27, early close 13:00 ET.",
+  "status_note": "11/27 08:28 ET pre-open (early close 13:00 ET): account 771144490 STILL reads $0.00 (was $398.81 at the 11/20 close; cause unverified; owner question open) - no orders possible. Pre-market gap up: SPY +1.6%, QQQ +2.3%, SMH +3.9% (thin extended-hours prints, cause not researched). Official 11/25 closes SPY 716.70, QQQ 633.93, SMH 422.46.",
   "peak_equity": 437.99,
   "day": {
-    "date": "2026-11-26",
+    "date": "2026-11-27",
     "start_equity": null,
     "trades": 0,
     "forced": 0
